@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsDistributionReleaseCountsRequest {
-    
-    public AnalyticsDistributionReleaseCountsPathParams pathParams;
-    public AnalyticsDistributionReleaseCountsRequest withPathParams(AnalyticsDistributionReleaseCountsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The releases to retrieve.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AnalyticsDistributionReleaseCountsRequestBody request;
-    public AnalyticsDistributionReleaseCountsRequest withRequest(AnalyticsDistributionReleaseCountsRequestBody request) {
-        this.request = request;
+    public AnalyticsDistributionReleaseCountsRequestBody requestBody;
+    public AnalyticsDistributionReleaseCountsRequest withRequestBody(AnalyticsDistributionReleaseCountsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsDistributionReleaseCountsRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AnalyticsDistributionReleaseCountsSecurity security;
-    public AnalyticsDistributionReleaseCountsRequest withSecurity(AnalyticsDistributionReleaseCountsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsDistributionReleaseCountsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

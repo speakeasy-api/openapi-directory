@@ -20,10 +20,9 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption1;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurityOption2;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQuerySecurity;
-import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryPathParams;
-import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryQueryParams;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryRequest;
 import org.openapis.openapi.models.operations.WebmastersSearchanalyticsQueryResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestAggregationTypeEnum;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDataStateEnum;
 import org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDimensionsEnum;
@@ -35,10 +34,7 @@ import org.openapis.openapi.models.shared.ApiDimensionFilterGroup;
 import org.openapis.openapi.models.shared.ApiDimensionFilterDimensionEnum;
 import org.openapis.openapi.models.shared.ApiDimensionFilterOperatorEnum;
 import org.openapis.openapi.models.shared.ApiDimensionFilter;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -47,36 +43,31 @@ public class Application {
                 .build();
 
             WebmastersSearchanalyticsQueryRequest req = new WebmastersSearchanalyticsQueryRequest() {{
-                security = new WebmastersSearchanalyticsQuerySecurity() {{
-                    option1 = new WebmastersSearchanalyticsQuerySecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new WebmastersSearchanalyticsQueryPathParams() {{
-                    siteUrl = "corrupti";
-                }};
-                queryParams = new WebmastersSearchanalyticsQueryQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new SearchAnalyticsQueryRequest() {{
+                dollarXgafv = "2";
+                searchAnalyticsQueryRequest = new SearchAnalyticsQueryRequest() {{
                     aggregationType = "BY_PROPERTY";
-                    dataState = "FINAL";
+                    dataState = "ALL";
                     dimensionFilterGroups = new org.openapis.openapi.models.shared.ApiDimensionFilterGroup[]{{
+                        add(new ApiDimensionFilterGroup() {{
+                            filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "SEARCH_APPEARANCE";
+                                    expression = "corrupti";
+                                    operator = "EXCLUDING_REGEX";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "COUNTRY";
+                                    expression = "error";
+                                    operator = "NOT_CONTAINS";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "PAGE";
+                                    expression = "iure";
+                                    operator = "NOT_EQUALS";
+                                }}),
+                            }};
+                            groupType = "AND";
+                        }}),
                         add(new ApiDimensionFilterGroup() {{
                             filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
                                 add(new ApiDimensionFilter() {{
@@ -127,23 +118,63 @@ public class Application {
                             }};
                             groupType = "AND";
                         }}),
+                        add(new ApiDimensionFilterGroup() {{
+                            filters = new org.openapis.openapi.models.shared.ApiDimensionFilter[]{{
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "COUNTRY";
+                                    expression = "quod";
+                                    operator = "INCLUDING_REGEX";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "COUNTRY";
+                                    expression = "totam";
+                                    operator = "INCLUDING_REGEX";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "DEVICE";
+                                    expression = "dicta";
+                                    operator = "INCLUDING_REGEX";
+                                }}),
+                                add(new ApiDimensionFilter() {{
+                                    dimension = "DEVICE";
+                                    expression = "occaecati";
+                                    operator = "EQUALS";
+                                }}),
+                            }};
+                            groupType = "AND";
+                        }}),
                     }};
                     dimensions = new org.openapis.openapi.models.shared.SearchAnalyticsQueryRequestDimensionsEnum[]{{
-                        add("PAGE"),
+                        add("SEARCH_APPEARANCE"),
                         add("DEVICE"),
-                        add("DEVICE"),
-                        add("PAGE"),
+                        add("COUNTRY"),
                     }};
-                    endDate = "totam";
-                    rowLimit = 780529;
-                    searchType = "DISCOVER";
-                    startDate = "dicta";
-                    startRow = 720633;
-                    type = "NEWS";
+                    endDate = "beatae";
+                    rowLimit = 414662;
+                    searchType = "VIDEO";
+                    startDate = "modi";
+                    startRow = 186332;
+                    type = "DISCOVER";
                 }};
-            }};            
+                accessToken = "cum";
+                alt = "media";
+                callback = "ipsum";
+                fields = "excepturi";
+                key = "aspernatur";
+                oauthToken = "perferendis";
+                prettyPrint = false;
+                quotaUser = "ad";
+                siteUrl = "natus";
+                uploadType = "sed";
+                uploadProtocol = "iste";
+            }}            
 
-            WebmastersSearchanalyticsQueryResponse res = sdk.searchanalytics.webmastersSearchanalyticsQuery(req);
+            WebmastersSearchanalyticsQueryResponse res = sdk.searchanalytics.webmastersSearchanalyticsQuery(req, new WebmastersSearchanalyticsQuerySecurity() {{
+                option1 = new WebmastersSearchanalyticsQuerySecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.searchAnalyticsQueryResponse.isPresent()) {
                 // handle response
@@ -155,7 +186,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### searchanalytics

@@ -7,24 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest {
-    
-    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsPathParams pathParams;
-    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withPathParams(PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsQueryParams queryParams;
-    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withQueryParams(PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody request;
-    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withRequest(PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody request) {
-        this.request = request;
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody requestBody;
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withRequestBody(PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public PostUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

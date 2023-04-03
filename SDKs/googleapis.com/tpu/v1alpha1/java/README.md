@@ -18,14 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListSecurity;
-import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListPathParams;
-import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListQueryParams;
 import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListRequest;
 import org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,37 +30,28 @@ public class Application {
                 .build();
 
             TpuProjectsLocationsAcceleratorTypesListRequest req = new TpuProjectsLocationsAcceleratorTypesListRequest() {{
-                security = new TpuProjectsLocationsAcceleratorTypesListSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new TpuProjectsLocationsAcceleratorTypesListPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new TpuProjectsLocationsAcceleratorTypesListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    filter = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    orderBy = "error";
-                    pageSize = 645894;
-                    pageToken = "suscipit";
-                    prettyPrint = false;
-                    quotaUser = "iure";
-                    uploadType = "magnam";
-                    uploadProtocol = "debitis";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                filter = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                orderBy = "vel";
+                pageSize = 623564;
+                pageToken = "deserunt";
+                parent = "suscipit";
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
-            TpuProjectsLocationsAcceleratorTypesListResponse res = sdk.projects.tpuProjectsLocationsAcceleratorTypesList(req);
+            TpuProjectsLocationsAcceleratorTypesListResponse res = sdk.projects.tpuProjectsLocationsAcceleratorTypesList(req, new TpuProjectsLocationsAcceleratorTypesListSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.listAcceleratorTypesResponse.isPresent()) {
                 // handle response
@@ -76,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

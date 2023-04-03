@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineStatusBySeverityRequest {
-    
-    public LineStatusBySeverityPathParams pathParams;
-    public LineStatusBySeverityRequest withPathParams(LineStatusBySeverityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The level of severity (eg: a number from 0 to 14)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=severity")
+    public Integer severity;
+    public LineStatusBySeverityRequest withSeverity(Integer severity) {
+        this.severity = severity;
         return this;
     }
     

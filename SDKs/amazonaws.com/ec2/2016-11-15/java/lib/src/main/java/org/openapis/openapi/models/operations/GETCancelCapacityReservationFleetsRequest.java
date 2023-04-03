@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCancelCapacityReservationFleetsRequest {
-    
-    public GETCancelCapacityReservationFleetsQueryParams queryParams;
-    public GETCancelCapacityReservationFleetsRequest withQueryParams(GETCancelCapacityReservationFleetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCancelCapacityReservationFleetsActionEnum action;
+    public GETCancelCapacityReservationFleetsRequest withAction(GETCancelCapacityReservationFleetsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The IDs of the Capacity Reservation Fleets to cancel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CapacityReservationFleetId")
+    public String[] capacityReservationFleetId;
+    public GETCancelCapacityReservationFleetsRequest withCapacityReservationFleetId(String[] capacityReservationFleetId) {
+        this.capacityReservationFleetId = capacityReservationFleetId;
+        return this;
+    }
     
-    public GETCancelCapacityReservationFleetsHeaders headers;
-    public GETCancelCapacityReservationFleetsRequest withHeaders(GETCancelCapacityReservationFleetsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETCancelCapacityReservationFleetsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCancelCapacityReservationFleetsVersionEnum version;
+    public GETCancelCapacityReservationFleetsRequest withVersion(GETCancelCapacityReservationFleetsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCancelCapacityReservationFleetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCancelCapacityReservationFleetsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCancelCapacityReservationFleetsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCancelCapacityReservationFleetsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCancelCapacityReservationFleetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCancelCapacityReservationFleetsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCancelCapacityReservationFleetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsEnableWorkflowRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsEnableWorkflowRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsEnableWorkflowPathParams pathParams;
-    public ActionsEnableWorkflowRequest withPathParams(ActionsEnableWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsEnableWorkflowRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The ID of the workflow. You can also pass the workflow file name as a string.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workflow_id")
+    public Object workflowId;
+    public ActionsEnableWorkflowRequest withWorkflowId(Object workflowId) {
+        this.workflowId = workflowId;
         return this;
     }
     

@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyMonitorRegisterSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeUserKey userKey;
-    public CompanyMonitorRegisterSecurity withUserKey(org.openapis.openapi.models.shared.SchemeUserKey userKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=user_key")
+    public String userKey;
+    public CompanyMonitorRegisterSecurity withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }

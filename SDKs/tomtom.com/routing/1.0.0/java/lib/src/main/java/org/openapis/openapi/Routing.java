@@ -37,13 +37,13 @@ public class Routing {
      */
     public org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeResponse getRoutingVersionNumberCalculateReachableRangeOriginContentType(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypePathParams.class, baseUrl, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest.class, baseUrl, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateReachableRangeOriginContentTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -77,13 +77,13 @@ public class Routing {
      */
     public org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeResponse getRoutingVersionNumberCalculateRouteLocationsContentType(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypePathParams.class, baseUrl, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeRequest.class, baseUrl, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRoutingVersionNumberCalculateRouteLocationsContentTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -117,15 +117,15 @@ public class Routing {
      */
     public org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonResponse postRoutingVersionNumberCalculateReachableRangeOriginContentTypeJson(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonPathParams.class, baseUrl, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonRequest.class, baseUrl, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "calculateReachableRangePostDataParameters", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -159,15 +159,15 @@ public class Routing {
      */
     public org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawResponse postRoutingVersionNumberCalculateReachableRangeOriginContentTypeRaw(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawPathParams.class, baseUrl, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawRequest.class, baseUrl, "/routing/{versionNumber}/calculateReachableRange/{origin}/{contentType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateReachableRangeOriginContentTypeRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -201,15 +201,15 @@ public class Routing {
      */
     public org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonResponse postRoutingVersionNumberCalculateRouteLocationsContentTypeJson(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonPathParams.class, baseUrl, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonRequest.class, baseUrl, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "calculateRoutePostDataParameters", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -243,15 +243,15 @@ public class Routing {
      */
     public org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawResponse postRoutingVersionNumberCalculateRouteLocationsContentTypeRaw(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawPathParams.class, baseUrl, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest.class, baseUrl, "/routing/{versionNumber}/calculateRoute/{locations}/{contentType}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRoutingVersionNumberCalculateRouteLocationsContentTypeRawRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

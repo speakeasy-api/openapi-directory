@@ -35,7 +35,7 @@ public class TokenPrices {
      */
     public org.openapis.openapi.models.operations.GetTokenPriceResponse getTokenPrice(org.openapis.openapi.models.operations.GetTokenPriceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenPricePathParams.class, baseUrl, "/tokens/prices/{tokenId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTokenPriceRequest.class, baseUrl, "/tokens/prices/{tokenId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

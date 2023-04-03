@@ -4,13 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PagespeedonlinePagespeedapiRunpagespeedRequest {
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public PagespeedonlinePagespeedapiRunpagespeedQueryParams queryParams;
-    public PagespeedonlinePagespeedapiRunpagespeedRequest withQueryParams(PagespeedonlinePagespeedapiRunpagespeedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Indicates if third party resources should be filtered out before PageSpeed analysis.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_third_party_resources")
+    public Boolean filterThirdPartyResources;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withFilterThirdPartyResources(Boolean filterThirdPartyResources) {
+        this.filterThirdPartyResources = filterThirdPartyResources;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The locale used to localize formatted results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * A PageSpeed rule to run; if none are given, all rules are run
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rule")
+    public String[] rule;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withRule(String[] rule) {
+        this.rule = rule;
+        return this;
+    }
+    
+    /**
+     * Indicates if binary data containing a screenshot should be included
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=screenshot")
+    public Boolean screenshot;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withScreenshot(Boolean screenshot) {
+        this.screenshot = screenshot;
+        return this;
+    }
+    
+    /**
+     * The analysis strategy to use
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=strategy")
+    public PagespeedonlinePagespeedapiRunpagespeedStrategyEnum strategy;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withStrategy(PagespeedonlinePagespeedapiRunpagespeedStrategyEnum strategy) {
+        this.strategy = strategy;
+        return this;
+    }
+    
+    /**
+     * The URL to fetch and analyze
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public PagespeedonlinePagespeedapiRunpagespeedRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

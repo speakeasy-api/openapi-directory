@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBlockRequest {
-    
-    public GetBlockHeaders headers;
-    public GetBlockRequest withHeaders(GetBlockHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetBlockRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetBlockRequest request;
-    public GetBlockRequest withRequest(org.openapis.openapi.models.shared.GetBlockRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetBlockRequest getBlockRequest;
+    public GetBlockRequest withGetBlockRequest(org.openapis.openapi.models.shared.GetBlockRequest getBlockRequest) {
+        this.getBlockRequest = getBlockRequest;
         return this;
     }
     

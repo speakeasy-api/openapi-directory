@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiCredentialRequest {
-    
-    public GetApiCredentialPathParams pathParams;
-    public GetApiCredentialRequest withPathParams(GetApiCredentialPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetApiCredentialRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
-    
-    public GetApiCredentialQueryParams queryParams;
-    public GetApiCredentialRequest withQueryParams(GetApiCredentialQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiCredentialSecurity security;
-    public GetApiCredentialRequest withSecurity(GetApiCredentialSecurity security) {
-        this.security = security;
+    /**
+     * An id of an API credential
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetApiCredentialRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

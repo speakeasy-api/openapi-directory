@@ -7,15 +7,11 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateSecurityOption1;
 import org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateSecurityOption2;
 import org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateSecurity;
-import org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreatePathParams;
-import org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateQueryParams;
 import org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateRequest;
 import org.openapis.openapi.models.operations.FirebaserulesProjectsReleasesCreateResponse;
-import org.openapis.openapi.models.shared.ReleaseInput;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.ReleaseInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -24,39 +20,30 @@ public class Application {
                 .build();
 
             FirebaserulesProjectsReleasesCreateRequest req = new FirebaserulesProjectsReleasesCreateRequest() {{
-                security = new FirebaserulesProjectsReleasesCreateSecurity() {{
-                    option1 = new FirebaserulesProjectsReleasesCreateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
+                dollarXgafv = "2";
+                releaseInput = new ReleaseInput() {{
+                    name = "provident";
+                    rulesetName = "distinctio";
                 }};
-                pathParams = new FirebaserulesProjectsReleasesCreatePathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new FirebaserulesProjectsReleasesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new ReleaseInput() {{
-                    name = "suscipit";
-                    rulesetName = "iure";
-                }};
-            }};            
+                accessToken = "quibusdam";
+                alt = "media";
+                callback = "nulla";
+                fields = "corrupti";
+                key = "illum";
+                name = "vel";
+                oauthToken = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
-            FirebaserulesProjectsReleasesCreateResponse res = sdk.projects.firebaserulesProjectsReleasesCreate(req);
+            FirebaserulesProjectsReleasesCreateResponse res = sdk.projects.firebaserulesProjectsReleasesCreate(req, new FirebaserulesProjectsReleasesCreateSecurity() {{
+                option1 = new FirebaserulesProjectsReleasesCreateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.release.isPresent()) {
                 // handle response

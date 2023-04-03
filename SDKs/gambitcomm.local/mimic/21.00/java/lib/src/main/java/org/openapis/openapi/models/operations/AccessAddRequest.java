@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessAddRequest {
+    /**
+     * Agent range in minimal range representation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agents")
+    public String agents;
+    public AccessAddRequest withAgents(String agents) {
+        this.agents = agents;
+        return this;
+    }
     
-    public AccessAddPathParams pathParams;
-    public AccessAddRequest withPathParams(AccessAddPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Currently not used
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mask")
+    public String mask;
+    public AccessAddRequest withMask(String mask) {
+        this.mask = mask;
+        return this;
+    }
+    
+    /**
+     * Username of the simulator hosting system
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public AccessAddRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

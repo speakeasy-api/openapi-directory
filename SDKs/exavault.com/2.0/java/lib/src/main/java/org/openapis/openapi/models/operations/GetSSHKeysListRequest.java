@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSSHKeysListRequest {
-    
-    public GetSSHKeysListQueryParams queryParams;
-    public GetSSHKeysListRequest withQueryParams(GetSSHKeysListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetSSHKeysListRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetSSHKeysListRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public GetSSHKeysListHeaders headers;
-    public GetSSHKeysListRequest withHeaders(GetSSHKeysListHeaders headers) {
-        this.headers = headers;
+    /**
+     *  Limits the results by the given number. Cannot be set higher than 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSSHKeysListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     *  Determines which item to start on for pagination. Use zero (0) to start at the beginning of the list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetSSHKeysListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     *  Only return results for the given user ID. This is not the username, but the numeric ID of the user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public GetSSHKeysListRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

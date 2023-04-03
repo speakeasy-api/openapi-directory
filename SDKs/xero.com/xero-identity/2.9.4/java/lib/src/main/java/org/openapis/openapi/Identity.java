@@ -34,19 +34,20 @@ public class Identity {
      * Deletes a connection for this user (i.e. disconnect a tenant)
      * Override the base server url that include version
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteConnectionResponse deleteConnection(org.openapis.openapi.models.operations.DeleteConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConnectionResponse deleteConnection(org.openapis.openapi.models.operations.DeleteConnectionRequest request, org.openapis.openapi.models.operations.DeleteConnectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectionPathParams.class, baseUrl, "/Connections/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectionRequest.class, baseUrl, "/Connections/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -68,10 +69,11 @@ public class Identity {
      * Retrieves the connections for this user
      * Override the base server url that include version
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetConnectionsResponse getConnections(org.openapis.openapi.models.operations.GetConnectionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetConnectionsResponse getConnections(org.openapis.openapi.models.operations.GetConnectionsRequest request, org.openapis.openapi.models.operations.GetConnectionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Connections");
         
@@ -79,14 +81,14 @@ public class Identity {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConnectionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

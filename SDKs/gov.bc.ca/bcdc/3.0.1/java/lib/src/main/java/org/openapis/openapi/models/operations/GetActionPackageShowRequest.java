@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionPackageShowRequest {
-    
-    public GetActionPackageShowQueryParams queryParams;
-    public GetActionPackageShowRequest withQueryParams(GetActionPackageShowQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The package name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionPackageShowRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

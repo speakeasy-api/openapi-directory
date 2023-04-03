@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiVirtualTariffIdRequest {
-    
-    public GetApiVirtualTariffIdPathParams pathParams;
-    public GetApiVirtualTariffIdRequest withPathParams(GetApiVirtualTariffIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the Folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiVirtualTariffIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

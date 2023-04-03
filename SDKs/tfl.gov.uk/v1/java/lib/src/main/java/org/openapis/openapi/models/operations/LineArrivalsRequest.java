@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineArrivalsRequest {
-    
-    public LineArrivalsPathParams pathParams;
-    public LineArrivalsRequest withPathParams(LineArrivalsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optional. Id of destination stop
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationStationId")
+    public String destinationStationId;
+    public LineArrivalsRequest withDestinationStationId(String destinationStationId) {
+        this.destinationStationId = destinationStationId;
         return this;
     }
     
+    /**
+     * Optional. The direction of travel. Can be inbound or outbound or all. If left blank, and destinationStopId is set, will default to all
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public LineArrivalsDirectionEnum direction;
+    public LineArrivalsRequest withDirection(LineArrivalsDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public LineArrivalsQueryParams queryParams;
-    public LineArrivalsRequest withQueryParams(LineArrivalsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public LineArrivalsRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Optional. Id of stop to get arrival predictions for (station naptan code e.g. 940GZZLUASL, you can use /StopPoint/Search/{query} endpoint to find a stop point id from a station name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stopPointId")
+    public String stopPointId;
+    public LineArrivalsRequest withStopPointId(String stopPointId) {
+        this.stopPointId = stopPointId;
         return this;
     }
     

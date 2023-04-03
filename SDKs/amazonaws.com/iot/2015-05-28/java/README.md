@@ -17,9 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AcceptCertificateTransferPathParams;
-import org.openapis.openapi.models.operations.AcceptCertificateTransferQueryParams;
-import org.openapis.openapi.models.operations.AcceptCertificateTransferHeaders;
 import org.openapis.openapi.models.operations.AcceptCertificateTransferRequest;
 import org.openapis.openapi.models.operations.AcceptCertificateTransferResponse;
 
@@ -28,29 +25,21 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptCertificateTransferRequest req = new AcceptCertificateTransferRequest() {{
-                pathParams = new AcceptCertificateTransferPathParams() {{
-                    certificateId = "corrupti";
-                }};
-                queryParams = new AcceptCertificateTransferQueryParams() {{
-                    setAsActive = false;
-                }};
-                headers = new AcceptCertificateTransferHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                certificateId = "illum";
+                setAsActive = false;
+            }}            
 
             AcceptCertificateTransferResponse res = sdk.acceptCertificateTransfer(req);
 
@@ -64,7 +53,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

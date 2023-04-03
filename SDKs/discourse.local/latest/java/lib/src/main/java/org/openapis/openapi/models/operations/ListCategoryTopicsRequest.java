@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCategoryTopicsRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ListCategoryTopicsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public ListCategoryTopicsPathParams pathParams;
-    public ListCategoryTopicsRequest withPathParams(ListCategoryTopicsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=slug")
+    public String slug;
+    public ListCategoryTopicsRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     

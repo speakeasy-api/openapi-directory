@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity;
-import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams;
-import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams;
 import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest;
 import org.openapis.openapi.models.operations.CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudChannelV1ChannelPartnerRepricingConfigInput;
 import org.openapis.openapi.models.shared.GoogleCloudChannelV1RepricingConfigRebillingBasisEnum;
 import org.openapis.openapi.models.shared.GoogleCloudChannelV1RepricingConfig;
@@ -34,10 +33,7 @@ import org.openapis.openapi.models.shared.GoogleCloudChannelV1SkuGroupCondition;
 import org.openapis.openapi.models.shared.GoogleCloudChannelV1RepricingAdjustment;
 import org.openapis.openapi.models.shared.GoogleCloudChannelV1PercentageAdjustment;
 import org.openapis.openapi.models.shared.GoogleTypeDecimal;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -46,56 +42,34 @@ public class Application {
                 .build();
 
             CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest req = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateRequest() {{
-                security = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleCloudChannelV1ChannelPartnerRepricingConfigInput() {{
+                dollarXgafv = "2";
+                googleCloudChannelV1ChannelPartnerRepricingConfigInput = new GoogleCloudChannelV1ChannelPartnerRepricingConfigInput() {{
                     repricingConfig = new GoogleCloudChannelV1RepricingConfig() {{
                         adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
                             percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
                                 percentage = new GoogleTypeDecimal() {{
-                                    value = "suscipit";
+                                    value = "provident";
                                 }};
                             }};
                         }};
                         channelPartnerGranularity = new java.util.HashMap<String, Object>() {{
-                            put("magnam", "debitis");
-                            put("ipsa", "delectus");
+                            put("quibusdam", "unde");
+                            put("nulla", "corrupti");
+                            put("illum", "vel");
                         }};
                         conditionalOverrides = new org.openapis.openapi.models.shared.GoogleCloudChannelV1ConditionalOverride[]{{
                             add(new GoogleCloudChannelV1ConditionalOverride() {{
                                 adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
                                     percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
                                         percentage = new GoogleTypeDecimal() {{
-                                            value = "suscipit";
+                                            value = "deserunt";
                                         }};
                                     }};
                                 }};
                                 rebillingBasis = "COST_AT_LIST";
                                 repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
                                     skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
-                                        skuGroup = "minus";
+                                        skuGroup = "iure";
                                     }};
                                 }};
                             }}),
@@ -103,32 +77,61 @@ public class Application {
                                 adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
                                     percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
                                         percentage = new GoogleTypeDecimal() {{
-                                            value = "placeat";
+                                            value = "magnam";
                                         }};
                                     }};
                                 }};
-                                rebillingBasis = "COST_AT_LIST";
+                                rebillingBasis = "DIRECT_CUSTOMER_COST";
                                 repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
                                     skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
-                                        skuGroup = "iusto";
+                                        skuGroup = "ipsa";
+                                    }};
+                                }};
+                            }}),
+                            add(new GoogleCloudChannelV1ConditionalOverride() {{
+                                adjustment = new GoogleCloudChannelV1RepricingAdjustment() {{
+                                    percentageAdjustment = new GoogleCloudChannelV1PercentageAdjustment() {{
+                                        percentage = new GoogleTypeDecimal() {{
+                                            value = "delectus";
+                                        }};
+                                    }};
+                                }};
+                                rebillingBasis = "REBILLING_BASIS_UNSPECIFIED";
+                                repricingCondition = new GoogleCloudChannelV1RepricingCondition() {{
+                                    skuGroupCondition = new GoogleCloudChannelV1SkuGroupCondition() {{
+                                        skuGroup = "suscipit";
                                     }};
                                 }};
                             }}),
                         }};
                         effectiveInvoiceMonth = new GoogleTypeDate() {{
-                            day = 568045;
-                            month = 392785;
-                            year = 925597;
+                            day = 477665;
+                            month = 791725;
+                            year = 812169;
                         }};
                         entitlementGranularity = new GoogleCloudChannelV1RepricingConfigEntitlementGranularity() {{
-                            entitlement = "temporibus";
+                            entitlement = "voluptatum";
                         }};
-                        rebillingBasis = "REBILLING_BASIS_UNSPECIFIED";
+                        rebillingBasis = "COST_AT_LIST";
                     }};
                 }};
-            }};            
+                accessToken = "excepturi";
+                alt = "media";
+                callback = "recusandae";
+                fields = "temporibus";
+                key = "ab";
+                oauthToken = "quis";
+                parent = "veritatis";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "perferendis";
+                uploadProtocol = "ipsam";
+            }}            
 
-            CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse res = sdk.accounts.cloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(req);
+            CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse res = sdk.accounts.cloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreate(req, new CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudChannelV1ChannelPartnerRepricingConfig.isPresent()) {
                 // handle response
@@ -140,7 +143,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

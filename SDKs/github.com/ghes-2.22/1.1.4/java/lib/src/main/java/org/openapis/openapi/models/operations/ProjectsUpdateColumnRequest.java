@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsUpdateColumnRequest {
-    
-    public ProjectsUpdateColumnPathParams pathParams;
-    public ProjectsUpdateColumnRequest withPathParams(ProjectsUpdateColumnPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ProjectsUpdateColumnRequestBody requestBody;
+    public ProjectsUpdateColumnRequest withRequestBody(ProjectsUpdateColumnRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ProjectsUpdateColumnRequestBody request;
-    public ProjectsUpdateColumnRequest withRequest(ProjectsUpdateColumnRequestBody request) {
-        this.request = request;
+    /**
+     * column_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column_id")
+    public Long columnId;
+    public ProjectsUpdateColumnRequest withColumnId(Long columnId) {
+        this.columnId = columnId;
         return this;
     }
     

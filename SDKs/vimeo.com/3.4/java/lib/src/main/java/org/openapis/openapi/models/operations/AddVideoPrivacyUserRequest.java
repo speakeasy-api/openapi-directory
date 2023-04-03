@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddVideoPrivacyUserRequest {
-    
-    public AddVideoPrivacyUserPathParams pathParams;
-    public AddVideoPrivacyUserRequest withPathParams(AddVideoPrivacyUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public AddVideoPrivacyUserRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     
-    
-    public AddVideoPrivacyUserSecurity security;
-    public AddVideoPrivacyUserRequest withSecurity(AddVideoPrivacyUserSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public AddVideoPrivacyUserRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

@@ -41,13 +41,13 @@ public class ChargeRevenueSummaries {
      */
     public org.openapis.openapi.models.operations.GETCRSByCRSNumberResponse getCRSByCRSNumber(org.openapis.openapi.models.operations.GETCRSByCRSNumberRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETCRSByCRSNumberPathParams.class, baseUrl, "/v1/charge-revenue-summaries/{crs-number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETCRSByCRSNumberRequest.class, baseUrl, "/v1/charge-revenue-summaries/{crs-number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -91,13 +91,13 @@ public class ChargeRevenueSummaries {
      */
     public org.openapis.openapi.models.operations.GETCRSByChargeIDResponse getCRSByChargeID(org.openapis.openapi.models.operations.GETCRSByChargeIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETCRSByChargeIDPathParams.class, baseUrl, "/v1/charge-revenue-summaries/subscription-charges/{charge-key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETCRSByChargeIDRequest.class, baseUrl, "/v1/charge-revenue-summaries/subscription-charges/{charge-key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

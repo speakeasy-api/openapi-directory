@@ -43,10 +43,11 @@ public class Devices {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` &lt;br&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeviceCreateResponse deviceCreate(org.openapis.openapi.models.operations.DeviceCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeviceCreateResponse deviceCreate(org.openapis.openapi.models.operations.DeviceCreateTheH323SIPDeviceObject request, org.openapis.openapi.models.operations.DeviceCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/h323/devices");
         
@@ -60,7 +61,7 @@ public class Devices {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -105,7 +106,7 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.DeviceDeleteResponse deviceDelete(org.openapis.openapi.models.operations.DeviceDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeviceDeletePathParams.class, baseUrl, "/h323/devices/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeviceDeleteRequest.class, baseUrl, "/h323/devices/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -137,10 +138,11 @@ public class Devices {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`&lt;br&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeviceListResponse deviceList(org.openapis.openapi.models.operations.DeviceListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeviceListResponse deviceList(org.openapis.openapi.models.operations.DeviceListRequest request, org.openapis.openapi.models.operations.DeviceListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/h323/devices");
         
@@ -148,14 +150,14 @@ public class Devices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeviceListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeviceListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,12 +198,12 @@ public class Devices {
      */
     public org.openapis.openapi.models.operations.DeviceUpdateResponse deviceUpdate(org.openapis.openapi.models.operations.DeviceUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeviceUpdatePathParams.class, baseUrl, "/h323/devices/{deviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeviceUpdateRequest.class, baseUrl, "/h323/devices/{deviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

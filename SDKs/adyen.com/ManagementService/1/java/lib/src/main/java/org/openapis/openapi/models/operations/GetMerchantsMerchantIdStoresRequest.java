@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdStoresRequest {
-    
-    public GetMerchantsMerchantIdStoresPathParams pathParams;
-    public GetMerchantsMerchantIdStoresRequest withPathParams(GetMerchantsMerchantIdStoresPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdStoresRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdStoresQueryParams queryParams;
-    public GetMerchantsMerchantIdStoresRequest withQueryParams(GetMerchantsMerchantIdStoresQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetMerchantsMerchantIdStoresRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
+    /**
+     * The number of items to have on a page, maximum 100. The default is 10 items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetMerchantsMerchantIdStoresRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetMerchantsMerchantIdStoresSecurity security;
-    public GetMerchantsMerchantIdStoresRequest withSecurity(GetMerchantsMerchantIdStoresSecurity security) {
-        this.security = security;
+    /**
+     * The reference of the store.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reference")
+    public String reference;
+    public GetMerchantsMerchantIdStoresRequest withReference(String reference) {
+        this.reference = reference;
         return this;
     }
     

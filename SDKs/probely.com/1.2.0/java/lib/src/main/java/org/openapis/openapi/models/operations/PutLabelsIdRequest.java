@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutLabelsIdRequest {
-    
-    public PutLabelsIdPathParams pathParams;
-    public PutLabelsIdRequest withPathParams(PutLabelsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.LabelInput labelInput;
+    public PutLabelsIdRequest withLabelInput(org.openapis.openapi.models.shared.LabelInput labelInput) {
+        this.labelInput = labelInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LabelInput request;
-    public PutLabelsIdRequest withRequest(org.openapis.openapi.models.shared.LabelInput request) {
-        this.request = request;
+    /**
+     * Object Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutLabelsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

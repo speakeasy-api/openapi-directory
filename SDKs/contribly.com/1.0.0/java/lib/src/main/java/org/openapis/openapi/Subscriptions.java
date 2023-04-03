@@ -43,7 +43,7 @@ public class Subscriptions {
      */
     public org.openapis.openapi.models.operations.DeleteSubscriptionsIdResponse deleteSubscriptionsId(org.openapis.openapi.models.operations.DeleteSubscriptionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubscriptionsIdPathParams.class, baseUrl, "/subscriptions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubscriptionsIdRequest.class, baseUrl, "/subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -111,7 +111,7 @@ public class Subscriptions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSubscriptionsResponse getSubscriptions(org.openapis.openapi.models.operations.GetSubscriptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSubscriptionsResponse getSubscriptions(org.openapis.openapi.models.shared.SubscriptionSubmission request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/subscriptions");
         

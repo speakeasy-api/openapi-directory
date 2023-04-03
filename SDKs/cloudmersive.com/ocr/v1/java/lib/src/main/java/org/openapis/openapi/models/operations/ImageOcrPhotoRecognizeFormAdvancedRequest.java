@@ -7,24 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImageOcrPhotoRecognizeFormAdvancedRequest {
-    
-    public ImageOcrPhotoRecognizeFormAdvancedHeaders headers;
-    public ImageOcrPhotoRecognizeFormAdvancedRequest withHeaders(ImageOcrPhotoRecognizeFormAdvancedHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public ImageOcrPhotoRecognizeFormAdvancedRequestBody request;
-    public ImageOcrPhotoRecognizeFormAdvancedRequest withRequest(ImageOcrPhotoRecognizeFormAdvancedRequestBody request) {
-        this.request = request;
+    public ImageOcrPhotoRecognizeFormAdvancedRequestBody requestBody;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withRequestBody(ImageOcrPhotoRecognizeFormAdvancedRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Bucket ID of the Configuration Bucket storing the form templates
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=bucketID")
+    public String bucketID;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withBucketID(String bucketID) {
+        this.bucketID = bucketID;
+        return this;
+    }
     
-    public ImageOcrPhotoRecognizeFormAdvancedSecurity security;
-    public ImageOcrPhotoRecognizeFormAdvancedRequest withSecurity(ImageOcrPhotoRecognizeFormAdvancedSecurity security) {
-        this.security = security;
+    /**
+     * Bucket Secret Key of the Configuration Bucket storing the form templates
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=bucketSecretKey")
+    public String bucketSecretKey;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withBucketSecretKey(String bucketSecretKey) {
+        this.bucketSecretKey = bucketSecretKey;
+        return this;
+    }
+    
+    /**
+     * Optional, diagnostics mode, default is 'false'.  Possible values are 'true' (will set DiagnosticImage to a diagnostic PNG image in the result), and 'false' (no diagnostics are enabled; this is recommended for best performance).
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=diagnostics")
+    public String diagnostics;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withDiagnostics(String diagnostics) {
+        this.diagnostics = diagnostics;
+        return this;
+    }
+    
+    /**
+     * Optional, preprocessing mode, default is 'Auto'.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to 'None' if you do not want to use automatic image unrotation and enhancement.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=preprocessing")
+    public String preprocessing;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withPreprocessing(String preprocessing) {
+        this.preprocessing = preprocessing;
+        return this;
+    }
+    
+    /**
+     * Optional, enable advanced recognition mode by specifying 'Advanced', enable handwriting recognition by specifying 'EnableHandwriting'.  Default is disabled.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=recognitionMode")
+    public String recognitionMode;
+    public ImageOcrPhotoRecognizeFormAdvancedRequest withRecognitionMode(String recognitionMode) {
+        this.recognitionMode = recognitionMode;
         return this;
     }
     

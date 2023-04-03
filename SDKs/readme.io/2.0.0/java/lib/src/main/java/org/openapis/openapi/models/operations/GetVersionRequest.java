@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVersionRequest {
-    
-    public GetVersionPathParams pathParams;
-    public GetVersionRequest withPathParams(GetVersionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetVersionSecurity security;
-    public GetVersionRequest withSecurity(GetVersionSecurity security) {
-        this.security = security;
+    /**
+     * Semver version indentifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionId")
+    public String versionId;
+    public GetVersionRequest withVersionId(String versionId) {
+        this.versionId = versionId;
         return this;
     }
     

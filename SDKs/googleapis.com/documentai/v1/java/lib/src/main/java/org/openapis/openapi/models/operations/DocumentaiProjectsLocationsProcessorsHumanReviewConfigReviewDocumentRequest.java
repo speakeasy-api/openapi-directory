@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest {
-    
-    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentPathParams pathParams;
-    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withPathParams(DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentQueryParams queryParams;
-    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withQueryParams(DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1ReviewDocumentRequest request;
-    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1ReviewDocumentRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1ReviewDocumentRequest googleCloudDocumentaiV1ReviewDocumentRequest;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withGoogleCloudDocumentaiV1ReviewDocumentRequest(org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1ReviewDocumentRequest googleCloudDocumentaiV1ReviewDocumentRequest) {
+        this.googleCloudDocumentaiV1ReviewDocumentRequest = googleCloudDocumentaiV1ReviewDocumentRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentSecurity security;
-    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withSecurity(DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Required. The resource name of the HumanReviewConfig that the document will be reviewed with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=humanReviewConfig")
+    public String humanReviewConfig;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withHumanReviewConfig(String humanReviewConfig) {
+        this.humanReviewConfig = humanReviewConfig;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

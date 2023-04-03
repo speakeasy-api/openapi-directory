@@ -38,7 +38,7 @@ public class Folder {
      */
     public org.openapis.openapi.models.operations.FolderGetResponse folderGet(org.openapis.openapi.models.operations.FolderGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderGetPathParams.class, baseUrl, "/api/Folder/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FolderGetRequest.class, baseUrl, "/api/Folder/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

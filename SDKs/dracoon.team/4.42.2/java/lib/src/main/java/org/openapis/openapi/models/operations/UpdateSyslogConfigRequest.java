@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyslogConfigRequest {
-    
-    public UpdateSyslogConfigHeaders headers;
-    public UpdateSyslogConfigRequest withHeaders(UpdateSyslogConfigHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateSyslogConfig updateSyslogConfig;
+    public UpdateSyslogConfigRequest withUpdateSyslogConfig(org.openapis.openapi.models.shared.UpdateSyslogConfig updateSyslogConfig) {
+        this.updateSyslogConfig = updateSyslogConfig;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateSyslogConfig request;
-    public UpdateSyslogConfigRequest withRequest(org.openapis.openapi.models.shared.UpdateSyslogConfig request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateSyslogConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

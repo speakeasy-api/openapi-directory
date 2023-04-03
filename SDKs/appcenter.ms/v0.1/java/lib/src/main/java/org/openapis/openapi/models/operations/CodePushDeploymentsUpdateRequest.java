@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentsUpdateRequest {
-    
-    public CodePushDeploymentsUpdatePathParams pathParams;
-    public CodePushDeploymentsUpdateRequest withPathParams(CodePushDeploymentsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Deployment modification. All fields are optional and only provided fields will get updated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodePushDeploymentsUpdateRequestBody request;
-    public CodePushDeploymentsUpdateRequest withRequest(CodePushDeploymentsUpdateRequestBody request) {
-        this.request = request;
+    public CodePushDeploymentsUpdateRequestBody requestBody;
+    public CodePushDeploymentsUpdateRequest withRequestBody(CodePushDeploymentsUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CodePushDeploymentsUpdateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public CodePushDeploymentsUpdateSecurity security;
-    public CodePushDeploymentsUpdateRequest withSecurity(CodePushDeploymentsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * deployment name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
+    public String deploymentName;
+    public CodePushDeploymentsUpdateRequest withDeploymentName(String deploymentName) {
+        this.deploymentName = deploymentName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CodePushDeploymentsUpdateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

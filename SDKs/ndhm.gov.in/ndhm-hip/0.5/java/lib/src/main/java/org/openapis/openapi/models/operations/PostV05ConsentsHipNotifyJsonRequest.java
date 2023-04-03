@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentsHipNotifyJsonRequest {
-    
-    public PostV05ConsentsHipNotifyJsonHeaders headers;
-    public PostV05ConsentsHipNotifyJsonRequest withHeaders(PostV05ConsentsHipNotifyJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05ConsentsHipNotifyJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HIPConsentNotification request;
-    public PostV05ConsentsHipNotifyJsonRequest withRequest(org.openapis.openapi.models.shared.HIPConsentNotification request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HIPConsentNotification hipConsentNotification;
+    public PostV05ConsentsHipNotifyJsonRequest withHIPConsentNotification(org.openapis.openapi.models.shared.HIPConsentNotification hipConsentNotification) {
+        this.hipConsentNotification = hipConsentNotification;
         return this;
     }
     
-    
-    public String serverURL;
-    public PostV05ConsentsHipNotifyJsonRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Identifier of the health information provider to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
+    public String xHipId;
+    public PostV05ConsentsHipNotifyJsonRequest withXHipId(String xHipId) {
+        this.xHipId = xHipId;
         return this;
     }
     

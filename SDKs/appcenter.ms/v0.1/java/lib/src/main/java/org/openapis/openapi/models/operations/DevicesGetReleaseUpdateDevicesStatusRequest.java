@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesGetReleaseUpdateDevicesStatusRequest {
-    
-    public DevicesGetReleaseUpdateDevicesStatusPathParams pathParams;
-    public DevicesGetReleaseUpdateDevicesStatusRequest withPathParams(DevicesGetReleaseUpdateDevicesStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DevicesGetReleaseUpdateDevicesStatusRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public DevicesGetReleaseUpdateDevicesStatusQueryParams queryParams;
-    public DevicesGetReleaseUpdateDevicesStatusRequest withQueryParams(DevicesGetReleaseUpdateDevicesStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A boolean value that indicates if the provisioning profile should be return in addition to the status. When set to true, the provisioning profile will be returned only when status is 'complete' or 'preparing_for_testers'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_provisioning_profile")
+    public Boolean includeProvisioningProfile;
+    public DevicesGetReleaseUpdateDevicesStatusRequest withIncludeProvisioningProfile(Boolean includeProvisioningProfile) {
+        this.includeProvisioningProfile = includeProvisioningProfile;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DevicesGetReleaseUpdateDevicesStatusRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public DevicesGetReleaseUpdateDevicesStatusSecurity security;
-    public DevicesGetReleaseUpdateDevicesStatusRequest withSecurity(DevicesGetReleaseUpdateDevicesStatusSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the release.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public String releaseId;
+    public DevicesGetReleaseUpdateDevicesStatusRequest withReleaseId(String releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The ID of the resign operation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resign_id")
+    public String resignId;
+    public DevicesGetReleaseUpdateDevicesStatusRequest withResignId(String resignId) {
+        this.resignId = resignId;
         return this;
     }
     

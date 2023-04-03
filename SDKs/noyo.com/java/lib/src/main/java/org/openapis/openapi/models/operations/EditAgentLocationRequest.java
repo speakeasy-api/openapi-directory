@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditAgentLocationRequest {
-    
-    public EditAgentLocationPathParams pathParams;
-    public EditAgentLocationRequest withPathParams(EditAgentLocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AgentLocationEditRequest agentLocationEditRequest;
+    public EditAgentLocationRequest withAgentLocationEditRequest(org.openapis.openapi.models.shared.AgentLocationEditRequest agentLocationEditRequest) {
+        this.agentLocationEditRequest = agentLocationEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AgentLocationEditRequest request;
-    public EditAgentLocationRequest withRequest(org.openapis.openapi.models.shared.AgentLocationEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the agent in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public EditAgentLocationRequest withAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the agent location in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public EditAgentLocationRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the agent location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditAgentLocationRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBinIdRequest {
-    
-    public GetBinIdPathParams pathParams;
-    public GetBinIdRequest withPathParams(GetBinIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBinIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -73,7 +73,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UserGetBungieNetUserByIdResponse userGetBungieNetUserById(org.openapis.openapi.models.operations.UserGetBungieNetUserByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetBungieNetUserByIdPathParams.class, baseUrl, "/User/GetBungieNetUserById/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetBungieNetUserByIdRequest.class, baseUrl, "/User/GetBungieNetUserById/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -110,7 +110,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UserGetCredentialTypesForTargetAccountResponse userGetCredentialTypesForTargetAccount(org.openapis.openapi.models.operations.UserGetCredentialTypesForTargetAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetCredentialTypesForTargetAccountPathParams.class, baseUrl, "/User/GetCredentialTypesForTargetAccount/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetCredentialTypesForTargetAccountRequest.class, baseUrl, "/User/GetCredentialTypesForTargetAccount/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -147,7 +147,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UserGetMembershipDataByIdResponse userGetMembershipDataById(org.openapis.openapi.models.operations.UserGetMembershipDataByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetMembershipDataByIdPathParams.class, baseUrl, "/User/GetMembershipsById/{membershipId}/{membershipType}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetMembershipDataByIdRequest.class, baseUrl, "/User/GetMembershipsById/{membershipId}/{membershipType}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -178,11 +178,10 @@ public class User {
 
     /**
      * Returns a list of accounts associated with signed in user. This is useful for OAuth implementations that do not give you access to the token response.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserResponse userGetMembershipDataForCurrentUser(org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UserGetMembershipDataForCurrentUserResponse userGetMembershipDataForCurrentUser() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/User/GetMembershipsForCurrentUser/");
         
@@ -191,8 +190,7 @@ public class User {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -222,7 +220,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UserGetMembershipFromHardLinkedCredentialResponse userGetMembershipFromHardLinkedCredential(org.openapis.openapi.models.operations.UserGetMembershipFromHardLinkedCredentialRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetMembershipFromHardLinkedCredentialPathParams.class, baseUrl, "/User/GetMembershipFromHardLinkedCredential/{crType}/{credential}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetMembershipFromHardLinkedCredentialRequest.class, baseUrl, "/User/GetMembershipFromHardLinkedCredential/{crType}/{credential}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -259,7 +257,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UserGetSanitizedPlatformDisplayNamesResponse userGetSanitizedPlatformDisplayNames(org.openapis.openapi.models.operations.UserGetSanitizedPlatformDisplayNamesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetSanitizedPlatformDisplayNamesPathParams.class, baseUrl, "/User/GetSanitizedPlatformDisplayNames/{membershipId}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserGetSanitizedPlatformDisplayNamesRequest.class, baseUrl, "/User/GetSanitizedPlatformDisplayNames/{membershipId}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -296,7 +294,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UserSearchByGlobalNamePostResponse userSearchByGlobalNamePost(org.openapis.openapi.models.operations.UserSearchByGlobalNamePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserSearchByGlobalNamePostPathParams.class, baseUrl, "/User/Search/GlobalName/{page}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserSearchByGlobalNamePostRequest.class, baseUrl, "/User/Search/GlobalName/{page}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -333,7 +331,7 @@ public class User {
      */
     public org.openapis.openapi.models.operations.UserSearchByGlobalNamePrefixResponse userSearchByGlobalNamePrefix(org.openapis.openapi.models.operations.UserSearchByGlobalNamePrefixRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserSearchByGlobalNamePrefixPathParams.class, baseUrl, "/User/Search/Prefix/{displayNamePrefix}/{page}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UserSearchByGlobalNamePrefixRequest.class, baseUrl, "/User/Search/Prefix/{displayNamePrefix}/{page}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDetailsOfFileByIdRequest {
-    
-    public GetDetailsOfFileByIdPathParams pathParams;
-    public GetDetailsOfFileByIdRequest withPathParams(GetDetailsOfFileByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the File to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileUuid")
+    public String fileUuid;
+    public GetDetailsOfFileByIdRequest withFileUuid(String fileUuid) {
+        this.fileUuid = fileUuid;
         return this;
     }
     
-    
-    public GetDetailsOfFileByIdQueryParams queryParams;
-    public GetDetailsOfFileByIdRequest withQueryParams(GetDetailsOfFileByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Tells server to return the base64-encoded file contents in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inline_files")
+    public Boolean inlineFiles;
+    public GetDetailsOfFileByIdRequest withInlineFiles(Boolean inlineFiles) {
+        this.inlineFiles = inlineFiles;
         return this;
     }
     
+    /**
+     * The UUID of the Item to fetch File from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
+    public String itemUuid;
+    public GetDetailsOfFileByIdRequest withItemUuid(String itemUuid) {
+        this.itemUuid = itemUuid;
+        return this;
+    }
     
-    public GetDetailsOfFileByIdSecurity security;
-    public GetDetailsOfFileByIdRequest withSecurity(GetDetailsOfFileByIdSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the Vault to fetch Item from
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
+    public String vaultUuid;
+    public GetDetailsOfFileByIdRequest withVaultUuid(String vaultUuid) {
+        this.vaultUuid = vaultUuid;
         return this;
     }
     

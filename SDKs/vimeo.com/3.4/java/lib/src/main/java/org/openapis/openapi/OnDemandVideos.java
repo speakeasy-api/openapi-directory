@@ -34,24 +34,25 @@ public class OnDemandVideos {
     /**
      * Add a video to an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToVodResponse addVideoToVod(org.openapis.openapi.models.operations.AddVideoToVodRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToVodResponse addVideoToVod(org.openapis.openapi.models.operations.AddVideoToVodRequest request, org.openapis.openapi.models.operations.AddVideoToVodSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToVodPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToVodRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,19 +87,20 @@ public class OnDemandVideos {
     /**
      * Remove a video from an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoFromVodResponse deleteVideoFromVod(org.openapis.openapi.models.operations.DeleteVideoFromVodRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoFromVodResponse deleteVideoFromVod(org.openapis.openapi.models.operations.DeleteVideoFromVodRequest request, org.openapis.openapi.models.operations.DeleteVideoFromVodSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromVodPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoFromVodRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -132,7 +134,7 @@ public class OnDemandVideos {
      */
     public org.openapis.openapi.models.operations.GetVodVideoResponse getVodVideo(org.openapis.openapi.models.operations.GetVodVideoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodVideoPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodVideoRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -171,13 +173,13 @@ public class OnDemandVideos {
      */
     public org.openapis.openapi.models.operations.GetVodVideosResponse getVodVideos(org.openapis.openapi.models.operations.GetVodVideosRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodVideosPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodVideosRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

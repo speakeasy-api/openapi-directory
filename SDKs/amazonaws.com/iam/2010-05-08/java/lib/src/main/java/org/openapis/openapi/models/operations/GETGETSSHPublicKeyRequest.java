@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETSSHPublicKeyRequest {
-    
-    public GETGETSSHPublicKeyQueryParams queryParams;
-    public GETGETSSHPublicKeyRequest withQueryParams(GETGETSSHPublicKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETSSHPublicKeyActionEnum action;
+    public GETGETSSHPublicKeyRequest withAction(GETGETSSHPublicKeyActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use &lt;code&gt;SSH&lt;/code&gt;. To retrieve the public key in PEM format, use &lt;code&gt;PEM&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Encoding")
+    public GETGETSSHPublicKeyEncodingEnum encoding;
+    public GETGETSSHPublicKeyRequest withEncoding(GETGETSSHPublicKeyEncodingEnum encoding) {
+        this.encoding = encoding;
+        return this;
+    }
     
-    public GETGETSSHPublicKeyHeaders headers;
-    public GETGETSSHPublicKeyRequest withHeaders(GETGETSSHPublicKeyHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The unique identifier for the SSH public key.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters that can consist of any upper or lowercased letter or digit.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SSHPublicKeyId")
+    public String sshPublicKeyId;
+    public GETGETSSHPublicKeyRequest withSSHPublicKeyId(String sshPublicKeyId) {
+        this.sshPublicKeyId = sshPublicKeyId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the IAM user associated with the SSH public key.&lt;/p&gt; &lt;p&gt;This parameter allows (through its &lt;a href="http://wikipedia.org/wiki/regex"&gt;regex pattern&lt;/a&gt;) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserName")
+    public String userName;
+    public GETGETSSHPublicKeyRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETSSHPublicKeyVersionEnum version;
+    public GETGETSSHPublicKeyRequest withVersion(GETGETSSHPublicKeyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETSSHPublicKeyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETSSHPublicKeyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETSSHPublicKeyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETSSHPublicKeyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETSSHPublicKeyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETSSHPublicKeyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETSSHPublicKeyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

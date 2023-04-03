@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOriginationUrlRequest {
-    
-    public CreateOriginationUrlPathParams pathParams;
-    public CreateOriginationUrlRequest withPathParams(CreateOriginationUrlPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateOriginationUrlCreateOriginationUrlRequest request;
-    public CreateOriginationUrlRequest withRequest(CreateOriginationUrlCreateOriginationUrlRequest request) {
-        this.request = request;
+    public CreateOriginationUrlCreateOriginationUrlRequest requestBody;
+    public CreateOriginationUrlRequest withRequestBody(CreateOriginationUrlCreateOriginationUrlRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateOriginationUrlSecurity security;
-    public CreateOriginationUrlRequest withSecurity(CreateOriginationUrlSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateOriginationUrlRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk to associate the resource with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public CreateOriginationUrlRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

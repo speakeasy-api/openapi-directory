@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2BulkJobsBulkJobsIdJobDataRequest {
-    
-    public PostV2BulkJobsBulkJobsIdJobDataPathParams pathParams;
-    public PostV2BulkJobsBulkJobsIdJobDataRequest withPathParams(PostV2BulkJobsBulkJobsIdJobDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public PostV2BulkJobsBulkJobsIdJobDataRequestBody requestBody;
+    public PostV2BulkJobsBulkJobsIdJobDataRequest withRequestBody(PostV2BulkJobsBulkJobsIdJobDataRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PostV2BulkJobsBulkJobsIdJobDataRequestBody request;
-    public PostV2BulkJobsBulkJobsIdJobDataRequest withRequest(PostV2BulkJobsBulkJobsIdJobDataRequestBody request) {
-        this.request = request;
+    /**
+     * The id for the bulk job to which the job data relates
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bulk_jobs_id")
+    public Long bulkJobsId;
+    public PostV2BulkJobsBulkJobsIdJobDataRequest withBulkJobsId(Long bulkJobsId) {
+        this.bulkJobsId = bulkJobsId;
         return this;
     }
     

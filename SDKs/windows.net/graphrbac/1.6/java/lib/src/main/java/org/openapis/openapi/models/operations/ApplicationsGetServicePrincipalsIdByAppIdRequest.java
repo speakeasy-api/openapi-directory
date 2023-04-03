@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApplicationsGetServicePrincipalsIdByAppIdRequest {
-    
-    public ApplicationsGetServicePrincipalsIdByAppIdPathParams pathParams;
-    public ApplicationsGetServicePrincipalsIdByAppIdRequest withPathParams(ApplicationsGetServicePrincipalsIdByAppIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ApplicationsGetServicePrincipalsIdByAppIdRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The application ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationID")
+    public String applicationID;
+    public ApplicationsGetServicePrincipalsIdByAppIdRequest withApplicationID(String applicationID) {
+        this.applicationID = applicationID;
+        return this;
+    }
     
-    public ApplicationsGetServicePrincipalsIdByAppIdQueryParams queryParams;
-    public ApplicationsGetServicePrincipalsIdByAppIdRequest withQueryParams(ApplicationsGetServicePrincipalsIdByAppIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ApplicationsGetServicePrincipalsIdByAppIdRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

@@ -36,7 +36,7 @@ public class EventsFindEvents {
      */
     public org.openapis.openapi.models.operations.GetEventsEventIdResponse getEventsEventId(org.openapis.openapi.models.operations.GetEventsEventIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsEventIdPathParams.class, baseUrl, "/events/{eventId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventsEventIdRequest.class, baseUrl, "/events/{eventId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

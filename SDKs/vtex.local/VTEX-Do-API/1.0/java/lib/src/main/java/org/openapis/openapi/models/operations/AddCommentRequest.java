@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddCommentRequest {
-    
-    public AddCommentPathParams pathParams;
-    public AddCommentRequest withPathParams(AddCommentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddCommentHeaders headers;
-    public AddCommentRequest withHeaders(AddCommentHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AddCommentRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddCommentRequest request;
-    public AddCommentRequest withRequest(org.openapis.openapi.models.shared.AddCommentRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddCommentRequest addCommentRequest;
+    public AddCommentRequest withAddCommentRequest(org.openapis.openapi.models.shared.AddCommentRequest addCommentRequest) {
+        this.addCommentRequest = addCommentRequest;
+        return this;
+    }
+    
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AddCommentRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * Task ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
+    public String taskId;
+    public AddCommentRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

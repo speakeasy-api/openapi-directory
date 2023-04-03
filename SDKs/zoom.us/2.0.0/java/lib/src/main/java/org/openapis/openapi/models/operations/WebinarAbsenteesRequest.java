@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarAbsenteesRequest {
-    
-    public WebinarAbsenteesPathParams pathParams;
-    public WebinarAbsenteesRequest withPathParams(WebinarAbsenteesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Webinar UUID. Each Webinar instance will generate its own Webinar UUID (i.e., after a Webinar ends, a new UUID will be generated for the next instance of the Webinar). Please double encode your UUID when using it for API calls if the UUID begins with a '/' or contains '//' in it.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WebinarUUID")
+    public String webinarUUID;
+    public WebinarAbsenteesRequest withWebinarUUID(String webinarUUID) {
+        this.webinarUUID = webinarUUID;
         return this;
     }
     
-    
-    public WebinarAbsenteesQueryParams queryParams;
-    public WebinarAbsenteesRequest withQueryParams(WebinarAbsenteesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public WebinarAbsenteesRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The meeting occurrence ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public WebinarAbsenteesRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
+        return this;
+    }
     
-    public WebinarAbsenteesSecurity security;
-    public WebinarAbsenteesRequest withSecurity(WebinarAbsenteesSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public WebinarAbsenteesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

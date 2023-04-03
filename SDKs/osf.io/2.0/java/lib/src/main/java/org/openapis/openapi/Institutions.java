@@ -39,7 +39,7 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.InstitutionsDetailResponse institutionsDetail(org.openapis.openapi.models.operations.InstitutionsDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionsDetailPathParams.class, baseUrl, "/institutions/{institution_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionsDetailRequest.class, baseUrl, "/institutions/{institution_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -141,7 +141,7 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.InstitutionsNodeListResponse institutionsNodeList(org.openapis.openapi.models.operations.InstitutionsNodeListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionsNodeListPathParams.class, baseUrl, "/institutions/{institution_id}/nodes/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionsNodeListRequest.class, baseUrl, "/institutions/{institution_id}/nodes/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -191,7 +191,7 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.InstitutionsRegistrationListResponse institutionsRegistrationList(org.openapis.openapi.models.operations.InstitutionsRegistrationListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionsRegistrationListPathParams.class, baseUrl, "/institutions/{institution_id}/registrations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionsRegistrationListRequest.class, baseUrl, "/institutions/{institution_id}/registrations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -236,7 +236,7 @@ public class Institutions {
      */
     public org.openapis.openapi.models.operations.InstitutionsUsersListResponse institutionsUsersList(org.openapis.openapi.models.operations.InstitutionsUsersListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionsUsersListPathParams.class, baseUrl, "/institutions/{institution_id}/users/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InstitutionsUsersListRequest.class, baseUrl, "/institutions/{institution_id}/users/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

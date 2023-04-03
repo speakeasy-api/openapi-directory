@@ -4,27 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsLogFlowRequest {
-    
-    public AnalyticsLogFlowPathParams pathParams;
-    public AnalyticsLogFlowRequest withPathParams(AnalyticsLogFlowPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AnalyticsLogFlowRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public AnalyticsLogFlowQueryParams queryParams;
-    public AnalyticsLogFlowRequest withQueryParams(AnalyticsLogFlowQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AnalyticsLogFlowRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     
-    
-    public AnalyticsLogFlowSecurity security;
-    public AnalyticsLogFlowRequest withSecurity(AnalyticsLogFlowSecurity security) {
-        this.security = security;
+    /**
+     * Start date time in data in ISO 8601 date time format. It must be within the current day in the UTC timezone. The default value is the start time of the current day in UTC timezone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public AnalyticsLogFlowRequest withStart(OffsetDateTime start) {
+        this.start = start;
         return this;
     }
     

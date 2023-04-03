@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetPathParams;
-import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetQueryParams;
 import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetRequest;
 import org.openapis.openapi.models.operations.SafebrowsingEncodedFullHashesGetResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -31,25 +29,21 @@ public class Application {
                 .build();
 
             SafebrowsingEncodedFullHashesGetRequest req = new SafebrowsingEncodedFullHashesGetRequest() {{
-                pathParams = new SafebrowsingEncodedFullHashesGetPathParams() {{
-                    encodedRequest = "corrupti";
-                }};
-                queryParams = new SafebrowsingEncodedFullHashesGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    clientId = "nulla";
-                    clientVersion = "corrupti";
-                    fields = "illum";
-                    key = "vel";
-                    oauthToken = "error";
-                    prettyPrint = false;
-                    quotaUser = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                clientId = "unde";
+                clientVersion = "nulla";
+                encodedRequest = "corrupti";
+                fields = "illum";
+                key = "vel";
+                oauthToken = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
             SafebrowsingEncodedFullHashesGetResponse res = sdk.encodedFullHashes.safebrowsingEncodedFullHashesGet(req);
 
@@ -63,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### encodedFullHashes

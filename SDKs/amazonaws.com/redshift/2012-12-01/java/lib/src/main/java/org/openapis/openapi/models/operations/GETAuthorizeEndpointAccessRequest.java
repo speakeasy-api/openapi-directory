@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAuthorizeEndpointAccessRequest {
-    
-    public GETAuthorizeEndpointAccessQueryParams queryParams;
-    public GETAuthorizeEndpointAccessRequest withQueryParams(GETAuthorizeEndpointAccessQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Amazon Web Services account ID to grant access to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Account")
+    public String account;
+    public GETAuthorizeEndpointAccessRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAuthorizeEndpointAccessActionEnum action;
+    public GETAuthorizeEndpointAccessRequest withAction(GETAuthorizeEndpointAccessActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETAuthorizeEndpointAccessHeaders headers;
-    public GETAuthorizeEndpointAccessRequest withHeaders(GETAuthorizeEndpointAccessHeaders headers) {
-        this.headers = headers;
+    /**
+     * The cluster identifier of the cluster to grant access to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETAuthorizeEndpointAccessRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAuthorizeEndpointAccessVersionEnum version;
+    public GETAuthorizeEndpointAccessRequest withVersion(GETAuthorizeEndpointAccessVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The virtual private cloud (VPC) identifiers to grant access to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcIds")
+    public String[] vpcIds;
+    public GETAuthorizeEndpointAccessRequest withVpcIds(String[] vpcIds) {
+        this.vpcIds = vpcIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAuthorizeEndpointAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAuthorizeEndpointAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAuthorizeEndpointAccessRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAuthorizeEndpointAccessRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAuthorizeEndpointAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAuthorizeEndpointAccessRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAuthorizeEndpointAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

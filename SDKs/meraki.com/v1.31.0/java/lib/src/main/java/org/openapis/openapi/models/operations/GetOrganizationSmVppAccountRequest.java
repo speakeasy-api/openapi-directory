@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSmVppAccountRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationSmVppAccountRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
     
-    public GetOrganizationSmVppAccountPathParams pathParams;
-    public GetOrganizationSmVppAccountRequest withPathParams(GetOrganizationSmVppAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vppAccountId")
+    public String vppAccountId;
+    public GetOrganizationSmVppAccountRequest withVppAccountId(String vppAccountId) {
+        this.vppAccountId = vppAccountId;
         return this;
     }
     

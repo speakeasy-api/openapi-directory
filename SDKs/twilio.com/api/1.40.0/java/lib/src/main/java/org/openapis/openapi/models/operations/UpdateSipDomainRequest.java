@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSipDomainRequest {
-    
-    public UpdateSipDomainPathParams pathParams;
-    public UpdateSipDomainRequest withPathParams(UpdateSipDomainPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the SipDomain resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateSipDomainRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSipDomainUpdateSipDomainRequest request;
-    public UpdateSipDomainRequest withRequest(UpdateSipDomainUpdateSipDomainRequest request) {
-        this.request = request;
+    public UpdateSipDomainUpdateSipDomainRequest requestBody;
+    public UpdateSipDomainRequest withRequestBody(UpdateSipDomainUpdateSipDomainRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSipDomainSecurity security;
-    public UpdateSipDomainRequest withSecurity(UpdateSipDomainSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSipDomainRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the SipDomain resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSipDomainRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

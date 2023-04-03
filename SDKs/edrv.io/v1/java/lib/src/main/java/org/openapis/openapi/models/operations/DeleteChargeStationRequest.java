@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteChargeStationRequest {
-    
-    public DeleteChargeStationPathParams pathParams;
-    public DeleteChargeStationRequest withPathParams(DeleteChargeStationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The charge station id that needs to be deleted
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteChargeStationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

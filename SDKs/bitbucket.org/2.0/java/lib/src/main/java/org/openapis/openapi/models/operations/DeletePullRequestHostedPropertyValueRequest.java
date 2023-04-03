@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePullRequestHostedPropertyValueRequest {
+    /**
+     * The key of the Connect app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_key")
+    public String appKey;
+    public DeletePullRequestHostedPropertyValueRequest withAppKey(String appKey) {
+        this.appKey = appKey;
+        return this;
+    }
     
-    public DeletePullRequestHostedPropertyValuePathParams pathParams;
-    public DeletePullRequestHostedPropertyValueRequest withPathParams(DeletePullRequestHostedPropertyValuePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the property.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property_name")
+    public String propertyName;
+    public DeletePullRequestHostedPropertyValueRequest withPropertyName(String propertyName) {
+        this.propertyName = propertyName;
+        return this;
+    }
+    
+    /**
+     * The pull request ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pullrequest_id")
+    public String pullrequestId;
+    public DeletePullRequestHostedPropertyValueRequest withPullrequestId(String pullrequestId) {
+        this.pullrequestId = pullrequestId;
+        return this;
+    }
+    
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeletePullRequestHostedPropertyValueRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * The repository container; either the workspace slug or the UUID in curly braces.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeletePullRequestHostedPropertyValueRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsPatchDataPointFormRequest {
-    
-    public TagsPatchDataPointFormPathParams pathParams;
-    public TagsPatchDataPointFormRequest withPathParams(TagsPatchDataPointFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body patch
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ApiCoreRequestsPatchBody request;
-    public TagsPatchDataPointFormRequest withRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPatchBody request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreRequestsPatchBody apiCoreRequestsPatchBody;
+    public TagsPatchDataPointFormRequest withApiCoreRequestsPatchBody(org.openapis.openapi.models.shared.ApiCoreRequestsPatchBody apiCoreRequestsPatchBody) {
+        this.apiCoreRequestsPatchBody = apiCoreRequestsPatchBody;
+        return this;
+    }
+    
+    /**
+     * Id of the tag
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tagId")
+    public Long tagId;
+    public TagsPatchDataPointFormRequest withTagId(Long tagId) {
+        this.tagId = tagId;
         return this;
     }
     

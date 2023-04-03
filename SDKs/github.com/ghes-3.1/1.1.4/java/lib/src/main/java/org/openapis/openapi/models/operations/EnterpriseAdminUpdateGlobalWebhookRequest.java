@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdateGlobalWebhookRequest {
-    
-    public EnterpriseAdminUpdateGlobalWebhookPathParams pathParams;
-    public EnterpriseAdminUpdateGlobalWebhookRequest withPathParams(EnterpriseAdminUpdateGlobalWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EnterpriseAdminUpdateGlobalWebhookHeaders headers;
-    public EnterpriseAdminUpdateGlobalWebhookRequest withHeaders(EnterpriseAdminUpdateGlobalWebhookHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminUpdateGlobalWebhookRequestBody request;
-    public EnterpriseAdminUpdateGlobalWebhookRequest withRequest(EnterpriseAdminUpdateGlobalWebhookRequestBody request) {
-        this.request = request;
+    public EnterpriseAdminUpdateGlobalWebhookRequestBody requestBody;
+    public EnterpriseAdminUpdateGlobalWebhookRequest withRequestBody(EnterpriseAdminUpdateGlobalWebhookRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public EnterpriseAdminUpdateGlobalWebhookRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the hook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
+    public Long hookId;
+    public EnterpriseAdminUpdateGlobalWebhookRequest withHookId(Long hookId) {
+        this.hookId = hookId;
         return this;
     }
     

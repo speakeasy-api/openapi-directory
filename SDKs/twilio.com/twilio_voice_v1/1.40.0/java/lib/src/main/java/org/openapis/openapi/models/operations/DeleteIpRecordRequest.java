@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteIpRecordRequest {
-    
-    public DeleteIpRecordPathParams pathParams;
-    public DeleteIpRecordRequest withPathParams(DeleteIpRecordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteIpRecordSecurity security;
-    public DeleteIpRecordRequest withSecurity(DeleteIpRecordSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteIpRecordRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the IP Record resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteIpRecordRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

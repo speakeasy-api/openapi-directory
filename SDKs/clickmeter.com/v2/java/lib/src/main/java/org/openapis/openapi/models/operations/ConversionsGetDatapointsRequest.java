@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetDatapointsRequest {
-    
-    public ConversionsGetDatapointsPathParams pathParams;
-    public ConversionsGetDatapointsRequest withPathParams(ConversionsGetDatapointsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsGetDatapointsRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     
+    /**
+     * Exclude datapoints created before this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public String createdAfter;
+    public ConversionsGetDatapointsRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
     
-    public ConversionsGetDatapointsQueryParams queryParams;
-    public ConversionsGetDatapointsRequest withQueryParams(ConversionsGetDatapointsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude datapoints created after this date (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public String createdBefore;
+    public ConversionsGetDatapointsRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ConversionsGetDatapointsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset where to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public ConversionsGetDatapointsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Status of datapoint ("deleted"/"active"/"paused"/"spam")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ConversionsGetDatapointsStatusEnum status;
+    public ConversionsGetDatapointsRequest withStatus(ConversionsGetDatapointsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Filter by this tag name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public ConversionsGetDatapointsRequest withTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Filter fields by this pattern
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
+    public String textSearch;
+    public ConversionsGetDatapointsRequest withTextSearch(String textSearch) {
+        this.textSearch = textSearch;
+        return this;
+    }
+    
+    /**
+     * Type of datapoint ("tl"/"tp")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ConversionsGetDatapointsTypeEnum type;
+    public ConversionsGetDatapointsRequest withType(ConversionsGetDatapointsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

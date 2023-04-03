@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CampaignAnalyticsQueryParams;
 import org.openapis.openapi.models.operations.CampaignAnalyticsRequest;
 import org.openapis.openapi.models.operations.CampaignAnalyticsResponse;
 
@@ -15,12 +14,10 @@ public class Application {
                 .build();
 
             CampaignAnalyticsRequest req = new CampaignAnalyticsRequest() {{
-                queryParams = new CampaignAnalyticsQueryParams() {{
-                    campaignId = "{{campaign_identifier}}";
-                    endingAt = "2020-06-28T23:59:59-5:00";
-                    length = "7";
-                }};
-            }};            
+                campaignId = "{{campaign_identifier}}";
+                endingAt = "2020-06-28T23:59:59-5:00";
+                length = "7";
+            }}            
 
             CampaignAnalyticsResponse res = sdk.campaign.campaignAnalytics(req);
 

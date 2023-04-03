@@ -35,27 +35,28 @@ public class Nodes {
     /**
      * Signs a device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceResponse prodTtSasportalNodesDevicesSignDevice(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceResponse prodTtSasportalNodesDevicesSignDevice(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDevicePathParams.class, baseUrl, "/v1alpha1/{name}:signDevice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceRequest.class, baseUrl, "/v1alpha1/{name}:signDevice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalSignDeviceRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesSignDeviceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Nodes {
     /**
      * Updates a signed device.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedResponse prodTtSasportalNodesDevicesUpdateSigned(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedResponse prodTtSasportalNodesDevicesUpdateSigned(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedPathParams.class, baseUrl, "/v1alpha1/{name}:updateSigned", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedRequest.class, baseUrl, "/v1alpha1/{name}:updateSigned", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalUpdateSignedDeviceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesDevicesUpdateSignedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Nodes {
     /**
      * Deletes a node.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteResponse prodTtSasportalNodesNodesDelete(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteResponse prodTtSasportalNodesNodesDelete(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeletePathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Nodes {
     /**
      * Creates a new deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateResponse prodTtSasportalNodesNodesDeploymentsCreate(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateResponse prodTtSasportalNodesNodesDeploymentsCreate(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreatePathParams.class, baseUrl, "/v1alpha1/{parent}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateRequest.class, baseUrl, "/v1alpha1/{parent}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalDeploymentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Nodes {
     /**
      * Lists deployments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListResponse prodTtSasportalNodesNodesDeploymentsList(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListResponse prodTtSasportalNodesNodesDeploymentsList(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListPathParams.class, baseUrl, "/v1alpha1/{parent}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListRequest.class, baseUrl, "/v1alpha1/{parent}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDeploymentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Nodes {
     /**
      * Creates a device under a node or customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateResponse prodTtSasportalNodesNodesDevicesCreate(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateResponse prodTtSasportalNodesNodesDevicesCreate(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreatePathParams.class, baseUrl, "/v1alpha1/{parent}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateRequest.class, baseUrl, "/v1alpha1/{parent}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalDeviceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,27 +319,28 @@ public class Nodes {
     /**
      * Creates a signed device under a node or customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedResponse prodTtSasportalNodesNodesDevicesCreateSigned(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedResponse prodTtSasportalNodesNodesDevicesCreateSigned(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedPathParams.class, baseUrl, "/v1alpha1/{parent}/devices:createSigned", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedRequest.class, baseUrl, "/v1alpha1/{parent}/devices:createSigned", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalCreateSignedDeviceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesCreateSignedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,25 +367,26 @@ public class Nodes {
     /**
      * Lists devices under a node or customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListResponse prodTtSasportalNodesNodesDevicesList(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListResponse prodTtSasportalNodesNodesDevicesList(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListPathParams.class, baseUrl, "/v1alpha1/{parent}/devices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListRequest.class, baseUrl, "/v1alpha1/{parent}/devices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesDevicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,25 +413,26 @@ public class Nodes {
     /**
      * Returns a requested node.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetResponse prodTtSasportalNodesNodesGet(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetResponse prodTtSasportalNodesNodesGet(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetPathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,27 +459,28 @@ public class Nodes {
     /**
      * Moves a node under another node or customer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveResponse prodTtSasportalNodesNodesMove(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveResponse prodTtSasportalNodesNodesMove(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMovePathParams.class, baseUrl, "/v1alpha1/{name}:move", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveRequest.class, baseUrl, "/v1alpha1/{name}:move", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalMoveNodeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesMoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,27 +507,28 @@ public class Nodes {
     /**
      * Creates a new node.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateResponse prodTtSasportalNodesNodesNodesCreate(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateResponse prodTtSasportalNodesNodesNodesCreate(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreatePathParams.class, baseUrl, "/v1alpha1/{parent}/nodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateRequest.class, baseUrl, "/v1alpha1/{parent}/nodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalNode", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,25 +555,26 @@ public class Nodes {
     /**
      * Lists nodes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListResponse prodTtSasportalNodesNodesNodesList(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListResponse prodTtSasportalNodesNodesNodesList(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListPathParams.class, baseUrl, "/v1alpha1/{parent}/nodes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListRequest.class, baseUrl, "/v1alpha1/{parent}/nodes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesNodesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Nodes {
     /**
      * Updates an existing node.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchResponse prodTtSasportalNodesNodesPatch(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchResponse prodTtSasportalNodesNodesPatch(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchRequest request, org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchPathParams.class, baseUrl, "/v1alpha1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchRequest.class, baseUrl, "/v1alpha1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sasPortalNode", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProdTtSasportalNodesNodesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

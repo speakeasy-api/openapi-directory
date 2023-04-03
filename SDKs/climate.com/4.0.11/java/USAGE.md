@@ -5,11 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FetchBoundariesSecurity;
-import org.openapis.openapi.models.operations.FetchBoundariesRequest;
 import org.openapis.openapi.models.operations.FetchBoundariesResponse;
 import org.openapis.openapi.models.shared.BoundariesQuery;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
-import org.openapis.openapi.models.shared.SchemeOauth2AuthorizationCode;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,22 +14,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FetchBoundariesRequest req = new FetchBoundariesRequest() {{
-                security = new FetchBoundariesSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+            org.openapis.openapi.models.shared.BoundariesQuery req = new BoundariesQuery() {{
+                ids = new String[]{{
+                    add("9bd9d8d6-9a67-44e0-b467-cc8796ed151a"),
+                    add("05dfc2dd-f7cc-478c-a1ba-928fc816742c"),
+                    add("b7392059-2939-46fe-a759-6eb10faaa235"),
                 }};
-                request = new BoundariesQuery() {{
-                    ids = new String[]{{
-                        add("9bd9d8d6-9a67-44e0-b467-cc8796ed151a"),
-                        add("05dfc2dd-f7cc-478c-a1ba-928fc816742c"),
-                        add("b7392059-2939-46fe-a759-6eb10faaa235"),
-                    }};
-                }};
-            }};            
+            }}            
 
-            FetchBoundariesResponse res = sdk.boundaries.fetchBoundaries(req);
+            FetchBoundariesResponse res = sdk.boundaries.fetchBoundaries(req, new FetchBoundariesSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.boundaries.isPresent()) {
                 // handle response

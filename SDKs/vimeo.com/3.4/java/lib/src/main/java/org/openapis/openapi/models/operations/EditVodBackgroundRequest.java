@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditVodBackgroundRequest {
-    
-    public EditVodBackgroundPathParams pathParams;
-    public EditVodBackgroundRequest withPathParams(EditVodBackgroundPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.picture+json")
-    public EditVodBackgroundRequestBody request;
-    public EditVodBackgroundRequest withRequest(EditVodBackgroundRequestBody request) {
-        this.request = request;
+    public EditVodBackgroundRequestBody requestBody;
+    public EditVodBackgroundRequest withRequestBody(EditVodBackgroundRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the background.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=background_id")
+    public Double backgroundId;
+    public EditVodBackgroundRequest withBackgroundId(Double backgroundId) {
+        this.backgroundId = backgroundId;
+        return this;
+    }
     
-    public EditVodBackgroundSecurity security;
-    public EditVodBackgroundRequest withSecurity(EditVodBackgroundSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public EditVodBackgroundRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

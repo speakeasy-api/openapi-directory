@@ -42,7 +42,7 @@ public class Drivers {
      */
     public org.openapis.openapi.models.operations.DeleteDriversIdResponse deleteDriversId(org.openapis.openapi.models.operations.DeleteDriversIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDriversIdPathParams.class, baseUrl, "/drivers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDriversIdRequest.class, baseUrl, "/drivers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Drivers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDriversQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDriversRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -119,7 +119,7 @@ public class Drivers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDriversResponse postDrivers(org.openapis.openapi.models.operations.PostDriversRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDriversResponse postDrivers(org.openapis.openapi.models.shared.Driver request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/drivers");
         
@@ -165,12 +165,12 @@ public class Drivers {
      */
     public org.openapis.openapi.models.operations.PutDriversIdResponse putDriversId(org.openapis.openapi.models.operations.PutDriversIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutDriversIdPathParams.class, baseUrl, "/drivers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutDriversIdRequest.class, baseUrl, "/drivers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "driver", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

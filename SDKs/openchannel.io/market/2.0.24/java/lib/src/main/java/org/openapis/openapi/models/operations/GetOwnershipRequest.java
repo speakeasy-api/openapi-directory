@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOwnershipRequest {
+    /**
+     * The maximum number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetOwnershipRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetOwnershipQueryParams queryParams;
-    public GetOwnershipRequest withQueryParams(GetOwnershipQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The result set page number to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetOwnershipRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * A query document. Example: {'userId':'12'} matches all the ownership records that have the userId '12'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetOwnershipRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * A sort document. Example: {'date':1} sorts the results by date in ascending order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetOwnershipRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

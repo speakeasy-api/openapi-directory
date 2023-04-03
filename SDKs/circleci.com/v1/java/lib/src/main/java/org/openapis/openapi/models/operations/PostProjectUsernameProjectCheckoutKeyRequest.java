@@ -7,21 +7,36 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectCheckoutKeyRequest {
-    
-    public PostProjectUsernameProjectCheckoutKeyPathParams pathParams;
-    public PostProjectUsernameProjectCheckoutKeyRequest withPathParams(PostProjectUsernameProjectCheckoutKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The type of key to create. Can be 'deploy-key' or 'github-user-key'.
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostProjectUsernameProjectCheckoutKeyRequestBodyEnum request;
-    public PostProjectUsernameProjectCheckoutKeyRequest withRequest(PostProjectUsernameProjectCheckoutKeyRequestBodyEnum request) {
-        this.request = request;
+    public PostProjectUsernameProjectCheckoutKeyRequestBodyEnum requestBody;
+    public PostProjectUsernameProjectCheckoutKeyRequest withRequestBody(PostProjectUsernameProjectCheckoutKeyRequestBodyEnum requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public PostProjectUsernameProjectCheckoutKeyRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * XXXXXXXXX
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public PostProjectUsernameProjectCheckoutKeyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

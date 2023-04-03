@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BillingAggregatedInformationGetByAppRequest {
-    
-    public BillingAggregatedInformationGetByAppPathParams pathParams;
-    public BillingAggregatedInformationGetByAppRequest withPathParams(BillingAggregatedInformationGetByAppPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BillingAggregatedInformationGetByAppRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public BillingAggregatedInformationGetByAppQueryParams queryParams;
-    public BillingAggregatedInformationGetByAppRequest withQueryParams(BillingAggregatedInformationGetByAppQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BillingAggregatedInformationGetByAppRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     
+    /**
+     * Type of period that should be included in the Billing Information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public BillingAggregatedInformationGetByAppPeriodEnum period;
+    public BillingAggregatedInformationGetByAppRequest withPeriod(BillingAggregatedInformationGetByAppPeriodEnum period) {
+        this.period = period;
+        return this;
+    }
     
-    public BillingAggregatedInformationGetByAppSecurity security;
-    public BillingAggregatedInformationGetByAppRequest withSecurity(BillingAggregatedInformationGetByAppSecurity security) {
-        this.security = security;
+    /**
+     * Type of service that should be included in the Billing Information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
+    public BillingAggregatedInformationGetByAppServiceEnum service;
+    public BillingAggregatedInformationGetByAppRequest withService(BillingAggregatedInformationGetByAppServiceEnum service) {
+        this.service = service;
+        return this;
+    }
+    
+    /**
+     * Controls whether the API should show the original plan when Azure Subscription is not enabled
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showOriginalPlans")
+    public Boolean showOriginalPlans;
+    public BillingAggregatedInformationGetByAppRequest withShowOriginalPlans(Boolean showOriginalPlans) {
+        this.showOriginalPlans = showOriginalPlans;
         return this;
     }
     

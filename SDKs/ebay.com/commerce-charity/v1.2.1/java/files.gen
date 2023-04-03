@@ -31,13 +31,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCharityOrgsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CharityOrg.java
@@ -45,6 +41,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Image.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/GeoCoordinates.java
 lib/src/main/java/org/openapis/openapi/models/shared/Address.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/CharitySearchResponse.java
 USAGE.md

@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneNumberValidationRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public PhoneNumberValidationRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public PhoneNumberValidationQueryParams queryParams;
-    public PhoneNumberValidationRequest withQueryParams(PhoneNumberValidationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the phone number to validate. Phone number must include a country code in acceptable format. For instance, UK phone numbers should be suffixed `+44`, `44` or `0044`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=query")
+    public String query;
+    public PhoneNumberValidationRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

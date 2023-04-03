@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdGetRequest {
-    
-    public StoryIdGetPathParams pathParams;
-    public StoryIdGetRequest withPathParams(StoryIdGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Pull a story object with associated collaborator user, permission, and session data(faster if cached from prior api call)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=full")
+    public Boolean full;
+    public StoryIdGetRequest withFull(Boolean full) {
+        this.full = full;
         return this;
     }
     
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdGetRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public StoryIdGetQueryParams queryParams;
-    public StoryIdGetRequest withQueryParams(StoryIdGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Determines whether a repsonse including story objects should include the story outline.  Defaults to true. Useful for speeding up processing times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
+    public Boolean includeOutline;
+    public StoryIdGetRequest withIncludeOutline(Boolean includeOutline) {
+        this.includeOutline = includeOutline;
+        return this;
+    }
+    
+    /**
+     * Indicate whether the returned object should include child relationships
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_relationships")
+    public Boolean includeRelationships;
+    public StoryIdGetRequest withIncludeRelationships(Boolean includeRelationships) {
+        this.includeRelationships = includeRelationships;
+        return this;
+    }
+    
+    /**
+     * Force the api reload the `Story full` object
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refresh_cache")
+    public Boolean refreshCache;
+    public StoryIdGetRequest withRefreshCache(Boolean refreshCache) {
+        this.refreshCache = refreshCache;
         return this;
     }
     

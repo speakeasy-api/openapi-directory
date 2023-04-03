@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiTriggerEventRawRequest {
-    
-    public OrderApiTriggerEventRawPathParams pathParams;
-    public OrderApiTriggerEventRawRequest withPathParams(OrderApiTriggerEventRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public OrderApiTriggerEventRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public OrderApiTriggerEventRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * The id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiTriggerEventRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SplunkAssetSyncCreatedJSONRequest {
-    
-    public SplunkAssetSyncCreatedJSONQueryParams queryParams;
-    public SplunkAssetSyncCreatedJSONRequest withQueryParams(SplunkAssetSyncCreatedJSONQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * an optional list of fields to export, comma-separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public SplunkAssetSyncCreatedJSONRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     
+    /**
+     * an optional search string for filtering results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public SplunkAssetSyncCreatedJSONRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
     
-    public SplunkAssetSyncCreatedJSONSecurity security;
-    public SplunkAssetSyncCreatedJSONRequest withSecurity(SplunkAssetSyncCreatedJSONSecurity security) {
-        this.security = security;
+    /**
+     * an optional unix timestamp to use as a checkpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public Long since;
+    public SplunkAssetSyncCreatedJSONRequest withSince(Long since) {
+        this.since = since;
         return this;
     }
     

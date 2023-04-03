@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryGetArtifactRequest {
+    /**
+     * The artifact id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifact")
+    public String artifact;
+    public RegistryGetArtifactRequest withArtifact(String artifact) {
+        this.artifact = artifact;
+        return this;
+    }
     
-    public RegistryGetArtifactPathParams pathParams;
-    public RegistryGetArtifactRequest withPathParams(RegistryGetArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryGetArtifactRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryGetArtifactRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

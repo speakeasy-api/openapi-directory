@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgCreateHookRequest {
-    
-    public OrgCreateHookPathParams pathParams;
-    public OrgCreateHookRequest withPathParams(OrgCreateHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateHookOption createHookOption;
+    public OrgCreateHookRequest withCreateHookOption(org.openapis.openapi.models.shared.CreateHookOption createHookOption) {
+        this.createHookOption = createHookOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateHookOption request;
-    public OrgCreateHookRequest withRequest(org.openapis.openapi.models.shared.CreateHookOption request) {
-        this.request = request;
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgCreateHookRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

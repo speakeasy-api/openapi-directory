@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AnimateImageQueryParams;
 import org.openapis.openapi.models.operations.AnimateImageRequest;
 import org.openapis.openapi.models.operations.AnimateImageResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             AnimateImageRequest req = new AnimateImageRequest() {{
-                queryParams = new AnimateImageQueryParams() {{
-                    type = "corrupti";
-                    url = "provident";
-                }};
-            }};            
+                type = "corrupti";
+                url = "provident";
+            }}            
 
             AnimateImageResponse res = sdk.animateImage(req);
 

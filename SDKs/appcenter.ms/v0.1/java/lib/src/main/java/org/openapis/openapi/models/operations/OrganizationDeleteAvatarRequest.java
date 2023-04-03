@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrganizationDeleteAvatarRequest {
-    
-    public OrganizationDeleteAvatarPathParams pathParams;
-    public OrganizationDeleteAvatarRequest withPathParams(OrganizationDeleteAvatarPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public OrganizationDeleteAvatarSecurity security;
-    public OrganizationDeleteAvatarRequest withSecurity(OrganizationDeleteAvatarSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public OrganizationDeleteAvatarRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

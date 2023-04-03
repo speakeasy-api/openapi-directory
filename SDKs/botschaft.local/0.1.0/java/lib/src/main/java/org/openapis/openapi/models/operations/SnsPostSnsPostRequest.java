@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SnsPostSnsPostRequest {
-    
-    public SnsPostSnsPostHeaders headers;
-    public SnsPostSnsPostRequest withHeaders(SnsPostSnsPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SnsMessageRequest snsMessageRequest;
+    public SnsPostSnsPostRequest withSnsMessageRequest(org.openapis.openapi.models.shared.SnsMessageRequest snsMessageRequest) {
+        this.snsMessageRequest = snsMessageRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SnsMessageRequest request;
-    public SnsPostSnsPostRequest withRequest(org.openapis.openapi.models.shared.SnsMessageRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public SnsPostSnsPostRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     

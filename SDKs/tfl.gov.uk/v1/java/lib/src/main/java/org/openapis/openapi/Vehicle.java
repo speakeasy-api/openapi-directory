@@ -37,7 +37,7 @@ public class Vehicle {
      */
     public org.openapis.openapi.models.operations.VehicleGetResponse vehicleGet(org.openapis.openapi.models.operations.VehicleGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VehicleGetPathParams.class, baseUrl, "/Vehicle/{ids}/Arrivals", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VehicleGetRequest.class, baseUrl, "/Vehicle/{ids}/Arrivals", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCallFeedbackRequest {
+    /**
+     * The unique id of the [Account](https://www.twilio.com/docs/iam/api/account) responsible for this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateCallFeedbackRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateCallFeedbackPathParams pathParams;
-    public UpdateCallFeedbackRequest withPathParams(UpdateCallFeedbackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The call sid that uniquely identifies the call
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public UpdateCallFeedbackRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateCallFeedbackUpdateCallFeedbackRequest request;
-    public UpdateCallFeedbackRequest withRequest(UpdateCallFeedbackUpdateCallFeedbackRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateCallFeedbackSecurity security;
-    public UpdateCallFeedbackRequest withSecurity(UpdateCallFeedbackSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateCallFeedbackRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateCallFeedbackUpdateCallFeedbackRequest requestBody;
+    public UpdateCallFeedbackRequest withRequestBody(UpdateCallFeedbackUpdateCallFeedbackRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatusRequest {
-    
-    public GetStatusPathParams pathParams;
-    public GetStatusRequest withPathParams(GetStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The client IP of the user who originated the request leading to this call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auditClientIp")
+    public String auditClientIp;
+    public GetStatusRequest withAuditClientIp(String auditClientIp) {
+        this.auditClientIp = auditClientIp;
         return this;
     }
     
-    
-    public GetStatusQueryParams queryParams;
-    public GetStatusRequest withQueryParams(GetStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the shopper to retrieve. Must agree with the shopper id on the token or header, if present
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shopperId")
+    public String shopperId;
+    public GetStatusRequest withShopperId(String shopperId) {
+        this.shopperId = shopperId;
         return this;
     }
     

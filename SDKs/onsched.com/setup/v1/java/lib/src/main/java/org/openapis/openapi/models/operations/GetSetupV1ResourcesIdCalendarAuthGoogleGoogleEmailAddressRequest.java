@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest {
-    
-    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressPathParams pathParams;
-    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest withPathParams(GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Google calendar authorization return url
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=googleAuthReturnUrl")
+    public String googleAuthReturnUrl;
+    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest withGoogleAuthReturnUrl(String googleAuthReturnUrl) {
+        this.googleAuthReturnUrl = googleAuthReturnUrl;
         return this;
     }
     
+    /**
+     * Email address of Google Calendar
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=googleEmailAddress")
+    public String googleEmailAddress;
+    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest withGoogleEmailAddress(String googleEmailAddress) {
+        this.googleEmailAddress = googleEmailAddress;
+        return this;
+    }
     
-    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressQueryParams queryParams;
-    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest withQueryParams(GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ResourcesIdCalendarAuthGoogleGoogleEmailAddressRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

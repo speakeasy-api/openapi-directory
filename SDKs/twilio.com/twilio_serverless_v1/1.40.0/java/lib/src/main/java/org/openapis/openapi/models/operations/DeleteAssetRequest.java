@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAssetRequest {
-    
-    public DeleteAssetPathParams pathParams;
-    public DeleteAssetRequest withPathParams(DeleteAssetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service to delete the Asset resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteAssetRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteAssetSecurity security;
-    public DeleteAssetRequest withSecurity(DeleteAssetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteAssetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID that identifies the Asset resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteAssetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

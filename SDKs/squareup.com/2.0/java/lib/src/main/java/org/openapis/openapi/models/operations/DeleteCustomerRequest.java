@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomerRequest {
-    
-    public DeleteCustomerPathParams pathParams;
-    public DeleteCustomerRequest withPathParams(DeleteCustomerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the customer to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public String customerId;
+    public DeleteCustomerRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     
-    
-    public DeleteCustomerQueryParams queryParams;
-    public DeleteCustomerRequest withQueryParams(DeleteCustomerQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteCustomerSecurity security;
-    public DeleteCustomerRequest withSecurity(DeleteCustomerSecurity security) {
-        this.security = security;
+    /**
+     * The current version of the customer profile.
+     * 
+     * As a best practice, you should include this parameter to enable [optimistic concurrency](https://developer.squareup.com/docs/working-with-apis/optimistic-concurrency) control.  For more information, see [Delete a customer profile](https://developer.squareup.com/docs/customers-api/use-the-api/keep-records#delete-customer-profile).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public Long version;
+    public DeleteCustomerRequest withVersion(Long version) {
+        this.version = version;
         return this;
     }
     

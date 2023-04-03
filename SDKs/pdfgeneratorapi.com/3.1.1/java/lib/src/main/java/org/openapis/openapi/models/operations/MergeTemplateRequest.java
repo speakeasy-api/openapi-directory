@@ -7,20 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MergeTemplateRequest {
-    
-    public MergeTemplateQueryParams queryParams;
-    public MergeTemplateRequest withQueryParams(MergeTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Data used to generate the PDF. This can be JSON encoded string or a public URL to your JSON file.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Data request;
-    public MergeTemplateRequest withRequest(org.openapis.openapi.models.shared.Data request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Data data;
+    public MergeTemplateRequest withData(org.openapis.openapi.models.shared.Data data) {
+        this.data = data;
+        return this;
+    }
+    
+    /**
+     * Document format. The zip option will return a ZIP file with PDF files.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.FormatEnum format;
+    public MergeTemplateRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Document name, returned in the meta data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public MergeTemplateRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Response format. With the url option, the document is stored for 30 days and automatically deleted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
+    public org.openapis.openapi.models.shared.OutputEnum output;
+    public MergeTemplateRequest withOutput(org.openapis.openapi.models.shared.OutputEnum output) {
+        this.output = output;
+        return this;
+    }
+    
+    /**
+     * Template unique identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
+    public Long templateId;
+    public MergeTemplateRequest withTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
     

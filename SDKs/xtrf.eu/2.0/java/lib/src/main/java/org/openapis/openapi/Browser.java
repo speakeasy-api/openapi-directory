@@ -50,7 +50,7 @@ public class Browser {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BrowseCSVQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BrowseCSVRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -96,7 +96,7 @@ public class Browser {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BrowseJSONQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BrowseJSONRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -136,12 +136,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.CreateResponse create(org.openapis.openapi.models.operations.CreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePathParams.class, baseUrl, "/browser/views/for/{className}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateRequest.class, baseUrl, "/browser/views/for/{className}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "viewDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -181,7 +181,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.DeleteResponse delete(org.openapis.openapi.models.operations.DeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePathParams.class, baseUrl, "/browser/views/{viewId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRequest.class, baseUrl, "/browser/views/{viewId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -215,7 +215,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.DeleteColumnResponse deleteColumn(org.openapis.openapi.models.operations.DeleteColumnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteColumnPathParams.class, baseUrl, "/browser/views/{viewId}/columns/{columnName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteColumnRequest.class, baseUrl, "/browser/views/{viewId}/columns/{columnName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -255,7 +255,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetResponse get(org.openapis.openapi.models.operations.GetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathParams.class, baseUrl, "/browser/views/{viewId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRequest.class, baseUrl, "/browser/views/{viewId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -295,7 +295,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetColumnSettingsResponse getColumnSettings(org.openapis.openapi.models.operations.GetColumnSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetColumnSettingsPathParams.class, baseUrl, "/browser/views/{viewId}/columns/{columnName}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetColumnSettingsRequest.class, baseUrl, "/browser/views/{viewId}/columns/{columnName}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -335,7 +335,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetColumnsResponse getColumns(org.openapis.openapi.models.operations.GetColumnsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetColumnsPathParams.class, baseUrl, "/browser/views/{viewId}/columns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetColumnsRequest.class, baseUrl, "/browser/views/{viewId}/columns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -375,13 +375,13 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetCurrentViewDetailsResponse getCurrentViewDetails(org.openapis.openapi.models.operations.GetCurrentViewDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCurrentViewDetailsPathParams.class, baseUrl, "/browser/views/details/for/{className}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCurrentViewDetailsRequest.class, baseUrl, "/browser/views/details/for/{className}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCurrentViewDetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCurrentViewDetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -421,7 +421,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetFilterResponse getFilter(org.openapis.openapi.models.operations.GetFilterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilterPathParams.class, baseUrl, "/browser/views/{viewId}/filter", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFilterRequest.class, baseUrl, "/browser/views/{viewId}/filter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -461,7 +461,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetLocalSettingsResponse getLocalSettings(org.openapis.openapi.models.operations.GetLocalSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocalSettingsPathParams.class, baseUrl, "/browser/views/{viewId}/settings/local", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocalSettingsRequest.class, baseUrl, "/browser/views/{viewId}/settings/local", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -501,7 +501,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetOrderResponse getOrder(org.openapis.openapi.models.operations.GetOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderPathParams.class, baseUrl, "/browser/views/{viewId}/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrderRequest.class, baseUrl, "/browser/views/{viewId}/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -541,7 +541,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetPermissionsResponse getPermissions(org.openapis.openapi.models.operations.GetPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPermissionsPathParams.class, baseUrl, "/browser/views/{viewId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPermissionsRequest.class, baseUrl, "/browser/views/{viewId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -581,7 +581,7 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetSettingsResponse getSettings(org.openapis.openapi.models.operations.GetSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingsPathParams.class, baseUrl, "/browser/views/{viewId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSettingsRequest.class, baseUrl, "/browser/views/{viewId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -621,13 +621,13 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetViewDetailsResponse getViewDetails(org.openapis.openapi.models.operations.GetViewDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetViewDetailsPathParams.class, baseUrl, "/browser/views/details/for/{className}/{viewId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetViewDetailsRequest.class, baseUrl, "/browser/views/details/for/{className}/{viewId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetViewDetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetViewDetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -667,13 +667,13 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.GetViewsBriefResponse getViewsBrief(org.openapis.openapi.models.operations.GetViewsBriefRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetViewsBriefPathParams.class, baseUrl, "/browser/views/for/{className}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetViewsBriefRequest.class, baseUrl, "/browser/views/for/{className}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetViewsBriefQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetViewsBriefRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -713,13 +713,13 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsResponse selectViewAndGetItsDetails(org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsPathParams.class, baseUrl, "/browser/views/details/for/{className}/{viewId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsRequest.class, baseUrl, "/browser/views/details/for/{className}/{viewId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SelectViewAndGetItsDetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -759,12 +759,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdateResponse update(org.openapis.openapi.models.operations.UpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePathParams.class, baseUrl, "/browser/views/{viewId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRequest.class, baseUrl, "/browser/views/{viewId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "viewDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -804,12 +804,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdateColumnSettingsResponse updateColumnSettings(org.openapis.openapi.models.operations.UpdateColumnSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateColumnSettingsPathParams.class, baseUrl, "/browser/views/{viewId}/columns/{columnName}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateColumnSettingsRequest.class, baseUrl, "/browser/views/{viewId}/columns/{columnName}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -849,12 +849,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdateColumnsResponse updateColumns(org.openapis.openapi.models.operations.UpdateColumnsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateColumnsPathParams.class, baseUrl, "/browser/views/{viewId}/columns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateColumnsRequest.class, baseUrl, "/browser/views/{viewId}/columns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -894,12 +894,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdateFilterResponse updateFilter(org.openapis.openapi.models.operations.UpdateFilterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFilterPathParams.class, baseUrl, "/browser/views/{viewId}/filter", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFilterRequest.class, baseUrl, "/browser/views/{viewId}/filter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -939,12 +939,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdateFilterPropertyResponse updateFilterProperty(org.openapis.openapi.models.operations.UpdateFilterPropertyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFilterPropertyPathParams.class, baseUrl, "/browser/views/{viewId}/filter/{filterProperty}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateFilterPropertyRequest.class, baseUrl, "/browser/views/{viewId}/filter/{filterProperty}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "filterPropertyDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -984,12 +984,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdateLocalSettingsResponse updateLocalSettings(org.openapis.openapi.models.operations.UpdateLocalSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLocalSettingsPathParams.class, baseUrl, "/browser/views/{viewId}/settings/local", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLocalSettingsRequest.class, baseUrl, "/browser/views/{viewId}/settings/local", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "localSettingsDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1029,12 +1029,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdateOrderResponse updateOrder(org.openapis.openapi.models.operations.UpdateOrderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrderPathParams.class, baseUrl, "/browser/views/{viewId}/order", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrderRequest.class, baseUrl, "/browser/views/{viewId}/order", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1074,12 +1074,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdatePermissionsResponse updatePermissions(org.openapis.openapi.models.operations.UpdatePermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePermissionsPathParams.class, baseUrl, "/browser/views/{viewId}/permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePermissionsRequest.class, baseUrl, "/browser/views/{viewId}/permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "permissionsDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1119,12 +1119,12 @@ public class Browser {
      */
     public org.openapis.openapi.models.operations.UpdateSettingsResponse updateSettings(org.openapis.openapi.models.operations.UpdateSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSettingsPathParams.class, baseUrl, "/browser/views/{viewId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSettingsRequest.class, baseUrl, "/browser/views/{viewId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "settingsDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

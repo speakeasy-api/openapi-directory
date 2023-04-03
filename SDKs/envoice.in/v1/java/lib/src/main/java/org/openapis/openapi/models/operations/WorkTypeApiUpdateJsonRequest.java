@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WorkTypeApiUpdateJsonRequest {
-    
-    public WorkTypeApiUpdateJsonHeaders headers;
-    public WorkTypeApiUpdateJsonRequest withHeaders(WorkTypeApiUpdateJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WorkTypeUpdateApiModel workTypeUpdateApiModel;
+    public WorkTypeApiUpdateJsonRequest withWorkTypeUpdateApiModel(org.openapis.openapi.models.shared.WorkTypeUpdateApiModel workTypeUpdateApiModel) {
+        this.workTypeUpdateApiModel = workTypeUpdateApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WorkTypeUpdateApiModel request;
-    public WorkTypeApiUpdateJsonRequest withRequest(org.openapis.openapi.models.shared.WorkTypeUpdateApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public WorkTypeApiUpdateJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public WorkTypeApiUpdateJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

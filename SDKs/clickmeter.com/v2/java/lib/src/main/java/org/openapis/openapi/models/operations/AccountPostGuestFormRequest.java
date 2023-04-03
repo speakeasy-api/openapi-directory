@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPostGuestFormRequest {
-    
-    public AccountPostGuestFormPathParams pathParams;
-    public AccountPostGuestFormRequest withPathParams(AccountPostGuestFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Guest object with field updated
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest request;
-    public AccountPostGuestFormRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest;
+    public AccountPostGuestFormRequest withApiCoreDtoAccountingGuest(org.openapis.openapi.models.shared.ApiCoreDtoAccountingGuest apiCoreDtoAccountingGuest) {
+        this.apiCoreDtoAccountingGuest = apiCoreDtoAccountingGuest;
+        return this;
+    }
+    
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public AccountPostGuestFormRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivitySetRepoSubscriptionRequest {
-    
-    public ActivitySetRepoSubscriptionPathParams pathParams;
-    public ActivitySetRepoSubscriptionRequest withPathParams(ActivitySetRepoSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActivitySetRepoSubscriptionRequestBody requestBody;
+    public ActivitySetRepoSubscriptionRequest withRequestBody(ActivitySetRepoSubscriptionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActivitySetRepoSubscriptionRequestBody request;
-    public ActivitySetRepoSubscriptionRequest withRequest(ActivitySetRepoSubscriptionRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActivitySetRepoSubscriptionRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActivitySetRepoSubscriptionRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

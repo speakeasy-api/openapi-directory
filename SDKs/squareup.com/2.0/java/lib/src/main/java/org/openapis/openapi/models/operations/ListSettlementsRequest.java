@@ -4,27 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSettlementsRequest {
-    
-    public ListSettlementsPathParams pathParams;
-    public ListSettlementsRequest withPathParams(ListSettlementsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A pagination cursor to retrieve the next set of results for your
+     * original query to the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
+    public String batchToken;
+    public ListSettlementsRequest withBatchToken(String batchToken) {
+        this.batchToken = batchToken;
         return this;
     }
     
-    
-    public ListSettlementsQueryParams queryParams;
-    public ListSettlementsRequest withQueryParams(ListSettlementsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The beginning of the requested reporting period, in ISO 8601 format. If this value is before January 1, 2013 (2013-01-01T00:00:00Z), this endpoint returns an error. Default value: The current time minus one year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public ListSettlementsRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
+    /**
+     * The end of the requested reporting period, in ISO 8601 format. If this value is more than one year greater than begin_time, this endpoint returns an error. Default value: The current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public ListSettlementsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public ListSettlementsSecurity security;
-    public ListSettlementsRequest withSecurity(ListSettlementsSecurity security) {
-        this.security = security;
+    /**
+     * The maximum number of settlements to return in a single response. This value cannot exceed 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListSettlementsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The ID of the location to list settlements for. If you specify me, this endpoint returns settlements aggregated from all of the business's locations.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public ListSettlementsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which settlements are listed in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public ListSettlementsRequest withOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Provide this parameter to retrieve only settlements with a particular status (SENT or FAILED).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ListSettlementsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

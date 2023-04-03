@@ -38,13 +38,13 @@ public class Nameserver {
      */
     public org.openapis.openapi.models.operations.DomainsrdapNameserverGetResponse domainsrdapNameserverGet(org.openapis.openapi.models.operations.DomainsrdapNameserverGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsrdapNameserverGetPathParams.class, baseUrl, "/v1/nameserver/{nameserverId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsrdapNameserverGetRequest.class, baseUrl, "/v1/nameserver/{nameserverId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsrdapNameserverGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsrdapNameserverGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

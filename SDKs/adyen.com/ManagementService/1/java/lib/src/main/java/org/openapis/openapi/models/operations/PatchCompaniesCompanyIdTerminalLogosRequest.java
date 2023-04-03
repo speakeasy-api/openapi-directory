@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdTerminalLogosRequest {
-    
-    public PatchCompaniesCompanyIdTerminalLogosPathParams pathParams;
-    public PatchCompaniesCompanyIdTerminalLogosRequest withPathParams(PatchCompaniesCompanyIdTerminalLogosPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PatchCompaniesCompanyIdTerminalLogosQueryParams queryParams;
-    public PatchCompaniesCompanyIdTerminalLogosRequest withQueryParams(PatchCompaniesCompanyIdTerminalLogosQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Logo request;
-    public PatchCompaniesCompanyIdTerminalLogosRequest withRequest(org.openapis.openapi.models.shared.Logo request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Logo logo;
+    public PatchCompaniesCompanyIdTerminalLogosRequest withLogo(org.openapis.openapi.models.shared.Logo logo) {
+        this.logo = logo;
         return this;
     }
     
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PatchCompaniesCompanyIdTerminalLogosRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public PatchCompaniesCompanyIdTerminalLogosSecurity security;
-    public PatchCompaniesCompanyIdTerminalLogosRequest withSecurity(PatchCompaniesCompanyIdTerminalLogosSecurity security) {
-        this.security = security;
+    /**
+     * The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public PatchCompaniesCompanyIdTerminalLogosRequest withModel(String model) {
+        this.model = model;
         return this;
     }
     

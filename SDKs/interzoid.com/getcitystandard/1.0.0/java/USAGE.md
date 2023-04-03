@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetcitystandardQueryParams;
 import org.openapis.openapi.models.operations.GetcitystandardRequest;
 import org.openapis.openapi.models.operations.GetcitystandardResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetcitystandardRequest req = new GetcitystandardRequest() {{
-                queryParams = new GetcitystandardQueryParams() {{
-                    city = "Laruecester";
-                    license = "quibusdam";
-                }};
-            }};            
+                city = "Laruecester";
+                license = "quibusdam";
+            }}            
 
             GetcitystandardResponse res = sdk.cityDataStandardization.getcitystandard(req);
 

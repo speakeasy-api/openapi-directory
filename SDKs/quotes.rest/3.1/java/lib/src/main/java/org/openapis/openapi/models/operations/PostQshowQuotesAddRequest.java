@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostQshowQuotesAddRequest {
-    
-    public PostQshowQuotesAddQueryParams queryParams;
-    public PostQshowQuotesAddRequest withQueryParams(PostQshowQuotesAddQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Qshow ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public PostQshowQuotesAddRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PostQshowQuotesAddSecurity security;
-    public PostQshowQuotesAddRequest withSecurity(PostQshowQuotesAddSecurity security) {
-        this.security = security;
+    /**
+     * Quote ID to add the qshow collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quoteid")
+    public String quoteid;
+    public PostQshowQuotesAddRequest withQuoteid(String quoteid) {
+        this.quoteid = quoteid;
         return this;
     }
     

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTaskRequest {
-    
-    public CreateTaskHeaders headers;
-    public CreateTaskRequest withHeaders(CreateTaskHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * description not needed
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateTaskRequest request;
-    public CreateTaskRequest withRequest(org.openapis.openapi.models.shared.CreateTaskRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateTaskRequest createTaskRequest;
+    public CreateTaskRequest withCreateTaskRequest(org.openapis.openapi.models.shared.CreateTaskRequest createTaskRequest) {
+        this.createTaskRequest = createTaskRequest;
         return this;
     }
     
-    
-    public CreateTaskSecurity security;
-    public CreateTaskRequest withSecurity(CreateTaskSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the eBay marketplace where the item is hosted. &lt;p&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; This value is case sensitive.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;For example:&lt;/p&gt;&lt;p&gt;&lt;code&gt;X-EBAY-C-MARKETPLACE-ID:EBAY_US&lt;/code&gt;&lt;/p&gt;&lt;p&gt;This identifies the eBay marketplace that applies to this task. See &lt;a href="/api-docs/sell/feed/types/bas:MarketplaceIdEnum"&gt;MarketplaceIdEnum&lt;/a&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public CreateTaskRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     

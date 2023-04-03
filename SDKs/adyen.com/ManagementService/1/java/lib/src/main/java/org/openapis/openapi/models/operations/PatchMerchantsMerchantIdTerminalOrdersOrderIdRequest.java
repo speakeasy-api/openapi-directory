@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest {
-    
-    public PatchMerchantsMerchantIdTerminalOrdersOrderIdPathParams pathParams;
-    public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withPathParams(PatchMerchantsMerchantIdTerminalOrdersOrderIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TerminalOrderRequest request;
-    public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withRequest(org.openapis.openapi.models.shared.TerminalOrderRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest;
+    public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withTerminalOrderRequest(org.openapis.openapi.models.shared.TerminalOrderRequest terminalOrderRequest) {
+        this.terminalOrderRequest = terminalOrderRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PatchMerchantsMerchantIdTerminalOrdersOrderIdSecurity security;
-    public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withSecurity(PatchMerchantsMerchantIdTerminalOrdersOrderIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public PatchMerchantsMerchantIdTerminalOrdersOrderIdRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

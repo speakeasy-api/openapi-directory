@@ -18,14 +18,12 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.WebhooksAddSecurity;
-import org.openapis.openapi.models.operations.WebhooksAddHeaders;
 import org.openapis.openapi.models.operations.WebhooksAddRequest;
 import org.openapis.openapi.models.operations.WebhooksAddResponse;
 import org.openapis.openapi.models.shared.CreateWebhookRequest;
 import org.openapis.openapi.models.shared.UnifiedApiIdEnum;
 import org.openapis.openapi.models.shared.StatusEnum;
 import org.openapis.openapi.models.shared.WebhookEventTypeEnum;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,15 +32,7 @@ public class Application {
                 .build();
 
             WebhooksAddRequest req = new WebhooksAddRequest() {{
-                security = new WebhooksAddSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                headers = new WebhooksAddHeaders() {{
-                    xApideckAppId = "corrupti";
-                }};
-                request = new CreateWebhookRequest() {{
+                createWebhookRequest = new CreateWebhookRequest() {{
                     deliveryUrl = "https://example.com/my/webhook/endpoint";
                     description = "A description";
                     events = new org.openapis.openapi.models.shared.WebhookEventTypeEnum[]{{
@@ -53,9 +43,12 @@ public class Application {
                     status = "enabled";
                     unifiedApi = "crm";
                 }};
-            }};            
+                xApideckAppId = "provident";
+            }}            
 
-            WebhooksAddResponse res = sdk.webhooks.webhooksAdd(req);
+            WebhooksAddResponse res = sdk.webhooks.webhooksAdd(req, new WebhooksAddSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.createWebhookResponse.isPresent()) {
                 // handle response
@@ -67,7 +60,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### webhooks

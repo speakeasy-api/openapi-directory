@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDistrictsByYearRequest {
-    
-    public GetDistrictsByYearPathParams pathParams;
-    public GetDistrictsByYearRequest withPathParams(GetDistrictsByYearPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetDistrictsByYearRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetDistrictsByYearHeaders headers;
-    public GetDistrictsByYearRequest withHeaders(GetDistrictsByYearHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetDistrictsByYearSecurity security;
-    public GetDistrictsByYearRequest withSecurity(GetDistrictsByYearSecurity security) {
-        this.security = security;
+    /**
+     * Competition Year (or Season). Must be 4 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Long year;
+    public GetDistrictsByYearRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

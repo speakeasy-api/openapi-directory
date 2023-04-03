@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportDefinitionRequest {
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PostReportDefinitionRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public PostReportDefinitionHeaders headers;
-    public PostReportDefinitionRequest withHeaders(PostReportDefinitionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostReportDefinitionRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class PostReportDefinitionRequest {
      * The report definition object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReportDefinition request;
-    public PostReportDefinitionRequest withRequest(org.openapis.openapi.models.shared.ReportDefinition request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ReportDefinition reportDefinition;
+    public PostReportDefinitionRequest withReportDefinition(org.openapis.openapi.models.shared.ReportDefinition reportDefinition) {
+        this.reportDefinition = reportDefinition;
         return this;
     }
     

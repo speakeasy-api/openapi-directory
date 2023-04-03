@@ -4,20 +4,111 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2PaymentsRequest {
-    
-    public GetV2PaymentsQueryParams queryParams;
-    public GetV2PaymentsRequest withQueryParams(GetV2PaymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The timestamp for the beginning of the reporting period, in RFC 3339 format.
+     * Inclusive. Default: The current time minus one year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public GetV2PaymentsRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
+    /**
+     * The brand of the payment card (for example, VISA).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=card_brand")
+    public String cardBrand;
+    public GetV2PaymentsRequest withCardBrand(String cardBrand) {
+        this.cardBrand = cardBrand;
+        return this;
+    }
     
-    public GetV2PaymentsSecurity security;
-    public GetV2PaymentsRequest withSecurity(GetV2PaymentsSecurity security) {
-        this.security = security;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this cursor to retrieve the next set of results for the original query.
+     * 
+     * For more information, see [Pagination](https://developer.squareup.com/docs/basics/api101/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetV2PaymentsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * The timestamp for the end of the reporting period, in RFC 3339 format.
+     * 
+     * Default: The current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public GetV2PaymentsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The last four digits of a payment card.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_4")
+    public String last4;
+    public GetV2PaymentsRequest withLast4(String last4) {
+        this.last4 = last4;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to be returned in a single page.
+     * It is possible to receive fewer results than the specified limit on a given page.
+     * 
+     * The default value of 100 is also the maximum allowed value. If the provided value is 
+     * greater than 100, it is ignored and the default value is used instead.
+     * 
+     * Default: `100`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetV2PaymentsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Limit results to the location supplied. By default, results are returned
+     * for the default (main) location associated with the seller.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public GetV2PaymentsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which results are listed:
+     * - `ASC` - Oldest to newest.
+     * - `DESC` - Newest to oldest (default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public String sortOrder;
+    public GetV2PaymentsRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * The exact amount in the `total_money` for a payment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=total")
+    public Long total;
+    public GetV2PaymentsRequest withTotal(Long total) {
+        this.total = total;
         return this;
     }
     

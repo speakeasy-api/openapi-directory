@@ -4,34 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListUsageRecordRequest {
-    
-    public ListUsageRecordPathParams pathParams;
-    public ListUsageRecordRequest withPathParams(ListUsageRecordPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only include usage that occurred on or before this date, specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html). The default is the current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=End")
+    public OffsetDateTime end;
+    public ListUsageRecordRequest withEnd(OffsetDateTime end) {
+        this.end = end;
         return this;
     }
     
-    
-    public ListUsageRecordQueryParams queryParams;
-    public ListUsageRecordRequest withQueryParams(ListUsageRecordQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How to summarize the usage by time. Can be: `daily`, `hourly`, or `all`. The default is `all`. A value of `all` returns one Usage Record that describes the usage for the entire period.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Granularity")
+    public org.openapis.openapi.models.shared.UsageRecordEnumGranularityEnum granularity;
+    public ListUsageRecordRequest withGranularity(org.openapis.openapi.models.shared.UsageRecordEnumGranularityEnum granularity) {
+        this.granularity = granularity;
         return this;
     }
     
-    
-    public ListUsageRecordSecurity security;
-    public ListUsageRecordRequest withSecurity(ListUsageRecordSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListUsageRecordRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListUsageRecordRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListUsageRecordRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListUsageRecordRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID of the [Sim resource](https://www.twilio.com/docs/wireless/api/sim-resource)  to read the usage from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SimSid")
+    public String simSid;
+    public ListUsageRecordRequest withSimSid(String simSid) {
+        this.simSid = simSid;
+        return this;
+    }
+    
+    /**
+     * Only include usage that has occurred on or after this date, specified in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html). The default is one month before the `end` parameter value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Start")
+    public OffsetDateTime start;
+    public ListUsageRecordRequest withStart(OffsetDateTime start) {
+        this.start = start;
         return this;
     }
     

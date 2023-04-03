@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.SendAnSmsFormatEnum;
-import org.openapis.openapi.models.operations.SendAnSmsPathParams;
 import org.openapis.openapi.models.operations.SendAnSmsRequest;
 import org.openapis.openapi.models.operations.SendAnSmsResponse;
 import org.openapis.openapi.models.shared.NewMessageMessageClassEnum;
@@ -26,7 +25,6 @@ import org.openapis.openapi.models.shared.NewMessageTypeEnum;
 import org.openapis.openapi.models.shared.NewMessage;
 import org.openapis.openapi.models.shared.DeliveryReceipt;
 import org.openapis.openapi.models.callbacks.SendAnSmsDeliveryReceiptResponse;
-import org.openapis.openapi.models.callbacks.SendAnSmsDeliveryReceiptRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,10 +33,7 @@ public class Application {
                 .build();
 
             SendAnSmsRequest req = new SendAnSmsRequest() {{
-                pathParams = new SendAnSmsPathParams() {{
-                    format = "json";
-                }};
-                request = new NewMessage() {{
+                newMessage = new NewMessage() {{
                     accountRef = "customer1234";
                     apiKey = "abcd1234";
                     apiSecret = "abcdef0123456789";
@@ -58,7 +53,8 @@ public class Application {
                     type = "text";
                     udh = "06050415811581";
                 }};
-            }};            
+                format = "json";
+            }}            
 
             SendAnSmsResponse res = sdk.sendAnSms(req);
 
@@ -72,7 +68,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

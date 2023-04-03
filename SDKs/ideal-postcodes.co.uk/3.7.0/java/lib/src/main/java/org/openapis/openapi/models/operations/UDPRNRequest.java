@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UDPRNRequest {
-    
-    public UDPRNPathParams pathParams;
-    public UDPRNRequest withPathParams(UDPRNPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public UDPRNRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=filter")
+    public String filter;
+    public UDPRNRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public UDPRNQueryParams queryParams;
-    public UDPRNRequest withQueryParams(UDPRNQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * UDPRN to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=udprn")
+    public String udprn;
+    public UDPRNRequest withUdprn(String udprn) {
+        this.udprn = udprn;
         return this;
     }
     

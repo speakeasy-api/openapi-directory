@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Fetches processor types. Note that we do not use ListProcessorTypes here because it is not paginated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesResponse documentaiProjectsLocationsFetchProcessorTypes(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesResponse documentaiProjectsLocationsFetchProcessorTypes(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesPathParams.class, baseUrl, "/v1/{parent}:fetchProcessorTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesRequest.class, baseUrl, "/v1/{parent}:fetchProcessorTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsFetchProcessorTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,25 +81,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListResponse documentaiProjectsLocationsList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListResponse documentaiProjectsLocationsList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListPathParams.class, baseUrl, "/v1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListRequest.class, baseUrl, "/v1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,25 +127,26 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelResponse documentaiProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelResponse documentaiProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,25 +173,26 @@ public class Projects {
     /**
      * Lists the processor types that exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListResponse documentaiProjectsLocationsProcessorTypesList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListResponse documentaiProjectsLocationsProcessorTypesList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListPathParams.class, baseUrl, "/v1/{parent}/processorTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListRequest.class, baseUrl, "/v1/{parent}/processorTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -215,27 +219,28 @@ public class Projects {
     /**
      * Creates a processor from the type processor that the user chose. The processor will be at "ENABLED" state by default after its creation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateResponse documentaiProjectsLocationsProcessorsCreate(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateResponse documentaiProjectsLocationsProcessorsCreate(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreatePathParams.class, baseUrl, "/v1/{parent}/processors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateRequest.class, baseUrl, "/v1/{parent}/processors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1ProcessorInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,27 +267,28 @@ public class Projects {
     /**
      * Disables a processor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableResponse documentaiProjectsLocationsProcessorsDisable(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableResponse documentaiProjectsLocationsProcessorsDisable(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisablePathParams.class, baseUrl, "/v1/{name}:disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableRequest.class, baseUrl, "/v1/{name}:disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsDisableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Projects {
     /**
      * Enables a processor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableResponse documentaiProjectsLocationsProcessorsEnable(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableResponse documentaiProjectsLocationsProcessorsEnable(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnablePathParams.class, baseUrl, "/v1/{name}:enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableRequest.class, baseUrl, "/v1/{name}:enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsEnableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,27 +363,28 @@ public class Projects {
     /**
      * Send a document for Human Review. The input document should be processed by the specified processor.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentResponse documentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocument(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentResponse documentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocument(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentPathParams.class, baseUrl, "/v1/{humanReviewConfig}:reviewDocument", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest.class, baseUrl, "/v1/{humanReviewConfig}:reviewDocument", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1ReviewDocumentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsHumanReviewConfigReviewDocumentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,25 +411,26 @@ public class Projects {
     /**
      * Lists all processors which belong to this project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListResponse documentaiProjectsLocationsProcessorsList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListResponse documentaiProjectsLocationsProcessorsList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListPathParams.class, baseUrl, "/v1/{parent}/processors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListRequest.class, baseUrl, "/v1/{parent}/processors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,27 +457,28 @@ public class Projects {
     /**
      * LRO endpoint to batch process many documents. The output is written to Cloud Storage as JSON in the [Document] format.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessResponse documentaiProjectsLocationsProcessorsProcessorVersionsBatchProcess(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessResponse documentaiProjectsLocationsProcessorsProcessorVersionsBatchProcess(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessPathParams.class, baseUrl, "/v1/{name}:batchProcess", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessRequest.class, baseUrl, "/v1/{name}:batchProcess", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1BatchProcessRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsBatchProcessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,25 +505,26 @@ public class Projects {
     /**
      * Deletes the processor version, all artifacts under the processor version will be deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteResponse documentaiProjectsLocationsProcessorsProcessorVersionsDelete(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteResponse documentaiProjectsLocationsProcessorsProcessorVersionsDelete(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Deploys the processor version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployResponse documentaiProjectsLocationsProcessorsProcessorVersionsDeploy(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployResponse documentaiProjectsLocationsProcessorsProcessorVersionsDeploy(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeploySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployPathParams.class, baseUrl, "/v1/{name}:deploy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployRequest.class, baseUrl, "/v1/{name}:deploy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsDeployRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Evaluates a ProcessorVersion against annotated documents, producing an Evaluation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionResponse documentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersion(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionResponse documentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersion(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionPathParams.class, baseUrl, "/v1/{processorVersion}:evaluateProcessorVersion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionRequest.class, baseUrl, "/v1/{processorVersion}:evaluateProcessorVersion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1EvaluateProcessorVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluateProcessorVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,25 +647,26 @@ public class Projects {
     /**
      * Retrieves a set of evaluations for a given processor version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListResponse documentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListResponse documentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListPathParams.class, baseUrl, "/v1/{parent}/evaluations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListRequest.class, baseUrl, "/v1/{parent}/evaluations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsEvaluationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -679,25 +693,26 @@ public class Projects {
     /**
      * Lists all versions of a processor.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse documentaiProjectsLocationsProcessorsProcessorVersionsList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListResponse documentaiProjectsLocationsProcessorsProcessorVersionsList(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListPathParams.class, baseUrl, "/v1/{parent}/processorVersions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest.class, baseUrl, "/v1/{parent}/processorVersions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -724,27 +739,28 @@ public class Projects {
     /**
      * Processes a single document.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessResponse documentaiProjectsLocationsProcessorsProcessorVersionsProcess(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessResponse documentaiProjectsLocationsProcessorsProcessorVersionsProcess(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessPathParams.class, baseUrl, "/v1/{name}:process", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest.class, baseUrl, "/v1/{name}:process", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1ProcessRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -771,27 +787,28 @@ public class Projects {
     /**
      * Trains a new processor version. Operation metadata is returned as cloud_documentai_core.TrainProcessorVersionMetadata.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainResponse documentaiProjectsLocationsProcessorsProcessorVersionsTrain(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainResponse documentaiProjectsLocationsProcessorsProcessorVersionsTrain(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainPathParams.class, baseUrl, "/v1/{parent}/processorVersions:train", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainRequest.class, baseUrl, "/v1/{parent}/processorVersions:train", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1TrainProcessorVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsTrainRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -818,27 +835,28 @@ public class Projects {
     /**
      * Undeploys the processor version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployResponse documentaiProjectsLocationsProcessorsProcessorVersionsUndeploy(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployResponse documentaiProjectsLocationsProcessorsProcessorVersionsUndeploy(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeploySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployPathParams.class, baseUrl, "/v1/{name}:undeploy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployRequest.class, baseUrl, "/v1/{name}:undeploy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsProcessorVersionsUndeployRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -865,27 +883,28 @@ public class Projects {
     /**
      * Set the default (active) version of a Processor that will be used in ProcessDocument and BatchProcessDocuments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionResponse documentaiProjectsLocationsProcessorsSetDefaultProcessorVersion(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionResponse documentaiProjectsLocationsProcessorsSetDefaultProcessorVersion(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionPathParams.class, baseUrl, "/v1/{processor}:setDefaultProcessorVersion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionRequest.class, baseUrl, "/v1/{processor}:setDefaultProcessorVersion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDocumentaiV1SetDefaultProcessorVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsLocationsProcessorsSetDefaultProcessorVersionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -912,25 +931,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetResponse documentaiProjectsOperationsGet(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetResponse documentaiProjectsOperationsGet(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetRequest request, org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DocumentaiProjectsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

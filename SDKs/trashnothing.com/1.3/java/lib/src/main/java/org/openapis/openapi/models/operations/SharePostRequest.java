@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SharePostRequest {
-    
-    public SharePostPathParams pathParams;
-    public SharePostRequest withPathParams(SharePostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the post to share.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
+    public String postId;
+    public SharePostRequest withPostId(String postId) {
+        this.postId = postId;
         return this;
     }
     

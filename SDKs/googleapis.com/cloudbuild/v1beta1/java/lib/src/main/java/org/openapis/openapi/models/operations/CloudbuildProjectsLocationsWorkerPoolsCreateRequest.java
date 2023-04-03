@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudbuildProjectsLocationsWorkerPoolsCreateRequest {
-    
-    public CloudbuildProjectsLocationsWorkerPoolsCreatePathParams pathParams;
-    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withPathParams(CloudbuildProjectsLocationsWorkerPoolsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CloudbuildProjectsLocationsWorkerPoolsCreateQueryParams queryParams;
-    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withQueryParams(CloudbuildProjectsLocationsWorkerPoolsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WorkerPoolInput request;
-    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withRequest(org.openapis.openapi.models.shared.WorkerPoolInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.WorkerPoolInput workerPoolInput;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withWorkerPoolInput(org.openapis.openapi.models.shared.WorkerPoolInput workerPoolInput) {
+        this.workerPoolInput = workerPoolInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public CloudbuildProjectsLocationsWorkerPoolsCreateSecurity security;
-    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withSecurity(CloudbuildProjectsLocationsWorkerPoolsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent resource where this worker pool will be created. Format: `projects/{project}/locations/{location}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Required. Immutable. The ID to use for the `WorkerPool`, which will become the final component of the resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workerPoolId")
+    public String workerPoolId;
+    public CloudbuildProjectsLocationsWorkerPoolsCreateRequest withWorkerPoolId(String workerPoolId) {
+        this.workerPoolId = workerPoolId;
         return this;
     }
     

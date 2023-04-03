@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsJsonRequest {
-    
-    public PostProductsJsonQueryParams queryParams;
-    public PostProductsJsonRequest withQueryParams(PostProductsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProductEdit request;
-    public PostProductsJsonRequest withRequest(org.openapis.openapi.models.shared.ProductEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProductEdit productEdit;
+    public PostProductsJsonRequest withProductEdit(org.openapis.openapi.models.shared.ProductEdit productEdit) {
+        this.productEdit = productEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostProductsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Locale code of the translation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public PostProductsJsonRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostProductsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

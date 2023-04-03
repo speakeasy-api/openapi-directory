@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsListInstallationReposForAuthenticatedUserRequest {
-    
-    public AppsListInstallationReposForAuthenticatedUserPathParams pathParams;
-    public AppsListInstallationReposForAuthenticatedUserRequest withPathParams(AppsListInstallationReposForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the installation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
+    public Long installationId;
+    public AppsListInstallationReposForAuthenticatedUserRequest withInstallationId(Long installationId) {
+        this.installationId = installationId;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AppsListInstallationReposForAuthenticatedUserRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public AppsListInstallationReposForAuthenticatedUserQueryParams queryParams;
-    public AppsListInstallationReposForAuthenticatedUserRequest withQueryParams(AppsListInstallationReposForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public AppsListInstallationReposForAuthenticatedUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesCitationReadRequest {
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesCitationReadRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
     
-    public NodesCitationReadPathParams pathParams;
-    public NodesCitationReadRequest withPathParams(NodesCitationReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the citation style.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=style_id")
+    public String styleId;
+    public NodesCitationReadRequest withStyleId(String styleId) {
+        this.styleId = styleId;
         return this;
     }
     

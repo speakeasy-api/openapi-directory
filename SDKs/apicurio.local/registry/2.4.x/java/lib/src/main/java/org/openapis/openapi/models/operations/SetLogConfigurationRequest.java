@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetLogConfigurationRequest {
-    
-    public SetLogConfigurationPathParams pathParams;
-    public SetLogConfigurationRequest withPathParams(SetLogConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The new logger configuration.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LogConfiguration request;
-    public SetLogConfigurationRequest withRequest(org.openapis.openapi.models.shared.LogConfiguration request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LogConfiguration logConfiguration;
+    public SetLogConfigurationRequest withLogConfiguration(org.openapis.openapi.models.shared.LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+        return this;
+    }
+    
+    /**
+     * The name of a single logger.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=logger")
+    public String logger;
+    public SetLogConfigurationRequest withLogger(String logger) {
+        this.logger = logger;
         return this;
     }
     

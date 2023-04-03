@@ -40,15 +40,15 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateResponse travelpartnerAccountsAccountLinksCreate(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreatePathParams.class, baseUrl, "/v3/{parent}/accountLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateRequest.class, baseUrl, "/v3/{parent}/accountLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accountLink", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,13 +86,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteResponse travelpartnerAccountsAccountLinksDelete(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeletePathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,13 +130,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListResponse travelpartnerAccountsAccountLinksList(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListPathParams.class, baseUrl, "/v3/{parent}/accountLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListRequest.class, baseUrl, "/v3/{parent}/accountLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsAccountLinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -174,15 +174,15 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateResponse travelpartnerAccountsBrandsCreate(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreatePathParams.class, baseUrl, "/v3/{parent}/brands", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateRequest.class, baseUrl, "/v3/{parent}/brands", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "brandInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -220,13 +220,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListResponse travelpartnerAccountsBrandsList(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListPathParams.class, baseUrl, "/v3/{parent}/brands", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListRequest.class, baseUrl, "/v3/{parent}/brands", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -264,15 +264,15 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchResponse travelpartnerAccountsBrandsPatch(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchPathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "brandInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsBrandsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -310,13 +310,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryResponse travelpartnerAccountsFreeBookingLinksReportViewsQuery(org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryPathParams.class, baseUrl, "/v3/{name}/freeBookingLinksReportViews:query", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryRequest.class, baseUrl, "/v3/{name}/freeBookingLinksReportViews:query", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsFreeBookingLinksReportViewsQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -354,13 +354,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListResponse travelpartnerAccountsHotelViewsList(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListPathParams.class, baseUrl, "/v3/{parent}/hotelViews", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListRequest.class, baseUrl, "/v3/{parent}/hotelViews", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -398,13 +398,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeResponse travelpartnerAccountsHotelViewsSummarize(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizePathParams.class, baseUrl, "/v3/{parent}/hotelViews:summarize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeRequest.class, baseUrl, "/v3/{parent}/hotelViews:summarize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelViewsSummarizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -442,15 +442,15 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleResponse travelpartnerAccountsHotelsSetLiveOnGoogle(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGooglePathParams.class, baseUrl, "/v3/{account}/hotels:setLiveOnGoogle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleRequest.class, baseUrl, "/v3/{account}/hotels:setLiveOnGoogle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setLiveOnGoogleRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsHotelsSetLiveOnGoogleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -488,15 +488,15 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateResponse travelpartnerAccountsIconsCreate(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreatePathParams.class, baseUrl, "/v3/{parent}/icons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateRequest.class, baseUrl, "/v3/{parent}/icons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "iconInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -534,13 +534,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListResponse travelpartnerAccountsIconsList(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListPathParams.class, baseUrl, "/v3/{parent}/icons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListRequest.class, baseUrl, "/v3/{parent}/icons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsIconsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -578,15 +578,15 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyResponse travelpartnerAccountsListingsVerify(org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyPathParams.class, baseUrl, "/v3/{parent}/listings:verify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyRequest.class, baseUrl, "/v3/{parent}/listings:verify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "verifyListingsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsListingsVerifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -624,13 +624,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryResponse travelpartnerAccountsParticipationReportViewsQuery(org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryPathParams.class, baseUrl, "/v3/{name}/participationReportViews:query", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryRequest.class, baseUrl, "/v3/{name}/participationReportViews:query", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsParticipationReportViewsQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -668,13 +668,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListResponse travelpartnerAccountsPriceAccuracyViewsList(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListPathParams.class, baseUrl, "/v3/{parent}/priceAccuracyViews", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListRequest.class, baseUrl, "/v3/{parent}/priceAccuracyViews", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -712,13 +712,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeResponse travelpartnerAccountsPriceAccuracyViewsSummarize(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizePathParams.class, baseUrl, "/v3/{parent}/priceAccuracyViews:summarize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeRequest.class, baseUrl, "/v3/{parent}/priceAccuracyViews:summarize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceAccuracyViewsSummarizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -756,13 +756,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestResponse travelpartnerAccountsPriceCoverageViewsGetLatest(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestPathParams.class, baseUrl, "/v3/{parent}/priceCoverageViews:latest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestRequest.class, baseUrl, "/v3/{parent}/priceCoverageViews:latest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsGetLatestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -800,13 +800,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListResponse travelpartnerAccountsPriceCoverageViewsList(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListPathParams.class, baseUrl, "/v3/{parent}/priceCoverageViews", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListRequest.class, baseUrl, "/v3/{parent}/priceCoverageViews", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPriceCoverageViewsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -844,13 +844,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryResponse travelpartnerAccountsPropertyPerformanceReportViewsQuery(org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryPathParams.class, baseUrl, "/v3/{name}/propertyPerformanceReportViews:query", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest.class, baseUrl, "/v3/{name}/propertyPerformanceReportViews:query", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsPropertyPerformanceReportViewsQueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -888,15 +888,15 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateResponse travelpartnerAccountsReconciliationReportsCreate(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreatePathParams.class, baseUrl, "/v3/{parent}/reconciliationReports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateRequest.class, baseUrl, "/v3/{parent}/reconciliationReports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reconciliationReport", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -934,13 +934,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetResponse travelpartnerAccountsReconciliationReportsGet(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetPathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -978,13 +978,13 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListResponse travelpartnerAccountsReconciliationReportsList(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListPathParams.class, baseUrl, "/v3/{parent}/reconciliationReports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListRequest.class, baseUrl, "/v3/{parent}/reconciliationReports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1022,15 +1022,15 @@ public class Accounts {
      */
     public org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateResponse travelpartnerAccountsReconciliationReportsValidate(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidatePathParams.class, baseUrl, "/v3/{parent}/reconciliationReports:validate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateRequest.class, baseUrl, "/v3/{parent}/reconciliationReports:validate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "reconciliationReport", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TravelpartnerAccountsReconciliationReportsValidateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

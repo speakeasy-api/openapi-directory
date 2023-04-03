@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderInvoiceDesignSettingsPreviewRequest {
-    
-    public GetOrderInvoiceDesignSettingsPreviewHeaders headers;
-    public GetOrderInvoiceDesignSettingsPreviewRequest withHeaders(GetOrderInvoiceDesignSettingsPreviewHeaders headers) {
-        this.headers = headers;
+    /**
+     * Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
+    public String acceptEncoding;
+    public GetOrderInvoiceDesignSettingsPreviewRequest withAcceptEncoding(String acceptEncoding) {
+        this.acceptEncoding = acceptEncoding;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderInvoiceDesignSettings request;
-    public GetOrderInvoiceDesignSettingsPreviewRequest withRequest(org.openapis.openapi.models.shared.OrderInvoiceDesignSettings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OrderInvoiceDesignSettings orderInvoiceDesignSettings;
+    public GetOrderInvoiceDesignSettingsPreviewRequest withOrderInvoiceDesignSettings(org.openapis.openapi.models.shared.OrderInvoiceDesignSettings orderInvoiceDesignSettings) {
+        this.orderInvoiceDesignSettings = orderInvoiceDesignSettings;
         return this;
     }
     

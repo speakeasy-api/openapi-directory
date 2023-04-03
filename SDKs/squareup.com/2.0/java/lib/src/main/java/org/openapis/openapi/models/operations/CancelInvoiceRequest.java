@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelInvoiceRequest {
-    
-    public CancelInvoicePathParams pathParams;
-    public CancelInvoiceRequest withPathParams(CancelInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CancelInvoiceRequest request;
-    public CancelInvoiceRequest withRequest(org.openapis.openapi.models.shared.CancelInvoiceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CancelInvoiceRequest cancelInvoiceRequest;
+    public CancelInvoiceRequest withCancelInvoiceRequest(org.openapis.openapi.models.shared.CancelInvoiceRequest cancelInvoiceRequest) {
+        this.cancelInvoiceRequest = cancelInvoiceRequest;
         return this;
     }
     
-    
-    public CancelInvoiceSecurity security;
-    public CancelInvoiceRequest withSecurity(CancelInvoiceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the [invoice](https://developer.squareup.com/reference/square_2021-08-18/objects/Invoice) to cancel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoice_id")
+    public String invoiceId;
+    public CancelInvoiceRequest withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

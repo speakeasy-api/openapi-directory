@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateParticipantRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateParticipantRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateParticipantPathParams pathParams;
-    public CreateParticipantRequest withPathParams(CreateParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the participant's conference.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConferenceSid")
+    public String conferenceSid;
+    public CreateParticipantRequest withConferenceSid(String conferenceSid) {
+        this.conferenceSid = conferenceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateParticipantCreateParticipantRequest request;
-    public CreateParticipantRequest withRequest(CreateParticipantCreateParticipantRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateParticipantSecurity security;
-    public CreateParticipantRequest withSecurity(CreateParticipantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateParticipantCreateParticipantRequest requestBody;
+    public CreateParticipantRequest withRequestBody(CreateParticipantCreateParticipantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

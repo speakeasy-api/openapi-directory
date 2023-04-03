@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartVoiceBroadcastRequest {
-    
-    public StartVoiceBroadcastPathParams pathParams;
-    public StartVoiceBroadcastRequest withPathParams(StartVoiceBroadcastPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StartVoiceBroadcastSecurity security;
-    public StartVoiceBroadcastRequest withSecurity(StartVoiceBroadcastSecurity security) {
-        this.security = security;
+    /**
+     * An id of voice broadcast to start
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public StartVoiceBroadcastRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

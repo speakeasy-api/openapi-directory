@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveRequest {
-    
-    public RemovePathParams pathParams;
-    public RemoveRequest withPathParams(RemovePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public Integer deviceId;
+    public RemoveRequest withDeviceId(Integer deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
+    /**
+     * The Monitor Class of the device.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorClass")
+    public String monitorClass;
+    public RemoveRequest withMonitorClass(String monitorClass) {
+        this.monitorClass = monitorClass;
+        return this;
+    }
     
-    public RemoveQueryParams queryParams;
-    public RemoveRequest withQueryParams(RemoveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Monitor SID of the device.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorSid")
+    public String monitorSid;
+    public RemoveRequest withMonitorSid(String monitorSid) {
+        this.monitorSid = monitorSid;
         return this;
     }
     

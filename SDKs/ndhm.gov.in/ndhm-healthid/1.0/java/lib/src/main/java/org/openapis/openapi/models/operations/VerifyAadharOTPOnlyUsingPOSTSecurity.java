@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyAadharOTPOnlyUsingPOSTSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAuthorization authorization;
-    public VerifyAadharOTPOnlyUsingPOSTSecurity withAuthorization(org.openapis.openapi.models.shared.SchemeAuthorization authorization) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String authorization;
+    public VerifyAadharOTPOnlyUsingPOSTSecurity withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeXHipID xHipId;
-    public VerifyAadharOTPOnlyUsingPOSTSecurity withXHipId(org.openapis.openapi.models.shared.SchemeXHipID xHipId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-HIP-ID")
+    public String xHipId;
+    public VerifyAadharOTPOnlyUsingPOSTSecurity withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }

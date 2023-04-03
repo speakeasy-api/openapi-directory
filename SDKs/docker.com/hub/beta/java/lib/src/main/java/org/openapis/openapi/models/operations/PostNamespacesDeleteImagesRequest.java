@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNamespacesDeleteImagesRequest {
-    
-    public PostNamespacesDeleteImagesPathParams pathParams;
-    public PostNamespacesDeleteImagesRequest withPathParams(PostNamespacesDeleteImagesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Delete request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PostNamespacesDeleteImagesRequest request;
-    public PostNamespacesDeleteImagesRequest withRequest(org.openapis.openapi.models.shared.PostNamespacesDeleteImagesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PostNamespacesDeleteImagesRequest postNamespacesDeleteImagesRequest;
+    public PostNamespacesDeleteImagesRequest withPostNamespacesDeleteImagesRequest(org.openapis.openapi.models.shared.PostNamespacesDeleteImagesRequest postNamespacesDeleteImagesRequest) {
+        this.postNamespacesDeleteImagesRequest = postNamespacesDeleteImagesRequest;
+        return this;
+    }
+    
+    /**
+     * Namespace of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public PostNamespacesDeleteImagesRequest withNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class AdvertiserGroups {
     /**
      * Deletes an existing advertiser group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeleteResponse dfareportingAdvertiserGroupsDelete(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeleteResponse dfareportingAdvertiserGroupsDelete(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeleteRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeletePathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeleteRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class AdvertiserGroups {
     /**
      * Gets one advertiser group by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetResponse dfareportingAdvertiserGroupsGet(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetResponse dfareportingAdvertiserGroupsGet(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class AdvertiserGroups {
     /**
      * Inserts a new advertiser group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertResponse dfareportingAdvertiserGroupsInsert(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertResponse dfareportingAdvertiserGroupsInsert(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "advertiserGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class AdvertiserGroups {
     /**
      * Retrieves a list of advertiser groups, possibly filtered. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListResponse dfareportingAdvertiserGroupsList(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListResponse dfareportingAdvertiserGroupsList(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListPathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class AdvertiserGroups {
     /**
      * Updates an existing advertiser group. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchResponse dfareportingAdvertiserGroupsPatch(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchResponse dfareportingAdvertiserGroupsPatch(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "advertiserGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class AdvertiserGroups {
     /**
      * Updates an existing advertiser group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdateResponse dfareportingAdvertiserGroupsUpdate(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdateResponse dfareportingAdvertiserGroupsUpdate(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdateRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "advertiserGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserGroupsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

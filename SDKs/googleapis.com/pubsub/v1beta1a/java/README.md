@@ -20,14 +20,11 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurityOption1;
 import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurityOption2;
 import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurity;
-import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeQueryParams;
 import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeRequest;
 import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeResponse;
-import org.openapis.openapi.models.shared.AcknowledgeRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.AcknowledgeRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,40 +33,33 @@ public class Application {
                 .build();
 
             PubsubSubscriptionsAcknowledgeRequest req = new PubsubSubscriptionsAcknowledgeRequest() {{
-                security = new PubsubSubscriptionsAcknowledgeSecurity() {{
-                    option1 = new PubsubSubscriptionsAcknowledgeSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                queryParams = new PubsubSubscriptionsAcknowledgeQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new AcknowledgeRequest() {{
+                dollarXgafv = "2";
+                acknowledgeRequest = new AcknowledgeRequest() {{
                     ackId = new String[]{{
-                        add("suscipit"),
-                        add("iure"),
-                        add("magnam"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
-                    subscription = "debitis";
+                    subscription = "nulla";
                 }};
-            }};            
+                accessToken = "corrupti";
+                alt = "proto";
+                callback = "vel";
+                fields = "error";
+                key = "deserunt";
+                oauthToken = "suscipit";
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
-            PubsubSubscriptionsAcknowledgeResponse res = sdk.subscriptions.pubsubSubscriptionsAcknowledge(req);
+            PubsubSubscriptionsAcknowledgeResponse res = sdk.subscriptions.pubsubSubscriptionsAcknowledge(req, new PubsubSubscriptionsAcknowledgeSecurity() {{
+                option1 = new PubsubSubscriptionsAcknowledgeSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.empty.isPresent()) {
                 // handle response
@@ -81,7 +71,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### subscriptions

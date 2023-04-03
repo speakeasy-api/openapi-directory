@@ -168,7 +168,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCheckForUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCheckForUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -299,7 +299,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGetEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGetEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -337,7 +337,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGetNotificationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGetNotificationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -406,7 +406,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGetSuggestedFollowsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGetSuggestedFollowsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -444,7 +444,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGetUsersForTopicQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGetUsersForTopicRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -505,7 +505,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCallPhoneNumberAuthResponse postCallPhoneNumberAuth(org.openapis.openapi.models.operations.PostCallPhoneNumberAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCallPhoneNumberAuthResponse postCallPhoneNumberAuth(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/call_phone_number_auth");
         
@@ -570,7 +570,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCompletePhoneNumberAuthResponse postCompletePhoneNumberAuth(org.openapis.openapi.models.operations.PostCompletePhoneNumberAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCompletePhoneNumberAuthResponse postCompletePhoneNumberAuth(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/complete_phone_number_auth");
         
@@ -604,7 +604,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCreateChannelResponse postCreateChannel(org.openapis.openapi.models.operations.PostCreateChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCreateChannelResponse postCreateChannel(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/create_channel");
         
@@ -638,7 +638,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFollowResponse postFollow(org.openapis.openapi.models.operations.PostFollowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFollowResponse postFollow(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/follow");
         
@@ -672,7 +672,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetClubResponse postGetClub(org.openapis.openapi.models.operations.PostGetClubRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetClubResponse postGetClub(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_club");
         
@@ -706,7 +706,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetClubsForTopicResponse postGetClubsForTopic(org.openapis.openapi.models.operations.PostGetClubsForTopicRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetClubsForTopicResponse postGetClubsForTopic(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_clubs_for_topic");
         
@@ -740,7 +740,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetCreateChannelTargetsResponse postGetCreateChannelTargets(org.openapis.openapi.models.operations.PostGetCreateChannelTargetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetCreateChannelTargetsResponse postGetCreateChannelTargets(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_create_channel_targets");
         
@@ -774,7 +774,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetFollowingResponse postGetFollowing(org.openapis.openapi.models.operations.PostGetFollowingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetFollowingResponse postGetFollowing(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_following");
         
@@ -808,7 +808,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetOnlineFriendsResponse postGetOnlineFriends(org.openapis.openapi.models.operations.PostGetOnlineFriendsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetOnlineFriendsResponse postGetOnlineFriends(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_online_friends");
         
@@ -842,7 +842,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetProfileResponse postGetProfile(org.openapis.openapi.models.operations.PostGetProfileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetProfileResponse postGetProfile(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_profile");
         
@@ -907,7 +907,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetSuggestedClubInvitesResponse postGetSuggestedClubInvites(org.openapis.openapi.models.operations.PostGetSuggestedClubInvitesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetSuggestedClubInvitesResponse postGetSuggestedClubInvites(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_suggested_club_invites");
         
@@ -941,7 +941,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetSuggestedFollowsFriendsOnlyResponse postGetSuggestedFollowsFriendsOnly(org.openapis.openapi.models.operations.PostGetSuggestedFollowsFriendsOnlyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetSuggestedFollowsFriendsOnlyResponse postGetSuggestedFollowsFriendsOnly(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_suggested_follows_friends_only");
         
@@ -975,7 +975,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetSuggestedFollowsSimilarResponse postGetSuggestedFollowsSimilar(org.openapis.openapi.models.operations.PostGetSuggestedFollowsSimilarRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetSuggestedFollowsSimilarResponse postGetSuggestedFollowsSimilar(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_suggested_follows_similar");
         
@@ -1010,7 +1010,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetSuggestedInvitesResponse postGetSuggestedInvites(org.openapis.openapi.models.operations.PostGetSuggestedInvitesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetSuggestedInvitesResponse postGetSuggestedInvites(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_suggested_invites");
         
@@ -1044,7 +1044,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetSuggestedSpeakersResponse postGetSuggestedSpeakers(org.openapis.openapi.models.operations.PostGetSuggestedSpeakersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetSuggestedSpeakersResponse postGetSuggestedSpeakers(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_suggested_speakers");
         
@@ -1078,7 +1078,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetTopicResponse postGetTopic(org.openapis.openapi.models.operations.PostGetTopicRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetTopicResponse postGetTopic(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get_topic");
         
@@ -1112,7 +1112,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostInviteFromWaitlistResponse postInviteFromWaitlist(org.openapis.openapi.models.operations.PostInviteFromWaitlistRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostInviteFromWaitlistResponse postInviteFromWaitlist(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/invite_from_waitlist");
         
@@ -1146,7 +1146,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostInviteToAppResponse postInviteToApp(org.openapis.openapi.models.operations.PostInviteToAppRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostInviteToAppResponse postInviteToApp(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/invite_to_app");
         
@@ -1180,7 +1180,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostJoinChannelResponse postJoinChannel(org.openapis.openapi.models.operations.PostJoinChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostJoinChannelResponse postJoinChannel(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/join_channel");
         
@@ -1214,7 +1214,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostLeaveChannelResponse postLeaveChannel(org.openapis.openapi.models.operations.PostLeaveChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostLeaveChannelResponse postLeaveChannel(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/leave_channel");
         
@@ -1248,7 +1248,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostMeResponse postMe(org.openapis.openapi.models.operations.PostMeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMeResponse postMe(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me");
         
@@ -1282,7 +1282,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRecordActionTrailsResponse postRecordActionTrails(org.openapis.openapi.models.operations.PostRecordActionTrailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRecordActionTrailsResponse postRecordActionTrails(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/record_action_trails");
         
@@ -1316,7 +1316,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRefreshTokenResponse postRefreshToken(org.openapis.openapi.models.operations.PostRefreshTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRefreshTokenResponse postRefreshToken(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/refresh_token");
         
@@ -1350,7 +1350,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostResendPhoneNumberAuthResponse postResendPhoneNumberAuth(org.openapis.openapi.models.operations.PostResendPhoneNumberAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostResendPhoneNumberAuthResponse postResendPhoneNumberAuth(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/resend_phone_number_auth");
         
@@ -1384,7 +1384,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSearchClubsResponse postSearchClubs(org.openapis.openapi.models.operations.PostSearchClubsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSearchClubsResponse postSearchClubs(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/search_clubs");
         
@@ -1418,7 +1418,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSearchUsersResponse postSearchUsers(org.openapis.openapi.models.operations.PostSearchUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSearchUsersResponse postSearchUsers(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/search_users");
         
@@ -1452,7 +1452,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostStartPhoneNumberAuthResponse postStartPhoneNumberAuth(org.openapis.openapi.models.operations.PostStartPhoneNumberAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostStartPhoneNumberAuthResponse postStartPhoneNumberAuth(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/start_phone_number_auth");
         
@@ -1486,7 +1486,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUpdateNotificationsResponse postUpdateNotifications(org.openapis.openapi.models.operations.PostUpdateNotificationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUpdateNotificationsResponse postUpdateNotifications(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/update_notifications");
         
@@ -1520,7 +1520,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostUpdateUsernameResponse postUpdateUsername(org.openapis.openapi.models.operations.PostUpdateUsernameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostUpdateUsernameResponse postUpdateUsername(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/update_username");
         

@@ -4,20 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnalyticsDataUsingGETRequest {
-    
-    public GETAnalyticsDataUsingGETPathParams pathParams;
-    public GETAnalyticsDataUsingGETRequest withPathParams(GETAnalyticsDataUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETAnalyticsDataUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * dataType
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dataType")
+    public GETAnalyticsDataUsingGETDataTypeEnum dataType;
+    public GETAnalyticsDataUsingGETRequest withDataType(GETAnalyticsDataUsingGETDataTypeEnum dataType) {
+        this.dataType = dataType;
+        return this;
+    }
     
-    public GETAnalyticsDataUsingGETQueryParams queryParams;
-    public GETAnalyticsDataUsingGETRequest withQueryParams(GETAnalyticsDataUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * yyyy-MM-dd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public LocalDate endDate;
+    public GETAnalyticsDataUsingGETRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * the keys to select. For example "ReturningUsers", "NewUsers", etc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keys")
+    public String keys;
+    public GETAnalyticsDataUsingGETRequest withKeys(String keys) {
+        this.keys = keys;
+        return this;
+    }
+    
+    /**
+     * precision
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=precision")
+    public GETAnalyticsDataUsingGETPrecisionEnum precision;
+    public GETAnalyticsDataUsingGETRequest withPrecision(GETAnalyticsDataUsingGETPrecisionEnum precision) {
+        this.precision = precision;
+        return this;
+    }
+    
+    /**
+     * stage
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stage")
+    public GETAnalyticsDataUsingGETStageEnum stage;
+    public GETAnalyticsDataUsingGETRequest withStage(GETAnalyticsDataUsingGETStageEnum stage) {
+        this.stage = stage;
+        return this;
+    }
+    
+    /**
+     * yyyy-MM-dd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public LocalDate startDate;
+    public GETAnalyticsDataUsingGETRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
         return this;
     }
     

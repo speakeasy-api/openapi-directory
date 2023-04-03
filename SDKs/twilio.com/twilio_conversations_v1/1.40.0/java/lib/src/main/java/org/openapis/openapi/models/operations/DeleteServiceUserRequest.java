@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteServiceUserRequest {
-    
-    public DeleteServiceUserPathParams pathParams;
-    public DeleteServiceUserRequest withPathParams(DeleteServiceUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) to delete the User resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public DeleteServiceUserRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
-    
-    public DeleteServiceUserHeaders headers;
-    public DeleteServiceUserRequest withHeaders(DeleteServiceUserHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the User resource to delete. This value can be either the `sid` or the `identity` of the User resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteServiceUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteServiceUserSecurity security;
-    public DeleteServiceUserRequest withSecurity(DeleteServiceUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteServiceUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ServiceUserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteServiceUserRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ServiceUserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

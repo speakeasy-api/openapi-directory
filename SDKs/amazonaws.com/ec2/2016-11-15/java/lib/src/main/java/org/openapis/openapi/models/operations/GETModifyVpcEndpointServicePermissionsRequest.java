@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcEndpointServicePermissionsRequest {
-    
-    public GETModifyVpcEndpointServicePermissionsQueryParams queryParams;
-    public GETModifyVpcEndpointServicePermissionsRequest withQueryParams(GETModifyVpcEndpointServicePermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyVpcEndpointServicePermissionsActionEnum action;
+    public GETModifyVpcEndpointServicePermissionsRequest withAction(GETModifyVpcEndpointServicePermissionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The Amazon Resource Names (ARN) of the principals. Permissions are granted to the principals in this list. To grant permissions to all principals, specify an asterisk (*).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddAllowedPrincipals")
+    public String[] addAllowedPrincipals;
+    public GETModifyVpcEndpointServicePermissionsRequest withAddAllowedPrincipals(String[] addAllowedPrincipals) {
+        this.addAllowedPrincipals = addAllowedPrincipals;
+        return this;
+    }
     
-    public GETModifyVpcEndpointServicePermissionsHeaders headers;
-    public GETModifyVpcEndpointServicePermissionsRequest withHeaders(GETModifyVpcEndpointServicePermissionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyVpcEndpointServicePermissionsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Names (ARN) of the principals. Permissions are revoked for principals in this list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveAllowedPrincipals")
+    public String[] removeAllowedPrincipals;
+    public GETModifyVpcEndpointServicePermissionsRequest withRemoveAllowedPrincipals(String[] removeAllowedPrincipals) {
+        this.removeAllowedPrincipals = removeAllowedPrincipals;
+        return this;
+    }
+    
+    /**
+     * The ID of the service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceId")
+    public String serviceId;
+    public GETModifyVpcEndpointServicePermissionsRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyVpcEndpointServicePermissionsVersionEnum version;
+    public GETModifyVpcEndpointServicePermissionsRequest withVersion(GETModifyVpcEndpointServicePermissionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyVpcEndpointServicePermissionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyVpcEndpointServicePermissionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyVpcEndpointServicePermissionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyVpcEndpointServicePermissionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyVpcEndpointServicePermissionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyVpcEndpointServicePermissionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyVpcEndpointServicePermissionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

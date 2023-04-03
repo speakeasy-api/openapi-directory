@@ -19,7 +19,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreatePodcastRequestBodyFileLogo;
 import org.openapis.openapi.models.operations.CreatePodcastRequestBody;
-import org.openapis.openapi.models.operations.CreatePodcastRequest;
 import org.openapis.openapi.models.operations.CreatePodcastResponse;
 import org.openapis.openapi.models.shared.Podcast;
 
@@ -28,48 +27,44 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreatePodcastRequest req = new CreatePodcastRequest() {{
-                request = new CreatePodcastRequestBody() {{
-                    fileLogo = new CreatePodcastRequestBodyFileLogo() {{
-                        content = "corrupti".getBytes();
-                        fileLogo = "provident";
-                    }};
-                    podcast = new Podcast() {{
-                        author = "distinctio";
-                        block = false;
-                        categories = new String[]{{
-                            add("unde"),
-                            add("nulla"),
-                            add("corrupti"),
-                            add("illum"),
-                        }};
-                        copyright = "vel";
-                        country = "Netherlands Antilles";
-                        description = "deserunt";
-                        explicit = false;
-                        image = "suscipit";
-                        key = "iure";
-                        keywords = new String[]{{
-                            add("debitis"),
-                            add("ipsa"),
-                        }};
-                        language = "delectus";
-                        link = "tempora";
-                        ownerEmail = "suscipit";
-                        ownerName = "molestiae";
-                        showType = "minus";
-                        subtitle = "placeat";
-                        summary = "voluptatum";
-                        title = "Ms.";
-                    }};
+            CreatePodcastRequestBody req = new CreatePodcastRequestBody() {{
+                fileLogo = new CreatePodcastRequestBodyFileLogo() {{
+                    content = "corrupti".getBytes();
+                    fileLogo = "provident";
                 }};
-            }};            
+                podcast = new Podcast() {{
+                    author = "distinctio";
+                    block = false;
+                    categories = new String[]{{
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
+                    }};
+                    copyright = "vel";
+                    country = "Netherlands Antilles";
+                    description = "deserunt";
+                    explicit = false;
+                    image = "suscipit";
+                    key = "iure";
+                    keywords = new String[]{{
+                        add("debitis"),
+                        add("ipsa"),
+                    }};
+                    language = "delectus";
+                    link = "tempora";
+                    ownerEmail = "suscipit";
+                    ownerName = "molestiae";
+                    showType = "minus";
+                    subtitle = "placeat";
+                    summary = "voluptatum";
+                    title = "Ms.";
+                }};
+            }}            
 
             CreatePodcastResponse res = sdk.apiV2.createPodcast(req);
 
@@ -83,7 +78,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apiV2

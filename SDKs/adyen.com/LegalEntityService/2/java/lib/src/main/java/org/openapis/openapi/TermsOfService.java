@@ -34,19 +34,20 @@ public class TermsOfService {
      * Get Terms of Service information for a legal entity
      * Returns Terms of Service information for a legal entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse getLegalEntitiesIdTermsOfServiceAcceptanceInfos(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosResponse getLegalEntitiesIdTermsOfServiceAcceptanceInfos(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosRequest request, org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosPathParams.class, baseUrl, "/legalEntities/{id}/termsOfServiceAcceptanceInfos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceAcceptanceInfosRequest.class, baseUrl, "/legalEntities/{id}/termsOfServiceAcceptanceInfos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,19 +83,20 @@ public class TermsOfService {
      * Get Terms of Service status
      * Returns the required types of Terms of Service that need to be accepted by a legal entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusResponse getLegalEntitiesIdTermsOfServiceStatus(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusResponse getLegalEntitiesIdTermsOfServiceStatus(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusRequest request, org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusPathParams.class, baseUrl, "/legalEntities/{id}/termsOfServiceStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegalEntitiesIdTermsOfServiceStatusRequest.class, baseUrl, "/legalEntities/{id}/termsOfServiceStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,21 +132,22 @@ public class TermsOfService {
      * Accept Terms of Service
      * Accepts Terms of Service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse patchLegalEntitiesIdTermsOfServiceTermsofservicedocumentid(org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidResponse patchLegalEntitiesIdTermsOfServiceTermsofservicedocumentid(org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest request, org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidPathParams.class, baseUrl, "/legalEntities/{id}/termsOfService/{termsofservicedocumentid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchLegalEntitiesIdTermsOfServiceTermsofservicedocumentidRequest.class, baseUrl, "/legalEntities/{id}/termsOfService/{termsofservicedocumentid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "acceptTermsOfServiceRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -180,21 +183,22 @@ public class TermsOfService {
      * Get Terms of Service document
      * Returns the Terms of Service document for a legal entity.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceResponse postLegalEntitiesIdTermsOfService(org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceResponse postLegalEntitiesIdTermsOfService(org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceRequest request, org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServicePathParams.class, baseUrl, "/legalEntities/{id}/termsOfService", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostLegalEntitiesIdTermsOfServiceRequest.class, baseUrl, "/legalEntities/{id}/termsOfService", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getTermsOfServiceDocumentRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteV2WebhookSubscriptionsIdRequest {
-    
-    public DeleteV2WebhookSubscriptionsIdPathParams pathParams;
-    public DeleteV2WebhookSubscriptionsIdRequest withPathParams(DeleteV2WebhookSubscriptionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the Webhook Subscription to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteV2WebhookSubscriptionsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

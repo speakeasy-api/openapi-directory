@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIntrospectionSchemaRequest {
-    
-    public GetIntrospectionSchemaPathParams pathParams;
-    public GetIntrospectionSchemaRequest withPathParams(GetIntrospectionSchemaPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetIntrospectionSchemaRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public GetIntrospectionSchemaQueryParams queryParams;
-    public GetIntrospectionSchemaRequest withQueryParams(GetIntrospectionSchemaQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetIntrospectionSchemaRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetIntrospectionSchemaRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public GetIntrospectionSchemaHeaders headers;
-    public GetIntrospectionSchemaRequest withHeaders(GetIntrospectionSchemaHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetIntrospectionSchemaRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetIntrospectionSchemaRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetIntrospectionSchemaRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetIntrospectionSchemaRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The API ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public GetIntrospectionSchemaRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    
+    /**
+     * The schema format: SDL or JSON.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetIntrospectionSchemaFormatEnum format;
+    public GetIntrospectionSchemaRequest withFormat(GetIntrospectionSchemaFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * A flag that specifies whether the schema introspection should contain directives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDirectives")
+    public Boolean includeDirectives;
+    public GetIntrospectionSchemaRequest withIncludeDirectives(Boolean includeDirectives) {
+        this.includeDirectives = includeDirectives;
         return this;
     }
     

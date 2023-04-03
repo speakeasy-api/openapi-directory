@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportsTweetCreateRequest {
+    /**
+     * A unix timestamp. end_date will be set to the next midnight.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public Long endDate;
+    public PostReportsTweetCreateRequest withEndDate(Long endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public PostReportsTweetCreateQueryParams queryParams;
-    public PostReportsTweetCreateRequest withQueryParams(PostReportsTweetCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filtering options to be used when creating a filtered report. The options must be in JSON form, example: {'gender':['male'],'ages':['18-24'],'countries':['usa']}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public PostReportsTweetCreateRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Name of report
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_name")
+    public String reportName;
+    public PostReportsTweetCreateRequest withReportName(String reportName) {
+        this.reportName = reportName;
+        return this;
+    }
+    
+    /**
+     * A unix timestamp. start_date will be set to the previous midnight.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public Long startDate;
+    public PostReportsTweetCreateRequest withStartDate(Long startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * If you are tracking a single term, then the keyword itself is suffice otherwise, tracking multiple terms must be in JSON form, example '[{"operator":"","word":"http://google.com"},{"operator":"or","word":"#test"},{"operator":"and","word":"test2"}]' Which results in filtering tweets containing 'http://google.com' OR '#test' AND 'test2'. (NOTE) Make sure to URL encode the terms value for multiple terms.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terms")
+    public String terms;
+    public PostReportsTweetCreateRequest withTerms(String terms) {
+        this.terms = terms;
         return this;
     }
     

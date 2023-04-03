@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamServicesDeleteRequest {
-    
-    public IpamServicesDeletePathParams pathParams;
-    public IpamServicesDeleteRequest withPathParams(IpamServicesDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this service.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamServicesDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

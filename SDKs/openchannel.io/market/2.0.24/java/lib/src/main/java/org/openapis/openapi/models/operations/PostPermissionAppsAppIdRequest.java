@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPermissionAppsAppIdRequest {
-    
-    public PostPermissionAppsAppIdPathParams pathParams;
-    public PostPermissionAppsAppIdRequest withPathParams(PostPermissionAppsAppIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the app
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public PostPermissionAppsAppIdRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The time (in milliseconds) of when the user agreed to the access request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public Long date;
+    public PostPermissionAppsAppIdRequest withDate(Long date) {
+        this.date = date;
+        return this;
+    }
     
-    public PostPermissionAppsAppIdQueryParams queryParams;
-    public PostPermissionAppsAppIdRequest withQueryParams(PostPermissionAppsAppIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ip address of the user agreeing to the access request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public PostPermissionAppsAppIdRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    
+    /**
+     * The id of the user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public PostPermissionAppsAppIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

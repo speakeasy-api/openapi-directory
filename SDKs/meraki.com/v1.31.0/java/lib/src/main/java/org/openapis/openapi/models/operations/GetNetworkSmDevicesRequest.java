@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmDevicesRequest {
-    
-    public GetNetworkSmDevicesPathParams pathParams;
-    public GetNetworkSmDevicesRequest withPathParams(GetNetworkSmDevicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetNetworkSmDevicesRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
         return this;
     }
     
+    /**
+     * Additional fields that will be displayed for each device.
+     *     The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,
+     *     systemType, availableDeviceCapacity, kioskAppName, biosVersion, lastConnected, missingAppsCount, userSuppliedAddress, location, lastUser,
+     *     ownerEmail, ownerUsername, osBuild, publicIp, phoneNumber, diskInfoJson, deviceCapacity, isManaged, hadMdm, isSupervised, meid, imei, iccid,
+     *     simCarrierNetwork, cellularDataUsed, isHotspotEnabled, createdAt, batteryEstCharge, quarantined, avName, avRunning, asName, fwName,
+     *     isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,
+     *     hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, androidSecurityPatchVersion, and url.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=fields")
+    public String[] fields;
+    public GetNetworkSmDevicesRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public GetNetworkSmDevicesQueryParams queryParams;
-    public GetNetworkSmDevicesRequest withQueryParams(GetNetworkSmDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter devices by id(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public String[] ids;
+    public GetNetworkSmDevicesRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSmDevicesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetNetworkSmDevicesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=scope")
+    public String[] scope;
+    public GetNetworkSmDevicesRequest withScope(String[] scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * Filter devices by serial(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=serials")
+    public String[] serials;
+    public GetNetworkSmDevicesRequest withSerials(String[] serials) {
+        this.serials = serials;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetNetworkSmDevicesRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    /**
+     * Filter devices by wifi mac(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=wifiMacs")
+    public String[] wifiMacs;
+    public GetNetworkSmDevicesRequest withWifiMacs(String[] wifiMacs) {
+        this.wifiMacs = wifiMacs;
         return this;
     }
     

@@ -42,13 +42,13 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionArticlesResponse collectionArticles(org.openapis.openapi.models.operations.CollectionArticlesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionArticlesPathParams.class, baseUrl, "/collections/{collection_id}/articles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionArticlesRequest.class, baseUrl, "/collections/{collection_id}/articles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectionArticlesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectionArticlesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionDetailsResponse collectionDetails(org.openapis.openapi.models.operations.CollectionDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionDetailsPathParams.class, baseUrl, "/collections/{collection_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionDetailsRequest.class, baseUrl, "/collections/{collection_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,7 +130,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionVersionDetailsResponse collectionVersionDetails(org.openapis.openapi.models.operations.CollectionVersionDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionVersionDetailsPathParams.class, baseUrl, "/collections/{collection_id}/versions/{version_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionVersionDetailsRequest.class, baseUrl, "/collections/{collection_id}/versions/{version_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -171,7 +171,7 @@ public class Collections {
      */
     public org.openapis.openapi.models.operations.CollectionVersionsResponse collectionVersions(org.openapis.openapi.models.operations.CollectionVersionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionVersionsPathParams.class, baseUrl, "/collections/{collection_id}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectionVersionsRequest.class, baseUrl, "/collections/{collection_id}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -218,13 +218,13 @@ public class Collections {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CollectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -274,10 +274,10 @@ public class Collections {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "collectionSearch", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -317,19 +317,20 @@ public class Collections {
      * Delete collection article
      * De-associate article from collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteResponse privateCollectionArticleDelete(org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteResponse privateCollectionArticleDelete(org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteRequest request, org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionArticleDeletePathParams.class, baseUrl, "/account/collections/{collection_id}/articles/{article_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionArticleDeleteRequest.class, baseUrl, "/account/collections/{collection_id}/articles/{article_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,24 +360,25 @@ public class Collections {
      * Add collection articles
      * Associate new articles with the collection. This will add new articles to the list of already associated articles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionArticlesAddResponse privateCollectionArticlesAdd(org.openapis.openapi.models.operations.PrivateCollectionArticlesAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionArticlesAddResponse privateCollectionArticlesAdd(org.openapis.openapi.models.operations.PrivateCollectionArticlesAddRequest request, org.openapis.openapi.models.operations.PrivateCollectionArticlesAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionArticlesAddPathParams.class, baseUrl, "/account/collections/{collection_id}/articles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionArticlesAddRequest.class, baseUrl, "/account/collections/{collection_id}/articles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "articlesCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -416,25 +418,26 @@ public class Collections {
      * List collection articles
      * List collection articles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionArticlesListResponse privateCollectionArticlesList(org.openapis.openapi.models.operations.PrivateCollectionArticlesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionArticlesListResponse privateCollectionArticlesList(org.openapis.openapi.models.operations.PrivateCollectionArticlesListRequest request, org.openapis.openapi.models.operations.PrivateCollectionArticlesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionArticlesListPathParams.class, baseUrl, "/account/collections/{collection_id}/articles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionArticlesListRequest.class, baseUrl, "/account/collections/{collection_id}/articles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateCollectionArticlesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateCollectionArticlesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -472,24 +475,25 @@ public class Collections {
      * Replace collection articles
      * Associate new articles with the collection. This will remove all already associated articles and add these new ones
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceResponse privateCollectionArticlesReplace(org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceResponse privateCollectionArticlesReplace(org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceRequest request, org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionArticlesReplacePathParams.class, baseUrl, "/account/collections/{collection_id}/articles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionArticlesReplaceRequest.class, baseUrl, "/account/collections/{collection_id}/articles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "articlesCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -523,19 +527,20 @@ public class Collections {
      * Delete collection author
      * Delete collection author
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteResponse privateCollectionAuthorDelete(org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteResponse privateCollectionAuthorDelete(org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteRequest request, org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionAuthorDeletePathParams.class, baseUrl, "/account/collections/{collection_id}/authors/{author_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionAuthorDeleteRequest.class, baseUrl, "/account/collections/{collection_id}/authors/{author_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -565,24 +570,25 @@ public class Collections {
      * Add collection authors
      * Associate new authors with the collection. This will add new authors to the list of already associated authors
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddResponse privateCollectionAuthorsAdd(org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddResponse privateCollectionAuthorsAdd(org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddRequest request, org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddPathParams.class, baseUrl, "/account/collections/{collection_id}/authors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionAuthorsAddRequest.class, baseUrl, "/account/collections/{collection_id}/authors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authorsCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -622,19 +628,20 @@ public class Collections {
      * List collection authors
      * List collection authors
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionAuthorsListResponse privateCollectionAuthorsList(org.openapis.openapi.models.operations.PrivateCollectionAuthorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionAuthorsListResponse privateCollectionAuthorsList(org.openapis.openapi.models.operations.PrivateCollectionAuthorsListRequest request, org.openapis.openapi.models.operations.PrivateCollectionAuthorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionAuthorsListPathParams.class, baseUrl, "/account/collections/{collection_id}/authors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionAuthorsListRequest.class, baseUrl, "/account/collections/{collection_id}/authors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -672,24 +679,25 @@ public class Collections {
      * Replace collection authors
      * Associate new authors with the collection. This will remove all already associated authors and add these new ones
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceResponse privateCollectionAuthorsReplace(org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceResponse privateCollectionAuthorsReplace(org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceRequest request, org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplacePathParams.class, baseUrl, "/account/collections/{collection_id}/authors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionAuthorsReplaceRequest.class, baseUrl, "/account/collections/{collection_id}/authors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "authorsCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -723,24 +731,25 @@ public class Collections {
      * Add collection categories
      * Associate new categories with the collection. This will add new categories to the list of already associated categories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddResponse privateCollectionCategoriesAdd(org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddResponse privateCollectionCategoriesAdd(org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddRequest request, org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddPathParams.class, baseUrl, "/account/collections/{collection_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionCategoriesAddRequest.class, baseUrl, "/account/collections/{collection_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "categoriesCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -780,19 +789,20 @@ public class Collections {
      * List collection categories
      * List collection categories
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionCategoriesListResponse privateCollectionCategoriesList(org.openapis.openapi.models.operations.PrivateCollectionCategoriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionCategoriesListResponse privateCollectionCategoriesList(org.openapis.openapi.models.operations.PrivateCollectionCategoriesListRequest request, org.openapis.openapi.models.operations.PrivateCollectionCategoriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionCategoriesListPathParams.class, baseUrl, "/account/collections/{collection_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionCategoriesListRequest.class, baseUrl, "/account/collections/{collection_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -830,24 +840,25 @@ public class Collections {
      * Replace collection categories
      * Associate new categories with the collection. This will remove all already associated categories and add these new ones
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceResponse privateCollectionCategoriesReplace(org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceResponse privateCollectionCategoriesReplace(org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceRequest request, org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplacePathParams.class, baseUrl, "/account/collections/{collection_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionCategoriesReplaceRequest.class, baseUrl, "/account/collections/{collection_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "categoriesCreator", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -881,19 +892,20 @@ public class Collections {
      * Delete collection category
      * De-associate category from collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteResponse privateCollectionCategoryDelete(org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteResponse privateCollectionCategoryDelete(org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteRequest request, org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionCategoryDeletePathParams.class, baseUrl, "/account/collections/{collection_id}/categories/{category_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionCategoryDeleteRequest.class, baseUrl, "/account/collections/{collection_id}/categories/{category_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -923,10 +935,11 @@ public class Collections {
      * Create collection
      * Create a new Collection by sending collection information
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionCreateResponse privateCollectionCreate(org.openapis.openapi.models.operations.PrivateCollectionCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionCreateResponse privateCollectionCreate(org.openapis.openapi.models.shared.CollectionCreate request, org.openapis.openapi.models.operations.PrivateCollectionCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/collections");
         
@@ -940,7 +953,7 @@ public class Collections {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -978,19 +991,20 @@ public class Collections {
      * Delete collection
      * Delete n collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionDeleteResponse privateCollectionDelete(org.openapis.openapi.models.operations.PrivateCollectionDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionDeleteResponse privateCollectionDelete(org.openapis.openapi.models.operations.PrivateCollectionDeleteRequest request, org.openapis.openapi.models.operations.PrivateCollectionDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionDeletePathParams.class, baseUrl, "/account/collections/{collection_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionDeleteRequest.class, baseUrl, "/account/collections/{collection_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1020,19 +1034,20 @@ public class Collections {
      * Collection details
      * View a collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionDetailsResponse privateCollectionDetails(org.openapis.openapi.models.operations.PrivateCollectionDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionDetailsResponse privateCollectionDetails(org.openapis.openapi.models.operations.PrivateCollectionDetailsRequest request, org.openapis.openapi.models.operations.PrivateCollectionDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionDetailsPathParams.class, baseUrl, "/account/collections/{collection_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionDetailsRequest.class, baseUrl, "/account/collections/{collection_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1062,21 +1077,22 @@ public class Collections {
      * Create collection private link
      * Create new private link
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateResponse privateCollectionPrivateLinkCreate(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateResponse privateCollectionPrivateLinkCreate(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateRequest request, org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreatePathParams.class, baseUrl, "/account/collections/{collection_id}/private_links", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkCreateRequest.class, baseUrl, "/account/collections/{collection_id}/private_links", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "collectionPrivateLinkCreator", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1116,19 +1132,20 @@ public class Collections {
      * Disable private link
      * Disable/delete private link for this collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteResponse privateCollectionPrivateLinkDelete(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteResponse privateCollectionPrivateLinkDelete(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteRequest request, org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeletePathParams.class, baseUrl, "/account/collections/{collection_id}/private_links/{link_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkDeleteRequest.class, baseUrl, "/account/collections/{collection_id}/private_links/{link_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1158,21 +1175,22 @@ public class Collections {
      * Update collection private link
      * Update existing private link for this collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateResponse privateCollectionPrivateLinkUpdate(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateResponse privateCollectionPrivateLinkUpdate(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateRequest request, org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdatePathParams.class, baseUrl, "/account/collections/{collection_id}/private_links/{link_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinkUpdateRequest.class, baseUrl, "/account/collections/{collection_id}/private_links/{link_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "collectionPrivateLinkCreator", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1206,19 +1224,20 @@ public class Collections {
      * List collection private links
      * List article private links
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListResponse privateCollectionPrivateLinksList(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListResponse privateCollectionPrivateLinksList(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListRequest request, org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListPathParams.class, baseUrl, "/account/collections/{collection_id}/private_links", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPrivateLinksListRequest.class, baseUrl, "/account/collections/{collection_id}/private_links", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1256,19 +1275,20 @@ public class Collections {
      * Private Collection Publish
      * When a collection is published, a new public version will be generated. Any further updates to the collection will affect the private collection data. In order to make these changes publicly visible, an explicit publish operation is needed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionPublishResponse privateCollectionPublish(org.openapis.openapi.models.operations.PrivateCollectionPublishRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionPublishResponse privateCollectionPublish(org.openapis.openapi.models.operations.PrivateCollectionPublishRequest request, org.openapis.openapi.models.operations.PrivateCollectionPublishSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPublishPathParams.class, baseUrl, "/account/collections/{collection_id}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionPublishRequest.class, baseUrl, "/account/collections/{collection_id}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1308,19 +1328,20 @@ public class Collections {
      * Private Collection Reserve DOI
      * Reserve DOI for collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionReserveDoiResponse privateCollectionReserveDoi(org.openapis.openapi.models.operations.PrivateCollectionReserveDoiRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionReserveDoiResponse privateCollectionReserveDoi(org.openapis.openapi.models.operations.PrivateCollectionReserveDoiRequest request, org.openapis.openapi.models.operations.PrivateCollectionReserveDoiSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionReserveDoiPathParams.class, baseUrl, "/account/collections/{collection_id}/reserve_doi", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionReserveDoiRequest.class, baseUrl, "/account/collections/{collection_id}/reserve_doi", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1358,19 +1379,20 @@ public class Collections {
      * Private Collection Reserve Handle
      * Reserve Handle for collection
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionReserveHandleResponse privateCollectionReserveHandle(org.openapis.openapi.models.operations.PrivateCollectionReserveHandleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionReserveHandleResponse privateCollectionReserveHandle(org.openapis.openapi.models.operations.PrivateCollectionReserveHandleRequest request, org.openapis.openapi.models.operations.PrivateCollectionReserveHandleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionReserveHandlePathParams.class, baseUrl, "/account/collections/{collection_id}/reserve_handle", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionReserveHandleRequest.class, baseUrl, "/account/collections/{collection_id}/reserve_handle", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1408,24 +1430,25 @@ public class Collections {
      * Private Collection Resource
      * Edit collection resource data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionResourceResponse privateCollectionResource(org.openapis.openapi.models.operations.PrivateCollectionResourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionResourceResponse privateCollectionResource(org.openapis.openapi.models.operations.PrivateCollectionResourceRequest request, org.openapis.openapi.models.operations.PrivateCollectionResourceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionResourcePathParams.class, baseUrl, "/account/collections/{collection_id}/resource", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionResourceRequest.class, baseUrl, "/account/collections/{collection_id}/resource", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resource", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1465,24 +1488,25 @@ public class Collections {
      * Update collection
      * Update collection details; request can also be made with the PATCH method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionUpdateResponse privateCollectionUpdate(org.openapis.openapi.models.operations.PrivateCollectionUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionUpdateResponse privateCollectionUpdate(org.openapis.openapi.models.operations.PrivateCollectionUpdateRequest request, org.openapis.openapi.models.operations.PrivateCollectionUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionUpdatePathParams.class, baseUrl, "/account/collections/{collection_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PrivateCollectionUpdateRequest.class, baseUrl, "/account/collections/{collection_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "collectionUpdate", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1522,10 +1546,11 @@ public class Collections {
      * Private Collections List
      * List private collections
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionsListResponse privateCollectionsList(org.openapis.openapi.models.operations.PrivateCollectionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionsListResponse privateCollectionsList(org.openapis.openapi.models.operations.PrivateCollectionsListRequest request, org.openapis.openapi.models.operations.PrivateCollectionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/collections");
         
@@ -1533,14 +1558,14 @@ public class Collections {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateCollectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PrivateCollectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1578,10 +1603,11 @@ public class Collections {
      * Private Collections Search
      * Returns a list of private Collections
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateCollectionsSearchResponse privateCollectionsSearch(org.openapis.openapi.models.operations.PrivateCollectionsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PrivateCollectionsSearchResponse privateCollectionsSearch(org.openapis.openapi.models.shared.PrivateCollectionSearch request, org.openapis.openapi.models.operations.PrivateCollectionsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/collections/search");
         
@@ -1595,7 +1621,7 @@ public class Collections {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

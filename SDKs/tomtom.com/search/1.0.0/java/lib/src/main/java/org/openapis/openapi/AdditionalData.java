@@ -35,13 +35,13 @@ public class AdditionalData {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtResponse getSearchVersionNumberAdditionalDataExt(org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtPathParams.class, baseUrl, "/search/{versionNumber}/additionalData.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtRequest.class, baseUrl, "/search/{versionNumber}/additionalData.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberAdditionalDataExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

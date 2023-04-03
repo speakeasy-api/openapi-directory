@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomFieldsJsonRequest {
-    
-    public PostCustomFieldsJsonQueryParams queryParams;
-    public PostCustomFieldsJsonRequest withQueryParams(PostCustomFieldsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Custom Field parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomFieldEdit request;
-    public PostCustomFieldsJsonRequest withRequest(org.openapis.openapi.models.shared.CustomFieldEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomFieldEdit customFieldEdit;
+    public PostCustomFieldsJsonRequest withCustomFieldEdit(org.openapis.openapi.models.shared.CustomFieldEdit customFieldEdit) {
+        this.customFieldEdit = customFieldEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostCustomFieldsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostCustomFieldsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

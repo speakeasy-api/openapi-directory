@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest {
-    
-    public ReferencesAirportsNearestByLatitudeAndLongitudeGetPathParams pathParams;
-    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withPathParams(ReferencesAirportsNearestByLatitudeAndLongitudeGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ReferencesAirportsNearestByLatitudeAndLongitudeGetQueryParams queryParams;
-    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withQueryParams(ReferencesAirportsNearestByLatitudeAndLongitudeGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * 2 letter ISO 3166-1 language code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withLang(String lang) {
+        this.lang = lang;
         return this;
     }
     
-    
-    public ReferencesAirportsNearestByLatitudeAndLongitudeGetHeaders headers;
-    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withHeaders(ReferencesAirportsNearestByLatitudeAndLongitudeGetHeaders headers) {
-        this.headers = headers;
+    /**
+     * Latitude in decimal format to at most 3 decimal places
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=latitude")
+    public Integer latitude;
+    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withLatitude(Integer latitude) {
+        this.latitude = latitude;
         return this;
     }
     
-    
-    public ReferencesAirportsNearestByLatitudeAndLongitudeGetSecurity security;
-    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withSecurity(ReferencesAirportsNearestByLatitudeAndLongitudeGetSecurity security) {
-        this.security = security;
+    /**
+     * Longitude in decimal format to at most 3 decimal places
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=longitude")
+    public Integer longitude;
+    public ReferencesAirportsNearestByLatitudeAndLongitudeGetRequest withLongitude(Integer longitude) {
+        this.longitude = longitude;
         return this;
     }
     

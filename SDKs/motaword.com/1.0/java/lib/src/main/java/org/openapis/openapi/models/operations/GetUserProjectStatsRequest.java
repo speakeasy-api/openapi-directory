@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserProjectStatsRequest {
-    
-    public GetUserProjectStatsPathParams pathParams;
-    public GetUserProjectStatsRequest withPathParams(GetUserProjectStatsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetUserProjectStatsSecurity security;
-    public GetUserProjectStatsRequest withSecurity(GetUserProjectStatsSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public GetUserProjectStatsRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

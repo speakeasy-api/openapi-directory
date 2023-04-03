@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRealmRolesRoleNameRequest {
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public DeleteRealmRolesRoleNameRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
     
-    public DeleteRealmRolesRoleNamePathParams pathParams;
-    public DeleteRealmRolesRoleNameRequest withPathParams(DeleteRealmRolesRoleNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * role\u2019s name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public DeleteRealmRolesRoleNameRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

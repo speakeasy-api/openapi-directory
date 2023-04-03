@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserVotesEpisodesEpisodeIdRequest {
-    
-    public GetUserVotesEpisodesEpisodeIdPathParams pathParams;
-    public GetUserVotesEpisodesEpisodeIdRequest withPathParams(GetUserVotesEpisodesEpisodeIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=episode_id")
+    public Long episodeId;
+    public GetUserVotesEpisodesEpisodeIdRequest withEpisodeId(Long episodeId) {
+        this.episodeId = episodeId;
         return this;
     }
     

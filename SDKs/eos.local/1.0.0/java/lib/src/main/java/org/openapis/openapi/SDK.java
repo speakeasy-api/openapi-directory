@@ -124,7 +124,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectResponse connect(org.openapis.openapi.models.operations.ConnectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectResponse connect(org.openapis.openapi.models.operations.ConnectRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/net/connect");
         
@@ -164,7 +164,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConnectionsResponse connections(org.openapis.openapi.models.operations.ConnectionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConnectionsResponse connections(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/net/connections");
         
@@ -205,7 +205,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisconnectResponse disconnect(org.openapis.openapi.models.operations.DisconnectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisconnectResponse disconnect(org.openapis.openapi.models.operations.DisconnectRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/net/disconnect");
         
@@ -245,7 +245,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StatusResponse status(org.openapis.openapi.models.operations.StatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StatusResponse status(org.openapis.openapi.models.operations.StatusRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/net/status");
         

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllAccountsRequest {
-    
-    public GetAllAccountsQueryParams queryParams;
-    public GetAllAccountsRequest withQueryParams(GetAllAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public Long pageNumber;
+    public GetAllAccountsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
+    /**
+     * Page size of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetAllAccountsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetAllAccountsSecurity security;
-    public GetAllAccountsRequest withSecurity(GetAllAccountsSecurity security) {
-        this.security = security;
+    /**
+     * Filter by provider
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider")
+    public GetAllAccountsProviderEnum provider;
+    public GetAllAccountsRequest withProvider(GetAllAccountsProviderEnum provider) {
+        this.provider = provider;
         return this;
     }
     

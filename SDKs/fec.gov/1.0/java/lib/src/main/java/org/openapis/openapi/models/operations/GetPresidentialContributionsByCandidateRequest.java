@@ -4,13 +4,98 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPresidentialContributionsByCandidateRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetPresidentialContributionsByCandidateRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetPresidentialContributionsByCandidateQueryParams queryParams;
-    public GetPresidentialContributionsByCandidateRequest withQueryParams(GetPresidentialContributionsByCandidateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * State of contributor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor_state")
+    public String[] contributorState;
+    public GetPresidentialContributionsByCandidateRequest withContributorState(String[] contributorState) {
+        this.contributorState = contributorState;
+        return this;
+    }
+    
+    /**
+     * Year of election
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
+    public Integer[] electionYear;
+    public GetPresidentialContributionsByCandidateRequest withElectionYear(Integer[] electionYear) {
+        this.electionYear = electionYear;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetPresidentialContributionsByCandidateRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetPresidentialContributionsByCandidateRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetPresidentialContributionsByCandidateRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetPresidentialContributionsByCandidateRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetPresidentialContributionsByCandidateRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetPresidentialContributionsByCandidateRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchPushDeviceDetailsJsonRequest {
-    
-    public PatchPushDeviceDetailsJsonPathParams pathParams;
-    public PatchPushDeviceDetailsJsonRequest withPathParams(PatchPushDeviceDetailsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PatchPushDeviceDetailsJsonQueryParams queryParams;
-    public PatchPushDeviceDetailsJsonRequest withQueryParams(PatchPushDeviceDetailsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PatchPushDeviceDetailsJsonHeaders headers;
-    public PatchPushDeviceDetailsJsonRequest withHeaders(PatchPushDeviceDetailsJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeviceDetailsInput request;
-    public PatchPushDeviceDetailsJsonRequest withRequest(org.openapis.openapi.models.shared.DeviceDetailsInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DeviceDetailsInput deviceDetailsInput;
+    public PatchPushDeviceDetailsJsonRequest withDeviceDetailsInput(org.openapis.openapi.models.shared.DeviceDetailsInput deviceDetailsInput) {
+        this.deviceDetailsInput = deviceDetailsInput;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public PatchPushDeviceDetailsJsonRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * Device's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device_id")
+    public String deviceId;
+    public PatchPushDeviceDetailsJsonRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public PatchPushDeviceDetailsJsonRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

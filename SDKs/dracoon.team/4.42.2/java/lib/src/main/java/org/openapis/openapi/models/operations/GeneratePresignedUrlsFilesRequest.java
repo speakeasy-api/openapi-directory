@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeneratePresignedUrlsFilesRequest {
-    
-    public GeneratePresignedUrlsFilesPathParams pathParams;
-    public GeneratePresignedUrlsFilesRequest withPathParams(GeneratePresignedUrlsFilesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GeneratePresignedUrlsFilesHeaders headers;
-    public GeneratePresignedUrlsFilesRequest withHeaders(GeneratePresignedUrlsFilesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GeneratePresignedUrlsRequest request;
-    public GeneratePresignedUrlsFilesRequest withRequest(org.openapis.openapi.models.shared.GeneratePresignedUrlsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GeneratePresignedUrlsRequest generatePresignedUrlsRequest;
+    public GeneratePresignedUrlsFilesRequest withGeneratePresignedUrlsRequest(org.openapis.openapi.models.shared.GeneratePresignedUrlsRequest generatePresignedUrlsRequest) {
+        this.generatePresignedUrlsRequest = generatePresignedUrlsRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public GeneratePresignedUrlsFilesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public GeneratePresignedUrlsFilesRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RotoballerArticlesByDateRequest {
+    /**
+     * The date of the news.
+     * &lt;br&gt;Examples: &lt;code&gt;2017-JUL-31&lt;/code&gt;, &lt;code&gt;2017-SEP-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public RotoballerArticlesByDateRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public RotoballerArticlesByDatePathParams pathParams;
-    public RotoballerArticlesByDateRequest withPathParams(RotoballerArticlesByDatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public RotoballerArticlesByDateFormatEnum format;
+    public RotoballerArticlesByDateRequest withFormat(RotoballerArticlesByDateFormatEnum format) {
+        this.format = format;
         return this;
     }
     

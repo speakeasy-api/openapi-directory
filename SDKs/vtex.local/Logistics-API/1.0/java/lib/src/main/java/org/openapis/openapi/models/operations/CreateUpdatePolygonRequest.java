@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdatePolygonRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateUpdatePolygonRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public CreateUpdatePolygonHeaders headers;
-    public CreateUpdatePolygonRequest withHeaders(CreateUpdatePolygonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateUpdatePolygonRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateUpdatePolygonCreateUpdatePolygonRequest request;
-    public CreateUpdatePolygonRequest withRequest(CreateUpdatePolygonCreateUpdatePolygonRequest request) {
-        this.request = request;
+    public CreateUpdatePolygonCreateUpdatePolygonRequest requestBody;
+    public CreateUpdatePolygonRequest withRequestBody(CreateUpdatePolygonCreateUpdatePolygonRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

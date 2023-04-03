@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutBuyOrderJsonRequest {
-    
-    public PutBuyOrderJsonPathParams pathParams;
-    public PutBuyOrderJsonRequest withPathParams(PutBuyOrderJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.OrderUpdPersistVO orderUpdPersistVO;
+    public PutBuyOrderJsonRequest withOrderUpdPersistVO(org.openapis.openapi.models.shared.OrderUpdPersistVO orderUpdPersistVO) {
+        this.orderUpdPersistVO = orderUpdPersistVO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OrderUpdPersistVO request;
-    public PutBuyOrderJsonRequest withRequest(org.openapis.openapi.models.shared.OrderUpdPersistVO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
+    public String orderId;
+    public PutBuyOrderJsonRequest withOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PutBuyOrderJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PutBuyOrderJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

@@ -7,16 +7,16 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public SchemeAccessToken accessToken;
-    public Security withAccessToken(SchemeAccessToken accessToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=access_token")
+    public String accessToken;
+    public Security withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeAuthorizationHeaderToken authorizationHeaderToken;
-    public Security withAuthorizationHeaderToken(SchemeAuthorizationHeaderToken authorizationHeaderToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String authorizationHeaderToken;
+    public Security withAuthorizationHeaderToken(String authorizationHeaderToken) {
         this.authorizationHeaderToken = authorizationHeaderToken;
         return this;
     }
@@ -28,30 +28,30 @@ public class Security {
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeSudoHeader sudoHeader;
-    public Security withSudoHeader(SchemeSudoHeader sudoHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Sudo")
+    public String sudoHeader;
+    public Security withSudoHeader(String sudoHeader) {
         this.sudoHeader = sudoHeader;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public SchemeSudoParam sudoParam;
-    public Security withSudoParam(SchemeSudoParam sudoParam) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=sudo")
+    public String sudoParam;
+    public Security withSudoParam(String sudoParam) {
         this.sudoParam = sudoParam;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeTotpHeader totpHeader;
-    public Security withTOTPHeader(SchemeTotpHeader totpHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-GITEA-OTP")
+    public String totpHeader;
+    public Security withTOTPHeader(String totpHeader) {
         this.totpHeader = totpHeader;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public SchemeToken token;
-    public Security withToken(SchemeToken token) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=token")
+    public String token;
+    public Security withToken(String token) {
         this.token = token;
         return this;
     }

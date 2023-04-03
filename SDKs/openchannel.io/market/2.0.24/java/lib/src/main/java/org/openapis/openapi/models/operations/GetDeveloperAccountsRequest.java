@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeveloperAccountsRequest {
+    /**
+     * The maximum number of results to return per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetDeveloperAccountsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetDeveloperAccountsQueryParams queryParams;
-    public GetDeveloperAccountsRequest withQueryParams(GetDeveloperAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The result set page number to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Long pageNumber;
+    public GetDeveloperAccountsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * A query document. Example: {'name':'NASA'} matches all the developerAccounts that have the name 'NASA'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetDeveloperAccountsRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * A sort document. Example: {'name':1} sorts the results by name in ascending order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetDeveloperAccountsRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

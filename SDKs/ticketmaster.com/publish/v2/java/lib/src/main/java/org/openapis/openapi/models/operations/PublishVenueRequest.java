@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishVenueRequest {
-    
-    public PublishVenueHeaders headers;
-    public PublishVenueRequest withHeaders(PublishVenueHeaders headers) {
-        this.headers = headers;
+    /**
+     * Unique correlation id to be able to trace the request in our system
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
+    public String tmpsCorrelationId;
+    public PublishVenueRequest withTMPSCorrelationId(String tmpsCorrelationId) {
+        this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class PublishVenueRequest {
      * Venue
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Venue request;
-    public PublishVenueRequest withRequest(org.openapis.openapi.models.shared.Venue request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Venue venue;
+    public PublishVenueRequest withVenue(org.openapis.openapi.models.shared.Venue venue) {
+        this.venue = venue;
         return this;
     }
     

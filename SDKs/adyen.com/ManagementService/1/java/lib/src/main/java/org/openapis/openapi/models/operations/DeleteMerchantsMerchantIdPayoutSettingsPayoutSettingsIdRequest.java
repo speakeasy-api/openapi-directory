@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest {
-    
-    public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdPathParams pathParams;
-    public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withPathParams(DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
-    
-    public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdSecurity security;
-    public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withSecurity(DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the payout setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutSettingsId")
+    public String payoutSettingsId;
+    public DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withPayoutSettingsId(String payoutSettingsId) {
+        this.payoutSettingsId = payoutSettingsId;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDoNotContactRequest {
-    
-    public GetDoNotContactPathParams pathParams;
-    public GetDoNotContactRequest withPathParams(GetDoNotContactPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetDoNotContactSecurity security;
-    public GetDoNotContactRequest withSecurity(GetDoNotContactSecurity security) {
-        this.security = security;
+    /**
+     * Number associated with Do Not Contact (DNC) entry.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public GetDoNotContactRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

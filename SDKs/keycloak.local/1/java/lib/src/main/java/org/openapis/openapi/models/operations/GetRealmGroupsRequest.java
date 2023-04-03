@@ -4,20 +4,44 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmGroupsRequest {
-    
-    public GetRealmGroupsPathParams pathParams;
-    public GetRealmGroupsRequest withPathParams(GetRealmGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=briefRepresentation")
+    public Boolean briefRepresentation;
+    public GetRealmGroupsRequest withBriefRepresentation(Boolean briefRepresentation) {
+        this.briefRepresentation = briefRepresentation;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmGroupsRequest withFirst(Integer first) {
+        this.first = first;
+        return this;
+    }
     
-    public GetRealmGroupsQueryParams queryParams;
-    public GetRealmGroupsRequest withQueryParams(GetRealmGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmGroupsRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmGroupsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetRealmGroupsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

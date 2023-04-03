@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserEmailPermissionsPermissionNameRequest {
+    /**
+     * permission name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionName")
+    public org.openapis.openapi.models.shared.PermissionNameEnum permissionName;
+    public PostUsersUserEmailPermissionsPermissionNameRequest withPermissionName(org.openapis.openapi.models.shared.PermissionNameEnum permissionName) {
+        this.permissionName = permissionName;
+        return this;
+    }
     
-    public PostUsersUserEmailPermissionsPermissionNamePathParams pathParams;
-    public PostUsersUserEmailPermissionsPermissionNameRequest withPathParams(PostUsersUserEmailPermissionsPermissionNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public PostUsersUserEmailPermissionsPermissionNameRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

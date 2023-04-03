@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MissingSymbolGroupsInfoRequest {
-    
-    public MissingSymbolGroupsInfoPathParams pathParams;
-    public MissingSymbolGroupsInfoRequest withPathParams(MissingSymbolGroupsInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public MissingSymbolGroupsInfoRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public MissingSymbolGroupsInfoSecurity security;
-    public MissingSymbolGroupsInfoRequest withSecurity(MissingSymbolGroupsInfoSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public MissingSymbolGroupsInfoRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturesWithinResourceRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=begin")
+    public String begin;
+    public GetFeaturesWithinResourceRequest withBegin(String begin) {
+        this.begin = begin;
+        return this;
+    }
     
-    public GetFeaturesWithinResourcePathParams pathParams;
-    public GetFeaturesWithinResourceRequest withPathParams(GetFeaturesWithinResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build")
+    public String build;
+    public GetFeaturesWithinResourceRequest withBuild(String build) {
+        this.build = build;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=end")
+    public String end;
+    public GetFeaturesWithinResourceRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reference")
+    public String reference;
+    public GetFeaturesWithinResourceRequest withReference(String reference) {
+        this.reference = reference;
         return this;
     }
     

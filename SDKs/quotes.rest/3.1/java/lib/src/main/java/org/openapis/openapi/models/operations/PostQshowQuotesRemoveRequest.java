@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostQshowQuotesRemoveRequest {
-    
-    public PostQshowQuotesRemoveQueryParams queryParams;
-    public PostQshowQuotesRemoveRequest withQueryParams(PostQshowQuotesRemoveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Qshow ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public PostQshowQuotesRemoveRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PostQshowQuotesRemoveSecurity security;
-    public PostQshowQuotesRemoveRequest withSecurity(PostQshowQuotesRemoveSecurity security) {
-        this.security = security;
+    /**
+     * Quote ID to remove from the qshow collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quoteid")
+    public String quoteid;
+    public PostQshowQuotesRemoveRequest withQuoteid(String quoteid) {
+        this.quoteid = quoteid;
         return this;
     }
     

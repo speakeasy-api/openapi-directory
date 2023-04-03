@@ -4,20 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportMeetingDetailsRequest {
-    
-    public ReportMeetingDetailsPathParams pathParams;
-    public ReportMeetingDetailsRequest withPathParams(ReportMeetingDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReportMeetingDetailsSecurity security;
-    public ReportMeetingDetailsRequest withSecurity(ReportMeetingDetailsSecurity security) {
-        this.security = security;
+    /**
+     * The meeting ID or the meeting UUID.  If a meeting ID is provided in the request instead of a UUID, the response will be for the latest meeting instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public ReportMeetingDetailsRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     

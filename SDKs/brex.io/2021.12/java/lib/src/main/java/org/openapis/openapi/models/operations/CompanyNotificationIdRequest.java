@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyNotificationIdRequest {
-    
-    public CompanyNotificationIdPathParams pathParams;
-    public CompanyNotificationIdRequest withPathParams(CompanyNotificationIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CompanyNotificationIdSecurity security;
-    public CompanyNotificationIdRequest withSecurity(CompanyNotificationIdSecurity security) {
-        this.security = security;
+    /**
+     * Company Hex ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CompanyNotificationIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

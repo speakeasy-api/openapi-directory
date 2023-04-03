@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMessagesIdRelatedReceivedMessagesRequest {
-    
-    public GetMessagesIdRelatedReceivedMessagesPathParams pathParams;
-    public GetMessagesIdRelatedReceivedMessagesRequest withPathParams(GetMessagesIdRelatedReceivedMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetMessagesIdRelatedReceivedMessagesSecurity security;
-    public GetMessagesIdRelatedReceivedMessagesRequest withSecurity(GetMessagesIdRelatedReceivedMessagesSecurity security) {
-        this.security = security;
+    /**
+     * The `id` of the sent message
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetMessagesIdRelatedReceivedMessagesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

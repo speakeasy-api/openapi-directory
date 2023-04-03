@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisableCiscoSwitchRequest {
-    
-    public DisableCiscoSwitchPathParams pathParams;
-    public DisableCiscoSwitchRequest withPathParams(DisableCiscoSwitchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DisableCiscoSwitchSecurity security;
-    public DisableCiscoSwitchRequest withSecurity(DisableCiscoSwitchSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DisableCiscoSwitchRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

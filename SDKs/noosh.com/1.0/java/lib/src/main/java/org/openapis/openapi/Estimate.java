@@ -40,7 +40,7 @@ public class Estimate {
      */
     public org.openapis.openapi.models.operations.GetEstimateResponse getEstimate(org.openapis.openapi.models.operations.GetEstimateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEstimatePathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates/{estimate_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEstimateRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates/{estimate_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class Estimate {
      */
     public org.openapis.openapi.models.operations.GetEstimateListResponse getEstimateList(org.openapis.openapi.models.operations.GetEstimateListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEstimateListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEstimateListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -278,12 +278,12 @@ public class Estimate {
      */
     public org.openapis.openapi.models.operations.PostEstimateJsonResponse postEstimateJson(org.openapis.openapi.models.operations.PostEstimateJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostEstimateJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostEstimateJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "estimatePO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -399,12 +399,12 @@ public class Estimate {
      */
     public org.openapis.openapi.models.operations.PostEstimateRawResponse postEstimateRaw(org.openapis.openapi.models.operations.PostEstimateRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostEstimateRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostEstimateRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/estimates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

@@ -5,14 +5,12 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateAliasSecurity;
-import org.openapis.openapi.models.operations.CreateAliasQueryParams;
 import org.openapis.openapi.models.operations.CreateAliasRequest;
 import org.openapis.openapi.models.operations.CreateAliasResponse;
 import org.openapis.openapi.models.shared.CreateAliasModel;
 import org.openapis.openapi.models.shared.SnippetModel;
 import org.openapis.openapi.models.shared.MetaTagModel;
 import org.openapis.openapi.models.shared.DestinationModel;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,34 +19,29 @@ public class Application {
                 .build();
 
             CreateAliasRequest req = new CreateAliasRequest() {{
-                security = new CreateAliasSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new CreateAliasQueryParams() {{
-                    aliasName = "corrupti";
-                    domainName = "provident";
-                }};
-                request = new CreateAliasModel() {{
+                createAliasModel = new CreateAliasModel() {{
                     destinations = new org.openapis.openapi.models.shared.DestinationModel[]{{
                         add(new DestinationModel() {{
+                            country = "Montenegro";
+                            os = "distinctio";
+                            url = "quibusdam";
+                        }}),
+                        add(new DestinationModel() {{
+                            country = "Mozambique";
+                            os = "nulla";
+                            url = "corrupti";
+                        }}),
+                        add(new DestinationModel() {{
                             country = "Suriname";
-                            os = "unde";
-                            url = "nulla";
-                        }}),
-                        add(new DestinationModel() {{
-                            country = "Mali";
-                            os = "illum";
-                            url = "vel";
-                        }}),
-                        add(new DestinationModel() {{
-                            country = "Netherlands Antilles";
-                            os = "deserunt";
-                            url = "suscipit";
+                            os = "vel";
+                            url = "error";
                         }}),
                     }};
                     metatags = new org.openapis.openapi.models.shared.MetaTagModel[]{{
+                        add(new MetaTagModel() {{
+                            content = "suscipit";
+                            name = "iure";
+                        }}),
                         add(new MetaTagModel() {{
                             content = "magnam";
                             name = "debitis";
@@ -75,9 +68,13 @@ public class Application {
                         }}),
                     }};
                 }};
-            }};            
+                aliasName = "veritatis";
+                domainName = "deserunt";
+            }}            
 
-            CreateAliasResponse res = sdk.alias.createAlias(req);
+            CreateAliasResponse res = sdk.alias.createAlias(req, new CreateAliasSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.createAliasResponseModel.isPresent()) {
                 // handle response

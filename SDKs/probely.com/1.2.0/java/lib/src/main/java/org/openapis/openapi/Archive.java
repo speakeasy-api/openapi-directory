@@ -44,7 +44,7 @@ public class Archive {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTargetsActivateResponse postTargetsActivate(org.openapis.openapi.models.operations.PostTargetsActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTargetsActivateResponse postTargetsActivate(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/targets/activate/");
         
@@ -112,7 +112,7 @@ public class Archive {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTargetsArchiveResponse postTargetsArchive(org.openapis.openapi.models.operations.PostTargetsArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTargetsArchiveResponse postTargetsArchive(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/targets/archive/");
         
@@ -180,7 +180,7 @@ public class Archive {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTargetsArchivedResponse postTargetsArchived(org.openapis.openapi.models.operations.PostTargetsArchivedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTargetsArchivedResponse postTargetsArchived(String[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/targets/archived/");
         

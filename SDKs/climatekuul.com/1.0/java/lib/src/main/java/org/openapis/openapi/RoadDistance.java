@@ -68,10 +68,21 @@ public class RoadDistance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmCarbonOffset5Response confirmCarbonOffset5(org.openapis.openapi.models.operations.ConfirmCarbonOffset5Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmCarbonOffset5Response confirmCarbonOffset5(org.openapis.openapi.models.operations.ConfirmCarbonOffset5RequestBody request) throws Exception {
+        return this.confirmCarbonOffset5(request, null);
+    }
+
+    /**
+     * confirmCarbonOffset
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmCarbonOffset5Response confirmCarbonOffset5(org.openapis.openapi.models.operations.ConfirmCarbonOffset5RequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_CARBON_OFFSET5_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/roadDistance/confirmCarbonOffset");
@@ -106,10 +117,21 @@ public class RoadDistance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmPayment5Response confirmPayment5(org.openapis.openapi.models.operations.ConfirmPayment5Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmPayment5Response confirmPayment5(org.openapis.openapi.models.operations.ConfirmPayment5RequestBody request) throws Exception {
+        return this.confirmPayment5(request, null);
+    }
+
+    /**
+     * confirmPayment
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmPayment5Response confirmPayment5(org.openapis.openapi.models.operations.ConfirmPayment5RequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_PAYMENT5_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/roadDistance/confirmPayment");
@@ -144,10 +166,21 @@ public class RoadDistance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5Response confirmPaymentOfTransaction5(org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5Response confirmPaymentOfTransaction5(org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5RequestBody request) throws Exception {
+        return this.confirmPaymentOfTransaction5(request, null);
+    }
+
+    /**
+     * confirmTransaction
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5Response confirmPaymentOfTransaction5(org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction5RequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_PAYMENT_OF_TRANSACTION5_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/roadDistance/confirmTransaction");
@@ -182,10 +215,21 @@ public class RoadDistance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmsPlanting5Response confirmsPlanting5(org.openapis.openapi.models.operations.ConfirmsPlanting5Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmsPlanting5Response confirmsPlanting5(org.openapis.openapi.models.operations.ConfirmsPlanting5RequestBody request) throws Exception {
+        return this.confirmsPlanting5(request, null);
+    }
+
+    /**
+     * confirmPlanting
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmsPlanting5Response confirmsPlanting5(org.openapis.openapi.models.operations.ConfirmsPlanting5RequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRMS_PLANTING5_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/roadDistance/confirmPlanting");
@@ -220,10 +264,21 @@ public class RoadDistance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RoadDistanceResponse roadDistance(org.openapis.openapi.models.operations.RoadDistanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RoadDistanceResponse roadDistance(org.openapis.openapi.models.operations.RoadDistanceRequestBody request) throws Exception {
+        return this.roadDistance(request, null);
+    }
+
+    /**
+     * RoadDistance
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.RoadDistanceResponse roadDistance(org.openapis.openapi.models.operations.RoadDistanceRequestBody request, String serverURL) throws Exception {
         String baseUrl = ROAD_DISTANCE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/roadDistance");

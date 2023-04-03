@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAssetVersionRequest {
-    
-    public FetchAssetVersionPathParams pathParams;
-    public FetchAssetVersionRequest withPathParams(FetchAssetVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Asset resource that is the parent of the Asset Version resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssetSid")
+    public String assetSid;
+    public FetchAssetVersionRequest withAssetSid(String assetSid) {
+        this.assetSid = assetSid;
         return this;
     }
     
-    
-    public FetchAssetVersionSecurity security;
-    public FetchAssetVersionRequest withSecurity(FetchAssetVersionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Service to fetch the Asset Version resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchAssetVersionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchAssetVersionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Asset Version resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchAssetVersionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

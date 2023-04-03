@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetdataentitystructureRequest {
-    
-    public GetdataentitystructurePathParams pathParams;
-    public GetdataentitystructureRequest withPathParams(GetdataentitystructurePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetdataentitystructureRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetdataentitystructureRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetdataentitystructureHeaders headers;
-    public GetdataentitystructureRequest withHeaders(GetdataentitystructureHeaders headers) {
-        this.headers = headers;
+    /**
+     * Identifies the kind of data
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
+    public String acronym;
+    public GetdataentitystructureRequest withAcronym(String acronym) {
+        this.acronym = acronym;
         return this;
     }
     

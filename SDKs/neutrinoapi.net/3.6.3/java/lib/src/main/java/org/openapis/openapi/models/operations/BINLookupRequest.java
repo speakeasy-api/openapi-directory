@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BINLookupRequest {
+    /**
+     * The BIN or IIN number. This is the first 6, 8 or 10 digits of a card number, use 8 (or more) digits for the highest level of accuracy
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bin-number")
+    public String binNumber;
+    public BINLookupRequest withBinNumber(String binNumber) {
+        this.binNumber = binNumber;
+        return this;
+    }
     
-    public BINLookupQueryParams queryParams;
-    public BINLookupRequest withQueryParams(BINLookupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Pass in the customers IP address and we will return some extra information about them
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer-ip")
+    public String customerIp;
+    public BINLookupRequest withCustomerIp(String customerIp) {
+        this.customerIp = customerIp;
         return this;
     }
     

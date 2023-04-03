@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelShipmentRequest {
-    
-    public CancelShipmentPathParams pathParams;
-    public CancelShipmentRequest withPathParams(CancelShipmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CancelShipmentSecurity security;
-    public CancelShipmentRequest withSecurity(CancelShipmentSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the unique eBay-assigned ID of the shipment to be canceled. The &lt;b&gt;shipmentId&lt;/b&gt; value is generated and returned by a call to &lt;b&gt;createFromShippingQuote&lt;/b&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipmentId")
+    public String shipmentId;
+    public CancelShipmentRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
         return this;
     }
     

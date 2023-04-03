@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateSecurity;
-import org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreatePathParams;
-import org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateQueryParams;
 import org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateRequest;
 import org.openapis.openapi.models.operations.CloudfunctionsProjectsLocationsFunctionsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.FunctionEnvironmentEnum;
 import org.openapis.openapi.models.shared.FunctionInput;
 import org.openapis.openapi.models.shared.ServiceConfigIngressSettingsEnum;
@@ -40,10 +39,7 @@ import org.openapis.openapi.models.shared.SourceProvenance;
 import org.openapis.openapi.models.shared.StorageSource;
 import org.openapis.openapi.models.shared.RepoSource;
 import org.openapis.openapi.models.shared.Source;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -52,167 +48,153 @@ public class Application {
                 .build();
 
             CloudfunctionsProjectsLocationsFunctionsCreateRequest req = new CloudfunctionsProjectsLocationsFunctionsCreateRequest() {{
-                security = new CloudfunctionsProjectsLocationsFunctionsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new CloudfunctionsProjectsLocationsFunctionsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new CloudfunctionsProjectsLocationsFunctionsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    functionId = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new FunctionInput() {{
+                dollarXgafv = "2";
+                functionInput = new FunctionInput() {{
                     buildConfig = new BuildConfigInput() {{
-                        buildpackStack = "iure";
-                        dockerRegistry = "DOCKER_REGISTRY_UNSPECIFIED";
-                        dockerRepository = "debitis";
-                        entryPoint = "ipsa";
+                        buildpackStack = "provident";
+                        dockerRegistry = "ARTIFACT_REGISTRY";
+                        dockerRepository = "quibusdam";
+                        entryPoint = "unde";
                         environmentVariables = new java.util.HashMap<String, String>() {{
-                            put("tempora", "suscipit");
-                            put("molestiae", "minus");
-                            put("placeat", "voluptatum");
-                            put("iusto", "excepturi");
+                            put("corrupti", "illum");
+                            put("vel", "error");
+                            put("deserunt", "suscipit");
+                            put("iure", "magnam");
                         }};
-                        runtime = "nisi";
+                        runtime = "debitis";
                         source = new Source() {{
                             repoSource = new RepoSource() {{
-                                branchName = "recusandae";
-                                commitSha = "temporibus";
-                                dir = "ab";
+                                branchName = "ipsa";
+                                commitSha = "delectus";
+                                dir = "tempora";
                                 invertRegex = false;
-                                projectId = "quis";
-                                repoName = "veritatis";
-                                tagName = "deserunt";
+                                projectId = "suscipit";
+                                repoName = "molestiae";
+                                tagName = "minus";
                             }};
                             storageSource = new StorageSource() {{
-                                bucket = "perferendis";
-                                generation = "ipsam";
-                                object = "repellendus";
+                                bucket = "placeat";
+                                generation = "voluptatum";
+                                object = "iusto";
                             }};
                         }};
                         sourceProvenance = new SourceProvenance() {{
                             resolvedRepoSource = new RepoSource() {{
-                                branchName = "sapiente";
-                                commitSha = "quo";
-                                dir = "odit";
+                                branchName = "excepturi";
+                                commitSha = "nisi";
+                                dir = "recusandae";
                                 invertRegex = false;
-                                projectId = "at";
-                                repoName = "at";
-                                tagName = "maiores";
+                                projectId = "temporibus";
+                                repoName = "ab";
+                                tagName = "quis";
                             }};
                             resolvedStorageSource = new StorageSource() {{
-                                bucket = "molestiae";
-                                generation = "quod";
-                                object = "quod";
+                                bucket = "veritatis";
+                                generation = "deserunt";
+                                object = "perferendis";
                             }};
                         }};
-                        workerPool = "esse";
+                        workerPool = "ipsam";
                     }};
-                    description = "totam";
+                    description = "repellendus";
                     environment = "GEN_2";
                     eventTrigger = new EventTriggerInput() {{
-                        channel = "dolorum";
+                        channel = "quo";
                         eventFilters = new org.openapis.openapi.models.shared.EventFilter[]{{
                             add(new EventFilter() {{
-                                attribute = "nam";
-                                operator = "officia";
-                                value = "occaecati";
+                                attribute = "at";
+                                operator = "at";
+                                value = "maiores";
                             }}),
                         }};
-                        eventType = "fugit";
-                        pubsubTopic = "deleniti";
+                        eventType = "molestiae";
+                        pubsubTopic = "quod";
                         retryPolicy = "RETRY_POLICY_RETRY";
-                        serviceAccountEmail = "optio";
+                        serviceAccountEmail = "esse";
                         triggerRegion = "totam";
                     }};
-                    kmsKeyName = "beatae";
+                    kmsKeyName = "porro";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("molestiae", "modi");
-                        put("qui", "impedit");
+                        put("dicta", "nam");
+                        put("officia", "occaecati");
+                        put("fugit", "deleniti");
                     }};
-                    name = "cum";
+                    name = "hic";
                     serviceConfig = new ServiceConfigInput() {{
                         allTrafficOnLatestRevision = false;
-                        availableCpu = "esse";
-                        availableMemory = "ipsum";
+                        availableCpu = "optio";
+                        availableMemory = "totam";
                         environmentVariables = new java.util.HashMap<String, String>() {{
-                            put("aspernatur", "perferendis");
-                            put("ad", "natus");
-                            put("sed", "iste");
+                            put("commodi", "molestiae");
                         }};
-                        ingressSettings = "INGRESS_SETTINGS_UNSPECIFIED";
-                        maxInstanceCount = 616934;
-                        maxInstanceRequestConcurrency = 386489;
-                        minInstanceCount = 943749;
+                        ingressSettings = "ALLOW_ALL";
+                        maxInstanceCount = 186332;
+                        maxInstanceRequestConcurrency = 774234;
+                        minInstanceCount = 736918;
                         secretEnvironmentVariables = new org.openapis.openapi.models.shared.SecretEnvVar[]{{
                             add(new SecretEnvVar() {{
-                                key = "fuga";
-                                projectId = "in";
-                                secret = "corporis";
+                                key = "ipsum";
+                                projectId = "excepturi";
+                                secret = "aspernatur";
+                                version = "perferendis";
+                            }}),
+                            add(new SecretEnvVar() {{
+                                key = "ad";
+                                projectId = "natus";
+                                secret = "sed";
                                 version = "iste";
-                            }}),
-                            add(new SecretEnvVar() {{
-                                key = "iure";
-                                projectId = "saepe";
-                                secret = "quidem";
-                                version = "architecto";
-                            }}),
-                            add(new SecretEnvVar() {{
-                                key = "ipsa";
-                                projectId = "reiciendis";
-                                secret = "est";
-                                version = "mollitia";
-                            }}),
-                            add(new SecretEnvVar() {{
-                                key = "laborum";
-                                projectId = "dolores";
-                                secret = "dolorem";
-                                version = "corporis";
                             }}),
                         }};
                         secretVolumes = new org.openapis.openapi.models.shared.SecretVolume[]{{
                             add(new SecretVolume() {{
-                                mountPath = "nobis";
-                                projectId = "enim";
-                                secret = "omnis";
+                                mountPath = "natus";
+                                projectId = "laboriosam";
+                                secret = "hic";
                                 versions = new org.openapis.openapi.models.shared.SecretVersion[]{{
                                     add(new SecretVersion() {{
-                                        path = "minima";
-                                        version = "excepturi";
+                                        path = "fuga";
+                                        version = "in";
                                     }}),
                                     add(new SecretVersion() {{
-                                        path = "accusantium";
-                                        version = "iure";
+                                        path = "corporis";
+                                        version = "iste";
+                                    }}),
+                                    add(new SecretVersion() {{
+                                        path = "iure";
+                                        version = "saepe";
+                                    }}),
+                                    add(new SecretVersion() {{
+                                        path = "quidem";
+                                        version = "architecto";
                                     }}),
                                 }};
                             }}),
                         }};
-                        securityLevel = "SECURE_ALWAYS";
-                        serviceAccountEmail = "doloribus";
-                        timeoutSeconds = 958950;
-                        vpcConnector = "architecto";
-                        vpcConnectorEgressSettings = "PRIVATE_RANGES_ONLY";
+                        securityLevel = "SECURITY_LEVEL_UNSPECIFIED";
+                        serviceAccountEmail = "reiciendis";
+                        timeoutSeconds = 666767;
+                        vpcConnector = "mollitia";
+                        vpcConnectorEgressSettings = "ALL_TRAFFIC";
                     }};
                 }};
-            }};            
+                accessToken = "dolores";
+                alt = "json";
+                callback = "corporis";
+                fields = "explicabo";
+                functionId = "nobis";
+                key = "enim";
+                oauthToken = "omnis";
+                parent = "nemo";
+                prettyPrint = false;
+                quotaUser = "minima";
+                uploadType = "excepturi";
+                uploadProtocol = "accusantium";
+            }}            
 
-            CloudfunctionsProjectsLocationsFunctionsCreateResponse res = sdk.projects.cloudfunctionsProjectsLocationsFunctionsCreate(req);
+            CloudfunctionsProjectsLocationsFunctionsCreateResponse res = sdk.projects.cloudfunctionsProjectsLocationsFunctionsCreate(req, new CloudfunctionsProjectsLocationsFunctionsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -224,7 +206,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

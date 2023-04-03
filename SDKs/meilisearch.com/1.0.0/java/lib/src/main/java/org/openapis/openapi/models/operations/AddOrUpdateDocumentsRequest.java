@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateDocumentsRequest {
-    
-    public AddOrUpdateDocumentsQueryParams queryParams;
-    public AddOrUpdateDocumentsRequest withQueryParams(AddOrUpdateDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AddOrUpdateDocumentsRequestBody[] requestBody;
+    public AddOrUpdateDocumentsRequest withRequestBody(AddOrUpdateDocumentsRequestBody[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddOrUpdateDocumentsRequestBody[] request;
-    public AddOrUpdateDocumentsRequest withRequest(AddOrUpdateDocumentsRequestBody[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=primaryKey")
+    public String primaryKey;
+    public AddOrUpdateDocumentsRequest withPrimaryKey(String primaryKey) {
+        this.primaryKey = primaryKey;
         return this;
     }
     

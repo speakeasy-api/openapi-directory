@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntologyTermsSharedAncestorRequest {
+    /**
+     * CURIE identifier of a GO term, e.g. GO:0046483
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public GetOntologyTermsSharedAncestorRequest withObject(String object) {
+        this.object = object;
+        return this;
+    }
     
-    public GetOntologyTermsSharedAncestorPathParams pathParams;
-    public GetOntologyTermsSharedAncestorRequest withPathParams(GetOntologyTermsSharedAncestorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * CURIE identifier of a GO term, e.g. GO:0006259
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subject")
+    public String subject;
+    public GetOntologyTermsSharedAncestorRequest withSubject(String subject) {
+        this.subject = subject;
         return this;
     }
     

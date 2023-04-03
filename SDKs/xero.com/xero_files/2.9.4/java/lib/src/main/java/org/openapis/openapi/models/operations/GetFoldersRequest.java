@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFoldersRequest {
-    
-    public GetFoldersQueryParams queryParams;
-    public GetFoldersRequest withQueryParams(GetFoldersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * values to sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetFoldersSortEnum sort;
+    public GetFoldersRequest withSort(GetFoldersSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     
-    
-    public GetFoldersHeaders headers;
-    public GetFoldersRequest withHeaders(GetFoldersHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetFoldersSecurity security;
-    public GetFoldersRequest withSecurity(GetFoldersSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public GetFoldersRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

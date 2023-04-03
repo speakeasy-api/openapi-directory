@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClusterIamRolesRequest {
-    
-    public GETModifyClusterIamRolesQueryParams queryParams;
-    public GETModifyClusterIamRolesRequest withQueryParams(GETModifyClusterIamRolesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyClusterIamRolesActionEnum action;
+    public GETModifyClusterIamRolesRequest withAction(GETModifyClusterIamRolesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Zero or more IAM roles to associate with the cluster. The roles must be in their Amazon Resource Name (ARN) format. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AddIamRoles")
+    public String[] addIamRoles;
+    public GETModifyClusterIamRolesRequest withAddIamRoles(String[] addIamRoles) {
+        this.addIamRoles = addIamRoles;
+        return this;
+    }
     
-    public GETModifyClusterIamRolesHeaders headers;
-    public GETModifyClusterIamRolesRequest withHeaders(GETModifyClusterIamRolesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier of the cluster for which you want to associate or disassociate IAM roles.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETModifyClusterIamRolesRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) for the IAM role that was set as default for the cluster when the cluster was last modified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultIamRoleArn")
+    public String defaultIamRoleArn;
+    public GETModifyClusterIamRolesRequest withDefaultIamRoleArn(String defaultIamRoleArn) {
+        this.defaultIamRoleArn = defaultIamRoleArn;
+        return this;
+    }
+    
+    /**
+     * Zero or more IAM roles in ARN format to disassociate from the cluster. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveIamRoles")
+    public String[] removeIamRoles;
+    public GETModifyClusterIamRolesRequest withRemoveIamRoles(String[] removeIamRoles) {
+        this.removeIamRoles = removeIamRoles;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyClusterIamRolesVersionEnum version;
+    public GETModifyClusterIamRolesRequest withVersion(GETModifyClusterIamRolesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyClusterIamRolesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyClusterIamRolesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyClusterIamRolesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyClusterIamRolesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyClusterIamRolesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyClusterIamRolesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyClusterIamRolesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

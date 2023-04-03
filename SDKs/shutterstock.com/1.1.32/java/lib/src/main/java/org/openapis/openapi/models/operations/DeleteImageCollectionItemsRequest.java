@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImageCollectionItemsRequest {
-    
-    public DeleteImageCollectionItemsPathParams pathParams;
-    public DeleteImageCollectionItemsRequest withPathParams(DeleteImageCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteImageCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteImageCollectionItemsQueryParams queryParams;
-    public DeleteImageCollectionItemsRequest withQueryParams(DeleteImageCollectionItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteImageCollectionItemsSecurity security;
-    public DeleteImageCollectionItemsRequest withSecurity(DeleteImageCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * One or more image IDs to remove from the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_id")
+    public String[] itemId;
+    public DeleteImageCollectionItemsRequest withItemId(String[] itemId) {
+        this.itemId = itemId;
         return this;
     }
     

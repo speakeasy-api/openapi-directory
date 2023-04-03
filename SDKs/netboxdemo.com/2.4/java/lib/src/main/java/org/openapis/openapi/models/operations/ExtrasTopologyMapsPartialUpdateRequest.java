@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasTopologyMapsPartialUpdateRequest {
-    
-    public ExtrasTopologyMapsPartialUpdatePathParams pathParams;
-    public ExtrasTopologyMapsPartialUpdateRequest withPathParams(ExtrasTopologyMapsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableTopologyMapInput writableTopologyMapInput;
+    public ExtrasTopologyMapsPartialUpdateRequest withWritableTopologyMapInput(org.openapis.openapi.models.shared.WritableTopologyMapInput writableTopologyMapInput) {
+        this.writableTopologyMapInput = writableTopologyMapInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableTopologyMapInput request;
-    public ExtrasTopologyMapsPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableTopologyMapInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this topology map.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasTopologyMapsPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

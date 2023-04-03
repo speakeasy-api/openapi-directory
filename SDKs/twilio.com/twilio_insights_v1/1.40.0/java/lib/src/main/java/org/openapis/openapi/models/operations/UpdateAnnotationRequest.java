@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAnnotationRequest {
-    
-    public UpdateAnnotationPathParams pathParams;
-    public UpdateAnnotationRequest withPathParams(UpdateAnnotationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that Twilio created to identify this Call resource. It always starts with a CA.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public UpdateAnnotationRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateAnnotationUpdateAnnotationRequest request;
-    public UpdateAnnotationRequest withRequest(UpdateAnnotationUpdateAnnotationRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateAnnotationSecurity security;
-    public UpdateAnnotationRequest withSecurity(UpdateAnnotationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateAnnotationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateAnnotationUpdateAnnotationRequest requestBody;
+    public UpdateAnnotationRequest withRequestBody(UpdateAnnotationUpdateAnnotationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

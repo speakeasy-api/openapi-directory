@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelsRequest {
+    /**
+     * The language for any applicable localised strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public org.openapis.openapi.models.shared.LangEnum lang;
+    public GetChannelsRequest withLang(org.openapis.openapi.models.shared.LangEnum lang) {
+        this.lang = lang;
+        return this;
+    }
     
-    public GetChannelsQueryParams queryParams;
-    public GetChannelsRequest withQueryParams(GetChannelsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The region to get the channels for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
+    public String region;
+    public GetChannelsRequest withRegion(String region) {
+        this.region = region;
         return this;
     }
     

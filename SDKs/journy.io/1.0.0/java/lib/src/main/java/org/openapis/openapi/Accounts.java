@@ -42,7 +42,7 @@ public class Accounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddUserToAccountResponse addUserToAccount(org.openapis.openapi.models.operations.AddUserToAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddUserToAccountResponse addUserToAccount(org.openapis.openapi.models.operations.AddUserToAccountRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts/users/add");
         
@@ -128,7 +128,7 @@ public class Accounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAccountResponse deleteAccount(org.openapis.openapi.models.operations.DeleteAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAccountResponse deleteAccount(org.openapis.openapi.models.operations.DeleteAccountRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts");
         
@@ -227,7 +227,7 @@ public class Accounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveUserFromAccountResponse removeUserFromAccount(org.openapis.openapi.models.operations.RemoveUserFromAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveUserFromAccountResponse removeUserFromAccount(org.openapis.openapi.models.operations.RemoveUserFromAccountRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts/users/remove");
         
@@ -313,7 +313,7 @@ public class Accounts {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpsertAccountResponse upsertAccount(org.openapis.openapi.models.operations.UpsertAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpsertAccountResponse upsertAccount(org.openapis.openapi.models.operations.UpsertAccountRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts/upsert");
         

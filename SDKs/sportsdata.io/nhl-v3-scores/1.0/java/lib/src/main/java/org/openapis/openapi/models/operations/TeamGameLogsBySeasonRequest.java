@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamGameLogsBySeasonRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public TeamGameLogsBySeasonFormatEnum format;
+    public TeamGameLogsBySeasonRequest withFormat(TeamGameLogsBySeasonFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public TeamGameLogsBySeasonPathParams pathParams;
-    public TeamGameLogsBySeasonRequest withPathParams(TeamGameLogsBySeasonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * How many games to return. Example &lt;code&gt;all&lt;/code&gt;, &lt;code&gt;10&lt;/code&gt;, &lt;code&gt;25&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numberofgames")
+    public String numberofgames;
+    public TeamGameLogsBySeasonRequest withNumberofgames(String numberofgames) {
+        this.numberofgames = numberofgames;
+        return this;
+    }
+    
+    /**
+     * Season to get games from. Example &lt;code&gt;2019POST&lt;/code&gt;, &lt;code&gt;2020&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public TeamGameLogsBySeasonRequest withSeason(String season) {
+        this.season = season;
+        return this;
+    }
+    
+    /**
+     * Unique ID of team.  Example &lt;code&gt; 8 &lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamid")
+    public String teamid;
+    public TeamGameLogsBySeasonRequest withTeamid(String teamid) {
+        this.teamid = teamid;
         return this;
     }
     

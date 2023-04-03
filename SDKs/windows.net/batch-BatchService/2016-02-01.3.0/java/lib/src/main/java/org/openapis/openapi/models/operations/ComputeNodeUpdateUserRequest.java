@@ -7,34 +7,93 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNodeUpdateUserRequest {
-    
-    public ComputeNodeUpdateUserPathParams pathParams;
-    public ComputeNodeUpdateUserRequest withPathParams(ComputeNodeUpdateUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ComputeNodeUpdateUserQueryParams queryParams;
-    public ComputeNodeUpdateUserRequest withQueryParams(ComputeNodeUpdateUserQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ComputeNodeUpdateUserHeaders headers;
-    public ComputeNodeUpdateUserRequest withHeaders(ComputeNodeUpdateUserHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The parameters for the request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NodeUpdateUserParameter request;
-    public ComputeNodeUpdateUserRequest withRequest(org.openapis.openapi.models.shared.NodeUpdateUserParameter request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NodeUpdateUserParameter nodeUpdateUserParameter;
+    public ComputeNodeUpdateUserRequest withNodeUpdateUserParameter(org.openapis.openapi.models.shared.NodeUpdateUserParameter nodeUpdateUserParameter) {
+        this.nodeUpdateUserParameter = nodeUpdateUserParameter;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ComputeNodeUpdateUserRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The caller-generated request identity, in the form of a GUID with no decoration such as curly braces, e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public ComputeNodeUpdateUserRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * The id of the machine on which you want to update a user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
+    public String nodeId;
+    public ComputeNodeUpdateUserRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public ComputeNodeUpdateUserRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * The id of the pool that contains the compute node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
+    public String poolId;
+    public ComputeNodeUpdateUserRequest withPoolId(String poolId) {
+        this.poolId = poolId;
+        return this;
+    }
+    
+    /**
+     * Whether the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public ComputeNodeUpdateUserRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * The maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public ComputeNodeUpdateUserRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    
+    /**
+     * The name of the user account to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userName")
+    public String userName;
+    public ComputeNodeUpdateUserRequest withUserName(String userName) {
+        this.userName = userName;
         return this;
     }
     

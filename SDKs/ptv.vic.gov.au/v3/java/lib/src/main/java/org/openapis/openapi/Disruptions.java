@@ -44,7 +44,7 @@ public class Disruptions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetAllDisruptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetAllDisruptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -112,13 +112,13 @@ public class Disruptions {
      */
     public org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdResponse disruptionsGetDisruptionById(org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdPathParams.class, baseUrl, "/v3/disruptions/{disruption_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdRequest.class, baseUrl, "/v3/disruptions/{disruption_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -192,7 +192,7 @@ public class Disruptions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionModesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionModesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -260,13 +260,13 @@ public class Disruptions {
      */
     public org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteResponse disruptionsGetDisruptionsByRoute(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRoutePathParams.class, baseUrl, "/v3/disruptions/route/{route_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteRequest.class, baseUrl, "/v3/disruptions/route/{route_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -334,13 +334,13 @@ public class Disruptions {
      */
     public org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopResponse disruptionsGetDisruptionsByRouteAndStop(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopPathParams.class, baseUrl, "/v3/disruptions/route/{route_id}/stop/{stop_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopRequest.class, baseUrl, "/v3/disruptions/route/{route_id}/stop/{stop_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByRouteAndStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -408,13 +408,13 @@ public class Disruptions {
      */
     public org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopResponse disruptionsGetDisruptionsByStop(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopPathParams.class, baseUrl, "/v3/disruptions/stop/{stop_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopRequest.class, baseUrl, "/v3/disruptions/stop/{stop_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisruptionsGetDisruptionsByStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

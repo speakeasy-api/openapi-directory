@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitAnswersRequest {
-    
-    public SubmitAnswersPathParams pathParams;
-    public SubmitAnswersRequest withPathParams(SubmitAnswersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SurveyAnswers surveyAnswers;
+    public SubmitAnswersRequest withSurveyAnswers(org.openapis.openapi.models.shared.SurveyAnswers surveyAnswers) {
+        this.surveyAnswers = surveyAnswers;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SurveyAnswers request;
-    public SubmitAnswersRequest withRequest(org.openapis.openapi.models.shared.SurveyAnswers request) {
-        this.request = request;
+    /**
+     * Scope
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scope")
+    public String scope;
+    public SubmitAnswersRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * Type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public SubmitAnswersRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

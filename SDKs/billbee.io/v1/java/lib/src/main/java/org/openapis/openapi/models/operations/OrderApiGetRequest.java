@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiGetRequest {
-    
-    public OrderApiGetPathParams pathParams;
-    public OrderApiGetRequest withPathParams(OrderApiGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The source field for the article title. 0 = Order Position (default), 1 = Article Title, 2 = Article Invoice Text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=articleTitleSource")
+    public OrderApiGetArticleTitleSourceEnum articleTitleSource;
+    public OrderApiGetRequest withArticleTitleSource(OrderApiGetArticleTitleSourceEnum articleTitleSource) {
+        this.articleTitleSource = articleTitleSource;
         return this;
     }
     
-    
-    public OrderApiGetQueryParams queryParams;
-    public OrderApiGetRequest withQueryParams(OrderApiGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The internal billbee id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiGetRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

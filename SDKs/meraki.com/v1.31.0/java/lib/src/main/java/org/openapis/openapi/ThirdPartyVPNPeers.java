@@ -39,7 +39,7 @@ public class ThirdPartyVPNPeers {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceVPNThirdPartyVPNPeersResponse getOrganizationApplianceVPNThirdPartyVPNPeers(org.openapis.openapi.models.operations.GetOrganizationApplianceVPNThirdPartyVPNPeersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVPNThirdPartyVPNPeersPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVPNThirdPartyVPNPeersRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class ThirdPartyVPNPeers {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersResponse updateOrganizationApplianceVPNThirdPartyVPNPeers(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/thirdPartyVPNPeers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

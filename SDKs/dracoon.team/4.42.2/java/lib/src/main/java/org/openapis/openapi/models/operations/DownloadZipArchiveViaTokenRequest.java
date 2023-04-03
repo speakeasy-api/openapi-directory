@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadZipArchiveViaTokenRequest {
-    
-    public DownloadZipArchiveViaTokenPathParams pathParams;
-    public DownloadZipArchiveViaTokenRequest withPathParams(DownloadZipArchiveViaTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Download token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public DownloadZipArchiveViaTokenRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

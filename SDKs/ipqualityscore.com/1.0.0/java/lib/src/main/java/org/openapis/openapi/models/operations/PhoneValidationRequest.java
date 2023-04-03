@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneValidationRequest {
-    
-    public PhoneValidationPathParams pathParams;
-    public PhoneValidationRequest withPathParams(PhoneValidationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * (Required) USER_PHONE_HERE
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=USER_PHONE_HERE")
+    public String userPhoneHere;
+    public PhoneValidationRequest withUserPhoneHere(String userPhoneHere) {
+        this.userPhoneHere = userPhoneHere;
         return this;
     }
     
+    /**
+     * (Required) YOUR_API_KEY_HERE
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=YOUR_API_KEY_HERE")
+    public String yourApiKeyHere;
+    public PhoneValidationRequest withYourApiKeyHere(String yourApiKeyHere) {
+        this.yourApiKeyHere = yourApiKeyHere;
+        return this;
+    }
     
-    public PhoneValidationQueryParams queryParams;
-    public PhoneValidationRequest withQueryParams(PhoneValidationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public PhoneValidationRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     

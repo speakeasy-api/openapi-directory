@@ -45,7 +45,7 @@ public class DeviceSettings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.NightModesettingsResponse nightModesettings(org.openapis.openapi.models.operations.NightModesettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.NightModesettingsResponse nightModesettings(org.openapis.openapi.models.shared.NightModesettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assistant/set_night_mode_params");
         
@@ -90,7 +90,7 @@ public class DeviceSettings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RebootandFactoryResetResponse rebootandFactoryReset(org.openapis.openapi.models.operations.RebootandFactoryResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RebootandFactoryResetResponse rebootandFactoryReset(org.openapis.openapi.models.shared.RebootandFactoryResetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reboot");
         
@@ -140,7 +140,7 @@ public class DeviceSettings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetEurekaInfoResponse setEurekaInfo(org.openapis.openapi.models.operations.SetEurekaInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetEurekaInfoResponse setEurekaInfo(org.openapis.openapi.models.shared.SetEurekaInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/set_eureka_info");
         

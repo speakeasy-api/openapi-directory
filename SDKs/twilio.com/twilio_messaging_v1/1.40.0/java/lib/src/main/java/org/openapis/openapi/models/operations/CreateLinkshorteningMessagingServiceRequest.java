@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLinkshorteningMessagingServiceRequest {
-    
-    public CreateLinkshorteningMessagingServicePathParams pathParams;
-    public CreateLinkshorteningMessagingServiceRequest withPathParams(CreateLinkshorteningMessagingServicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The domain SID to associate with a messaging service. With URL shortening enabled, links in messages sent with the associated messaging service will be shortened to the provided domain
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public CreateLinkshorteningMessagingServiceRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
-    
-    public CreateLinkshorteningMessagingServiceSecurity security;
-    public CreateLinkshorteningMessagingServiceRequest withSecurity(CreateLinkshorteningMessagingServiceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateLinkshorteningMessagingServiceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A messaging service SID to associate with a domain. With URL shortening enabled, links in messages sent with the provided messaging service will be shortened to the associated domain
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MessagingServiceSid")
+    public String messagingServiceSid;
+    public CreateLinkshorteningMessagingServiceRequest withMessagingServiceSid(String messagingServiceSid) {
+        this.messagingServiceSid = messagingServiceSid;
         return this;
     }
     

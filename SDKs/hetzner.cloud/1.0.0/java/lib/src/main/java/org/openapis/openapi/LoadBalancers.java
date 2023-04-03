@@ -40,7 +40,7 @@ public class LoadBalancers {
      */
     public org.openapis.openapi.models.operations.DeleteLoadBalancersIdResponse deleteLoadBalancersId(org.openapis.openapi.models.operations.DeleteLoadBalancersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLoadBalancersIdPathParams.class, baseUrl, "/load_balancers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLoadBalancersIdRequest.class, baseUrl, "/load_balancers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -79,7 +79,7 @@ public class LoadBalancers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLoadBalancersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLoadBalancersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -118,7 +118,7 @@ public class LoadBalancers {
      */
     public org.openapis.openapi.models.operations.GetLoadBalancersIdResponse getLoadBalancersId(org.openapis.openapi.models.operations.GetLoadBalancersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancersIdPathParams.class, baseUrl, "/load_balancers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancersIdRequest.class, baseUrl, "/load_balancers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -174,13 +174,13 @@ public class LoadBalancers {
      */
     public org.openapis.openapi.models.operations.GetLoadBalancersIdMetricsResponse getLoadBalancersIdMetrics(org.openapis.openapi.models.operations.GetLoadBalancersIdMetricsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancersIdMetricsPathParams.class, baseUrl, "/load_balancers/{id}/metrics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLoadBalancersIdMetricsRequest.class, baseUrl, "/load_balancers/{id}/metrics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLoadBalancersIdMetricsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLoadBalancersIdMetricsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -230,7 +230,7 @@ public class LoadBalancers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostLoadBalancersResponse postLoadBalancers(org.openapis.openapi.models.operations.PostLoadBalancersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostLoadBalancersResponse postLoadBalancers(org.openapis.openapi.models.operations.PostLoadBalancersCreateLoadBalancerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/load_balancers");
         
@@ -278,12 +278,12 @@ public class LoadBalancers {
      */
     public org.openapis.openapi.models.operations.PutLoadBalancersIdResponse putLoadBalancersId(org.openapis.openapi.models.operations.PutLoadBalancersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutLoadBalancersIdPathParams.class, baseUrl, "/load_balancers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutLoadBalancersIdRequest.class, baseUrl, "/load_balancers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

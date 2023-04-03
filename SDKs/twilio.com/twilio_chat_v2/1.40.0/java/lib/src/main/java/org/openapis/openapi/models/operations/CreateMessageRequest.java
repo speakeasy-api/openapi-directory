@@ -7,38 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMessageRequest {
-    
-    public CreateMessagePathParams pathParams;
-    public CreateMessageRequest withPathParams(CreateMessagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateMessageHeaders headers;
-    public CreateMessageRequest withHeaders(CreateMessageHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the [Channel](https://www.twilio.com/docs/chat/channels) the new Message resource belongs to. This value can be the Channel resource's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public CreateMessageRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateMessageCreateMessageRequest request;
-    public CreateMessageRequest withRequest(CreateMessageCreateMessageRequest request) {
-        this.request = request;
+    public CreateMessageCreateMessageRequest requestBody;
+    public CreateMessageRequest withRequestBody(CreateMessageCreateMessageRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateMessageSecurity security;
-    public CreateMessageRequest withSecurity(CreateMessageSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/chat/rest/service-resource) to create the Message resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateMessageRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public CreateMessageRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.MessageEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public CreateMessageRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.MessageEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class AssessmentGroups {
      */
     public org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailResponse deleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmail(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailPathParams.class, baseUrl, "/offerings/{offeringId}/groups/{groupId}/learners/{userEmail}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest.class, baseUrl, "/offerings/{offeringId}/groups/{groupId}/learners/{userEmail}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class AssessmentGroups {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdGroupsResponse getOfferingsOfferingIdGroups(org.openapis.openapi.models.operations.GetOfferingsOfferingIdGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdGroupsPathParams.class, baseUrl, "/offerings/{offeringId}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdGroupsRequest.class, baseUrl, "/offerings/{offeringId}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,7 +130,7 @@ public class AssessmentGroups {
      */
     public org.openapis.openapi.models.operations.GetOfferingsOfferingIdGroupsGroupIdLearnersResponse getOfferingsOfferingIdGroupsGroupIdLearners(org.openapis.openapi.models.operations.GetOfferingsOfferingIdGroupsGroupIdLearnersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdGroupsGroupIdLearnersPathParams.class, baseUrl, "/offerings/{offeringId}/groups/{groupId}/learners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOfferingsOfferingIdGroupsGroupIdLearnersRequest.class, baseUrl, "/offerings/{offeringId}/groups/{groupId}/learners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -178,12 +178,12 @@ public class AssessmentGroups {
      */
     public org.openapis.openapi.models.operations.PostOfferingsOfferingIdGroupsResponse postOfferingsOfferingIdGroups(org.openapis.openapi.models.operations.PostOfferingsOfferingIdGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdGroupsPathParams.class, baseUrl, "/offerings/{offeringId}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdGroupsRequest.class, baseUrl, "/offerings/{offeringId}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assessmentGroupRequired", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -231,12 +231,12 @@ public class AssessmentGroups {
      */
     public org.openapis.openapi.models.operations.PostOfferingsOfferingIdGroupsGroupIdLearnersResponse postOfferingsOfferingIdGroupsGroupIdLearners(org.openapis.openapi.models.operations.PostOfferingsOfferingIdGroupsGroupIdLearnersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdGroupsGroupIdLearnersPathParams.class, baseUrl, "/offerings/{offeringId}/groups/{groupId}/learners", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostOfferingsOfferingIdGroupsGroupIdLearnersRequest.class, baseUrl, "/offerings/{offeringId}/groups/{groupId}/learners", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

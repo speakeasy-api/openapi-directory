@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPirateTranslateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeXFungeneratorsAPISecret xFungeneratorsApiSecret;
-    public GetPirateTranslateSecurity withXFungeneratorsApiSecret(org.openapis.openapi.models.shared.SchemeXFungeneratorsAPISecret xFungeneratorsApiSecret) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret")
+    public String xFungeneratorsApiSecret;
+    public GetPirateTranslateSecurity withXFungeneratorsApiSecret(String xFungeneratorsApiSecret) {
         this.xFungeneratorsApiSecret = xFungeneratorsApiSecret;
         return this;
     }

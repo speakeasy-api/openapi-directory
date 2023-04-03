@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWFSInventoryRequest {
-    
-    public GetWFSInventoryQueryParams queryParams;
-    public GetWFSInventoryRequest withQueryParams(GetWFSInventoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
+    public String wmConsumerChannelType;
+    public GetWFSInventoryRequest withWmConsumerChannelType(String wmConsumerChannelType) {
+        this.wmConsumerChannelType = wmConsumerChannelType;
         return this;
     }
     
+    /**
+     * A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
+    public String wmQosCorrelationId;
+    public GetWFSInventoryRequest withWmQosCorrelationId(String wmQosCorrelationId) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        return this;
+    }
     
-    public GetWFSInventoryHeaders headers;
-    public GetWFSInventoryRequest withHeaders(GetWFSInventoryHeaders headers) {
-        this.headers = headers;
+    /**
+     * The access token retrieved in the Token API call
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
+    public String wmSecAccessToken;
+    public GetWFSInventoryRequest withWmSecAccessToken(String wmSecAccessToken) {
+        this.wmSecAccessToken = wmSecAccessToken;
+        return this;
+    }
+    
+    /**
+     * Walmart Service Name
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
+    public String wmSvcName;
+    public GetWFSInventoryRequest withWmSvcName(String wmSvcName) {
+        this.wmSvcName = wmSvcName;
+        return this;
+    }
+    
+    /**
+     * last inventory modified date - starting range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromModifiedDate")
+    public String fromModifiedDate;
+    public GetWFSInventoryRequest withFromModifiedDate(String fromModifiedDate) {
+        this.fromModifiedDate = fromModifiedDate;
+        return this;
+    }
+    
+    /**
+     * Number of Sku to be returned. Cannot be larger than 300.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetWFSInventoryRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset is the number of records you wish to skip before selecting records.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetWFSInventoryRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * An arbitrary alphanumeric unique ID, specified by the seller, which identifies each item. This will be used by the seller in the XSD file to refer to each item. Special characters in the sku needing encoding are: ':', '/', '?', '#', '[', ']', '@', '!', '$', '&amp;', "'", '(', ')', '*', '+', ',', ';', '=', \u2018 \u2019 as well as '%' itself if it's a part of sku. Make sure to encode space with %20. Other characters don't need to be encoded.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sku")
+    public String sku;
+    public GetWFSInventoryRequest withSku(String sku) {
+        this.sku = sku;
+        return this;
+    }
+    
+    /**
+     * last inventory modified date - starting range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toModifiedDate")
+    public String toModifiedDate;
+    public GetWFSInventoryRequest withToModifiedDate(String toModifiedDate) {
+        this.toModifiedDate = toModifiedDate;
         return this;
     }
     

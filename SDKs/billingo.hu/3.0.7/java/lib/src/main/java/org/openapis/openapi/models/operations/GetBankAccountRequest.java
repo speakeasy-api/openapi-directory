@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBankAccountRequest {
-    
-    public GetBankAccountPathParams pathParams;
-    public GetBankAccountRequest withPathParams(GetBankAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetBankAccountRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

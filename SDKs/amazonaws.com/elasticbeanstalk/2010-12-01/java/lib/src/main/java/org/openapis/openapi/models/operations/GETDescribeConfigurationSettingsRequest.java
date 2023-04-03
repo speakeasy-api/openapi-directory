@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeConfigurationSettingsRequest {
-    
-    public GETDescribeConfigurationSettingsQueryParams queryParams;
-    public GETDescribeConfigurationSettingsRequest withQueryParams(GETDescribeConfigurationSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeConfigurationSettingsActionEnum action;
+    public GETDescribeConfigurationSettingsRequest withAction(GETDescribeConfigurationSettingsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The application for the environment or configuration template.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
+    public String applicationName;
+    public GETDescribeConfigurationSettingsRequest withApplicationName(String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+    }
     
-    public GETDescribeConfigurationSettingsHeaders headers;
-    public GETDescribeConfigurationSettingsRequest withHeaders(GETDescribeConfigurationSettingsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the environment to describe.&lt;/p&gt; &lt;p&gt; Condition: You must specify either this or a TemplateName, but not both. If you specify both, AWS Elastic Beanstalk returns an &lt;code&gt;InvalidParameterCombination&lt;/code&gt; error. If you do not specify either, AWS Elastic Beanstalk returns &lt;code&gt;MissingRequiredParameter&lt;/code&gt; error. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
+    public String environmentName;
+    public GETDescribeConfigurationSettingsRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the configuration template to describe.&lt;/p&gt; &lt;p&gt; Conditional: You must specify either this parameter or an EnvironmentName, but not both. If you specify both, AWS Elastic Beanstalk returns an &lt;code&gt;InvalidParameterCombination&lt;/code&gt; error. If you do not specify either, AWS Elastic Beanstalk returns a &lt;code&gt;MissingRequiredParameter&lt;/code&gt; error. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
+    public String templateName;
+    public GETDescribeConfigurationSettingsRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeConfigurationSettingsVersionEnum version;
+    public GETDescribeConfigurationSettingsRequest withVersion(GETDescribeConfigurationSettingsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeConfigurationSettingsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeConfigurationSettingsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeConfigurationSettingsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeConfigurationSettingsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeConfigurationSettingsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeConfigurationSettingsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeConfigurationSettingsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

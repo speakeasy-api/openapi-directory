@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchNotificationsIdRequest {
-    
-    public PatchNotificationsIdPathParams pathParams;
-    public PatchNotificationsIdRequest withPathParams(PatchNotificationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchNotificationsIdRequestBody requestBody;
+    public PatchNotificationsIdRequest withRequestBody(PatchNotificationsIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchNotificationsIdRequestBody request;
-    public PatchNotificationsIdRequest withRequest(PatchNotificationsIdRequestBody request) {
-        this.request = request;
+    /**
+     * Notification ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchNotificationsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

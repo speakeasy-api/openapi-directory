@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApplicationMemberElectionsRequest {
-    
-    public GetApplicationMemberElectionsPathParams pathParams;
-    public GetApplicationMemberElectionsRequest withPathParams(GetApplicationMemberElectionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public GetApplicationMemberElectionsRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetApplicationMemberElectionsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetApplicationMemberElectionsQueryParams queryParams;
-    public GetApplicationMemberElectionsRequest withQueryParams(GetApplicationMemberElectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The max size of each page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetApplicationMemberElectionsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

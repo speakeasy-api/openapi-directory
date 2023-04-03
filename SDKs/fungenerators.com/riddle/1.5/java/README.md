@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DeleteRiddleSecurity;
-import org.openapis.openapi.models.operations.DeleteRiddleQueryParams;
 import org.openapis.openapi.models.operations.DeleteRiddleRequest;
 import org.openapis.openapi.models.operations.DeleteRiddleResponse;
-import org.openapis.openapi.models.shared.SchemeXFungeneratorsAPISecret;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             DeleteRiddleRequest req = new DeleteRiddleRequest() {{
-                security = new DeleteRiddleSecurity() {{
-                    xFungeneratorsApiSecret = new SchemeXFungeneratorsAPISecret() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new DeleteRiddleQueryParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
-            DeleteRiddleResponse res = sdk.privateRiddles.deleteRiddle(req);
+            DeleteRiddleResponse res = sdk.privateRiddles.deleteRiddle(req, new DeleteRiddleSecurity() {{
+                xFungeneratorsApiSecret = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### privateRiddles

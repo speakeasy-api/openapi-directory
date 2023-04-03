@@ -4,11 +4,10 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.StsIntrospectQueryParams;
 import org.openapis.openapi.models.operations.StsIntrospectRequest;
 import org.openapis.openapi.models.operations.StsIntrospectResponse;
-import org.openapis.openapi.models.shared.GoogleIdentityStsV1IntrospectTokenRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.GoogleIdentityStsV1IntrospectTokenRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -18,24 +17,22 @@ public class Application {
                 .build();
 
             StsIntrospectRequest req = new StsIntrospectRequest() {{
-                queryParams = new StsIntrospectQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
+                dollarXgafv = "2";
+                googleIdentityStsV1IntrospectTokenRequest = new GoogleIdentityStsV1IntrospectTokenRequest() {{
+                    token = "provident";
+                    tokenTypeHint = "distinctio";
                 }};
-                request = new GoogleIdentityStsV1IntrospectTokenRequest() {{
-                    token = "deserunt";
-                    tokenTypeHint = "suscipit";
-                }};
-            }};            
+                accessToken = "quibusdam";
+                alt = "media";
+                callback = "nulla";
+                fields = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                prettyPrint = false;
+                quotaUser = "error";
+                uploadType = "deserunt";
+                uploadProtocol = "suscipit";
+            }}            
 
             StsIntrospectResponse res = sdk.v1.stsIntrospect(req);
 

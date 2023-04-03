@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFacilityByIdRequest {
-    
-    public GetFacilityByIdPathParams pathParams;
-    public GetFacilityByIdRequest withPathParams(GetFacilityByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetFacilityByIdSecurity security;
-    public GetFacilityByIdRequest withSecurity(GetFacilityByIdSecurity security) {
-        this.security = security;
+    /**
+     * Facility ID, in the form `&lt;prefix&gt;_&lt;station&gt;`, where prefix is one of "vha", "vba", "nca", or "vc", for health facility, benefits, cemetery, or vet center, respectively.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFacilityByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

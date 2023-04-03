@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRenderRequest {
-    
-    public GetRenderPathParams pathParams;
-    public GetRenderRequest withPathParams(GetRenderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetRenderSecurity security;
-    public GetRenderRequest withSecurity(GetRenderSecurity security) {
-        this.security = security;
+    /**
+     * The id of the timeline render task in UUID format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRenderRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

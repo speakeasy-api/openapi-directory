@@ -4,13 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersRequest {
+    /**
+     * Restrict results to the users who have contributed to this assignment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignment")
+    public String assignment;
+    public GetUsersRequest withAssignment(String assignment) {
+        this.assignment = assignment;
+        return this;
+    }
     
-    public GetUsersQueryParams queryParams;
-    public GetUsersRequest withQueryParams(GetUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Restrict results to the users who have submitted a contribution with a public location located within this country.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetUsersRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Restrict results to the users who a linked profile of this type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linkedProfile")
+    public String linkedProfile;
+    public GetUsersRequest withLinkedProfile(String linkedProfile) {
+        this.linkedProfile = linkedProfile;
+        return this;
+    }
+    
+    /**
+     * Restrict results to the users who have submitted at least this many contributions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumContributions")
+    public Double minimumContributions;
+    public GetUsersRequest withMinimumContributions(Double minimumContributions) {
+        this.minimumContributions = minimumContributions;
+        return this;
+    }
+    
+    /**
+     * Restrict results to the users who are owned by of this owner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
+    public String ownedBy;
+    public GetUsersRequest withOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+        return this;
+    }
+    
+    /**
+     * Limit results to users who have submitted at least one contribution after this date time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=submittedAfter")
+    public OffsetDateTime submittedAfter;
+    public GetUsersRequest withSubmittedAfter(OffsetDateTime submittedAfter) {
+        this.submittedAfter = submittedAfter;
+        return this;
+    }
+    
+    /**
+     * Limit results to users who have submitted at least one contribution before this date time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=submittedBefore")
+    public OffsetDateTime submittedBefore;
+    public GetUsersRequest withSubmittedBefore(OffsetDateTime submittedBefore) {
+        this.submittedBefore = submittedBefore;
+        return this;
+    }
+    
+    /**
+     * Restrict results to the user with this username.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetUsersRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

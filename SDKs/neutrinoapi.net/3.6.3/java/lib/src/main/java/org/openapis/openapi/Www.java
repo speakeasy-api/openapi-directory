@@ -38,7 +38,7 @@ public class Www {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BrowserBotResponse browserBot(org.openapis.openapi.models.operations.BrowserBotRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BrowserBotResponse browserBot(org.openapis.openapi.models.operations.BrowserBotRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/browser-bot");
         
@@ -91,7 +91,7 @@ public class Www {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HTMLCleanResponse htmlClean(org.openapis.openapi.models.operations.HTMLCleanRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.HTMLCleanResponse htmlClean(org.openapis.openapi.models.operations.HTMLCleanRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/html-clean");
         
@@ -152,7 +152,7 @@ public class Www {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.URLInfoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.URLInfoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

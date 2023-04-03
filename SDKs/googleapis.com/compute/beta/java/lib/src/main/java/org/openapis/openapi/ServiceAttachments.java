@@ -34,25 +34,26 @@ public class ServiceAttachments {
     /**
      * Retrieves the list of all ServiceAttachment resources, regional and global, available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListResponse computeServiceAttachmentsAggregatedList(org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListResponse computeServiceAttachmentsAggregatedList(org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/serviceAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/serviceAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class ServiceAttachments {
     /**
      * Deletes the specified ServiceAttachment in the given scope
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteResponse computeServiceAttachmentsDelete(org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteResponse computeServiceAttachmentsDelete(org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class ServiceAttachments {
     /**
      * Returns the specified ServiceAttachment resource in the given scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetResponse computeServiceAttachmentsGet(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetResponse computeServiceAttachmentsGet(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class ServiceAttachments {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyResponse computeServiceAttachmentsGetIamPolicy(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyResponse computeServiceAttachmentsGetIamPolicy(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,27 +218,28 @@ public class ServiceAttachments {
     /**
      * Creates a ServiceAttachment in the specified project in the given scope using the parameters that are included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertResponse computeServiceAttachmentsInsert(org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertResponse computeServiceAttachmentsInsert(org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceAttachment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class ServiceAttachments {
     /**
      * Lists the ServiceAttachments for a project in the given scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsListResponse computeServiceAttachmentsList(org.openapis.openapi.models.operations.ComputeServiceAttachmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsListResponse computeServiceAttachmentsList(org.openapis.openapi.models.operations.ComputeServiceAttachmentsListRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsListRequest.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class ServiceAttachments {
     /**
      * Patches the specified ServiceAttachment resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchResponse computeServiceAttachmentsPatch(org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchResponse computeServiceAttachmentsPatch(org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchPathParams.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceAttachment1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class ServiceAttachments {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyResponse computeServiceAttachmentsSetIamPolicy(org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyResponse computeServiceAttachmentsSetIamPolicy(org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,27 +408,28 @@ public class ServiceAttachments {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsResponse computeServiceAttachmentsTestIamPermissions(org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsResponse computeServiceAttachmentsTestIamPermissions(org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/serviceAttachments/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeServiceAttachmentsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

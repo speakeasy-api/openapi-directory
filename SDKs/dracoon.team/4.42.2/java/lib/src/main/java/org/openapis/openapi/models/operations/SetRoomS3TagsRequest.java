@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetRoomS3TagsRequest {
-    
-    public SetRoomS3TagsPathParams pathParams;
-    public SetRoomS3TagsRequest withPathParams(SetRoomS3TagsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SetRoomS3TagsHeaders headers;
-    public SetRoomS3TagsRequest withHeaders(SetRoomS3TagsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.S3TagIds request;
-    public SetRoomS3TagsRequest withRequest(org.openapis.openapi.models.shared.S3TagIds request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.S3TagIds s3TagIds;
+    public SetRoomS3TagsRequest withS3TagIds(org.openapis.openapi.models.shared.S3TagIds s3TagIds) {
+        this.s3TagIds = s3TagIds;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SetRoomS3TagsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public SetRoomS3TagsRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

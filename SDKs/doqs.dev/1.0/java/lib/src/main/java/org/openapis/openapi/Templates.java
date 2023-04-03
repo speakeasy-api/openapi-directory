@@ -37,7 +37,7 @@ public class Templates {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateResponse create(org.openapis.openapi.models.operations.CreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateResponse create(org.openapis.openapi.models.shared.BodyCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/templates");
         
@@ -91,7 +91,7 @@ public class Templates {
      */
     public org.openapis.openapi.models.operations.DeleteTemplatesIdDeleteResponse deleteTemplatesIdDelete(org.openapis.openapi.models.operations.DeleteTemplatesIdDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTemplatesIdDeletePathParams.class, baseUrl, "/templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTemplatesIdDeleteRequest.class, baseUrl, "/templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -138,12 +138,12 @@ public class Templates {
      */
     public org.openapis.openapi.models.operations.FillResponse fill(org.openapis.openapi.models.operations.FillRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FillPathParams.class, baseUrl, "/templates/{id}/fill", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FillRequest.class, baseUrl, "/templates/{id}/fill", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "fillTemplateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -190,7 +190,7 @@ public class Templates {
      */
     public org.openapis.openapi.models.operations.GetResponse get(org.openapis.openapi.models.operations.GetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathParams.class, baseUrl, "/templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRequest.class, baseUrl, "/templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -237,7 +237,7 @@ public class Templates {
      */
     public org.openapis.openapi.models.operations.GetFileTemplatesIdFileGetResponse getFileTemplatesIdFileGet(org.openapis.openapi.models.operations.GetFileTemplatesIdFileGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileTemplatesIdFileGetPathParams.class, baseUrl, "/templates/{id}/file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFileTemplatesIdFileGetRequest.class, baseUrl, "/templates/{id}/file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -290,7 +290,7 @@ public class Templates {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -337,12 +337,12 @@ public class Templates {
      */
     public org.openapis.openapi.models.operations.UpdateResponse update(org.openapis.openapi.models.operations.UpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePathParams.class, baseUrl, "/templates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRequest.class, baseUrl, "/templates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateTemplateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

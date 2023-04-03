@@ -4,20 +4,110 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETBillingDocumentsRequest {
-    
-    public GETBillingDocumentsQueryParams queryParams;
-    public GETBillingDocumentsRequest withQueryParams(GETBillingDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETBillingDocumentsRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETBillingDocumentsRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
     
-    public GETBillingDocumentsHeaders headers;
-    public GETBillingDocumentsRequest withHeaders(GETBillingDocumentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the customer account that the billing documents are associated with. 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountId")
+    public String accountId;
+    public GETBillingDocumentsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * The date of the billing document. It represents the invoice date for invoices, credit memo date for credit memos, and debit memo date for debit memos.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=documentDate")
+    public LocalDate documentDate;
+    public GETBillingDocumentsRequest withDocumentDate(LocalDate documentDate) {
+        this.documentDate = documentDate;
+        return this;
+    }
+    
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETBillingDocumentsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * This parameter restricts the order of the data returned in the response. You can use this parameter to supply a dimension you want to sort on.
+     * 
+     * If you do not specify any sortable field, the response data is sorted by the `documentDate` field in descending order.
+     * 
+     * A sortable field uses the following form: 
+     * 
+     * *operator* *field_name*
+     * 
+     * You can use at most two sortable fields in one URL path. Use a comma to separate sortable fields. For example:  *operator* *field_name*, *operator* *field_name*  
+     * 
+     * *operator* is used to mark the order of sequencing. The operator is optional. If you only specify the sortable field without any operator, the response data is sorted in descending order by this field.  
+     * 
+     *   - The `-` operator indicates an ascending order.
+     *   - The `+` operator indicates a descending order.
+     * 
+     * *field_name* indicates the name of a sortable field. The supported sortable fields of this operation are as below:
+     * 
+     *   - documentDate
+     *   - documentType
+     *   
+     * Examples:
+     * - /billing-documents?accountId=4028905f5e4feb38015e50af9aa002d1
+     *   &amp;sort=+documentDate,-documentType
+     * - /billing-documents?accountId=4028905f5e4feb38015e50af9aa002d1
+     *   &amp;status=Posted&amp;sort=+documentDate&amp;page=2&amp;pageSize=15
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GETBillingDocumentsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The status of the billing document.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GETBillingDocumentsStatusEnum status;
+    public GETBillingDocumentsRequest withStatus(GETBillingDocumentsStatusEnum status) {
+        this.status = status;
         return this;
     }
     

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserEmailUpdateRequest {
-    
-    public UserEmailUpdatePathParams pathParams;
-    public UserEmailUpdateRequest withPathParams(UserEmailUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * User email.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UserEmailUpdateApplicationJSON request;
-    public UserEmailUpdateRequest withRequest(UserEmailUpdateApplicationJSON request) {
-        this.request = request;
+    public UserEmailUpdateApplicationJSON requestBody;
+    public UserEmailUpdateRequest withRequestBody(UserEmailUpdateApplicationJSON requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserEmailUpdateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

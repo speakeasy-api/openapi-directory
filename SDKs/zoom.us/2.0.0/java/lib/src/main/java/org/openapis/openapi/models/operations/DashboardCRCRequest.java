@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DashboardCRCRequest {
-    
-    public DashboardCRCQueryParams queryParams;
-    public DashboardCRCRequest withQueryParams(DashboardCRCQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Start date in 'yyyy-mm-dd' format. The date range defined by the "from" and "to" parameters should only be one month as the report includes only one month worth of data at once.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public LocalDate from;
+    public DashboardCRCRequest withFrom(LocalDate from) {
+        this.from = from;
         return this;
     }
     
-    
-    public DashboardCRCSecurity security;
-    public DashboardCRCRequest withSecurity(DashboardCRCSecurity security) {
-        this.security = security;
+    /**
+     * End date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public LocalDate to;
+    public DashboardCRCRequest withTo(LocalDate to) {
+        this.to = to;
         return this;
     }
     

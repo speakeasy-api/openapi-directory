@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupByIdRequest {
-    
-    public GetGroupByIdPathParams pathParams;
-    public GetGroupByIdRequest withPathParams(GetGroupByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public GetGroupByIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

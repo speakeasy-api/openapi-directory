@@ -36,13 +36,13 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtResponse getSearchVersionNumberCSCategoryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtPathParams.class, baseUrl, "/search/{versionNumber}/cS/{category}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtRequest.class, baseUrl, "/search/{versionNumber}/cS/{category}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -75,13 +75,13 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtResponse getSearchVersionNumberCategorySearchQueryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtPathParams.class, baseUrl, "/search/{versionNumber}/categorySearch/{query}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtRequest.class, baseUrl, "/search/{versionNumber}/categorySearch/{query}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -114,13 +114,13 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtResponse getSearchVersionNumberGeometrySearchQueryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtPathParams.class, baseUrl, "/search/{versionNumber}/geometrySearch/{query}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtRequest.class, baseUrl, "/search/{versionNumber}/geometrySearch/{query}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -153,13 +153,13 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtResponse getSearchVersionNumberNearbySearchExt(org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtPathParams.class, baseUrl, "/search/{versionNumber}/nearbySearch/.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtRequest.class, baseUrl, "/search/{versionNumber}/nearbySearch/.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -192,13 +192,13 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtResponse getSearchVersionNumberPoiSearchQueryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtPathParams.class, baseUrl, "/search/{versionNumber}/poiSearch/{query}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtRequest.class, baseUrl, "/search/{versionNumber}/poiSearch/{query}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -231,13 +231,13 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse getSearchVersionNumberRoutedSearchQueryPositionHeadingExt(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtPathParams.class, baseUrl, "/search/{versionNumber}/routedSearch/{query}/{position}/{heading}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest.class, baseUrl, "/search/{versionNumber}/routedSearch/{query}/{position}/{heading}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -270,13 +270,13 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtResponse getSearchVersionNumberSQueryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtPathParams.class, baseUrl, "/search/{versionNumber}/s/{query}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtRequest.class, baseUrl, "/search/{versionNumber}/s/{query}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -309,13 +309,13 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtResponse getSearchVersionNumberSearchQueryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtPathParams.class, baseUrl, "/search/{versionNumber}/search/{query}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtRequest.class, baseUrl, "/search/{versionNumber}/search/{query}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -348,15 +348,15 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtResponse postSearchVersionNumberGeometrySearchQueryExt(org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtPathParams.class, baseUrl, "/search/{versionNumber}/geometrySearch/{query}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtRequest.class, baseUrl, "/search/{versionNumber}/geometrySearch/{query}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -389,15 +389,15 @@ public class Search {
      */
     public org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtResponse postSearchVersionNumberSearchAlongRouteQueryExt(org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtPathParams.class, baseUrl, "/search/{versionNumber}/searchAlongRoute/{query}.{ext}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtRequest.class, baseUrl, "/search/{versionNumber}/searchAlongRoute/{query}.{ext}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagServiceInventoryRequest {
-    
-    public TagServiceInventoryPathParams pathParams;
-    public TagServiceInventoryRequest withPathParams(TagServiceInventoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Tag attributes to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Tag[] request;
-    public TagServiceInventoryRequest withRequest(org.openapis.openapi.models.shared.Tag[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Tag[] requestBody;
+    public TagServiceInventoryRequest withRequestBody(org.openapis.openapi.models.shared.Tag[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TagServiceInventoryRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

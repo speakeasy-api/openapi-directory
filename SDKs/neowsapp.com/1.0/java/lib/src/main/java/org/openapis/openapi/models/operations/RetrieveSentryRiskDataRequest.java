@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSentryRiskDataRequest {
+    /**
+     * show current list of Sentry objects, or show removed Sentry objects
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active")
+    public Boolean isActive;
+    public RetrieveSentryRiskDataRequest withIsActive(Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
     
-    public RetrieveSentryRiskDataQueryParams queryParams;
-    public RetrieveSentryRiskDataRequest withQueryParams(RetrieveSentryRiskDataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public RetrieveSentryRiskDataRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Integer size;
+    public RetrieveSentryRiskDataRequest withSize(Integer size) {
+        this.size = size;
         return this;
     }
     

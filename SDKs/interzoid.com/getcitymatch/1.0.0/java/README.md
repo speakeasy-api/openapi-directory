@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetcitymatchQueryParams;
 import org.openapis.openapi.models.operations.GetcitymatchRequest;
 import org.openapis.openapi.models.operations.GetcitymatchResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetcitymatchRequest req = new GetcitymatchRequest() {{
-                queryParams = new GetcitymatchQueryParams() {{
-                    city = "Laruecester";
-                    license = "quibusdam";
-                }};
-            }};            
+                city = "Laruecester";
+                license = "quibusdam";
+            }}            
 
             GetcitymatchResponse res = sdk.cityNameSimilarityKey.getcitymatch(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### cityNameSimilarityKey

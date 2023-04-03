@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPirateTranslateRequest {
-    
-    public GetPirateTranslateQueryParams queryParams;
-    public GetPirateTranslateRequest withQueryParams(GetPirateTranslateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetPirateTranslateSecurity security;
-    public GetPirateTranslateRequest withSecurity(GetPirateTranslateSecurity security) {
-        this.security = security;
+    /**
+     * Text to translate to pirate lingo.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public GetPirateTranslateRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

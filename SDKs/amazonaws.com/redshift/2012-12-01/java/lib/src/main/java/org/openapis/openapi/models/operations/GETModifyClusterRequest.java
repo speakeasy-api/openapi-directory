@@ -4,20 +4,319 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyClusterRequest {
-    
-    public GETModifyClusterQueryParams queryParams;
-    public GETModifyClusterRequest withQueryParams(GETModifyClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyClusterActionEnum action;
+    public GETModifyClusterRequest withAction(GETModifyClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;If &lt;code&gt;true&lt;/code&gt;, major version upgrades will be applied automatically to the cluster during the maintenance window. &lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;false&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowVersionUpgrade")
+    public Boolean allowVersionUpgrade;
+    public GETModifyClusterRequest withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
+        this.allowVersionUpgrade = allowVersionUpgrade;
+        return this;
+    }
     
-    public GETModifyClusterHeaders headers;
-    public GETModifyClusterRequest withHeaders(GETModifyClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The number of days that automated snapshots are retained. If the value is 0, automated snapshots are disabled. Even if automated snapshots are disabled, you can still create manual snapshots when you want with &lt;a&gt;CreateClusterSnapshot&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;If you decrease the automated snapshot retention period from its current value, existing automated snapshots that fall outside of the new retention period will be immediately deleted.&lt;/p&gt; &lt;p&gt;You can't disable automated snapshots for RA3 node types. Set the automated retention period from 1-35 days.&lt;/p&gt; &lt;p&gt;Default: Uses existing setting.&lt;/p&gt; &lt;p&gt;Constraints: Must be a value from 0 to 35.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutomatedSnapshotRetentionPeriod")
+    public Long automatedSnapshotRetentionPeriod;
+    public GETModifyClusterRequest withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
+        this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * The option to initiate relocation for an Amazon Redshift cluster to the target Availability Zone.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZone")
+    public String availabilityZone;
+    public GETModifyClusterRequest withAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    
+    /**
+     * The option to enable relocation for an Amazon Redshift cluster between Availability Zones after the cluster modification is complete.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZoneRelocation")
+    public Boolean availabilityZoneRelocation;
+    public GETModifyClusterRequest withAvailabilityZoneRelocation(Boolean availabilityZoneRelocation) {
+        this.availabilityZoneRelocation = availabilityZoneRelocation;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The unique identifier of the cluster to be modified.&lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;examplecluster&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETModifyClusterRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the cluster parameter group to apply to this cluster. This change is applied only after the cluster is rebooted. To reboot a cluster use &lt;a&gt;RebootCluster&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;Default: Uses existing setting.&lt;/p&gt; &lt;p&gt;Constraints: The cluster parameter group must be in the same parameter group family that matches the cluster version.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterParameterGroupName")
+    public String clusterParameterGroupName;
+    public GETModifyClusterRequest withClusterParameterGroupName(String clusterParameterGroupName) {
+        this.clusterParameterGroupName = clusterParameterGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of cluster security groups to be authorized on this cluster. This change is asynchronously applied as soon as possible.&lt;/p&gt; &lt;p&gt;Security groups currently associated with the cluster, and not in the list of groups to apply, will be revoked from the cluster.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be 1 to 255 alphanumeric characters or hyphens&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterSecurityGroups")
+    public String[] clusterSecurityGroups;
+    public GETModifyClusterRequest withClusterSecurityGroups(String[] clusterSecurityGroups) {
+        this.clusterSecurityGroups = clusterSecurityGroups;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new cluster type.&lt;/p&gt; &lt;p&gt;When you submit your cluster resize request, your existing cluster goes into a read-only mode. After Amazon Redshift provisions a new cluster based on your resize requirements, there will be outage for a period while the old cluster is deleted and your connection is switched to the new cluster. You can use &lt;a&gt;DescribeResize&lt;/a&gt; to track the progress of the resize request. &lt;/p&gt; &lt;p&gt;Valid Values: &lt;code&gt; multi-node | single-node &lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterType")
+    public String clusterType;
+    public GETModifyClusterRequest withClusterType(String clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new version number of the Amazon Redshift engine to upgrade to.&lt;/p&gt; &lt;p&gt;For major version upgrades, if a non-default cluster parameter group is currently in use, a new cluster parameter group in the cluster parameter group family for the new version must be specified. The new cluster parameter group can be the default for that cluster parameter group family. For more information about parameters and parameter groups, go to &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-parameter-groups.html"&gt;Amazon Redshift Parameter Groups&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Cluster Management Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;1.0&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterVersion")
+    public String clusterVersion;
+    public GETModifyClusterRequest withClusterVersion(String clusterVersion) {
+        this.clusterVersion = clusterVersion;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The Elastic IP (EIP) address for the cluster.&lt;/p&gt; &lt;p&gt;Constraints: The cluster must be provisioned in EC2-VPC and publicly-accessible through an Internet gateway. For more information about provisioning clusters in EC2-VPC, go to &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#cluster-platforms"&gt;Supported Platforms to Launch Your Cluster&lt;/a&gt; in the Amazon Redshift Cluster Management Guide.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ElasticIp")
+    public String elasticIp;
+    public GETModifyClusterRequest withElasticIp(String elasticIp) {
+        this.elasticIp = elasticIp;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Indicates whether the cluster is encrypted. If the value is encrypted (true) and you provide a value for the &lt;code&gt;KmsKeyId&lt;/code&gt; parameter, we encrypt the cluster with the provided &lt;code&gt;KmsKeyId&lt;/code&gt;. If you don't provide a &lt;code&gt;KmsKeyId&lt;/code&gt;, we encrypt with the default key. &lt;/p&gt; &lt;p&gt;If the value is not encrypted (false), then the cluster is decrypted. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Encrypted")
+    public Boolean encrypted;
+    public GETModifyClusterRequest withEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;An option that specifies whether to create the cluster with enhanced VPC routing enabled. To create a cluster that uses enhanced VPC routing, the cluster must be in a VPC. For more information, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/enhanced-vpc-routing.html"&gt;Enhanced VPC Routing&lt;/a&gt; in the Amazon Redshift Cluster Management Guide.&lt;/p&gt; &lt;p&gt;If this option is &lt;code&gt;true&lt;/code&gt;, enhanced VPC routing is enabled. &lt;/p&gt; &lt;p&gt;Default: false&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnhancedVpcRouting")
+    public Boolean enhancedVpcRouting;
+    public GETModifyClusterRequest withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
+        this.enhancedVpcRouting = enhancedVpcRouting;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the HSM client certificate the Amazon Redshift cluster uses to retrieve the data encryption keys stored in an HSM.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmClientCertificateIdentifier")
+    public String hsmClientCertificateIdentifier;
+    public GETModifyClusterRequest withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
+        this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the HSM configuration that contains the information the Amazon Redshift cluster can use to retrieve and store keys in an HSM.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HsmConfigurationIdentifier")
+    public String hsmConfigurationIdentifier;
+    public GETModifyClusterRequest withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
+        this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
+        return this;
+    }
+    
+    /**
+     * The Key Management Service (KMS) key ID of the encryption key that you want to use to encrypt data in the cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
+    public String kmsKeyId;
+    public GETModifyClusterRequest withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    
+    /**
+     * The name for the maintenance track that you want to assign for the cluster. This name change is asynchronous. The new track name stays in the &lt;code&gt;PendingModifiedValues&lt;/code&gt; for the cluster until the next maintenance window. When the maintenance track changes, the cluster is switched to the latest cluster release available for the maintenance track. At this point, the maintenance track name is applied.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaintenanceTrackName")
+    public String maintenanceTrackName;
+    public GETModifyClusterRequest withMaintenanceTrackName(String maintenanceTrackName) {
+        this.maintenanceTrackName = maintenanceTrackName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The default for number of days that a newly created manual snapshot is retained. If the value is -1, the manual snapshot is retained indefinitely. This value doesn't retroactively change the retention periods of existing manual snapshots.&lt;/p&gt; &lt;p&gt;The value must be either -1 or an integer between 1 and 3,653.&lt;/p&gt; &lt;p&gt;The default value is -1.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManualSnapshotRetentionPeriod")
+    public Long manualSnapshotRetentionPeriod;
+    public GETModifyClusterRequest withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
+        this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new password for the cluster admin user. This change is asynchronously applied as soon as possible. Between the time of the request and the completion of the request, the &lt;code&gt;MasterUserPassword&lt;/code&gt; element exists in the &lt;code&gt;PendingModifiedValues&lt;/code&gt; element of the operation response. &lt;/p&gt; &lt;note&gt; &lt;p&gt;Operations never return the password, so this operation provides a way to regain access to the admin user for a cluster if the password is lost.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Default: Uses existing setting.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be between 8 and 64 characters in length.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must contain at least one uppercase letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must contain at least one lowercase letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must contain one number.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Can be any printable ASCII character (ASCII code 33-126) except &lt;code&gt;'&lt;/code&gt; (single quote), &lt;code&gt;"&lt;/code&gt; (double quote), &lt;code&gt;\&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt;, or &lt;code&gt;@&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterUserPassword")
+    public String masterUserPassword;
+    public GETModifyClusterRequest withMasterUserPassword(String masterUserPassword) {
+        this.masterUserPassword = masterUserPassword;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new identifier for the cluster.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must contain from 1 to 63 alphanumeric characters or hyphens.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Alphabetic characters must be lowercase.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must be unique for all clusters within an Amazon Web Services account.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Example: &lt;code&gt;examplecluster&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NewClusterIdentifier")
+    public String newClusterIdentifier;
+    public GETModifyClusterRequest withNewClusterIdentifier(String newClusterIdentifier) {
+        this.newClusterIdentifier = newClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new node type of the cluster. If you specify a new node type, you must also specify the number of nodes parameter.&lt;/p&gt; &lt;p&gt; For more information about resizing clusters, go to &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/rs-resize-tutorial.html"&gt;Resizing Clusters in Amazon Redshift&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Cluster Management Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid Values: &lt;code&gt;ds2.xlarge&lt;/code&gt; | &lt;code&gt;ds2.8xlarge&lt;/code&gt; | &lt;code&gt;dc1.large&lt;/code&gt; | &lt;code&gt;dc1.8xlarge&lt;/code&gt; | &lt;code&gt;dc2.large&lt;/code&gt; | &lt;code&gt;dc2.8xlarge&lt;/code&gt; | &lt;code&gt;ra3.xlplus&lt;/code&gt; | &lt;code&gt;ra3.4xlarge&lt;/code&gt; | &lt;code&gt;ra3.16xlarge&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeType")
+    public String nodeType;
+    public GETModifyClusterRequest withNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The new number of nodes of the cluster. If you specify a new number of nodes, you must also specify the node type parameter.&lt;/p&gt; &lt;p&gt; For more information about resizing clusters, go to &lt;a href="https://docs.aws.amazon.com/redshift/latest/mgmt/rs-resize-tutorial.html"&gt;Resizing Clusters in Amazon Redshift&lt;/a&gt; in the &lt;i&gt;Amazon Redshift Cluster Management Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Valid Values: Integer greater than &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberOfNodes")
+    public Long numberOfNodes;
+    public GETModifyClusterRequest withNumberOfNodes(Long numberOfNodes) {
+        this.numberOfNodes = numberOfNodes;
+        return this;
+    }
+    
+    /**
+     * The option to change the port of an Amazon Redshift cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Port")
+    public Long port;
+    public GETModifyClusterRequest withPort(Long port) {
+        this.port = port;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The weekly time range (in UTC) during which system maintenance can occur, if necessary. If system maintenance is necessary during the window, it may result in an outage.&lt;/p&gt; &lt;p&gt;This maintenance window change is made immediately. If the new maintenance window indicates the current time, there must be at least 120 minutes between the current time and end of the window in order to ensure that pending changes are applied.&lt;/p&gt; &lt;p&gt;Default: Uses existing setting.&lt;/p&gt; &lt;p&gt;Format: ddd:hh24:mi-ddd:hh24:mi, for example &lt;code&gt;wed:07:30-wed:08:00&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Valid Days: Mon | Tue | Wed | Thu | Fri | Sat | Sun&lt;/p&gt; &lt;p&gt;Constraints: Must be at least 30 minutes.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreferredMaintenanceWindow")
+    public String preferredMaintenanceWindow;
+    public GETModifyClusterRequest withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
+        this.preferredMaintenanceWindow = preferredMaintenanceWindow;
+        return this;
+    }
+    
+    /**
+     * If &lt;code&gt;true&lt;/code&gt;, the cluster can be accessed from a public network. Only clusters in VPCs can be set to be publicly available.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PubliclyAccessible")
+    public Boolean publiclyAccessible;
+    public GETModifyClusterRequest withPubliclyAccessible(Boolean publiclyAccessible) {
+        this.publiclyAccessible = publiclyAccessible;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyClusterVersionEnum version;
+    public GETModifyClusterRequest withVersion(GETModifyClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * A list of virtual private cloud (VPC) security groups to be associated with the cluster. This change is asynchronously applied as soon as possible.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
+    public String[] vpcSecurityGroupIds;
+    public GETModifyClusterRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

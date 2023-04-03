@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserSchedulerDeleteRequest {
-    
-    public UserSchedulerDeletePathParams pathParams;
-    public UserSchedulerDeleteRequest withPathParams(UserSchedulerDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Scheduler's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedulerId")
+    public String schedulerId;
+    public UserSchedulerDeleteRequest withSchedulerId(String schedulerId) {
+        this.schedulerId = schedulerId;
         return this;
     }
     
-    
-    public UserSchedulerDeleteSecurity security;
-    public UserSchedulerDeleteRequest withSecurity(UserSchedulerDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserSchedulerDeleteRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

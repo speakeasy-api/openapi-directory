@@ -4,13 +4,292 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceRolesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color")
+    public String color;
+    public DcimDeviceRolesListRequest withColor(String color) {
+        this.color = color;
+        return this;
+    }
     
-    public DcimDeviceRolesListQueryParams queryParams;
-    public DcimDeviceRolesListRequest withQueryParams(DcimDeviceRolesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__ic")
+    public String colorIc;
+    public DcimDeviceRolesListRequest withColorIc(String colorIc) {
+        this.colorIc = colorIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__ie")
+    public String colorIe;
+    public DcimDeviceRolesListRequest withColorIe(String colorIe) {
+        this.colorIe = colorIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__iew")
+    public String colorIew;
+    public DcimDeviceRolesListRequest withColorIew(String colorIew) {
+        this.colorIew = colorIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__isw")
+    public String colorIsw;
+    public DcimDeviceRolesListRequest withColorIsw(String colorIsw) {
+        this.colorIsw = colorIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__n")
+    public String colorN;
+    public DcimDeviceRolesListRequest withColorN(String colorN) {
+        this.colorN = colorN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__nic")
+    public String colorNic;
+    public DcimDeviceRolesListRequest withColorNic(String colorNic) {
+        this.colorNic = colorNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__nie")
+    public String colorNie;
+    public DcimDeviceRolesListRequest withColorNie(String colorNie) {
+        this.colorNie = colorNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__niew")
+    public String colorNiew;
+    public DcimDeviceRolesListRequest withColorNiew(String colorNiew) {
+        this.colorNiew = colorNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=color__nisw")
+    public String colorNisw;
+    public DcimDeviceRolesListRequest withColorNisw(String colorNisw) {
+        this.colorNisw = colorNisw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DcimDeviceRolesListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public DcimDeviceRolesListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public DcimDeviceRolesListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public DcimDeviceRolesListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public DcimDeviceRolesListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public DcimDeviceRolesListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimDeviceRolesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimDeviceRolesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ic")
+    public String nameIc;
+    public DcimDeviceRolesListRequest withNameIc(String nameIc) {
+        this.nameIc = nameIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__ie")
+    public String nameIe;
+    public DcimDeviceRolesListRequest withNameIe(String nameIe) {
+        this.nameIe = nameIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__iew")
+    public String nameIew;
+    public DcimDeviceRolesListRequest withNameIew(String nameIew) {
+        this.nameIew = nameIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__isw")
+    public String nameIsw;
+    public DcimDeviceRolesListRequest withNameIsw(String nameIsw) {
+        this.nameIsw = nameIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__n")
+    public String nameN;
+    public DcimDeviceRolesListRequest withNameN(String nameN) {
+        this.nameN = nameN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nic")
+    public String nameNic;
+    public DcimDeviceRolesListRequest withNameNic(String nameNic) {
+        this.nameNic = nameNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nie")
+    public String nameNie;
+    public DcimDeviceRolesListRequest withNameNie(String nameNie) {
+        this.nameNie = nameNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__niew")
+    public String nameNiew;
+    public DcimDeviceRolesListRequest withNameNiew(String nameNiew) {
+        this.nameNiew = nameNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name__nisw")
+    public String nameNisw;
+    public DcimDeviceRolesListRequest withNameNisw(String nameNisw) {
+        this.nameNisw = nameNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimDeviceRolesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DcimDeviceRolesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug")
+    public String slug;
+    public DcimDeviceRolesListRequest withSlug(String slug) {
+        this.slug = slug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__ic")
+    public String slugIc;
+    public DcimDeviceRolesListRequest withSlugIc(String slugIc) {
+        this.slugIc = slugIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__ie")
+    public String slugIe;
+    public DcimDeviceRolesListRequest withSlugIe(String slugIe) {
+        this.slugIe = slugIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__iew")
+    public String slugIew;
+    public DcimDeviceRolesListRequest withSlugIew(String slugIew) {
+        this.slugIew = slugIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__isw")
+    public String slugIsw;
+    public DcimDeviceRolesListRequest withSlugIsw(String slugIsw) {
+        this.slugIsw = slugIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__n")
+    public String slugN;
+    public DcimDeviceRolesListRequest withSlugN(String slugN) {
+        this.slugN = slugN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nic")
+    public String slugNic;
+    public DcimDeviceRolesListRequest withSlugNic(String slugNic) {
+        this.slugNic = slugNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nie")
+    public String slugNie;
+    public DcimDeviceRolesListRequest withSlugNie(String slugNie) {
+        this.slugNie = slugNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__niew")
+    public String slugNiew;
+    public DcimDeviceRolesListRequest withSlugNiew(String slugNiew) {
+        this.slugNiew = slugNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug__nisw")
+    public String slugNisw;
+    public DcimDeviceRolesListRequest withSlugNisw(String slugNisw) {
+        this.slugNisw = slugNisw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vm_role")
+    public String vmRole;
+    public DcimDeviceRolesListRequest withVmRole(String vmRole) {
+        this.vmRole = vmRole;
         return this;
     }
     

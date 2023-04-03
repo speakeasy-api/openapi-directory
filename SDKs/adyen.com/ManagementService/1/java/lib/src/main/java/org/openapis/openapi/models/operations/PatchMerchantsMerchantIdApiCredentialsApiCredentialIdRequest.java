@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdApiCredentialsApiCredentialIdRequest {
-    
-    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdPathParams pathParams;
-    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdRequest withPathParams(PatchMerchantsMerchantIdApiCredentialsApiCredentialIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateMerchantApiCredentialRequest request;
-    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdRequest withRequest(org.openapis.openapi.models.shared.UpdateMerchantApiCredentialRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateMerchantApiCredentialRequest updateMerchantApiCredentialRequest;
+    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdRequest withUpdateMerchantApiCredentialRequest(org.openapis.openapi.models.shared.UpdateMerchantApiCredentialRequest updateMerchantApiCredentialRequest) {
+        this.updateMerchantApiCredentialRequest = updateMerchantApiCredentialRequest;
         return this;
     }
     
+    /**
+     * Unique identifier of the API credential.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
+    public String apiCredentialId;
+    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdRequest withApiCredentialId(String apiCredentialId) {
+        this.apiCredentialId = apiCredentialId;
+        return this;
+    }
     
-    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdSecurity security;
-    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdRequest withSecurity(PatchMerchantsMerchantIdApiCredentialsApiCredentialIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateIpRecordRequest {
-    
-    public UpdateIpRecordPathParams pathParams;
-    public UpdateIpRecordRequest withPathParams(UpdateIpRecordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateIpRecordUpdateIpRecordRequest request;
-    public UpdateIpRecordRequest withRequest(UpdateIpRecordUpdateIpRecordRequest request) {
-        this.request = request;
+    public UpdateIpRecordUpdateIpRecordRequest requestBody;
+    public UpdateIpRecordRequest withRequestBody(UpdateIpRecordUpdateIpRecordRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateIpRecordSecurity security;
-    public UpdateIpRecordRequest withSecurity(UpdateIpRecordSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateIpRecordRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the IP Record resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateIpRecordRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalOrdersRequest {
-    
-    public GetCompaniesCompanyIdTerminalOrdersPathParams pathParams;
-    public GetCompaniesCompanyIdTerminalOrdersRequest withPathParams(GetCompaniesCompanyIdTerminalOrdersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdTerminalOrdersRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdTerminalOrdersQueryParams queryParams;
-    public GetCompaniesCompanyIdTerminalOrdersRequest withQueryParams(GetCompaniesCompanyIdTerminalOrdersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your purchase order number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerOrderReference")
+    public String customerOrderReference;
+    public GetCompaniesCompanyIdTerminalOrdersRequest withCustomerOrderReference(String customerOrderReference) {
+        this.customerOrderReference = customerOrderReference;
         return this;
     }
     
+    /**
+     * The number of orders to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetCompaniesCompanyIdTerminalOrdersRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetCompaniesCompanyIdTerminalOrdersSecurity security;
-    public GetCompaniesCompanyIdTerminalOrdersRequest withSecurity(GetCompaniesCompanyIdTerminalOrdersSecurity security) {
-        this.security = security;
+    /**
+     * The number of orders to skip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetCompaniesCompanyIdTerminalOrdersRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The order status. Possible values (not case-sensitive): Placed, Confirmed, Cancelled, Shipped, Delivered.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetCompaniesCompanyIdTerminalOrdersRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

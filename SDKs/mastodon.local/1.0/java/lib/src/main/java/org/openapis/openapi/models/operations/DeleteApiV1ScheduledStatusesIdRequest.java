@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV1ScheduledStatusesIdRequest {
-    
-    public DeleteApiV1ScheduledStatusesIdPathParams pathParams;
-    public DeleteApiV1ScheduledStatusesIdRequest withPathParams(DeleteApiV1ScheduledStatusesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV1ScheduledStatusesIdSecurity security;
-    public DeleteApiV1ScheduledStatusesIdRequest withSecurity(DeleteApiV1ScheduledStatusesIdSecurity security) {
-        this.security = security;
+    /**
+     * ID of the scheduled status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteApiV1ScheduledStatusesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

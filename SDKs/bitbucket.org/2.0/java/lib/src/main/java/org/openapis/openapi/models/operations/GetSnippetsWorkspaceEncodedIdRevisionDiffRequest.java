@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdRevisionDiffRequest {
-    
-    public GetSnippetsWorkspaceEncodedIdRevisionDiffPathParams pathParams;
-    public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withPathParams(GetSnippetsWorkspaceEncodedIdRevisionDiffPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
         return this;
     }
     
-    
-    public GetSnippetsWorkspaceEncodedIdRevisionDiffQueryParams queryParams;
-    public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withQueryParams(GetSnippetsWorkspaceEncodedIdRevisionDiffQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * When used, only one the diff of the specified file will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
+    public String path;
+    public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     
+    /**
+     * A revspec expression. This can simply be a commit SHA1, a ref name, or a compare expression like `staging..production`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revision")
+    public String revision;
+    public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withRevision(String revision) {
+        this.revision = revision;
+        return this;
+    }
     
-    public GetSnippetsWorkspaceEncodedIdRevisionDiffSecurity security;
-    public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withSecurity(GetSnippetsWorkspaceEncodedIdRevisionDiffSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetSnippetsWorkspaceEncodedIdRevisionDiffRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

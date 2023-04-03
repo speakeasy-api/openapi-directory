@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutAdminMappingsStubMappingIdRequest {
-    
-    public PutAdminMappingsStubMappingIdPathParams pathParams;
-    public PutAdminMappingsStubMappingIdRequest withPathParams(PutAdminMappingsStubMappingIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutAdminMappingsStubMappingIdRequestBody requestBody;
+    public PutAdminMappingsStubMappingIdRequest withRequestBody(PutAdminMappingsStubMappingIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutAdminMappingsStubMappingIdRequestBody request;
-    public PutAdminMappingsStubMappingIdRequest withRequest(PutAdminMappingsStubMappingIdRequestBody request) {
-        this.request = request;
+    /**
+     * The UUID of stub mapping
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stubMappingId")
+    public String stubMappingId;
+    public PutAdminMappingsStubMappingIdRequest withStubMappingId(String stubMappingId) {
+        this.stubMappingId = stubMappingId;
         return this;
     }
     

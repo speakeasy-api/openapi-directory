@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteShareByIdRequest {
-    
-    public DeleteShareByIdPathParams pathParams;
-    public DeleteShareByIdRequest withPathParams(DeleteShareByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public DeleteShareByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public DeleteShareByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public DeleteShareByIdHeaders headers;
-    public DeleteShareByIdRequest withHeaders(DeleteShareByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the share entry
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteShareByIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

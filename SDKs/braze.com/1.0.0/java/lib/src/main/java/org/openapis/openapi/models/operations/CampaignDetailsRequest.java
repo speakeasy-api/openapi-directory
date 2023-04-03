@@ -4,13 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignDetailsRequest {
-    
-    public CampaignDetailsQueryParams queryParams;
-    public CampaignDetailsRequest withQueryParams(CampaignDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) String
+     * 
+     * Campaign API identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_id")
+    public String campaignId;
+    public CampaignDetailsRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

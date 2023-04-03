@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteConfigurationSetTrackingOptionsRequest {
-    
-    public GETDeleteConfigurationSetTrackingOptionsQueryParams queryParams;
-    public GETDeleteConfigurationSetTrackingOptionsRequest withQueryParams(GETDeleteConfigurationSetTrackingOptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteConfigurationSetTrackingOptionsActionEnum action;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withAction(GETDeleteConfigurationSetTrackingOptionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the configuration set from which you want to delete the tracking options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetName")
+    public String configurationSetName;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withConfigurationSetName(String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+        return this;
+    }
     
-    public GETDeleteConfigurationSetTrackingOptionsHeaders headers;
-    public GETDeleteConfigurationSetTrackingOptionsRequest withHeaders(GETDeleteConfigurationSetTrackingOptionsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteConfigurationSetTrackingOptionsVersionEnum version;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withVersion(GETDeleteConfigurationSetTrackingOptionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteConfigurationSetTrackingOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

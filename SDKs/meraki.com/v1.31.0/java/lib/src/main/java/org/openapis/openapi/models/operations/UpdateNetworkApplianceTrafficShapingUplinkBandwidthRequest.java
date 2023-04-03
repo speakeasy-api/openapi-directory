@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest {
-    
-    public UpdateNetworkApplianceTrafficShapingUplinkBandwidthPathParams pathParams;
-    public UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest withPathParams(UpdateNetworkApplianceTrafficShapingUplinkBandwidthPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBody requestBody;
+    public UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest withRequestBody(UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBody request;
-    public UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest withRequest(UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkApplianceTrafficShapingUplinkBandwidthRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

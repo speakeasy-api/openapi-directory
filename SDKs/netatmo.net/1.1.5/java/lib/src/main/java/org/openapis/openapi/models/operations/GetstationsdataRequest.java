@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetstationsdataRequest {
-    
-    public GetstationsdataQueryParams queryParams;
-    public GetstationsdataRequest withQueryParams(GetstationsdataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the device you want to retrieve information of
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public GetstationsdataRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
-    
-    public GetstationsdataSecurity security;
-    public GetstationsdataRequest withSecurity(GetstationsdataSecurity security) {
-        this.security = security;
+    /**
+     * Whether to include the user's favorite Weather Stations in addition to the user's own Weather Stations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=get_favorites")
+    public Boolean getFavorites;
+    public GetstationsdataRequest withGetFavorites(Boolean getFavorites) {
+        this.getFavorites = getFavorites;
         return this;
     }
     

@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/TravelimpactmodelFlightsComputeFlightEmissionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/TravelimpactmodelFlightsComputeFlightEmissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TravelimpactmodelFlightsComputeFlightEmissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComputeFlightEmissionsResponse.java
@@ -39,7 +38,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/FlightWithEmissions.java
 lib/src/main/java/org/openapis/openapi/models/shared/Flight.java
 lib/src/main/java/org/openapis/openapi/models/shared/Date.java
 lib/src/main/java/org/openapis/openapi/models/shared/EmissionsGramsPerPax.java
-lib/src/main/java/org/openapis/openapi/models/shared/ComputeFlightEmissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/ComputeFlightEmissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 USAGE.md

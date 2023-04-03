@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsUpdateRequiredWorkflowRequest {
-    
-    public ActionsUpdateRequiredWorkflowPathParams pathParams;
-    public ActionsUpdateRequiredWorkflowRequest withPathParams(ActionsUpdateRequiredWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsUpdateRequiredWorkflowRequestBody requestBody;
+    public ActionsUpdateRequiredWorkflowRequest withRequestBody(ActionsUpdateRequiredWorkflowRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsUpdateRequiredWorkflowRequestBody request;
-    public ActionsUpdateRequiredWorkflowRequest withRequest(ActionsUpdateRequiredWorkflowRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsUpdateRequiredWorkflowRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the required workflow.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=required_workflow_id")
+    public Long requiredWorkflowId;
+    public ActionsUpdateRequiredWorkflowRequest withRequiredWorkflowId(Long requiredWorkflowId) {
+        this.requiredWorkflowId = requiredWorkflowId;
         return this;
     }
     

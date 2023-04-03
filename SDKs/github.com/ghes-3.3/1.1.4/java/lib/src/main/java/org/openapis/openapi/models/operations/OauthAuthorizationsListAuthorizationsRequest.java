@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OauthAuthorizationsListAuthorizationsRequest {
+    /**
+     * The client ID of your GitHub app.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
+    public String clientId;
+    public OauthAuthorizationsListAuthorizationsRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public OauthAuthorizationsListAuthorizationsQueryParams queryParams;
-    public OauthAuthorizationsListAuthorizationsRequest withQueryParams(OauthAuthorizationsListAuthorizationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OauthAuthorizationsListAuthorizationsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OauthAuthorizationsListAuthorizationsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

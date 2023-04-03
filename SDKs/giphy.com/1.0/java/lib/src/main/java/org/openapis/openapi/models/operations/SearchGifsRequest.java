@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchGifsRequest {
+    /**
+     * Specify default language for regional content; use a 2-letter ISO 639-1 language code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public SearchGifsRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
     
-    public SearchGifsQueryParams queryParams;
-    public SearchGifsRequest withQueryParams(SearchGifsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of records to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public SearchGifsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * An optional results offset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public SearchGifsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Search query term or prhase.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public SearchGifsRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Filters results by specified rating.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
+    public String rating;
+    public SearchGifsRequest withRating(String rating) {
+        this.rating = rating;
         return this;
     }
     

@@ -34,10 +34,11 @@ public class CustomerSegments {
      * ListCustomerSegments
      * Retrieves the list of customer segments of a business.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCustomerSegmentsResponse listCustomerSegments(org.openapis.openapi.models.operations.ListCustomerSegmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCustomerSegmentsResponse listCustomerSegments(org.openapis.openapi.models.operations.ListCustomerSegmentsRequest request, org.openapis.openapi.models.operations.ListCustomerSegmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/customers/segments");
         
@@ -45,14 +46,14 @@ public class CustomerSegments {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomerSegmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCustomerSegmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,19 +81,20 @@ public class CustomerSegments {
      * RetrieveCustomerSegment
      * Retrieves a specific customer segment as identified by the `segment_id` value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveCustomerSegmentResponse retrieveCustomerSegment(org.openapis.openapi.models.operations.RetrieveCustomerSegmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveCustomerSegmentResponse retrieveCustomerSegment(org.openapis.openapi.models.operations.RetrieveCustomerSegmentRequest request, org.openapis.openapi.models.operations.RetrieveCustomerSegmentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCustomerSegmentPathParams.class, baseUrl, "/v2/customers/segments/{segment_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveCustomerSegmentRequest.class, baseUrl, "/v2/customers/segments/{segment_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

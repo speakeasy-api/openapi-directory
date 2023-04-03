@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsIsMemberOfRequest {
-    
-    public GroupsIsMemberOfPathParams pathParams;
-    public GroupsIsMemberOfRequest withPathParams(GroupsIsMemberOfPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GroupsIsMemberOfQueryParams queryParams;
-    public GroupsIsMemberOfRequest withQueryParams(GroupsIsMemberOfQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The check group membership parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, java.util.Map<String, Object>> request;
-    public GroupsIsMemberOfRequest withRequest(java.util.Map<String, java.util.Map<String, Object>> request) {
-        this.request = request;
+    public java.util.Map<String, java.util.Map<String, Object>> requestBody;
+    public GroupsIsMemberOfRequest withRequestBody(java.util.Map<String, java.util.Map<String, Object>> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public GroupsIsMemberOfRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public GroupsIsMemberOfRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

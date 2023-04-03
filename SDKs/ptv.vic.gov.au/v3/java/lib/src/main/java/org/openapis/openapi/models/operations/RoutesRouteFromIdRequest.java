@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoutesRouteFromIdRequest {
-    
-    public RoutesRouteFromIdPathParams pathParams;
-    public RoutesRouteFromIdRequest withPathParams(RoutesRouteFromIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public RoutesRouteFromIdRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Filter geopaths by date (ISO 8601 UTC format) (default = current date)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geopath_utc")
+    public OffsetDateTime geopathUtc;
+    public RoutesRouteFromIdRequest withGeopathUtc(OffsetDateTime geopathUtc) {
+        this.geopathUtc = geopathUtc;
+        return this;
+    }
     
-    public RoutesRouteFromIdQueryParams queryParams;
-    public RoutesRouteFromIdRequest withQueryParams(RoutesRouteFromIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates kif geopath data will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
+    public Boolean includeGeopath;
+    public RoutesRouteFromIdRequest withIncludeGeopath(Boolean includeGeopath) {
+        this.includeGeopath = includeGeopath;
+        return this;
+    }
+    
+    /**
+     * Identifier of route; values returned by Departures, Directions and Disruptions APIs
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
+    public Integer routeId;
+    public RoutesRouteFromIdRequest withRouteId(Integer routeId) {
+        this.routeId = routeId;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public RoutesRouteFromIdRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public RoutesRouteFromIdRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

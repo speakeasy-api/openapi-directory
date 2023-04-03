@@ -29,15 +29,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PutEventsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutEventsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutEventsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutItemsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutItemsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutItemsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutItemsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutUsersHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutUsersRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutUsersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutUsersResponse.java
@@ -45,6 +42,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Event.java
 lib/src/main/java/org/openapis/openapi/models/shared/MetricAttribution.java
 lib/src/main/java/org/openapis/openapi/models/shared/Item.java
 lib/src/main/java/org/openapis/openapi/models/shared/User.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

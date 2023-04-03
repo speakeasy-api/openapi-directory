@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCurrentPutFollowRequest {
-    
-    public UserCurrentPutFollowPathParams pathParams;
-    public UserCurrentPutFollowRequest withPathParams(UserCurrentPutFollowPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of user to follow
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UserCurrentPutFollowRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

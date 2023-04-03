@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmGroupsRequest {
-    
-    public PostRealmGroupsPathParams pathParams;
-    public PostRealmGroupsRequest withPathParams(PostRealmGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GroupRepresentation groupRepresentation;
+    public PostRealmGroupsRequest withGroupRepresentation(org.openapis.openapi.models.shared.GroupRepresentation groupRepresentation) {
+        this.groupRepresentation = groupRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GroupRepresentation request;
-    public PostRealmGroupsRequest withRequest(org.openapis.openapi.models.shared.GroupRepresentation request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmGroupsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

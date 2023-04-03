@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Atomically gets the AppAttestConfigs for the specified list of apps.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse firebaseappcheckProjectsAppsAppAttestConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetResponse firebaseappcheckProjectsAppsAppAttestConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetPathParams.class, baseUrl, "/v1/{parent}/apps/-/appAttestConfig:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest.class, baseUrl, "/v1/{parent}/apps/-/appAttestConfig:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsAppAttestConfigBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Projects {
     /**
      * Creates a new DebugToken for the specified app. For security reasons, after the creation operation completes, the `token` field cannot be updated or retrieved, but you can revoke the debug token using DeleteDebugToken. Each app can have a maximum of 20 debug tokens.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse firebaseappcheckProjectsAppsDebugTokensCreate(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateResponse firebaseappcheckProjectsAppsDebugTokensCreate(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreatePathParams.class, baseUrl, "/v1/{parent}/debugTokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateRequest.class, baseUrl, "/v1/{parent}/debugTokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1DebugToken", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Deletes the specified DebugToken. A deleted debug token cannot be used to exchange for an App Check token. Use this method when you suspect the secret `token` has been compromised or when you no longer need the debug token.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse firebaseappcheckProjectsAppsDebugTokensDelete(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteResponse firebaseappcheckProjectsAppsDebugTokensDelete(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class Projects {
     /**
      * Lists all DebugTokens for the specified app. For security reasons, the `token` field is never populated in the response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListResponse firebaseappcheckProjectsAppsDebugTokensList(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListResponse firebaseappcheckProjectsAppsDebugTokensList(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListPathParams.class, baseUrl, "/v1/{parent}/debugTokens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListRequest.class, baseUrl, "/v1/{parent}/debugTokens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDebugTokensListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,25 +221,26 @@ public class Projects {
     /**
      * Atomically gets the DeviceCheckConfigs for the specified list of apps. For security reasons, the `private_key` field is never populated in the response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse firebaseappcheckProjectsAppsDeviceCheckConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetResponse firebaseappcheckProjectsAppsDeviceCheckConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetPathParams.class, baseUrl, "/v1/{parent}/apps/-/deviceCheckConfig:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetRequest.class, baseUrl, "/v1/{parent}/apps/-/deviceCheckConfig:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsDeviceCheckConfigBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,27 +267,28 @@ public class Projects {
     /**
      * Accepts an App Attest assertion and an artifact previously obtained from ExchangeAppAttestAttestation and verifies those with Apple. If valid, returns an AppCheckToken.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse firebaseappcheckProjectsAppsExchangeAppAttestAssertion(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionResponse firebaseappcheckProjectsAppsExchangeAppAttestAssertion(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionPathParams.class, baseUrl, "/v1/{app}:exchangeAppAttestAssertion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionRequest.class, baseUrl, "/v1/{app}:exchangeAppAttestAssertion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangeAppAttestAssertionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAssertionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Projects {
     /**
      * Accepts an App Attest CBOR attestation and verifies it with Apple using your preconfigured team and bundle IDs. If valid, returns an attestation artifact that can later be exchanged for an AppCheckToken using ExchangeAppAttestAssertion. For convenience and performance, this method's response object will also contain an AppCheckToken (if the verification is successful).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse firebaseappcheckProjectsAppsExchangeAppAttestAttestation(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationResponse firebaseappcheckProjectsAppsExchangeAppAttestAttestation(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationPathParams.class, baseUrl, "/v1/{app}:exchangeAppAttestAttestation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest.class, baseUrl, "/v1/{app}:exchangeAppAttestAttestation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangeAppAttestAttestationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeAppAttestAttestationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,27 +363,28 @@ public class Projects {
     /**
      * Validates a custom token signed using your project's Admin SDK service account credentials. If valid, returns an AppCheckToken.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse firebaseappcheckProjectsAppsExchangeCustomToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenResponse firebaseappcheckProjectsAppsExchangeCustomToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenPathParams.class, baseUrl, "/v1/{app}:exchangeCustomToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenRequest.class, baseUrl, "/v1/{app}:exchangeCustomToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangeCustomTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeCustomTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Validates a debug token secret that you have previously created using CreateDebugToken. If valid, returns an AppCheckToken. Note that a restrictive quota is enforced on this method to prevent accidental exposure of the app to abuse.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse firebaseappcheckProjectsAppsExchangeDebugToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenResponse firebaseappcheckProjectsAppsExchangeDebugToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenPathParams.class, baseUrl, "/v1/{app}:exchangeDebugToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenRequest.class, baseUrl, "/v1/{app}:exchangeDebugToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangeDebugTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDebugTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,27 +459,28 @@ public class Projects {
     /**
      * Accepts a [`device_token`](https://developer.apple.com/documentation/devicecheck/dcdevice) issued by DeviceCheck, and attempts to validate it with Apple. If valid, returns an AppCheckToken.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse firebaseappcheckProjectsAppsExchangeDeviceCheckToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenResponse firebaseappcheckProjectsAppsExchangeDeviceCheckToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenPathParams.class, baseUrl, "/v1/{app}:exchangeDeviceCheckToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenRequest.class, baseUrl, "/v1/{app}:exchangeDeviceCheckToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangeDeviceCheckTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeDeviceCheckTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,27 +507,28 @@ public class Projects {
     /**
      * Validates an [integrity verdict response token from Play Integrity](https://developer.android.com/google/play/integrity/verdict#decrypt-verify). If valid, returns an AppCheckToken.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse firebaseappcheckProjectsAppsExchangePlayIntegrityToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenResponse firebaseappcheckProjectsAppsExchangePlayIntegrityToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenPathParams.class, baseUrl, "/v1/{app}:exchangePlayIntegrityToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenRequest.class, baseUrl, "/v1/{app}:exchangePlayIntegrityToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangePlayIntegrityTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangePlayIntegrityTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,27 +555,28 @@ public class Projects {
     /**
      * Validates a [reCAPTCHA Enterprise response token](https://cloud.google.com/recaptcha-enterprise/docs/create-assessment#retrieve_token). If valid, returns an AppCheckToken.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse firebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenResponse firebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenPathParams.class, baseUrl, "/v1/{app}:exchangeRecaptchaEnterpriseToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRequest.class, baseUrl, "/v1/{app}:exchangeRecaptchaEnterpriseToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangeRecaptchaEnterpriseTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaEnterpriseTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -591,27 +603,28 @@ public class Projects {
     /**
      * Validates a [reCAPTCHA v3 response token](https://developers.google.com/recaptcha/docs/v3). If valid, returns an AppCheckToken.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse firebaseappcheckProjectsAppsExchangeRecaptchaV3Token(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenResponse firebaseappcheckProjectsAppsExchangeRecaptchaV3Token(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenPathParams.class, baseUrl, "/v1/{app}:exchangeRecaptchaV3Token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest.class, baseUrl, "/v1/{app}:exchangeRecaptchaV3Token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangeRecaptchaV3TokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeRecaptchaV3TokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -638,27 +651,28 @@ public class Projects {
     /**
      * Validates a [SafetyNet token](https://developer.android.com/training/safetynet/attestation#request-attestation-step). If valid, returns an AppCheckToken.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse firebaseappcheckProjectsAppsExchangeSafetyNetToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenResponse firebaseappcheckProjectsAppsExchangeSafetyNetToken(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenPathParams.class, baseUrl, "/v1/{app}:exchangeSafetyNetToken", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenRequest.class, baseUrl, "/v1/{app}:exchangeSafetyNetToken", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1ExchangeSafetyNetTokenRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsExchangeSafetyNetTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -685,27 +699,28 @@ public class Projects {
     /**
      * Generates a challenge that protects the integrity of an immediately following call to ExchangeAppAttestAttestation or ExchangeAppAttestAssertion. A challenge should not be reused for multiple calls.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse firebaseappcheckProjectsAppsGenerateAppAttestChallenge(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeResponse firebaseappcheckProjectsAppsGenerateAppAttestChallenge(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengePathParams.class, baseUrl, "/v1/{app}:generateAppAttestChallenge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeRequest.class, baseUrl, "/v1/{app}:generateAppAttestChallenge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGenerateAppAttestChallengeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -732,27 +747,28 @@ public class Projects {
     /**
      * Generates a challenge that protects the integrity of an immediately following integrity verdict request to the Play Integrity API. The next call to ExchangePlayIntegrityToken using the resulting integrity token will verify the presence and validity of the challenge. A challenge should not be reused for multiple calls.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse firebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeResponse firebaseappcheckProjectsAppsGeneratePlayIntegrityChallenge(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengePathParams.class, baseUrl, "/v1/{app}:generatePlayIntegrityChallenge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeRequest.class, baseUrl, "/v1/{app}:generatePlayIntegrityChallenge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsGeneratePlayIntegrityChallengeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -779,25 +795,26 @@ public class Projects {
     /**
      * Atomically gets the PlayIntegrityConfigs for the specified list of apps.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse firebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetResponse firebaseappcheckProjectsAppsPlayIntegrityConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetPathParams.class, baseUrl, "/v1/{parent}/apps/-/playIntegrityConfig:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetRequest.class, baseUrl, "/v1/{parent}/apps/-/playIntegrityConfig:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsPlayIntegrityConfigBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -824,25 +841,26 @@ public class Projects {
     /**
      * Atomically gets the RecaptchaEnterpriseConfigs for the specified list of apps.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse firebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetResponse firebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetPathParams.class, baseUrl, "/v1/{parent}/apps/-/recaptchaEnterpriseConfig:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRequest.class, baseUrl, "/v1/{parent}/apps/-/recaptchaEnterpriseConfig:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaEnterpriseConfigBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -869,25 +887,26 @@ public class Projects {
     /**
      * Atomically gets the RecaptchaV3Configs for the specified list of apps. For security reasons, the `site_secret` field is never populated in the response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse firebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetResponse firebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetPathParams.class, baseUrl, "/v1/{parent}/apps/-/recaptchaV3Config:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest.class, baseUrl, "/v1/{parent}/apps/-/recaptchaV3Config:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsRecaptchaV3ConfigBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -914,25 +933,26 @@ public class Projects {
     /**
      * Atomically gets the SafetyNetConfigs for the specified list of apps.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse firebaseappcheckProjectsAppsSafetyNetConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetResponse firebaseappcheckProjectsAppsSafetyNetConfigBatchGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetPathParams.class, baseUrl, "/v1/{parent}/apps/-/safetyNetConfig:batchGet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetRequest.class, baseUrl, "/v1/{parent}/apps/-/safetyNetConfig:batchGet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsAppsSafetyNetConfigBatchGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -959,27 +979,28 @@ public class Projects {
     /**
      * Atomically updates the specified Service configurations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateResponse firebaseappcheckProjectsServicesBatchUpdate(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateResponse firebaseappcheckProjectsServicesBatchUpdate(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdatePathParams.class, baseUrl, "/v1/{parent}/services:batchUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateRequest.class, baseUrl, "/v1/{parent}/services:batchUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1BatchUpdateServicesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesBatchUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1006,25 +1027,26 @@ public class Projects {
     /**
      * Gets the Service configuration for the specified service name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetResponse firebaseappcheckProjectsServicesGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetResponse firebaseappcheckProjectsServicesGet(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1051,25 +1073,26 @@ public class Projects {
     /**
      * Lists all Service configurations for the specified project. Only Services which were explicitly configured using UpdateService or BatchUpdateServices will be returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListResponse firebaseappcheckProjectsServicesList(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListResponse firebaseappcheckProjectsServicesList(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListPathParams.class, baseUrl, "/v1/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListRequest.class, baseUrl, "/v1/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1096,27 +1119,28 @@ public class Projects {
     /**
      * Updates the specified Service configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchResponse firebaseappcheckProjectsServicesPatch(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchResponse firebaseappcheckProjectsServicesPatch(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchRequest request, org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppcheckV1Service", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappcheckProjectsServicesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

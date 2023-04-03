@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsByYearRequest {
-    
-    public GetEventsByYearPathParams pathParams;
-    public GetEventsByYearRequest withPathParams(GetEventsByYearPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetEventsByYearRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetEventsByYearHeaders headers;
-    public GetEventsByYearRequest withHeaders(GetEventsByYearHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetEventsByYearSecurity security;
-    public GetEventsByYearRequest withSecurity(GetEventsByYearSecurity security) {
-        this.security = security;
+    /**
+     * Competition Year (or Season). Must be 4 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
+    public Long year;
+    public GetEventsByYearRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

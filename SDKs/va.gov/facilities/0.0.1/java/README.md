@@ -19,10 +19,8 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetAllFacilitiesSecurity;
 import org.openapis.openapi.models.operations.GetAllFacilitiesAcceptEnum;
-import org.openapis.openapi.models.operations.GetAllFacilitiesHeaders;
 import org.openapis.openapi.models.operations.GetAllFacilitiesRequest;
 import org.openapis.openapi.models.operations.GetAllFacilitiesResponse;
-import org.openapis.openapi.models.shared.SchemeApikey;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,17 +29,12 @@ public class Application {
                 .build();
 
             GetAllFacilitiesRequest req = new GetAllFacilitiesRequest() {{
-                security = new GetAllFacilitiesSecurity() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                headers = new GetAllFacilitiesHeaders() {{
-                    accept = "application/vnd.geo+json";
-                }};
-            }};            
+                accept = "application/vnd.geo+json";
+            }}            
 
-            GetAllFacilitiesResponse res = sdk.facilities.getAllFacilities(req);
+            GetAllFacilitiesResponse res = sdk.facilities.getAllFacilities(req, new GetAllFacilitiesSecurity() {{
+                apikey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.geoFacilitiesResponse.isPresent()) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### facilities

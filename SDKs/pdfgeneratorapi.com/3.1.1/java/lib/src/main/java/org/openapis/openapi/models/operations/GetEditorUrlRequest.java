@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEditorUrlRequest {
-    
-    public GetEditorUrlQueryParams queryParams;
-    public GetEditorUrlRequest withQueryParams(GetEditorUrlQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Data used to generate the PDF. This can be JSON encoded string or a public URL to your JSON file.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public GetEditorUrlRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public GetEditorUrlRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Specify the editor UI language. Defaults to organization editor language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public GetEditorUrlLanguageEnum language;
+    public GetEditorUrlRequest withLanguage(GetEditorUrlLanguageEnum language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Template unique identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=templateId")
+    public Long templateId;
+    public GetEditorUrlRequest withTemplateId(Long templateId) {
+        this.templateId = templateId;
         return this;
     }
     

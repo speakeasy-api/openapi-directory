@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdDigitalProductsDigitalProductIdJsonRequest {
-    
-    public GetProductsIdDigitalProductsDigitalProductIdJsonPathParams pathParams;
-    public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withPathParams(GetProductsIdDigitalProductsDigitalProductIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Product DigitalProduct
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=digital_product_id")
+    public Integer digitalProductId;
+    public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withDigitalProductId(Integer digitalProductId) {
+        this.digitalProductId = digitalProductId;
+        return this;
+    }
     
-    public GetProductsIdDigitalProductsDigitalProductIdJsonQueryParams queryParams;
-    public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withQueryParams(GetProductsIdDigitalProductsDigitalProductIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetProductsIdDigitalProductsDigitalProductIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

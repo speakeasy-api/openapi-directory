@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLegRequest {
-    
-    public DeleteLegPathParams pathParams;
-    public DeleteLegRequest withPathParams(DeleteLegPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Leg ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=leg_id")
+    public String legId;
+    public DeleteLegRequest withLegId(String legId) {
+        this.legId = legId;
         return this;
     }
     

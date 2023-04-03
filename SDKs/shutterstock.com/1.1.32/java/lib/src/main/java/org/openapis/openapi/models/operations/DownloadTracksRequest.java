@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadTracksRequest {
-    
-    public DownloadTracksPathParams pathParams;
-    public DownloadTracksRequest withPathParams(DownloadTracksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DownloadTracksSecurity security;
-    public DownloadTracksRequest withSecurity(DownloadTracksSecurity security) {
-        this.security = security;
+    /**
+     * License ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DownloadTracksRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

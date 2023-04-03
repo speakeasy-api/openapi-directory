@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteContainersGroupsNameOrIdRequest {
-    
-    public DeleteContainersGroupsNameOrIdPathParams pathParams;
-    public DeleteContainersGroupsNameOrIdRequest withPathParams(DeleteContainersGroupsNameOrIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public DeleteContainersGroupsNameOrIdRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
-    
-    public DeleteContainersGroupsNameOrIdQueryParams queryParams;
-    public DeleteContainersGroupsNameOrIdRequest withQueryParams(DeleteContainersGroupsNameOrIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public DeleteContainersGroupsNameOrIdRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
         return this;
     }
     
+    /**
+     * If you want to force the deletion of a container group that has running container instances, use the force option. This parameter needs to be set to either true or false. If set to `force=true`, `force=True`, or `force=1`, running container instances are deleted. If set to `force=false`, `force=False`, or `force=0`, running container instances are not deleted. If you do not specify this paramater, running container instances are not deleted by default. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public String force;
+    public DeleteContainersGroupsNameOrIdRequest withForce(String force) {
+        this.force = force;
+        return this;
+    }
     
-    public DeleteContainersGroupsNameOrIdHeaders headers;
-    public DeleteContainersGroupsNameOrIdRequest withHeaders(DeleteContainersGroupsNameOrIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name or unique ID of the container group that you want to delete. Run `cf ic group list` or call the `GET /containers/groups` endpoint to retrieve a list of container groups in your space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public DeleteContainersGroupsNameOrIdRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
         return this;
     }
     

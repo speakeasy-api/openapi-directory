@@ -33,15 +33,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/AllGamesExampleParametersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllGamesExampleParametersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllGamesExampleParametersResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SpecificGameResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/AllPlayersSearchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllPlayersSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllPlayersSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SpecificPlayerResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/AllStatsExampleParametersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllStatsExampleParametersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllStatsExampleParametersResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AllTeamsResponse.java

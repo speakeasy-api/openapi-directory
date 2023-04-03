@@ -7,34 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToggleCallBroadcastRecipientsStatusRequest {
-    
-    public ToggleCallBroadcastRecipientsStatusPathParams pathParams;
-    public ToggleCallBroadcastRecipientsStatusRequest withPathParams(ToggleCallBroadcastRecipientsStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ToggleCallBroadcastRecipientsStatusQueryParams queryParams;
-    public ToggleCallBroadcastRecipientsStatusRequest withQueryParams(ToggleCallBroadcastRecipientsStatusQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * List of Recipient objects. By recipient we mean either phone number or contact id.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Recipient[] request;
-    public ToggleCallBroadcastRecipientsStatusRequest withRequest(org.openapis.openapi.models.shared.Recipient[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Recipient[] requestBody;
+    public ToggleCallBroadcastRecipientsStatusRequest withRequestBody(org.openapis.openapi.models.shared.Recipient[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Flag which indicate what to do with calls (true will enable call in DISABLED status and vice versa)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enable")
+    public Boolean enable;
+    public ToggleCallBroadcastRecipientsStatusRequest withEnable(Boolean enable) {
+        this.enable = enable;
+        return this;
+    }
     
-    public ToggleCallBroadcastRecipientsStatusSecurity security;
-    public ToggleCallBroadcastRecipientsStatusRequest withSecurity(ToggleCallBroadcastRecipientsStatusSecurity security) {
-        this.security = security;
+    /**
+     * An id of a voice broadcast
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ToggleCallBroadcastRecipientsStatusRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

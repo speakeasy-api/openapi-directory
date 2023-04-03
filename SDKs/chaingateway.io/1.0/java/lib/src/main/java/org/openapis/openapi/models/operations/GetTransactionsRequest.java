@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsRequest {
-    
-    public GetTransactionsHeaders headers;
-    public GetTransactionsRequest withHeaders(GetTransactionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetTransactionsRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetTransactionsRequest request;
-    public GetTransactionsRequest withRequest(org.openapis.openapi.models.shared.GetTransactionsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetTransactionsRequest getTransactionsRequest;
+    public GetTransactionsRequest withGetTransactionsRequest(org.openapis.openapi.models.shared.GetTransactionsRequest getTransactionsRequest) {
+        this.getTransactionsRequest = getTransactionsRequest;
         return this;
     }
     

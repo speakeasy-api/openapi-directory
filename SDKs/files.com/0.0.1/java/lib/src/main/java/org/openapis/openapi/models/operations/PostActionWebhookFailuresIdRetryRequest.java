@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostActionWebhookFailuresIdRetryRequest {
-    
-    public PostActionWebhookFailuresIdRetryPathParams pathParams;
-    public PostActionWebhookFailuresIdRetryRequest withPathParams(PostActionWebhookFailuresIdRetryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Action Webhook Failure ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostActionWebhookFailuresIdRetryRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

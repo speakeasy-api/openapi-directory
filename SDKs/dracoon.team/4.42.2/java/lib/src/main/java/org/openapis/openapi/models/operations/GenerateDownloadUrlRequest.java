@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateDownloadUrlRequest {
-    
-    public GenerateDownloadUrlPathParams pathParams;
-    public GenerateDownloadUrlRequest withPathParams(GenerateDownloadUrlPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public GenerateDownloadUrlRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public GenerateDownloadUrlHeaders headers;
-    public GenerateDownloadUrlRequest withHeaders(GenerateDownloadUrlHeaders headers) {
-        this.headers = headers;
+    /**
+     * File ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public Long fileId;
+    public GenerateDownloadUrlRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     

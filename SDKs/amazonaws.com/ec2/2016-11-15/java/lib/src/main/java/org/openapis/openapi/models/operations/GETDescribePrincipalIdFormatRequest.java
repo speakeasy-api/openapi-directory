@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribePrincipalIdFormatRequest {
-    
-    public GETDescribePrincipalIdFormatQueryParams queryParams;
-    public GETDescribePrincipalIdFormatRequest withQueryParams(GETDescribePrincipalIdFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribePrincipalIdFormatActionEnum action;
+    public GETDescribePrincipalIdFormatRequest withAction(GETDescribePrincipalIdFormatActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDescribePrincipalIdFormatRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETDescribePrincipalIdFormatHeaders headers;
-    public GETDescribePrincipalIdFormatRequest withHeaders(GETDescribePrincipalIdFormatHeaders headers) {
-        this.headers = headers;
+    /**
+     * The maximum number of results to return in a single call. To retrieve the remaining results, make another call with the returned NextToken value. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETDescribePrincipalIdFormatRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token to request the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribePrincipalIdFormatRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The type of resource: &lt;code&gt;bundle&lt;/code&gt; | &lt;code&gt;conversion-task&lt;/code&gt; | &lt;code&gt;customer-gateway&lt;/code&gt; | &lt;code&gt;dhcp-options&lt;/code&gt; | &lt;code&gt;elastic-ip-allocation&lt;/code&gt; | &lt;code&gt;elastic-ip-association&lt;/code&gt; | &lt;code&gt;export-task&lt;/code&gt; | &lt;code&gt;flow-log&lt;/code&gt; | &lt;code&gt;image&lt;/code&gt; | &lt;code&gt;import-task&lt;/code&gt; | &lt;code&gt;instance&lt;/code&gt; | &lt;code&gt;internet-gateway&lt;/code&gt; | &lt;code&gt;network-acl&lt;/code&gt; | &lt;code&gt;network-acl-association&lt;/code&gt; | &lt;code&gt;network-interface&lt;/code&gt; | &lt;code&gt;network-interface-attachment&lt;/code&gt; | &lt;code&gt;prefix-list&lt;/code&gt; | &lt;code&gt;reservation&lt;/code&gt; | &lt;code&gt;route-table&lt;/code&gt; | &lt;code&gt;route-table-association&lt;/code&gt; | &lt;code&gt;security-group&lt;/code&gt; | &lt;code&gt;snapshot&lt;/code&gt; | &lt;code&gt;subnet&lt;/code&gt; | &lt;code&gt;subnet-cidr-block-association&lt;/code&gt; | &lt;code&gt;volume&lt;/code&gt; | &lt;code&gt;vpc&lt;/code&gt; | &lt;code&gt;vpc-cidr-block-association&lt;/code&gt; | &lt;code&gt;vpc-endpoint&lt;/code&gt; | &lt;code&gt;vpc-peering-connection&lt;/code&gt; | &lt;code&gt;vpn-connection&lt;/code&gt; | &lt;code&gt;vpn-gateway&lt;/code&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Resource")
+    public String[] resource;
+    public GETDescribePrincipalIdFormatRequest withResource(String[] resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribePrincipalIdFormatVersionEnum version;
+    public GETDescribePrincipalIdFormatRequest withVersion(GETDescribePrincipalIdFormatVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribePrincipalIdFormatRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribePrincipalIdFormatRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribePrincipalIdFormatRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribePrincipalIdFormatRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribePrincipalIdFormatRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribePrincipalIdFormatRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribePrincipalIdFormatRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

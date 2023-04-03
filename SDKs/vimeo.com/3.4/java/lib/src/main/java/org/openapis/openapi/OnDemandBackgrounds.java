@@ -34,19 +34,20 @@ public class OnDemandBackgrounds {
     /**
      * Add a background to an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateVodBackgroundResponse createVodBackground(org.openapis.openapi.models.operations.CreateVodBackgroundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateVodBackgroundResponse createVodBackground(org.openapis.openapi.models.operations.CreateVodBackgroundRequest request, org.openapis.openapi.models.operations.CreateVodBackgroundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVodBackgroundPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateVodBackgroundRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class OnDemandBackgrounds {
     /**
      * Remove a background from an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVodBackgroundResponse deleteVodBackground(org.openapis.openapi.models.operations.DeleteVodBackgroundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVodBackgroundResponse deleteVodBackground(org.openapis.openapi.models.operations.DeleteVodBackgroundRequest request, org.openapis.openapi.models.operations.DeleteVodBackgroundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodBackgroundPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodBackgroundRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,21 +130,22 @@ public class OnDemandBackgrounds {
     /**
      * Edit a background of an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditVodBackgroundResponse editVodBackground(org.openapis.openapi.models.operations.EditVodBackgroundRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditVodBackgroundResponse editVodBackground(org.openapis.openapi.models.operations.EditVodBackgroundRequest request, org.openapis.openapi.models.operations.EditVodBackgroundSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVodBackgroundPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVodBackgroundRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -182,7 +185,7 @@ public class OnDemandBackgrounds {
      */
     public org.openapis.openapi.models.operations.GetVodBackgroundResponse getVodBackground(org.openapis.openapi.models.operations.GetVodBackgroundRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodBackgroundPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodBackgroundRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds/{background_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -229,13 +232,13 @@ public class OnDemandBackgrounds {
      */
     public org.openapis.openapi.models.operations.GetVodBackgroundsResponse getVodBackgrounds(org.openapis.openapi.models.operations.GetVodBackgroundsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodBackgroundsPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodBackgroundsRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/backgrounds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodBackgroundsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodBackgroundsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

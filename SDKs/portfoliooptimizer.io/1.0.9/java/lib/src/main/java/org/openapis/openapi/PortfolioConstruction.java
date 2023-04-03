@@ -49,7 +49,7 @@ public class PortfolioConstruction {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioConstructionInvestableResponse postPortfolioConstructionInvestable(org.openapis.openapi.models.operations.PostPortfolioConstructionInvestableRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioConstructionInvestableResponse postPortfolioConstructionInvestable(org.openapis.openapi.models.operations.PostPortfolioConstructionInvestableRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/construction/investable");
         
@@ -101,7 +101,7 @@ public class PortfolioConstruction {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioConstructionMimickingResponse postPortfolioConstructionMimicking(org.openapis.openapi.models.operations.PostPortfolioConstructionMimickingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioConstructionMimickingResponse postPortfolioConstructionMimicking(org.openapis.openapi.models.operations.PostPortfolioConstructionMimickingRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/construction/mimicking");
         
@@ -154,7 +154,7 @@ public class PortfolioConstruction {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPortfolioConstructionRandomResponse postPortfolioConstructionRandom(org.openapis.openapi.models.operations.PostPortfolioConstructionRandomRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPortfolioConstructionRandomResponse postPortfolioConstructionRandom(org.openapis.openapi.models.operations.PostPortfolioConstructionRandomRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/portfolio/construction/random");
         

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetaGetOctocatRequest {
-    
-    public MetaGetOctocatQueryParams queryParams;
-    public MetaGetOctocatRequest withQueryParams(MetaGetOctocatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The words to show in Octocat's speech bubble
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
+    public String s;
+    public MetaGetOctocatRequest withS(String s) {
+        this.s = s;
         return this;
     }
     

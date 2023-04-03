@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDocumentsIdRequest {
-    
-    public DeleteDocumentsIdPathParams pathParams;
-    public DeleteDocumentsIdRequest withPathParams(DeleteDocumentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteDocumentsIdSecurity security;
-    public DeleteDocumentsIdRequest withSecurity(DeleteDocumentsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the document to be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteDocumentsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

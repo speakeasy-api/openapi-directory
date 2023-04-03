@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateApplicationAgentRequest {
-    
-    public CreateApplicationAgentPathParams pathParams;
-    public CreateApplicationAgentRequest withPathParams(CreateApplicationAgentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AgentCreateRequest agentCreateRequest;
+    public CreateApplicationAgentRequest withAgentCreateRequest(org.openapis.openapi.models.shared.AgentCreateRequest agentCreateRequest) {
+        this.agentCreateRequest = agentCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AgentCreateRequest request;
-    public CreateApplicationAgentRequest withRequest(org.openapis.openapi.models.shared.AgentCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public CreateApplicationAgentRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     

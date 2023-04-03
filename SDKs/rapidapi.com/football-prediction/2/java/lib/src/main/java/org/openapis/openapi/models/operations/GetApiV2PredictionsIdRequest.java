@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2PredictionsIdRequest {
-    
-    public GetApiV2PredictionsIdPathParams pathParams;
-    public GetApiV2PredictionsIdRequest withPathParams(GetApiV2PredictionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of match
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetApiV2PredictionsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

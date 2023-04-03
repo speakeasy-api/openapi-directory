@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReceiptsPhotoToCSVSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeApikey apikey;
-    public ReceiptsPhotoToCSVSecurity withApikey(org.openapis.openapi.models.shared.SchemeApikey apikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Apikey")
+    public String apikey;
+    public ReceiptsPhotoToCSVSecurity withApikey(String apikey) {
         this.apikey = apikey;
         return this;
     }

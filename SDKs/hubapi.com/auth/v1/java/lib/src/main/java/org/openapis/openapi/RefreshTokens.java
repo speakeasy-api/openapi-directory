@@ -31,7 +31,7 @@ public class RefreshTokens {
 
     public org.openapis.openapi.models.operations.DeleteOauthV1RefreshTokensTokenArchiveResponse deleteOauthV1RefreshTokensTokenArchive(org.openapis.openapi.models.operations.DeleteOauthV1RefreshTokensTokenArchiveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOauthV1RefreshTokensTokenArchivePathParams.class, baseUrl, "/oauth/v1/refresh-tokens/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOauthV1RefreshTokensTokenArchiveRequest.class, baseUrl, "/oauth/v1/refresh-tokens/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -64,7 +64,7 @@ public class RefreshTokens {
 
     public org.openapis.openapi.models.operations.GetOauthV1RefreshTokensTokenGetResponse getOauthV1RefreshTokensTokenGet(org.openapis.openapi.models.operations.GetOauthV1RefreshTokensTokenGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOauthV1RefreshTokensTokenGetPathParams.class, baseUrl, "/oauth/v1/refresh-tokens/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOauthV1RefreshTokensTokenGetRequest.class, baseUrl, "/oauth/v1/refresh-tokens/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

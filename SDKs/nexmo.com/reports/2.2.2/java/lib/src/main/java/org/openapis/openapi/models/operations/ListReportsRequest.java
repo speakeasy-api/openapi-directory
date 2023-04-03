@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListReportsRequest {
-    
-    public ListReportsQueryParams queryParams;
-    public ListReportsRequest withQueryParams(ListReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account for which the list of reports will be queried.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public String accountId;
+    public ListReportsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    /**
+     * ISO-8601 extended time zone offset or ISO-8601 UTC zone offset formatted date from which the list of reports will be queried. Format `yyyy-mm-ddThh:mm:ss[.sss]\u00b1hh:mm` or `yyyy-mm-ddThh:mm:ss[.sss]Z`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_from")
+    public LocalDate dateFrom;
+    public ListReportsRequest withDateFrom(LocalDate dateFrom) {
+        this.dateFrom = dateFrom;
+        return this;
+    }
     
-    public ListReportsSecurity security;
-    public ListReportsRequest withSecurity(ListReportsSecurity security) {
-        this.security = security;
+    /**
+     * ISO-8601 extended time zone offset or ISO-8601 UTC zone offset formatted date until which the list of reports will be queried. Format `yyyy-mm-ddThh:mm:ss[.sss]\u00b1hh:mm` or `yyyy-mm-ddThh:mm:ss[.sss]Z`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_to")
+    public LocalDate dateTo;
+    public ListReportsRequest withDateTo(LocalDate dateTo) {
+        this.dateTo = dateTo;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of report status values. Reports with any of the statuses specified are returned. The values in the comma-seperated list specified for `status` can be any of `PENDING`, `PROCESSING`, `SUCCESS`, `ABORTED`, `FAILED`, `TRUNCATED`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ListReportsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

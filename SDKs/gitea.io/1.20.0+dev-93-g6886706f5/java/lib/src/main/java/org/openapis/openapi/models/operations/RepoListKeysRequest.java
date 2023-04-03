@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListKeysRequest {
-    
-    public RepoListKeysPathParams pathParams;
-    public RepoListKeysRequest withPathParams(RepoListKeysPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * fingerprint of the key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fingerprint")
+    public String fingerprint;
+    public RepoListKeysRequest withFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
         return this;
     }
     
+    /**
+     * the key_id to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key_id")
+    public Long keyId;
+    public RepoListKeysRequest withKeyId(Long keyId) {
+        this.keyId = keyId;
+        return this;
+    }
     
-    public RepoListKeysQueryParams queryParams;
-    public RepoListKeysRequest withQueryParams(RepoListKeysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoListKeysRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListKeysRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoListKeysRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListKeysRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

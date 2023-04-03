@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPackageServiceRequest {
-    
-    public PostPackageServiceQueryParams queryParams;
-    public PostPackageServiceRequest withQueryParams(PostPackageServiceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cmd")
+    public String cmd;
+    public PostPackageServiceRequest withCmd(String cmd) {
+        this.cmd = cmd;
         return this;
     }
     

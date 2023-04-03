@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrganizationAdaptivePolicyAclRequest {
-    
-    public CreateOrganizationAdaptivePolicyAclPathParams pathParams;
-    public CreateOrganizationAdaptivePolicyAclRequest withPathParams(CreateOrganizationAdaptivePolicyAclPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateOrganizationAdaptivePolicyAclRequestBody requestBody;
+    public CreateOrganizationAdaptivePolicyAclRequest withRequestBody(CreateOrganizationAdaptivePolicyAclRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateOrganizationAdaptivePolicyAclRequestBody request;
-    public CreateOrganizationAdaptivePolicyAclRequest withRequest(CreateOrganizationAdaptivePolicyAclRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CreateOrganizationAdaptivePolicyAclRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

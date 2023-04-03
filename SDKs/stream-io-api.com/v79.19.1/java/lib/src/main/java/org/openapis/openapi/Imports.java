@@ -39,7 +39,7 @@ public class Imports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateImportResponse createImport(org.openapis.openapi.models.operations.CreateImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateImportResponse createImport(org.openapis.openapi.models.shared.CreateImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/imports");
         
@@ -102,7 +102,7 @@ public class Imports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateImportURLResponse createImportURL(org.openapis.openapi.models.operations.CreateImportURLRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateImportURLResponse createImportURL(org.openapis.openapi.models.shared.CreateImportURLRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/import_urls");
         

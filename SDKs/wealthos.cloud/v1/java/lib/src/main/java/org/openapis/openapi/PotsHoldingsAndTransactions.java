@@ -61,23 +61,24 @@ public class PotsHoldingsAndTransactions {
      * Update existing Pot details
      * Update an existing Pot. WealthOS will update only the fields sent in the payload.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePotResponse updatePot(org.openapis.openapi.models.operations.UpdatePotRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePotResponse updatePot(org.openapis.openapi.models.operations.UpdatePotRequest request, org.openapis.openapi.models.operations.UpdatePotSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePotPathParams.class, baseUrl, "/tenant/pots/v1/{pot_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePotRequest.class, baseUrl, "/tenant/pots/v1/{pot_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -86,7 +87,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,20 +170,21 @@ public class PotsHoldingsAndTransactions {
     /**
      * Create new pot
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePotResponse createPot(org.openapis.openapi.models.operations.CreatePotRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePotResponse createPot(org.openapis.openapi.models.operations.CreatePotRequest request, org.openapis.openapi.models.operations.CreatePotSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/pots/v1");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -191,7 +193,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,18 +268,19 @@ public class PotsHoldingsAndTransactions {
     /**
      * Retrive existing pot from pot id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPotResponse getPot(org.openapis.openapi.models.operations.GetPotRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPotResponse getPot(org.openapis.openapi.models.operations.GetPotRequest request, org.openapis.openapi.models.operations.GetPotSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotPathParams.class, baseUrl, "/tenant/pots/v1/{pot_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotRequest.class, baseUrl, "/tenant/pots/v1/{pot_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -286,7 +289,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -354,18 +357,19 @@ public class PotsHoldingsAndTransactions {
      * Get current holdings of a pot
      * Get a breakdown of all the holdings of a pot (cash and investment product holdings)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPotHoldingsResponse getPotHoldings(org.openapis.openapi.models.operations.GetPotHoldingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPotHoldingsResponse getPotHoldings(org.openapis.openapi.models.operations.GetPotHoldingsRequest request, org.openapis.openapi.models.operations.GetPotHoldingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotHoldingsPathParams.class, baseUrl, "/tenant/pots/v1/{pot_id}/getHoldings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotHoldingsRequest.class, baseUrl, "/tenant/pots/v1/{pot_id}/getHoldings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -374,7 +378,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,24 +454,25 @@ public class PotsHoldingsAndTransactions {
      * Get pending &amp; past transactions of a pot
      * Get a list of pending and archived transactions of the pot by date range. Only last 1000 records will be recieved if the result contain more that 1000 transactions. In that case, the pagination should be used.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPotTransactionsResponse getPotTransactions(org.openapis.openapi.models.operations.GetPotTransactionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPotTransactionsResponse getPotTransactions(org.openapis.openapi.models.operations.GetPotTransactionsRequest request, org.openapis.openapi.models.operations.GetPotTransactionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotTransactionsPathParams.class, baseUrl, "/tenant/pots/v1/{pot_id}/getTransactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotTransactionsRequest.class, baseUrl, "/tenant/pots/v1/{pot_id}/getTransactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPotTransactionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPotTransactionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -476,7 +481,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,18 +549,19 @@ public class PotsHoldingsAndTransactions {
      * Get current value of a pot
      * Get the current value of the pot (including cash and investment product holdings)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPotValueResponse getPotValue(org.openapis.openapi.models.operations.GetPotValueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPotValueResponse getPotValue(org.openapis.openapi.models.operations.GetPotValueRequest request, org.openapis.openapi.models.operations.GetPotValueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotValuePathParams.class, baseUrl, "/tenant/pots/v1/{pot_id}/getValue", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotValueRequest.class, baseUrl, "/tenant/pots/v1/{pot_id}/getValue", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -564,7 +570,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -640,24 +646,25 @@ public class PotsHoldingsAndTransactions {
      * Get all pots for an investor
      * Get all Investment Pots of the investor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPotsResponse getPots(org.openapis.openapi.models.operations.GetPotsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPotsResponse getPots(org.openapis.openapi.models.operations.GetPotsRequest request, org.openapis.openapi.models.operations.GetPotsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotsPathParams.class, baseUrl, "/tenant/pots/v1/getInvestorPots/{investor_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPotsRequest.class, baseUrl, "/tenant/pots/v1/getInvestorPots/{investor_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPotsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPotsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -666,7 +673,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -742,18 +749,19 @@ public class PotsHoldingsAndTransactions {
      * Get total holdings of an Investor
      * Get a breakdown of all the holdings(cash and investment product holdings) of an investor organised by the pot they belong to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTotalPotHoldingsResponse getTotalPotHoldings(org.openapis.openapi.models.operations.GetTotalPotHoldingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTotalPotHoldingsResponse getTotalPotHoldings(org.openapis.openapi.models.operations.GetTotalPotHoldingsRequest request, org.openapis.openapi.models.operations.GetTotalPotHoldingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTotalPotHoldingsPathParams.class, baseUrl, "/tenant/pots/v1/all/getHoldings/{investor_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTotalPotHoldingsRequest.class, baseUrl, "/tenant/pots/v1/all/getHoldings/{investor_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -762,7 +770,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -830,18 +838,19 @@ public class PotsHoldingsAndTransactions {
      * Get total value of all pots of an investor
      * Get the current value of all the investor\u2019s pots broken down by currency (including cash and investment product holdings)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTotalPotValueResponse getTotalPotValue(org.openapis.openapi.models.operations.GetTotalPotValueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTotalPotValueResponse getTotalPotValue(org.openapis.openapi.models.operations.GetTotalPotValueRequest request, org.openapis.openapi.models.operations.GetTotalPotValueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTotalPotValuePathParams.class, baseUrl, "/tenant/pots/v1/all/getValue/{investor_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTotalPotValueRequest.class, baseUrl, "/tenant/pots/v1/all/getValue/{investor_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -850,7 +859,7 @@ public class PotsHoldingsAndTransactions {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

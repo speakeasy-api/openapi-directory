@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRecordingAddOnResultPayloadRequest {
-    
-    public ListRecordingAddOnResultPayloadPathParams pathParams;
-    public ListRecordingAddOnResultPayloadRequest withPathParams(ListRecordingAddOnResultPayloadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording AddOnResult Payload resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListRecordingAddOnResultPayloadRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListRecordingAddOnResultPayloadQueryParams queryParams;
-    public ListRecordingAddOnResultPayloadRequest withQueryParams(ListRecordingAddOnResultPayloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the AddOnResult to which the payloads to read belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AddOnResultSid")
+    public String addOnResultSid;
+    public ListRecordingAddOnResultPayloadRequest withAddOnResultSid(String addOnResultSid) {
+        this.addOnResultSid = addOnResultSid;
         return this;
     }
     
-    
-    public ListRecordingAddOnResultPayloadSecurity security;
-    public ListRecordingAddOnResultPayloadRequest withSecurity(ListRecordingAddOnResultPayloadSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListRecordingAddOnResultPayloadRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListRecordingAddOnResultPayloadRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListRecordingAddOnResultPayloadRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListRecordingAddOnResultPayloadRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The SID of the recording to which the AddOnResult resource that contains the payloads to read belongs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ReferenceSid")
+    public String referenceSid;
+    public ListRecordingAddOnResultPayloadRequest withReferenceSid(String referenceSid) {
+        this.referenceSid = referenceSid;
         return this;
     }
     

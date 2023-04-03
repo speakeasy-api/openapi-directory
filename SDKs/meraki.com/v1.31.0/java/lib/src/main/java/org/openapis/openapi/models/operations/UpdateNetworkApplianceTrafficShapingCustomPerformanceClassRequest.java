@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest {
-    
-    public UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams pathParams;
-    public UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withPathParams(UpdateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody requestBody;
+    public UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withRequestBody(UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody request;
-    public UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withRequest(UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customPerformanceClassId")
+    public String customPerformanceClassId;
+    public UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withCustomPerformanceClassId(String customPerformanceClassId) {
+        this.customPerformanceClassId = customPerformanceClassId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

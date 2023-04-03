@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreReleasePublishLogsGetRequest {
-    
-    public StoreReleasePublishLogsGetPathParams pathParams;
-    public StoreReleasePublishLogsGetRequest withPathParams(StoreReleasePublishLogsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public StoreReleasePublishLogsGetRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public StoreReleasePublishLogsGetRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public StoreReleasePublishLogsGetSecurity security;
-    public StoreReleasePublishLogsGetRequest withSecurity(StoreReleasePublishLogsGetSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the realease
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public String releaseId;
+    public StoreReleasePublishLogsGetRequest withReleaseId(String releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The name of the store
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
+    public String storeName;
+    public StoreReleasePublishLogsGetRequest withStoreName(String storeName) {
+        this.storeName = storeName;
         return this;
     }
     

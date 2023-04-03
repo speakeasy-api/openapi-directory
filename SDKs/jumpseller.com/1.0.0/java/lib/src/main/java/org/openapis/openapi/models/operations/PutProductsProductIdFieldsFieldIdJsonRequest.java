@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsProductIdFieldsFieldIdJsonRequest {
-    
-    public PutProductsProductIdFieldsFieldIdJsonPathParams pathParams;
-    public PutProductsProductIdFieldsFieldIdJsonRequest withPathParams(PutProductsProductIdFieldsFieldIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutProductsProductIdFieldsFieldIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Custom Field Value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field_id")
+    public Integer fieldId;
+    public PutProductsProductIdFieldsFieldIdJsonRequest withFieldId(Integer fieldId) {
+        this.fieldId = fieldId;
+        return this;
+    }
     
-    public PutProductsProductIdFieldsFieldIdJsonQueryParams queryParams;
-    public PutProductsProductIdFieldsFieldIdJsonRequest withQueryParams(PutProductsProductIdFieldsFieldIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutProductsProductIdFieldsFieldIdJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    
+    /**
+     * Id of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=product_id")
+    public Integer productId;
+    public PutProductsProductIdFieldsFieldIdJsonRequest withProductId(Integer productId) {
+        this.productId = productId;
         return this;
     }
     

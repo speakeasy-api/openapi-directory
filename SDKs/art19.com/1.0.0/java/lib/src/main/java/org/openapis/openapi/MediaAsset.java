@@ -84,10 +84,11 @@ public class MediaAsset {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMediaAssetsResponse getMediaAssets(org.openapis.openapi.models.operations.GetMediaAssetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMediaAssetsResponse getMediaAssets(org.openapis.openapi.models.operations.GetMediaAssetsRequest request, org.openapis.openapi.models.operations.GetMediaAssetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/media_assets");
         
@@ -95,14 +96,14 @@ public class MediaAsset {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMediaAssetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMediaAssetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -192,19 +193,20 @@ public class MediaAsset {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMediaAssetsIdResponse getMediaAssetsId(org.openapis.openapi.models.operations.GetMediaAssetsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMediaAssetsIdResponse getMediaAssetsId(org.openapis.openapi.models.operations.GetMediaAssetsIdRequest request, org.openapis.openapi.models.operations.GetMediaAssetsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaAssetsIdPathParams.class, baseUrl, "/media_assets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaAssetsIdRequest.class, baseUrl, "/media_assets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

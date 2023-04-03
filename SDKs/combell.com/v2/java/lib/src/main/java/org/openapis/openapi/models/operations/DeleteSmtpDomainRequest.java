@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSmtpDomainRequest {
-    
-    public DeleteSmtpDomainPathParams pathParams;
-    public DeleteSmtpDomainRequest withPathParams(DeleteSmtpDomainPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public DeleteSmtpDomainRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * Mail zone domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public DeleteSmtpDomainRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public DeleteSmtpDomainQueryParams queryParams;
-    public DeleteSmtpDomainRequest withQueryParams(DeleteSmtpDomainQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Smtp domain name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hostname")
+    public String hostname;
+    public DeleteSmtpDomainRequest withHostname(String hostname) {
+        this.hostname = hostname;
         return this;
     }
     

@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersIdAccountingYearRequest {
-    
-    public PatchSpacesSpaceIdFoldersIdAccountingYearPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersIdAccountingYearRequest withPathParams(PatchSpacesSpaceIdFoldersIdAccountingYearPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Accounting year to modify (except name, class and archivaldate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersIdAccountingYearRequestBody request;
-    public PatchSpacesSpaceIdFoldersIdAccountingYearRequest withRequest(PatchSpacesSpaceIdFoldersIdAccountingYearRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersIdAccountingYearRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersIdAccountingYearRequest withRequestBody(PatchSpacesSpaceIdFoldersIdAccountingYearRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesSpaceIdFoldersIdAccountingYearRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersIdAccountingYearRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

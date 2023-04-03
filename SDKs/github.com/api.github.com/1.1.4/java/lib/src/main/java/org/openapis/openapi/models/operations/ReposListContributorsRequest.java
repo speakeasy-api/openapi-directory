@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListContributorsRequest {
-    
-    public ReposListContributorsPathParams pathParams;
-    public ReposListContributorsRequest withPathParams(ReposListContributorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Set to `1` or `true` to include anonymous contributors in results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=anon")
+    public String anon;
+    public ReposListContributorsRequest withAnon(String anon) {
+        this.anon = anon;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListContributorsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposListContributorsQueryParams queryParams;
-    public ReposListContributorsRequest withQueryParams(ReposListContributorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListContributorsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListContributorsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListContributorsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

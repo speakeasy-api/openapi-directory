@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetpersonshomeSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeCodeOauth codeOauth;
-    public SetpersonshomeSecurity withCodeOauth(org.openapis.openapi.models.shared.SchemeCodeOauth codeOauth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String codeOauth;
+    public SetpersonshomeSecurity withCodeOauth(String codeOauth) {
         this.codeOauth = codeOauth;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemePasswordOauth passwordOauth;
-    public SetpersonshomeSecurity withPasswordOauth(org.openapis.openapi.models.shared.SchemePasswordOauth passwordOauth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String passwordOauth;
+    public SetpersonshomeSecurity withPasswordOauth(String passwordOauth) {
         this.passwordOauth = passwordOauth;
         return this;
     }

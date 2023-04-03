@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DisableControlHeaders;
 import org.openapis.openapi.models.operations.DisableControlRequestBody;
 import org.openapis.openapi.models.operations.DisableControlRequest;
 import org.openapis.openapi.models.operations.DisableControlResponse;
@@ -27,27 +26,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DisableControlRequest req = new DisableControlRequest() {{
-                headers = new DisableControlHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new DisableControlRequestBody() {{
+                    controlIdentifier = "corrupti";
+                    targetIdentifier = "provident";
                 }};
-                request = new DisableControlRequestBody() {{
-                    controlIdentifier = "illum";
-                    targetIdentifier = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             DisableControlResponse res = sdk.disableControl(req);
 
@@ -61,7 +56,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

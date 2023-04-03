@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeFavoritesIdsRequest {
-    
-    public GetMeFavoritesIdsQueryParams queryParams;
-    public GetMeFavoritesIdsRequest withQueryParams(GetMeFavoritesIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetMeFavoritesIdsSecurity security;
-    public GetMeFavoritesIdsRequest withSecurity(GetMeFavoritesIdsSecurity security) {
-        this.security = security;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetMeFavoritesIdsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

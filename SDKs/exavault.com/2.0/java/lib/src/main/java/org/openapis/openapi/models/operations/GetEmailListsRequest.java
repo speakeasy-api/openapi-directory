@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmailListsRequest {
-    
-    public GetEmailListsQueryParams queryParams;
-    public GetEmailListsRequest withQueryParams(GetEmailListsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetEmailListsRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetEmailListsRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
     
-    public GetEmailListsHeaders headers;
-    public GetEmailListsRequest withHeaders(GetEmailListsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Related record types to include in the response. Valid option is `ownerUser`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetEmailListsRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

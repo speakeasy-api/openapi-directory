@@ -4,27 +4,186 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsInstancesRequest {
-    
-    public CalendarEventsInstancesPathParams pathParams;
-    public CalendarEventsInstancesRequest withPathParams(CalendarEventsInstancesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CalendarEventsInstancesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public CalendarEventsInstancesQueryParams queryParams;
-    public CalendarEventsInstancesRequest withQueryParams(CalendarEventsInstancesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Deprecated and ignored. A value will always be returned in the email field for the organizer, creator and attendees, even if no real email address is available (i.e. a generated, non-working value will be provided).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alwaysIncludeEmail")
+    public Boolean alwaysIncludeEmail;
+    public CalendarEventsInstancesRequest withAlwaysIncludeEmail(Boolean alwaysIncludeEmail) {
+        this.alwaysIncludeEmail = alwaysIncludeEmail;
         return this;
     }
     
+    /**
+     * Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
+    public String calendarId;
+    public CalendarEventsInstancesRequest withCalendarId(String calendarId) {
+        this.calendarId = calendarId;
+        return this;
+    }
     
-    public CalendarEventsInstancesSecurity security;
-    public CalendarEventsInstancesRequest withSecurity(CalendarEventsInstancesSecurity security) {
-        this.security = security;
+    /**
+     * Recurring event identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=eventId")
+    public String eventId;
+    public CalendarEventsInstancesRequest withEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CalendarEventsInstancesRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CalendarEventsInstancesRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of attendees to include in the response. If there are more than the specified number of attendees, only the participant is returned. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAttendees")
+    public Long maxAttendees;
+    public CalendarEventsInstancesRequest withMaxAttendees(Long maxAttendees) {
+        this.maxAttendees = maxAttendees;
+        return this;
+    }
+    
+    /**
+     * Maximum number of events returned on one result page. By default the value is 250 events. The page size can never be larger than 2500 events. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public CalendarEventsInstancesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CalendarEventsInstancesRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The original start time of the instance in the result. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=originalStart")
+    public String originalStart;
+    public CalendarEventsInstancesRequest withOriginalStart(String originalStart) {
+        this.originalStart = originalStart;
+        return this;
+    }
+    
+    /**
+     * Token specifying which result page to return. Optional.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public CalendarEventsInstancesRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CalendarEventsInstancesRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CalendarEventsInstancesRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Whether to include deleted events (with status equals "cancelled") in the result. Cancelled instances of recurring events will still be included if singleEvents is False. Optional. The default is False.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
+    public Boolean showDeleted;
+    public CalendarEventsInstancesRequest withShowDeleted(Boolean showDeleted) {
+        this.showDeleted = showDeleted;
+        return this;
+    }
+    
+    /**
+     * Upper bound (exclusive) for an event's start time to filter by. Optional. The default is not to filter by start time. Must be an RFC3339 timestamp with mandatory time zone offset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeMax")
+    public String timeMax;
+    public CalendarEventsInstancesRequest withTimeMax(String timeMax) {
+        this.timeMax = timeMax;
+        return this;
+    }
+    
+    /**
+     * Lower bound (inclusive) for an event's end time to filter by. Optional. The default is not to filter by end time. Must be an RFC3339 timestamp with mandatory time zone offset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeMin")
+    public String timeMin;
+    public CalendarEventsInstancesRequest withTimeMin(String timeMin) {
+        this.timeMin = timeMin;
+        return this;
+    }
+    
+    /**
+     * Time zone used in the response. Optional. The default is the time zone of the calendar.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeZone")
+    public String timeZone;
+    public CalendarEventsInstancesRequest withTimeZone(String timeZone) {
+        this.timeZone = timeZone;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public CalendarEventsInstancesRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

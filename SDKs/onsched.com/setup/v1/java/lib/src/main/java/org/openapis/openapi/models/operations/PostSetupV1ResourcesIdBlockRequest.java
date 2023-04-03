@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1ResourcesIdBlockRequest {
-    
-    public PostSetupV1ResourcesIdBlockPathParams pathParams;
-    public PostSetupV1ResourcesIdBlockRequest withPathParams(PostSetupV1ResourcesIdBlockPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ResourceBlockInputModel resourceBlockInputModel;
+    public PostSetupV1ResourcesIdBlockRequest withResourceBlockInputModel(org.openapis.openapi.models.shared.ResourceBlockInputModel resourceBlockInputModel) {
+        this.resourceBlockInputModel = resourceBlockInputModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResourceBlockInputModel request;
-    public PostSetupV1ResourcesIdBlockRequest withRequest(org.openapis.openapi.models.shared.ResourceBlockInputModel request) {
-        this.request = request;
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSetupV1ResourcesIdBlockRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

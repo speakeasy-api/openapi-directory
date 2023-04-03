@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/TranslateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/TranslateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Translate500ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/Translate400ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/TranslateResponse.java
@@ -40,5 +39,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorParameter.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Translation.java
 lib/src/main/java/org/openapis/openapi/models/shared/TranslateRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIAuth.java
 USAGE.md

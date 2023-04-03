@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchBalanceRequest {
-    
-    public FetchBalancePathParams pathParams;
-    public FetchBalanceRequest withPathParams(FetchBalancePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchBalanceSecurity security;
-    public FetchBalanceRequest withSecurity(FetchBalanceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchBalanceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchBalanceRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEventRequest {
+    /**
+     * Conversation ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public DeleteEventRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
+        return this;
+    }
     
-    public DeleteEventPathParams pathParams;
-    public DeleteEventRequest withPathParams(DeleteEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Event ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_id")
+    public String eventId;
+    public DeleteEventRequest withEventId(String eventId) {
+        this.eventId = eventId;
         return this;
     }
     

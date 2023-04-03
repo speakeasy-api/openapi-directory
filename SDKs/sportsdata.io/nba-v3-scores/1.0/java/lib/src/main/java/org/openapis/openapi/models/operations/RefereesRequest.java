@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RefereesRequest {
-    
-    public RefereesPathParams pathParams;
-    public RefereesRequest withPathParams(RefereesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public RefereesFormatEnum format;
+    public RefereesRequest withFormat(RefereesFormatEnum format) {
+        this.format = format;
         return this;
     }
     

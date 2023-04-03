@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePaymentPolicyRequest {
-    
-    public DeletePaymentPolicyPathParams pathParams;
-    public DeletePaymentPolicyRequest withPathParams(DeletePaymentPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeletePaymentPolicySecurity security;
-    public DeletePaymentPolicyRequest withSecurity(DeletePaymentPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the payment policy you want to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_policy_id")
+    public String paymentPolicyId;
+    public DeletePaymentPolicyRequest withPaymentPolicyId(String paymentPolicyId) {
+        this.paymentPolicyId = paymentPolicyId;
         return this;
     }
     

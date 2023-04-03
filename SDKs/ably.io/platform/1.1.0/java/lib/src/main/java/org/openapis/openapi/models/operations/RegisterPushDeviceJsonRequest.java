@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegisterPushDeviceJsonRequest {
-    
-    public RegisterPushDeviceJsonQueryParams queryParams;
-    public RegisterPushDeviceJsonRequest withQueryParams(RegisterPushDeviceJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public RegisterPushDeviceJsonHeaders headers;
-    public RegisterPushDeviceJsonRequest withHeaders(RegisterPushDeviceJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeviceDetailsInput request;
-    public RegisterPushDeviceJsonRequest withRequest(org.openapis.openapi.models.shared.DeviceDetailsInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DeviceDetailsInput deviceDetailsInput;
+    public RegisterPushDeviceJsonRequest withDeviceDetailsInput(org.openapis.openapi.models.shared.DeviceDetailsInput deviceDetailsInput) {
+        this.deviceDetailsInput = deviceDetailsInput;
+        return this;
+    }
+    
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public RegisterPushDeviceJsonRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public RegisterPushDeviceJsonRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
         return this;
     }
     

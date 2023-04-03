@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest {
-    
-    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreatePathParams pathParams;
-    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withPathParams(NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateQueryParams queryParams;
-    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withQueryParams(NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GatewaySecurityPolicyRuleInput request;
-    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withRequest(org.openapis.openapi.models.shared.GatewaySecurityPolicyRuleInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GatewaySecurityPolicyRuleInput gatewaySecurityPolicyRuleInput;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withGatewaySecurityPolicyRuleInput(org.openapis.openapi.models.shared.GatewaySecurityPolicyRuleInput gatewaySecurityPolicyRuleInput) {
+        this.gatewaySecurityPolicyRuleInput = gatewaySecurityPolicyRuleInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateSecurity security;
-    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withSecurity(NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The ID to use for the rule, which will become the final component of the rule's resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gatewaySecurityPolicyRuleId")
+    public String gatewaySecurityPolicyRuleId;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withGatewaySecurityPolicyRuleId(String gatewaySecurityPolicyRuleId) {
+        this.gatewaySecurityPolicyRuleId = gatewaySecurityPolicyRuleId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent where this rule will be created. Format : projects/{project}/location/{location}/gatewaySecurityPolicies/*
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public NetworksecurityProjectsLocationsGatewaySecurityPoliciesRulesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

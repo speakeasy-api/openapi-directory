@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateScanRequest {
-    
-    public CreateScanPathParams pathParams;
-    public CreateScanRequest withPathParams(CreateScanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/json")
-    public org.openapis.openapi.models.shared.ScanOptions request;
-    public CreateScanRequest withRequest(org.openapis.openapi.models.shared.ScanOptions request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScanOptions scanOptions;
+    public CreateScanRequest withScanOptions(org.openapis.openapi.models.shared.ScanOptions scanOptions) {
+        this.scanOptions = scanOptions;
         return this;
     }
     
-    
-    public CreateScanSecurity security;
-    public CreateScanRequest withSecurity(CreateScanSecurity security) {
-        this.security = security;
+    /**
+     * UUID or name of the site to scan
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
+    public String siteId;
+    public CreateScanRequest withSiteId(String siteId) {
+        this.siteId = siteId;
         return this;
     }
     

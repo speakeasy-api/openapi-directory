@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShippingFulfillmentRequest {
-    
-    public GetShippingFulfillmentPathParams pathParams;
-    public GetShippingFulfillmentRequest withPathParams(GetShippingFulfillmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the fulfillment. This eBay-generated value was created by the &lt;b&gt;Create Shipping Fulfillment&lt;/b&gt; call, and returned by the &lt;b&gt;getShippingFulfillments&lt;/b&gt; call in the &lt;b&gt;fulfillments.fulfillmentId&lt;/b&gt; field; for example, &lt;code&gt;9405509699937003457459&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fulfillmentId")
+    public String fulfillmentId;
+    public GetShippingFulfillmentRequest withFulfillmentId(String fulfillmentId) {
+        this.fulfillmentId = fulfillmentId;
         return this;
     }
     
-    
-    public GetShippingFulfillmentSecurity security;
-    public GetShippingFulfillmentRequest withSecurity(GetShippingFulfillmentSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the order. Order ID values are shown in My eBay/Seller Hub, and are also returned by the &lt;b&gt;getOrders&lt;/b&gt; method in the &lt;b&gt;orders.orderId&lt;/b&gt; field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetShippingFulfillmentRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

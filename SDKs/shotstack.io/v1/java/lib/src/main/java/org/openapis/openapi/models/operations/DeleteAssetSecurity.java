@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAssetSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeDeveloperKey developerKey;
-    public DeleteAssetSecurity withDeveloperKey(org.openapis.openapi.models.shared.SchemeDeveloperKey developerKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
+    public String developerKey;
+    public DeleteAssetSecurity withDeveloperKey(String developerKey) {
         this.developerKey = developerKey;
         return this;
     }

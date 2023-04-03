@@ -38,24 +38,25 @@ public class Invoices {
      * 
      * You cannot cancel an invoice in the `DRAFT` state or in a terminal state: `PAID`, `REFUNDED`, `CANCELED`, or `FAILED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelInvoiceResponse cancelInvoice(org.openapis.openapi.models.operations.CancelInvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelInvoiceResponse cancelInvoice(org.openapis.openapi.models.operations.CancelInvoiceRequest request, org.openapis.openapi.models.operations.CancelInvoiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelInvoicePathParams.class, baseUrl, "/v2/invoices/{invoice_id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelInvoiceRequest.class, baseUrl, "/v2/invoices/{invoice_id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cancelInvoiceRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,10 +88,11 @@ public class Invoices {
      * A draft invoice remains in your account and no action is taken. 
      * You must publish the invoice before Square can process it (send it to the customer's email address or charge the customer\u2019s card on file).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInvoiceResponse createInvoice(org.openapis.openapi.models.operations.CreateInvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInvoiceResponse createInvoice(org.openapis.openapi.models.shared.CreateInvoiceRequest request, org.openapis.openapi.models.operations.CreateInvoiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/invoices");
         
@@ -104,7 +106,7 @@ public class Invoices {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -134,25 +136,26 @@ public class Invoices {
      * associated order status changes to CANCELED. You can only delete a draft 
      * invoice (you cannot delete a published invoice, including one that is scheduled for processing).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteInvoiceResponse deleteInvoice(org.openapis.openapi.models.operations.DeleteInvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteInvoiceResponse deleteInvoice(org.openapis.openapi.models.operations.DeleteInvoiceRequest request, org.openapis.openapi.models.operations.DeleteInvoiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInvoicePathParams.class, baseUrl, "/v2/invoices/{invoice_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteInvoiceRequest.class, baseUrl, "/v2/invoices/{invoice_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteInvoiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteInvoiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -180,19 +183,20 @@ public class Invoices {
      * GetInvoice
      * Retrieves an invoice by invoice ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInvoiceResponse getInvoice(org.openapis.openapi.models.operations.GetInvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInvoiceResponse getInvoice(org.openapis.openapi.models.operations.GetInvoiceRequest request, org.openapis.openapi.models.operations.GetInvoiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoicePathParams.class, baseUrl, "/v2/invoices/{invoice_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInvoiceRequest.class, baseUrl, "/v2/invoices/{invoice_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -222,10 +226,11 @@ public class Invoices {
      * is paginated. If truncated, the response includes a `cursor` that you    
      * use in a subsequent request to retrieve the next set of invoices.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListInvoicesResponse listInvoices(org.openapis.openapi.models.operations.ListInvoicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListInvoicesResponse listInvoices(org.openapis.openapi.models.operations.ListInvoicesRequest request, org.openapis.openapi.models.operations.ListInvoicesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/invoices");
         
@@ -233,14 +238,14 @@ public class Invoices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInvoicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListInvoicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -278,24 +283,25 @@ public class Invoices {
      * Square emails the invoice or `PARTIALLY_PAID` if Square charge a card on file for a portion of the 
      * invoice amount.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PublishInvoiceResponse publishInvoice(org.openapis.openapi.models.operations.PublishInvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PublishInvoiceResponse publishInvoice(org.openapis.openapi.models.operations.PublishInvoiceRequest request, org.openapis.openapi.models.operations.PublishInvoiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishInvoicePathParams.class, baseUrl, "/v2/invoices/{invoice_id}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishInvoiceRequest.class, baseUrl, "/v2/invoices/{invoice_id}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "publishInvoiceRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -329,10 +335,11 @@ public class Invoices {
      * The response is paginated. If truncated, the response includes a `cursor` 
      * that you use in a subsequent request to retrieve the next set of invoices.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchInvoicesResponse searchInvoices(org.openapis.openapi.models.operations.SearchInvoicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchInvoicesResponse searchInvoices(org.openapis.openapi.models.shared.SearchInvoicesRequest request, org.openapis.openapi.models.operations.SearchInvoicesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/invoices/search");
         
@@ -346,7 +353,7 @@ public class Invoices {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -377,24 +384,25 @@ public class Invoices {
      * However, some restrictions apply. For example, you cannot change the `order_id` or `location_id` field and you 
      * must provide the complete `custom_fields` list to update a custom field. Published invoices have additional restrictions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateInvoiceResponse updateInvoice(org.openapis.openapi.models.operations.UpdateInvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateInvoiceResponse updateInvoice(org.openapis.openapi.models.operations.UpdateInvoiceRequest request, org.openapis.openapi.models.operations.UpdateInvoiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInvoicePathParams.class, baseUrl, "/v2/invoices/{invoice_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInvoiceRequest.class, baseUrl, "/v2/invoices/{invoice_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateInvoiceRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

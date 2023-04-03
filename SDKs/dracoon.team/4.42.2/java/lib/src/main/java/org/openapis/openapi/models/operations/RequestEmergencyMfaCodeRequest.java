@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestEmergencyMfaCodeRequest {
-    
-    public RequestEmergencyMfaCodePathParams pathParams;
-    public RequestEmergencyMfaCodeRequest withPathParams(RequestEmergencyMfaCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestEmergencyMfaCodeRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestEmergencyMfaCodeHeaders headers;
-    public RequestEmergencyMfaCodeRequest withHeaders(RequestEmergencyMfaCodeHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public RequestEmergencyMfaCodeRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -30,8 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetInventoryQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetInventoryHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInventoryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInventory200ApplicationXMLQuantityUnitEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInventory200ApplicationXMLQuantity.java
@@ -40,8 +38,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetInventory200Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/GetInventory200ApplicationJSONQuantity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInventory200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInventoryResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForAllSkuAndAllShipNodesQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForAllSkuAndAllShipNodesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForAllSkuAndAllShipNodesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQtyUnitEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONElementsInventoriesNodesAvailToSellQty.java
@@ -55,9 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryFo
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForAllSkuAndAllShipNodes200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForAllSkuAndAllShipNodesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodesPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodesQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQtyUnitEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodesAvailToSellQty.java
@@ -72,8 +65,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryFo
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSONNodes.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodes200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiNodeInventoryForSkuAndAllShipnodesResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventoryQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventoryHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventoryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventory200ApplicationJSONHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventory200ApplicationJSONPayloadInventoryShipNodes.java
@@ -81,17 +72,13 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventory200Appli
 lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventory200ApplicationJSONPayload.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventory200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWFSInventoryResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventoryFeedTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventoryQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventoryHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventoryRequestBodyFile.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventoryRequestBody.java
+lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventoryFeedTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventoryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventory200ApplicationXML.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventory200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateBulkInventoryResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemJsonQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemJsonHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemApplicationJSONQuantityUnitEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemApplicationJSONQuantity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemApplicationJSON.java
@@ -103,8 +90,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnIte
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemJSON200ApplicationJSONQuantity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemJsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemRawQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemRawHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemApplicationXMLQuantityUnitEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemApplicationXMLQuantity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemApplicationXML.java
@@ -116,8 +101,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnIte
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemRaw200ApplicationJSONQuantity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemRaw200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateInventoryForAnItemRawResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventoryPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventoryHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQtyUnitEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventoryRequestBodyInventoriesNodes.java

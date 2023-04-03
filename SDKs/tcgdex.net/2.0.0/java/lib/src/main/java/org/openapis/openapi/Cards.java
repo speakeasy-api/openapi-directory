@@ -79,7 +79,7 @@ public class Cards {
      */
     public org.openapis.openapi.models.operations.FindPetsByTagsResponse findPetsByTags(org.openapis.openapi.models.operations.FindPetsByTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindPetsByTagsPathParams.class, baseUrl, "/cards/{cardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindPetsByTagsRequest.class, baseUrl, "/cards/{cardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -113,7 +113,7 @@ public class Cards {
 
     public org.openapis.openapi.models.operations.GetSetsSetCardLocalIdResponse getSetsSetCardLocalId(org.openapis.openapi.models.operations.GetSetsSetCardLocalIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetsSetCardLocalIdPathParams.class, baseUrl, "/sets/{set}/{cardLocalId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSetsSetCardLocalIdRequest.class, baseUrl, "/sets/{set}/{cardLocalId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

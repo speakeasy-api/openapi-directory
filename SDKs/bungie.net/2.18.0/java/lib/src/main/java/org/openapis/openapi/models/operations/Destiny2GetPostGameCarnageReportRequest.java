@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetPostGameCarnageReportRequest {
-    
-    public Destiny2GetPostGameCarnageReportPathParams pathParams;
-    public Destiny2GetPostGameCarnageReportRequest withPathParams(Destiny2GetPostGameCarnageReportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the activity whose PGCR is requested.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=activityId")
+    public Long activityId;
+    public Destiny2GetPostGameCarnageReportRequest withActivityId(Long activityId) {
+        this.activityId = activityId;
         return this;
     }
     

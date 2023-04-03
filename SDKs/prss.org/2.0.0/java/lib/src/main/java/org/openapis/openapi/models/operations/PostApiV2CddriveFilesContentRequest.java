@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV2CddriveFilesContentRequest {
-    
-    public PostApiV2CddriveFilesContentHeaders headers;
-    public PostApiV2CddriveFilesContentRequest withHeaders(PostApiV2CddriveFilesContentHeaders headers) {
-        this.headers = headers;
+    /**
+     * If present, the MD5 will be compared against the file received as a message integrity check.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-MD5")
+    public String contentMd5;
+    public PostApiV2CddriveFilesContentRequest withContentMd5(String contentMd5) {
+        this.contentMd5 = contentMd5;
         return this;
     }
     
@@ -18,16 +21,9 @@ public class PostApiV2CddriveFilesContentRequest {
      * Form data defining the file to create.
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostApiV2CddriveFilesContentRequestBody request;
-    public PostApiV2CddriveFilesContentRequest withRequest(PostApiV2CddriveFilesContentRequestBody request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public PostApiV2CddriveFilesContentSecurity security;
-    public PostApiV2CddriveFilesContentRequest withSecurity(PostApiV2CddriveFilesContentSecurity security) {
-        this.security = security;
+    public PostApiV2CddriveFilesContentRequestBody requestBody;
+    public PostApiV2CddriveFilesContentRequest withRequestBody(PostApiV2CddriveFilesContentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

@@ -73,7 +73,7 @@ public class Trending {
      */
     public org.openapis.openapi.models.operations.TrendingGetTrendingCategoryResponse trendingGetTrendingCategory(org.openapis.openapi.models.operations.TrendingGetTrendingCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrendingGetTrendingCategoryPathParams.class, baseUrl, "/Trending/Categories/{categoryId}/{pageNumber}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrendingGetTrendingCategoryRequest.class, baseUrl, "/Trending/Categories/{categoryId}/{pageNumber}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -110,7 +110,7 @@ public class Trending {
      */
     public org.openapis.openapi.models.operations.TrendingGetTrendingEntryDetailResponse trendingGetTrendingEntryDetail(org.openapis.openapi.models.operations.TrendingGetTrendingEntryDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrendingGetTrendingEntryDetailPathParams.class, baseUrl, "/Trending/Details/{trendingEntryType}/{identifier}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TrendingGetTrendingEntryDetailRequest.class, baseUrl, "/Trending/Details/{trendingEntryType}/{identifier}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

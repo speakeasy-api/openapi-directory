@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrapConfigAddRequest {
+    /**
+     * IP of the destination
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IP")
+    public String ip;
+    public TrapConfigAddRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
     
-    public TrapConfigAddPathParams pathParams;
-    public TrapConfigAddRequest withPathParams(TrapConfigAddPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to add the destination
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public TrapConfigAddRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * port of the destination
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public TrapConfigAddRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

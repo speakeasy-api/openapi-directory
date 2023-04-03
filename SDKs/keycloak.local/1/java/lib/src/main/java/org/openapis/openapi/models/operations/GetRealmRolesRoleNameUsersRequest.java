@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmRolesRoleNameUsersRequest {
-    
-    public GetRealmRolesRoleNameUsersPathParams pathParams;
-    public GetRealmRolesRoleNameUsersRequest withPathParams(GetRealmRolesRoleNameUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmRolesRoleNameUsersRequest withFirst(Integer first) {
+        this.first = first;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmRolesRoleNameUsersRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
     
-    public GetRealmRolesRoleNameUsersQueryParams queryParams;
-    public GetRealmRolesRoleNameUsersRequest withQueryParams(GetRealmRolesRoleNameUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmRolesRoleNameUsersRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public GetRealmRolesRoleNameUsersRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

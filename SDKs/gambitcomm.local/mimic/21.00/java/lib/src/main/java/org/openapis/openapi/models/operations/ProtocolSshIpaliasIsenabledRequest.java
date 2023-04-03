@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSshIpaliasIsenabledRequest {
+    /**
+     * Agent to manipulate SSH IP alias
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSshIpaliasIsenabledRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSshIpaliasIsenabledPathParams pathParams;
-    public ProtocolSshIpaliasIsenabledRequest withPathParams(ProtocolSshIpaliasIsenabledPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ipaddress")
+    public String ipaddress;
+    public ProtocolSshIpaliasIsenabledRequest withIpaddress(String ipaddress) {
+        this.ipaddress = ipaddress;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public ProtocolSshIpaliasIsenabledRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

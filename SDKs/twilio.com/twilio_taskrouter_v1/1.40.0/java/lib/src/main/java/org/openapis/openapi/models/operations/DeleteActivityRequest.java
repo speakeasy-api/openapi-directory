@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteActivityRequest {
-    
-    public DeleteActivityPathParams pathParams;
-    public DeleteActivityRequest withPathParams(DeleteActivityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Activity resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteActivityRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteActivitySecurity security;
-    public DeleteActivityRequest withSecurity(DeleteActivitySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteActivityRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Activity resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public DeleteActivityRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

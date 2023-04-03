@@ -37,23 +37,24 @@ public class CustomPolicy {
     /**
      * This method creates a new custom policy in which a seller specifies their terms for complying with local governmental regulations. &lt;br/&gt;&lt;br/&gt;Two Custom Policy types are supported: &lt;ul&gt;&lt;li&gt;Product Compliance (PRODUCT_COMPLIANCE)&lt;/li&gt; &lt;li&gt;Takeback (TAKE_BACK)&lt;/li&gt;&lt;/ul&gt;Each Custom Policy targets a &lt;b&gt;policyType&lt;/b&gt; and &lt;b&gt;eBay marketplace&lt;/b&gt; combination. Multiple policies may be created as follows: &lt;ul&gt;&lt;li&gt;&lt;b&gt;Product Compliance&lt;/b&gt;: a maximum of 10 policies per eBay marketplace may be created&lt;/li&gt; &lt;li&gt;&lt;b&gt;Takeback&lt;/b&gt;: a maximum of 3 policies per eBay marketplace may be created&lt;/li&gt;&lt;/ul&gt;A successful create policy call returns an HTTP status code of &lt;b&gt;201 Created&lt;/b&gt; with the system-generated policy ID included in the &lt;b&gt;Location&lt;/b&gt; response header.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Product Compliance Policy&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Product Compliance policies disclose product information as required for regulatory compliance.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; A maximum of 10 Product Compliance policies per eBay marketplace may be created.&lt;/span&gt; &lt;br/&gt;&lt;br/&gt; &lt;b&gt;Takeback Policy&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;Takeback policies describe the seller's legal obligation to take back a previously purchased item when the buyer purchases a new one.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; A maximum of 3 Takeback policies per eBay marketplace may be created.&lt;/span&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCustomPolicyResponse createCustomPolicy(org.openapis.openapi.models.operations.CreateCustomPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCustomPolicyResponse createCustomPolicy(org.openapis.openapi.models.operations.CreateCustomPolicyRequest request, org.openapis.openapi.models.operations.CreateCustomPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/custom_policy/");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customPolicyCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -62,7 +63,7 @@ public class CustomPolicy {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -93,10 +94,11 @@ public class CustomPolicy {
     /**
      * This method retrieves the list of custom policies specified by the &lt;b&gt;policy_types&lt;/b&gt; query parameter for the selected eBay marketplace.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank"&gt;HTTP request headers&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCustomPoliciesResponse getCustomPolicies(org.openapis.openapi.models.operations.GetCustomPoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCustomPoliciesResponse getCustomPolicies(org.openapis.openapi.models.operations.GetCustomPoliciesRequest request, org.openapis.openapi.models.operations.GetCustomPoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/custom_policy/");
         
@@ -104,13 +106,13 @@ public class CustomPolicy {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomPoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomPoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -119,7 +121,7 @@ public class CustomPolicy {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,18 +150,19 @@ public class CustomPolicy {
     /**
      * This method retrieves the custom policy specified by the &lt;b&gt;custom_policy_id&lt;/b&gt; path parameter for the selected eBay marketplace.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP" target="_blank"&gt;HTTP request headers&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCustomPolicyResponse getCustomPolicy(org.openapis.openapi.models.operations.GetCustomPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCustomPolicyResponse getCustomPolicy(org.openapis.openapi.models.operations.GetCustomPolicyRequest request, org.openapis.openapi.models.operations.GetCustomPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomPolicyPathParams.class, baseUrl, "/custom_policy/{custom_policy_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomPolicyRequest.class, baseUrl, "/custom_policy/{custom_policy_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -168,7 +171,7 @@ public class CustomPolicy {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,23 +200,24 @@ public class CustomPolicy {
     /**
      * This method updates an existing custom policy specified by the &lt;b&gt;custom_policy_id&lt;/b&gt; path parameter for the selected marketplace. This method overwrites the policy's &lt;b&gt;Name&lt;/b&gt;, &lt;b&gt;Label&lt;/b&gt;, and &lt;b&gt;Description&lt;/b&gt; fields. Therefore, the complete, current text of all three policy fields must be included in the request payload even when one or two of these fields will not actually be updated.&lt;br/&gt; &lt;br/&gt;For example, the value for the &lt;b&gt;Label&lt;/b&gt; field is to be updated, but the &lt;b&gt;Name&lt;/b&gt; and &lt;b&gt;Description&lt;/b&gt; values will remain unchanged. The existing &lt;b&gt;Name&lt;/b&gt; and &lt;b&gt;Description&lt;/b&gt; values, as they are defined in the current policy, must also be passed in. &lt;br/&gt;&lt;br/&gt;A successful policy update call returns an HTTP status code of &lt;b&gt;204 No Content&lt;/b&gt;.&lt;br/&gt;&lt;br/&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;For details on header values, see &lt;a href="/api-docs/static/rest-request-components.html#HTTP"&gt;HTTP request headers&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCustomPolicyResponse updateCustomPolicy(org.openapis.openapi.models.operations.UpdateCustomPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCustomPolicyResponse updateCustomPolicy(org.openapis.openapi.models.operations.UpdateCustomPolicyRequest request, org.openapis.openapi.models.operations.UpdateCustomPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomPolicyPathParams.class, baseUrl, "/custom_policy/{custom_policy_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomPolicyRequest.class, baseUrl, "/custom_policy/{custom_policy_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customPolicyRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -222,7 +226,7 @@ public class CustomPolicy {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

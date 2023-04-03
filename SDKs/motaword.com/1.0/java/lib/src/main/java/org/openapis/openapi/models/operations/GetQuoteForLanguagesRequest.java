@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteForLanguagesRequest {
-    
-    public GetQuoteForLanguagesPathParams pathParams;
-    public GetQuoteForLanguagesRequest withPathParams(GetQuoteForLanguagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GetQuotesForLanguagesBody getQuotesForLanguagesBody;
+    public GetQuoteForLanguagesRequest withGetQuotesForLanguagesBody(org.openapis.openapi.models.shared.GetQuotesForLanguagesBody getQuotesForLanguagesBody) {
+        this.getQuotesForLanguagesBody = getQuotesForLanguagesBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetQuotesForLanguagesBody request;
-    public GetQuoteForLanguagesRequest withRequest(org.openapis.openapi.models.shared.GetQuotesForLanguagesBody request) {
-        this.request = request;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetQuoteForLanguagesRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

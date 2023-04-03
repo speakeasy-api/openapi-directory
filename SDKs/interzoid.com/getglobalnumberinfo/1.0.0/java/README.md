@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetglobalnumberinfoQueryParams;
 import org.openapis.openapi.models.operations.GetglobalnumberinfoRequest;
 import org.openapis.openapi.models.operations.GetglobalnumberinfoResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetglobalnumberinfoRequest req = new GetglobalnumberinfoRequest() {{
-                queryParams = new GetglobalnumberinfoQueryParams() {{
-                    intlnumber = "corrupti";
-                    license = "provident";
-                }};
-            }};            
+                intlnumber = "corrupti";
+                license = "provident";
+            }}            
 
             GetglobalnumberinfoResponse res = sdk.globalPhoneNumberInformation.getglobalnumberinfo(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### globalPhoneNumberInformation

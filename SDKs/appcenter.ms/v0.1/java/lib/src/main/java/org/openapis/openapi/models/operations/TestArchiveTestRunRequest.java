@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestArchiveTestRunRequest {
-    
-    public TestArchiveTestRunPathParams pathParams;
-    public TestArchiveTestRunRequest withPathParams(TestArchiveTestRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestArchiveTestRunRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestArchiveTestRunRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public TestArchiveTestRunSecurity security;
-    public TestArchiveTestRunRequest withSecurity(TestArchiveTestRunSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the test run
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_run_id")
+    public String testRunId;
+    public TestArchiveTestRunRequest withTestRunId(String testRunId) {
+        this.testRunId = testRunId;
         return this;
     }
     

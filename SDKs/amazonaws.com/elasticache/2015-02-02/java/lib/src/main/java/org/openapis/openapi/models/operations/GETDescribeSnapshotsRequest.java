@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeSnapshotsRequest {
-    
-    public GETDescribeSnapshotsQueryParams queryParams;
-    public GETDescribeSnapshotsRequest withQueryParams(GETDescribeSnapshotsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeSnapshotsActionEnum action;
+    public GETDescribeSnapshotsRequest withAction(GETDescribeSnapshotsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A user-supplied cluster identifier. If this parameter is specified, only snapshots associated with that specific cluster are described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterId")
+    public String cacheClusterId;
+    public GETDescribeSnapshotsRequest withCacheClusterId(String cacheClusterId) {
+        this.cacheClusterId = cacheClusterId;
+        return this;
+    }
     
-    public GETDescribeSnapshotsHeaders headers;
-    public GETDescribeSnapshotsRequest withHeaders(GETDescribeSnapshotsHeaders headers) {
-        this.headers = headers;
+    /**
+     * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by &lt;code&gt;MaxRecords&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeSnapshotsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of records to include in the response. If more records exist than the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a marker is included in the response so that the remaining results can be retrieved.&lt;/p&gt; &lt;p&gt;Default: 50&lt;/p&gt; &lt;p&gt;Constraints: minimum 20; maximum 50.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeSnapshotsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * A user-supplied replication group identifier. If this parameter is specified, only snapshots associated with that specific replication group are described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReplicationGroupId")
+    public String replicationGroupId;
+    public GETDescribeSnapshotsRequest withReplicationGroupId(String replicationGroupId) {
+        this.replicationGroupId = replicationGroupId;
+        return this;
+    }
+    
+    /**
+     * A Boolean value which if true, the node group (shard) configuration is included in the snapshot description.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowNodeGroupConfig")
+    public Boolean showNodeGroupConfig;
+    public GETDescribeSnapshotsRequest withShowNodeGroupConfig(Boolean showNodeGroupConfig) {
+        this.showNodeGroupConfig = showNodeGroupConfig;
+        return this;
+    }
+    
+    /**
+     * A user-supplied name of the snapshot. If this parameter is specified, only this snapshot are described.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotName")
+    public String snapshotName;
+    public GETDescribeSnapshotsRequest withSnapshotName(String snapshotName) {
+        this.snapshotName = snapshotName;
+        return this;
+    }
+    
+    /**
+     * If set to &lt;code&gt;system&lt;/code&gt;, the output shows snapshots that were automatically created by ElastiCache. If set to &lt;code&gt;user&lt;/code&gt; the output shows snapshots that were manually created. If omitted, the output shows both automatically and manually created snapshots.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotSource")
+    public String snapshotSource;
+    public GETDescribeSnapshotsRequest withSnapshotSource(String snapshotSource) {
+        this.snapshotSource = snapshotSource;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeSnapshotsVersionEnum version;
+    public GETDescribeSnapshotsRequest withVersion(GETDescribeSnapshotsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeSnapshotsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeSnapshotsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeSnapshotsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeSnapshotsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeSnapshotsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeSnapshotsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeSnapshotsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

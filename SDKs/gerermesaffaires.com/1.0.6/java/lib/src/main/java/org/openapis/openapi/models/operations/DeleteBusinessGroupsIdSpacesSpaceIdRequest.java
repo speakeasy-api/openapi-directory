@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBusinessGroupsIdSpacesSpaceIdRequest {
-    
-    public DeleteBusinessGroupsIdSpacesSpaceIdPathParams pathParams;
-    public DeleteBusinessGroupsIdSpacesSpaceIdRequest withPathParams(DeleteBusinessGroupsIdSpacesSpaceIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the group of the customer space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteBusinessGroupsIdSpacesSpaceIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteBusinessGroupsIdSpacesSpaceIdSecurity security;
-    public DeleteBusinessGroupsIdSpacesSpaceIdRequest withSecurity(DeleteBusinessGroupsIdSpacesSpaceIdSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public DeleteBusinessGroupsIdSpacesSpaceIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

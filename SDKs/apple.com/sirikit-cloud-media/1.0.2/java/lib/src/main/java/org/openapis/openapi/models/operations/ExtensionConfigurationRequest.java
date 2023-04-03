@@ -4,13 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtensionConfigurationRequest {
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ExtensionConfigurationRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
     
-    public ExtensionConfigurationHeaders headers;
-    public ExtensionConfigurationRequest withHeaders(ExtensionConfigurationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Cache-Control")
+    public String cacheControl;
+    public ExtensionConfigurationRequest withCacheControl(String cacheControl) {
+        this.cacheControl = cacheControl;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public ExtensionConfigurationRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Request-Timeout")
+    public Double requestTimeout;
+    public ExtensionConfigurationRequest withRequestTimeout(Double requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=User-Agent")
+    public String userAgent;
+    public ExtensionConfigurationRequest withUserAgent(String userAgent) {
+        this.userAgent = userAgent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-retry-count")
+    public Double xApplecloudextensionRetryCount;
+    public ExtensionConfigurationRequest withXApplecloudextensionRetryCount(Double xApplecloudextensionRetryCount) {
+        this.xApplecloudextensionRetryCount = xApplecloudextensionRetryCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-session-id")
+    public String xApplecloudextensionSessionId;
+    public ExtensionConfigurationRequest withXApplecloudextensionSessionId(String xApplecloudextensionSessionId) {
+        this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
         return this;
     }
     

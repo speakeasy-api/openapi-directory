@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ViewOnlyLinksNodeListRequest {
-    
-    public ViewOnlyLinksNodeListPathParams pathParams;
-    public ViewOnlyLinksNodeListRequest withPathParams(ViewOnlyLinksNodeListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the view only link.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
+    public String linkId;
+    public ViewOnlyLinksNodeListRequest withLinkId(String linkId) {
+        this.linkId = linkId;
         return this;
     }
     

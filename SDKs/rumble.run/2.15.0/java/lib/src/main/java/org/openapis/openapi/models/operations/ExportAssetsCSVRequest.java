@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportAssetsCSVRequest {
-    
-    public ExportAssetsCSVQueryParams queryParams;
-    public ExportAssetsCSVRequest withQueryParams(ExportAssetsCSVQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ExportAssetsCSVSecurity security;
-    public ExportAssetsCSVRequest withSecurity(ExportAssetsCSVSecurity security) {
-        this.security = security;
+    /**
+     * an optional search string for filtering results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public ExportAssetsCSVRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

@@ -35,11 +35,10 @@ public class CheckAPIUsage {
     /**
      * Get API Isage
      * Returns prediction usage on a monthly basis for the current calendar month and future months. Each apiusage object in the response corresponds to a calendar month in your plan.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiUsagePlansV2Response getApiUsagePlansV2(org.openapis.openapi.models.operations.GetApiUsagePlansV2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiUsagePlansV2Response getApiUsagePlansV2() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/apiusage");
         
@@ -48,8 +47,7 @@ public class CheckAPIUsage {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.QueryForecastXAmzTargetEnum;
-import org.openapis.openapi.models.operations.QueryForecastHeaders;
 import org.openapis.openapi.models.operations.QueryForecastRequest;
 import org.openapis.openapi.models.operations.QueryForecastResponse;
 import org.openapis.openapi.models.shared.QueryForecastRequest;
@@ -28,34 +27,31 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             QueryForecastRequest req = new QueryForecastRequest() {{
-                headers = new QueryForecastHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonForecastRuntime.QueryForecast";
-                }};
-                request = new QueryForecastRequest() {{
-                    endDate = "illum";
+                queryForecastRequest = new QueryForecastRequest() {{
+                    endDate = "corrupti";
                     filters = new java.util.HashMap<String, String>() {{
-                        put("error", "deserunt");
-                        put("suscipit", "iure");
+                        put("distinctio", "quibusdam");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
                     }};
-                    forecastArn = "magnam";
-                    nextToken = "debitis";
-                    startDate = "ipsa";
+                    forecastArn = "vel";
+                    nextToken = "error";
+                    startDate = "deserunt";
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+                xAmzTarget = "AmazonForecastRuntime.QueryForecast";
+            }}            
 
             QueryForecastResponse res = sdk.queryForecast(req);
 
@@ -69,7 +65,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

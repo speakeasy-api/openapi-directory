@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CanvasListRequest {
+    /**
+     * (Optional) Boolean
+     * 
+     * Whether or not to include archived Canvases, defaults to `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_archived")
+    public String includeArchived;
+    public CanvasListRequest withIncludeArchived(String includeArchived) {
+        this.includeArchived = includeArchived;
+        return this;
+    }
     
-    public CanvasListQueryParams queryParams;
-    public CanvasListRequest withQueryParams(CanvasListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Filters the results and only returns Canvases that were edited greater than the time provided till now.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_edit.time[gt]")
+    public String lastEditTimeGt;
+    public CanvasListRequest withLastEditTimeGt(String lastEditTimeGt) {
+        this.lastEditTimeGt = lastEditTimeGt;
+        return this;
+    }
+    
+    /**
+     * (Optional) Integer
+     * 
+     * The page of Canvases to return, defaults to `0` (returns the first set of up to 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public CanvasListRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * (Optional) String
+     * 
+     * Pass in the value `desc` to sort by creation time from newest to oldest. Pass in `asc` to sort from oldest to newest. If sort_direction is not included, the default order is oldest to newest.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public CanvasListRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
         return this;
     }
     

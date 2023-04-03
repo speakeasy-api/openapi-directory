@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListZoomRoomsRequest {
-    
-    public ListZoomRoomsQueryParams queryParams;
-    public ListZoomRoomsRequest withQueryParams(ListZoomRoomsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Parent location ID of the Zoom Room.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListZoomRoomsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ListZoomRoomsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public ListZoomRoomsSecurity security;
-    public ListZoomRoomsRequest withSecurity(ListZoomRoomsSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListZoomRoomsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The status of the Zoom Room.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ListZoomRoomsStatusEnum status;
+    public ListZoomRoomsRequest withStatus(ListZoomRoomsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Type of the Zoom Rooms.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ListZoomRoomsTypeEnum type;
+    public ListZoomRoomsRequest withType(ListZoomRoomsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * Use this query parameter with a value of `true` if you would like to see Zoom Rooms in your account that have not been assigned to anyone yet.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unassigned_rooms")
+    public Boolean unassignedRooms;
+    public ListZoomRoomsRequest withUnassignedRooms(Boolean unassignedRooms) {
+        this.unassignedRooms = unassignedRooms;
         return this;
     }
     

@@ -30,19 +30,20 @@ public class Webhooks {
     /**
      * Delete a webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdResponse deleteWorkspaceSlugWebhooksId(org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdResponse deleteWorkspaceSlugWebhooksId(org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdRequest request, org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdPathParams.class, baseUrl, "/{workspace_slug}/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspaceSlugWebhooksIdRequest.class, baseUrl, "/{workspace_slug}/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -63,19 +64,20 @@ public class Webhooks {
     /**
      * List webhooks in a workspace
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksResponse getWorkspaceSlugWebhooks(org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksResponse getWorkspaceSlugWebhooks(org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksRequest request, org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksPathParams.class, baseUrl, "/{workspace_slug}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksRequest.class, baseUrl, "/{workspace_slug}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -96,19 +98,20 @@ public class Webhooks {
     /**
      * Get a webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdResponse getWorkspaceSlugWebhooksId(org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdResponse getWorkspaceSlugWebhooksId(org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdRequest request, org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdPathParams.class, baseUrl, "/{workspace_slug}/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugWebhooksIdRequest.class, baseUrl, "/{workspace_slug}/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,21 +132,22 @@ public class Webhooks {
     /**
      * Create a webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksResponse postWorkspaceSlugWebhooks(org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksResponse postWorkspaceSlugWebhooks(org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksRequest request, org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksPathParams.class, baseUrl, "/{workspace_slug}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspaceSlugWebhooksRequest.class, baseUrl, "/{workspace_slug}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "webhookSubscription", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,21 +168,22 @@ public class Webhooks {
     /**
      * Update a webhook
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdResponse putWorkspaceSlugWebhooksId(org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdResponse putWorkspaceSlugWebhooksId(org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdRequest request, org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdPathParams.class, baseUrl, "/{workspace_slug}/webhooks/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspaceSlugWebhooksIdRequest.class, baseUrl, "/{workspace_slug}/webhooks/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "webhookSubscription", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

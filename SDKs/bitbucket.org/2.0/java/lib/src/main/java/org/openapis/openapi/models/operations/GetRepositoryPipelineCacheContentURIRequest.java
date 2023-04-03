@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoryPipelineCacheContentURIRequest {
+    /**
+     * The UUID of the cache.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cache_uuid")
+    public String cacheUuid;
+    public GetRepositoryPipelineCacheContentURIRequest withCacheUuid(String cacheUuid) {
+        this.cacheUuid = cacheUuid;
+        return this;
+    }
     
-    public GetRepositoryPipelineCacheContentURIPathParams pathParams;
-    public GetRepositoryPipelineCacheContentURIRequest withPathParams(GetRepositoryPipelineCacheContentURIPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoryPipelineCacheContentURIRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * The account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoryPipelineCacheContentURIRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

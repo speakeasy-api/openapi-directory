@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDisputeEvidenceRequest {
-    
-    public ListDisputeEvidencePathParams pathParams;
-    public ListDisputeEvidenceRequest withPathParams(ListDisputeEvidencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this cursor to retrieve the next set of results for the original query.
+     * For more information, see [Pagination](https://developer.squareup.com/docs/basics/api101/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListDisputeEvidenceRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public ListDisputeEvidenceQueryParams queryParams;
-    public ListDisputeEvidenceRequest withQueryParams(ListDisputeEvidenceQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListDisputeEvidenceSecurity security;
-    public ListDisputeEvidenceRequest withSecurity(ListDisputeEvidenceSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the dispute.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
+    public String disputeId;
+    public ListDisputeEvidenceRequest withDisputeId(String disputeId) {
+        this.disputeId = disputeId;
         return this;
     }
     

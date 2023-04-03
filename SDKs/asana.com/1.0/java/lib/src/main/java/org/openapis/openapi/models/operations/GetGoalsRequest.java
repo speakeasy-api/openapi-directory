@@ -4,13 +4,112 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGoalsRequest {
+    /**
+     * Filter to goals with is_workspace_level set to query value. Must be used with the workspace parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_workspace_level")
+    public Boolean isWorkspaceLevel;
+    public GetGoalsRequest withIsWorkspaceLevel(Boolean isWorkspaceLevel) {
+        this.isWorkspaceLevel = isWorkspaceLevel;
+        return this;
+    }
     
-    public GetGoalsQueryParams queryParams;
-    public GetGoalsRequest withQueryParams(GetGoalsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page.
+     * The number of objects to return per page. The value must be between 1 and 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetGoalsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset token.
+     * An offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.
+     * 'Note: You can only pass in an offset that was returned to you via a previously paginated request.'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetGoalsRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Defines fields to return.
+     * Some requests return *compact* representations of objects in order to conserve resources and complete the request more efficiently. Other times requests return more information than you may need. This option allows you to list the exact set of fields that the API should be sure to return for the objects. The field names should be provided as paths, described below.
+     * The id of included objects will always be returned, regardless of the field options.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
+    public String[] optFields;
+    public GetGoalsRequest withOptFields(String[] optFields) {
+        this.optFields = optFields;
+        return this;
+    }
+    
+    /**
+     * Provides \u201cpretty\u201d output.
+     * Provides the response in a \u201cpretty\u201d format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
+    public Boolean optPretty;
+    public GetGoalsRequest withOptPretty(Boolean optPretty) {
+        this.optPretty = optPretty;
+        return this;
+    }
+    
+    /**
+     * Globally unique identifier for supporting portfolio.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=portfolio")
+    public String portfolio;
+    public GetGoalsRequest withPortfolio(String portfolio) {
+        this.portfolio = portfolio;
+        return this;
+    }
+    
+    /**
+     * Globally unique identifier for supporting project.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
+    public String project;
+    public GetGoalsRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * Globally unique identifier for the team.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetGoalsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Globally unique identifiers for the time periods.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time_periods")
+    public String[] timePeriods;
+    public GetGoalsRequest withTimePeriods(String[] timePeriods) {
+        this.timePeriods = timePeriods;
+        return this;
+    }
+    
+    /**
+     * Globally unique identifier for the workspace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
+    public String workspace;
+    public GetGoalsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

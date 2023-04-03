@@ -14,9 +14,9 @@ public class Security {
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public SchemeBearerAuth bearerAuth;
-    public Security withBearerAuth(SchemeBearerAuth bearerAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerAuth;
+    public Security withBearerAuth(String bearerAuth) {
         this.bearerAuth = bearerAuth;
         return this;
     }

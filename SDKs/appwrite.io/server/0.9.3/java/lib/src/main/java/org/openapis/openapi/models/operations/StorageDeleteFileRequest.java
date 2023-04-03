@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageDeleteFileRequest {
-    
-    public StorageDeleteFilePathParams pathParams;
-    public StorageDeleteFileRequest withPathParams(StorageDeleteFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StorageDeleteFileSecurity security;
-    public StorageDeleteFileRequest withSecurity(StorageDeleteFileSecurity security) {
-        this.security = security;
+    /**
+     * File unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public StorageDeleteFileRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     

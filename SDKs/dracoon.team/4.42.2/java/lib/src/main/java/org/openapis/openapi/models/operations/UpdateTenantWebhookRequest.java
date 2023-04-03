@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTenantWebhookRequest {
-    
-    public UpdateTenantWebhookPathParams pathParams;
-    public UpdateTenantWebhookRequest withPathParams(UpdateTenantWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateTenantWebhookHeaders headers;
-    public UpdateTenantWebhookRequest withHeaders(UpdateTenantWebhookHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateWebhookRequest request;
-    public UpdateTenantWebhookRequest withRequest(org.openapis.openapi.models.shared.UpdateWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateWebhookRequest updateWebhookRequest;
+    public UpdateTenantWebhookRequest withUpdateWebhookRequest(org.openapis.openapi.models.shared.UpdateWebhookRequest updateWebhookRequest) {
+        this.updateWebhookRequest = updateWebhookRequest;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public UpdateTenantWebhookXSdsDateFormatEnum xSdsDateFormat;
+    public UpdateTenantWebhookRequest withXSdsDateFormat(UpdateTenantWebhookXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public UpdateTenantWebhookRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
+        return this;
+    }
+    
+    /**
+     * Webhook ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhook_id")
+    public Long webhookId;
+    public UpdateTenantWebhookRequest withWebhookId(Long webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesStopForAuthenticatedUserRequest {
-    
-    public CodespacesStopForAuthenticatedUserPathParams pathParams;
-    public CodespacesStopForAuthenticatedUserRequest withPathParams(CodespacesStopForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the codespace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=codespace_name")
+    public String codespaceName;
+    public CodespacesStopForAuthenticatedUserRequest withCodespaceName(String codespaceName) {
+        this.codespaceName = codespaceName;
         return this;
     }
     

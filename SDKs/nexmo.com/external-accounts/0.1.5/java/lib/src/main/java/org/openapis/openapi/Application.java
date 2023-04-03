@@ -36,24 +36,25 @@ public class Application {
     /**
      * Link application to an account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LinkApplicationResponse linkApplication(org.openapis.openapi.models.operations.LinkApplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LinkApplicationResponse linkApplication(org.openapis.openapi.models.operations.LinkApplicationRequest request, org.openapis.openapi.models.operations.LinkApplicationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LinkApplicationPathParams.class, baseUrl, "/{provider}/{external_id}/applications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LinkApplicationRequest.class, baseUrl, "/{provider}/{external_id}/applications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -104,19 +105,20 @@ public class Application {
     /**
      * Unlink application from an account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationResponse unliWithoutApplicationnkApplication(org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationResponse unliWithoutApplicationnkApplication(org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationRequest request, org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationPathParams.class, baseUrl, "/{provider}/{external_id}/applications/{application_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnliWithoutApplicationnkApplicationRequest.class, baseUrl, "/{provider}/{external_id}/applications/{application_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

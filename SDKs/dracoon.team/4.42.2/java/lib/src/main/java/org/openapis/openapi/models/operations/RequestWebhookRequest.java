@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestWebhookRequest {
-    
-    public RequestWebhookPathParams pathParams;
-    public RequestWebhookRequest withPathParams(RequestWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestWebhookRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestWebhookXSdsDateFormatEnum xSdsDateFormat;
+    public RequestWebhookRequest withXSdsDateFormat(RequestWebhookXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestWebhookHeaders headers;
-    public RequestWebhookRequest withHeaders(RequestWebhookHeaders headers) {
-        this.headers = headers;
+    /**
+     * Webhook ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhook_id")
+    public Long webhookId;
+    public RequestWebhookRequest withWebhookId(Long webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

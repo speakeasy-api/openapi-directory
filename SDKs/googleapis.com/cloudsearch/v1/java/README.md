@@ -20,16 +20,12 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1;
 import org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption2;
 import org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurity;
-import org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessPathParams;
-import org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessQueryParams;
 import org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest;
 import org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.Principal;
 import org.openapis.openapi.models.shared.GSuitePrincipal;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,45 +34,36 @@ public class Application {
                 .build();
 
             CloudsearchDebugDatasourcesItemsCheckAccessRequest req = new CloudsearchDebugDatasourcesItemsCheckAccessRequest() {{
-                security = new CloudsearchDebugDatasourcesItemsCheckAccessSecurity() {{
-                    option1 = new CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new CloudsearchDebugDatasourcesItemsCheckAccessPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new CloudsearchDebugDatasourcesItemsCheckAccessQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    debugOptionsEnableDebugging = false;
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new Principal() {{
-                    groupResourceName = "suscipit";
+                dollarXgafv = "2";
+                principal = new Principal() {{
+                    groupResourceName = "provident";
                     gsuitePrincipal = new GSuitePrincipal() {{
                         gsuiteDomain = false;
-                        gsuiteGroupEmail = "iure";
-                        gsuiteUserEmail = "magnam";
+                        gsuiteGroupEmail = "distinctio";
+                        gsuiteUserEmail = "quibusdam";
                     }};
-                    userResourceName = "debitis";
+                    userResourceName = "unde";
                 }};
-            }};            
+                accessToken = "nulla";
+                alt = "media";
+                callback = "illum";
+                debugOptionsEnableDebugging = false;
+                fields = "vel";
+                key = "error";
+                name = "deserunt";
+                oauthToken = "suscipit";
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
-            CloudsearchDebugDatasourcesItemsCheckAccessResponse res = sdk.debug.cloudsearchDebugDatasourcesItemsCheckAccess(req);
+            CloudsearchDebugDatasourcesItemsCheckAccessResponse res = sdk.debug.cloudsearchDebugDatasourcesItemsCheckAccess(req, new CloudsearchDebugDatasourcesItemsCheckAccessSecurity() {{
+                option1 = new CloudsearchDebugDatasourcesItemsCheckAccessSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.checkAccessResponse.isPresent()) {
                 // handle response
@@ -88,7 +75,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### debug

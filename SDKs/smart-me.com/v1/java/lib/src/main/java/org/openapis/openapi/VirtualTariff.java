@@ -93,7 +93,7 @@ public class VirtualTariff {
      */
     public org.openapis.openapi.models.operations.GetApiVirtualTariffIdResponse getApiVirtualTariffId(org.openapis.openapi.models.operations.GetApiVirtualTariffIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiVirtualTariffIdPathParams.class, baseUrl, "/api/VirtualTariff/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiVirtualTariffIdRequest.class, baseUrl, "/api/VirtualTariff/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

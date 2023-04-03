@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetFactorsRequest {
-    
-    public ResetFactorsPathParams pathParams;
-    public ResetFactorsRequest withPathParams(ResetFactorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
+    public byte[] requestBody;
+    public ResetFactorsRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public ResetFactorsRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public ResetFactorsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

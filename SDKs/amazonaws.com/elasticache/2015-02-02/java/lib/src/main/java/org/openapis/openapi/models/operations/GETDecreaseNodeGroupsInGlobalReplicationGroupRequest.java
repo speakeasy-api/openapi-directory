@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDecreaseNodeGroupsInGlobalReplicationGroupRequest {
-    
-    public GETDecreaseNodeGroupsInGlobalReplicationGroupQueryParams queryParams;
-    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withQueryParams(GETDecreaseNodeGroupsInGlobalReplicationGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum action;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withAction(GETDecreaseNodeGroupsInGlobalReplicationGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Indicates that the shard reconfiguration process begins immediately. At present, the only permitted value for this parameter is true. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyImmediately")
+    public Boolean applyImmediately;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withApplyImmediately(Boolean applyImmediately) {
+        this.applyImmediately = applyImmediately;
+        return this;
+    }
     
-    public GETDecreaseNodeGroupsInGlobalReplicationGroupHeaders headers;
-    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withHeaders(GETDecreaseNodeGroupsInGlobalReplicationGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * If the value of NodeGroupCount is less than the current number of node groups (shards), then either NodeGroupsToRemove or NodeGroupsToRetain is required. GlobalNodeGroupsToRemove is a list of NodeGroupIds to remove from the cluster. ElastiCache for Redis will attempt to remove all node groups listed by GlobalNodeGroupsToRemove from the cluster. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalNodeGroupsToRemove")
+    public String[] globalNodeGroupsToRemove;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withGlobalNodeGroupsToRemove(String[] globalNodeGroupsToRemove) {
+        this.globalNodeGroupsToRemove = globalNodeGroupsToRemove;
+        return this;
+    }
+    
+    /**
+     * If the value of NodeGroupCount is less than the current number of node groups (shards), then either NodeGroupsToRemove or NodeGroupsToRetain is required. GlobalNodeGroupsToRetain is a list of NodeGroupIds to retain from the cluster. ElastiCache for Redis will attempt to retain all node groups listed by GlobalNodeGroupsToRetain from the cluster. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalNodeGroupsToRetain")
+    public String[] globalNodeGroupsToRetain;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withGlobalNodeGroupsToRetain(String[] globalNodeGroupsToRetain) {
+        this.globalNodeGroupsToRetain = globalNodeGroupsToRetain;
+        return this;
+    }
+    
+    /**
+     * The name of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupId")
+    public String globalReplicationGroupId;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withGlobalReplicationGroupId(String globalReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        return this;
+    }
+    
+    /**
+     * The number of node groups (shards) that results from the modification of the shard configuration
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeGroupCount")
+    public Long nodeGroupCount;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withNodeGroupCount(Long nodeGroupCount) {
+        this.nodeGroupCount = nodeGroupCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum version;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withVersion(GETDecreaseNodeGroupsInGlobalReplicationGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDecreaseNodeGroupsInGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

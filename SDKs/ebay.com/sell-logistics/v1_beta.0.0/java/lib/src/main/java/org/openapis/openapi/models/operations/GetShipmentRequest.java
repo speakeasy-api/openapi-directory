@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShipmentRequest {
-    
-    public GetShipmentPathParams pathParams;
-    public GetShipmentRequest withPathParams(GetShipmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetShipmentSecurity security;
-    public GetShipmentRequest withSecurity(GetShipmentSecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the unique eBay-assigned ID of the shipment you want to retrieve. The &lt;b&gt;shipmentId&lt;/b&gt; value is generated and returned by a call to &lt;b&gt;createFromShippingQuote&lt;/b&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shipmentId")
+    public String shipmentId;
+    public GetShipmentRequest withShipmentId(String shipmentId) {
+        this.shipmentId = shipmentId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSpacesRequest {
-    
-    public ListSpacesQueryParams queryParams;
-    public ListSpacesRequest withQueryParams(ListSpacesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ListSpacesRequestBody requestBody;
+    public ListSpacesRequest withRequestBody(ListSpacesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListSpacesRequestBody request;
-    public ListSpacesRequest withRequest(ListSpacesRequestBody request) {
-        this.request = request;
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListSpacesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     

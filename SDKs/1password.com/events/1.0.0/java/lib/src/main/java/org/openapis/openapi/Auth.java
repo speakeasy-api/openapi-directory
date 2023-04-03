@@ -32,11 +32,10 @@ public class Auth {
 
     /**
      * Performs introspection of the provided Bearer JWT token
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAuthIntrospectResponse getAuthIntrospect(org.openapis.openapi.models.operations.GetAuthIntrospectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAuthIntrospectResponse getAuthIntrospect() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/auth/introspect");
         
@@ -45,8 +44,7 @@ public class Auth {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

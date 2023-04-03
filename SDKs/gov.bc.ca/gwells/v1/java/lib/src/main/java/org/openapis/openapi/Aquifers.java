@@ -38,7 +38,7 @@ public class Aquifers {
      */
     public org.openapis.openapi.models.operations.AquifersFilesListResponse aquifersFilesList(org.openapis.openapi.models.operations.AquifersFilesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AquifersFilesListPathParams.class, baseUrl, "/aquifers/{aquifer_id}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AquifersFilesListRequest.class, baseUrl, "/aquifers/{aquifer_id}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,7 +83,7 @@ public class Aquifers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AquifersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AquifersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -128,7 +128,7 @@ public class Aquifers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AquifersNamesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AquifersNamesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -167,7 +167,7 @@ public class Aquifers {
      */
     public org.openapis.openapi.models.operations.AquifersReadResponse aquifersRead(org.openapis.openapi.models.operations.AquifersReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AquifersReadPathParams.class, baseUrl, "/aquifers/{aquifer_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AquifersReadRequest.class, baseUrl, "/aquifers/{aquifer_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

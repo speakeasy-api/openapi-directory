@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWirelessRatePlanRequest {
-    
-    public FetchWirelessRatePlanPathParams pathParams;
-    public FetchWirelessRatePlanRequest withPathParams(FetchWirelessRatePlanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchWirelessRatePlanSecurity security;
-    public FetchWirelessRatePlanRequest withSecurity(FetchWirelessRatePlanSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchWirelessRatePlanRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchWirelessRatePlanRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

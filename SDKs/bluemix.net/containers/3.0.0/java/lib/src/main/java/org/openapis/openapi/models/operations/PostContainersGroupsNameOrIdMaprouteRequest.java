@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersGroupsNameOrIdMaprouteRequest {
-    
-    public PostContainersGroupsNameOrIdMaproutePathParams pathParams;
-    public PostContainersGroupsNameOrIdMaprouteRequest withPathParams(PostContainersGroupsNameOrIdMaproutePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostContainersGroupsNameOrIdMaprouteHeaders headers;
-    public PostContainersGroupsNameOrIdMaprouteRequest withHeaders(PostContainersGroupsNameOrIdMaprouteHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The public route that is mapped to the container group. A public route consists of the host name and domain.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Route request;
-    public PostContainersGroupsNameOrIdMaprouteRequest withRequest(org.openapis.openapi.models.shared.Route request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Route route;
+    public PostContainersGroupsNameOrIdMaprouteRequest withRoute(org.openapis.openapi.models.shared.Route route) {
+        this.route = route;
+        return this;
+    }
+    
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostContainersGroupsNameOrIdMaprouteRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
+        return this;
+    }
+    
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostContainersGroupsNameOrIdMaprouteRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
+    
+    /**
+     * The name or unique ID of the container group to which you want to map a public route. Run `cf ic group list` or call the `GET /containers/groups` endpoint to retrieve a list of container groups in your space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public PostContainersGroupsNameOrIdMaprouteRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
         return this;
     }
     

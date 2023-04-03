@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResultFileRequest {
-    
-    public GetResultFilePathParams pathParams;
-    public GetResultFileRequest withPathParams(GetResultFilePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetResultFileSecurity security;
-    public GetResultFileRequest withSecurity(GetResultFileSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the task associated with the file you want to download. This ID was generated when the task was created.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetResultFileRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

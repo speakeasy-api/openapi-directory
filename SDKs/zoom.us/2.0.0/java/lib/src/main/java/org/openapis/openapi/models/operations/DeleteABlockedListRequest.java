@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteABlockedListRequest {
-    
-    public DeleteABlockedListPathParams pathParams;
-    public DeleteABlockedListRequest withPathParams(DeleteABlockedListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteABlockedListSecurity security;
-    public DeleteABlockedListRequest withSecurity(DeleteABlockedListSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the blocked list. This can be retrieved from the List Blocked List API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blockedListId")
+    public String blockedListId;
+    public DeleteABlockedListRequest withBlockedListId(String blockedListId) {
+        this.blockedListId = blockedListId;
         return this;
     }
     

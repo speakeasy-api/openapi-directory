@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNotificationsContributionsIdPreviewRequest {
-    
-    public GetNotificationsContributionsIdPreviewPathParams pathParams;
-    public GetNotificationsContributionsIdPreviewRequest withPathParams(GetNotificationsContributionsIdPreviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the contribution to preview a notification for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetNotificationsContributionsIdPreviewRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetNotificationsContributionsIdPreviewQueryParams queryParams;
-    public GetNotificationsContributionsIdPreviewRequest withQueryParams(GetNotificationsContributionsIdPreviewQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of message to preview.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
+    public String message;
+    public GetNotificationsContributionsIdPreviewRequest withMessage(String message) {
+        this.message = message;
         return this;
     }
     

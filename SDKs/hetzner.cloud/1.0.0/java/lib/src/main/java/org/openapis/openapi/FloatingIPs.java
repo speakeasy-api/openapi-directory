@@ -52,7 +52,7 @@ public class FloatingIPs {
      */
     public org.openapis.openapi.models.operations.DeleteFloatingIpsIdResponse deleteFloatingIpsId(org.openapis.openapi.models.operations.DeleteFloatingIpsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFloatingIpsIdPathParams.class, baseUrl, "/floating_ips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFloatingIpsIdRequest.class, baseUrl, "/floating_ips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -91,7 +91,7 @@ public class FloatingIPs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFloatingIpsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFloatingIpsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -130,7 +130,7 @@ public class FloatingIPs {
      */
     public org.openapis.openapi.models.operations.GetFloatingIpsIdResponse getFloatingIpsId(org.openapis.openapi.models.operations.GetFloatingIpsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFloatingIpsIdPathParams.class, baseUrl, "/floating_ips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFloatingIpsIdRequest.class, baseUrl, "/floating_ips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -167,7 +167,7 @@ public class FloatingIPs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFloatingIpsResponse postFloatingIps(org.openapis.openapi.models.operations.PostFloatingIpsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFloatingIpsResponse postFloatingIps(org.openapis.openapi.models.operations.PostFloatingIpsCreateFloatingIPRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/floating_ips");
         
@@ -211,12 +211,12 @@ public class FloatingIPs {
      */
     public org.openapis.openapi.models.operations.PutFloatingIpsIdResponse putFloatingIpsId(org.openapis.openapi.models.operations.PutFloatingIpsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutFloatingIpsIdPathParams.class, baseUrl, "/floating_ips/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutFloatingIpsIdRequest.class, baseUrl, "/floating_ips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

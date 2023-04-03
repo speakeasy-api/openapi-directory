@@ -127,7 +127,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetLatestBaseCurrencyResponse getLatestBaseCurrency(org.openapis.openapi.models.operations.GetLatestBaseCurrencyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLatestBaseCurrencyPathParams.class, baseUrl, "/latest/{base_currency}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLatestBaseCurrencyRequest.class, baseUrl, "/latest/{base_currency}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

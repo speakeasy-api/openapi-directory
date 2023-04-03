@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnassignAllMembersRequest {
-    
-    public UnassignAllMembersPathParams pathParams;
-    public UnassignAllMembersRequest withPathParams(UnassignAllMembersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UnassignAllMembersSecurity security;
-    public UnassignAllMembersRequest withSecurity(UnassignAllMembersSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callQueueId")
+    public String callQueueId;
+    public UnassignAllMembersRequest withCallQueueId(String callQueueId) {
+        this.callQueueId = callQueueId;
         return this;
     }
     

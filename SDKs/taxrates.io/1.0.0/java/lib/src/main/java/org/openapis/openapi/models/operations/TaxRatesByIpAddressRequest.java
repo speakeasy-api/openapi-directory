@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxRatesByIpAddressRequest {
+    /**
+     * Domain name: api.taxrates.io
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public TaxRatesByIpAddressRequest withDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
     
-    public TaxRatesByIpAddressQueryParams queryParams;
-    public TaxRatesByIpAddressRequest withQueryParams(TaxRatesByIpAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * For US sales tax you can filter the tax type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public TaxRatesByIpAddressRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Customer's IP address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
+    public String ip;
+    public TaxRatesByIpAddressRequest withIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    
+    /**
+     * Your can filter your taxes by product code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_code")
+    public String productCode;
+    public TaxRatesByIpAddressRequest withProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    
+    /**
+     * For US sales tax a Zipcode must be proivded
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public TaxRatesByIpAddressRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

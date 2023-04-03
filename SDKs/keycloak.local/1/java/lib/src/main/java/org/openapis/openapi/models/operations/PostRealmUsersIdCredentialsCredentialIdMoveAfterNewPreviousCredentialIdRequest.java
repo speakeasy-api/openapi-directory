@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmUsersIdCredentialsCredentialIdMoveAfterNewPreviousCredentialIdRequest {
+    /**
+     * The credential to move
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credentialId")
+    public String credentialId;
+    public PostRealmUsersIdCredentialsCredentialIdMoveAfterNewPreviousCredentialIdRequest withCredentialId(String credentialId) {
+        this.credentialId = credentialId;
+        return this;
+    }
     
-    public PostRealmUsersIdCredentialsCredentialIdMoveAfterNewPreviousCredentialIdPathParams pathParams;
-    public PostRealmUsersIdCredentialsCredentialIdMoveAfterNewPreviousCredentialIdRequest withPathParams(PostRealmUsersIdCredentialsCredentialIdMoveAfterNewPreviousCredentialIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmUsersIdCredentialsCredentialIdMoveAfterNewPreviousCredentialIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The credential that will be the previous element in the list. If set to null, the moved credential will be the first element in the list.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=newPreviousCredentialId")
+    public String newPreviousCredentialId;
+    public PostRealmUsersIdCredentialsCredentialIdMoveAfterNewPreviousCredentialIdRequest withNewPreviousCredentialId(String newPreviousCredentialId) {
+        this.newPreviousCredentialId = newPreviousCredentialId;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmUsersIdCredentialsCredentialIdMoveAfterNewPreviousCredentialIdRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

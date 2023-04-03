@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateSelfHostedRunnerGroupForOrgRequest {
-    
-    public ActionsCreateSelfHostedRunnerGroupForOrgPathParams pathParams;
-    public ActionsCreateSelfHostedRunnerGroupForOrgRequest withPathParams(ActionsCreateSelfHostedRunnerGroupForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsCreateSelfHostedRunnerGroupForOrgRequestBody requestBody;
+    public ActionsCreateSelfHostedRunnerGroupForOrgRequest withRequestBody(ActionsCreateSelfHostedRunnerGroupForOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsCreateSelfHostedRunnerGroupForOrgRequestBody request;
-    public ActionsCreateSelfHostedRunnerGroupForOrgRequest withRequest(ActionsCreateSelfHostedRunnerGroupForOrgRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsCreateSelfHostedRunnerGroupForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

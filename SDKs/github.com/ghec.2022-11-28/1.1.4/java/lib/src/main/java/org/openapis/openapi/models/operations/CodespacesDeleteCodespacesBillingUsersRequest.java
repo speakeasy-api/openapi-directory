@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesDeleteCodespacesBillingUsersRequest {
-    
-    public CodespacesDeleteCodespacesBillingUsersPathParams pathParams;
-    public CodespacesDeleteCodespacesBillingUsersRequest withPathParams(CodespacesDeleteCodespacesBillingUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CodespacesDeleteCodespacesBillingUsersRequestBody requestBody;
+    public CodespacesDeleteCodespacesBillingUsersRequest withRequestBody(CodespacesDeleteCodespacesBillingUsersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CodespacesDeleteCodespacesBillingUsersRequestBody request;
-    public CodespacesDeleteCodespacesBillingUsersRequest withRequest(CodespacesDeleteCodespacesBillingUsersRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public CodespacesDeleteCodespacesBillingUsersRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

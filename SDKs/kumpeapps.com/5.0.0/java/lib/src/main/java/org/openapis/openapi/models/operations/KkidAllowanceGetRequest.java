@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidAllowanceGetRequest {
-    
-    public KkidAllowanceGetQueryParams queryParams;
-    public KkidAllowanceGetRequest withQueryParams(KkidAllowanceGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * userID of the kid
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
+    public Long kidUserId;
+    public KkidAllowanceGetRequest withKidUserId(Long kidUserId) {
+        this.kidUserId = kidUserId;
         return this;
     }
     
-    
-    public KkidAllowanceGetSecurity security;
-    public KkidAllowanceGetRequest withSecurity(KkidAllowanceGetSecurity security) {
-        this.security = security;
+    /**
+     * number of days you wish to search allowance transactions (default is 90 days)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transactionDays")
+    public Long transactionDays;
+    public KkidAllowanceGetRequest withTransactionDays(Long transactionDays) {
+        this.transactionDays = transactionDays;
         return this;
     }
     

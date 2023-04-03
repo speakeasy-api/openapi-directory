@@ -37,7 +37,7 @@ public class Payment {
      */
     public org.openapis.openapi.models.operations.DeleteCreditCardResponse deleteCreditCard(org.openapis.openapi.models.operations.DeleteCreditCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCreditCardPathParams.class, baseUrl, "/payment/{cardId}/delete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCreditCardRequest.class, baseUrl, "/payment/{cardId}/delete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -84,7 +84,7 @@ public class Payment {
      */
     public org.openapis.openapi.models.operations.GetCreditCardResponse getCreditCard(org.openapis.openapi.models.operations.GetCreditCardRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCreditCardPathParams.class, baseUrl, "/payment/{cardId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCreditCardRequest.class, baseUrl, "/payment/{cardId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -132,7 +132,7 @@ public class Payment {
      */
     public org.openapis.openapi.models.operations.ResetCardPaymentCodeResponse resetCardPaymentCode(org.openapis.openapi.models.operations.ResetCardPaymentCodeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetCardPaymentCodePathParams.class, baseUrl, "/payment/{cardId}/reset-payment-code", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetCardPaymentCodeRequest.class, baseUrl, "/payment/{cardId}/reset-payment-code", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

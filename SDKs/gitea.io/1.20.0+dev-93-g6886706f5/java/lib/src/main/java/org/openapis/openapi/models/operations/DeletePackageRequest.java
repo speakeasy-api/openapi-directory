@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePackageRequest {
+    /**
+     * name of the package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DeletePackageRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public DeletePackagePathParams pathParams;
-    public DeletePackageRequest withPathParams(DeletePackagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public DeletePackageRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * type of the package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public String type;
+    public DeletePackageRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * version of the package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public DeletePackageRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

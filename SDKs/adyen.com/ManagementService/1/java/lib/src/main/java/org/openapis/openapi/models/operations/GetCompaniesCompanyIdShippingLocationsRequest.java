@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdShippingLocationsRequest {
-    
-    public GetCompaniesCompanyIdShippingLocationsPathParams pathParams;
-    public GetCompaniesCompanyIdShippingLocationsRequest withPathParams(GetCompaniesCompanyIdShippingLocationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdShippingLocationsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdShippingLocationsQueryParams queryParams;
-    public GetCompaniesCompanyIdShippingLocationsRequest withQueryParams(GetCompaniesCompanyIdShippingLocationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of locations to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetCompaniesCompanyIdShippingLocationsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * The name of the shipping location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetCompaniesCompanyIdShippingLocationsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetCompaniesCompanyIdShippingLocationsSecurity security;
-    public GetCompaniesCompanyIdShippingLocationsRequest withSecurity(GetCompaniesCompanyIdShippingLocationsSecurity security) {
-        this.security = security;
+    /**
+     * The number of locations to skip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetCompaniesCompanyIdShippingLocationsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

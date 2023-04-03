@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteAMediaItemResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAndSearchMediaItemsOrderEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListAndSearchMediaItemsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAndSearchMediaItemsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAndSearchMediaItems200ApplicationJSONEmbedded.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListAndSearchMediaItems200ApplicationJSONLinksFirst.java
@@ -42,7 +41,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListAndSearchMediaItems
 lib/src/main/java/org/openapis/openapi/models/operations/ListAndSearchMediaItemsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/RetrieveAMediaItemResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAMediaItemRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateAMediaItemRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateAMediaItemResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Media.java
 USAGE.md

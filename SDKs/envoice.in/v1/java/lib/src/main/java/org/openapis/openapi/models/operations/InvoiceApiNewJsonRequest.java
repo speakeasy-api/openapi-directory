@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceApiNewJsonRequest {
-    
-    public InvoiceApiNewJsonHeaders headers;
-    public InvoiceApiNewJsonRequest withHeaders(InvoiceApiNewJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.InvoiceCreateApiModel invoiceCreateApiModel;
+    public InvoiceApiNewJsonRequest withInvoiceCreateApiModel(org.openapis.openapi.models.shared.InvoiceCreateApiModel invoiceCreateApiModel) {
+        this.invoiceCreateApiModel = invoiceCreateApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InvoiceCreateApiModel request;
-    public InvoiceApiNewJsonRequest withRequest(org.openapis.openapi.models.shared.InvoiceCreateApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public InvoiceApiNewJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public InvoiceApiNewJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostNodeRwRequest {
-    
-    public PostNodeRwPathParams pathParams;
-    public PostNodeRwRequest withPathParams(PostNodeRwPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addMembers")
+    public String addMembers;
+    public PostNodeRwRequest withAddMembers(String addMembers) {
+        this.addMembers = addMembers;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public PostNodeRwRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public PostNodeRwQueryParams queryParams;
-    public PostNodeRwRequest withQueryParams(PostNodeRwQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public PostNodeRwRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

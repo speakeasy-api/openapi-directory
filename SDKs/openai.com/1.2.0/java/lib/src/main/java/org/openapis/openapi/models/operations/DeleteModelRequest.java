@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteModelRequest {
-    
-    public DeleteModelPathParams pathParams;
-    public DeleteModelRequest withPathParams(DeleteModelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The model to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=model")
+    public String model;
+    public DeleteModelRequest withModel(String model) {
+        this.model = model;
         return this;
     }
     

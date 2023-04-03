@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdRolesRoleNameGroupsRequest {
-    
-    public GetRealmClientsIdRolesRoleNameGroupsPathParams pathParams;
-    public GetRealmClientsIdRolesRoleNameGroupsRequest withPathParams(GetRealmClientsIdRolesRoleNameGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * if false, return a full representation of the GroupRepresentation objects
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=briefRepresentation")
+    public Boolean briefRepresentation;
+    public GetRealmClientsIdRolesRoleNameGroupsRequest withBriefRepresentation(Boolean briefRepresentation) {
+        this.briefRepresentation = briefRepresentation;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmClientsIdRolesRoleNameGroupsRequest withFirst(Integer first) {
+        this.first = first;
+        return this;
+    }
     
-    public GetRealmClientsIdRolesRoleNameGroupsQueryParams queryParams;
-    public GetRealmClientsIdRolesRoleNameGroupsRequest withQueryParams(GetRealmClientsIdRolesRoleNameGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdRolesRoleNameGroupsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmClientsIdRolesRoleNameGroupsRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdRolesRoleNameGroupsRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public GetRealmClientsIdRolesRoleNameGroupsRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

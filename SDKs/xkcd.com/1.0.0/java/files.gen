@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetInfo0JsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetComicIdInfo0JsonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetComicIdInfo0JsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetComicIdInfo0JsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Comic.java

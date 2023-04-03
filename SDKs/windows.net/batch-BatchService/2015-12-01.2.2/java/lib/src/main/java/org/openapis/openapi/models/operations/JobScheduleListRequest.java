@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobScheduleListRequest {
-    
-    public JobScheduleListQueryParams queryParams;
-    public JobScheduleListRequest withQueryParams(JobScheduleListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sets an OData $expand clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$expand")
+    public String dollarExpand;
+    public JobScheduleListRequest withDollarExpand(String dollarExpand) {
+        this.dollarExpand = dollarExpand;
         return this;
     }
     
+    /**
+     * Sets an OData $filter clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
+    public String dollarFilter;
+    public JobScheduleListRequest withDollarFilter(String dollarFilter) {
+        this.dollarFilter = dollarFilter;
+        return this;
+    }
     
-    public JobScheduleListHeaders headers;
-    public JobScheduleListRequest withHeaders(JobScheduleListHeaders headers) {
-        this.headers = headers;
+    /**
+     * Sets an OData $select clause.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$select")
+    public String dollarSelect;
+    public JobScheduleListRequest withDollarSelect(String dollarSelect) {
+        this.dollarSelect = dollarSelect;
+        return this;
+    }
+    
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public JobScheduleListRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public JobScheduleListRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum number of items to return in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
+    public Integer maxresults;
+    public JobScheduleListRequest withMaxresults(Integer maxresults) {
+        this.maxresults = maxresults;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public JobScheduleListRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public JobScheduleListRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public JobScheduleListRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateParticipantRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Participant resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateParticipantRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public UpdateParticipantPathParams pathParams;
-    public UpdateParticipantRequest withPathParams(UpdateParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID or label of the participant to update. Non URL safe characters in a label must be percent encoded, for example, a space character is represented as %20.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public UpdateParticipantRequest withCallSid(String callSid) {
+        this.callSid = callSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the conference with the participant to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConferenceSid")
+    public String conferenceSid;
+    public UpdateParticipantRequest withConferenceSid(String conferenceSid) {
+        this.conferenceSid = conferenceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateParticipantUpdateParticipantRequest request;
-    public UpdateParticipantRequest withRequest(UpdateParticipantUpdateParticipantRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateParticipantSecurity security;
-    public UpdateParticipantRequest withSecurity(UpdateParticipantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateParticipantUpdateParticipantRequest requestBody;
+    public UpdateParticipantRequest withRequestBody(UpdateParticipantUpdateParticipantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

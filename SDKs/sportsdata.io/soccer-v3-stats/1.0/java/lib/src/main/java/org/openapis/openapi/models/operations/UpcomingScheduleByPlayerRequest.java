@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpcomingScheduleByPlayerRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public UpcomingScheduleByPlayerFormatEnum format;
+    public UpcomingScheduleByPlayerRequest withFormat(UpcomingScheduleByPlayerFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public UpcomingScheduleByPlayerPathParams pathParams;
-    public UpcomingScheduleByPlayerRequest withPathParams(UpcomingScheduleByPlayerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Player ID.
+     * Example:&lt;code&gt;90026231&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
+    public String playerid;
+    public UpcomingScheduleByPlayerRequest withPlayerid(String playerid) {
+        this.playerid = playerid;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamSocialMediaRequest {
-    
-    public GetTeamSocialMediaPathParams pathParams;
-    public GetTeamSocialMediaRequest withPathParams(GetTeamSocialMediaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Value of the `ETag` header in the most recently cached response by the client.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetTeamSocialMediaRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetTeamSocialMediaHeaders headers;
-    public GetTeamSocialMediaRequest withHeaders(GetTeamSocialMediaHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetTeamSocialMediaSecurity security;
-    public GetTeamSocialMediaRequest withSecurity(GetTeamSocialMediaSecurity security) {
-        this.security = security;
+    /**
+     * TBA Team Key, eg `frc254`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_key")
+    public String teamKey;
+    public GetTeamSocialMediaRequest withTeamKey(String teamKey) {
+        this.teamKey = teamKey;
         return this;
     }
     

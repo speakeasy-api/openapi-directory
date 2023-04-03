@@ -39,7 +39,7 @@ public class Status {
      */
     public org.openapis.openapi.models.operations.GetDeviceWirelessStatusResponse getDeviceWirelessStatus(org.openapis.openapi.models.operations.GetDeviceWirelessStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessStatusPathParams.class, baseUrl, "/devices/{serial}/wireless/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceWirelessStatusRequest.class, baseUrl, "/devices/{serial}/wireless/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStripeGatewayUserUserIdCardsRequest {
-    
-    public GetStripeGatewayUserUserIdCardsPathParams pathParams;
-    public GetStripeGatewayUserUserIdCardsRequest withPathParams(GetStripeGatewayUserUserIdCardsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the user requesting their credit cards
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetStripeGatewayUserUserIdCardsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

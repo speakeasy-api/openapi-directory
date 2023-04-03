@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDownloadZipballArchiveRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposDownloadZipballArchiveRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposDownloadZipballArchivePathParams pathParams;
-    public ReposDownloadZipballArchiveRequest withPathParams(ReposDownloadZipballArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
+    public String ref;
+    public ReposDownloadZipballArchiveRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposDownloadZipballArchiveRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

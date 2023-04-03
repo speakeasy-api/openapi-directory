@@ -7,31 +7,100 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerBudgetPatchRequest {
-    
-    public AdexchangebuyerBudgetPatchPathParams pathParams;
-    public AdexchangebuyerBudgetPatchRequest withPathParams(AdexchangebuyerBudgetPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AdexchangebuyerBudgetPatchQueryParams queryParams;
-    public AdexchangebuyerBudgetPatchRequest withQueryParams(AdexchangebuyerBudgetPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Budget request;
-    public AdexchangebuyerBudgetPatchRequest withRequest(org.openapis.openapi.models.shared.Budget request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Budget budget;
+    public AdexchangebuyerBudgetPatchRequest withBudget(org.openapis.openapi.models.shared.Budget budget) {
+        this.budget = budget;
         return this;
     }
     
+    /**
+     * The account id associated with the budget being updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AdexchangebuyerBudgetPatchRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public AdexchangebuyerBudgetPatchSecurity security;
-    public AdexchangebuyerBudgetPatchRequest withSecurity(AdexchangebuyerBudgetPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdexchangebuyerBudgetPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * The billing id associated with the budget being updated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=billingId")
+    public String billingId;
+    public AdexchangebuyerBudgetPatchRequest withBillingId(String billingId) {
+        this.billingId = billingId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdexchangebuyerBudgetPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdexchangebuyerBudgetPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdexchangebuyerBudgetPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdexchangebuyerBudgetPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdexchangebuyerBudgetPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdexchangebuyerBudgetPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

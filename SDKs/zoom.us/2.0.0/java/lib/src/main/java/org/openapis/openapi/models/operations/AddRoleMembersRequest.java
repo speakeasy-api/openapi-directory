@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddRoleMembersRequest {
-    
-    public AddRoleMembersPathParams pathParams;
-    public AddRoleMembersRequest withPathParams(AddRoleMembersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Role members
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddRoleMembersApplicationJSON request;
-    public AddRoleMembersRequest withRequest(AddRoleMembersApplicationJSON request) {
-        this.request = request;
+    public AddRoleMembersApplicationJSON requestBody;
+    public AddRoleMembersRequest withRequestBody(AddRoleMembersApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public AddRoleMembersSecurity security;
-    public AddRoleMembersRequest withSecurity(AddRoleMembersSecurity security) {
-        this.security = security;
+    /**
+     * The role ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=roleId")
+    public String roleId;
+    public AddRoleMembersRequest withRoleId(String roleId) {
+        this.roleId = roleId;
         return this;
     }
     

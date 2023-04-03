@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServersIdMetricsRequest {
-    
-    public GetServersIdMetricsPathParams pathParams;
-    public GetServersIdMetricsRequest withPathParams(GetServersIdMetricsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * End of period to get Metrics for (in ISO-8601 format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public GetServersIdMetricsRequest withEnd(String end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * ID of the Server
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetServersIdMetricsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetServersIdMetricsQueryParams queryParams;
-    public GetServersIdMetricsRequest withQueryParams(GetServersIdMetricsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Start of period to get Metrics for (in ISO-8601 format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GetServersIdMetricsRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Resolution of results in seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=step")
+    public String step;
+    public GetServersIdMetricsRequest withStep(String step) {
+        this.step = step;
+        return this;
+    }
+    
+    /**
+     * Type of metrics to get
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetServersIdMetricsTypeEnum type;
+    public GetServersIdMetricsRequest withType(GetServersIdMetricsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

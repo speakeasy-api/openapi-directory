@@ -34,19 +34,20 @@ public class OnDemandPosters {
     /**
      * Add a poster to an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVodPosterResponse addVodPoster(org.openapis.openapi.models.operations.AddVodPosterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVodPosterResponse addVodPoster(org.openapis.openapi.models.operations.AddVodPosterRequest request, org.openapis.openapi.models.operations.AddVodPosterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVodPosterPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/pictures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVodPosterRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/pictures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,21 +82,22 @@ public class OnDemandPosters {
     /**
      * Edit a poster of an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditVodPosterResponse editVodPoster(org.openapis.openapi.models.operations.EditVodPosterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditVodPosterResponse editVodPoster(org.openapis.openapi.models.operations.EditVodPosterRequest request, org.openapis.openapi.models.operations.EditVodPosterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVodPosterPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/pictures/{poster_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVodPosterRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/pictures/{poster_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,7 +129,7 @@ public class OnDemandPosters {
      */
     public org.openapis.openapi.models.operations.GetVodPosterResponse getVodPoster(org.openapis.openapi.models.operations.GetVodPosterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPosterPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/pictures/{poster_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPosterRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/pictures/{poster_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -166,13 +168,13 @@ public class OnDemandPosters {
      */
     public org.openapis.openapi.models.operations.GetVodPostersResponse getVodPosters(org.openapis.openapi.models.operations.GetVodPostersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPostersPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/pictures", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodPostersRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/pictures", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodPostersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVodPostersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

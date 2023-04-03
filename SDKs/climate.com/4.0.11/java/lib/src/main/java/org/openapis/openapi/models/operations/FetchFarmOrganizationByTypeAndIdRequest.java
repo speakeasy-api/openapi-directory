@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFarmOrganizationByTypeAndIdRequest {
-    
-    public FetchFarmOrganizationByTypeAndIdPathParams pathParams;
-    public FetchFarmOrganizationByTypeAndIdRequest withPathParams(FetchFarmOrganizationByTypeAndIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the farm organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=farmOrganizationId")
+    public String farmOrganizationId;
+    public FetchFarmOrganizationByTypeAndIdRequest withFarmOrganizationId(String farmOrganizationId) {
+        this.farmOrganizationId = farmOrganizationId;
         return this;
     }
     
-    
-    public FetchFarmOrganizationByTypeAndIdSecurity security;
-    public FetchFarmOrganizationByTypeAndIdRequest withSecurity(FetchFarmOrganizationByTypeAndIdSecurity security) {
-        this.security = security;
+    /**
+     * Type of the farm organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=farmOrganizationType")
+    public org.openapis.openapi.models.shared.FarmOrganizationTypeEnum farmOrganizationType;
+    public FetchFarmOrganizationByTypeAndIdRequest withFarmOrganizationType(org.openapis.openapi.models.shared.FarmOrganizationTypeEnum farmOrganizationType) {
+        this.farmOrganizationType = farmOrganizationType;
         return this;
     }
     

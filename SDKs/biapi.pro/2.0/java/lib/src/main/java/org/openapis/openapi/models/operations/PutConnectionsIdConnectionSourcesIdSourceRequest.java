@@ -7,24 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConnectionsIdConnectionSourcesIdSourceRequest {
-    
-    public PutConnectionsIdConnectionSourcesIdSourcePathParams pathParams;
-    public PutConnectionsIdConnectionSourcesIdSourceRequest withPathParams(PutConnectionsIdConnectionSourcesIdSourcePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutConnectionsIdConnectionSourcesIdSourceQueryParams queryParams;
-    public PutConnectionsIdConnectionSourcesIdSourceRequest withQueryParams(PutConnectionsIdConnectionSourcesIdSourceQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutConnectionsIdConnectionSourcesIdSourceRequestBody request;
-    public PutConnectionsIdConnectionSourcesIdSourceRequest withRequest(PutConnectionsIdConnectionSourcesIdSourceRequestBody request) {
-        this.request = request;
+    public PutConnectionsIdConnectionSourcesIdSourceRequestBody requestBody;
+    public PutConnectionsIdConnectionSourcesIdSourceRequest withRequestBody(PutConnectionsIdConnectionSourcesIdSourceRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * do the synchronization in background (to use with the synchronize parameter)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
+    public Boolean background;
+    public PutConnectionsIdConnectionSourcesIdSourceRequest withBackground(Boolean background) {
+        this.background = background;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutConnectionsIdConnectionSourcesIdSourceRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public PutConnectionsIdConnectionSourcesIdSourceRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_source")
+    public Long idSource;
+    public PutConnectionsIdConnectionSourcesIdSourceRequest withIdSource(Long idSource) {
+        this.idSource = idSource;
         return this;
     }
     

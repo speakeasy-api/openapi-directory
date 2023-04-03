@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTrunkRequest {
-    
-    public DeleteTrunkPathParams pathParams;
-    public DeleteTrunkRequest withPathParams(DeleteTrunkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteTrunkSecurity security;
-    public DeleteTrunkRequest withSecurity(DeleteTrunkSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteTrunkRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Trunk resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteTrunkRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

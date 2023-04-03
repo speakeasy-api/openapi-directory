@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandQueryRequest {
-    
-    public UpdateUnderstandQueryPathParams pathParams;
-    public UpdateUnderstandQueryRequest withPathParams(UpdateUnderstandQueryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the parent Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateUnderstandQueryRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandQueryUpdateUnderstandQueryRequest request;
-    public UpdateUnderstandQueryRequest withRequest(UpdateUnderstandQueryUpdateUnderstandQueryRequest request) {
-        this.request = request;
+    public UpdateUnderstandQueryUpdateUnderstandQueryRequest requestBody;
+    public UpdateUnderstandQueryRequest withRequestBody(UpdateUnderstandQueryUpdateUnderstandQueryRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateUnderstandQuerySecurity security;
-    public UpdateUnderstandQueryRequest withSecurity(UpdateUnderstandQuerySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUnderstandQueryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateUnderstandQueryRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

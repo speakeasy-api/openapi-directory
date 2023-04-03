@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1ServicesIdRequest {
-    
-    public GetConsumerV1ServicesIdPathParams pathParams;
-    public GetConsumerV1ServicesIdRequest withPathParams(GetConsumerV1ServicesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of service object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetConsumerV1ServicesIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

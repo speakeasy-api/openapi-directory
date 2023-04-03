@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoListRequest {
-    
-    public GetVideoListQueryParams queryParams;
-    public GetVideoListRequest withQueryParams(GetVideoListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * One or more video IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetVideoListRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * The ID of the search that is related to this request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public GetVideoListRequest withSearchId(String searchId) {
+        this.searchId = searchId;
+        return this;
+    }
     
-    public GetVideoListSecurity security;
-    public GetVideoListRequest withSecurity(GetVideoListSecurity security) {
-        this.security = security;
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public GetVideoListViewEnum view;
+    public GetVideoListRequest withView(GetVideoListViewEnum view) {
+        this.view = view;
         return this;
     }
     

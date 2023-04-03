@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsCreateOrUpdateRepoSecretRequest {
-    
-    public ActionsCreateOrUpdateRepoSecretPathParams pathParams;
-    public ActionsCreateOrUpdateRepoSecretRequest withPathParams(ActionsCreateOrUpdateRepoSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsCreateOrUpdateRepoSecretRequestBody requestBody;
+    public ActionsCreateOrUpdateRepoSecretRequest withRequestBody(ActionsCreateOrUpdateRepoSecretRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsCreateOrUpdateRepoSecretRequestBody request;
-    public ActionsCreateOrUpdateRepoSecretRequest withRequest(ActionsCreateOrUpdateRepoSecretRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsCreateOrUpdateRepoSecretRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsCreateOrUpdateRepoSecretRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The name of the secret.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
+    public String secretName;
+    public ActionsCreateOrUpdateRepoSecretRequest withSecretName(String secretName) {
+        this.secretName = secretName;
         return this;
     }
     

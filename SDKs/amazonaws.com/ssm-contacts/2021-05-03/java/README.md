@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AcceptPageXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AcceptPageHeaders;
 import org.openapis.openapi.models.operations.AcceptPageRequest;
 import org.openapis.openapi.models.operations.AcceptPageResponse;
 import org.openapis.openapi.models.shared.AcceptPageRequest;
@@ -30,32 +29,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AcceptPageRequest req = new AcceptPageRequest() {{
-                headers = new AcceptPageHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "SSMContacts.AcceptPage";
-                }};
-                request = new AcceptPageRequest() {{
-                    acceptCode = "illum";
-                    acceptCodeValidation = "IGNORE";
+                acceptPageRequest = new AcceptPageRequest() {{
+                    acceptCode = "corrupti";
+                    acceptCodeValidation = "ENFORCE";
                     acceptType = "READ";
-                    contactChannelId = "deserunt";
-                    note = "suscipit";
-                    pageId = "iure";
+                    contactChannelId = "quibusdam";
+                    note = "unde";
+                    pageId = "nulla";
                 }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+                xAmzTarget = "SSMContacts.AcceptPage";
+            }}            
 
             AcceptPageResponse res = sdk.acceptPage(req);
 
@@ -69,7 +64,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

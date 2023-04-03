@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest {
-    
-    public AerodromesByDistanceUsV1AerodromesDistanceQueryPostHeaders headers;
-    public AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest withHeaders(AerodromesByDistanceUsV1AerodromesDistanceQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AerodromesByDistance aerodromesByDistance;
+    public AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest withAerodromesByDistance(org.openapis.openapi.models.shared.AerodromesByDistance aerodromesByDistance) {
+        this.aerodromesByDistance = aerodromesByDistance;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AerodromesByDistance request;
-    public AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest withRequest(org.openapis.openapi.models.shared.AerodromesByDistance request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public AerodromesByDistanceUsV1AerodromesDistanceQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

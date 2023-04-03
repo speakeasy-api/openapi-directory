@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxonomiesReadRequest {
-    
-    public TaxonomiesReadPathParams pathParams;
-    public TaxonomiesReadRequest withPathParams(TaxonomiesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the taxonomy.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonomy_id")
+    public String taxonomyId;
+    public TaxonomiesReadRequest withTaxonomyId(String taxonomyId) {
+        this.taxonomyId = taxonomyId;
         return this;
     }
     

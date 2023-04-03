@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest {
-    
-    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchPathParams pathParams;
-    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withPathParams(DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchQueryParams queryParams;
-    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withQueryParams(DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1PolicyTagInput request;
-    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1PolicyTagInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1PolicyTagInput googleCloudDatacatalogV1beta1PolicyTagInput;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withGoogleCloudDatacatalogV1beta1PolicyTagInput(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1beta1PolicyTagInput googleCloudDatacatalogV1beta1PolicyTagInput) {
+        this.googleCloudDatacatalogV1beta1PolicyTagInput = googleCloudDatacatalogV1beta1PolicyTagInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchSecurity security;
-    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withSecurity(DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Output only. Resource name of this policy tag, whose format is: "projects/{project_number}/locations/{location_id}/taxonomies/{taxonomy_id}/policyTags/{id}".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * The update mask applies to the resource. Only display_name, description and parent_policy_tag can be updated and thus can be listed in the mask. If update_mask is not provided, all allowed fields (i.e. display_name, description and parent) will be updated. For more information including the `FieldMask` definition, see https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all of the fields that are allowed to update.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DatacatalogProjectsLocationsTaxonomiesPolicyTagsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

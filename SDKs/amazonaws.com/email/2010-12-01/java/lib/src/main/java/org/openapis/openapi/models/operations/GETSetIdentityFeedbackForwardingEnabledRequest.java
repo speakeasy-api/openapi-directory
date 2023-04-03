@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIdentityFeedbackForwardingEnabledRequest {
-    
-    public GETSetIdentityFeedbackForwardingEnabledQueryParams queryParams;
-    public GETSetIdentityFeedbackForwardingEnabledRequest withQueryParams(GETSetIdentityFeedbackForwardingEnabledQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetIdentityFeedbackForwardingEnabledActionEnum action;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withAction(GETSetIdentityFeedbackForwardingEnabledActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Sets whether Amazon SES will forward bounce and complaint notifications as email. &lt;code&gt;true&lt;/code&gt; specifies that Amazon SES will forward bounce and complaint notifications as email, in addition to any Amazon SNS topic publishing otherwise specified. &lt;code&gt;false&lt;/code&gt; specifies that Amazon SES will publish bounce and complaint notifications only through Amazon SNS. This value can only be set to &lt;code&gt;false&lt;/code&gt; when Amazon SNS topics are set for both &lt;code&gt;Bounce&lt;/code&gt; and &lt;code&gt;Complaint&lt;/code&gt; notification types.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ForwardingEnabled")
+    public Boolean forwardingEnabled;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withForwardingEnabled(Boolean forwardingEnabled) {
+        this.forwardingEnabled = forwardingEnabled;
+        return this;
+    }
     
-    public GETSetIdentityFeedbackForwardingEnabledHeaders headers;
-    public GETSetIdentityFeedbackForwardingEnabledRequest withHeaders(GETSetIdentityFeedbackForwardingEnabledHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identity for which to set bounce and complaint notification forwarding. Examples: &lt;code&gt;user@example.com&lt;/code&gt;, &lt;code&gt;example.com&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
+    public String identity;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetIdentityFeedbackForwardingEnabledVersionEnum version;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withVersion(GETSetIdentityFeedbackForwardingEnabledVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetIdentityFeedbackForwardingEnabledRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

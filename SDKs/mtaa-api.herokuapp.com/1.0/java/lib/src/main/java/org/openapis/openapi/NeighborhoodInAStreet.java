@@ -35,7 +35,7 @@ public class NeighborhoodInAStreet {
      */
     public org.openapis.openapi.models.operations.NeighborhoodInAStreetResponse neighborhoodInAStreet(org.openapis.openapi.models.operations.NeighborhoodInAStreetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NeighborhoodInAStreetPathParams.class, baseUrl, "/{country}/{region}/{district}/{ward}/{street}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.NeighborhoodInAStreetRequest.class, baseUrl, "/{country}/{region}/{district}/{ward}/{street}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

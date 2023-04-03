@@ -4,27 +4,65 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugMembersMemberSlugActivitiesRequest {
-    
-    public GetWorkspaceSlugMembersMemberSlugActivitiesPathParams pathParams;
-    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withPathParams(GetWorkspaceSlugMembersMemberSlugActivitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activity_type")
+    public String activityType;
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withActivityType(String activityType) {
+        this.activityType = activityType;
         return this;
     }
     
-    
-    public GetWorkspaceSlugMembersMemberSlugActivitiesQueryParams queryParams;
-    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withQueryParams(GetWorkspaceSlugMembersMemberSlugActivitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum direction;
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withDirection(GetWorkspaceSlugMembersMemberSlugActivitiesDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
+    public GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum items;
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withItems(GetWorkspaceSlugMembersMemberSlugActivitiesItemsEnum items) {
+        this.items = items;
+        return this;
+    }
     
-    public GetWorkspaceSlugMembersMemberSlugActivitiesSecurity security;
-    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withSecurity(GetWorkspaceSlugMembersMemberSlugActivitiesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
+    public String memberSlug;
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withMemberSlug(String memberSlug) {
+        this.memberSlug = memberSlug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum sort;
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withSort(GetWorkspaceSlugMembersMemberSlugActivitiesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Deprecated in favor of the activity_type parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspaceSlugMembersMemberSlugActivitiesRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

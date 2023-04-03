@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLoadBalancersIdMetricsRequest {
-    
-    public GetLoadBalancersIdMetricsPathParams pathParams;
-    public GetLoadBalancersIdMetricsRequest withPathParams(GetLoadBalancersIdMetricsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * End of period to get Metrics for (in ISO-8601 format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public GetLoadBalancersIdMetricsRequest withEnd(String end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * ID of the Load Balancer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetLoadBalancersIdMetricsRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetLoadBalancersIdMetricsQueryParams queryParams;
-    public GetLoadBalancersIdMetricsRequest withQueryParams(GetLoadBalancersIdMetricsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Start of period to get Metrics for (in ISO-8601 format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GetLoadBalancersIdMetricsRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Resolution of results in seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=step")
+    public String step;
+    public GetLoadBalancersIdMetricsRequest withStep(String step) {
+        this.step = step;
+        return this;
+    }
+    
+    /**
+     * Type of metrics to get
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetLoadBalancersIdMetricsTypeEnum type;
+    public GetLoadBalancersIdMetricsRequest withType(GetLoadBalancersIdMetricsTypeEnum type) {
+        this.type = type;
         return this;
     }
     

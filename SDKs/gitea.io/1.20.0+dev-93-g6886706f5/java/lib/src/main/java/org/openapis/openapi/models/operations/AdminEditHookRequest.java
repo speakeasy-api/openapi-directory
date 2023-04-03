@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminEditHookRequest {
-    
-    public AdminEditHookPathParams pathParams;
-    public AdminEditHookRequest withPathParams(AdminEditHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditHookOption editHookOption;
+    public AdminEditHookRequest withEditHookOption(org.openapis.openapi.models.shared.EditHookOption editHookOption) {
+        this.editHookOption = editHookOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditHookOption request;
-    public AdminEditHookRequest withRequest(org.openapis.openapi.models.shared.EditHookOption request) {
-        this.request = request;
+    /**
+     * id of the hook to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public AdminEditHookRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

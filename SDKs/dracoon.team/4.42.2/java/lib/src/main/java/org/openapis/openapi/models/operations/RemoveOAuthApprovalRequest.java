@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveOAuthApprovalRequest {
-    
-    public RemoveOAuthApprovalPathParams pathParams;
-    public RemoveOAuthApprovalRequest withPathParams(RemoveOAuthApprovalPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveOAuthApprovalRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveOAuthApprovalHeaders headers;
-    public RemoveOAuthApprovalRequest withHeaders(RemoveOAuthApprovalHeaders headers) {
-        this.headers = headers;
+    /**
+     * OAuth client ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public RemoveOAuthApprovalRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

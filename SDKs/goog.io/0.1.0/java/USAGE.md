@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CrawlPathParams;
 import org.openapis.openapi.models.operations.CrawlRequest;
 import org.openapis.openapi.models.operations.CrawlResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apikey = new SchemeApikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apikey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CrawlRequest req = new CrawlRequest() {{
-                pathParams = new CrawlPathParams() {{
-                    query = "corrupti";
-                }};
-            }};            
+                query = "corrupti";
+            }}            
 
             CrawlResponse res = sdk.crawl(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersDeleteGpgKeyForAuthenticatedUserRequest {
-    
-    public UsersDeleteGpgKeyForAuthenticatedUserPathParams pathParams;
-    public UsersDeleteGpgKeyForAuthenticatedUserRequest withPathParams(UsersDeleteGpgKeyForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the GPG key.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gpg_key_id")
+    public Long gpgKeyId;
+    public UsersDeleteGpgKeyForAuthenticatedUserRequest withGpgKeyId(Long gpgKeyId) {
+        this.gpgKeyId = gpgKeyId;
         return this;
     }
     

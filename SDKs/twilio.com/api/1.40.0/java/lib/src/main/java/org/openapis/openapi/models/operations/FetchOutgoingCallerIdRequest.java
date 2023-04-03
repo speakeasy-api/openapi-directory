@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchOutgoingCallerIdRequest {
-    
-    public FetchOutgoingCallerIdPathParams pathParams;
-    public FetchOutgoingCallerIdRequest withPathParams(FetchOutgoingCallerIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the OutgoingCallerId resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchOutgoingCallerIdRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchOutgoingCallerIdSecurity security;
-    public FetchOutgoingCallerIdRequest withSecurity(FetchOutgoingCallerIdSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchOutgoingCallerIdRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the OutgoingCallerId resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchOutgoingCallerIdRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

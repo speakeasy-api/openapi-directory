@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkPiiRequestRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkPiiRequestRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public DeleteNetworkPiiRequestPathParams pathParams;
-    public DeleteNetworkPiiRequestRequest withPathParams(DeleteNetworkPiiRequestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=requestId")
+    public String requestId;
+    public DeleteNetworkPiiRequestRequest withRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
     

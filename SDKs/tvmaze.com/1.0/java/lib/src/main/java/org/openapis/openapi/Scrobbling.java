@@ -40,13 +40,13 @@ public class Scrobbling {
      */
     public org.openapis.openapi.models.operations.GetScrobbleShowsShowIdResponse getScrobbleShowsShowId(org.openapis.openapi.models.operations.GetScrobbleShowsShowIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetScrobbleShowsShowIdPathParams.class, baseUrl, "/scrobble/shows/{show_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetScrobbleShowsShowIdRequest.class, baseUrl, "/scrobble/shows/{show_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetScrobbleShowsShowIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetScrobbleShowsShowIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -84,7 +84,7 @@ public class Scrobbling {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostScrobbleEpisodesResponse postScrobbleEpisodes(org.openapis.openapi.models.operations.PostScrobbleEpisodesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostScrobbleEpisodesResponse postScrobbleEpisodes(org.openapis.openapi.models.operations.PostScrobbleEpisodesRequestBody[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/scrobble/episodes");
         
@@ -136,10 +136,10 @@ public class Scrobbling {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostScrobbleShowsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostScrobbleShowsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -179,12 +179,12 @@ public class Scrobbling {
      */
     public org.openapis.openapi.models.operations.PutScrobbleEpisodesEpisodeIdResponse putScrobbleEpisodesEpisodeId(org.openapis.openapi.models.operations.PutScrobbleEpisodesEpisodeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutScrobbleEpisodesEpisodeIdPathParams.class, baseUrl, "/scrobble/episodes/{episode_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutScrobbleEpisodesEpisodeIdRequest.class, baseUrl, "/scrobble/episodes/{episode_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "markedEpisodeInput", "json");
         req.setBody(serializedRequestBody);
         
         

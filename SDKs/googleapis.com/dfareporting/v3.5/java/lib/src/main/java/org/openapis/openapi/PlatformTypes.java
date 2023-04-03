@@ -33,25 +33,26 @@ public class PlatformTypes {
     /**
      * Gets one platform type by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPlatformTypesGetResponse dfareportingPlatformTypesGet(org.openapis.openapi.models.operations.DfareportingPlatformTypesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPlatformTypesGetResponse dfareportingPlatformTypesGet(org.openapis.openapi.models.operations.DfareportingPlatformTypesGetRequest request, org.openapis.openapi.models.operations.DfareportingPlatformTypesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlatformTypesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/platformTypes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlatformTypesGetRequest.class, baseUrl, "/userprofiles/{profileId}/platformTypes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlatformTypesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlatformTypesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class PlatformTypes {
     /**
      * Retrieves a list of platform types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingPlatformTypesListResponse dfareportingPlatformTypesList(org.openapis.openapi.models.operations.DfareportingPlatformTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingPlatformTypesListResponse dfareportingPlatformTypesList(org.openapis.openapi.models.operations.DfareportingPlatformTypesListRequest request, org.openapis.openapi.models.operations.DfareportingPlatformTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlatformTypesListPathParams.class, baseUrl, "/userprofiles/{profileId}/platformTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingPlatformTypesListRequest.class, baseUrl, "/userprofiles/{profileId}/platformTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlatformTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingPlatformTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

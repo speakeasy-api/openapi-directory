@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IncreaseStreamRetentionPeriodRequest {
-    
-    public IncreaseStreamRetentionPeriodHeaders headers;
-    public IncreaseStreamRetentionPeriodRequest withHeaders(IncreaseStreamRetentionPeriodHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.IncreaseStreamRetentionPeriodInput increaseStreamRetentionPeriodInput;
+    public IncreaseStreamRetentionPeriodRequest withIncreaseStreamRetentionPeriodInput(org.openapis.openapi.models.shared.IncreaseStreamRetentionPeriodInput increaseStreamRetentionPeriodInput) {
+        this.increaseStreamRetentionPeriodInput = increaseStreamRetentionPeriodInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.IncreaseStreamRetentionPeriodInput request;
-    public IncreaseStreamRetentionPeriodRequest withRequest(org.openapis.openapi.models.shared.IncreaseStreamRetentionPeriodInput request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public IncreaseStreamRetentionPeriodRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public IncreaseStreamRetentionPeriodRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public IncreaseStreamRetentionPeriodRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public IncreaseStreamRetentionPeriodRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public IncreaseStreamRetentionPeriodRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public IncreaseStreamRetentionPeriodRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public IncreaseStreamRetentionPeriodRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public IncreaseStreamRetentionPeriodXAmzTargetEnum xAmzTarget;
+    public IncreaseStreamRetentionPeriodRequest withXAmzTarget(IncreaseStreamRetentionPeriodXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

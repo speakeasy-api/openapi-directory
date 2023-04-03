@@ -4,13 +4,29 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DailyFantasyPlayersRequest {
+    /**
+     *           The date of the contest for which you're pulling players
+     *           &lt;code&gt;2014-SEP-21&lt;/code&gt;,
+     *           &lt;code&gt;2014-NOV-15&lt;/code&gt;, etc
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public DailyFantasyPlayersRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public DailyFantasyPlayersPathParams pathParams;
-    public DailyFantasyPlayersRequest withPathParams(DailyFantasyPlayersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public DailyFantasyPlayersFormatEnum format;
+    public DailyFantasyPlayersRequest withFormat(DailyFantasyPlayersFormatEnum format) {
+        this.format = format;
         return this;
     }
     

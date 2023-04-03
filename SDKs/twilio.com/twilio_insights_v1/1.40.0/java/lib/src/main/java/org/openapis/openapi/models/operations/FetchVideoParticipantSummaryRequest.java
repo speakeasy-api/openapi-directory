@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchVideoParticipantSummaryRequest {
-    
-    public FetchVideoParticipantSummaryPathParams pathParams;
-    public FetchVideoParticipantSummaryRequest withPathParams(FetchVideoParticipantSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Participant resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ParticipantSid")
+    public String participantSid;
+    public FetchVideoParticipantSummaryRequest withParticipantSid(String participantSid) {
+        this.participantSid = participantSid;
         return this;
     }
     
-    
-    public FetchVideoParticipantSummarySecurity security;
-    public FetchVideoParticipantSummaryRequest withSecurity(FetchVideoParticipantSummarySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchVideoParticipantSummaryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Room resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public FetchVideoParticipantSummaryRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     

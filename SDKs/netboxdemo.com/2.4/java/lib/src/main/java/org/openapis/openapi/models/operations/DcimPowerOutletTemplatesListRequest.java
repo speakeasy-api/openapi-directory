@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerOutletTemplatesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicetype_id")
+    public String devicetypeId;
+    public DcimPowerOutletTemplatesListRequest withDevicetypeId(String devicetypeId) {
+        this.devicetypeId = devicetypeId;
+        return this;
+    }
     
-    public DcimPowerOutletTemplatesListQueryParams queryParams;
-    public DcimPowerOutletTemplatesListRequest withQueryParams(DcimPowerOutletTemplatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimPowerOutletTemplatesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimPowerOutletTemplatesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimPowerOutletTemplatesListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

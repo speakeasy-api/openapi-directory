@@ -4,27 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDistrictsInStateUsingGETRequest {
-    
-    public GETDistrictsInStateUsingGETQueryParams queryParams;
-    public GETDistrictsInStateUsingGETRequest withQueryParams(GETDistrictsInStateUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GETDistrictsInStateUsingGETRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
-    
-    public GETDistrictsInStateUsingGETHeaders headers;
-    public GETDistrictsInStateUsingGETRequest withHeaders(GETDistrictsInStateUsingGETHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GETDistrictsInStateUsingGETSecurity security;
-    public GETDistrictsInStateUsingGETRequest withSecurity(GETDistrictsInStateUsingGETSecurity security) {
-        this.security = security;
+    /**
+     * stateCode
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateCode")
+    public String stateCode;
+    public GETDistrictsInStateUsingGETRequest withStateCode(String stateCode) {
+        this.stateCode = stateCode;
         return this;
     }
     

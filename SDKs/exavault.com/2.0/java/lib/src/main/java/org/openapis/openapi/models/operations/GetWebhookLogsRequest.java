@@ -4,20 +4,127 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhookLogsRequest {
-    
-    public GetWebhookLogsQueryParams queryParams;
-    public GetWebhookLogsRequest withQueryParams(GetWebhookLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Latest date of entries to include in list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public GetWebhookLogsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * Webhook listener endpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endpointUrl")
+    public String endpointUrl;
+    public GetWebhookLogsRequest withEndpointUrl(String endpointUrl) {
+        this.endpointUrl = endpointUrl;
+        return this;
+    }
     
-    public GetWebhookLogsHeaders headers;
-    public GetWebhookLogsRequest withHeaders(GetWebhookLogsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetWebhookLogsRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetWebhookLogsRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * Type of activity that triggered the webhook attempt
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
+    public String event;
+    public GetWebhookLogsRequest withEvent(String event) {
+        this.event = event;
+        return this;
+    }
+    
+    /**
+     * Limit of the records list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetWebhookLogsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Records to skip before returning results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetWebhookLogsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Path of the resource that triggered the webhook attempt
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourcePath")
+    public String resourcePath;
+    public GetWebhookLogsRequest withResourcePath(String resourcePath) {
+        this.resourcePath = resourcePath;
+        return this;
+    }
+    
+    /**
+     * Comma separated list sort params
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetWebhookLogsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Earliest date of entries to include in list
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public GetWebhookLogsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Response code from the webhook endpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statusCode")
+    public Long statusCode;
+    public GetWebhookLogsRequest withStatusCode(Long statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    
+    /**
+     * Filter by triggering username.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetWebhookLogsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

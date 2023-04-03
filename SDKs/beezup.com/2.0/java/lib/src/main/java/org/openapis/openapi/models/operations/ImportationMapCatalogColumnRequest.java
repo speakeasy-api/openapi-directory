@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationMapCatalogColumnRequest {
+    /**
+     * The catalog column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
+    public String columnId;
+    public ImportationMapCatalogColumnRequest withColumnId(String columnId) {
+        this.columnId = columnId;
+        return this;
+    }
     
-    public ImportationMapCatalogColumnPathParams pathParams;
-    public ImportationMapCatalogColumnRequest withPathParams(ImportationMapCatalogColumnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The execution identifier of you catalog importation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ImportationMapCatalogColumnRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MapBeezUPColumnRequest request;
-    public ImportationMapCatalogColumnRequest withRequest(org.openapis.openapi.models.shared.MapBeezUPColumnRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MapBeezUPColumnRequest mapBeezUPColumnRequest;
+    public ImportationMapCatalogColumnRequest withMapBeezUPColumnRequest(org.openapis.openapi.models.shared.MapBeezUPColumnRequest mapBeezUPColumnRequest) {
+        this.mapBeezUPColumnRequest = mapBeezUPColumnRequest;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationMapCatalogColumnRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

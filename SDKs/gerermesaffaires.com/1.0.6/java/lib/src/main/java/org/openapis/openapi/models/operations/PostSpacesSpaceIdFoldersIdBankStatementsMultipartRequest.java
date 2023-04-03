@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdBankStatementsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Bank statement to add (either DocumentId,StatementDate either (File,Name,Content64Encoded,Title,StatementDate) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdBankStatementsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdBankStatementsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder bank
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdBankStatementsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdBankStatementsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

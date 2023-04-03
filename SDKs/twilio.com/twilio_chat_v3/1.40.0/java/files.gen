@@ -30,13 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateChannelSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateChannelPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateChannelHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateChannelUpdateChannelRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateChannelRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateChannelResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ChatV3Channel.java
 lib/src/main/java/org/openapis/openapi/models/shared/ChannelEnumChannelTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ChannelEnumWebhookEnabledTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAccountSidAuthToken.java
 USAGE.md

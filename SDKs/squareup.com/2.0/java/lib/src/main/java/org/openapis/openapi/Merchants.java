@@ -41,10 +41,11 @@ public class Merchants {
      * If you know the merchant ID, you can also use the [RetrieveMerchant](https://developer.squareup.com/reference/square_2021-08-18/merchants-api/retrieve-merchant)
      * endpoint to get the merchant information.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListMerchantsResponse listMerchants(org.openapis.openapi.models.operations.ListMerchantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListMerchantsResponse listMerchants(org.openapis.openapi.models.operations.ListMerchantsRequest request, org.openapis.openapi.models.operations.ListMerchantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/merchants");
         
@@ -52,14 +53,14 @@ public class Merchants {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMerchantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListMerchantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,19 +88,20 @@ public class Merchants {
      * RetrieveMerchant
      * Retrieve a `Merchant` object for the given `merchant_id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveMerchantResponse retrieveMerchant(org.openapis.openapi.models.operations.RetrieveMerchantRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveMerchantResponse retrieveMerchant(org.openapis.openapi.models.operations.RetrieveMerchantRequest request, org.openapis.openapi.models.operations.RetrieveMerchantSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveMerchantPathParams.class, baseUrl, "/v2/merchants/{merchant_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveMerchantRequest.class, baseUrl, "/v2/merchants/{merchant_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

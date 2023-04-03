@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGenotypeCaseAssociationsRequest {
-    
-    public GetGenotypeCaseAssociationsPathParams pathParams;
-    public GetGenotypeCaseAssociationsRequest withPathParams(GetGenotypeCaseAssociationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Set true to only include direct associations, and false to include inferred (via subclass or subclass|part of), default=False
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direct")
+    public Boolean direct;
+    public GetGenotypeCaseAssociationsRequest withDirect(Boolean direct) {
+        this.direct = direct;
         return this;
     }
     
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default) or a specific publication or other supporting object, e.g. ZFIN:ZDB-PUB-060503-2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetGenotypeCaseAssociationsRequest withEvidence(String evidence) {
+        this.evidence = evidence;
+        return this;
+    }
     
-    public GetGenotypeCaseAssociationsQueryParams queryParams;
-    public GetGenotypeCaseAssociationsRequest withQueryParams(GetGenotypeCaseAssociationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, excludes associations that involve IEAs (ECO:0000501)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
+    public Boolean excludeAutomaticAssertions;
+    public GetGenotypeCaseAssociationsRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
+        this.excludeAutomaticAssertions = excludeAutomaticAssertions;
+        return this;
+    }
+    
+    /**
+     * Enable faceting
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet")
+    public Boolean facet;
+    public GetGenotypeCaseAssociationsRequest withFacet(Boolean facet) {
+        this.facet = facet;
+        return this;
+    }
+    
+    /**
+     * Fields to facet on
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_fields")
+    public String[] facetFields;
+    public GetGenotypeCaseAssociationsRequest withFacetFields(String[] facetFields) {
+        this.facetFields = facetFields;
+        return this;
+    }
+    
+    /**
+     * If true, returns a distinct set of association.objects (typically ontology terms). This appears at the top level of the results payload
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fetch_objects")
+    public Boolean fetchObjects;
+    public GetGenotypeCaseAssociationsRequest withFetchObjects(Boolean fetchObjects) {
+        this.fetchObjects = fetchObjects;
+        return this;
+    }
+    
+    /**
+     * CURIE identifier of genotype, e.g. dbSNPIndividual:10440, dbSNPIndividual:22633
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetGenotypeCaseAssociationsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetGenotypeCaseAssociationsRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * Map objects up (slim) to a higher level category. Value can be ontology class ID or subset ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
+    public String[] slim;
+    public GetGenotypeCaseAssociationsRequest withSlim(String[] slim) {
+        this.slim = slim;
+        return this;
+    }
+    
+    /**
+     * beginning row
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public GetGenotypeCaseAssociationsRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * If true, excludes evidence objects in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
+    public Boolean unselectEvidence;
+    public GetGenotypeCaseAssociationsRequest withUnselectEvidence(Boolean unselectEvidence) {
+        this.unselectEvidence = unselectEvidence;
+        return this;
+    }
+    
+    /**
+     * If true, returns results in compact associations format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
+    public Boolean useCompactAssociations;
+    public GetGenotypeCaseAssociationsRequest withUseCompactAssociations(Boolean useCompactAssociations) {
+        this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     

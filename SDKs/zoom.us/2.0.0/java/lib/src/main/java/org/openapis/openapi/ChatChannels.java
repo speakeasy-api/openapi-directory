@@ -43,21 +43,22 @@ public class ChatChannels {
      *  
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateChannelResponse createChannel(org.openapis.openapi.models.operations.CreateChannelRequest request, org.openapis.openapi.models.operations.CreateChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateChannelPathParams.class, baseUrl, "/chat/users/{userId}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateChannelRequest.class, baseUrl, "/chat/users/{userId}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -105,7 +106,7 @@ public class ChatChannels {
      */
     public org.openapis.openapi.models.operations.DeleteUserLevelChannelResponse deleteUserLevelChannel(org.openapis.openapi.models.operations.DeleteUserLevelChannelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserLevelChannelPathParams.class, baseUrl, "/chat/channels/{channelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserLevelChannelRequest.class, baseUrl, "/chat/channels/{channelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -156,25 +157,26 @@ public class ChatChannels {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetChannelsResponse getChannels(org.openapis.openapi.models.operations.GetChannelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetChannelsResponse getChannels(org.openapis.openapi.models.operations.GetChannelsRequest request, org.openapis.openapi.models.operations.GetChannelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelsPathParams.class, baseUrl, "/chat/users/{userId}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChannelsRequest.class, baseUrl, "/chat/users/{userId}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetChannelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,19 +219,20 @@ public class ChatChannels {
      * 
      *  
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserLevelChannelResponse getUserLevelChannel(org.openapis.openapi.models.operations.GetUserLevelChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserLevelChannelResponse getUserLevelChannel(org.openapis.openapi.models.operations.GetUserLevelChannelRequest request, org.openapis.openapi.models.operations.GetUserLevelChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserLevelChannelPathParams.class, baseUrl, "/chat/channels/{channelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserLevelChannelRequest.class, baseUrl, "/chat/channels/{channelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -269,19 +272,20 @@ public class ChatChannels {
      * **Scope:** `chat_channel:write`&lt;br&gt;
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.JoinChannelResponse joinChannel(org.openapis.openapi.models.operations.JoinChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.JoinChannelResponse joinChannel(org.openapis.openapi.models.operations.JoinChannelRequest request, org.openapis.openapi.models.operations.JoinChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JoinChannelPathParams.class, baseUrl, "/chat/channels/{channelId}/members/me", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.JoinChannelRequest.class, baseUrl, "/chat/channels/{channelId}/members/me", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -321,19 +325,20 @@ public class ChatChannels {
      * **Scope:** `chat_channel:write`&lt;br&gt;
      * **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LeaveChannelResponse leaveChannel(org.openapis.openapi.models.operations.LeaveChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LeaveChannelResponse leaveChannel(org.openapis.openapi.models.operations.LeaveChannelRequest request, org.openapis.openapi.models.operations.LeaveChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LeaveChannelPathParams.class, baseUrl, "/chat/channels/{channelId}/members/me", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LeaveChannelRequest.class, baseUrl, "/chat/channels/{channelId}/members/me", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -375,19 +380,20 @@ public class ChatChannels {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveAUserLevelChannelMemberResponse removeAUserLevelChannelMember(org.openapis.openapi.models.operations.RemoveAUserLevelChannelMemberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveAUserLevelChannelMemberResponse removeAUserLevelChannelMember(org.openapis.openapi.models.operations.RemoveAUserLevelChannelMemberRequest request, org.openapis.openapi.models.operations.RemoveAUserLevelChannelMemberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveAUserLevelChannelMemberPathParams.class, baseUrl, "/chat/channels/{channelId}/members/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveAUserLevelChannelMemberRequest.class, baseUrl, "/chat/channels/{channelId}/members/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -429,21 +435,22 @@ public class ChatChannels {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUserLevelChannelResponse updateUserLevelChannel(org.openapis.openapi.models.operations.UpdateUserLevelChannelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUserLevelChannelResponse updateUserLevelChannel(org.openapis.openapi.models.operations.UpdateUserLevelChannelRequest request, org.openapis.openapi.models.operations.UpdateUserLevelChannelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserLevelChannelPathParams.class, baseUrl, "/chat/channels/{channelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUserLevelChannelRequest.class, baseUrl, "/chat/channels/{channelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

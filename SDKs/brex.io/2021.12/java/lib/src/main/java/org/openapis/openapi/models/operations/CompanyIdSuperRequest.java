@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyIdSuperRequest {
-    
-    public CompanyIdSuperPathParams pathParams;
-    public CompanyIdSuperRequest withPathParams(CompanyIdSuperPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ISO_3166-1_alpha-2 representation of a country name - 2 chars
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public CompanyIdSuperRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public CompanyIdSuperQueryParams queryParams;
-    public CompanyIdSuperRequest withQueryParams(CompanyIdSuperQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * company superdata by id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CompanyIdSuperRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public CompanyIdSuperSecurity security;
-    public CompanyIdSuperRequest withSecurity(CompanyIdSuperSecurity security) {
-        this.security = security;
+    /**
+     * Optional data translation (only available in limited jurisdictions)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public CompanyIdSuperLangEnum lang;
+    public CompanyIdSuperRequest withLang(CompanyIdSuperLangEnum lang) {
+        this.lang = lang;
         return this;
     }
     

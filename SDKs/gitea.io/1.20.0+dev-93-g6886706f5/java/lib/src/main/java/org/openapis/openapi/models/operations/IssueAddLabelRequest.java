@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueAddLabelRequest {
-    
-    public IssueAddLabelPathParams pathParams;
-    public IssueAddLabelRequest withPathParams(IssueAddLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.IssueLabelsOption issueLabelsOption;
+    public IssueAddLabelRequest withIssueLabelsOption(org.openapis.openapi.models.shared.IssueLabelsOption issueLabelsOption) {
+        this.issueLabelsOption = issueLabelsOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.IssueLabelsOption request;
-    public IssueAddLabelRequest withRequest(org.openapis.openapi.models.shared.IssueLabelsOption request) {
-        this.request = request;
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueAddLabelRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueAddLabelRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueAddLabelRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

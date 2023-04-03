@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTask1Request {
-    
-    public CreateTask1PathParams pathParams;
-    public CreateTask1Request withPathParams(CreateTask1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated custom fields of a given quote.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TaskDTO request;
-    public CreateTask1Request withRequest(org.openapis.openapi.models.shared.TaskDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TaskDTO taskDTO;
+    public CreateTask1Request withTaskDTO(org.openapis.openapi.models.shared.TaskDTO taskDTO) {
+        this.taskDTO = taskDTO;
+        return this;
+    }
+    
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public CreateTask1Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

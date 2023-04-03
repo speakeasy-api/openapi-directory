@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopsStopDetailsRequest {
-    
-    public StopsStopDetailsPathParams pathParams;
-    public StopsStopDetailsRequest withPathParams(StopsStopDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public StopsStopDetailsRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Incdicates whether the stop_id is a GTFS ID or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gtfs")
+    public Boolean gtfs;
+    public StopsStopDetailsRequest withGtfs(Boolean gtfs) {
+        this.gtfs = gtfs;
+        return this;
+    }
     
-    public StopsStopDetailsQueryParams queryParams;
-    public StopsStopDetailsRequest withQueryParams(StopsStopDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number identifying transport mode; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
+    public StopsStopDetailsRouteTypeEnum routeType;
+    public StopsStopDetailsRequest withRouteType(StopsStopDetailsRouteTypeEnum routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public StopsStopDetailsRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop accessibility information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_accessibility")
+    public Boolean stopAccessibility;
+    public StopsStopDetailsRequest withStopAccessibility(Boolean stopAccessibility) {
+        this.stopAccessibility = stopAccessibility;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop amenity information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_amenities")
+    public Boolean stopAmenities;
+    public StopsStopDetailsRequest withStopAmenities(Boolean stopAmenities) {
+        this.stopAmenities = stopAmenities;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop contact information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_contact")
+    public Boolean stopContact;
+    public StopsStopDetailsRequest withStopContact(Boolean stopContact) {
+        this.stopContact = stopContact;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop disruption information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_disruptions")
+    public Boolean stopDisruptions;
+    public StopsStopDetailsRequest withStopDisruptions(Boolean stopDisruptions) {
+        this.stopDisruptions = stopDisruptions;
+        return this;
+    }
+    
+    /**
+     * Identifier of stop; values returned by Stops API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop_id")
+    public Integer stopId;
+    public StopsStopDetailsRequest withStopId(Integer stopId) {
+        this.stopId = stopId;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop location information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_location")
+    public Boolean stopLocation;
+    public StopsStopDetailsRequest withStopLocation(Boolean stopLocation) {
+        this.stopLocation = stopLocation;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop staffing information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_staffing")
+    public Boolean stopStaffing;
+    public StopsStopDetailsRequest withStopStaffing(Boolean stopStaffing) {
+        this.stopStaffing = stopStaffing;
+        return this;
+    }
+    
+    /**
+     * Indicates if stop ticket information will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_ticket")
+    public Boolean stopTicket;
+    public StopsStopDetailsRequest withStopTicket(Boolean stopTicket) {
+        this.stopTicket = stopTicket;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public StopsStopDetailsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

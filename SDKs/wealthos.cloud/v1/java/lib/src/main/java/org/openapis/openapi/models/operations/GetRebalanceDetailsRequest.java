@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRebalanceDetailsRequest {
-    
-    public GetRebalanceDetailsPathParams pathParams;
-    public GetRebalanceDetailsRequest withPathParams(GetRebalanceDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the rebalance request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rebalance_request_id")
+    public String rebalanceRequestId;
+    public GetRebalanceDetailsRequest withRebalanceRequestId(String rebalanceRequestId) {
+        this.rebalanceRequestId = rebalanceRequestId;
         return this;
     }
     
-    
-    public GetRebalanceDetailsHeaders headers;
-    public GetRebalanceDetailsRequest withHeaders(GetRebalanceDetailsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetRebalanceDetailsSecurity security;
-    public GetRebalanceDetailsRequest withSecurity(GetRebalanceDetailsSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetRebalanceDetailsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

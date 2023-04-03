@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListWorkflowRunArtifactsRequest {
-    
-    public ActionsListWorkflowRunArtifactsPathParams pathParams;
-    public ActionsListWorkflowRunArtifactsRequest withPathParams(ActionsListWorkflowRunArtifactsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsListWorkflowRunArtifactsRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListWorkflowRunArtifactsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActionsListWorkflowRunArtifactsQueryParams queryParams;
-    public ActionsListWorkflowRunArtifactsRequest withQueryParams(ActionsListWorkflowRunArtifactsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListWorkflowRunArtifactsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsListWorkflowRunArtifactsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
+    public Long runId;
+    public ActionsListWorkflowRunArtifactsRequest withRunId(Long runId) {
+        this.runId = runId;
         return this;
     }
     

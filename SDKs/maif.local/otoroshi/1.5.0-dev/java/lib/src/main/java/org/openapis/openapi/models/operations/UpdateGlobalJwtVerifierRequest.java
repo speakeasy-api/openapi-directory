@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGlobalJwtVerifierRequest {
-    
-    public UpdateGlobalJwtVerifierPathParams pathParams;
-    public UpdateGlobalJwtVerifierRequest withPathParams(UpdateGlobalJwtVerifierPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GlobalJwtVerifier request;
-    public UpdateGlobalJwtVerifierRequest withRequest(org.openapis.openapi.models.shared.GlobalJwtVerifier request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GlobalJwtVerifier globalJwtVerifier;
+    public UpdateGlobalJwtVerifierRequest withGlobalJwtVerifier(org.openapis.openapi.models.shared.GlobalJwtVerifier globalJwtVerifier) {
+        this.globalJwtVerifier = globalJwtVerifier;
         return this;
     }
     
-    
-    public UpdateGlobalJwtVerifierSecurity security;
-    public UpdateGlobalJwtVerifierRequest withSecurity(UpdateGlobalJwtVerifierSecurity security) {
-        this.security = security;
+    /**
+     * The jwt verifier id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=verifierId")
+    public String verifierId;
+    public UpdateGlobalJwtVerifierRequest withVerifierId(String verifierId) {
+        this.verifierId = verifierId;
         return this;
     }
     

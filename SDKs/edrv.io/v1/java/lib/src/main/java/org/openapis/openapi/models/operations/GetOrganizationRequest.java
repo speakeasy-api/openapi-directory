@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationRequest {
-    
-    public GetOrganizationPathParams pathParams;
-    public GetOrganizationRequest withPathParams(GetOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of organization that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetOrganizationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetOrganizationQueryParams queryParams;
-    public GetOrganizationRequest withQueryParams(GetOrganizationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate locations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_locations")
+    public Boolean includeLocations;
+    public GetOrganizationRequest withIncludeLocations(Boolean includeLocations) {
+        this.includeLocations = includeLocations;
         return this;
     }
     

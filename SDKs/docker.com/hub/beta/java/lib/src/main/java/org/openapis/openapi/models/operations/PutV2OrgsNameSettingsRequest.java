@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutV2OrgsNameSettingsRequest {
-    
-    public PutV2OrgsNameSettingsPathParams pathParams;
-    public PutV2OrgsNameSettingsRequest withPathParams(PutV2OrgsNameSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutV2OrgsNameSettingsRequestBody requestBody;
+    public PutV2OrgsNameSettingsRequest withRequestBody(PutV2OrgsNameSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutV2OrgsNameSettingsRequestBody request;
-    public PutV2OrgsNameSettingsRequest withRequest(PutV2OrgsNameSettingsRequestBody request) {
-        this.request = request;
+    /**
+     * Name of the organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public PutV2OrgsNameSettingsRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

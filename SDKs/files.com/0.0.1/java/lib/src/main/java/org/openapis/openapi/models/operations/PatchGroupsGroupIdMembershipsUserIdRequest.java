@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchGroupsGroupIdMembershipsUserIdRequest {
-    
-    public PatchGroupsGroupIdMembershipsUserIdPathParams pathParams;
-    public PatchGroupsGroupIdMembershipsUserIdRequest withPathParams(PatchGroupsGroupIdMembershipsUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchGroupsGroupIdMembershipsUserIdRequestBody requestBody;
+    public PatchGroupsGroupIdMembershipsUserIdRequest withRequestBody(PatchGroupsGroupIdMembershipsUserIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchGroupsGroupIdMembershipsUserIdRequestBody request;
-    public PatchGroupsGroupIdMembershipsUserIdRequest withRequest(PatchGroupsGroupIdMembershipsUserIdRequestBody request) {
-        this.request = request;
+    /**
+     * Group ID to add user to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Integer groupId;
+    public PatchGroupsGroupIdMembershipsUserIdRequest withGroupId(Integer groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * User ID to add to group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Integer userId;
+    public PatchGroupsGroupIdMembershipsUserIdRequest withUserId(Integer userId) {
+        this.userId = userId;
         return this;
     }
     

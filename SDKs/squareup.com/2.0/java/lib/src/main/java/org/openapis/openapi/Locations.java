@@ -34,10 +34,11 @@ public class Locations {
      * CreateLocation
      * Creates a location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateLocationResponse createLocation(org.openapis.openapi.models.operations.CreateLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateLocationResponse createLocation(org.openapis.openapi.models.shared.CreateLocationRequest request, org.openapis.openapi.models.operations.CreateLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/locations");
         
@@ -51,7 +52,7 @@ public class Locations {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,11 +83,10 @@ public class Locations {
      * Many Square API endpoints require a `location_id` parameter.
      * The `id` field of the [`Location`](https://developer.squareup.com/reference/square_2021-08-18/objects/Location) objects returned by this
      * endpoint correspond to that `location_id` parameter.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLocationsResponse listLocations(org.openapis.openapi.models.operations.ListLocationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListLocationsResponse listLocations() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/locations");
         
@@ -95,8 +95,7 @@ public class Locations {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -125,19 +124,20 @@ public class Locations {
      * as the location ID to retrieve details of the 
      * main location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveLocationResponse retrieveLocation(org.openapis.openapi.models.operations.RetrieveLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveLocationResponse retrieveLocation(org.openapis.openapi.models.operations.RetrieveLocationRequest request, org.openapis.openapi.models.operations.RetrieveLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveLocationPathParams.class, baseUrl, "/v2/locations/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveLocationRequest.class, baseUrl, "/v2/locations/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,24 +165,25 @@ public class Locations {
      * UpdateLocation
      * Updates a location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateLocationResponse updateLocation(org.openapis.openapi.models.operations.UpdateLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateLocationResponse updateLocation(org.openapis.openapi.models.operations.UpdateLocationRequest request, org.openapis.openapi.models.operations.UpdateLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLocationPathParams.class, baseUrl, "/v2/locations/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLocationRequest.class, baseUrl, "/v2/locations/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateLocationRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -68,7 +68,7 @@ public class SwaggerDoc {
      */
     public org.openapis.openapi.models.operations.GETSwaggerDocNameFormatResponse getSwaggerDocNameFormat(org.openapis.openapi.models.operations.GETSwaggerDocNameFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSwaggerDocNameFormatPathParams.class, baseUrl, "/swagger_doc/{name}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSwaggerDocNameFormatRequest.class, baseUrl, "/swagger_doc/{name}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BindNetworkRequest {
-    
-    public BindNetworkPathParams pathParams;
-    public BindNetworkRequest withPathParams(BindNetworkPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public BindNetworkRequestBody requestBody;
+    public BindNetworkRequest withRequestBody(BindNetworkRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public BindNetworkRequestBody request;
-    public BindNetworkRequest withRequest(BindNetworkRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public BindNetworkRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

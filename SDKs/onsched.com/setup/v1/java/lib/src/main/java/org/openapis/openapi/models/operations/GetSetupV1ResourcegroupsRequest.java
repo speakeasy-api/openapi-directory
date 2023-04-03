@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ResourcegroupsRequest {
+    /**
+     * Filter results by deleted status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleted")
+    public Boolean deleted;
+    public GetSetupV1ResourcegroupsRequest withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
     
-    public GetSetupV1ResourcegroupsQueryParams queryParams;
-    public GetSetupV1ResourcegroupsRequest withQueryParams(GetSetupV1ResourcegroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1ResourcegroupsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
+    public String locationId;
+    public GetSetupV1ResourcegroupsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1ResourcegroupsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

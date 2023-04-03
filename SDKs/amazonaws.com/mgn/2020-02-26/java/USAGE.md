@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ArchiveApplicationHeaders;
 import org.openapis.openapi.models.operations.ArchiveApplicationRequestBody;
 import org.openapis.openapi.models.operations.ArchiveApplicationRequest;
 import org.openapis.openapi.models.operations.ArchiveApplicationResponse;
@@ -14,26 +13,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             ArchiveApplicationRequest req = new ArchiveApplicationRequest() {{
-                headers = new ArchiveApplicationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new ArchiveApplicationRequestBody() {{
+                    applicationID = "corrupti";
                 }};
-                request = new ArchiveApplicationRequestBody() {{
-                    applicationID = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             ArchiveApplicationResponse res = sdk.archiveApplication(req);
 

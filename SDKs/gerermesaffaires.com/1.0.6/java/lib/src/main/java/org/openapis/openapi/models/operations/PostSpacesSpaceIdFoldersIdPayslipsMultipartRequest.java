@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest {
-    
-    public PostSpacesSpaceIdFoldersIdPayslipsMultipartPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest withPathParams(PostSpacesSpaceIdFoldersIdPayslipsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Payslip to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PostSpacesSpaceIdFoldersIdPayslipsMultipartFormData1 request;
-    public PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest withRequest(PostSpacesSpaceIdFoldersIdPayslipsMultipartFormData1 request) {
-        this.request = request;
+    public PostSpacesSpaceIdFoldersIdPayslipsMultipartFormData1 requestBody;
+    public PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest withRequestBody(PostSpacesSpaceIdFoldersIdPayslipsMultipartFormData1 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder employee
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdPayslipsMultipartSecurity security;
-    public PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest withSecurity(PostSpacesSpaceIdFoldersIdPayslipsMultipartSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdPayslipsMultipartRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

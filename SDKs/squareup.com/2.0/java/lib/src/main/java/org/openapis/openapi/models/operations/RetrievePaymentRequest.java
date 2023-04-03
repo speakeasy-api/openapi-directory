@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrievePaymentRequest {
-    
-    public RetrievePaymentPathParams pathParams;
-    public RetrievePaymentRequest withPathParams(RetrievePaymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the payment's associated location.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public RetrievePaymentRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
-    
-    public RetrievePaymentSecurity security;
-    public RetrievePaymentRequest withSecurity(RetrievePaymentSecurity security) {
-        this.security = security;
+    /**
+     * The Square-issued payment ID. payment_id comes from Payment objects returned by the List Payments endpoint, Settlement objects returned by the List Settlements endpoint, or Refund objects returned by the List Refunds endpoint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_id")
+    public String paymentId;
+    public RetrievePaymentRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

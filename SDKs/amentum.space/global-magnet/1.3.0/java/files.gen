@@ -29,7 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/AppApiWMMEndpointsWMMMagneticFieldQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AppApiWMMEndpointsWMMMagneticFieldRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AppApiWMMEndpointsWMMMagneticField200ApplicationJSONDeclination.java
 lib/src/main/java/org/openapis/openapi/models/operations/AppApiWMMEndpointsWMMMagneticField200ApplicationJSONGridVariation.java

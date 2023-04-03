@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAvailableVendorsRequest {
-    
-    public GetAvailableVendorsQueryParams queryParams;
-    public GetAvailableVendorsRequest withQueryParams(GetAvailableVendorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AvailableVendorsFilter availableVendorsFilter;
+    public GetAvailableVendorsRequest withAvailableVendorsFilter(org.openapis.openapi.models.shared.AvailableVendorsFilter availableVendorsFilter) {
+        this.availableVendorsFilter = availableVendorsFilter;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AvailableVendorsFilter request;
-    public GetAvailableVendorsRequest withRequest(org.openapis.openapi.models.shared.AvailableVendorsFilter request) {
-        this.request = request;
+    /**
+     * Include detailed information. Possible values 'user'. Requesting user info enrichment takes much longer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with[]")
+    public GetAvailableVendorsWithEnum[] with;
+    public GetAvailableVendorsRequest withWith(GetAvailableVendorsWithEnum[] with) {
+        this.with = with;
         return this;
     }
     

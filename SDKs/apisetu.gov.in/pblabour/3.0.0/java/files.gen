@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/AlsfcSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/AlsfcRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/AlsfcRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/AlsfcRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/AlsfcRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Alsfc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Alsfc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Alsfc504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/ClcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ClcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/ClcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/ClcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/ClcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Clcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Clcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Clcer504ApplicationJSON.java
@@ -88,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SrcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SrcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SrcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SrcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SrcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Srcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Srcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Srcer504ApplicationJSON.java
@@ -122,6 +119,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

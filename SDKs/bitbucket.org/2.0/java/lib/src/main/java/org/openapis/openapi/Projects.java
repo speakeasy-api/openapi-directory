@@ -51,19 +51,20 @@ public class Projects {
      * $ curl -X DELETE https://api.bitbucket.org/2.0/bbworkspace1/PROJ
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyResponse deleteWorkspacesWorkspaceProjectsProjectKey(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyResponse deleteWorkspacesWorkspaceProjectsProjectKey(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyRequest request, org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -100,19 +101,20 @@ public class Projects {
      * HTTP/1.1 204
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse deleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse deleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest request, org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -142,19 +144,20 @@ public class Projects {
      * Get a project for a workspace
      * Returns the requested project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse getWorkspacesWorkspaceProjectsProjectKey(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyResponse getWorkspacesWorkspaceProjectsProjectKey(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,19 +222,20 @@ public class Projects {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse getWorkspacesWorkspaceProjectsProjectKeyDefaultReviewers(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse getWorkspacesWorkspaceProjectsProjectKeyDefaultReviewers(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/default-reviewers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/default-reviewers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -277,19 +281,20 @@ public class Projects {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse getWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse getWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest request, org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -378,24 +383,25 @@ public class Projects {
      * }
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsResponse postWorkspacesWorkspaceProjects(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsResponse postWorkspacesWorkspaceProjects(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsRequest request, org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsPathParams.class, baseUrl, "/workspaces/{workspace}/projects", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspacesWorkspaceProjectsRequest.class, baseUrl, "/workspaces/{workspace}/projects", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,24 +460,25 @@ public class Projects {
      * project is changed and is returned in the `Location` header of the
      * response.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyResponse putWorkspacesWorkspaceProjectsProjectKey(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyResponse putWorkspacesWorkspaceProjectsProjectKey(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyRequest request, org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -518,19 +525,20 @@ public class Projects {
      * HTTP/1.1 204
      * ```
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse putWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserResponse putWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUser(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest request, org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserPathParams.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersSelectedUserRequest.class, baseUrl, "/workspaces/{workspace}/projects/{project_key}/default-reviewers/{selected_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

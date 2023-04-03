@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Get instance provisioning settings for a given project. This is hidden method used by UI only.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse baremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchResponse baremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetch(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchPathParams.class, baseUrl, "/v2/{location}/instanceProvisioningSettings:fetch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest.class, baseUrl, "/v2/{location}/instanceProvisioningSettings:fetch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstanceProvisioningSettingsFetchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Projects {
     /**
      * Create an Instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse baremetalsolutionProjectsLocationsInstancesCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateResponse baremetalsolutionProjectsLocationsInstancesCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreatePathParams.class, baseUrl, "/v2/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateRequest.class, baseUrl, "/v2/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instanceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Detach LUN from Instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse baremetalsolutionProjectsLocationsInstancesDetachLun(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunResponse baremetalsolutionProjectsLocationsInstancesDetachLun(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunPathParams.class, baseUrl, "/v2/{instance}:detachLun", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunRequest.class, baseUrl, "/v2/{instance}:detachLun", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "detachLunRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDetachLunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Disable the interactive serial console feature on an instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse baremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleResponse baremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsole(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsolePathParams.class, baseUrl, "/v2/{name}:disableInteractiveSerialConsole", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleRequest.class, baseUrl, "/v2/{name}:disableInteractiveSerialConsole", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesDisableInteractiveSerialConsoleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Projects {
     /**
      * Enable the interactive serial console feature on an instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse baremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleResponse baremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsole(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsolePathParams.class, baseUrl, "/v2/{name}:enableInteractiveSerialConsole", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleRequest.class, baseUrl, "/v2/{name}:enableInteractiveSerialConsole", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesEnableInteractiveSerialConsoleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,25 +273,26 @@ public class Projects {
     /**
      * List servers in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListResponse baremetalsolutionProjectsLocationsInstancesList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListResponse baremetalsolutionProjectsLocationsInstancesList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListPathParams.class, baseUrl, "/v2/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListRequest.class, baseUrl, "/v2/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,27 +319,28 @@ public class Projects {
     /**
      * Perform an ungraceful, hard reset on a server. Equivalent to shutting the power off and then turning it back on.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetResponse baremetalsolutionProjectsLocationsInstancesReset(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetResponse baremetalsolutionProjectsLocationsInstancesReset(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetPathParams.class, baseUrl, "/v2/{name}:reset", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetRequest.class, baseUrl, "/v2/{name}:reset", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesResetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,27 +367,28 @@ public class Projects {
     /**
      * Starts a server that was shutdown.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartResponse baremetalsolutionProjectsLocationsInstancesStart(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartResponse baremetalsolutionProjectsLocationsInstancesStart(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartPathParams.class, baseUrl, "/v2/{name}:start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartRequest.class, baseUrl, "/v2/{name}:start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,27 +415,28 @@ public class Projects {
     /**
      * Stop a running server.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopResponse baremetalsolutionProjectsLocationsInstancesStop(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopResponse baremetalsolutionProjectsLocationsInstancesStop(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopPathParams.class, baseUrl, "/v2/{name}:stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopRequest.class, baseUrl, "/v2/{name}:stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsInstancesStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,25 +463,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListResponse baremetalsolutionProjectsLocationsList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListResponse baremetalsolutionProjectsLocationsList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListPathParams.class, baseUrl, "/v2/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListRequest.class, baseUrl, "/v2/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,25 +509,26 @@ public class Projects {
     /**
      * List network in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListResponse baremetalsolutionProjectsLocationsNetworksList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListResponse baremetalsolutionProjectsLocationsNetworksList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListPathParams.class, baseUrl, "/v2/{parent}/networks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListRequest.class, baseUrl, "/v2/{parent}/networks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,25 +555,26 @@ public class Projects {
     /**
      * List all Networks (and used IPs for each Network) in the vendor account associated with the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse baremetalsolutionProjectsLocationsNetworksListNetworkUsage(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageResponse baremetalsolutionProjectsLocationsNetworksListNetworkUsage(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsagePathParams.class, baseUrl, "/v2/{location}/networks:listNetworkUsage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageRequest.class, baseUrl, "/v2/{location}/networks:listNetworkUsage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNetworksListNetworkUsageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,27 +601,28 @@ public class Projects {
     /**
      * Create an NFS share.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse baremetalsolutionProjectsLocationsNfsSharesCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateResponse baremetalsolutionProjectsLocationsNfsSharesCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreatePathParams.class, baseUrl, "/v2/{parent}/nfsShares", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateRequest.class, baseUrl, "/v2/{parent}/nfsShares", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "nfsShareInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,25 +649,26 @@ public class Projects {
     /**
      * List NFS shares.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse baremetalsolutionProjectsLocationsNfsSharesList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListResponse baremetalsolutionProjectsLocationsNfsSharesList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListPathParams.class, baseUrl, "/v2/{parent}/nfsShares", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListRequest.class, baseUrl, "/v2/{parent}/nfsShares", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsNfsSharesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,27 +695,28 @@ public class Projects {
     /**
      * Create new ProvisioningConfig.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse baremetalsolutionProjectsLocationsProvisioningConfigsCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateResponse baremetalsolutionProjectsLocationsProvisioningConfigsCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreatePathParams.class, baseUrl, "/v2/{parent}/provisioningConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateRequest.class, baseUrl, "/v2/{parent}/provisioningConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "provisioningConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -728,27 +743,28 @@ public class Projects {
     /**
      * Submit a provisiong configuration for a given project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse baremetalsolutionProjectsLocationsProvisioningConfigsSubmit(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse baremetalsolutionProjectsLocationsProvisioningConfigsSubmit(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitPathParams.class, baseUrl, "/v2/{parent}/provisioningConfigs:submit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitRequest.class, baseUrl, "/v2/{parent}/provisioningConfigs:submit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "submitProvisioningConfigRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -775,25 +791,26 @@ public class Projects {
     /**
      * List the budget details to provision resources on a given project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse baremetalsolutionProjectsLocationsProvisioningQuotasList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListResponse baremetalsolutionProjectsLocationsProvisioningQuotasList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListPathParams.class, baseUrl, "/v2/{parent}/provisioningQuotas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListRequest.class, baseUrl, "/v2/{parent}/provisioningQuotas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsProvisioningQuotasListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -820,27 +837,28 @@ public class Projects {
     /**
      * Register a public SSH key in the specified project for use with the interactive serial console feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateResponse baremetalsolutionProjectsLocationsSshKeysCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateResponse baremetalsolutionProjectsLocationsSshKeysCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreatePathParams.class, baseUrl, "/v2/{parent}/sshKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateRequest.class, baseUrl, "/v2/{parent}/sshKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sshKeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -867,25 +885,26 @@ public class Projects {
     /**
      * Lists the public SSH keys registered for the specified project. These SSH keys are used only for the interactive serial console feature.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListResponse baremetalsolutionProjectsLocationsSshKeysList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListResponse baremetalsolutionProjectsLocationsSshKeysList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListPathParams.class, baseUrl, "/v2/{parent}/sshKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListRequest.class, baseUrl, "/v2/{parent}/sshKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsSshKeysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -912,25 +931,26 @@ public class Projects {
     /**
      * List storage volumes in a given project and location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListResponse baremetalsolutionProjectsLocationsVolumesList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListResponse baremetalsolutionProjectsLocationsVolumesList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListPathParams.class, baseUrl, "/v2/{parent}/volumes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListRequest.class, baseUrl, "/v2/{parent}/volumes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -957,27 +977,28 @@ public class Projects {
     /**
      * Skips lun's cooloff and deletes it now. Lun must be in cooloff state.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictResponse baremetalsolutionProjectsLocationsVolumesLunsEvict(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictResponse baremetalsolutionProjectsLocationsVolumesLunsEvict(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictPathParams.class, baseUrl, "/v2/{name}:evict", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictRequest.class, baseUrl, "/v2/{name}:evict", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsEvictRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1004,25 +1025,26 @@ public class Projects {
     /**
      * List storage volume luns for given storage volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse baremetalsolutionProjectsLocationsVolumesLunsList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListResponse baremetalsolutionProjectsLocationsVolumesLunsList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListPathParams.class, baseUrl, "/v2/{parent}/luns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListRequest.class, baseUrl, "/v2/{parent}/luns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesLunsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1049,27 +1071,28 @@ public class Projects {
     /**
      * Update details of a single storage volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse baremetalsolutionProjectsLocationsVolumesPatch(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchResponse baremetalsolutionProjectsLocationsVolumesPatch(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "volumeInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1096,27 +1119,28 @@ public class Projects {
     /**
      * RenameVolume sets a new name for a volume. Use with caution, previous names become immediately invalidated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse baremetalsolutionProjectsLocationsVolumesRename(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameResponse baremetalsolutionProjectsLocationsVolumesRename(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenamePathParams.class, baseUrl, "/v2/{name}:rename", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameRequest.class, baseUrl, "/v2/{name}:rename", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "renameVolumeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesRenameRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1143,27 +1167,28 @@ public class Projects {
     /**
      * Emergency Volume resize.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse baremetalsolutionProjectsLocationsVolumesResize(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeResponse baremetalsolutionProjectsLocationsVolumesResize(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizePathParams.class, baseUrl, "/v2/{volume}:resize", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeRequest.class, baseUrl, "/v2/{volume}:resize", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "resizeVolumeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesResizeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1190,27 +1215,28 @@ public class Projects {
     /**
      * Takes a snapshot of a boot volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse baremetalsolutionProjectsLocationsVolumesSnapshotsCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateResponse baremetalsolutionProjectsLocationsVolumesSnapshotsCreate(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreatePathParams.class, baseUrl, "/v2/{parent}/snapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateRequest.class, baseUrl, "/v2/{parent}/snapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "volumeSnapshotInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1237,25 +1263,26 @@ public class Projects {
     /**
      * Deletes a volume snapshot. Returns INVALID_ARGUMENT if called for a non-boot volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse baremetalsolutionProjectsLocationsVolumesSnapshotsDelete(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteResponse baremetalsolutionProjectsLocationsVolumesSnapshotsDelete(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeletePathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1282,25 +1309,26 @@ public class Projects {
     /**
      * Returns the specified snapshot resource. Returns INVALID_ARGUMENT if called for a non-boot volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse baremetalsolutionProjectsLocationsVolumesSnapshotsGet(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetResponse baremetalsolutionProjectsLocationsVolumesSnapshotsGet(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetPathParams.class, baseUrl, "/v2/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetRequest.class, baseUrl, "/v2/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1327,25 +1355,26 @@ public class Projects {
     /**
      * Retrieves the list of snapshots for the specified volume. Returns a response with an empty list of snapshots if called for a non-boot volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse baremetalsolutionProjectsLocationsVolumesSnapshotsList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListResponse baremetalsolutionProjectsLocationsVolumesSnapshotsList(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListPathParams.class, baseUrl, "/v2/{parent}/snapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListRequest.class, baseUrl, "/v2/{parent}/snapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1372,27 +1401,28 @@ public class Projects {
     /**
      * Uses the specified snapshot to restore its parent volume. Returns INVALID_ARGUMENT if called for a non-boot volume.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse baremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotResponse baremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshot(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotRequest request, org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotPathParams.class, baseUrl, "/v2/{volumeSnapshot}:restoreVolumeSnapshot", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotRequest.class, baseUrl, "/v2/{volumeSnapshot}:restoreVolumeSnapshot", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BaremetalsolutionProjectsLocationsVolumesSnapshotsRestoreVolumeSnapshotRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

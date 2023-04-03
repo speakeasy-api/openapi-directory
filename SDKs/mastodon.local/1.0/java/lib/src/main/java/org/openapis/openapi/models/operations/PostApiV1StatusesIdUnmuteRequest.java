@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1StatusesIdUnmuteRequest {
-    
-    public PostApiV1StatusesIdUnmutePathParams pathParams;
-    public PostApiV1StatusesIdUnmuteRequest withPathParams(PostApiV1StatusesIdUnmutePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1StatusesIdUnmuteSecurity security;
-    public PostApiV1StatusesIdUnmuteRequest withSecurity(PostApiV1StatusesIdUnmuteSecurity security) {
-        this.security = security;
+    /**
+     * Local ID of a status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1StatusesIdUnmuteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteListingsRequest {
-    
-    public DeleteListingsQueryParams queryParams;
-    public DeleteListingsRequest withQueryParams(DeleteListingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma separated list of domain names
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=domains")
+    public String[] domains;
+    public DeleteListingsRequest withDomains(String[] domains) {
+        this.domains = domains;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2EditOptionalConversationRequest {
-    
-    public GroupV2EditOptionalConversationPathParams pathParams;
-    public GroupV2EditOptionalConversationRequest withPathParams(GroupV2EditOptionalConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Conversation Id of the channel being edited.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversationId")
+    public Long conversationId;
+    public GroupV2EditOptionalConversationRequest withConversationId(Long conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     
-    
-    public GroupV2EditOptionalConversationSecurity security;
-    public GroupV2EditOptionalConversationRequest withSecurity(GroupV2EditOptionalConversationSecurity security) {
-        this.security = security;
+    /**
+     * Group ID of the group to edit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2EditOptionalConversationRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

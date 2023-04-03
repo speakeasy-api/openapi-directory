@@ -40,7 +40,7 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessBillingResponse getNetworkWirelessBilling(org.openapis.openapi.models.operations.GetNetworkWirelessBillingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBillingPathParams.class, baseUrl, "/networks/{networkId}/wireless/billing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessBillingRequest.class, baseUrl, "/networks/{networkId}/wireless/billing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Billing {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessBillingResponse updateNetworkWirelessBilling(org.openapis.openapi.models.operations.UpdateNetworkWirelessBillingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBillingPathParams.class, baseUrl, "/networks/{networkId}/wireless/billing", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessBillingRequest.class, baseUrl, "/networks/{networkId}/wireless/billing", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

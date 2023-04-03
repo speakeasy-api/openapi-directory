@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleaseFileSystemNfsV3LocksRequest {
-    
-    public ReleaseFileSystemNfsV3LocksHeaders headers;
-    public ReleaseFileSystemNfsV3LocksRequest withHeaders(ReleaseFileSystemNfsV3LocksHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ReleaseFileSystemNfsV3LocksRequest releaseFileSystemNfsV3LocksRequest;
+    public ReleaseFileSystemNfsV3LocksRequest withReleaseFileSystemNfsV3LocksRequest(org.openapis.openapi.models.shared.ReleaseFileSystemNfsV3LocksRequest releaseFileSystemNfsV3LocksRequest) {
+        this.releaseFileSystemNfsV3LocksRequest = releaseFileSystemNfsV3LocksRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReleaseFileSystemNfsV3LocksRequest request;
-    public ReleaseFileSystemNfsV3LocksRequest withRequest(org.openapis.openapi.models.shared.ReleaseFileSystemNfsV3LocksRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ReleaseFileSystemNfsV3LocksRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ReleaseFileSystemNfsV3LocksRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ReleaseFileSystemNfsV3LocksRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ReleaseFileSystemNfsV3LocksRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ReleaseFileSystemNfsV3LocksRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ReleaseFileSystemNfsV3LocksRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ReleaseFileSystemNfsV3LocksRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public ReleaseFileSystemNfsV3LocksXAmzTargetEnum xAmzTarget;
+    public ReleaseFileSystemNfsV3LocksRequest withXAmzTarget(ReleaseFileSystemNfsV3LocksXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

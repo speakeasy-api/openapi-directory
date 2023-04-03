@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HeadUnsecuredSmeLoansRequest {
+    /**
+     * Used for conditional request, to retrieve data only if modified since a given date
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public HeadUnsecuredSmeLoansRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
+        return this;
+    }
     
-    public HeadUnsecuredSmeLoansHeaders headers;
-    public HeadUnsecuredSmeLoansRequest withHeaders(HeadUnsecuredSmeLoansHeaders headers) {
-        this.headers = headers;
+    /**
+     * Used for conditional request, to retrieve data only if the given Etag value does not match
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public HeadUnsecuredSmeLoansRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     

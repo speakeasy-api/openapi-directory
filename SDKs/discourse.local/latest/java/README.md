@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AdminGetUserPathParams;
 import org.openapis.openapi.models.operations.AdminGetUserRequest;
 import org.openapis.openapi.models.operations.AdminGetUserResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             AdminGetUserRequest req = new AdminGetUserRequest() {{
-                pathParams = new AdminGetUserPathParams() {{
-                    id = 548814;
-                }};
-            }};            
+                id = 548814;
+            }}            
 
             AdminGetUserResponse res = sdk.admin.adminGetUser(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### admin

@@ -35,19 +35,20 @@ public class Vehicles {
     /**
      * Get Vehicle Charge State
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVehicleChargestateResponse getVehicleChargestate(org.openapis.openapi.models.operations.GetVehicleChargestateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVehicleChargestateResponse getVehicleChargestate(org.openapis.openapi.models.operations.GetVehicleChargestateRequest request, org.openapis.openapi.models.operations.GetVehicleChargestateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleChargestatePathParams.class, baseUrl, "/vehicles/{vehicleId}/charge-state", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleChargestateRequest.class, baseUrl, "/vehicles/{vehicleId}/charge-state", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,10 +75,11 @@ public class Vehicles {
     /**
      * List Vehicles
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVehiclesResponse getVehicles(org.openapis.openapi.models.operations.GetVehiclesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVehiclesResponse getVehicles(org.openapis.openapi.models.operations.GetVehiclesRequest request, org.openapis.openapi.models.operations.GetVehiclesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/vehicles");
         
@@ -85,14 +87,14 @@ public class Vehicles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVehiclesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVehiclesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -119,25 +121,26 @@ public class Vehicles {
     /**
      * Get Vehicle
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVehiclesVehicleidResponse getVehiclesVehicleid(org.openapis.openapi.models.operations.GetVehiclesVehicleidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVehiclesVehicleidResponse getVehiclesVehicleid(org.openapis.openapi.models.operations.GetVehiclesVehicleidRequest request, org.openapis.openapi.models.operations.GetVehiclesVehicleidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidPathParams.class, baseUrl, "/vehicles/{vehicleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidRequest.class, baseUrl, "/vehicles/{vehicleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVehiclesVehicleidQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVehiclesVehicleidRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,19 +167,20 @@ public class Vehicles {
     /**
      * Get Vehicle Information
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationResponse getVehiclesVehicleidInformation(org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationResponse getVehiclesVehicleidInformation(org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationRequest request, org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationPathParams.class, baseUrl, "/vehicles/{vehicleId}/information", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidInformationRequest.class, baseUrl, "/vehicles/{vehicleId}/information", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -203,19 +207,20 @@ public class Vehicles {
     /**
      * Get Vehicle Location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationResponse getVehiclesVehicleidLocation(org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationResponse getVehiclesVehicleidLocation(org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationRequest request, org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationPathParams.class, baseUrl, "/vehicles/{vehicleId}/location", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidLocationRequest.class, baseUrl, "/vehicles/{vehicleId}/location", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -242,19 +247,20 @@ public class Vehicles {
     /**
      * Get Vehicle Odometer
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerResponse getVehiclesVehicleidOdometer(org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerResponse getVehiclesVehicleidOdometer(org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerRequest request, org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerPathParams.class, baseUrl, "/vehicles/{vehicleId}/odometer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidOdometerRequest.class, baseUrl, "/vehicles/{vehicleId}/odometer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -281,19 +287,20 @@ public class Vehicles {
     /**
      * Get Vehicle Smart Charging Policy
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyResponse getVehiclesVehicleidSmartchargingpolicy(org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyResponse getVehiclesVehicleidSmartchargingpolicy(org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyRequest request, org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyPathParams.class, baseUrl, "/vehicles/{vehicleId}/smart-charging-policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclesVehicleidSmartchargingpolicyRequest.class, baseUrl, "/vehicles/{vehicleId}/smart-charging-policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -328,19 +335,20 @@ public class Vehicles {
      * 
      * The smart charging settings are not altered by these actions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingResponse postVehiclesVehicleidCharging(org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingResponse postVehiclesVehicleidCharging(org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingRequest request, org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingPathParams.class, baseUrl, "/vehicles/{vehicleId}/charging", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostVehiclesVehicleidChargingRequest.class, baseUrl, "/vehicles/{vehicleId}/charging", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -367,21 +375,22 @@ public class Vehicles {
      * The specifics of the expiration times, watch behaviors, and change thresholds are tuned by us to make sure that they work as expected, without causing undue interruption to the vehicle. For many vendors, it is not appropriate to let the high-rate monitoring last indefinitely, as it will keep systems within the car awake that should be allowed to fall into low-power/standby modes.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchResponse postVehiclesVehicleidWatch(org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchResponse postVehiclesVehicleidWatch(org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchRequest request, org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchPathParams.class, baseUrl, "/vehicles/{vehicleId}/watch", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostVehiclesVehicleidWatchRequest.class, baseUrl, "/vehicles/{vehicleId}/watch", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -409,21 +418,22 @@ public class Vehicles {
      * Update Vehicle Smart Charging Policy
      * Updates the Smart Charging settings for a vehicle
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyResponse putVehiclesVehicleidSmartchargingpolicy(org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyResponse putVehiclesVehicleidSmartchargingpolicy(org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyRequest request, org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyPathParams.class, baseUrl, "/vehicles/{vehicleId}/smart-charging-policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutVehiclesVehicleidSmartchargingpolicyRequest.class, baseUrl, "/vehicles/{vehicleId}/smart-charging-policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

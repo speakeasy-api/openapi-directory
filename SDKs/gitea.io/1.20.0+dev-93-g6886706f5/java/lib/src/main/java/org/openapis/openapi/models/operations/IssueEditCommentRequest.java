@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueEditCommentRequest {
-    
-    public IssueEditCommentPathParams pathParams;
-    public IssueEditCommentRequest withPathParams(IssueEditCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditIssueCommentOption editIssueCommentOption;
+    public IssueEditCommentRequest withEditIssueCommentOption(org.openapis.openapi.models.shared.EditIssueCommentOption editIssueCommentOption) {
+        this.editIssueCommentOption = editIssueCommentOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditIssueCommentOption request;
-    public IssueEditCommentRequest withRequest(org.openapis.openapi.models.shared.EditIssueCommentOption request) {
-        this.request = request;
+    /**
+     * id of the comment to edit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IssueEditCommentRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueEditCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueEditCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

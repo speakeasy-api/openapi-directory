@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutAccountsAccountOrdersCustomerOrderIdRequest {
-    
-    public PutAccountsAccountOrdersCustomerOrderIdPathParams pathParams;
-    public PutAccountsAccountOrdersCustomerOrderIdRequest withPathParams(PutAccountsAccountOrdersCustomerOrderIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Customer Order ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CustomerOrderId")
+    public String customerOrderId;
+    public PutAccountsAccountOrdersCustomerOrderIdRequest withCustomerOrderId(String customerOrderId) {
+        this.customerOrderId = customerOrderId;
         return this;
     }
     
@@ -18,9 +21,19 @@ public class PutAccountsAccountOrdersCustomerOrderIdRequest {
      * Order Parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutAccountsAccountOrdersCustomerOrderIdRequestBody request;
-    public PutAccountsAccountOrdersCustomerOrderIdRequest withRequest(PutAccountsAccountOrdersCustomerOrderIdRequestBody request) {
-        this.request = request;
+    public PutAccountsAccountOrdersCustomerOrderIdRequestBody requestBody;
+    public PutAccountsAccountOrdersCustomerOrderIdRequest withRequestBody(PutAccountsAccountOrdersCustomerOrderIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Account Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public String account;
+    public PutAccountsAccountOrdersCustomerOrderIdRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

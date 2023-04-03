@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest {
-    
-    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsPathParams pathParams;
-    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withPathParams(DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
     
-    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsQueryParams queryParams;
-    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withQueryParams(DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public DeleteUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearMerchantOrderInfoListV3Request {
-    
-    public ClearMerchantOrderInfoListV3QueryParams queryParams;
-    public ClearMerchantOrderInfoListV3Request withQueryParams(ClearMerchantOrderInfoListV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest clearMerchantOrderInfoListRequest;
+    public ClearMerchantOrderInfoListV3Request withClearMerchantOrderInfoListRequest(org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest clearMerchantOrderInfoListRequest) {
+        this.clearMerchantOrderInfoListRequest = clearMerchantOrderInfoListRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest request;
-    public ClearMerchantOrderInfoListV3Request withRequest(org.openapis.openapi.models.shared.ClearMerchantOrderInfoListRequest request) {
-        this.request = request;
+    /**
+     * If true, the operation will be not be sent to marketplace. But the validation will be taken in account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
+    public Boolean testMode;
+    public ClearMerchantOrderInfoListV3Request withTestMode(Boolean testMode) {
+        this.testMode = testMode;
         return this;
     }
     

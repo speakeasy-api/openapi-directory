@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEpisodesIdRequest {
-    
-    public GetEpisodesIdPathParams pathParams;
-    public GetEpisodesIdRequest withPathParams(GetEpisodesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetEpisodesIdSecurity security;
-    public GetEpisodesIdRequest withSecurity(GetEpisodesIdSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the episode resource to load.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEpisodesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

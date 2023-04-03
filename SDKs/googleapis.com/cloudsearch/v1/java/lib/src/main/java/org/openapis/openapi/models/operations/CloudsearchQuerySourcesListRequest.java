@@ -4,20 +4,166 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudsearchQuerySourcesListRequest {
-    
-    public CloudsearchQuerySourcesListQueryParams queryParams;
-    public CloudsearchQuerySourcesListRequest withQueryParams(CloudsearchQuerySourcesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CloudsearchQuerySourcesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CloudsearchQuerySourcesListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public CloudsearchQuerySourcesListSecurity security;
-    public CloudsearchQuerySourcesListRequest withSecurity(CloudsearchQuerySourcesListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CloudsearchQuerySourcesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CloudsearchQuerySourcesListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CloudsearchQuerySourcesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CloudsearchQuerySourcesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CloudsearchQuerySourcesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Number of sources to return in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public CloudsearchQuerySourcesListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CloudsearchQuerySourcesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CloudsearchQuerySourcesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * If you are asked by Google to help with debugging, set this field. Otherwise, ignore this field.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestOptions.debugOptions.enableDebugging")
+    public Boolean requestOptionsDebugOptionsEnableDebugging;
+    public CloudsearchQuerySourcesListRequest withRequestOptionsDebugOptionsEnableDebugging(Boolean requestOptionsDebugOptionsEnableDebugging) {
+        this.requestOptionsDebugOptionsEnableDebugging = requestOptionsDebugOptionsEnableDebugging;
+        return this;
+    }
+    
+    /**
+     * The BCP-47 language code, such as "en-US" or "sr-Latn". For more information, see http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. For translations. Set this field using the language set in browser or for the page. In the event that the user's language preference is known, set this field to the known user language. When specified, the documents in search results are biased towards the specified language. From Suggest API perspective, for 3p suggest this is used as a hint while making predictions to add language boosting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestOptions.languageCode")
+    public String requestOptionsLanguageCode;
+    public CloudsearchQuerySourcesListRequest withRequestOptionsLanguageCode(String requestOptionsLanguageCode) {
+        this.requestOptionsLanguageCode = requestOptionsLanguageCode;
+        return this;
+    }
+    
+    /**
+     * The ID generated when you create a search application using the [admin console](https://support.google.com/a/answer/9043922).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestOptions.searchApplicationId")
+    public String requestOptionsSearchApplicationId;
+    public CloudsearchQuerySourcesListRequest withRequestOptionsSearchApplicationId(String requestOptionsSearchApplicationId) {
+        this.requestOptionsSearchApplicationId = requestOptionsSearchApplicationId;
+        return this;
+    }
+    
+    /**
+     * Current user's time zone id, such as "America/Los_Angeles" or "Australia/Sydney". These IDs are defined by [Unicode Common Locale Data Repository (CLDR)](http://cldr.unicode.org/) project, and currently available in the file [timezone.xml](http://unicode.org/repos/cldr/trunk/common/bcp47/timezone.xml). This field is used to correctly interpret date and time queries. If this field is not specified, the default time zone (UTC) is used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestOptions.timeZone")
+    public String requestOptionsTimeZone;
+    public CloudsearchQuerySourcesListRequest withRequestOptionsTimeZone(String requestOptionsTimeZone) {
+        this.requestOptionsTimeZone = requestOptionsTimeZone;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CloudsearchQuerySourcesListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CloudsearchQuerySourcesListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

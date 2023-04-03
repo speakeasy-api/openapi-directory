@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CreateAccountRequest;
 import org.openapis.openapi.models.operations.CreateAccountResponse;
 import org.openapis.openapi.models.shared.CreateAccount;
 
@@ -14,13 +13,11 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateAccountRequest req = new CreateAccountRequest() {{
-                request = new CreateAccount() {{
-                    ftpPassword = "corrupti";
-                    identifier = "provident";
-                    servicepackId = 715190;
-                }};
-            }};            
+            org.openapis.openapi.models.shared.CreateAccount req = new CreateAccount() {{
+                ftpPassword = "corrupti";
+                identifier = "provident";
+                servicepackId = 715190;
+            }}            
 
             CreateAccountResponse res = sdk.accounts.createAccount(req);
 

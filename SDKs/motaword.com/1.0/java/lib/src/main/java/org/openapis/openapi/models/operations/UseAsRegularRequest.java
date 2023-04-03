@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UseAsRegularRequest {
-    
-    public UseAsRegularPathParams pathParams;
-    public UseAsRegularRequest withPathParams(UseAsRegularPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UseAsRegularPayload useAsRegularPayload;
+    public UseAsRegularRequest withUseAsRegularPayload(org.openapis.openapi.models.shared.UseAsRegularPayload useAsRegularPayload) {
+        this.useAsRegularPayload = useAsRegularPayload;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UseAsRegularPayload request;
-    public UseAsRegularRequest withRequest(org.openapis.openapi.models.shared.UseAsRegularPayload request) {
-        this.request = request;
+    /**
+     * Document ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
+    public Long documentId;
+    public UseAsRegularRequest withDocumentId(Long documentId) {
+        this.documentId = documentId;
         return this;
     }
     

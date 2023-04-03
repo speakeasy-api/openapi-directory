@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQuoteImageFontSearchRequest {
-    
-    public GetQuoteImageFontSearchQueryParams queryParams;
-    public GetQuoteImageFontSearchRequest withQueryParams(GetQuoteImageFontSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetQuoteImageFontSearchSecurity security;
-    public GetQuoteImageFontSearchRequest withSecurity(GetQuoteImageFontSearchSecurity security) {
-        this.security = security;
+    /**
+     * Tag string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetQuoteImageFontSearchRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

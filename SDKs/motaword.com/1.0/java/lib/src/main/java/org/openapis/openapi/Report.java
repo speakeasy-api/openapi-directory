@@ -37,7 +37,7 @@ public class Report {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateQAReportResponse generateQAReport(org.openapis.openapi.models.operations.GenerateQAReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateQAReportResponse generateQAReport(org.openapis.openapi.models.shared.QaFilter request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports/qa");
         
@@ -86,7 +86,7 @@ public class Report {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFilterContentsResponse getFilterContents(org.openapis.openapi.models.operations.GetFilterContentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetFilterContentsResponse getFilterContents(org.openapis.openapi.models.shared.FilterDates request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports/filter");
         
@@ -136,7 +136,7 @@ public class Report {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLanguagePairsReportResponse getLanguagePairsReport(org.openapis.openapi.models.operations.GetLanguagePairsReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLanguagePairsReportResponse getLanguagePairsReport(org.openapis.openapi.models.shared.ReportFilter request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports/language-pairs");
         
@@ -186,7 +186,7 @@ public class Report {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProjectsReportResponse getProjectsReport(org.openapis.openapi.models.operations.GetProjectsReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProjectsReportResponse getProjectsReport(org.openapis.openapi.models.shared.ReportFilter request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports/projects");
         
@@ -236,7 +236,7 @@ public class Report {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUsersReportResponse getUsersReport(org.openapis.openapi.models.operations.GetUsersReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUsersReportResponse getUsersReport(org.openapis.openapi.models.shared.ReportFilter request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reports/users");
         

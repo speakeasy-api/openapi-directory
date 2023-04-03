@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsIdVariantsVariantIdJsonRequest {
-    
-    public GetProductsIdVariantsVariantIdJsonPathParams pathParams;
-    public GetProductsIdVariantsVariantIdJsonRequest withPathParams(GetProductsIdVariantsVariantIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetProductsIdVariantsVariantIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetProductsIdVariantsVariantIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetProductsIdVariantsVariantIdJsonQueryParams queryParams;
-    public GetProductsIdVariantsVariantIdJsonRequest withQueryParams(GetProductsIdVariantsVariantIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetProductsIdVariantsVariantIdJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    
+    /**
+     * Id of the Product Variant
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variant_id")
+    public Integer variantId;
+    public GetProductsIdVariantsVariantIdJsonRequest withVariantId(Integer variantId) {
+        this.variantId = variantId;
         return this;
     }
     

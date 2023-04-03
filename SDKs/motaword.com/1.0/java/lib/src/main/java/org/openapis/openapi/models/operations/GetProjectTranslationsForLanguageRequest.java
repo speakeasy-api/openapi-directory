@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectTranslationsForLanguageRequest {
+    /**
+     * Target language code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
+    public String language;
+    public GetProjectTranslationsForLanguageRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
     
-    public GetProjectTranslationsForLanguagePathParams pathParams;
-    public GetProjectTranslationsForLanguageRequest withPathParams(GetProjectTranslationsForLanguagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public GetProjectTranslationsForLanguageRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

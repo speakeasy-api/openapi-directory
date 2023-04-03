@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoListStatusesByRefRequest {
-    
-    public RepoListStatusesByRefPathParams pathParams;
-    public RepoListStatusesByRefRequest withPathParams(RepoListStatusesByRefPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public RepoListStatusesByRefRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoListStatusesByRefRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoListStatusesByRefQueryParams queryParams;
-    public RepoListStatusesByRefRequest withQueryParams(RepoListStatusesByRefQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public RepoListStatusesByRefRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * name of branch/tag/commit
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
+    public String ref;
+    public RepoListStatusesByRefRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoListStatusesByRefRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * type of sort
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public RepoListStatusesByRefSortEnum sort;
+    public RepoListStatusesByRefRequest withSort(RepoListStatusesByRefSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * type of state
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public RepoListStatusesByRefStateEnum state;
+    public RepoListStatusesByRefRequest withState(RepoListStatusesByRefStateEnum state) {
+        this.state = state;
         return this;
     }
     

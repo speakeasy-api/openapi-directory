@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetinventorywithdispatchedreservationsRequest {
-    
-    public GetinventorywithdispatchedreservationsPathParams pathParams;
-    public GetinventorywithdispatchedreservationsRequest withPathParams(GetinventorywithdispatchedreservationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetinventorywithdispatchedreservationsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetinventorywithdispatchedreservationsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetinventorywithdispatchedreservationsHeaders headers;
-    public GetinventorywithdispatchedreservationsRequest withHeaders(GetinventorywithdispatchedreservationsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public String itemId;
+    public GetinventorywithdispatchedreservationsRequest withItemId(String itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
+    public String warehouseId;
+    public GetinventorywithdispatchedreservationsRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

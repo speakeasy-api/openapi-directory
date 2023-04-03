@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UseEmergencyCodeRequest {
-    
-    public UseEmergencyCodeQueryParams queryParams;
-    public UseEmergencyCodeRequest withQueryParams(UseEmergencyCodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UseEmergencyCodeRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public UseEmergencyCodeHeaders headers;
-    public UseEmergencyCodeRequest withHeaders(UseEmergencyCodeHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emergency_code")
+    public String emergencyCode;
+    public UseEmergencyCodeRequest withEmergencyCode(String emergencyCode) {
+        this.emergencyCode = emergencyCode;
         return this;
     }
     

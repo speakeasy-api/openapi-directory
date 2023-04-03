@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugMembersMemberSlugNotesRequest {
-    
-    public GetWorkspaceSlugMembersMemberSlugNotesPathParams pathParams;
-    public GetWorkspaceSlugMembersMemberSlugNotesRequest withPathParams(GetWorkspaceSlugMembersMemberSlugNotesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_slug")
+    public String memberSlug;
+    public GetWorkspaceSlugMembersMemberSlugNotesRequest withMemberSlug(String memberSlug) {
+        this.memberSlug = memberSlug;
         return this;
     }
     
-    
-    public GetWorkspaceSlugMembersMemberSlugNotesQueryParams queryParams;
-    public GetWorkspaceSlugMembersMemberSlugNotesRequest withQueryParams(GetWorkspaceSlugMembersMemberSlugNotesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetWorkspaceSlugMembersMemberSlugNotesRequest withPage(String page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetWorkspaceSlugMembersMemberSlugNotesSecurity security;
-    public GetWorkspaceSlugMembersMemberSlugNotesRequest withSecurity(GetWorkspaceSlugMembersMemberSlugNotesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspaceSlugMembersMemberSlugNotesRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

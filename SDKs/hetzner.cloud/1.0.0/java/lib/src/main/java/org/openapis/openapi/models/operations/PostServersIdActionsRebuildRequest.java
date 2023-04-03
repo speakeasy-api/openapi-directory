@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsRebuildRequest {
-    
-    public PostServersIdActionsRebuildPathParams pathParams;
-    public PostServersIdActionsRebuildRequest withPathParams(PostServersIdActionsRebuildPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * To select which Image to rebuild from you can either pass an ID or a name as the `image` argument. Passing a name only works for `system` Images since the other Image types do not have a name set.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostServersIdActionsRebuildRebuildServerRequest request;
-    public PostServersIdActionsRebuildRequest withRequest(PostServersIdActionsRebuildRebuildServerRequest request) {
-        this.request = request;
+    public PostServersIdActionsRebuildRebuildServerRequest requestBody;
+    public PostServersIdActionsRebuildRequest withRequestBody(PostServersIdActionsRebuildRebuildServerRequest requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of the Server
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostServersIdActionsRebuildRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

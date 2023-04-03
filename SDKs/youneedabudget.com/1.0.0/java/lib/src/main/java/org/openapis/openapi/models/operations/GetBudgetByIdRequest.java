@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBudgetByIdRequest {
-    
-    public GetBudgetByIdPathParams pathParams;
-    public GetBudgetByIdRequest withPathParams(GetBudgetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public GetBudgetByIdRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
         return this;
     }
     
-    
-    public GetBudgetByIdQueryParams queryParams;
-    public GetBudgetByIdRequest withQueryParams(GetBudgetByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_knowledge_of_server")
+    public Long lastKnowledgeOfServer;
+    public GetBudgetByIdRequest withLastKnowledgeOfServer(Long lastKnowledgeOfServer) {
+        this.lastKnowledgeOfServer = lastKnowledgeOfServer;
         return this;
     }
     

@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostExtractOntologySubgraphResourceRequest {
-    
-    public PostExtractOntologySubgraphResourcePathParams pathParams;
-    public PostExtractOntologySubgraphResourceRequest withPathParams(PostExtractOntologySubgraphResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Additional classes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cnode")
+    public String[] cnode;
+    public PostExtractOntologySubgraphResourceRequest withCnode(String[] cnode) {
+        this.cnode = cnode;
         return this;
     }
     
+    /**
+     * Include Ancestors
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_ancestors")
+    public Boolean includeAncestors;
+    public PostExtractOntologySubgraphResourceRequest withIncludeAncestors(Boolean includeAncestors) {
+        this.includeAncestors = includeAncestors;
+        return this;
+    }
     
-    public PostExtractOntologySubgraphResourceQueryParams queryParams;
-    public PostExtractOntologySubgraphResourceRequest withQueryParams(PostExtractOntologySubgraphResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include Descendants
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_descendants")
+    public Boolean includeDescendants;
+    public PostExtractOntologySubgraphResourceRequest withIncludeDescendants(Boolean includeDescendants) {
+        this.includeDescendants = includeDescendants;
+        return this;
+    }
+    
+    /**
+     * Include metadata in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_meta")
+    public Boolean includeMeta;
+    public PostExtractOntologySubgraphResourceRequest withIncludeMeta(Boolean includeMeta) {
+        this.includeMeta = includeMeta;
+        return this;
+    }
+    
+    /**
+     * class ID, e.g. HP:0001288
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node")
+    public String node;
+    public PostExtractOntologySubgraphResourceRequest withNode(String node) {
+        this.node = node;
+        return this;
+    }
+    
+    /**
+     * ontology ID, e.g. go, uberon, mp, hp
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ontology")
+    public String ontology;
+    public PostExtractOntologySubgraphResourceRequest withOntology(String ontology) {
+        this.ontology = ontology;
+        return this;
+    }
+    
+    /**
+     * Additional classes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relation")
+    public String[] relation;
+    public PostExtractOntologySubgraphResourceRequest withRelation(String[] relation) {
+        this.relation = relation;
         return this;
     }
     

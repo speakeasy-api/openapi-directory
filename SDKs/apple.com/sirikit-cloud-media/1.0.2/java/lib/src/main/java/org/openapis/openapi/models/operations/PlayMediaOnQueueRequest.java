@@ -7,17 +7,38 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayMediaOnQueueRequest {
-    
-    public PlayMediaOnQueueHeaders headers;
-    public PlayMediaOnQueueRequest withHeaders(PlayMediaOnQueueHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public PlayMediaOnQueueRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PlayMediaRequest request;
-    public PlayMediaOnQueueRequest withRequest(org.openapis.openapi.models.shared.PlayMediaRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PlayMediaRequest playMediaRequest;
+    public PlayMediaOnQueueRequest withPlayMediaRequest(org.openapis.openapi.models.shared.PlayMediaRequest playMediaRequest) {
+        this.playMediaRequest = playMediaRequest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=User-Agent")
+    public String userAgent;
+    public PlayMediaOnQueueRequest withUserAgent(String userAgent) {
+        this.userAgent = userAgent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-retry-count")
+    public Double xApplecloudextensionRetryCount;
+    public PlayMediaOnQueueRequest withXApplecloudextensionRetryCount(Double xApplecloudextensionRetryCount) {
+        this.xApplecloudextensionRetryCount = xApplecloudextensionRetryCount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-session-id")
+    public String xApplecloudextensionSessionId;
+    public PlayMediaOnQueueRequest withXApplecloudextensionSessionId(String xApplecloudextensionSessionId) {
+        this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
         return this;
     }
     

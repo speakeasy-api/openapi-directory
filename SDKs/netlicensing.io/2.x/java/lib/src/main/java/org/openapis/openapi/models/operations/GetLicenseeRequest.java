@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLicenseeRequest {
-    
-    public GetLicenseePathParams pathParams;
-    public GetLicenseeRequest withPathParams(GetLicenseePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetLicenseeSecurity security;
-    public GetLicenseeRequest withSecurity(GetLicenseeSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the Licensee. Vendor can assign this number when creating a Licensee or let NetLicensing generate one. Read-only after creation of the first License for the Licensee.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseeNumber")
+    public String licenseeNumber;
+    public GetLicenseeRequest withLicenseeNumber(String licenseeNumber) {
+        this.licenseeNumber = licenseeNumber;
         return this;
     }
     

@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetcountrystandardQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetcountrystandardRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getcountrystandard200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetcountrystandardResponse.java

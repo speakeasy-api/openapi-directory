@@ -4,20 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetZRAccountSettingsRequest {
-    
-    public GetZRAccountSettingsQueryParams queryParams;
-    public GetZRAccountSettingsRequest withQueryParams(GetZRAccountSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetZRAccountSettingsSecurity security;
-    public GetZRAccountSettingsRequest withSecurity(GetZRAccountSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The type of setting that you would like to retrieve.&lt;br&gt; `alert`: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt;
+     * `meeting`: Meeting settings of the Zoom Rooms Account. &lt;br&gt;
+     * `signage`: View digital signage settings of the Zoom Rooms Account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setting_type")
+    public GetZRAccountSettingsSettingTypeEnum settingType;
+    public GetZRAccountSettingsRequest withSettingType(GetZRAccountSettingsSettingTypeEnum settingType) {
+        this.settingType = settingType;
         return this;
     }
     

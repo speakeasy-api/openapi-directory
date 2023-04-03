@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNextpurchaseRequest {
-    
-    public GetNextpurchasePathParams pathParams;
-    public GetNextpurchaseRequest withPathParams(GetNextpurchasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetNextpurchaseRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetNextpurchaseRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetNextpurchaseHeaders headers;
-    public GetNextpurchaseRequest withHeaders(GetNextpurchaseHeaders headers) {
-        this.headers = headers;
+    /**
+     * Reference date that retrieves all next purchases, starting from the dateStr inserted. Must be in the format of {{yyyyMMdd}}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dateStr")
+    public String dateStr;
+    public GetNextpurchaseRequest withDateStr(String dateStr) {
+        this.dateStr = dateStr;
         return this;
     }
     

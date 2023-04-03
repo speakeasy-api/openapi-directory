@@ -42,7 +42,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.Delete10Response delete10(org.openapis.openapi.models.operations.Delete10Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete10PathParams.class, baseUrl, "/providers/{providerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete10Request.class, baseUrl, "/providers/{providerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -76,7 +76,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.Delete8Response delete8(org.openapis.openapi.models.operations.Delete8Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete8PathParams.class, baseUrl, "/providers/persons/{personId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete8Request.class, baseUrl, "/providers/persons/{personId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -110,7 +110,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.Delete9Response delete9(org.openapis.openapi.models.operations.Delete9Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete9PathParams.class, baseUrl, "/providers/priceLists/{priceListId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete9Request.class, baseUrl, "/providers/priceLists/{priceListId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -144,7 +144,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetAddress1Response getAddress1(org.openapis.openapi.models.operations.GetAddress1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddress1PathParams.class, baseUrl, "/providers/{providerId}/address", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAddress1Request.class, baseUrl, "/providers/{providerId}/address", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -190,7 +190,7 @@ public class Vendors {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIds4QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIds4Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -236,7 +236,7 @@ public class Vendors {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIds5QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIds5Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -276,7 +276,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetById4Response getById4(org.openapis.openapi.models.operations.GetById4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById4PathParams.class, baseUrl, "/providers/persons/{personId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById4Request.class, baseUrl, "/providers/persons/{personId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -316,13 +316,13 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetById5Response getById5(org.openapis.openapi.models.operations.GetById5Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById5PathParams.class, baseUrl, "/providers/{providerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById5Request.class, baseUrl, "/providers/{providerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetById5QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetById5Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -362,7 +362,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetCompetenciesResponse getCompetencies(org.openapis.openapi.models.operations.GetCompetenciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompetenciesPathParams.class, baseUrl, "/providers/{providerId}/competencies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompetenciesRequest.class, baseUrl, "/providers/{providerId}/competencies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -402,7 +402,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetContact2Response getContact2(org.openapis.openapi.models.operations.GetContact2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContact2PathParams.class, baseUrl, "/providers/persons/{personId}/contact", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContact2Request.class, baseUrl, "/providers/persons/{personId}/contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -442,7 +442,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetContact3Response getContact3(org.openapis.openapi.models.operations.GetContact3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContact3PathParams.class, baseUrl, "/providers/{providerId}/contact", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContact3Request.class, baseUrl, "/providers/{providerId}/contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -482,7 +482,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetCorrespondenceAddress1Response getCorrespondenceAddress1(org.openapis.openapi.models.operations.GetCorrespondenceAddress1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCorrespondenceAddress1PathParams.class, baseUrl, "/providers/{providerId}/correspondenceAddress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCorrespondenceAddress1Request.class, baseUrl, "/providers/{providerId}/correspondenceAddress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -522,7 +522,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetCustomFields2Response getCustomFields2(org.openapis.openapi.models.operations.GetCustomFields2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields2PathParams.class, baseUrl, "/providers/persons/{personId}/customFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields2Request.class, baseUrl, "/providers/persons/{personId}/customFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -562,7 +562,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.GetCustomFields3Response getCustomFields3(org.openapis.openapi.models.operations.GetCustomFields3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields3PathParams.class, baseUrl, "/providers/{providerId}/customFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields3Request.class, baseUrl, "/providers/{providerId}/customFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -602,7 +602,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.SendInvitationsResponse sendInvitations(org.openapis.openapi.models.operations.SendInvitationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendInvitationsPathParams.class, baseUrl, "/providers/persons/{personId}/notification/invitation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendInvitationsRequest.class, baseUrl, "/providers/persons/{personId}/notification/invitation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -642,7 +642,7 @@ public class Vendors {
      */
     public org.openapis.openapi.models.operations.SendInvitations1Response sendInvitations1(org.openapis.openapi.models.operations.SendInvitations1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendInvitations1PathParams.class, baseUrl, "/providers/{providerId}/notification/invitation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendInvitations1Request.class, baseUrl, "/providers/{providerId}/notification/invitation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

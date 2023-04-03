@@ -4,13 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShipmentGetListRequest {
+    /**
+     * Specifies the newest shipment date to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAtMax")
+    public OffsetDateTime createdAtMax;
+    public ShipmentGetListRequest withCreatedAtMax(OffsetDateTime createdAtMax) {
+        this.createdAtMax = createdAtMax;
+        return this;
+    }
     
-    public ShipmentGetListQueryParams queryParams;
-    public ShipmentGetListRequest withQueryParams(ShipmentGetListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specifies the oldest shipment date to include in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAtMin")
+    public OffsetDateTime createdAtMin;
+    public ShipmentGetListRequest withCreatedAtMin(OffsetDateTime createdAtMin) {
+        this.createdAtMin = createdAtMin;
+        return this;
+    }
+    
+    /**
+     * Get Shipments with a shipment greater or equal than this id. New shipments have a greater id than older shipments.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumShipmentId")
+    public Long minimumShipmentId;
+    public ShipmentGetListRequest withMinimumShipmentId(Long minimumShipmentId) {
+        this.minimumShipmentId = minimumShipmentId;
+        return this;
+    }
+    
+    /**
+     * Get shipments for this order only.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
+    public Long orderId;
+    public ShipmentGetListRequest withOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    
+    /**
+     * Specifies the page to request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ShipmentGetListRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Specifies the pagesize. Defaults to 50, max value is 250
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public ShipmentGetListRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Get Shippings for the specified shipping provider only. &lt;seealso cref="M:Rechnungsdruck.WebApp.Controllers.Api.ShipmentController.GetShippingproviders" /&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shippingProviderId")
+    public Long shippingProviderId;
+    public ShipmentGetListRequest withShippingProviderId(Long shippingProviderId) {
+        this.shippingProviderId = shippingProviderId;
         return this;
     }
     

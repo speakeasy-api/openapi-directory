@@ -4,27 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestDeletedNodeVersionsRequest {
-    
-    public RequestDeletedNodeVersionsPathParams pathParams;
-    public RequestDeletedNodeVersionsRequest withPathParams(RequestDeletedNodeVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestDeletedNodeVersionsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestDeletedNodeVersionsQueryParams queryParams;
-    public RequestDeletedNodeVersionsRequest withQueryParams(RequestDeletedNodeVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestDeletedNodeVersionsXSdsDateFormatEnum xSdsDateFormat;
+    public RequestDeletedNodeVersionsRequest withXSdsDateFormat(RequestDeletedNodeVersionsXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestDeletedNodeVersionsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RequestDeletedNodeVersionsHeaders headers;
-    public RequestDeletedNodeVersionsRequest withHeaders(RequestDeletedNodeVersionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Node name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public RequestDeletedNodeVersionsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Parent ID (room or folder ID)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public Long nodeId;
+    public RequestDeletedNodeVersionsRequest withNodeId(Long nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestDeletedNodeVersionsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestDeletedNodeVersionsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Node type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public RequestDeletedNodeVersionsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

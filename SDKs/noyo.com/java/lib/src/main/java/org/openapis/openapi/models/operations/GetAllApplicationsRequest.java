@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllApplicationsRequest {
+    /**
+     * The application type used to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application_type")
+    public String applicationType;
+    public GetAllApplicationsRequest withApplicationType(String applicationType) {
+        this.applicationType = applicationType;
+        return this;
+    }
     
-    public GetAllApplicationsQueryParams queryParams;
-    public GetAllApplicationsRequest withQueryParams(GetAllApplicationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The associated carrier ID used to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carrier_id")
+    public String carrierId;
+    public GetAllApplicationsRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
+        return this;
+    }
+    
+    /**
+     * The associated group ID used to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public String groupId;
+    public GetAllApplicationsRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetAllApplicationsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The max size of each page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetAllApplicationsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The application status used to filter results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetAllApplicationsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

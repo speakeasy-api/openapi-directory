@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShakespeareGenerateNameRequest {
-    
-    public GetShakespeareGenerateNameQueryParams queryParams;
-    public GetShakespeareGenerateNameRequest withQueryParams(GetShakespeareGenerateNameQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * No of names to generate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetShakespeareGenerateNameRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetShakespeareGenerateNameSecurity security;
-    public GetShakespeareGenerateNameRequest withSecurity(GetShakespeareGenerateNameSecurity security) {
-        this.security = security;
+    /**
+     * Variation to generate `male/female`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variation")
+    public String variation;
+    public GetShakespeareGenerateNameRequest withVariation(String variation) {
+        this.variation = variation;
         return this;
     }
     

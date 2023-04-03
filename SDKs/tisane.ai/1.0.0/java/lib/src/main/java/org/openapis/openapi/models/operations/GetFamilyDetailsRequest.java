@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFamilyDetailsRequest {
-    
-    public GetFamilyDetailsQueryParams queryParams;
-    public GetFamilyDetailsRequest withQueryParams(GetFamilyDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * {{apiKeyDescription}}
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Ocp-Apim-Subscription-Key")
+    public String ocpApimSubscriptionKey;
+    public GetFamilyDetailsRequest withOcpApimSubscriptionKey(String ocpApimSubscriptionKey) {
+        this.ocpApimSubscriptionKey = ocpApimSubscriptionKey;
         return this;
     }
     
-    
-    public GetFamilyDetailsHeaders headers;
-    public GetFamilyDetailsRequest withHeaders(GetFamilyDetailsHeaders headers) {
-        this.headers = headers;
+    /**
+     * (Required) a numeric identifier of the family
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetFamilyDetailsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -42,7 +42,7 @@ public class Queues {
      */
     public org.openapis.openapi.models.operations.AckMessageResponse ackMessage(org.openapis.openapi.models.operations.AckMessageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AckMessagePathParams.class, baseUrl, "/queues/{queueName}/messages/{queueMessageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AckMessageRequest.class, baseUrl, "/queues/{queueName}/messages/{queueMessageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -121,13 +121,13 @@ public class Queues {
      */
     public org.openapis.openapi.models.operations.DeleteQueueResponse deleteQueue(org.openapis.openapi.models.operations.DeleteQueueRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteQueuePathParams.class, baseUrl, "/queues/{queueName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteQueueRequest.class, baseUrl, "/queues/{queueName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteQueueQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteQueueRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -204,7 +204,7 @@ public class Queues {
      */
     public org.openapis.openapi.models.operations.GetMessageDataResponse getMessageData(org.openapis.openapi.models.operations.GetMessageDataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessageDataPathParams.class, baseUrl, "/queues/{queueName}/data/{queueMessageId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMessageDataRequest.class, baseUrl, "/queues/{queueName}/data/{queueMessageId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -243,13 +243,13 @@ public class Queues {
      */
     public org.openapis.openapi.models.operations.GetNextMessagesResponse getNextMessages(org.openapis.openapi.models.operations.GetNextMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNextMessagesPathParams.class, baseUrl, "/queues/{queueName}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNextMessagesRequest.class, baseUrl, "/queues/{queueName}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNextMessagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNextMessagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -289,7 +289,7 @@ public class Queues {
      */
     public org.openapis.openapi.models.operations.GetQueueConfigResponse getQueueConfig(org.openapis.openapi.models.operations.GetQueueConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQueueConfigPathParams.class, baseUrl, "/queues/{queueName}/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQueueConfigRequest.class, baseUrl, "/queues/{queueName}/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -329,18 +329,18 @@ public class Queues {
      */
     public org.openapis.openapi.models.operations.SendMessageBinaryResponse sendMessageBinary(org.openapis.openapi.models.operations.SendMessageBinaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendMessageBinaryPathParams.class, baseUrl, "/queues/{queueName}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendMessageBinaryRequest.class, baseUrl, "/queues/{queueName}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SendMessageBinaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SendMessageBinaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -378,7 +378,7 @@ public class Queues {
      */
     public org.openapis.openapi.models.operations.UpdateQueueConfigResponse updateQueueConfig(org.openapis.openapi.models.operations.UpdateQueueConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateQueueConfigPathParams.class, baseUrl, "/queues/{queueName}/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateQueueConfigRequest.class, baseUrl, "/queues/{queueName}/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

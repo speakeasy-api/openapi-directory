@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ParseChineseNameRequest {
-    
-    public ParseChineseNamePathParams pathParams;
-    public ParseChineseNameRequest withPathParams(ParseChineseNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ParseChineseNameSecurity security;
-    public ParseChineseNameRequest withSecurity(ParseChineseNameSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chineseName")
+    public String chineseName;
+    public ParseChineseNameRequest withChineseName(String chineseName) {
+        this.chineseName = chineseName;
         return this;
     }
     

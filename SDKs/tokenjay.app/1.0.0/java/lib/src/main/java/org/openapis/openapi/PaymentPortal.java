@@ -37,7 +37,7 @@ public class PaymentPortal {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddPaymentRequestResponse addPaymentRequest(org.openapis.openapi.models.operations.AddPaymentRequestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddPaymentRequestResponse addPaymentRequest(org.openapis.openapi.models.shared.CreatePaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payment/addrequest");
         
@@ -109,7 +109,7 @@ public class PaymentPortal {
      */
     public org.openapis.openapi.models.operations.GetPaymentStateResponse getPaymentState(org.openapis.openapi.models.operations.GetPaymentStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentStatePathParams.class, baseUrl, "/payment/state/{requestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentStateRequest.class, baseUrl, "/payment/state/{requestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

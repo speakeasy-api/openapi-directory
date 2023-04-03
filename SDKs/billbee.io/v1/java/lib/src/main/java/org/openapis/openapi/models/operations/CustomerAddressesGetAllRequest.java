@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerAddressesGetAllRequest {
+    /**
+     * The current page to request starting with 1 (default is 1)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public CustomerAddressesGetAllRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public CustomerAddressesGetAllQueryParams queryParams;
-    public CustomerAddressesGetAllRequest withQueryParams(CustomerAddressesGetAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page size for the result list. Values between 1 and 250 are allowed. (default is 50)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public CustomerAddressesGetAllRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

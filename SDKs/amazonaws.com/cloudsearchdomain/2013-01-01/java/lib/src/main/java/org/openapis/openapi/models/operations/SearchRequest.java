@@ -4,20 +4,209 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchRequest {
-    
-    public SearchQueryParams queryParams;
-    public SearchRequest withQueryParams(SearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public SearchRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public SearchRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public SearchHeaders headers;
-    public SearchRequest withHeaders(SearchHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public SearchRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public SearchRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public SearchRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public SearchRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public SearchRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Retrieves a cursor value you can use to page through large result sets. Use the &lt;code&gt;size&lt;/code&gt; parameter to control the number of hits to include in each response. You can specify either the &lt;code&gt;cursor&lt;/code&gt; or &lt;code&gt;start&lt;/code&gt; parameter in a request; they are mutually exclusive. To get the first cursor, set the cursor value to &lt;code&gt;initial&lt;/code&gt;. In subsequent requests, specify the cursor value returned in the hits section of the response. &lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/paginating-results.html"&gt;Paginating Results&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public SearchRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Defines one or more numeric expressions that can be used to sort results or specify search or filter criteria. You can also specify expressions as return fields. &lt;/p&gt; &lt;p&gt;You specify the expressions in JSON using the form &lt;code&gt;{"EXPRESSIONNAME":"EXPRESSION"}&lt;/code&gt;. You can define and use multiple expressions in a search request. For example:&lt;/p&gt; &lt;p&gt;&lt;code&gt; {"expression1":"_score*rating", "expression2":"(1/rank)*year"} &lt;/code&gt; &lt;/p&gt; &lt;p&gt;For information about the variables, operators, and functions you can use in expressions, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-expressions.html#writing-expressions"&gt;Writing Expressions&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expr")
+    public String expr;
+    public SearchRequest withExpr(String expr) {
+        this.expr = expr;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies one or more fields for which to get facet information, and options that control how the facet information is returned. Each specified field must be facet-enabled in the domain configuration. The fields and options are specified in JSON using the form &lt;code&gt;{"FIELD":{"OPTION":VALUE,"OPTION:"STRING"},"FIELD":{"OPTION":VALUE,"OPTION":"STRING"}}&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;You can specify the following faceting options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;code&gt;buckets&lt;/code&gt; specifies an array of the facet values or ranges to count. Ranges are specified using the same syntax that you use to search for a range of values. For more information, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching-ranges.html"&gt; Searching for a Range of Values&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;. Buckets are returned in the order they are specified in the request. The &lt;code&gt;sort&lt;/code&gt; and &lt;code&gt;size&lt;/code&gt; options are not valid if you specify &lt;code&gt;buckets&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;code&gt;size&lt;/code&gt; specifies the maximum number of facets to include in the results. By default, Amazon CloudSearch returns counts for the top 10. The &lt;code&gt;size&lt;/code&gt; parameter is only valid when you specify the &lt;code&gt;sort&lt;/code&gt; option; it cannot be used in conjunction with &lt;code&gt;buckets&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;&lt;code&gt;sort&lt;/code&gt; specifies how you want to sort the facets in the results: &lt;code&gt;bucket&lt;/code&gt; or &lt;code&gt;count&lt;/code&gt;. Specify &lt;code&gt;bucket&lt;/code&gt; to sort alphabetically or numerically by facet value (in ascending order). Specify &lt;code&gt;count&lt;/code&gt; to sort by the facet counts computed for each facet value (in descending order). To retrieve facet counts for particular values or ranges of values, use the &lt;code&gt;buckets&lt;/code&gt; option instead of &lt;code&gt;sort&lt;/code&gt;. &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If no facet options are specified, facet counts are computed for all field values, the facets are sorted by facet count, and the top 10 facets are returned in the results.&lt;/p&gt; &lt;p&gt;To count particular buckets of values, use the &lt;code&gt;buckets&lt;/code&gt; option. For example, the following request uses the &lt;code&gt;buckets&lt;/code&gt; option to calculate and return facet counts by decade.&lt;/p&gt; &lt;p&gt;&lt;code&gt; {"year":{"buckets":["[1970,1979]","[1980,1989]","[1990,1999]","[2000,2009]","[2010,}"]}} &lt;/code&gt;&lt;/p&gt; &lt;p&gt;To sort facets by facet count, use the &lt;code&gt;count&lt;/code&gt; option. For example, the following request sets the &lt;code&gt;sort&lt;/code&gt; option to &lt;code&gt;count&lt;/code&gt; to sort the facet values by facet count, with the facet values that have the most matching documents listed first. Setting the &lt;code&gt;size&lt;/code&gt; option to 3 returns only the top three facet values.&lt;/p&gt; &lt;p&gt;&lt;code&gt; {"year":{"sort":"count","size":3}} &lt;/code&gt;&lt;/p&gt; &lt;p&gt;To sort the facets by value, use the &lt;code&gt;bucket&lt;/code&gt; option. For example, the following request sets the &lt;code&gt;sort&lt;/code&gt; option to &lt;code&gt;bucket&lt;/code&gt; to sort the facet values numerically by year, with earliest year listed first. &lt;/p&gt; &lt;p&gt;&lt;code&gt; {"year":{"sort":"bucket"}} &lt;/code&gt;&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/faceting.html"&gt;Getting and Using Facet Information&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet")
+    public String facet;
+    public SearchRequest withFacet(String facet) {
+        this.facet = facet;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public SearchFormatEnum format;
+    public SearchRequest withFormat(SearchFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies a structured query that filters the results of a search without affecting how the results are scored and sorted. You use &lt;code&gt;filterQuery&lt;/code&gt; in conjunction with the &lt;code&gt;query&lt;/code&gt; parameter to filter the documents that match the constraints specified in the &lt;code&gt;query&lt;/code&gt; parameter. Specifying a filter controls only which matching documents are included in the results, it has no effect on how they are scored and sorted. The &lt;code&gt;filterQuery&lt;/code&gt; parameter supports the full structured query syntax. &lt;/p&gt; &lt;p&gt;For more information about using filters, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/filtering-results.html"&gt;Filtering Matching Documents&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
+    public String fq;
+    public SearchRequest withFq(String fq) {
+        this.fq = fq;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Retrieves highlights for matches in the specified &lt;code&gt;text&lt;/code&gt; or &lt;code&gt;text-array&lt;/code&gt; fields. Each specified field must be highlight enabled in the domain configuration. The fields and options are specified in JSON using the form &lt;code&gt;{"FIELD":{"OPTION":VALUE,"OPTION:"STRING"},"FIELD":{"OPTION":VALUE,"OPTION":"STRING"}}&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;You can specify the following highlight options:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;code&gt;format&lt;/code&gt;: specifies the format of the data in the text field: &lt;code&gt;text&lt;/code&gt; or &lt;code&gt;html&lt;/code&gt;. When data is returned as HTML, all non-alphanumeric characters are encoded. The default is &lt;code&gt;html&lt;/code&gt;. &lt;/li&gt; &lt;li&gt; &lt;code&gt;max_phrases&lt;/code&gt;: specifies the maximum number of occurrences of the search term(s) you want to highlight. By default, the first occurrence is highlighted. &lt;/li&gt; &lt;li&gt; &lt;code&gt;pre_tag&lt;/code&gt;: specifies the string to prepend to an occurrence of a search term. The default for HTML highlights is &lt;code&gt;&amp;amp;lt;em&amp;amp;gt;&lt;/code&gt;. The default for text highlights is &lt;code&gt;*&lt;/code&gt;. &lt;/li&gt; &lt;li&gt; &lt;code&gt;post_tag&lt;/code&gt;: specifies the string to append to an occurrence of a search term. The default for HTML highlights is &lt;code&gt;&amp;amp;lt;/em&amp;amp;gt;&lt;/code&gt;. The default for text highlights is &lt;code&gt;*&lt;/code&gt;. &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If no highlight options are specified for a field, the returned field text is treated as HTML and the first match is highlighted with emphasis tags: &lt;code&gt;&amp;amp;lt;em&amp;gt;search-term&amp;amp;lt;/em&amp;amp;gt;&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;For example, the following request retrieves highlights for the &lt;code&gt;actors&lt;/code&gt; and &lt;code&gt;title&lt;/code&gt; fields.&lt;/p&gt; &lt;p&gt; &lt;code&gt;{ "actors": {}, "title": {"format": "text","max_phrases": 2,"pre_tag": "&lt;b&gt;","post_tag": "&lt;/b&gt;"} }&lt;/code&gt;&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlight")
+    public String highlight;
+    public SearchRequest withHighlight(String highlight) {
+        this.highlight = highlight;
+        return this;
+    }
+    
+    /**
+     * Enables partial results to be returned if one or more index partitions are unavailable. When your search index is partitioned across multiple search instances, by default Amazon CloudSearch only returns results if every partition can be queried. This means that the failure of a single search instance can result in 5xx (internal server) errors. When you enable partial results, Amazon CloudSearch returns whatever results are available and includes the percentage of documents searched in the search results (percent-searched). This enables you to more gracefully degrade your users' search experience. For example, rather than displaying no results, you could display the partial results and a message indicating that the results might be incomplete due to a temporary system outage.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partial")
+    public Boolean partial;
+    public SearchRequest withPartial(Boolean partial) {
+        this.partial = partial;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
+    public SearchPrettyEnum pretty;
+    public SearchRequest withPretty(SearchPrettyEnum pretty) {
+        this.pretty = pretty;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies the search criteria for the request. How you specify the search criteria depends on the query parser used for the request and the parser options specified in the &lt;code&gt;queryOptions&lt;/code&gt; parameter. By default, the &lt;code&gt;simple&lt;/code&gt; query parser is used to process requests. To use the &lt;code&gt;structured&lt;/code&gt;, &lt;code&gt;lucene&lt;/code&gt;, or &lt;code&gt;dismax&lt;/code&gt; query parser, you must also specify the &lt;code&gt;queryParser&lt;/code&gt; parameter. &lt;/p&gt; &lt;p&gt;For more information about specifying search criteria, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching.html"&gt;Searching Your Data&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public SearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Configures options for the query parser specified in the &lt;code&gt;queryParser&lt;/code&gt; parameter. You specify the options in JSON using the following form &lt;code&gt;{"OPTION1":"VALUE1","OPTION2":VALUE2"..."OPTIONN":"VALUEN"}.&lt;/code&gt;&lt;/p&gt; &lt;p&gt;The options you can configure vary according to which parser you use:&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;code&gt;defaultOperator&lt;/code&gt;: The default operator used to combine individual terms in the search string. For example: &lt;code&gt;defaultOperator: 'or'&lt;/code&gt;. For the &lt;code&gt;dismax&lt;/code&gt; parser, you specify a percentage that represents the percentage of terms in the search string (rounded down) that must match, rather than a default operator. A value of &lt;code&gt;0%&lt;/code&gt; is the equivalent to OR, and a value of &lt;code&gt;100%&lt;/code&gt; is equivalent to AND. The percentage must be specified as a value in the range 0-100 followed by the percent (%) symbol. For example, &lt;code&gt;defaultOperator: 50%&lt;/code&gt;. Valid values: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, a percentage in the range 0%-100% (&lt;code&gt;dismax&lt;/code&gt;). Default: &lt;code&gt;and&lt;/code&gt; (&lt;code&gt;simple&lt;/code&gt;, &lt;code&gt;structured&lt;/code&gt;, &lt;code&gt;lucene&lt;/code&gt;) or &lt;code&gt;100&lt;/code&gt; (&lt;code&gt;dismax&lt;/code&gt;). Valid for: &lt;code&gt;simple&lt;/code&gt;, &lt;code&gt;structured&lt;/code&gt;, &lt;code&gt;lucene&lt;/code&gt;, and &lt;code&gt;dismax&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;&lt;code&gt;fields&lt;/code&gt;: An array of the fields to search when no fields are specified in a search. If no fields are specified in a search and this option is not specified, all text and text-array fields are searched. You can specify a weight for each field to control the relative importance of each field when Amazon CloudSearch calculates relevance scores. To specify a field weight, append a caret (&lt;code&gt;^&lt;/code&gt;) symbol and the weight to the field name. For example, to boost the importance of the &lt;code&gt;title&lt;/code&gt; field over the &lt;code&gt;description&lt;/code&gt; field you could specify: &lt;code&gt;"fields":["title^5","description"]&lt;/code&gt;. Valid values: The name of any configured field and an optional numeric value greater than zero. Default: All &lt;code&gt;text&lt;/code&gt; and &lt;code&gt;text-array&lt;/code&gt; fields. Valid for: &lt;code&gt;simple&lt;/code&gt;, &lt;code&gt;structured&lt;/code&gt;, &lt;code&gt;lucene&lt;/code&gt;, and &lt;code&gt;dismax&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;&lt;code&gt;operators&lt;/code&gt;: An array of the operators or special characters you want to disable for the simple query parser. If you disable the &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, or &lt;code&gt;not&lt;/code&gt; operators, the corresponding operators (&lt;code&gt;+&lt;/code&gt;, &lt;code&gt;|&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;) have no special meaning and are dropped from the search string. Similarly, disabling &lt;code&gt;prefix&lt;/code&gt; disables the wildcard operator (&lt;code&gt;*&lt;/code&gt;) and disabling &lt;code&gt;phrase&lt;/code&gt; disables the ability to search for phrases by enclosing phrases in double quotes. Disabling precedence disables the ability to control order of precedence using parentheses. Disabling &lt;code&gt;near&lt;/code&gt; disables the ability to use the ~ operator to perform a sloppy phrase search. Disabling the &lt;code&gt;fuzzy&lt;/code&gt; operator disables the ability to use the ~ operator to perform a fuzzy search. &lt;code&gt;escape&lt;/code&gt; disables the ability to use a backslash (&lt;code&gt;\&lt;/code&gt;) to escape special characters within the search string. Disabling whitespace is an advanced option that prevents the parser from tokenizing on whitespace, which can be useful for Vietnamese. (It prevents Vietnamese words from being split incorrectly.) For example, you could disable all operators other than the phrase operator to support just simple term and phrase queries: &lt;code&gt;"operators":["and","not","or", "prefix"]&lt;/code&gt;. Valid values: &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;escape&lt;/code&gt;, &lt;code&gt;fuzzy&lt;/code&gt;, &lt;code&gt;near&lt;/code&gt;, &lt;code&gt;not&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, &lt;code&gt;phrase&lt;/code&gt;, &lt;code&gt;precedence&lt;/code&gt;, &lt;code&gt;prefix&lt;/code&gt;, &lt;code&gt;whitespace&lt;/code&gt;. Default: All operators and special characters are enabled. Valid for: &lt;code&gt;simple&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;&lt;code&gt;phraseFields&lt;/code&gt;: An array of the &lt;code&gt;text&lt;/code&gt; or &lt;code&gt;text-array&lt;/code&gt; fields you want to use for phrase searches. When the terms in the search string appear in close proximity within a field, the field scores higher. You can specify a weight for each field to boost that score. The &lt;code&gt;phraseSlop&lt;/code&gt; option controls how much the matches can deviate from the search string and still be boosted. To specify a field weight, append a caret (&lt;code&gt;^&lt;/code&gt;) symbol and the weight to the field name. For example, to boost phrase matches in the &lt;code&gt;title&lt;/code&gt; field over the &lt;code&gt;abstract&lt;/code&gt; field, you could specify: &lt;code&gt;"phraseFields":["title^3", "plot"]&lt;/code&gt; Valid values: The name of any &lt;code&gt;text&lt;/code&gt; or &lt;code&gt;text-array&lt;/code&gt; field and an optional numeric value greater than zero. Default: No fields. If you don't specify any fields with &lt;code&gt;phraseFields&lt;/code&gt;, proximity scoring is disabled even if &lt;code&gt;phraseSlop&lt;/code&gt; is specified. Valid for: &lt;code&gt;dismax&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;&lt;code&gt;phraseSlop&lt;/code&gt;: An integer value that specifies how much matches can deviate from the search phrase and still be boosted according to the weights specified in the &lt;code&gt;phraseFields&lt;/code&gt; option; for example, &lt;code&gt;phraseSlop: 2&lt;/code&gt;. You must also specify &lt;code&gt;phraseFields&lt;/code&gt; to enable proximity scoring. Valid values: positive integers. Default: 0. Valid for: &lt;code&gt;dismax&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;&lt;code&gt;explicitPhraseSlop&lt;/code&gt;: An integer value that specifies how much a match can deviate from the search phrase when the phrase is enclosed in double quotes in the search string. (Phrases that exceed this proximity distance are not considered a match.) For example, to specify a slop of three for dismax phrase queries, you would specify &lt;code&gt;"explicitPhraseSlop":3&lt;/code&gt;. Valid values: positive integers. Default: 0. Valid for: &lt;code&gt;dismax&lt;/code&gt;.&lt;/li&gt; &lt;li&gt;&lt;code&gt;tieBreaker&lt;/code&gt;: When a term in the search string is found in a document's field, a score is calculated for that field based on how common the word is in that field compared to other documents. If the term occurs in multiple fields within a document, by default only the highest scoring field contributes to the document's overall score. You can specify a &lt;code&gt;tieBreaker&lt;/code&gt; value to enable the matches in lower-scoring fields to contribute to the document's score. That way, if two documents have the same max field score for a particular term, the score for the document that has matches in more fields will be higher. The formula for calculating the score with a tieBreaker is &lt;code&gt;(max field score) + (tieBreaker) * (sum of the scores for the rest of the matching fields)&lt;/code&gt;. Set &lt;code&gt;tieBreaker&lt;/code&gt; to 0 to disregard all but the highest scoring field (pure max): &lt;code&gt;"tieBreaker":0&lt;/code&gt;. Set to 1 to sum the scores from all fields (pure sum): &lt;code&gt;"tieBreaker":1&lt;/code&gt;. Valid values: 0.0 to 1.0. Default: 0.0. Valid for: &lt;code&gt;dismax&lt;/code&gt;. &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q.options")
+    public String qOptions;
+    public SearchRequest withQOptions(String qOptions) {
+        this.qOptions = qOptions;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies which query parser to use to process the request. If &lt;code&gt;queryParser&lt;/code&gt; is not specified, Amazon CloudSearch uses the &lt;code&gt;simple&lt;/code&gt; query parser. &lt;/p&gt; &lt;p&gt;Amazon CloudSearch supports four query parsers:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;code&gt;simple&lt;/code&gt;: perform simple searches of &lt;code&gt;text&lt;/code&gt; and &lt;code&gt;text-array&lt;/code&gt; fields. By default, the &lt;code&gt;simple&lt;/code&gt; query parser searches all &lt;code&gt;text&lt;/code&gt; and &lt;code&gt;text-array&lt;/code&gt; fields. You can specify which fields to search by with the &lt;code&gt;queryOptions&lt;/code&gt; parameter. If you prefix a search term with a plus sign (+) documents must contain the term to be considered a match. (This is the default, unless you configure the default operator with the &lt;code&gt;queryOptions&lt;/code&gt; parameter.) You can use the &lt;code&gt;-&lt;/code&gt; (NOT), &lt;code&gt;|&lt;/code&gt; (OR), and &lt;code&gt;*&lt;/code&gt; (wildcard) operators to exclude particular terms, find results that match any of the specified terms, or search for a prefix. To search for a phrase rather than individual terms, enclose the phrase in double quotes. For more information, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching-text.html"&gt;Searching for Text&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;. &lt;/li&gt; &lt;li&gt; &lt;code&gt;structured&lt;/code&gt;: perform advanced searches by combining multiple expressions to define the search criteria. You can also search within particular fields, search for values and ranges of values, and use advanced options such as term boosting, &lt;code&gt;matchall&lt;/code&gt;, and &lt;code&gt;near&lt;/code&gt;. For more information, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/searching-compound-queries.html"&gt;Constructing Compound Queries&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;. &lt;/li&gt; &lt;li&gt; &lt;code&gt;lucene&lt;/code&gt;: search using the Apache Lucene query parser syntax. For more information, see &lt;a href="http://lucene.apache.org/core/4_6_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description"&gt;Apache Lucene Query Parser Syntax&lt;/a&gt;. &lt;/li&gt; &lt;li&gt; &lt;code&gt;dismax&lt;/code&gt;: search using the simplified subset of the Apache Lucene query parser syntax defined by the DisMax query parser. For more information, see &lt;a href="http://wiki.apache.org/solr/DisMaxQParserPlugin#Query_Syntax"&gt;DisMax Query Parser Syntax&lt;/a&gt;. &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q.parser")
+    public SearchQParserEnum qParser;
+    public SearchRequest withQParser(SearchQParserEnum qParser) {
+        this.qParser = qParser;
+        return this;
+    }
+    
+    /**
+     * Specifies the field and expression values to include in the response. Multiple fields or expressions are specified as a comma-separated list. By default, a search response includes all return enabled fields (&lt;code&gt;_all_fields&lt;/code&gt;). To return only the document IDs for the matching documents, specify &lt;code&gt;_no_fields&lt;/code&gt;. To retrieve the relevance score calculated for each document, specify &lt;code&gt;_score&lt;/code&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return")
+    public String return_;
+    public SearchRequest withReturn(String return_) {
+        this.return_ = return_;
+        return this;
+    }
+    
+    /**
+     * Specifies the maximum number of search hits to include in the response. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public SearchRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies the fields or custom expressions to use to sort the search results. Multiple fields or expressions are specified as a comma-separated list. You must specify the sort direction (&lt;code&gt;asc&lt;/code&gt; or &lt;code&gt;desc&lt;/code&gt;) for each field; for example, &lt;code&gt;year desc,title asc&lt;/code&gt;. To use a field to sort results, the field must be sort-enabled in the domain configuration. Array type fields cannot be used for sorting. If no &lt;code&gt;sort&lt;/code&gt; parameter is specified, results are sorted by their default relevance scores in descending order: &lt;code&gt;_score desc&lt;/code&gt;. You can also sort by document ID (&lt;code&gt;_id asc&lt;/code&gt;) and version (&lt;code&gt;_version desc&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/sorting-results.html"&gt;Sorting Results&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public SearchRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies the offset of the first search hit you want to return. Note that the result set is zero-based; the first result is at index 0. You can specify either the &lt;code&gt;start&lt;/code&gt; or &lt;code&gt;cursor&lt;/code&gt; parameter in a request, they are mutually exclusive. &lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="http://docs.aws.amazon.com/cloudsearch/latest/developerguide/paginating-results.html"&gt;Paginating Results&lt;/a&gt; in the &lt;i&gt;Amazon CloudSearch Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Long start;
+    public SearchRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies one or more fields for which to get statistics information. Each specified field must be facet-enabled in the domain configuration. The fields are specified in JSON using the form:&lt;/p&gt; &lt;code&gt;{"FIELD-A":{},"FIELD-B":{}}&lt;/code&gt; &lt;p&gt;There are currently no options supported for statistics.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stats")
+    public String stats;
+    public SearchRequest withStats(String stats) {
+        this.stats = stats;
         return this;
     }
     

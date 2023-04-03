@@ -4,13 +4,58 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllTransfersRequest {
+    /**
+     * int or array of int (optional)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetAllTransfersRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetAllTransfersQueryParams queryParams;
-    public GetAllTransfersRequest withQueryParams(GetAllTransfersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (optional) default 10
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetAllTransfersRequest withLimit(String limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * (optional) default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetAllTransfersRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * ASC / DESC (optional) default ASC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public GetAllTransfersRequest withOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * string or array of string 
+     * "WAITING"/"CREATED"/"FINISHED"/"REJECTED"
+     * (optional)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public GetAllTransfersRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

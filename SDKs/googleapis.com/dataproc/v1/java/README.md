@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateSecurity;
-import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreatePathParams;
-import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateQueryParams;
 import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateRequest;
 import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchInput;
 import org.openapis.openapi.models.shared.SparkSqlBatch;
 import org.openapis.openapi.models.shared.SparkRBatch;
@@ -35,10 +34,7 @@ import org.openapis.openapi.models.shared.EnvironmentConfig;
 import org.openapis.openapi.models.shared.PeripheralsConfig;
 import org.openapis.openapi.models.shared.SparkHistoryServerConfig;
 import org.openapis.openapi.models.shared.ExecutionConfig;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -47,163 +43,151 @@ public class Application {
                 .build();
 
             DataprocProjectsLocationsBatchesCreateRequest req = new DataprocProjectsLocationsBatchesCreateRequest() {{
-                security = new DataprocProjectsLocationsBatchesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DataprocProjectsLocationsBatchesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DataprocProjectsLocationsBatchesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    batchId = "unde";
-                    callback = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    requestId = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-                request = new BatchInput() {{
+                dollarXgafv = "2";
+                batchInput = new BatchInput() {{
                     environmentConfig = new EnvironmentConfig() {{
                         executionConfig = new ExecutionConfig() {{
-                            idleTtl = "magnam";
-                            kmsKey = "debitis";
+                            idleTtl = "provident";
+                            kmsKey = "distinctio";
                             networkTags = new String[]{{
-                                add("delectus"),
+                                add("unde"),
+                                add("nulla"),
+                                add("corrupti"),
+                                add("illum"),
                             }};
-                            networkUri = "tempora";
-                            serviceAccount = "suscipit";
-                            stagingBucket = "molestiae";
-                            subnetworkUri = "minus";
-                            ttl = "placeat";
+                            networkUri = "vel";
+                            serviceAccount = "error";
+                            stagingBucket = "deserunt";
+                            subnetworkUri = "suscipit";
+                            ttl = "iure";
                         }};
                         peripheralsConfig = new PeripheralsConfig() {{
-                            metastoreService = "voluptatum";
+                            metastoreService = "magnam";
                             sparkHistoryServerConfig = new SparkHistoryServerConfig() {{
-                                dataprocCluster = "iusto";
+                                dataprocCluster = "debitis";
                             }};
                         }};
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("nisi", "recusandae");
-                        put("temporibus", "ab");
-                        put("quis", "veritatis");
+                        put("delectus", "tempora");
                     }};
                     pysparkBatch = new PySparkBatch() {{
                         archiveUris = new String[]{{
+                            add("molestiae"),
+                            add("minus"),
+                        }};
+                        args = new String[]{{
+                            add("voluptatum"),
+                            add("iusto"),
+                            add("excepturi"),
+                            add("nisi"),
+                        }};
+                        fileUris = new String[]{{
+                            add("temporibus"),
+                            add("ab"),
+                            add("quis"),
+                            add("veritatis"),
+                        }};
+                        jarFileUris = new String[]{{
                             add("perferendis"),
                             add("ipsam"),
                             add("repellendus"),
                         }};
-                        args = new String[]{{
-                            add("quo"),
+                        mainPythonFileUri = "sapiente";
+                        pythonFileUris = new String[]{{
                             add("odit"),
                             add("at"),
                             add("at"),
-                        }};
-                        fileUris = new String[]{{
-                            add("molestiae"),
-                            add("quod"),
-                            add("quod"),
-                            add("esse"),
-                        }};
-                        jarFileUris = new String[]{{
-                            add("porro"),
-                            add("dolorum"),
-                            add("dicta"),
-                        }};
-                        mainPythonFileUri = "nam";
-                        pythonFileUris = new String[]{{
-                            add("occaecati"),
-                            add("fugit"),
-                            add("deleniti"),
+                            add("maiores"),
                         }};
                     }};
                     runtimeConfig = new RuntimeConfig() {{
-                        containerImage = "hic";
+                        containerImage = "molestiae";
                         properties = new java.util.HashMap<String, String>() {{
-                            put("totam", "beatae");
-                            put("commodi", "molestiae");
-                            put("modi", "qui");
-                            put("impedit", "cum");
+                            put("quod", "esse");
+                            put("totam", "porro");
+                            put("dolorum", "dicta");
+                            put("nam", "officia");
                         }};
-                        version = "esse";
+                        version = "occaecati";
                     }};
                     runtimeInfo = new RuntimeInfoInput() {{
                         approximateUsage = new UsageMetrics() {{
-                            milliDcuSeconds = "ipsum";
-                            shuffleStorageGbSeconds = "excepturi";
+                            milliDcuSeconds = "fugit";
+                            shuffleStorageGbSeconds = "deleniti";
                         }};
                         currentUsage = new UsageSnapshot() {{
-                            milliDcu = "aspernatur";
-                            shuffleStorageGb = "perferendis";
-                            snapshotTime = "ad";
+                            milliDcu = "hic";
+                            shuffleStorageGb = "optio";
+                            snapshotTime = "totam";
                         }};
                     }};
                     sparkBatch = new SparkBatch() {{
                         archiveUris = new String[]{{
-                            add("sed"),
-                            add("iste"),
-                            add("dolor"),
+                            add("commodi"),
                         }};
                         args = new String[]{{
-                            add("laboriosam"),
-                            add("hic"),
-                            add("saepe"),
+                            add("modi"),
+                            add("qui"),
                         }};
                         fileUris = new String[]{{
-                            add("in"),
-                            add("corporis"),
-                            add("iste"),
+                            add("cum"),
+                            add("esse"),
+                            add("ipsum"),
+                            add("excepturi"),
                         }};
                         jarFileUris = new String[]{{
-                            add("saepe"),
-                            add("quidem"),
+                            add("perferendis"),
                         }};
-                        mainClass = "architecto";
-                        mainJarFileUri = "ipsa";
+                        mainClass = "ad";
+                        mainJarFileUri = "natus";
                     }};
                     sparkRBatch = new SparkRBatch() {{
                         archiveUris = new String[]{{
-                            add("est"),
-                            add("mollitia"),
-                            add("laborum"),
-                            add("dolores"),
+                            add("iste"),
                         }};
                         args = new String[]{{
-                            add("corporis"),
+                            add("natus"),
                         }};
                         fileUris = new String[]{{
-                            add("nobis"),
+                            add("hic"),
+                            add("saepe"),
                         }};
-                        mainRFileUri = "enim";
+                        mainRFileUri = "fuga";
                     }};
                     sparkSqlBatch = new SparkSqlBatch() {{
                         jarFileUris = new String[]{{
-                            add("nemo"),
-                            add("minima"),
-                            add("excepturi"),
+                            add("corporis"),
+                            add("iste"),
                         }};
-                        queryFileUri = "accusantium";
+                        queryFileUri = "iure";
                         queryVariables = new java.util.HashMap<String, String>() {{
-                            put("culpa", "doloribus");
-                            put("sapiente", "architecto");
+                            put("quidem", "architecto");
+                            put("ipsa", "reiciendis");
+                            put("est", "mollitia");
+                            put("laborum", "dolores");
                         }};
                     }};
                 }};
-            }};            
+                accessToken = "dolorem";
+                alt = "media";
+                batchId = "explicabo";
+                callback = "nobis";
+                fields = "enim";
+                key = "omnis";
+                oauthToken = "nemo";
+                parent = "minima";
+                prettyPrint = false;
+                quotaUser = "excepturi";
+                requestId = "accusantium";
+                uploadType = "iure";
+                uploadProtocol = "culpa";
+            }}            
 
-            DataprocProjectsLocationsBatchesCreateResponse res = sdk.projects.dataprocProjectsLocationsBatchesCreate(req);
+            DataprocProjectsLocationsBatchesCreateResponse res = sdk.projects.dataprocProjectsLocationsBatchesCreate(req, new DataprocProjectsLocationsBatchesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -215,7 +199,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

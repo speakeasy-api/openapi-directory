@@ -7,13 +7,6 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestUpdateArtifactRequest {
-    
-    public TestUpdateArtifactPathParams pathParams;
-    public TestUpdateArtifactRequest withPathParams(TestUpdateArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The content of the artifact being tested. This is often, but not always, JSON data
      * representing one of the supported artifact types:
@@ -30,9 +23,29 @@ public class TestUpdateArtifactRequest {
      * 
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public byte[] request;
-    public TestUpdateArtifactRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public TestUpdateArtifactRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public TestUpdateArtifactRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public TestUpdateArtifactRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

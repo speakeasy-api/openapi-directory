@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchSyncServiceRequest {
-    
-    public FetchSyncServicePathParams pathParams;
-    public FetchSyncServiceRequest withPathParams(FetchSyncServicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchSyncServiceSecurity security;
-    public FetchSyncServiceRequest withSecurity(FetchSyncServiceSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchSyncServiceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchSyncServiceRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

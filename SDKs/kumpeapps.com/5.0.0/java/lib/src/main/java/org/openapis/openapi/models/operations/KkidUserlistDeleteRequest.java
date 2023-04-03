@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidUserlistDeleteRequest {
-    
-    public KkidUserlistDeleteQueryParams queryParams;
-    public KkidUserlistDeleteRequest withQueryParams(KkidUserlistDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public KkidUserlistDeleteSecurity security;
-    public KkidUserlistDeleteRequest withSecurity(KkidUserlistDeleteSecurity security) {
-        this.security = security;
+    /**
+     * userID of the user you wish to delete
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userID")
+    public Long userID;
+    public KkidUserlistDeleteRequest withUserID(Long userID) {
+        this.userID = userID;
         return this;
     }
     

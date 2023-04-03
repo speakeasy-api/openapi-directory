@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsDeleteLegacyRequest {
-    
-    public TeamsDeleteLegacyPathParams pathParams;
-    public TeamsDeleteLegacyRequest withPathParams(TeamsDeleteLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsDeleteLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

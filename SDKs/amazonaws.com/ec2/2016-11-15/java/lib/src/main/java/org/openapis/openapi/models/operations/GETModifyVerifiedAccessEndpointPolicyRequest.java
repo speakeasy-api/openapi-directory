@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVerifiedAccessEndpointPolicyRequest {
-    
-    public GETModifyVerifiedAccessEndpointPolicyQueryParams queryParams;
-    public GETModifyVerifiedAccessEndpointPolicyRequest withQueryParams(GETModifyVerifiedAccessEndpointPolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyVerifiedAccessEndpointPolicyActionEnum action;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withAction(GETModifyVerifiedAccessEndpointPolicyActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A unique, case-sensitive token that you provide to ensure idempotency of your modification request. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Run_Instance_Idempotency.html"&gt;Ensuring Idempotency&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
+    public String clientToken;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
     
-    public GETModifyVerifiedAccessEndpointPolicyHeaders headers;
-    public GETModifyVerifiedAccessEndpointPolicyRequest withHeaders(GETModifyVerifiedAccessEndpointPolicyHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services Verified Access policy document.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyDocument")
+    public String policyDocument;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withPolicyDocument(String policyDocument) {
+        this.policyDocument = policyDocument;
+        return this;
+    }
+    
+    /**
+     * The status of the Verified Access policy.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyEnabled")
+    public Boolean policyEnabled;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withPolicyEnabled(Boolean policyEnabled) {
+        this.policyEnabled = policyEnabled;
+        return this;
+    }
+    
+    /**
+     * The ID of the Amazon Web Services Verified Access endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedAccessEndpointId")
+    public String verifiedAccessEndpointId;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
+        this.verifiedAccessEndpointId = verifiedAccessEndpointId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyVerifiedAccessEndpointPolicyVersionEnum version;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withVersion(GETModifyVerifiedAccessEndpointPolicyVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyVerifiedAccessEndpointPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchDeleteReadSetPathParams;
-import org.openapis.openapi.models.operations.BatchDeleteReadSetHeaders;
 import org.openapis.openapi.models.operations.BatchDeleteReadSetRequestBody;
 import org.openapis.openapi.models.operations.BatchDeleteReadSetRequest;
 import org.openapis.openapi.models.operations.BatchDeleteReadSetResponse;
@@ -28,32 +26,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchDeleteReadSetRequest req = new BatchDeleteReadSetRequest() {{
-                pathParams = new BatchDeleteReadSetPathParams() {{
-                    sequenceStoreId = "corrupti";
-                }};
-                headers = new BatchDeleteReadSetHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new BatchDeleteReadSetRequestBody() {{
+                requestBody = new BatchDeleteReadSetRequestBody() {{
                     ids = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                sequenceStoreId = "suscipit";
+            }}            
 
             BatchDeleteReadSetResponse res = sdk.batchDeleteReadSet(req);
 
@@ -67,7 +60,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

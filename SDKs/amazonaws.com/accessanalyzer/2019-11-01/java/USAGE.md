@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ApplyArchiveRuleHeaders;
 import org.openapis.openapi.models.operations.ApplyArchiveRuleRequestBody;
 import org.openapis.openapi.models.operations.ApplyArchiveRuleRequest;
 import org.openapis.openapi.models.operations.ApplyArchiveRuleResponse;
@@ -14,28 +13,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             ApplyArchiveRuleRequest req = new ApplyArchiveRuleRequest() {{
-                headers = new ApplyArchiveRuleHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new ApplyArchiveRuleRequestBody() {{
+                    analyzerArn = "corrupti";
+                    clientToken = "provident";
+                    ruleName = "distinctio";
                 }};
-                request = new ApplyArchiveRuleRequestBody() {{
-                    analyzerArn = "illum";
-                    clientToken = "vel";
-                    ruleName = "error";
-                }};
-            }};            
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }}            
 
             ApplyArchiveRuleResponse res = sdk.applyArchiveRule(req);
 

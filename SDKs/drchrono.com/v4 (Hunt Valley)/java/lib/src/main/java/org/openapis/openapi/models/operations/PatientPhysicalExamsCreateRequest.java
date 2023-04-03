@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientPhysicalExamsCreateRequest {
-    
-    public PatientPhysicalExamsCreateQueryParams queryParams;
-    public PatientPhysicalExamsCreateRequest withQueryParams(PatientPhysicalExamsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientPhysicalExamsCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public PatientPhysicalExamsCreateSecurity security;
-    public PatientPhysicalExamsCreateRequest withSecurity(PatientPhysicalExamsCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientPhysicalExamsCreateRequest withPatient(Long patient) {
+        this.patient = patient;
         return this;
     }
     

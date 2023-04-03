@@ -4,13 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatterVsPitcherStatsRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public BatterVsPitcherStatsFormatEnum format;
+    public BatterVsPitcherStatsRequest withFormat(BatterVsPitcherStatsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public BatterVsPitcherStatsPathParams pathParams;
-    public BatterVsPitcherStatsRequest withPathParams(BatterVsPitcherStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Player ID.
+     * Example:&lt;code&gt;10000031&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hitterid")
+    public String hitterid;
+    public BatterVsPitcherStatsRequest withHitterid(String hitterid) {
+        this.hitterid = hitterid;
+        return this;
+    }
+    
+    /**
+     * Unique FantasyData Player ID.
+     * Example:&lt;code&gt;10000618&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pitcherid")
+    public String pitcherid;
+    public BatterVsPitcherStatsRequest withPitcherid(String pitcherid) {
+        this.pitcherid = pitcherid;
         return this;
     }
     

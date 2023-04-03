@@ -43,7 +43,7 @@ public class Watchlist {
      */
     public org.openapis.openapi.models.operations.WatchlistSearchReadResponse watchlistSearchRead(org.openapis.openapi.models.operations.WatchlistSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WatchlistSearchReadPathParams.class, baseUrl, "/api/v1/watchlist/search/{movie_title}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WatchlistSearchReadRequest.class, baseUrl, "/api/v1/watchlist/search/{movie_title}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,7 +86,7 @@ public class Watchlist {
      */
     public org.openapis.openapi.models.operations.WatchlistSearchallReadResponse watchlistSearchallRead(org.openapis.openapi.models.operations.WatchlistSearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WatchlistSearchallReadPathParams.class, baseUrl, "/api/v1/watchlist/searchall/{param}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WatchlistSearchallReadRequest.class, baseUrl, "/api/v1/watchlist/searchall/{param}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

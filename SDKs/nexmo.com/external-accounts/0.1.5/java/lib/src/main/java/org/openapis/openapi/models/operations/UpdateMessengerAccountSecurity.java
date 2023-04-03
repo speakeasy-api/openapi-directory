@@ -14,9 +14,9 @@ public class UpdateMessengerAccountSecurity {
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearerAuth bearerAuth;
-    public UpdateMessengerAccountSecurity withBearerAuth(org.openapis.openapi.models.shared.SchemeBearerAuth bearerAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerAuth;
+    public UpdateMessengerAccountSecurity withBearerAuth(String bearerAuth) {
         this.bearerAuth = bearerAuth;
         return this;
     }

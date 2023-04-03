@@ -49,7 +49,7 @@ public class SecretScanning {
      */
     public org.openapis.openapi.models.operations.SecretScanningGetAlertResponse secretScanningGetAlert(org.openapis.openapi.models.operations.SecretScanningGetAlertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningGetAlertPathParams.class, baseUrl, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningGetAlertRequest.class, baseUrl, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -102,13 +102,13 @@ public class SecretScanning {
      */
     public org.openapis.openapi.models.operations.SecretScanningListAlertsForOrgResponse secretScanningListAlertsForOrg(org.openapis.openapi.models.operations.SecretScanningListAlertsForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningListAlertsForOrgPathParams.class, baseUrl, "/orgs/{org}/secret-scanning/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningListAlertsForOrgRequest.class, baseUrl, "/orgs/{org}/secret-scanning/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretScanningListAlertsForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretScanningListAlertsForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -168,13 +168,13 @@ public class SecretScanning {
      */
     public org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoResponse secretScanningListAlertsForRepo(org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoPathParams.class, baseUrl, "/repos/{owner}/{repo}/secret-scanning/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoRequest.class, baseUrl, "/repos/{owner}/{repo}/secret-scanning/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretScanningListAlertsForRepoRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -226,13 +226,13 @@ public class SecretScanning {
      */
     public org.openapis.openapi.models.operations.SecretScanningListLocationsForAlertResponse secretScanningListLocationsForAlert(org.openapis.openapi.models.operations.SecretScanningListLocationsForAlertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningListLocationsForAlertPathParams.class, baseUrl, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningListLocationsForAlertRequest.class, baseUrl, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretScanningListLocationsForAlertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretScanningListLocationsForAlertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -286,12 +286,12 @@ public class SecretScanning {
      */
     public org.openapis.openapi.models.operations.SecretScanningUpdateAlertResponse secretScanningUpdateAlert(org.openapis.openapi.models.operations.SecretScanningUpdateAlertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningUpdateAlertPathParams.class, baseUrl, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretScanningUpdateAlertRequest.class, baseUrl, "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

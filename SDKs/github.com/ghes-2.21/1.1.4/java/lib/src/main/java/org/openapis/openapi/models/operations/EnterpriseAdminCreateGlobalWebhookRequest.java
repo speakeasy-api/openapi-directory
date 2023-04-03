@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminCreateGlobalWebhookRequest {
-    
-    public EnterpriseAdminCreateGlobalWebhookHeaders headers;
-    public EnterpriseAdminCreateGlobalWebhookRequest withHeaders(EnterpriseAdminCreateGlobalWebhookHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminCreateGlobalWebhookRequestBody requestBody;
+    public EnterpriseAdminCreateGlobalWebhookRequest withRequestBody(EnterpriseAdminCreateGlobalWebhookRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminCreateGlobalWebhookRequestBody request;
-    public EnterpriseAdminCreateGlobalWebhookRequest withRequest(EnterpriseAdminCreateGlobalWebhookRequestBody request) {
-        this.request = request;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public EnterpriseAdminCreateGlobalWebhookRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     

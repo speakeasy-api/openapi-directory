@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMeAllowedOriginsOriginIdRequest {
-    
-    public DeleteMeAllowedOriginsOriginIdPathParams pathParams;
-    public DeleteMeAllowedOriginsOriginIdRequest withPathParams(DeleteMeAllowedOriginsOriginIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteMeAllowedOriginsOriginIdSecurity security;
-    public DeleteMeAllowedOriginsOriginIdRequest withSecurity(DeleteMeAllowedOriginsOriginIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the allowed origin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=originId")
+    public String originId;
+    public DeleteMeAllowedOriginsOriginIdRequest withOriginId(String originId) {
+        this.originId = originId;
         return this;
     }
     

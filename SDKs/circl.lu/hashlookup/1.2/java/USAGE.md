@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetChildrenPathParams;
 import org.openapis.openapi.models.operations.GetChildrenRequest;
 import org.openapis.openapi.models.operations.GetChildrenResponse;
 
@@ -15,12 +14,10 @@ public class Application {
                 .build();
 
             GetChildrenRequest req = new GetChildrenRequest() {{
-                pathParams = new GetChildrenPathParams() {{
-                    count = 548814;
-                    cursor = "provident";
-                    sha1 = "distinctio";
-                }};
-            }};            
+                count = 548814;
+                cursor = "provident";
+                sha1 = "distinctio";
+            }}            
 
             GetChildrenResponse res = sdk.default_.getChildren(req);
 

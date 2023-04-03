@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddLogRequest {
-    
-    public AddLogPathParams pathParams;
-    public AddLogRequest withPathParams(AddLogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddLogHeaders headers;
-    public AddLogRequest withHeaders(AddLogHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AddLogRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddLogRequest request;
-    public AddLogRequest withRequest(org.openapis.openapi.models.shared.AddLogRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddLogRequest addLogRequest;
+    public AddLogRequest withAddLogRequest(org.openapis.openapi.models.shared.AddLogRequest addLogRequest) {
+        this.addLogRequest = addLogRequest;
+        return this;
+    }
+    
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AddLogRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
+    
+    /**
+     * Order ID is a unique code that identifies an order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public AddLogRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

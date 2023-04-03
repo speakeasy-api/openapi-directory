@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VatComprehensiveRequest {
-    
-    public VatComprehensivePathParams pathParams;
-    public VatComprehensiveRequest withPathParams(VatComprehensivePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * VAT number and the company details
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public VatComprehensiveRequestBody request;
-    public VatComprehensiveRequest withRequest(VatComprehensiveRequestBody request) {
-        this.request = request;
+    public VatComprehensiveRequestBody requestBody;
+    public VatComprehensiveRequest withRequestBody(VatComprehensiveRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public VatComprehensiveSecurity security;
-    public VatComprehensiveRequest withSecurity(VatComprehensiveSecurity security) {
-        this.security = security;
+    /**
+     * ISO_3166-1_alpha-2 representation of a country name - 2 chars
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public VatComprehensiveRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     

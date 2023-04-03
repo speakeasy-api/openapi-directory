@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsRemoveRepoRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public TeamsRemoveRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public TeamsRemoveRepoPathParams pathParams;
-    public TeamsRemoveRepoRequest withPathParams(TeamsRemoveRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public TeamsRemoveRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsRemoveRepoRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

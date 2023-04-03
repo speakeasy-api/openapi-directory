@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScriptRequest {
-    
-    public UpdateScriptPathParams pathParams;
-    public UpdateScriptRequest withPathParams(UpdateScriptPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Script request;
-    public UpdateScriptRequest withRequest(org.openapis.openapi.models.shared.Script request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Script script;
+    public UpdateScriptRequest withScript(org.openapis.openapi.models.shared.Script script) {
+        this.script = script;
         return this;
     }
     
-    
-    public UpdateScriptSecurity security;
-    public UpdateScriptRequest withSecurity(UpdateScriptSecurity security) {
-        this.security = security;
+    /**
+     * The script id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scriptId")
+    public String scriptId;
+    public UpdateScriptRequest withScriptId(String scriptId) {
+        this.scriptId = scriptId;
         return this;
     }
     

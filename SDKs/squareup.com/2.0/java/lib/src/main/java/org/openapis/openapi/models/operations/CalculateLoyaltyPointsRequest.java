@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalculateLoyaltyPointsRequest {
-    
-    public CalculateLoyaltyPointsPathParams pathParams;
-    public CalculateLoyaltyPointsRequest withPathParams(CalculateLoyaltyPointsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CalculateLoyaltyPointsRequest request;
-    public CalculateLoyaltyPointsRequest withRequest(org.openapis.openapi.models.shared.CalculateLoyaltyPointsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CalculateLoyaltyPointsRequest calculateLoyaltyPointsRequest;
+    public CalculateLoyaltyPointsRequest withCalculateLoyaltyPointsRequest(org.openapis.openapi.models.shared.CalculateLoyaltyPointsRequest calculateLoyaltyPointsRequest) {
+        this.calculateLoyaltyPointsRequest = calculateLoyaltyPointsRequest;
         return this;
     }
     
-    
-    public CalculateLoyaltyPointsSecurity security;
-    public CalculateLoyaltyPointsRequest withSecurity(CalculateLoyaltyPointsSecurity security) {
-        this.security = security;
+    /**
+     * The [loyalty program](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyProgram) ID, which defines the rules for accruing points.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=program_id")
+    public String programId;
+    public CalculateLoyaltyPointsRequest withProgramId(String programId) {
+        this.programId = programId;
         return this;
     }
     

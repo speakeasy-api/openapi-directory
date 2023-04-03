@@ -43,13 +43,13 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.GetCategoriesResponse getCategories(org.openapis.openapi.models.operations.GetCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoriesPathParams.class, baseUrl, "/budgets/{budget_id}/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoriesRequest.class, baseUrl, "/budgets/{budget_id}/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCategoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -97,7 +97,7 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.GetCategoryByIdResponse getCategoryById(org.openapis.openapi.models.operations.GetCategoryByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoryByIdPathParams.class, baseUrl, "/budgets/{budget_id}/categories/{category_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCategoryByIdRequest.class, baseUrl, "/budgets/{budget_id}/categories/{category_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -145,7 +145,7 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.GetMonthCategoryByIdResponse getMonthCategoryById(org.openapis.openapi.models.operations.GetMonthCategoryByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMonthCategoryByIdPathParams.class, baseUrl, "/budgets/{budget_id}/months/{month}/categories/{category_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMonthCategoryByIdRequest.class, baseUrl, "/budgets/{budget_id}/months/{month}/categories/{category_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -193,12 +193,12 @@ public class Categories {
      */
     public org.openapis.openapi.models.operations.UpdateMonthCategoryResponse updateMonthCategory(org.openapis.openapi.models.operations.UpdateMonthCategoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMonthCategoryPathParams.class, baseUrl, "/budgets/{budget_id}/months/{month}/categories/{category_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMonthCategoryRequest.class, baseUrl, "/budgets/{budget_id}/months/{month}/categories/{category_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patchMonthCategoryWrapper", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

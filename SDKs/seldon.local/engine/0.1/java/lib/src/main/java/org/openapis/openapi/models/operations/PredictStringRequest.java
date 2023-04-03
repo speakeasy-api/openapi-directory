@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictStringRequest {
-    
-    public PredictStringPathParams pathParams;
-    public PredictStringRequest withPathParams(PredictStringPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=text/*")
-    public String request;
-    public PredictStringRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public PredictStringRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public PredictStringRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
     
-    public PredictStringSecurity security;
-    public PredictStringRequest withSecurity(PredictStringSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public PredictStringRequest withNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
     

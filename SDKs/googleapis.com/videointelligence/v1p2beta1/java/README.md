@@ -18,9 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateSecurity;
-import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateQueryParams;
 import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateRequest;
 import org.openapis.openapi.models.operations.VideointelligenceVideosAnnotateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum;
 import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest;
 import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1VideoContext;
@@ -35,10 +35,7 @@ import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1L
 import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig;
 import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1FaceDetectionConfig;
 import org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -47,55 +44,35 @@ public class Application {
                 .build();
 
             VideointelligenceVideosAnnotateRequest req = new VideointelligenceVideosAnnotateRequest() {{
-                security = new VideointelligenceVideosAnnotateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                queryParams = new VideointelligenceVideosAnnotateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest() {{
+                dollarXgafv = "2";
+                googleCloudVideointelligenceV1p2beta1AnnotateVideoRequest = new GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequest() {{
                     features = new org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1AnnotateVideoRequestFeaturesEnum[]{{
-                        add("EXPLICIT_CONTENT_DETECTION"),
-                        add("FACE_DETECTION"),
-                        add("SHOT_CHANGE_DETECTION"),
+                        add("OBJECT_TRACKING"),
+                        add("LOGO_RECOGNITION"),
+                        add("TEXT_DETECTION"),
                     }};
-                    inputContent = "debitis";
-                    inputUri = "ipsa";
-                    locationId = "delectus";
-                    outputUri = "tempora";
+                    inputContent = "nulla";
+                    inputUri = "corrupti";
+                    locationId = "illum";
+                    outputUri = "vel";
                     videoContext = new GoogleCloudVideointelligenceV1p2beta1VideoContext() {{
                         explicitContentDetectionConfig = new GoogleCloudVideointelligenceV1p2beta1ExplicitContentDetectionConfig() {{
-                            model = "suscipit";
+                            model = "error";
                         }};
                         faceDetectionConfig = new GoogleCloudVideointelligenceV1p2beta1FaceDetectionConfig() {{
                             includeAttributes = false;
                             includeBoundingBoxes = false;
-                            model = "molestiae";
+                            model = "deserunt";
                         }};
                         labelDetectionConfig = new GoogleCloudVideointelligenceV1p2beta1LabelDetectionConfig() {{
-                            frameConfidenceThreshold = 7917.25;
-                            labelDetectionMode = "SHOT_AND_FRAME_MODE";
-                            model = "voluptatum";
+                            frameConfidenceThreshold = 3843.82;
+                            labelDetectionMode = "SHOT_MODE";
+                            model = "magnam";
                             stationaryCamera = false;
-                            videoConfidenceThreshold = 4799.77;
+                            videoConfidenceThreshold = 8917.73;
                         }};
                         objectTrackingConfig = new GoogleCloudVideointelligenceV1p2beta1ObjectTrackingConfig() {{
-                            model = "excepturi";
+                            model = "ipsa";
                         }};
                         personDetectionConfig = new GoogleCloudVideointelligenceV1p2beta1PersonDetectionConfig() {{
                             includeAttributes = false;
@@ -104,75 +81,98 @@ public class Application {
                         }};
                         segments = new org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1VideoSegment[]{{
                             add(new GoogleCloudVideointelligenceV1p2beta1VideoSegment() {{
-                                endTimeOffset = "recusandae";
-                                startTimeOffset = "temporibus";
+                                endTimeOffset = "tempora";
+                                startTimeOffset = "suscipit";
                             }}),
                             add(new GoogleCloudVideointelligenceV1p2beta1VideoSegment() {{
-                                endTimeOffset = "ab";
-                                startTimeOffset = "quis";
+                                endTimeOffset = "molestiae";
+                                startTimeOffset = "minus";
+                            }}),
+                            add(new GoogleCloudVideointelligenceV1p2beta1VideoSegment() {{
+                                endTimeOffset = "placeat";
+                                startTimeOffset = "voluptatum";
+                            }}),
+                            add(new GoogleCloudVideointelligenceV1p2beta1VideoSegment() {{
+                                endTimeOffset = "iusto";
+                                startTimeOffset = "excepturi";
                             }}),
                         }};
                         shotChangeDetectionConfig = new GoogleCloudVideointelligenceV1p2beta1ShotChangeDetectionConfig() {{
-                            model = "veritatis";
+                            model = "nisi";
                         }};
                         speechTranscriptionConfig = new GoogleCloudVideointelligenceV1p2beta1SpeechTranscriptionConfig() {{
                             audioTracks = new Integer[]{{
-                                add(20218),
-                                add(368241),
-                                add(832620),
+                                add(836079),
+                                add(71036),
+                                add(337396),
+                                add(87129),
                             }};
-                            diarizationSpeakerCount = 957156;
+                            diarizationSpeakerCount = 648172;
                             enableAutomaticPunctuation = false;
                             enableSpeakerDiarization = false;
                             enableWordConfidence = false;
                             filterProfanity = false;
-                            languageCode = "quo";
-                            maxAlternatives = 140350;
+                            languageCode = "perferendis";
+                            maxAlternatives = 368241;
                             speechContexts = new org.openapis.openapi.models.shared.GoogleCloudVideointelligenceV1p2beta1SpeechContext[]{{
                                 add(new GoogleCloudVideointelligenceV1p2beta1SpeechContext() {{
                                     phrases = new String[]{{
-                                        add("maiores"),
+                                        add("quo"),
+                                        add("odit"),
+                                        add("at"),
+                                        add("at"),
+                                    }};
+                                }}),
+                                add(new GoogleCloudVideointelligenceV1p2beta1SpeechContext() {{
+                                    phrases = new String[]{{
                                         add("molestiae"),
                                         add("quod"),
                                         add("quod"),
+                                        add("esse"),
                                     }};
                                 }}),
                                 add(new GoogleCloudVideointelligenceV1p2beta1SpeechContext() {{
                                     phrases = new String[]{{
-                                        add("totam"),
                                         add("porro"),
-                                    }};
-                                }}),
-                                add(new GoogleCloudVideointelligenceV1p2beta1SpeechContext() {{
-                                    phrases = new String[]{{
+                                        add("dolorum"),
                                         add("dicta"),
-                                        add("nam"),
-                                        add("officia"),
                                     }};
                                 }}),
                                 add(new GoogleCloudVideointelligenceV1p2beta1SpeechContext() {{
                                     phrases = new String[]{{
+                                        add("officia"),
+                                        add("occaecati"),
                                         add("fugit"),
-                                        add("deleniti"),
-                                        add("hic"),
                                     }};
                                 }}),
                             }};
                         }};
                         textDetectionConfig = new GoogleCloudVideointelligenceV1p2beta1TextDetectionConfig() {{
                             languageHints = new String[]{{
+                                add("hic"),
+                                add("optio"),
                                 add("totam"),
-                                add("beatae"),
-                                add("commodi"),
-                                add("molestiae"),
                             }};
-                            model = "modi";
+                            model = "beatae";
                         }};
                     }};
                 }};
-            }};            
+                accessToken = "commodi";
+                alt = "media";
+                callback = "modi";
+                fields = "qui";
+                key = "impedit";
+                oauthToken = "cum";
+                prettyPrint = false;
+                quotaUser = "esse";
+                uploadType = "ipsum";
+                uploadProtocol = "excepturi";
+            }}            
 
-            VideointelligenceVideosAnnotateResponse res = sdk.videos.videointelligenceVideosAnnotate(req);
+            VideointelligenceVideosAnnotateResponse res = sdk.videos.videointelligenceVideosAnnotate(req, new VideointelligenceVideosAnnotateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleLongrunningOperation.isPresent()) {
                 // handle response
@@ -184,7 +184,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### videos

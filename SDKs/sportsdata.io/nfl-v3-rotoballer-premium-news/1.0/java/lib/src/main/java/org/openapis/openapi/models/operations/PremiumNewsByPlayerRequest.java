@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PremiumNewsByPlayerRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PremiumNewsByPlayerFormatEnum format;
+    public PremiumNewsByPlayerRequest withFormat(PremiumNewsByPlayerFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PremiumNewsByPlayerPathParams pathParams;
-    public PremiumNewsByPlayerRequest withPathParams(PremiumNewsByPlayerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique FantasyData Player ID.
+     * Example:&lt;code&gt;10000507&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
+    public String playerid;
+    public PremiumNewsByPlayerRequest withPlayerid(String playerid) {
+        this.playerid = playerid;
         return this;
     }
     

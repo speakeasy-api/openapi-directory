@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncSyncMapPermissionRequest {
+    /**
+     * Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public UpdateSyncSyncMapPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
     
-    public UpdateSyncSyncMapPermissionPathParams pathParams;
-    public UpdateSyncSyncMapPermissionRequest withPathParams(UpdateSyncSyncMapPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of the Sync Map. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public UpdateSyncSyncMapPermissionRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncSyncMapPermissionUpdateSyncSyncMapPermissionRequest request;
-    public UpdateSyncSyncMapPermissionRequest withRequest(UpdateSyncSyncMapPermissionUpdateSyncSyncMapPermissionRequest request) {
-        this.request = request;
+    public UpdateSyncSyncMapPermissionUpdateSyncSyncMapPermissionRequest requestBody;
+    public UpdateSyncSyncMapPermissionRequest withRequestBody(UpdateSyncSyncMapPermissionUpdateSyncSyncMapPermissionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncSyncMapPermissionSecurity security;
-    public UpdateSyncSyncMapPermissionRequest withSecurity(UpdateSyncSyncMapPermissionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSyncSyncMapPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Sync Service Instance.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncSyncMapPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

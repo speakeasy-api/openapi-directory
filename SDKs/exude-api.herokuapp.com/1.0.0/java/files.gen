@@ -30,12 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/FilterFileDataStoppingsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FilterFileDataStoppingsRequestBodyFile.java
 lib/src/main/java/org/openapis/openapi/models/operations/FilterFileDataStoppingsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/FilterFileDataStoppingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FilterFileDataStoppingsResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/FilterStoppingsPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FilterStoppingsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FilterStoppingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExudeResponseBean.java

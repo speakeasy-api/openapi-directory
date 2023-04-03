@@ -18,13 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateSecurity;
-import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateQueryParams;
 import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateRequest;
 import org.openapis.openapi.models.operations.VerifiedaccessChallengeGenerateResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -33,35 +30,28 @@ public class Application {
                 .build();
 
             VerifiedaccessChallengeGenerateRequest req = new VerifiedaccessChallengeGenerateRequest() {{
-                security = new VerifiedaccessChallengeGenerateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("distinctio", "quibusdam");
+                    put("unde", "nulla");
+                    put("corrupti", "illum");
                 }};
-                queryParams = new VerifiedaccessChallengeGenerateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "provident";
-                    alt = "proto";
-                    callback = "quibusdam";
-                    fields = "unde";
-                    key = "nulla";
-                    oauthToken = "corrupti";
-                    prettyPrint = false;
-                    quotaUser = "illum";
-                    uploadType = "vel";
-                    uploadProtocol = "error";
-                }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("suscipit", "iure");
-                    put("magnam", "debitis");
-                    put("ipsa", "delectus");
-                }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                oauthToken = "magnam";
+                prettyPrint = false;
+                quotaUser = "debitis";
+                uploadType = "ipsa";
+                uploadProtocol = "delectus";
+            }}            
 
-            VerifiedaccessChallengeGenerateResponse res = sdk.challenge.verifiedaccessChallengeGenerate(req);
+            VerifiedaccessChallengeGenerateResponse res = sdk.challenge.verifiedaccessChallengeGenerate(req, new VerifiedaccessChallengeGenerateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.challenge.isPresent()) {
                 // handle response
@@ -73,7 +63,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### challenge

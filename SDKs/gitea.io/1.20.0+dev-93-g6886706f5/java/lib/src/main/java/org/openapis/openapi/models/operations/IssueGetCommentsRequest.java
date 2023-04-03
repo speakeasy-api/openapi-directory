@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueGetCommentsRequest {
-    
-    public IssueGetCommentsPathParams pathParams;
-    public IssueGetCommentsRequest withPathParams(IssueGetCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * if provided, only comments updated before the provided time are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public OffsetDateTime before;
+    public IssueGetCommentsRequest withBefore(OffsetDateTime before) {
+        this.before = before;
         return this;
     }
     
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueGetCommentsRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
     
-    public IssueGetCommentsQueryParams queryParams;
-    public IssueGetCommentsRequest withQueryParams(IssueGetCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueGetCommentsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueGetCommentsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * if provided, only comments updated since the specified time are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public OffsetDateTime since;
+    public IssueGetCommentsRequest withSince(OffsetDateTime since) {
+        this.since = since;
         return this;
     }
     

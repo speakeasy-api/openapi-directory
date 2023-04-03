@@ -19,9 +19,7 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateAccountConfigSecurity;
 import org.openapis.openapi.models.operations.CreateAccountConfigCreateAccountConfigRequest;
-import org.openapis.openapi.models.operations.CreateAccountConfigRequest;
 import org.openapis.openapi.models.operations.CreateAccountConfigResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,20 +27,15 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateAccountConfigRequest req = new CreateAccountConfigRequest() {{
-                security = new CreateAccountConfigSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                request = new CreateAccountConfigCreateAccountConfigRequest() {{
-                    key = "corrupti";
-                    value = "provident";
-                }};
-            }};            
+            CreateAccountConfigCreateAccountConfigRequest req = new CreateAccountConfigCreateAccountConfigRequest() {{
+                key = "corrupti";
+                value = "provident";
+            }}            
 
-            CreateAccountConfigResponse res = sdk.createAccountConfig(req);
+            CreateAccountConfigResponse res = sdk.createAccountConfig(req, new CreateAccountConfigSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.microvisorV1AccountConfig.isPresent()) {
                 // handle response
@@ -54,7 +47,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

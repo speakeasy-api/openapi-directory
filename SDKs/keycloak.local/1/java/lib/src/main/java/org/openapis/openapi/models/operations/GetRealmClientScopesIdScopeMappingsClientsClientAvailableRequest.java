@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientScopesIdScopeMappingsClientsClientAvailableRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client")
+    public String client;
+    public GetRealmClientScopesIdScopeMappingsClientsClientAvailableRequest withClient(String client) {
+        this.client = client;
+        return this;
+    }
     
-    public GetRealmClientScopesIdScopeMappingsClientsClientAvailablePathParams pathParams;
-    public GetRealmClientScopesIdScopeMappingsClientsClientAvailableRequest withPathParams(GetRealmClientScopesIdScopeMappingsClientsClientAvailablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of client scope (not name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientScopesIdScopeMappingsClientsClientAvailableRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientScopesIdScopeMappingsClientsClientAvailableRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

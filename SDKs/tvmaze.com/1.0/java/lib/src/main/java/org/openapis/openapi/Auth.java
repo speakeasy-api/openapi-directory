@@ -83,7 +83,7 @@ public class Auth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthPollResponse postAuthPoll(org.openapis.openapi.models.operations.PostAuthPollRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthPollResponse postAuthPoll(org.openapis.openapi.models.operations.PostAuthPollRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/poll");
         
@@ -135,7 +135,7 @@ public class Auth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAuthStartResponse postAuthStart(org.openapis.openapi.models.operations.PostAuthStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAuthStartResponse postAuthStart(org.openapis.openapi.models.operations.PostAuthStartRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/start");
         

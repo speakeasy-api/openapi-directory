@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxApiNewJsonRequest {
-    
-    public TaxApiNewJsonHeaders headers;
-    public TaxApiNewJsonRequest withHeaders(TaxApiNewJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TaxCreateApiModel taxCreateApiModel;
+    public TaxApiNewJsonRequest withTaxCreateApiModel(org.openapis.openapi.models.shared.TaxCreateApiModel taxCreateApiModel) {
+        this.taxCreateApiModel = taxCreateApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TaxCreateApiModel request;
-    public TaxApiNewJsonRequest withRequest(org.openapis.openapi.models.shared.TaxCreateApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public TaxApiNewJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public TaxApiNewJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

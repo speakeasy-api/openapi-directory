@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeParentLocationRequest {
-    
-    public ChangeParentLocationPathParams pathParams;
-    public ChangeParentLocationRequest withPathParams(ChangeParentLocationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ChangeParentLocationApplicationJSON request;
-    public ChangeParentLocationRequest withRequest(ChangeParentLocationApplicationJSON request) {
-        this.request = request;
+    public ChangeParentLocationApplicationJSON requestBody;
+    public ChangeParentLocationRequest withRequestBody(ChangeParentLocationApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ChangeParentLocationSecurity security;
-    public ChangeParentLocationRequest withSecurity(ChangeParentLocationSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locationId")
+    public String locationId;
+    public ChangeParentLocationRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     

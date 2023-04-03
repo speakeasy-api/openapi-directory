@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRevokeSnapshotAccessRequest {
-    
-    public GETRevokeSnapshotAccessQueryParams queryParams;
-    public GETRevokeSnapshotAccessRequest withQueryParams(GETRevokeSnapshotAccessQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The identifier of the Amazon Web Services account that can no longer restore the specified snapshot.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountWithRestoreAccess")
+    public String accountWithRestoreAccess;
+    public GETRevokeSnapshotAccessRequest withAccountWithRestoreAccess(String accountWithRestoreAccess) {
+        this.accountWithRestoreAccess = accountWithRestoreAccess;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRevokeSnapshotAccessActionEnum action;
+    public GETRevokeSnapshotAccessRequest withAction(GETRevokeSnapshotAccessActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETRevokeSnapshotAccessHeaders headers;
-    public GETRevokeSnapshotAccessRequest withHeaders(GETRevokeSnapshotAccessHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of the snapshot associated with the message to revoke access.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotArn")
+    public String snapshotArn;
+    public GETRevokeSnapshotAccessRequest withSnapshotArn(String snapshotArn) {
+        this.snapshotArn = snapshotArn;
+        return this;
+    }
+    
+    /**
+     * The identifier of the cluster the snapshot was created from. This parameter is required if your IAM user or role has a policy containing a snapshot resource element that specifies anything other than * for the cluster name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotClusterIdentifier")
+    public String snapshotClusterIdentifier;
+    public GETRevokeSnapshotAccessRequest withSnapshotClusterIdentifier(String snapshotClusterIdentifier) {
+        this.snapshotClusterIdentifier = snapshotClusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The identifier of the snapshot that the account can no longer access.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
+    public String snapshotIdentifier;
+    public GETRevokeSnapshotAccessRequest withSnapshotIdentifier(String snapshotIdentifier) {
+        this.snapshotIdentifier = snapshotIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRevokeSnapshotAccessVersionEnum version;
+    public GETRevokeSnapshotAccessRequest withVersion(GETRevokeSnapshotAccessVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRevokeSnapshotAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRevokeSnapshotAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRevokeSnapshotAccessRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRevokeSnapshotAccessRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRevokeSnapshotAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRevokeSnapshotAccessRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRevokeSnapshotAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

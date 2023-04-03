@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCodeownersErrorsRequest {
-    
-    public ReposCodeownersErrorsPathParams pathParams;
-    public ReposCodeownersErrorsRequest withPathParams(ReposCodeownersErrorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCodeownersErrorsRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * A branch, tag or commit name used to determine which version of the CODEOWNERS file to use. Default: the repository's default branch (e.g. `main`)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public ReposCodeownersErrorsRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
     
-    public ReposCodeownersErrorsQueryParams queryParams;
-    public ReposCodeownersErrorsRequest withQueryParams(ReposCodeownersErrorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCodeownersErrorsRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class MeterFolderInformation {
      */
     public org.openapis.openapi.models.operations.MeterFolderInformationGetResponse meterFolderInformationGet(org.openapis.openapi.models.operations.MeterFolderInformationGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeterFolderInformationGetPathParams.class, baseUrl, "/api/MeterFolderInformation/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeterFolderInformationGetRequest.class, baseUrl, "/api/MeterFolderInformation/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -92,7 +92,7 @@ public class MeterFolderInformation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeterFolderInformationPostFormResponse meterFolderInformationPostForm(org.openapis.openapi.models.operations.MeterFolderInformationPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeterFolderInformationPostFormResponse meterFolderInformationPostForm(org.openapis.openapi.models.shared.MeterFolderInformationToPost request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/MeterFolderInformation");
         
@@ -130,7 +130,7 @@ public class MeterFolderInformation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeterFolderInformationPostJsonResponse meterFolderInformationPostJson(org.openapis.openapi.models.operations.MeterFolderInformationPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeterFolderInformationPostJsonResponse meterFolderInformationPostJson(org.openapis.openapi.models.shared.MeterFolderInformationToPost request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/MeterFolderInformation");
         
@@ -168,7 +168,7 @@ public class MeterFolderInformation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeterFolderInformationPostRawResponse meterFolderInformationPostRaw(org.openapis.openapi.models.operations.MeterFolderInformationPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeterFolderInformationPostRawResponse meterFolderInformationPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/MeterFolderInformation");
         

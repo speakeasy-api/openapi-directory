@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAMapRequest {
-    
-    public CreateAMapQueryParams queryParams;
-    public CreateAMapRequest withQueryParams(CreateAMapQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
+    public String xAppToken;
+    public CreateAMapRequest withXAppToken(String xAppToken) {
+        this.xAppToken = xAppToken;
         return this;
     }
     
+    /**
+     * The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
+     * used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
+    public String appToken;
+    public CreateAMapRequest withAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
     
-    public CreateAMapHeaders headers;
-    public CreateAMapRequest withHeaders(CreateAMapHeaders headers) {
-        this.headers = headers;
+    /**
+     * Values must be specified for each constraint in the dataset.
+     * For example, to generate map data for `demographics.population.count`,
+     * you must specify a value for `year` by passing `year=2013`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=constraint")
+    public String constraint;
+    public CreateAMapRequest withConstraint(String constraint) {
+        this.constraint = constraint;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of entity IDs.
+     * Entities must have the same type and represent geographical regions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
+    public String entityId;
+    public CreateAMapRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    
+    /**
+     * A single variable ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variable")
+    public String variable;
+    public CreateAMapRequest withVariable(String variable) {
+        this.variable = variable;
         return this;
     }
     

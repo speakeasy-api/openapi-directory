@@ -33,25 +33,26 @@ public class Comments {
     /**
      * Marks a comment as not spam by blog id, post id and comment id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsApproveResponse bloggerCommentsApprove(org.openapis.openapi.models.operations.BloggerCommentsApproveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsApproveResponse bloggerCommentsApprove(org.openapis.openapi.models.operations.BloggerCommentsApproveRequest request, org.openapis.openapi.models.operations.BloggerCommentsApproveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsApprovePathParams.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/approve", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsApproveRequest.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/approve", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsApproveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsApproveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Comments {
     /**
      * Deletes a comment by blog id, post id and comment id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsDeleteResponse bloggerCommentsDelete(org.openapis.openapi.models.operations.BloggerCommentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsDeleteResponse bloggerCommentsDelete(org.openapis.openapi.models.operations.BloggerCommentsDeleteRequest request, org.openapis.openapi.models.operations.BloggerCommentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsDeletePathParams.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsDeleteRequest.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,25 +119,26 @@ public class Comments {
     /**
      * Gets a comment by id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsGetResponse bloggerCommentsGet(org.openapis.openapi.models.operations.BloggerCommentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsGetResponse bloggerCommentsGet(org.openapis.openapi.models.operations.BloggerCommentsGetRequest request, org.openapis.openapi.models.operations.BloggerCommentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsGetPathParams.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsGetRequest.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -162,25 +165,26 @@ public class Comments {
     /**
      * Lists comments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsListResponse bloggerCommentsList(org.openapis.openapi.models.operations.BloggerCommentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsListResponse bloggerCommentsList(org.openapis.openapi.models.operations.BloggerCommentsListRequest request, org.openapis.openapi.models.operations.BloggerCommentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsListPathParams.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsListRequest.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -207,25 +211,26 @@ public class Comments {
     /**
      * Lists comments by blog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsListByBlogResponse bloggerCommentsListByBlog(org.openapis.openapi.models.operations.BloggerCommentsListByBlogRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsListByBlogResponse bloggerCommentsListByBlog(org.openapis.openapi.models.operations.BloggerCommentsListByBlogRequest request, org.openapis.openapi.models.operations.BloggerCommentsListByBlogSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsListByBlogPathParams.class, baseUrl, "/v3/blogs/{blogId}/comments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsListByBlogRequest.class, baseUrl, "/v3/blogs/{blogId}/comments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsListByBlogQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsListByBlogRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -252,25 +257,26 @@ public class Comments {
     /**
      * Marks a comment as spam by blog id, post id and comment id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamResponse bloggerCommentsMarkAsSpam(org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamResponse bloggerCommentsMarkAsSpam(org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamRequest request, org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamPathParams.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/spam", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamRequest.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/spam", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -297,25 +303,26 @@ public class Comments {
     /**
      * Removes the content of a comment by blog id, post id and comment id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BloggerCommentsRemoveContentResponse bloggerCommentsRemoveContent(org.openapis.openapi.models.operations.BloggerCommentsRemoveContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BloggerCommentsRemoveContentResponse bloggerCommentsRemoveContent(org.openapis.openapi.models.operations.BloggerCommentsRemoveContentRequest request, org.openapis.openapi.models.operations.BloggerCommentsRemoveContentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsRemoveContentPathParams.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/removecontent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BloggerCommentsRemoveContentRequest.class, baseUrl, "/v3/blogs/{blogId}/posts/{postId}/comments/{commentId}/removecontent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsRemoveContentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BloggerCommentsRemoveContentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

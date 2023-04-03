@@ -72,7 +72,7 @@ public class RatStrain {
      */
     public org.openapis.openapi.models.operations.GETStrainByRgdIdUsingGETResponse getStrainByRgdIdUsingGET(org.openapis.openapi.models.operations.GETStrainByRgdIdUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETStrainByRgdIdUsingGETPathParams.class, baseUrl, "/strains/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETStrainByRgdIdUsingGETRequest.class, baseUrl, "/strains/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -111,7 +111,7 @@ public class RatStrain {
      */
     public org.openapis.openapi.models.operations.GETStrainsByPositionUsingGETResponse getStrainsByPositionUsingGET(org.openapis.openapi.models.operations.GETStrainsByPositionUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETStrainsByPositionUsingGETPathParams.class, baseUrl, "/strains/{chr}/{start}/{stop}/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETStrainsByPositionUsingGETRequest.class, baseUrl, "/strains/{chr}/{start}/{stop}/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

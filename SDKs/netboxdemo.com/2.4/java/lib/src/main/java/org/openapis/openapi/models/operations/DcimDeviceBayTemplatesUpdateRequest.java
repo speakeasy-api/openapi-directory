@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceBayTemplatesUpdateRequest {
-    
-    public DcimDeviceBayTemplatesUpdatePathParams pathParams;
-    public DcimDeviceBayTemplatesUpdateRequest withPathParams(DcimDeviceBayTemplatesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableDeviceBayTemplateInput writableDeviceBayTemplateInput;
+    public DcimDeviceBayTemplatesUpdateRequest withWritableDeviceBayTemplateInput(org.openapis.openapi.models.shared.WritableDeviceBayTemplateInput writableDeviceBayTemplateInput) {
+        this.writableDeviceBayTemplateInput = writableDeviceBayTemplateInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableDeviceBayTemplateInput request;
-    public DcimDeviceBayTemplatesUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableDeviceBayTemplateInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this device bay template.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimDeviceBayTemplatesUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

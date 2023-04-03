@@ -34,27 +34,28 @@ public class Orderreturns {
     /**
      * Acks an order return in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgeResponse contentOrderreturnsAcknowledge(org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgeResponse contentOrderreturnsAcknowledge(org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgeRequest request, org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgePathParams.class, baseUrl, "/{merchantId}/orderreturns/{returnId}/acknowledge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgeRequest.class, baseUrl, "/{merchantId}/orderreturns/{returnId}/acknowledge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderreturnsAcknowledgeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsAcknowledgeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Orderreturns {
     /**
      * Create return in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnResponse contentOrderreturnsCreateorderreturn(org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnResponse contentOrderreturnsCreateorderreturn(org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnRequest request, org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnPathParams.class, baseUrl, "/{merchantId}/orderreturns/createOrderReturn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnRequest.class, baseUrl, "/{merchantId}/orderreturns/createOrderReturn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderreturnsCreateOrderReturnRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsCreateorderreturnRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class Orderreturns {
     /**
      * Retrieves an order return from your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreturnsGetResponse contentOrderreturnsGet(org.openapis.openapi.models.operations.ContentOrderreturnsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreturnsGetResponse contentOrderreturnsGet(org.openapis.openapi.models.operations.ContentOrderreturnsGetRequest request, org.openapis.openapi.models.operations.ContentOrderreturnsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsGetPathParams.class, baseUrl, "/{merchantId}/orderreturns/{returnId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsGetRequest.class, baseUrl, "/{merchantId}/orderreturns/{returnId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,27 +176,28 @@ public class Orderreturns {
     /**
      * Links a return shipping label to a return id. You can only create one return label per return id. Since the label is sent to the buyer, the linked return label cannot be updated or deleted. If you try to create multiple return shipping labels for a single return id, every create request except the first will fail.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreateResponse contentOrderreturnsLabelsCreate(org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreateResponse contentOrderreturnsLabelsCreate(org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreateRequest request, org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreatePathParams.class, baseUrl, "/{merchantId}/orderreturns/{returnId}/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreateRequest.class, baseUrl, "/{merchantId}/orderreturns/{returnId}/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "returnShippingLabel", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsLabelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,25 +224,26 @@ public class Orderreturns {
     /**
      * Lists order returns in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreturnsListResponse contentOrderreturnsList(org.openapis.openapi.models.operations.ContentOrderreturnsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreturnsListResponse contentOrderreturnsList(org.openapis.openapi.models.operations.ContentOrderreturnsListRequest request, org.openapis.openapi.models.operations.ContentOrderreturnsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsListPathParams.class, baseUrl, "/{merchantId}/orderreturns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsListRequest.class, baseUrl, "/{merchantId}/orderreturns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -265,27 +270,28 @@ public class Orderreturns {
     /**
      * Processes return in your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderreturnsProcessResponse contentOrderreturnsProcess(org.openapis.openapi.models.operations.ContentOrderreturnsProcessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderreturnsProcessResponse contentOrderreturnsProcess(org.openapis.openapi.models.operations.ContentOrderreturnsProcessRequest request, org.openapis.openapi.models.operations.ContentOrderreturnsProcessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsProcessPathParams.class, baseUrl, "/{merchantId}/orderreturns/{returnId}/process", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderreturnsProcessRequest.class, baseUrl, "/{merchantId}/orderreturns/{returnId}/process", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderreturnsProcessRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsProcessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderreturnsProcessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

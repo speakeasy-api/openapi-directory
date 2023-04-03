@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateExtendedSourceServerHeaders;
 import org.openapis.openapi.models.operations.CreateExtendedSourceServerRequestBody;
 import org.openapis.openapi.models.operations.CreateExtendedSourceServerRequest;
 import org.openapis.openapi.models.operations.CreateExtendedSourceServerResponse;
@@ -14,30 +13,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateExtendedSourceServerRequest req = new CreateExtendedSourceServerRequest() {{
-                headers = new CreateExtendedSourceServerHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateExtendedSourceServerRequestBody() {{
-                    sourceServerArn = "illum";
+                requestBody = new CreateExtendedSourceServerRequestBody() {{
+                    sourceServerArn = "corrupti";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("error", "deserunt");
-                        put("suscipit", "iure");
+                        put("distinctio", "quibusdam");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "vel";
+                xAmzContentSha256 = "error";
+                xAmzCredential = "deserunt";
+                xAmzDate = "suscipit";
+                xAmzSecurityToken = "iure";
+                xAmzSignature = "magnam";
+                xAmzSignedHeaders = "debitis";
+            }}            
 
             CreateExtendedSourceServerResponse res = sdk.createExtendedSourceServer(req);
 

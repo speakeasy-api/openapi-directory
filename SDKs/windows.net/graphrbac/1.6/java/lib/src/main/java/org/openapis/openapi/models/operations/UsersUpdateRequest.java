@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersUpdateRequest {
-    
-    public UsersUpdatePathParams pathParams;
-    public UsersUpdateRequest withPathParams(UsersUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UsersUpdateQueryParams queryParams;
-    public UsersUpdateRequest withQueryParams(UsersUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Parameters to update an existing user.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, java.util.Map<String, Object>> request;
-    public UsersUpdateRequest withRequest(java.util.Map<String, java.util.Map<String, Object>> request) {
-        this.request = request;
+    public java.util.Map<String, java.util.Map<String, Object>> requestBody;
+    public UsersUpdateRequest withRequestBody(java.util.Map<String, java.util.Map<String, Object>> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public UsersUpdateRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public UsersUpdateRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
+        return this;
+    }
+    
+    /**
+     * The object ID or principal name of the user to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upnOrObjectId")
+    public String upnOrObjectId;
+    public UsersUpdateRequest withUpnOrObjectId(String upnOrObjectId) {
+        this.upnOrObjectId = upnOrObjectId;
         return this;
     }
     

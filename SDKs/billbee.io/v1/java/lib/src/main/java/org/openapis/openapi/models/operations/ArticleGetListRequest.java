@@ -4,13 +4,51 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maximumBillBeeArticleId")
+    public Long maximumBillBeeArticleId;
+    public ArticleGetListRequest withMaximumBillBeeArticleId(Long maximumBillBeeArticleId) {
+        this.maximumBillBeeArticleId = maximumBillBeeArticleId;
+        return this;
+    }
     
-    public ArticleGetListQueryParams queryParams;
-    public ArticleGetListRequest withQueryParams(ArticleGetListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional the oldest create date of the articles to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minCreatedAt")
+    public OffsetDateTime minCreatedAt;
+    public ArticleGetListRequest withMinCreatedAt(OffsetDateTime minCreatedAt) {
+        this.minCreatedAt = minCreatedAt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimumBillBeeArticleId")
+    public Long minimumBillBeeArticleId;
+    public ArticleGetListRequest withMinimumBillBeeArticleId(Long minimumBillBeeArticleId) {
+        this.minimumBillBeeArticleId = minimumBillBeeArticleId;
+        return this;
+    }
+    
+    /**
+     * The current page to request starting with 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ArticleGetListRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The pagesize for the result list. Values between 1 and 250 are allowed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public ArticleGetListRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

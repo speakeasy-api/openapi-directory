@@ -4,13 +4,147 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsGetV2ProjectsGetRequest {
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. ?country=US or ?country=US&amp;country=MX)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String[] country;
+    public ProjectsGetV2ProjectsGetRequest withCountry(String[] country) {
+        this.country = country;
+        return this;
+    }
     
-    public ProjectsGetV2ProjectsGetQueryParams queryParams;
-    public ProjectsGetV2ProjectsGetRequest withQueryParams(ProjectsGetV2ProjectsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *         Limit results by a certain country using two letter country code.
+     *         (ex. /US)
+     *         
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
+    public String countryId;
+    public ProjectsGetV2ProjectsGetRequest withCountryId(String countryId) {
+        this.countryId = countryId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity")
+    public String entity;
+    public ProjectsGetV2ProjectsGetRequest withEntity(String entity) {
+        this.entity = entity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
+    public Boolean isAnalysis;
+    public ProjectsGetV2ProjectsGetRequest withIsAnalysis(Boolean isAnalysis) {
+        this.isAnalysis = isAnalysis;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
+    public Boolean isMobile;
+    public ProjectsGetV2ProjectsGetRequest withIsMobile(Boolean isMobile) {
+        this.isMobile = isMobile;
+        return this;
+    }
+    
+    /**
+     * Change the number of results returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ProjectsGetV2ProjectsGetRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ProjectsGetV2ProjectsGetRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * An enumeration.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum orderBy;
+    public ProjectsGetV2ProjectsGetRequest withOrderBy(ProjectsGetV2ProjectsGetOrderByProjectsOrderEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Paginate through results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ProjectsGetV2ProjectsGetRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
+    public Object[] parameter;
+    public ProjectsGetV2ProjectsGetRequest withParameter(Object[] parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter_id")
+    public Long parameterId;
+    public ProjectsGetV2ProjectsGetRequest withParameterId(Long parameterId) {
+        this.parameterId = parameterId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
+    public Object[] project;
+    public ProjectsGetV2ProjectsGetRequest withProject(Object[] project) {
+        this.project = project;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project_id")
+    public Long projectId;
+    public ProjectsGetV2ProjectsGetRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensorType")
+    public String sensorType;
+    public ProjectsGetV2ProjectsGetRequest withSensorType(String sensorType) {
+        this.sensorType = sensorType;
+        return this;
+    }
+    
+    /**
+     * Define sort order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public ProjectsGetV2ProjectsGetSortSortEnum sort;
+    public ProjectsGetV2ProjectsGetRequest withSort(ProjectsGetV2ProjectsGetSortSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceName")
+    public String[] sourceName;
+    public ProjectsGetV2ProjectsGetRequest withSourceName(String[] sourceName) {
+        this.sourceName = sourceName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
+    public String[] unit;
+    public ProjectsGetV2ProjectsGetRequest withUnit(String[] unit) {
+        this.unit = unit;
         return this;
     }
     

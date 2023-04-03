@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveNodeCommentRequest {
-    
-    public RemoveNodeCommentPathParams pathParams;
-    public RemoveNodeCommentRequest withPathParams(RemoveNodeCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveNodeCommentRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveNodeCommentHeaders headers;
-    public RemoveNodeCommentRequest withHeaders(RemoveNodeCommentHeaders headers) {
-        this.headers = headers;
+    /**
+     * Comment ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public RemoveNodeCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPhoneDevicesRequest {
-    
-    public ListPhoneDevicesQueryParams queryParams;
-    public ListPhoneDevicesRequest withQueryParams(ListPhoneDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ListPhoneDevicesRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListPhoneDevicesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public ListPhoneDevicesSecurity security;
-    public ListPhoneDevicesRequest withSecurity(ListPhoneDevicesSecurity security) {
-        this.security = security;
+    /**
+     * State of the device. The value should be either `assigned` to list devices that have been assigned to user(s) or `unassigned` to list devices that have not yet been assigned to any user in the Zoom account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ListPhoneDevicesTypeEnum type;
+    public ListPhoneDevicesRequest withType(ListPhoneDevicesTypeEnum type) {
+        this.type = type;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimRackRolesPartialUpdateRequest {
-    
-    public DcimRackRolesPartialUpdatePathParams pathParams;
-    public DcimRackRolesPartialUpdateRequest withPathParams(DcimRackRolesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RackRoleInput rackRoleInput;
+    public DcimRackRolesPartialUpdateRequest withRackRoleInput(org.openapis.openapi.models.shared.RackRoleInput rackRoleInput) {
+        this.rackRoleInput = rackRoleInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RackRoleInput request;
-    public DcimRackRolesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.RackRoleInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this rack role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimRackRolesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

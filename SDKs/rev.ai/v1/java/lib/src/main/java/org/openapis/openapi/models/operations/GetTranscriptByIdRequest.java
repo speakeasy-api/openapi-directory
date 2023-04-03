@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTranscriptByIdRequest {
-    
-    public GetTranscriptByIdPathParams pathParams;
-    public GetTranscriptByIdRequest withPathParams(GetTranscriptByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * MIME type specifying the transcription output format
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public org.openapis.openapi.models.shared.AcceptTranscriptEnum accept;
+    public GetTranscriptByIdRequest withAccept(org.openapis.openapi.models.shared.AcceptTranscriptEnum accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetTranscriptByIdHeaders headers;
-    public GetTranscriptByIdRequest withHeaders(GetTranscriptByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Rev.ai API Job Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTranscriptByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

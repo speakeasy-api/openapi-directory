@@ -39,19 +39,20 @@ public class Disputes {
      * Square debits the disputed amount from the seller\u2019s Square account. If the Square account
      * does not have sufficient funds, Square debits the associated bank account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AcceptDisputeResponse acceptDispute(org.openapis.openapi.models.operations.AcceptDisputeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AcceptDisputeResponse acceptDispute(org.openapis.openapi.models.operations.AcceptDisputeRequest request, org.openapis.openapi.models.operations.AcceptDisputeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcceptDisputePathParams.class, baseUrl, "/v2/disputes/{dispute_id}/accept", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcceptDisputeRequest.class, baseUrl, "/v2/disputes/{dispute_id}/accept", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,24 +80,25 @@ public class Disputes {
      * CreateDisputeEvidenceText
      * Uploads text to use as evidence for a dispute challenge.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDisputeEvidenceTextResponse createDisputeEvidenceText(org.openapis.openapi.models.operations.CreateDisputeEvidenceTextRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDisputeEvidenceTextResponse createDisputeEvidenceText(org.openapis.openapi.models.operations.CreateDisputeEvidenceTextRequest request, org.openapis.openapi.models.operations.CreateDisputeEvidenceTextSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDisputeEvidenceTextPathParams.class, baseUrl, "/v2/disputes/{dispute_id}/evidence-text", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDisputeEvidenceTextRequest.class, baseUrl, "/v2/disputes/{dispute_id}/evidence-text", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createDisputeEvidenceTextRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,19 +129,20 @@ public class Disputes {
      * Square does not send the bank any evidence that is removed. Also, you cannot remove evidence after
      * submitting it to the bank using [SubmitEvidence](https://developer.squareup.com/reference/square_2021-08-18/disputes-api/submit-evidence).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDisputeEvidenceResponse deleteDisputeEvidence(org.openapis.openapi.models.operations.DeleteDisputeEvidenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDisputeEvidenceResponse deleteDisputeEvidence(org.openapis.openapi.models.operations.DeleteDisputeEvidenceRequest request, org.openapis.openapi.models.operations.DeleteDisputeEvidenceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDisputeEvidencePathParams.class, baseUrl, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDisputeEvidenceRequest.class, baseUrl, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,25 +170,26 @@ public class Disputes {
      * ListDisputeEvidence
      * Returns a list of evidence associated with a dispute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDisputeEvidenceResponse listDisputeEvidence(org.openapis.openapi.models.operations.ListDisputeEvidenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDisputeEvidenceResponse listDisputeEvidence(org.openapis.openapi.models.operations.ListDisputeEvidenceRequest request, org.openapis.openapi.models.operations.ListDisputeEvidenceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDisputeEvidencePathParams.class, baseUrl, "/v2/disputes/{dispute_id}/evidence", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDisputeEvidenceRequest.class, baseUrl, "/v2/disputes/{dispute_id}/evidence", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDisputeEvidenceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDisputeEvidenceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,10 +217,11 @@ public class Disputes {
      * ListDisputes
      * Returns a list of disputes associated with a particular account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDisputesResponse listDisputes(org.openapis.openapi.models.operations.ListDisputesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDisputesResponse listDisputes(org.openapis.openapi.models.operations.ListDisputesRequest request, org.openapis.openapi.models.operations.ListDisputesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/disputes");
         
@@ -224,14 +229,14 @@ public class Disputes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDisputesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDisputesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,19 +264,20 @@ public class Disputes {
      * RetrieveDispute
      * Returns details about a specific dispute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveDisputeResponse retrieveDispute(org.openapis.openapi.models.operations.RetrieveDisputeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveDisputeResponse retrieveDispute(org.openapis.openapi.models.operations.RetrieveDisputeRequest request, org.openapis.openapi.models.operations.RetrieveDisputeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveDisputePathParams.class, baseUrl, "/v2/disputes/{dispute_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveDisputeRequest.class, baseUrl, "/v2/disputes/{dispute_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -302,19 +308,20 @@ public class Disputes {
      * You must maintain a copy of the evidence you upload if you want to reference it later. You cannot
      * download the evidence after you upload it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveDisputeEvidenceResponse retrieveDisputeEvidence(org.openapis.openapi.models.operations.RetrieveDisputeEvidenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveDisputeEvidenceResponse retrieveDisputeEvidence(org.openapis.openapi.models.operations.RetrieveDisputeEvidenceRequest request, org.openapis.openapi.models.operations.RetrieveDisputeEvidenceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveDisputeEvidencePathParams.class, baseUrl, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveDisputeEvidenceRequest.class, baseUrl, "/v2/disputes/{dispute_id}/evidence/{evidence_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -347,19 +354,20 @@ public class Disputes {
      * [CreateDisputeEvidenceText](https://developer.squareup.com/reference/square_2021-08-18/disputes-api/create-dispute-evidence-text) endpoints and
      * evidence automatically provided by Square, when available.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SubmitEvidenceResponse submitEvidence(org.openapis.openapi.models.operations.SubmitEvidenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SubmitEvidenceResponse submitEvidence(org.openapis.openapi.models.operations.SubmitEvidenceRequest request, org.openapis.openapi.models.operations.SubmitEvidenceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitEvidencePathParams.class, baseUrl, "/v2/disputes/{dispute_id}/submit-evidence", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitEvidenceRequest.class, baseUrl, "/v2/disputes/{dispute_id}/submit-evidence", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

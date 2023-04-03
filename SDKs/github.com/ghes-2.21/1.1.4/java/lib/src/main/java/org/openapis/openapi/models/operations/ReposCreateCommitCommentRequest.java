@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateCommitCommentRequest {
-    
-    public ReposCreateCommitCommentPathParams pathParams;
-    public ReposCreateCommitCommentRequest withPathParams(ReposCreateCommitCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreateCommitCommentRequestBody requestBody;
+    public ReposCreateCommitCommentRequest withRequestBody(ReposCreateCommitCommentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposCreateCommitCommentRequestBody request;
-    public ReposCreateCommitCommentRequest withRequest(ReposCreateCommitCommentRequestBody request) {
-        this.request = request;
+    /**
+     * commit_sha parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit_sha")
+    public String commitSha;
+    public ReposCreateCommitCommentRequest withCommitSha(String commitSha) {
+        this.commitSha = commitSha;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateCommitCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateCommitCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

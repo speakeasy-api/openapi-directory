@@ -34,25 +34,26 @@ public class V1 {
     /**
      * Analyzes IAM policies to answer which identities have what accesses on which resources.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse cloudassetAnalyzeIamPolicy(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyResponse cloudassetAnalyzeIamPolicy(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyRequest request, org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyPathParams.class, baseUrl, "/v1/{scope}:analyzeIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyRequest.class, baseUrl, "/v1/{scope}:analyzeIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class V1 {
     /**
      * Analyzes IAM policies asynchronously to answer which identities have what accesses on which resources, and writes the analysis results to a Google Cloud Storage or a BigQuery destination. For Cloud Storage destination, the output format is the JSON format that represents a AnalyzeIamPolicyResponse. This method implements the google.longrunning.Operation, which allows you to track the operation status. We recommend intervals of at least 2 seconds with exponential backoff retry to poll the operation result. The metadata contains the metadata for the long-running operation.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningResponse cloudassetAnalyzeIamPolicyLongrunning(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningResponse cloudassetAnalyzeIamPolicyLongrunning(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningRequest request, org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningPathParams.class, baseUrl, "/v1/{scope}:analyzeIamPolicyLongrunning", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningRequest.class, baseUrl, "/v1/{scope}:analyzeIamPolicyLongrunning", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "analyzeIamPolicyLongrunningRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeIamPolicyLongrunningRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class V1 {
     /**
      * Analyze moving a resource to a specified destination without kicking off the actual move. The analysis is best effort depending on the user's permissions of viewing different hierarchical policies and configurations. The policies and configuration are subject to change before the actual resource migration takes place.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetAnalyzeMoveResponse cloudassetAnalyzeMove(org.openapis.openapi.models.operations.CloudassetAnalyzeMoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetAnalyzeMoveResponse cloudassetAnalyzeMove(org.openapis.openapi.models.operations.CloudassetAnalyzeMoveRequest request, org.openapis.openapi.models.operations.CloudassetAnalyzeMoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeMovePathParams.class, baseUrl, "/v1/{resource}:analyzeMove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeMoveRequest.class, baseUrl, "/v1/{resource}:analyzeMove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeMoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeMoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class V1 {
     /**
      * Analyzes organization policies under a scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesResponse cloudassetAnalyzeOrgPolicies(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesResponse cloudassetAnalyzeOrgPolicies(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesRequest request, org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesPathParams.class, baseUrl, "/v1/{scope}:analyzeOrgPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesRequest.class, baseUrl, "/v1/{scope}:analyzeOrgPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class V1 {
     /**
      * Analyzes organization policies governed assets (Google Cloud resources or policies) under a scope. This RPC supports custom constraints and the following 10 canned constraints: * storage.uniformBucketLevelAccess * iam.disableServiceAccountKeyCreation * iam.allowedPolicyMemberDomains * compute.vmExternalIpAccess * appengine.enforceServiceAccountActAsCheck * gcp.resourceLocations * compute.trustedImageProjects * compute.skipDefaultNetworkCreation * compute.requireOsLogin * compute.disableNestedVirtualization This RPC only returns either resources of types supported by [searchable asset types](https://cloud.google.com/asset-inventory/docs/supported-asset-types#searchable_asset_types), or IAM policies.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse cloudassetAnalyzeOrgPolicyGovernedAssets(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsResponse cloudassetAnalyzeOrgPolicyGovernedAssets(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsRequest request, org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsPathParams.class, baseUrl, "/v1/{scope}:analyzeOrgPolicyGovernedAssets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsRequest.class, baseUrl, "/v1/{scope}:analyzeOrgPolicyGovernedAssets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedAssetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class V1 {
     /**
      * Analyzes organization policies governed containers (projects, folders or organization) under a scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersResponse cloudassetAnalyzeOrgPolicyGovernedContainers(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersResponse cloudassetAnalyzeOrgPolicyGovernedContainers(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersRequest request, org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersPathParams.class, baseUrl, "/v1/{scope}:analyzeOrgPolicyGovernedContainers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersRequest.class, baseUrl, "/v1/{scope}:analyzeOrgPolicyGovernedContainers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetAnalyzeOrgPolicyGovernedContainersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,25 +312,26 @@ public class V1 {
     /**
      * Batch gets the update history of assets that overlap a time window. For IAM_POLICY content, this API outputs history when the asset and its attached IAM POLICY both exist. This can create gaps in the output history. Otherwise, this API outputs history with asset in both non-delete or deleted status. If a specified asset does not exist, this API returns an INVALID_ARGUMENT error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryResponse cloudassetBatchGetAssetsHistory(org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryResponse cloudassetBatchGetAssetsHistory(org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryRequest request, org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryPathParams.class, baseUrl, "/v1/{parent}:batchGetAssetsHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryRequest.class, baseUrl, "/v1/{parent}:batchGetAssetsHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetBatchGetAssetsHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -351,27 +358,28 @@ public class V1 {
     /**
      * Exports assets with time and resource types to a given Cloud Storage location/BigQuery table. For Cloud Storage location destinations, the output format is newline-delimited JSON. Each line represents a google.cloud.asset.v1.Asset in the JSON format; for BigQuery table destinations, the output table stores the fields in asset Protobuf as columns. This API implements the google.longrunning.Operation API, which allows you to keep track of the export. We recommend intervals of at least 2 seconds with exponential retry to poll the export operation result. For regular-size resource parent, the export operation usually finishes within 5 minutes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetExportAssetsResponse cloudassetExportAssets(org.openapis.openapi.models.operations.CloudassetExportAssetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetExportAssetsResponse cloudassetExportAssets(org.openapis.openapi.models.operations.CloudassetExportAssetsRequest request, org.openapis.openapi.models.operations.CloudassetExportAssetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetExportAssetsPathParams.class, baseUrl, "/v1/{parent}:exportAssets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetExportAssetsRequest.class, baseUrl, "/v1/{parent}:exportAssets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "exportAssetsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetExportAssetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetExportAssetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -398,27 +406,28 @@ public class V1 {
     /**
      * Issue a job that queries assets using a SQL statement compatible with [BigQuery Standard SQL](http://cloud/bigquery/docs/reference/standard-sql/enabling-standard-sql). If the query execution finishes within timeout and there's no pagination, the full query results will be returned in the `QueryAssetsResponse`. Otherwise, full query results can be obtained by issuing extra requests with the `job_reference` from the a previous `QueryAssets` call. Note, the query result has approximately 10 GB limitation enforced by BigQuery https://cloud.google.com/bigquery/docs/best-practices-performance-output, queries return larger results will result in errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetQueryAssetsResponse cloudassetQueryAssets(org.openapis.openapi.models.operations.CloudassetQueryAssetsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetQueryAssetsResponse cloudassetQueryAssets(org.openapis.openapi.models.operations.CloudassetQueryAssetsRequest request, org.openapis.openapi.models.operations.CloudassetQueryAssetsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetQueryAssetsPathParams.class, baseUrl, "/v1/{parent}:queryAssets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetQueryAssetsRequest.class, baseUrl, "/v1/{parent}:queryAssets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queryAssetsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetQueryAssetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetQueryAssetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,25 +454,26 @@ public class V1 {
     /**
      * Searches all IAM policies within the specified scope, such as a project, folder, or organization. The caller must be granted the `cloudasset.assets.searchAllIamPolicies` permission on the desired scope, otherwise the request will be rejected.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesResponse cloudassetSearchAllIamPolicies(org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesResponse cloudassetSearchAllIamPolicies(org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesRequest request, org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesPathParams.class, baseUrl, "/v1/{scope}:searchAllIamPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesRequest.class, baseUrl, "/v1/{scope}:searchAllIamPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetSearchAllIamPoliciesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -490,25 +500,26 @@ public class V1 {
     /**
      * Searches all Google Cloud resources within the specified scope, such as a project, folder, or organization. The caller must be granted the `cloudasset.assets.searchAllResources` permission on the desired scope, otherwise the request will be rejected.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudassetSearchAllResourcesResponse cloudassetSearchAllResources(org.openapis.openapi.models.operations.CloudassetSearchAllResourcesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudassetSearchAllResourcesResponse cloudassetSearchAllResources(org.openapis.openapi.models.operations.CloudassetSearchAllResourcesRequest request, org.openapis.openapi.models.operations.CloudassetSearchAllResourcesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetSearchAllResourcesPathParams.class, baseUrl, "/v1/{scope}:searchAllResources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudassetSearchAllResourcesRequest.class, baseUrl, "/v1/{scope}:searchAllResources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetSearchAllResourcesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudassetSearchAllResourcesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IPBlocklistDownloadRequest {
+    /**
+     * Output IPs using CIDR notation. This option should be preferred but is off by default for backwards compatibility
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cidr")
+    public Boolean cidr;
+    public IPBlocklistDownloadRequest withCidr(Boolean cidr) {
+        this.cidr = cidr;
+        return this;
+    }
     
-    public IPBlocklistDownloadQueryParams queryParams;
-    public IPBlocklistDownloadRequest withQueryParams(IPBlocklistDownloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The data format. Can be either CSV or TXT
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public IPBlocklistDownloadRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Include public VPN provider addresses, this option is only available for Tier 3 or higher accounts. Adds any IPs which are solely listed as VPN providers, IPs that are listed on multiple sensors will still be included without enabling this option. &lt;br&gt;&lt;b&gt;WARNING&lt;/b&gt;: This adds at least an additional 8 million IP addresses to the download if not using CIDR notation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include-vpn")
+    public Boolean includeVpn;
+    public IPBlocklistDownloadRequest withIncludeVpn(Boolean includeVpn) {
+        this.includeVpn = includeVpn;
+        return this;
+    }
+    
+    /**
+     * Output the IPv6 version of the blocklist, the default is to output IPv4 only. Note that this option enables CIDR notation too as this is the only notation currently supported for IPv6
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip6")
+    public Boolean ip6;
+    public IPBlocklistDownloadRequest withIp6(Boolean ip6) {
+        this.ip6 = ip6;
         return this;
     }
     

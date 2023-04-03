@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RevokeRefreshTokenV2Request {
-    
-    public RevokeRefreshTokenV2PathParams pathParams;
-    public RevokeRefreshTokenV2Request withPathParams(RevokeRefreshTokenV2PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RevokeRefreshTokenV2Security security;
-    public RevokeRefreshTokenV2Request withSecurity(RevokeRefreshTokenV2Security security) {
-        this.security = security;
+    /**
+     * the token to revoke
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public RevokeRefreshTokenV2Request withToken(String token) {
+        this.token = token;
         return this;
     }
     

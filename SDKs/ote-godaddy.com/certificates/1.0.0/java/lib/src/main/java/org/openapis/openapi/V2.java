@@ -39,7 +39,7 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.GetAcmeExternalAccountBindingResponse getAcmeExternalAccountBinding(org.openapis.openapi.models.operations.GetAcmeExternalAccountBindingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAcmeExternalAccountBindingPathParams.class, baseUrl, "/v2/customers/{customerId}/certificates/acme/externalAccountBinding", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAcmeExternalAccountBindingRequest.class, baseUrl, "/v2/customers/{customerId}/certificates/acme/externalAccountBinding", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -85,7 +85,7 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.GetCertificateDetailByCertIdentifierResponse getCertificateDetailByCertIdentifier(org.openapis.openapi.models.operations.GetCertificateDetailByCertIdentifierRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCertificateDetailByCertIdentifierPathParams.class, baseUrl, "/v2/customers/{customerId}/certificates/{certificateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCertificateDetailByCertIdentifierRequest.class, baseUrl, "/v2/customers/{customerId}/certificates/{certificateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -131,13 +131,13 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.GetCustomerCertificatesByCustomerIdResponse getCustomerCertificatesByCustomerId(org.openapis.openapi.models.operations.GetCustomerCertificatesByCustomerIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomerCertificatesByCustomerIdPathParams.class, baseUrl, "/v2/customers/{customerId}/certificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomerCertificatesByCustomerIdRequest.class, baseUrl, "/v2/customers/{customerId}/certificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomerCertificatesByCustomerIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCustomerCertificatesByCustomerIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -183,7 +183,7 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.GetDomainDetailsByDomainResponse getDomainDetailsByDomain(org.openapis.openapi.models.operations.GetDomainDetailsByDomainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomainDetailsByDomainPathParams.class, baseUrl, "/v2/customers/{customerId}/certificates/{certificateId}/domainVerifications/{domain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomainDetailsByDomainRequest.class, baseUrl, "/v2/customers/{customerId}/certificates/{certificateId}/domainVerifications/{domain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -229,7 +229,7 @@ public class V2 {
      */
     public org.openapis.openapi.models.operations.GetDomainInformationByCertificateIdResponse getDomainInformationByCertificateId(org.openapis.openapi.models.operations.GetDomainInformationByCertificateIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomainInformationByCertificateIdPathParams.class, baseUrl, "/v2/customers/{customerId}/certificates/{certificateId}/domainVerifications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomainInformationByCertificateIdRequest.class, baseUrl, "/v2/customers/{customerId}/certificates/{certificateId}/domainVerifications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

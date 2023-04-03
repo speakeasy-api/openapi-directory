@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemoveRoleFromDBClusterRequest {
-    
-    public GETRemoveRoleFromDBClusterQueryParams queryParams;
-    public GETRemoveRoleFromDBClusterRequest withQueryParams(GETRemoveRoleFromDBClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRemoveRoleFromDBClusterActionEnum action;
+    public GETRemoveRoleFromDBClusterRequest withAction(GETRemoveRoleFromDBClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the DB cluster to disassociate the IAM role from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBClusterIdentifier")
+    public String dbClusterIdentifier;
+    public GETRemoveRoleFromDBClusterRequest withDBClusterIdentifier(String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        return this;
+    }
     
-    public GETRemoveRoleFromDBClusterHeaders headers;
-    public GETRemoveRoleFromDBClusterRequest withHeaders(GETRemoveRoleFromDBClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the feature for the DB cluster that the IAM role is to be disassociated from. For information about supported feature names, see &lt;a&gt;DBEngineVersion&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FeatureName")
+    public String featureName;
+    public GETRemoveRoleFromDBClusterRequest withFeatureName(String featureName) {
+        this.featureName = featureName;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the IAM role to disassociate from the Aurora DB cluster, for example &lt;code&gt;arn:aws:iam::123456789012:role/AuroraAccessRole&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleArn")
+    public String roleArn;
+    public GETRemoveRoleFromDBClusterRequest withRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRemoveRoleFromDBClusterVersionEnum version;
+    public GETRemoveRoleFromDBClusterRequest withVersion(GETRemoveRoleFromDBClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRemoveRoleFromDBClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRemoveRoleFromDBClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRemoveRoleFromDBClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRemoveRoleFromDBClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRemoveRoleFromDBClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRemoveRoleFromDBClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRemoveRoleFromDBClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

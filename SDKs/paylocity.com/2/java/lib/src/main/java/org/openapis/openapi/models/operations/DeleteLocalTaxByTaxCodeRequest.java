@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLocalTaxByTaxCodeRequest {
-    
-    public DeleteLocalTaxByTaxCodePathParams pathParams;
-    public DeleteLocalTaxByTaxCodeRequest withPathParams(DeleteLocalTaxByTaxCodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public DeleteLocalTaxByTaxCodeRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public DeleteLocalTaxByTaxCodeRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
     
-    public DeleteLocalTaxByTaxCodeSecurity security;
-    public DeleteLocalTaxByTaxCodeRequest withSecurity(DeleteLocalTaxByTaxCodeSecurity security) {
-        this.security = security;
+    /**
+     * Tax Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxCode")
+    public String taxCode;
+    public DeleteLocalTaxByTaxCodeRequest withTaxCode(String taxCode) {
+        this.taxCode = taxCode;
         return this;
     }
     

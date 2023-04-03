@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrdersOrderIdRequest {
-    
-    public GetOrdersOrderIdPathParams pathParams;
-    public GetOrdersOrderIdRequest withPathParams(GetOrdersOrderIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * UUID of the `order` to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetOrdersOrderIdRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

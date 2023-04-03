@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddTrackCollectionItemsRequest {
-    
-    public AddTrackCollectionItemsPathParams pathParams;
-    public AddTrackCollectionItemsRequest withPathParams(AddTrackCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * List of items to add to collection
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CollectionItemRequest request;
-    public AddTrackCollectionItemsRequest withRequest(org.openapis.openapi.models.shared.CollectionItemRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CollectionItemRequest collectionItemRequest;
+    public AddTrackCollectionItemsRequest withCollectionItemRequest(org.openapis.openapi.models.shared.CollectionItemRequest collectionItemRequest) {
+        this.collectionItemRequest = collectionItemRequest;
         return this;
     }
     
-    
-    public AddTrackCollectionItemsSecurity security;
-    public AddTrackCollectionItemsRequest withSecurity(AddTrackCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AddTrackCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

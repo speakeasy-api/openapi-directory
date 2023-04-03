@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ItemTypesListRequest {
-    
-    public ItemTypesListQueryParams queryParams;
-    public ItemTypesListRequest withQueryParams(ItemTypesListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ItemTypesListSecurity security;
-    public ItemTypesListRequest withSecurity(ItemTypesListSecurity security) {
-        this.security = security;
+    /**
+     * Identifier of the group for which the item types are requested
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public Long groupId;
+    public ItemTypesListRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

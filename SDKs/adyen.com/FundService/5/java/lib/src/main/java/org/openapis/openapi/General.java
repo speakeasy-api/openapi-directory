@@ -34,10 +34,11 @@ public class General {
      * Get the balances of an account holder
      * Returns the account balances of an account holder. An account's balances are organized according by currencies. This mean that an account may have multiple balances: one for each currency.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAccountHolderBalanceResponse postAccountHolderBalance(org.openapis.openapi.models.operations.PostAccountHolderBalanceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAccountHolderBalanceResponse postAccountHolderBalance(org.openapis.openapi.models.shared.AccountHolderBalanceRequest request, org.openapis.openapi.models.operations.PostAccountHolderBalanceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accountHolderBalance");
         
@@ -48,7 +49,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,10 +85,11 @@ public class General {
      * Get a list of transactions
      * Returns a list of transactions for an account holder's accounts. You can specify the accounts and transaction statuses to be included on the list. The call returns a maximum of 50 transactions for each account. To retrieve all transactions, you must make another call with the 'page' value incremented. Transactions are listed in chronological order, with the most recent transaction first.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAccountHolderTransactionListResponse postAccountHolderTransactionList(org.openapis.openapi.models.operations.PostAccountHolderTransactionListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAccountHolderTransactionListResponse postAccountHolderTransactionList(org.openapis.openapi.models.shared.AccountHolderTransactionListRequest request, org.openapis.openapi.models.operations.PostAccountHolderTransactionListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accountHolderTransactionList");
         
@@ -98,7 +100,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -136,10 +138,11 @@ public class General {
      * 
      *  To learn more about direct debits, see [Top up accounts](https://docs.adyen.com/marketplaces-and-platforms/classic/top-up-accounts).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostDebitAccountHolderResponse postDebitAccountHolder(org.openapis.openapi.models.operations.PostDebitAccountHolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostDebitAccountHolderResponse postDebitAccountHolder(org.openapis.openapi.models.shared.DebitAccountHolderRequest request, org.openapis.openapi.models.operations.PostDebitAccountHolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/debitAccountHolder");
         
@@ -150,7 +153,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -186,10 +189,11 @@ public class General {
      * Pay out from an account to the account holder
      * Pays out a specified amount from an account to the bank account of account holder.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPayoutAccountHolderResponse postPayoutAccountHolder(org.openapis.openapi.models.operations.PostPayoutAccountHolderRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPayoutAccountHolderResponse postPayoutAccountHolder(org.openapis.openapi.models.shared.PayoutAccountHolderRequest request, org.openapis.openapi.models.operations.PostPayoutAccountHolderSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payoutAccountHolder");
         
@@ -200,7 +204,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -236,10 +240,11 @@ public class General {
      * Refund a funds transfer
      * Refunds funds transferred from one account to another. Both accounts must be in the same platform, but can have different account holders. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRefundFundsTransferResponse postRefundFundsTransfer(org.openapis.openapi.models.operations.PostRefundFundsTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRefundFundsTransferResponse postRefundFundsTransfer(org.openapis.openapi.models.shared.RefundFundsTransferRequest request, org.openapis.openapi.models.operations.PostRefundFundsTransferSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/refundFundsTransfer");
         
@@ -250,7 +255,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -286,10 +291,11 @@ public class General {
      * Refund all transactions of an account since the most recent payout
      * Refunds all the transactions of an account that have taken place since the most recent payout. This request is on a account basis (as opposed to a payment basis), so only the portion of the payment that was made to the specified account is refunded. The commissions, fees, and payments to other accounts remain in the accounts to which they were sent as designated by the original payment's split details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRefundNotPaidOutTransfersResponse postRefundNotPaidOutTransfers(org.openapis.openapi.models.operations.PostRefundNotPaidOutTransfersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRefundNotPaidOutTransfersResponse postRefundNotPaidOutTransfers(org.openapis.openapi.models.shared.RefundNotPaidOutTransfersRequest request, org.openapis.openapi.models.operations.PostRefundNotPaidOutTransfersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/refundNotPaidOutTransfers");
         
@@ -300,7 +306,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -336,10 +342,11 @@ public class General {
      * Designate a beneficiary account and transfer the benefactor's current balance
      * Defines a benefactor and a beneficiary relationship between two accounts. At the time of benefactor/beneficiary setup, the funds in the benefactor account are transferred to the beneficiary account, and any further payments to the benefactor account are automatically sent to the beneficiary account. A series of benefactor/beneficiaries may not exceed four beneficiaries and may not have a cycle in it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSetupBeneficiaryResponse postSetupBeneficiary(org.openapis.openapi.models.operations.PostSetupBeneficiaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSetupBeneficiaryResponse postSetupBeneficiary(org.openapis.openapi.models.shared.SetupBeneficiaryRequest request, org.openapis.openapi.models.operations.PostSetupBeneficiarySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/setupBeneficiary");
         
@@ -350,7 +357,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -386,10 +393,11 @@ public class General {
      * Transfer funds between platform accounts
      * Transfers funds from one account to another account. Both accounts must be in the same platform, but can have different account holders. The transfer must include a transfer code, which should be determined by the platform, in compliance with local regulations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostTransferFundsResponse postTransferFunds(org.openapis.openapi.models.operations.PostTransferFundsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostTransferFundsResponse postTransferFunds(org.openapis.openapi.models.shared.TransferFundsRequest request, org.openapis.openapi.models.operations.PostTransferFundsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/transferFunds");
         
@@ -400,7 +408,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

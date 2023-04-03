@@ -7,17 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPayScheduleRequest {
-    
-    public PutPaySchedulePathParams pathParams;
-    public PutPayScheduleRequest withPathParams(PutPaySchedulePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public PutPayScheduleRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PutPayScheduleRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public PutPayScheduleHeaders headers;
-    public PutPayScheduleRequest withHeaders(PutPayScheduleHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public PutPayScheduleRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     
@@ -25,9 +41,19 @@ public class PutPayScheduleRequest {
      * The pay schedule object.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PaySchedule request;
-    public PutPayScheduleRequest withRequest(org.openapis.openapi.models.shared.PaySchedule request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PaySchedule paySchedule;
+    public PutPayScheduleRequest withPaySchedule(org.openapis.openapi.models.shared.PaySchedule paySchedule) {
+        this.paySchedule = paySchedule;
+        return this;
+    }
+    
+    /**
+     * The pay schedules' unique identifier. E.g SCH001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayScheduleId")
+    public String payScheduleId;
+    public PutPayScheduleRequest withPayScheduleId(String payScheduleId) {
+        this.payScheduleId = payScheduleId;
         return this;
     }
     

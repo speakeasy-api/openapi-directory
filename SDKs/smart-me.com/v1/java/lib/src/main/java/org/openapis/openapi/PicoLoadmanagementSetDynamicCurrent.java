@@ -39,13 +39,13 @@ public class PicoLoadmanagementSetDynamicCurrent {
      */
     public org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostResponse picoLoadmanagementSetDynamicCurrentPost(org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostPathParams.class, baseUrl, "/api/pico/loadmanagementgroup/current/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostRequest.class, baseUrl, "/api/pico/loadmanagementgroup/current/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PicoLoadmanagementSetDynamicCurrentPostRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestLastAdminRoomsGroupsRequest {
-    
-    public RequestLastAdminRoomsGroupsPathParams pathParams;
-    public RequestLastAdminRoomsGroupsRequest withPathParams(RequestLastAdminRoomsGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestLastAdminRoomsGroupsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestLastAdminRoomsGroupsHeaders headers;
-    public RequestLastAdminRoomsGroupsRequest withHeaders(RequestLastAdminRoomsGroupsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Group ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public RequestLastAdminRoomsGroupsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.JoinStorageSessionHeaders;
 import org.openapis.openapi.models.operations.JoinStorageSessionRequestBody;
 import org.openapis.openapi.models.operations.JoinStorageSessionRequest;
 import org.openapis.openapi.models.operations.JoinStorageSessionResponse;
@@ -27,26 +26,22 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             JoinStorageSessionRequest req = new JoinStorageSessionRequest() {{
-                headers = new JoinStorageSessionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new JoinStorageSessionRequestBody() {{
+                    channelArn = "corrupti";
                 }};
-                request = new JoinStorageSessionRequestBody() {{
-                    channelArn = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             JoinStorageSessionResponse res = sdk.joinStorageSession(req);
 
@@ -60,7 +55,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

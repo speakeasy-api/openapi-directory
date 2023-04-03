@@ -31,25 +31,26 @@ public class Organizations {
     /**
      * List organizations in a workspace
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsResponse getWorkspaceSlugOrganizations(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsResponse getWorkspaceSlugOrganizations(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsRequest request, org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsPathParams.class, baseUrl, "/{workspace_slug}/organizations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsRequest.class, baseUrl, "/{workspace_slug}/organizations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,19 +71,20 @@ public class Organizations {
     /**
      * Get an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdResponse getWorkspaceSlugOrganizationsOrganizationId(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdResponse getWorkspaceSlugOrganizationsOrganizationId(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdRequest request, org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdPathParams.class, baseUrl, "/{workspace_slug}/organizations/{organization_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugOrganizationsOrganizationIdRequest.class, baseUrl, "/{workspace_slug}/organizations/{organization_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -103,21 +105,22 @@ public class Organizations {
     /**
      * Update an organization
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdResponse putWorkspaceSlugOrganizationsOrganizationId(org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdResponse putWorkspaceSlugOrganizationsOrganizationId(org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdRequest request, org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdPathParams.class, baseUrl, "/{workspace_slug}/organizations/{organization_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspaceSlugOrganizationsOrganizationIdRequest.class, baseUrl, "/{workspace_slug}/organizations/{organization_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "organization", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

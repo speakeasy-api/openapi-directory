@@ -33,7 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PagespeedonlinePagespeedapiRunpagespeedSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PagespeedonlinePagespeedapiRunpagespeedCategoryEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PagespeedonlinePagespeedapiRunpagespeedStrategyEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/PagespeedonlinePagespeedapiRunpagespeedQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PagespeedonlinePagespeedapiRunpagespeedRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PagespeedonlinePagespeedapiRunpagespeedResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PagespeedApiPagespeedResponseV5.java
@@ -57,6 +56,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/AuditRefs.java
 lib/src/main/java/org/openapis/openapi/models/shared/LighthouseAuditResultV5.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

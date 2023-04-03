@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentSearchHelpArticlesRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchtext")
+    public String searchtext;
+    public ContentSearchHelpArticlesRequest withSearchtext(String searchtext) {
+        this.searchtext = searchtext;
+        return this;
+    }
     
-    public ContentSearchHelpArticlesPathParams pathParams;
-    public ContentSearchHelpArticlesRequest withPathParams(ContentSearchHelpArticlesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=size")
+    public String size;
+    public ContentSearchHelpArticlesRequest withSize(String size) {
+        this.size = size;
         return this;
     }
     

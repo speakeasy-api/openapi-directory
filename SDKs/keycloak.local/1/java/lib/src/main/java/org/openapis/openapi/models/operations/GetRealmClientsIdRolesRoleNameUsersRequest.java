@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdRolesRoleNameUsersRequest {
-    
-    public GetRealmClientsIdRolesRoleNameUsersPathParams pathParams;
-    public GetRealmClientsIdRolesRoleNameUsersRequest withPathParams(GetRealmClientsIdRolesRoleNameUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmClientsIdRolesRoleNameUsersRequest withFirst(Integer first) {
+        this.first = first;
         return this;
     }
     
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdRolesRoleNameUsersRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetRealmClientsIdRolesRoleNameUsersQueryParams queryParams;
-    public GetRealmClientsIdRolesRoleNameUsersRequest withQueryParams(GetRealmClientsIdRolesRoleNameUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmClientsIdRolesRoleNameUsersRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdRolesRoleNameUsersRequest withRealm(String realm) {
+        this.realm = realm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role-name")
+    public String roleName;
+    public GetRealmClientsIdRolesRoleNameUsersRequest withRoleName(String roleName) {
+        this.roleName = roleName;
         return this;
     }
     

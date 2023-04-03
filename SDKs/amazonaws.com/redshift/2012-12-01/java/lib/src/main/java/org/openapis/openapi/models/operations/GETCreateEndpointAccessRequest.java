@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateEndpointAccessRequest {
-    
-    public GETCreateEndpointAccessQueryParams queryParams;
-    public GETCreateEndpointAccessRequest withQueryParams(GETCreateEndpointAccessQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateEndpointAccessActionEnum action;
+    public GETCreateEndpointAccessRequest withAction(GETCreateEndpointAccessActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The cluster identifier of the cluster to access.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETCreateEndpointAccessRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
     
-    public GETCreateEndpointAccessHeaders headers;
-    public GETCreateEndpointAccessRequest withHeaders(GETCreateEndpointAccessHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The Redshift-managed VPC endpoint name.&lt;/p&gt; &lt;p&gt;An endpoint name must contain 1-30 characters. Valid characters are A-Z, a-z, 0-9, and hyphen(-). The first character must be a letter. The name can't contain two consecutive hyphens or end with a hyphen.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndpointName")
+    public String endpointName;
+    public GETCreateEndpointAccessRequest withEndpointName(String endpointName) {
+        this.endpointName = endpointName;
+        return this;
+    }
+    
+    /**
+     * The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in another Amazon Web Services account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceOwner")
+    public String resourceOwner;
+    public GETCreateEndpointAccessRequest withResourceOwner(String resourceOwner) {
+        this.resourceOwner = resourceOwner;
+        return this;
+    }
+    
+    /**
+     * The subnet group from which Amazon Redshift chooses the subnet to deploy the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetGroupName")
+    public String subnetGroupName;
+    public GETCreateEndpointAccessRequest withSubnetGroupName(String subnetGroupName) {
+        this.subnetGroupName = subnetGroupName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateEndpointAccessVersionEnum version;
+    public GETCreateEndpointAccessRequest withVersion(GETCreateEndpointAccessVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The security group that defines the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcSecurityGroupIds")
+    public String[] vpcSecurityGroupIds;
+    public GETCreateEndpointAccessRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateEndpointAccessRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateEndpointAccessRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateEndpointAccessRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateEndpointAccessRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateEndpointAccessRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateEndpointAccessRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateEndpointAccessRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

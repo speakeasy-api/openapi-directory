@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFileRequest {
-    
-    public UploadFileQueryParams queryParams;
-    public UploadFileRequest withQueryParams(UploadFileQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UploadFileHeaders headers;
-    public UploadFileRequest withHeaders(UploadFileHeaders headers) {
-        this.headers = headers;
+    /**
+     * pass an optional folder id to save file to specific folder
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FolderId")
+    public String folderId;
+    public UploadFileRequest withFolderId(String folderId) {
+        this.folderId = folderId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadFileRequestBody request;
-    public UploadFileRequest withRequest(UploadFileRequestBody request) {
-        this.request = request;
+    public UploadFileRequestBody requestBody;
+    public UploadFileRequest withRequestBody(UploadFileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UploadFileSecurity security;
-    public UploadFileRequest withSecurity(UploadFileSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public UploadFileRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

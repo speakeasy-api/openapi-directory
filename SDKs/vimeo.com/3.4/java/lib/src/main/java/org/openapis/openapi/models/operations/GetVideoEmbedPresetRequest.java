@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoEmbedPresetRequest {
+    /**
+     * The ID of the preset.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=preset_id")
+    public Double presetId;
+    public GetVideoEmbedPresetRequest withPresetId(Double presetId) {
+        this.presetId = presetId;
+        return this;
+    }
     
-    public GetVideoEmbedPresetPathParams pathParams;
-    public GetVideoEmbedPresetRequest withPathParams(GetVideoEmbedPresetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetVideoEmbedPresetRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

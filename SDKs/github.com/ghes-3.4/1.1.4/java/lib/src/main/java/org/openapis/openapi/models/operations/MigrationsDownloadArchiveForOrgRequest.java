@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrationsDownloadArchiveForOrgRequest {
+    /**
+     * The unique identifier of the migration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=migration_id")
+    public Long migrationId;
+    public MigrationsDownloadArchiveForOrgRequest withMigrationId(Long migrationId) {
+        this.migrationId = migrationId;
+        return this;
+    }
     
-    public MigrationsDownloadArchiveForOrgPathParams pathParams;
-    public MigrationsDownloadArchiveForOrgRequest withPathParams(MigrationsDownloadArchiveForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public MigrationsDownloadArchiveForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

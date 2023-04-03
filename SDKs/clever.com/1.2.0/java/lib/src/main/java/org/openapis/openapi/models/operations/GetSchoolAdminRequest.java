@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchoolAdminRequest {
-    
-    public GetSchoolAdminPathParams pathParams;
-    public GetSchoolAdminRequest withPathParams(GetSchoolAdminPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSchoolAdminRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetSchoolAdminQueryParams queryParams;
-    public GetSchoolAdminRequest withQueryParams(GetSchoolAdminQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetSchoolAdminRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

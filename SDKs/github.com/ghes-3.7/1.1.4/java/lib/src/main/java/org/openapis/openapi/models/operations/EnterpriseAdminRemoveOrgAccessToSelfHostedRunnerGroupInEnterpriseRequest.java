@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest {
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
     
-    public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams pathParams;
-    public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withPathParams(EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
+    public Long orgId;
+    public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withOrgId(Long orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
+    public Long runnerGroupId;
+    public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
+        this.runnerGroupId = runnerGroupId;
         return this;
     }
     

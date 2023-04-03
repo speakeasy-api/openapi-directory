@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OverrideChannelCatalogProductValuesRequest {
-    
-    public OverrideChannelCatalogProductValuesPathParams pathParams;
-    public OverrideChannelCatalogProductValuesRequest withPathParams(OverrideChannelCatalogProductValuesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public java.util.Map<String, String> requestBody;
+    public OverrideChannelCatalogProductValuesRequest withRequestBody(java.util.Map<String, String> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, String> request;
-    public OverrideChannelCatalogProductValuesRequest withRequest(java.util.Map<String, String> request) {
-        this.request = request;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public OverrideChannelCatalogProductValuesRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
+        return this;
+    }
+    
+    /**
+     * The product identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public OverrideChannelCatalogProductValuesRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

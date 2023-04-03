@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeCacheEngineVersionsRequest {
-    
-    public GETDescribeCacheEngineVersionsQueryParams queryParams;
-    public GETDescribeCacheEngineVersionsRequest withQueryParams(GETDescribeCacheEngineVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeCacheEngineVersionsActionEnum action;
+    public GETDescribeCacheEngineVersionsRequest withAction(GETDescribeCacheEngineVersionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The name of a specific cache parameter group family to return details for.&lt;/p&gt; &lt;p&gt;Valid values are: &lt;code&gt;memcached1.4&lt;/code&gt; | &lt;code&gt;memcached1.5&lt;/code&gt; | &lt;code&gt;memcached1.6&lt;/code&gt; | &lt;code&gt;redis2.6&lt;/code&gt; | &lt;code&gt;redis2.8&lt;/code&gt; | &lt;code&gt;redis3.2&lt;/code&gt; | &lt;code&gt;redis4.0&lt;/code&gt; | &lt;code&gt;redis5.0&lt;/code&gt; | &lt;code&gt;redis6.x&lt;/code&gt; | &lt;code&gt;redis6.2&lt;/code&gt; | &lt;code&gt;redis7&lt;/code&gt; &lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be 1 to 255 alphanumeric characters&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot end with a hyphen or contain two consecutive hyphens&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheParameterGroupFamily")
+    public String cacheParameterGroupFamily;
+    public GETDescribeCacheEngineVersionsRequest withCacheParameterGroupFamily(String cacheParameterGroupFamily) {
+        this.cacheParameterGroupFamily = cacheParameterGroupFamily;
+        return this;
+    }
     
-    public GETDescribeCacheEngineVersionsHeaders headers;
-    public GETDescribeCacheEngineVersionsRequest withHeaders(GETDescribeCacheEngineVersionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * If &lt;code&gt;true&lt;/code&gt;, specifies that only the default version of the specified engine or engine and major version combination is to be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DefaultOnly")
+    public Boolean defaultOnly;
+    public GETDescribeCacheEngineVersionsRequest withDefaultOnly(Boolean defaultOnly) {
+        this.defaultOnly = defaultOnly;
+        return this;
+    }
+    
+    /**
+     * The cache engine to return. Valid values: &lt;code&gt;memcached&lt;/code&gt; | &lt;code&gt;redis&lt;/code&gt; 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Engine")
+    public String engine;
+    public GETDescribeCacheEngineVersionsRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The cache engine version to return.&lt;/p&gt; &lt;p&gt;Example: &lt;code&gt;1.4.14&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineVersion")
+    public String engineVersion;
+    public GETDescribeCacheEngineVersionsRequest withEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+    
+    /**
+     * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by &lt;code&gt;MaxRecords&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeCacheEngineVersionsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of records to include in the response. If more records exist than the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a marker is included in the response so that the remaining results can be retrieved.&lt;/p&gt; &lt;p&gt;Default: 100&lt;/p&gt; &lt;p&gt;Constraints: minimum 20; maximum 100.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeCacheEngineVersionsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeCacheEngineVersionsVersionEnum version;
+    public GETDescribeCacheEngineVersionsRequest withVersion(GETDescribeCacheEngineVersionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeCacheEngineVersionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeCacheEngineVersionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeCacheEngineVersionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeCacheEngineVersionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeCacheEngineVersionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeCacheEngineVersionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeCacheEngineVersionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

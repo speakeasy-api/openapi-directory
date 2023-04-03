@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetschemasRequest {
-    
-    public GetschemasPathParams pathParams;
-    public GetschemasRequest withPathParams(GetschemasPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetschemasRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public GetschemasHeaders headers;
-    public GetschemasRequest withHeaders(GetschemasHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the data entity. Defined by the api. Examples of native data entities you can use are `CL` for client profiles and `AD` for client addresses.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
+    public String dataEntityName;
+    public GetschemasRequest withDataEntityName(String dataEntityName) {
+        this.dataEntityName = dataEntityName;
         return this;
     }
     

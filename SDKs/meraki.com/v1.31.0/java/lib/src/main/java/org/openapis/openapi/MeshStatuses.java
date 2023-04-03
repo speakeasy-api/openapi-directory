@@ -42,13 +42,13 @@ public class MeshStatuses {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesResponse getNetworkWirelessMeshStatuses(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesPathParams.class, baseUrl, "/networks/{networkId}/wireless/meshStatuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesRequest.class, baseUrl, "/networks/{networkId}/wireless/meshStatuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkWirelessMeshStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

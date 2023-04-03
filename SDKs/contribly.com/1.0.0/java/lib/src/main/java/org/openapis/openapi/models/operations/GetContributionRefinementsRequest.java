@@ -4,13 +4,157 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributionRefinementsRequest {
+    /**
+     * Restrict results to contributions submitted to this assignment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignment")
+    public String assignment;
+    public GetContributionRefinementsRequest withAssignment(String assignment) {
+        this.assignment = assignment;
+        return this;
+    }
     
-    public GetContributionRefinementsQueryParams queryParams;
-    public GetContributionRefinementsRequest withQueryParams(GetContributionRefinementsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit results to contributions which have a publicly visible location within the given country (specified by two letter country code).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetContributionRefinementsRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Limit results to contributions created after this date time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public OffsetDateTime createdAfter;
+    public GetContributionRefinementsRequest withCreatedAfter(OffsetDateTime createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
+    
+    /**
+     * Limit results to contributions created before this date time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public OffsetDateTime createdBefore;
+    public GetContributionRefinementsRequest withCreatedBefore(OffsetDateTime createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions which have specified a location which falls within this geohash (or comma seperated list of multiple geohashes)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geohash")
+    public String geohash;
+    public GetContributionRefinementsRequest withGeohash(String geohash) {
+        this.geohash = geohash;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions which have a publicly visible location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hasLocation")
+    public Boolean hasLocation;
+    public GetContributionRefinementsRequest withHasLocation(Boolean hasLocation) {
+        this.hasLocation = hasLocation;
+        return this;
+    }
+    
+    /**
+     * Limit results to contributions with location near this latitude and longitude (comma seperated lat/long pair). Also see radius
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latLong")
+    public String latLong;
+    public GetContributionRefinementsRequest withLatLong(String latLong) {
+        this.latLong = latLong;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions which include a media file of the given type (ie. image / video)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mediaType")
+    public String mediaType;
+    public GetContributionRefinementsRequest withMediaType(String mediaType) {
+        this.mediaType = mediaType;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions which are fall under the jurisdiction by this user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ownedBy")
+    public String ownedBy;
+    public GetContributionRefinementsRequest withOwnedBy(String ownedBy) {
+        this.ownedBy = ownedBy;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions whose headline text matches this keyword.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetContributionRefinementsRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * When limiting result by location with the latLong parameter, specify the radius in kilometers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Double radius;
+    public GetContributionRefinementsRequest withRadius(Double radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Number of refinement options to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refinementSize")
+    public Double refinementSize;
+    public GetContributionRefinementsRequest withRefinementSize(Double refinementSize) {
+        this.refinementSize = refinementSize;
+        return this;
+    }
+    
+    /**
+     * Comma seperated list of refinement names.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refinements")
+    public String refinements;
+    public GetContributionRefinementsRequest withRefinements(String refinements) {
+        this.refinements = refinements;
+        return this;
+    }
+    
+    /**
+     * Locate a specific contribution by URL words
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=urlWords")
+    public String urlWords;
+    public GetContributionRefinementsRequest withUrlWords(String urlWords) {
+        this.urlWords = urlWords;
+        return this;
+    }
+    
+    /**
+     * Restrict results to contributions by this user identified by id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public GetContributionRefinementsRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAppsAppIdLiveRequest {
-    
-    public PostAppsAppIdLivePathParams pathParams;
-    public PostAppsAppIdLiveRequest withPathParams(PostAppsAppIdLivePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the App to be changed
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public PostAppsAppIdLiveRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     
+    /**
+     * The unique id of the developer that is changing this AppVersion
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
+    public String developerId;
+    public PostAppsAppIdLiveRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
     
-    public PostAppsAppIdLiveQueryParams queryParams;
-    public PostAppsAppIdLiveRequest withQueryParams(PostAppsAppIdLiveQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The new version of the live App
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public PostAppsAppIdLiveRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

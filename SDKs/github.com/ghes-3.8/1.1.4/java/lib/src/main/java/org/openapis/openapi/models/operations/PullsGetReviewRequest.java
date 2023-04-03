@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsGetReviewRequest {
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsGetReviewRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public PullsGetReviewPathParams pathParams;
-    public PullsGetReviewRequest withPathParams(PullsGetReviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number that identifies the pull request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsGetReviewRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsGetReviewRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the review.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=review_id")
+    public Long reviewId;
+    public PullsGetReviewRequest withReviewId(Long reviewId) {
+        this.reviewId = reviewId;
         return this;
     }
     

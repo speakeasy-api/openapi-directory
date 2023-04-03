@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSessionMatchesRequest {
-    
-    public GetSessionMatchesPathParams pathParams;
-    public GetSessionMatchesRequest withPathParams(GetSessionMatchesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetSessionMatchesRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineLineRoutesByIdsRequest {
-    
-    public LineLineRoutesByIdsPathParams pathParams;
-    public LineLineRoutesByIdsRequest withPathParams(LineLineRoutesByIdsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of line ids e.g. victoria,circle,N133. Max. approx. 20 ids.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public LineLineRoutesByIdsRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     
-    
-    public LineLineRoutesByIdsQueryParams queryParams;
-    public LineLineRoutesByIdsRequest withQueryParams(LineLineRoutesByIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A comma seperated list of service types to filter on. Supported values: Regular, Night. Defaulted to 'Regular' if not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
+    public LineLineRoutesByIdsServiceTypesEnum[] serviceTypes;
+    public LineLineRoutesByIdsRequest withServiceTypes(LineLineRoutesByIdsServiceTypesEnum[] serviceTypes) {
+        this.serviceTypes = serviceTypes;
         return this;
     }
     

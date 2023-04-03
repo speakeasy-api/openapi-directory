@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConnectionPolicyTargetRequest {
-    
-    public DeleteConnectionPolicyTargetPathParams pathParams;
-    public DeleteConnectionPolicyTargetRequest withPathParams(DeleteConnectionPolicyTargetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Connection Policy that owns the Target.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectionPolicySid")
+    public String connectionPolicySid;
+    public DeleteConnectionPolicyTargetRequest withConnectionPolicySid(String connectionPolicySid) {
+        this.connectionPolicySid = connectionPolicySid;
         return this;
     }
     
-    
-    public DeleteConnectionPolicyTargetSecurity security;
-    public DeleteConnectionPolicyTargetRequest withSecurity(DeleteConnectionPolicyTargetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteConnectionPolicyTargetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Target resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteConnectionPolicyTargetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

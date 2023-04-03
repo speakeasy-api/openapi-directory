@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueCreateIssueAttachmentRequest {
-    
-    public IssueCreateIssueAttachmentPathParams pathParams;
-    public IssueCreateIssueAttachmentRequest withPathParams(IssueCreateIssueAttachmentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public IssueCreateIssueAttachmentQueryParams queryParams;
-    public IssueCreateIssueAttachmentRequest withQueryParams(IssueCreateIssueAttachmentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public IssueCreateIssueAttachmentRequestBody request;
-    public IssueCreateIssueAttachmentRequest withRequest(IssueCreateIssueAttachmentRequestBody request) {
-        this.request = request;
+    public IssueCreateIssueAttachmentRequestBody requestBody;
+    public IssueCreateIssueAttachmentRequest withRequestBody(IssueCreateIssueAttachmentRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueCreateIssueAttachmentRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * name of the attachment
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public IssueCreateIssueAttachmentRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueCreateIssueAttachmentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueCreateIssueAttachmentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

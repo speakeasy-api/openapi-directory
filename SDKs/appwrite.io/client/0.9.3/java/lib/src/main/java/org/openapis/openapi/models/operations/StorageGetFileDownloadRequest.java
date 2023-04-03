@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageGetFileDownloadRequest {
-    
-    public StorageGetFileDownloadPathParams pathParams;
-    public StorageGetFileDownloadRequest withPathParams(StorageGetFileDownloadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StorageGetFileDownloadSecurity security;
-    public StorageGetFileDownloadRequest withSecurity(StorageGetFileDownloadSecurity security) {
-        this.security = security;
+    /**
+     * File unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public StorageGetFileDownloadRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     

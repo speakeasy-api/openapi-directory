@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GethomedataRequest {
-    
-    public GethomedataQueryParams queryParams;
-    public GethomedataRequest withQueryParams(GethomedataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify if you're looking for the events of a specific Home.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home_id")
+    public String homeId;
+    public GethomedataRequest withHomeId(String homeId) {
+        this.homeId = homeId;
         return this;
     }
     
-    
-    public GethomedataSecurity security;
-    public GethomedataRequest withSecurity(GethomedataSecurity security) {
-        this.security = security;
+    /**
+     * Number of events to retrieve. Default is `30`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GethomedataRequest withSize(Long size) {
+        this.size = size;
         return this;
     }
     

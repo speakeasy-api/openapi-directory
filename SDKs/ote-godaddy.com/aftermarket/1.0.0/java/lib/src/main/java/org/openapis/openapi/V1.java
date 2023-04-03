@@ -37,7 +37,7 @@ public class V1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddExpiryListingsJsonResponse addExpiryListingsJson(org.openapis.openapi.models.operations.AddExpiryListingsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddExpiryListingsJsonResponse addExpiryListingsJson(org.openapis.openapi.models.shared.AftermarketListingExpiryCreate[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/aftermarket/listings/expiry");
         
@@ -156,7 +156,7 @@ public class V1 {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddExpiryListingsRawResponse addExpiryListingsRaw(org.openapis.openapi.models.operations.AddExpiryListingsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddExpiryListingsRawResponse addExpiryListingsRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/aftermarket/listings/expiry");
         
@@ -283,7 +283,7 @@ public class V1 {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteListingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteListingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

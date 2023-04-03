@@ -34,10 +34,11 @@ public class APIs {
      * Application/ License for Factory
      * API to verify Application/ License for Factory.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlsfcResponse alsfc(org.openapis.openapi.models.operations.AlsfcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlsfcResponse alsfc(org.openapis.openapi.models.operations.AlsfcRequestBody request, org.openapis.openapi.models.operations.AlsfcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/alsfc/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +127,11 @@ public class APIs {
      * Registration Certificate for Contract Labour License
      * API to verify Registration Certificate for Contract Labour License.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ClcerResponse clcer(org.openapis.openapi.models.operations.ClcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ClcerResponse clcer(org.openapis.openapi.models.operations.ClcerRequestBody request, org.openapis.openapi.models.operations.ClcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/clcer/certificate");
         
@@ -140,7 +142,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,10 +220,11 @@ public class APIs {
      * Registration Certificate of Shops And Commercial Establishment
      * API to verify Registration Certificate of Shops And Commercial Establishment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SrcerResponse srcer(org.openapis.openapi.models.operations.SrcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SrcerResponse srcer(org.openapis.openapi.models.operations.SrcerRequestBody request, org.openapis.openapi.models.operations.SrcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/srcer/certificate");
         
@@ -232,7 +235,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

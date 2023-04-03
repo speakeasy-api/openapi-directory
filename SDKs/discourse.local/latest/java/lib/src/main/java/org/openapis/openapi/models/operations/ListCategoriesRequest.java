@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCategoriesRequest {
-    
-    public ListCategoriesQueryParams queryParams;
-    public ListCategoriesRequest withQueryParams(ListCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_subcategories")
+    public ListCategoriesIncludeSubcategoriesEnum includeSubcategories;
+    public ListCategoriesRequest withIncludeSubcategories(ListCategoriesIncludeSubcategoriesEnum includeSubcategories) {
+        this.includeSubcategories = includeSubcategories;
         return this;
     }
     

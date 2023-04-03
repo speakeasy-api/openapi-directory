@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelFileUploadByTokenRequest {
-    
-    public CancelFileUploadByTokenPathParams pathParams;
-    public CancelFileUploadByTokenRequest withPathParams(CancelFileUploadByTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Upload token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public CancelFileUploadByTokenRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

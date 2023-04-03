@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourceCollectionRequest {
-    
-    public GetResourceCollectionPathParams pathParams;
-    public GetResourceCollectionRequest withPathParams(GetResourceCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The pagination token to use to retrieve the next page of results for this operation. If this value is null, it retrieves the first page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GetResourceCollectionRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
-    
-    public GetResourceCollectionQueryParams queryParams;
-    public GetResourceCollectionRequest withQueryParams(GetResourceCollectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     *  The type of Amazon Web Services resource collections to return. The one valid value is &lt;code&gt;CLOUD_FORMATION&lt;/code&gt; for Amazon Web Services CloudFormation stacks. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceCollectionType")
+    public GetResourceCollectionResourceCollectionTypeEnum resourceCollectionType;
+    public GetResourceCollectionRequest withResourceCollectionType(GetResourceCollectionResourceCollectionTypeEnum resourceCollectionType) {
+        this.resourceCollectionType = resourceCollectionType;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetResourceCollectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
     
-    public GetResourceCollectionHeaders headers;
-    public GetResourceCollectionRequest withHeaders(GetResourceCollectionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetResourceCollectionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetResourceCollectionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetResourceCollectionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetResourceCollectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetResourceCollectionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetResourceCollectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

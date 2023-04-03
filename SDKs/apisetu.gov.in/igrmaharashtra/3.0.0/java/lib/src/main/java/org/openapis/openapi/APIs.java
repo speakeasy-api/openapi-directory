@@ -34,10 +34,11 @@ public class APIs {
      * Leave and License Certificate
      * API to verify Leave and License Certificate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LlcerResponse llcer(org.openapis.openapi.models.operations.LlcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LlcerResponse llcer(org.openapis.openapi.models.operations.LlcerRequestBody request, org.openapis.openapi.models.operations.LlcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/llcer/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -56,9 +56,21 @@ public class Balance {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.GetAccountBalanceResponse getAccountBalance(org.openapis.openapi.models.operations.GetAccountBalanceRequest request) throws Exception {
+        return this.getAccountBalance(request, null);
+    }
+
+    /**
+     * Get Account Balance
+     * Retrieve the current balance of your Vonage API account
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetAccountBalanceResponse getAccountBalance(org.openapis.openapi.models.operations.GetAccountBalanceRequest request, String serverURL) throws Exception {
         String baseUrl = GET_ACCOUNT_BALANCE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/get-balance");
@@ -67,7 +79,7 @@ public class Balance {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountBalanceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAccountBalanceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -125,9 +137,23 @@ public class Balance {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.TopUpAccountBalanceResponse topUpAccountBalance(org.openapis.openapi.models.operations.TopUpAccountBalanceRequest request) throws Exception {
+        return this.topUpAccountBalance(request, null);
+    }
+
+    /**
+     * Top Up Account Balance
+     * You can top up your account using this API when you have enabled auto-reload in the dashboard. The amount added by the top-up operation will be the same amount as was added in the payment when auto-reload was enabled.
+     * Your account balance is checked every 5-10 minutes and if it falls below the threshold and auto-reload is enabled, then it will be topped up automatically. Use this endpoint  if you need to top up at times when your credit may be exhausted more quickly than the auto-reload may occur.
+     * https://help.nexmo.com/hc/en-us/articles/205603248-How-do-I-set-up-automatic-payments-using-PayPal-or-credit-card- - Read more about automatic payments on the Knowledgebase
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.TopUpAccountBalanceResponse topUpAccountBalance(org.openapis.openapi.models.operations.TopUpAccountBalanceRequest request, String serverURL) throws Exception {
         String baseUrl = TOP_UP_ACCOUNT_BALANCE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/top-up");
@@ -135,13 +161,13 @@ public class Balance {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "topupRequest", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TopUpAccountBalanceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TopUpAccountBalanceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

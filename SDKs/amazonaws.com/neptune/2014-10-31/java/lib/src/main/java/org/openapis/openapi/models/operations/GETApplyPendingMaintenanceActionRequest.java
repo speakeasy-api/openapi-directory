@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETApplyPendingMaintenanceActionRequest {
-    
-    public GETApplyPendingMaintenanceActionQueryParams queryParams;
-    public GETApplyPendingMaintenanceActionRequest withQueryParams(GETApplyPendingMaintenanceActionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETApplyPendingMaintenanceActionActionEnum action;
+    public GETApplyPendingMaintenanceActionRequest withAction(GETApplyPendingMaintenanceActionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The pending maintenance action to apply to this resource.&lt;/p&gt; &lt;p&gt;Valid values: &lt;code&gt;system-update&lt;/code&gt;, &lt;code&gt;db-upgrade&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplyAction")
+    public String applyAction;
+    public GETApplyPendingMaintenanceActionRequest withApplyAction(String applyAction) {
+        this.applyAction = applyAction;
+        return this;
+    }
     
-    public GETApplyPendingMaintenanceActionHeaders headers;
-    public GETApplyPendingMaintenanceActionRequest withHeaders(GETApplyPendingMaintenanceActionHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;A value that specifies the type of opt-in request, or undoes an opt-in request. An opt-in request of type &lt;code&gt;immediate&lt;/code&gt; can't be undone.&lt;/p&gt; &lt;p&gt;Valid values:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;immediate&lt;/code&gt; - Apply the maintenance action immediately.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;next-maintenance&lt;/code&gt; - Apply the maintenance action during the next maintenance window for the resource.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;undo-opt-in&lt;/code&gt; - Cancel any existing &lt;code&gt;next-maintenance&lt;/code&gt; opt-in requests.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptInType")
+    public String optInType;
+    public GETApplyPendingMaintenanceActionRequest withOptInType(String optInType) {
+        this.optInType = optInType;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the resource that the pending maintenance action applies to. For information about creating an ARN, see &lt;a href="https://docs.aws.amazon.com/neptune/latest/UserGuide/tagging.ARN.html#tagging.ARN.Constructing"&gt; Constructing an Amazon Resource Name (ARN)&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceIdentifier")
+    public String resourceIdentifier;
+    public GETApplyPendingMaintenanceActionRequest withResourceIdentifier(String resourceIdentifier) {
+        this.resourceIdentifier = resourceIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETApplyPendingMaintenanceActionVersionEnum version;
+    public GETApplyPendingMaintenanceActionRequest withVersion(GETApplyPendingMaintenanceActionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETApplyPendingMaintenanceActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETApplyPendingMaintenanceActionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETApplyPendingMaintenanceActionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETApplyPendingMaintenanceActionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETApplyPendingMaintenanceActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETApplyPendingMaintenanceActionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETApplyPendingMaintenanceActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

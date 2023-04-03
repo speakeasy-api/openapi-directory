@@ -33,19 +33,20 @@ public class OnDemandRegions {
     /**
      * Add a specific region to an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVodRegionResponse addVodRegion(org.openapis.openapi.models.operations.AddVodRegionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVodRegionResponse addVodRegion(org.openapis.openapi.models.operations.AddVodRegionRequest request, org.openapis.openapi.models.operations.AddVodRegionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVodRegionPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVodRegionRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,19 +81,20 @@ public class OnDemandRegions {
     /**
      * Remove a specific region from an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVodRegionResponse deleteVodRegion(org.openapis.openapi.models.operations.DeleteVodRegionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVodRegionResponse deleteVodRegion(org.openapis.openapi.models.operations.DeleteVodRegionRequest request, org.openapis.openapi.models.operations.DeleteVodRegionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodRegionPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodRegionRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,21 +123,22 @@ public class OnDemandRegions {
     /**
      * Remove a list of regions from an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVodRegionsResponse deleteVodRegions(org.openapis.openapi.models.operations.DeleteVodRegionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVodRegionsResponse deleteVodRegions(org.openapis.openapi.models.operations.DeleteVodRegionsRequest request, org.openapis.openapi.models.operations.DeleteVodRegionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodRegionsPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVodRegionsRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,7 +178,7 @@ public class OnDemandRegions {
      */
     public org.openapis.openapi.models.operations.GetRegionResponse getRegion(org.openapis.openapi.models.operations.GetRegionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRegionPathParams.class, baseUrl, "/ondemand/regions/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRegionRequest.class, baseUrl, "/ondemand/regions/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -261,7 +264,7 @@ public class OnDemandRegions {
      */
     public org.openapis.openapi.models.operations.GetVodRegionResponse getVodRegion(org.openapis.openapi.models.operations.GetVodRegionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodRegionPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodRegionRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -308,7 +311,7 @@ public class OnDemandRegions {
      */
     public org.openapis.openapi.models.operations.GetVodRegionsResponse getVodRegions(org.openapis.openapi.models.operations.GetVodRegionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodRegionsPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVodRegionsRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -350,24 +353,25 @@ public class OnDemandRegions {
     /**
      * Add a list of regions to an On Demand page
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetVodRegionsResponse setVodRegions(org.openapis.openapi.models.operations.SetVodRegionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetVodRegionsResponse setVodRegions(org.openapis.openapi.models.operations.SetVodRegionsRequest request, org.openapis.openapi.models.operations.SetVodRegionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetVodRegionsPathParams.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetVodRegionsRequest.class, baseUrl, "/ondemand/pages/{ondemand_id}/regions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

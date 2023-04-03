@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RdcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RdcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/RdcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RdcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/RdcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rdcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rdcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rdcer504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RegriiSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RegriiRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/RegriiRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RegriiRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/RegriiRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Regrii504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Regrii504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Regrii504ApplicationJSON.java
@@ -88,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RmcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RmcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/RmcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RmcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/RmcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rmcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rmcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rmcer504ApplicationJSON.java
@@ -122,6 +119,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

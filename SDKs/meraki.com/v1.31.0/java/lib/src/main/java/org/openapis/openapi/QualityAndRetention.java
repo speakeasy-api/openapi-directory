@@ -40,7 +40,7 @@ public class QualityAndRetention {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionResponse getDeviceCameraQualityAndRetention(org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionPathParams.class, baseUrl, "/devices/{serial}/camera/qualityAndRetention", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraQualityAndRetentionRequest.class, baseUrl, "/devices/{serial}/camera/qualityAndRetention", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class QualityAndRetention {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionResponse updateDeviceCameraQualityAndRetention(org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionPathParams.class, baseUrl, "/devices/{serial}/camera/qualityAndRetention", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCameraQualityAndRetentionRequest.class, baseUrl, "/devices/{serial}/camera/qualityAndRetention", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

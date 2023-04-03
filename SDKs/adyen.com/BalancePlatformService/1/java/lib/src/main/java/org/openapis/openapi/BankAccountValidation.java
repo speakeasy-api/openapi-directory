@@ -35,10 +35,11 @@ public class BankAccountValidation {
      * Validate a bank account
      * Validates bank account identification details. You can use this endpoint to validate bank account details before you [make a transfer](https://docs.adyen.com/api-explorer/transfers/latest/post/transfers) or [create a transfer instrument](https://docs.adyen.com/api-explorer/legalentity/latest/post/transferInstruments).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostValidateBankAccountIdentificationResponse postValidateBankAccountIdentification(org.openapis.openapi.models.operations.PostValidateBankAccountIdentificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostValidateBankAccountIdentificationResponse postValidateBankAccountIdentification(org.openapis.openapi.models.shared.BankAccountIdentificationValidationRequest request, org.openapis.openapi.models.operations.PostValidateBankAccountIdentificationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/validateBankAccountIdentification");
         
@@ -49,7 +50,7 @@ public class BankAccountValidation {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest {
+    /**
+     * Assessment group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailPathParams pathParams;
-    public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest withPathParams(DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
+        return this;
+    }
+    
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public DeleteOfferingsOfferingIdGroupsGroupIdLearnersUserEmailRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

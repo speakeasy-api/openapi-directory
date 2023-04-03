@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSRSRatingsRequest {
+    /**
+     * Conference filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetSRSRatingsRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
     
-    public GetSRSRatingsQueryParams queryParams;
-    public GetSRSRatingsRequest withQueryParams(GetSRSRatingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Team filter (required if year not specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetSRSRatingsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Season filter (required if team not specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetSRSRatingsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

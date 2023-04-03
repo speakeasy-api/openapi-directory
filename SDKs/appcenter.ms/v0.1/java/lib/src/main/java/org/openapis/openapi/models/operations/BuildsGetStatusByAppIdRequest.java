@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsGetStatusByAppIdRequest {
-    
-    public BuildsGetStatusByAppIdPathParams pathParams;
-    public BuildsGetStatusByAppIdRequest withPathParams(BuildsGetStatusByAppIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BuildsGetStatusByAppIdRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public BuildsGetStatusByAppIdSecurity security;
-    public BuildsGetStatusByAppIdRequest withSecurity(BuildsGetStatusByAppIdSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BuildsGetStatusByAppIdRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

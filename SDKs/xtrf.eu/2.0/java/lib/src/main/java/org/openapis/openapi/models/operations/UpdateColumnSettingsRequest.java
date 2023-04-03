@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateColumnSettingsRequest {
-    
-    public UpdateColumnSettingsPathParams pathParams;
-    public UpdateColumnSettingsRequest withPathParams(UpdateColumnSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated column's specific settings.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdateColumnSettingsRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdateColumnSettingsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * column's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnName")
+    public String columnName;
+    public UpdateColumnSettingsRequest withColumnName(String columnName) {
+        this.columnName = columnName;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdateColumnSettingsRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

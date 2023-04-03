@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateGiftCardHeaders;
 import org.openapis.openapi.models.operations.CreateGiftCardRequest;
 import org.openapis.openapi.models.operations.CreateGiftCardResponse;
 import org.openapis.openapi.models.shared.CreateGiftCardRequest;
@@ -14,23 +13,15 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateGiftCardRequest req = new CreateGiftCardRequest() {{
-                headers = new CreateGiftCardHeaders() {{
-                    accept = "corrupti";
-                    contentType = "provident";
-                    xVTEXAPIAppKey = "distinctio";
-                    xVTEXAPIAppToken = "quibusdam";
-                }};
-                request = new CreateGiftCardRequest() {{
+                accept = "corrupti";
+                contentType = "provident";
+                createGiftCardRequest = new CreateGiftCardRequest() {{
                     caption = "rewards program";
                     expiringDate = "2020-09-01T13:15:30Z";
                     multipleCredits = false;
@@ -39,7 +30,9 @@ public class Application {
                     relationName = "insert example here";
                     restrictedToOwner = false;
                 }};
-            }};            
+                xVTEXAPIAppKey = "distinctio";
+                xVTEXAPIAppToken = "quibusdam";
+            }}            
 
             CreateGiftCardResponse res = sdk.giftCard.createGiftCard(req);
 

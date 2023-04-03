@@ -79,9 +79,47 @@ public class PricingConfiguration {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.GetPricingConfigResponse getPricingConfig(org.openapis.openapi.models.operations.GetPricingConfigRequest request) throws Exception {
+        return this.getPricingConfig(request, null);
+    }
+
+    /**
+     * Get Pricing Configuration
+     * Retrieves Pricing Configuration.
+     * ## Response body example
+     * 
+     * ```json
+     * {
+     *     "hasMigrated": true,
+     *     "migrationStatus": "Completed",
+     *     "defaultMarkup": 100,
+     *     "priceVariation": {
+     *         "upperLimit": null,
+     *         "lowerLimit": null
+     *     },
+     *     "minimumMarkups": {
+     *         "1": 100,
+     *         "2": 90
+     *     },
+     *     "tradePolicyConfigs": [],
+     *     "sellersToOverride": [],
+     *     "hasPriceInheritance": false,
+     *     "priceInheritance": "never",
+     *     "hasOptionalBasePrice": false,
+     *     "blockAccount": false,
+     *     "blockedRoutes": null,
+     *     "priceTableSelectionStrategy": "first",
+     *     "priceTableLimit": null
+     * }
+     * ```
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetPricingConfigResponse getPricingConfig(org.openapis.openapi.models.operations.GetPricingConfigRequest request, String serverURL) throws Exception {
         String baseUrl = GET_PRICING_CONFIG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pricing/config");
@@ -90,7 +128,7 @@ public class PricingConfiguration {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -141,9 +179,29 @@ public class PricingConfiguration {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.GetPricingv2StatusResponse getPricingv2Status(org.openapis.openapi.models.operations.GetPricingv2StatusRequest request) throws Exception {
+        return this.getPricingv2Status(request, null);
+    }
+
+    /**
+     * Get Pricing v2 Status
+     * Retrieves Pricing v2 Status. 
+     * ## Response body example
+     * 
+     * ```json
+     * {
+     *     "isActive": true,
+     *     "hasMigrated": true
+     * }
+     * ```
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.GetPricingv2StatusResponse getPricingv2Status(org.openapis.openapi.models.operations.GetPricingv2StatusRequest request, String serverURL) throws Exception {
         String baseUrl = GET_PRICINGV2_STATUS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pricing/migration");
@@ -152,7 +210,7 @@ public class PricingConfiguration {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

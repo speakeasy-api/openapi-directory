@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSnmpv3SetConfigRequest {
+    /**
+     * Agent to show the SNMPv3 configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSnmpv3SetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolSnmpv3SetConfigPathParams pathParams;
-    public ProtocolSnmpv3SetConfigRequest withPathParams(ProtocolSnmpv3SetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SNMPv3 configuration parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parameter")
+    public String parameter;
+    public ProtocolSnmpv3SetConfigRequest withParameter(String parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    
+    /**
+     * SNMPv3 parameter value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=value")
+    public String value;
+    public ProtocolSnmpv3SetConfigRequest withValue(String value) {
+        this.value = value;
         return this;
     }
     

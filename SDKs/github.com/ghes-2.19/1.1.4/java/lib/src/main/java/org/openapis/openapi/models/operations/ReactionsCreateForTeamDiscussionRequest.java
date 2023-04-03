@@ -7,24 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForTeamDiscussionRequest {
-    
-    public ReactionsCreateForTeamDiscussionPathParams pathParams;
-    public ReactionsCreateForTeamDiscussionRequest withPathParams(ReactionsCreateForTeamDiscussionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReactionsCreateForTeamDiscussionHeaders headers;
-    public ReactionsCreateForTeamDiscussionRequest withHeaders(ReactionsCreateForTeamDiscussionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReactionsCreateForTeamDiscussionRequestBody request;
-    public ReactionsCreateForTeamDiscussionRequest withRequest(ReactionsCreateForTeamDiscussionRequestBody request) {
-        this.request = request;
+    public ReactionsCreateForTeamDiscussionRequestBody requestBody;
+    public ReactionsCreateForTeamDiscussionRequest withRequestBody(ReactionsCreateForTeamDiscussionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public ReactionsCreateForTeamDiscussionRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsCreateForTeamDiscussionRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public ReactionsCreateForTeamDiscussionRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

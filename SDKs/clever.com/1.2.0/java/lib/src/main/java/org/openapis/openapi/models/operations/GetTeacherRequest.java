@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeacherRequest {
-    
-    public GetTeacherPathParams pathParams;
-    public GetTeacherRequest withPathParams(GetTeacherPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTeacherRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetTeacherQueryParams queryParams;
-    public GetTeacherRequest withQueryParams(GetTeacherQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetTeacherRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

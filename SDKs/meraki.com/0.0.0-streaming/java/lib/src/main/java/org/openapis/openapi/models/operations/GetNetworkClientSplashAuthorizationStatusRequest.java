@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkClientSplashAuthorizationStatusRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clientId")
+    public String clientId;
+    public GetNetworkClientSplashAuthorizationStatusRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public GetNetworkClientSplashAuthorizationStatusPathParams pathParams;
-    public GetNetworkClientSplashAuthorizationStatusRequest withPathParams(GetNetworkClientSplashAuthorizationStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkClientSplashAuthorizationStatusRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

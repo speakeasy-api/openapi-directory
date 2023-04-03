@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryListApiSpecRevisionsRequest {
-    
-    public RegistryListApiSpecRevisionsPathParams pathParams;
-    public RegistryListApiSpecRevisionsRequest withPathParams(RegistryListApiSpecRevisionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryListApiSpecRevisionsRequest withApi(String api) {
+        this.api = api;
         return this;
     }
     
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryListApiSpecRevisionsRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
     
-    public RegistryListApiSpecRevisionsQueryParams queryParams;
-    public RegistryListApiSpecRevisionsRequest withQueryParams(RegistryListApiSpecRevisionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of revisions to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public RegistryListApiSpecRevisionsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token, received from a previous ListApiSpecRevisions call. Provide this to retrieve the subsequent page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public RegistryListApiSpecRevisionsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryListApiSpecRevisionsRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The spec id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
+    public String spec;
+    public RegistryListApiSpecRevisionsRequest withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryListApiSpecRevisionsRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

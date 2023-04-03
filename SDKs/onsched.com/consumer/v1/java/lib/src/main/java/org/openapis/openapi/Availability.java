@@ -55,13 +55,13 @@ public class Availability {
      */
     public org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateResponse getConsumerV1AvailabilityServiceIdStartDateEndDate(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDatePathParams.class, baseUrl, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateRequest.class, baseUrl, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -106,13 +106,13 @@ public class Availability {
      */
     public org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysResponse getConsumerV1AvailabilityServiceIdStartDateEndDateDays(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysPathParams.class, baseUrl, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}/days", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest.class, baseUrl, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}/days", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateDaysRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -154,13 +154,13 @@ public class Availability {
      */
     public org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableResponse getConsumerV1AvailabilityServiceIdStartDateEndDateUnavailable(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailablePathParams.class, baseUrl, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}/unavailable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest.class, baseUrl, "/consumer/v1/availability/{serviceId}/{startDate}/{endDate}/unavailable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetConsumerV1AvailabilityServiceIdStartDateEndDateUnavailableRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

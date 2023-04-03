@@ -31,17 +31,11 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesCancelSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesCancelPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesCancelQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesCancelRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesCancelResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AndroidpublisherPurchasesGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubscriptionPurchase.java
 USAGE.md

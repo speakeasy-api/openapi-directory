@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamGameStatsByWeekRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;xml&lt;/code&gt; or &lt;code&gt;json&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public TeamGameStatsByWeekFormatEnum format;
+    public TeamGameStatsByWeekRequest withFormat(TeamGameStatsByWeekFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public TeamGameStatsByWeekPathParams pathParams;
-    public TeamGameStatsByWeekRequest withPathParams(TeamGameStatsByWeekPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     *           Year of the season.
+     *           &lt;br&gt;Examples: &lt;code&gt;2015&lt;/code&gt;, &lt;code&gt;2016&lt;/code&gt;, etc.
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
+    public String season;
+    public TeamGameStatsByWeekRequest withSeason(String season) {
+        this.season = season;
+        return this;
+    }
+    
+    /**
+     *           The week of the game(s).
+     *           &lt;br&gt;Examples: &lt;code&gt;1&lt;/code&gt;, &lt;code&gt;2&lt;/code&gt;, &lt;code&gt;3&lt;/code&gt;, etc.
+     *         
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
+    public String week;
+    public TeamGameStatsByWeekRequest withWeek(String week) {
+        this.week = week;
         return this;
     }
     

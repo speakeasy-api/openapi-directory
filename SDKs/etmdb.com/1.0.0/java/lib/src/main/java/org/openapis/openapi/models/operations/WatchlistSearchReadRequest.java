@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WatchlistSearchReadRequest {
-    
-    public WatchlistSearchReadPathParams pathParams;
-    public WatchlistSearchReadRequest withPathParams(WatchlistSearchReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=movie_title")
+    public String movieTitle;
+    public WatchlistSearchReadRequest withMovieTitle(String movieTitle) {
+        this.movieTitle = movieTitle;
         return this;
     }
     

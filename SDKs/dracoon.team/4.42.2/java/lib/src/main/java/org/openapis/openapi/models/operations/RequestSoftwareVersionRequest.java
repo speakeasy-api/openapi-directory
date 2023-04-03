@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestSoftwareVersionRequest {
-    
-    public RequestSoftwareVersionHeaders headers;
-    public RequestSoftwareVersionRequest withHeaders(RequestSoftwareVersionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestSoftwareVersionXSdsDateFormatEnum xSdsDateFormat;
+    public RequestSoftwareVersionRequest withXSdsDateFormat(RequestSoftwareVersionXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     

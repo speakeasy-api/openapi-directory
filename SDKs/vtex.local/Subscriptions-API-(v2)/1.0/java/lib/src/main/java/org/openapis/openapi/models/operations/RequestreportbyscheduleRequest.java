@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestreportbyscheduleRequest {
-    
-    public RequestreportbyscheduleQueryParams queryParams;
-    public RequestreportbyscheduleRequest withQueryParams(RequestreportbyscheduleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public RequestreportbyscheduleRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RequestreportbyscheduleRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public RequestreportbyscheduleHeaders headers;
-    public RequestreportbyscheduleRequest withHeaders(RequestreportbyscheduleHeaders headers) {
-        this.headers = headers;
+    /**
+     * begin date of report interval, use format yyyyMMdd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginDate")
+    public Integer beginDate;
+    public RequestreportbyscheduleRequest withBeginDate(Integer beginDate) {
+        this.beginDate = beginDate;
+        return this;
+    }
+    
+    /**
+     * end date of report interval, use format yyyyMMdd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public Integer endDate;
+    public RequestreportbyscheduleRequest withEndDate(Integer endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Email that the report will be sent to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requesterEmail")
+    public String requesterEmail;
+    public RequestreportbyscheduleRequest withRequesterEmail(String requesterEmail) {
+        this.requesterEmail = requesterEmail;
         return this;
     }
     

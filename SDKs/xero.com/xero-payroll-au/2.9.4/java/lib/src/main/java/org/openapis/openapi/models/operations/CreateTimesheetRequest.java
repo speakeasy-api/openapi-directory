@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTimesheetRequest {
-    
-    public CreateTimesheetHeaders headers;
-    public CreateTimesheetRequest withHeaders(CreateTimesheetHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TimesheetInput[] request;
-    public CreateTimesheetRequest withRequest(org.openapis.openapi.models.shared.TimesheetInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TimesheetInput[] requestBody;
+    public CreateTimesheetRequest withRequestBody(org.openapis.openapi.models.shared.TimesheetInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateTimesheetSecurity security;
-    public CreateTimesheetRequest withSecurity(CreateTimesheetSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public CreateTimesheetRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

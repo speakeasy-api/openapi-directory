@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceRolesPartialUpdateRequest {
-    
-    public DcimDeviceRolesPartialUpdatePathParams pathParams;
-    public DcimDeviceRolesPartialUpdateRequest withPathParams(DcimDeviceRolesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DeviceRoleInput deviceRoleInput;
+    public DcimDeviceRolesPartialUpdateRequest withDeviceRoleInput(org.openapis.openapi.models.shared.DeviceRoleInput deviceRoleInput) {
+        this.deviceRoleInput = deviceRoleInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeviceRoleInput request;
-    public DcimDeviceRolesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.DeviceRoleInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this device role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimDeviceRolesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

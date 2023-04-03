@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteAEAssessmentPathParams;
-import org.openapis.openapi.models.operations.DeleteAEAssessmentHeaders;
 import org.openapis.openapi.models.operations.DeleteAEAssessmentRequest;
 import org.openapis.openapi.models.operations.DeleteAEAssessmentResponse;
 
@@ -16,16 +14,12 @@ public class Application {
                 .build();
 
             DeleteAEAssessmentRequest req = new DeleteAEAssessmentRequest() {{
-                pathParams = new DeleteAEAssessmentPathParams() {{
-                    aeAssessmentId = "corrupti";
-                    employeeId = "provident";
-                    employerId = "distinctio";
-                }};
-                headers = new DeleteAEAssessmentHeaders() {{
-                    apiVersion = "quibusdam";
-                    authorization = "unde";
-                }};
-            }};            
+                aeAssessmentId = "corrupti";
+                apiVersion = "provident";
+                authorization = "distinctio";
+                employeeId = "quibusdam";
+                employerId = "unde";
+            }}            
 
             DeleteAEAssessmentResponse res = sdk.aeAssessment.deleteAEAssessment(req);
 

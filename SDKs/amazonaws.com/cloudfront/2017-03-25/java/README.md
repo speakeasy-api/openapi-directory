@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20170325Headers;
 import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20170325RequestBodyCloudFrontOriginAccessIdentityConfig;
 import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20170325RequestBody;
 import org.openapis.openapi.models.operations.CreateCloudFrontOriginAccessIdentity20170325Request;
@@ -28,24 +27,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateCloudFrontOriginAccessIdentity20170325Request req = new CreateCloudFrontOriginAccessIdentity20170325Request() {{
-                headers = new CreateCloudFrontOriginAccessIdentity20170325Headers() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = "illum".getBytes();
-            }};            
+                requestBody = "corrupti".getBytes();
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             CreateCloudFrontOriginAccessIdentity20170325Response res = sdk.createCloudFrontOriginAccessIdentity20170325(req);
 
@@ -59,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

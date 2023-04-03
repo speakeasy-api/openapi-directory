@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasRecentActivityReadRequest {
-    
-    public ExtrasRecentActivityReadPathParams pathParams;
-    public ExtrasRecentActivityReadRequest withPathParams(ExtrasRecentActivityReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this user action.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ExtrasRecentActivityReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

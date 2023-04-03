@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WardsInADistrictRequest {
+    /**
+     * Country name in lowercase eg( tanzania)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public WardsInADistrictRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public WardsInADistrictPathParams pathParams;
-    public WardsInADistrictRequest withPathParams(WardsInADistrictPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the District eg (Rungwe)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=district")
+    public String district;
+    public WardsInADistrictRequest withDistrict(String district) {
+        this.district = district;
+        return this;
+    }
+    
+    /**
+     * Name of the region eg (Mbeya)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
+    public String region;
+    public WardsInADistrictRequest withRegion(String region) {
+        this.region = region;
         return this;
     }
     

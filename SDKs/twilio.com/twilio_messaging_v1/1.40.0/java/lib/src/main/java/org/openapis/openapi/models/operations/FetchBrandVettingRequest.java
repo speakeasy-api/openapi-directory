@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchBrandVettingRequest {
-    
-    public FetchBrandVettingPathParams pathParams;
-    public FetchBrandVettingRequest withPathParams(FetchBrandVettingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Brand Registration resource of the vettings to read .
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BrandSid")
+    public String brandSid;
+    public FetchBrandVettingRequest withBrandSid(String brandSid) {
+        this.brandSid = brandSid;
         return this;
     }
     
-    
-    public FetchBrandVettingSecurity security;
-    public FetchBrandVettingRequest withSecurity(FetchBrandVettingSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchBrandVettingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio SID of the third-party vetting record.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BrandVettingSid")
+    public String brandVettingSid;
+    public FetchBrandVettingRequest withBrandVettingSid(String brandVettingSid) {
+        this.brandVettingSid = brandVettingSid;
         return this;
     }
     

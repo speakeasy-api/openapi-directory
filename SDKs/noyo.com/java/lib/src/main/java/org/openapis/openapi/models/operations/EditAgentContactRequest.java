@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditAgentContactRequest {
-    
-    public EditAgentContactPathParams pathParams;
-    public EditAgentContactRequest withPathParams(EditAgentContactPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AgentContactEditRequest agentContactEditRequest;
+    public EditAgentContactRequest withAgentContactEditRequest(org.openapis.openapi.models.shared.AgentContactEditRequest agentContactEditRequest) {
+        this.agentContactEditRequest = agentContactEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AgentContactEditRequest request;
-    public EditAgentContactRequest withRequest(org.openapis.openapi.models.shared.AgentContactEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the agent in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
+    public String agentId;
+    public EditAgentContactRequest withAgentId(String agentId) {
+        this.agentId = agentId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the agent contact in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contact_id")
+    public String contactId;
+    public EditAgentContactRequest withContactId(String contactId) {
+        this.contactId = contactId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the agent contact
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditAgentContactRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

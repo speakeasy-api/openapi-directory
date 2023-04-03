@@ -4,13 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DoSigmaRsvExchangeRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
+    public DoSigmaRsvExchangeRequest withAddress(String address) {
+        this.address = address;
+        return this;
+    }
     
-    public DoSigmaRsvExchangeQueryParams queryParams;
-    public DoSigmaRsvExchangeRequest withQueryParams(DoSigmaRsvExchangeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
+    public Long amount;
+    public DoSigmaRsvExchangeRequest withAmount(Long amount) {
+        this.amount = amount;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=checkRate")
+    public Long checkRate;
+    public DoSigmaRsvExchangeRequest withCheckRate(Long checkRate) {
+        this.checkRate = checkRate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=executionFee")
+    public Long executionFee;
+    public DoSigmaRsvExchangeRequest withExecutionFee(Long executionFee) {
+        this.executionFee = executionFee;
         return this;
     }
     

@@ -7,24 +7,44 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTCatalogRequest {
-    
-    public POSTCatalogPathParams pathParams;
-    public POSTCatalogRequest withPathParams(POSTCatalogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public POSTCatalogHeaders headers;
-    public POSTCatalogRequest withHeaders(POSTCatalogHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.POSTCatalogType request;
-    public POSTCatalogRequest withRequest(org.openapis.openapi.models.shared.POSTCatalogType request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.POSTCatalogType postCatalogType;
+    public POSTCatalogRequest withPOSTCatalogType(org.openapis.openapi.models.shared.POSTCatalogType postCatalogType) {
+        this.postCatalogType = postCatalogType;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public POSTCatalogRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public POSTCatalogRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * The unique ID of the product you want to share. For example, 8a808255575bdae4015774e9602e16fe.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=product-id")
+    public String productId;
+    public POSTCatalogRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

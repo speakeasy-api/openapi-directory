@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainsUpdatesAddedRequest {
+    /**
+     * API key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetDomainsUpdatesAddedRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetDomainsUpdatesAddedQueryParams queryParams;
-    public GetDomainsUpdatesAddedRequest withQueryParams(GetDomainsUpdatesAddedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Request date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetDomainsUpdatesAddedRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * Results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetDomainsUpdatesAddedRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Search page to request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetDomainsUpdatesAddedRequest withPage(String page) {
+        this.page = page;
         return this;
     }
     

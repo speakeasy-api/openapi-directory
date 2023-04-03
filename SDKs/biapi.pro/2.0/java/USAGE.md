@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.DeleteClientsIdClientPathParams;
-import org.openapis.openapi.models.operations.DeleteClientsIdClientQueryParams;
 import org.openapis.openapi.models.operations.DeleteClientsIdClientRequest;
 import org.openapis.openapi.models.operations.DeleteClientsIdClientResponse;
 
@@ -16,13 +14,9 @@ public class Application {
                 .build();
 
             DeleteClientsIdClientRequest req = new DeleteClientsIdClientRequest() {{
-                pathParams = new DeleteClientsIdClientPathParams() {{
-                    idClient = 548814;
-                }};
-                queryParams = new DeleteClientsIdClientQueryParams() {{
-                    expand = "provident";
-                }};
-            }};            
+                expand = "corrupti";
+                idClient = 592845;
+            }}            
 
             DeleteClientsIdClientResponse res = sdk.administration.deleteClientsIdClient(req);
 

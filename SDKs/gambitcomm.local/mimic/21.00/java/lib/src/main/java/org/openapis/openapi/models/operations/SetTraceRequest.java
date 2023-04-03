@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetTraceRequest {
+    /**
+     * Agent to set trace setting
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetTraceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetTracePathParams pathParams;
-    public SetTraceRequest withPathParams(SetTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Trace setting for the agent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trace")
+    public Integer trace;
+    public SetTraceRequest withTrace(Integer trace) {
+        this.trace = trace;
         return this;
     }
     

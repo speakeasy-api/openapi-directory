@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TwilioMessageGetTwilioGetRequest {
-    
-    public TwilioMessageGetTwilioGetQueryParams queryParams;
-    public TwilioMessageGetTwilioGetRequest withQueryParams(TwilioMessageGetTwilioGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
+    public String authorization;
+    public TwilioMessageGetTwilioGetRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base64_message")
+    public String base64Message;
+    public TwilioMessageGetTwilioGetRequest withBase64Message(String base64Message) {
+        this.base64Message = base64Message;
+        return this;
+    }
     
-    public TwilioMessageGetTwilioGetHeaders headers;
-    public TwilioMessageGetTwilioGetRequest withHeaders(TwilioMessageGetTwilioGetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
+    public String message;
+    public TwilioMessageGetTwilioGetRequest withMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public TwilioMessageGetTwilioGetRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

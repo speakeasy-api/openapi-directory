@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdStoresStoreIdRequest {
-    
-    public PatchMerchantsMerchantIdStoresStoreIdPathParams pathParams;
-    public PatchMerchantsMerchantIdStoresStoreIdRequest withPathParams(PatchMerchantsMerchantIdStoresStoreIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateStoreRequest request;
-    public PatchMerchantsMerchantIdStoresStoreIdRequest withRequest(org.openapis.openapi.models.shared.UpdateStoreRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateStoreRequest updateStoreRequest;
+    public PatchMerchantsMerchantIdStoresStoreIdRequest withUpdateStoreRequest(org.openapis.openapi.models.shared.UpdateStoreRequest updateStoreRequest) {
+        this.updateStoreRequest = updateStoreRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdStoresStoreIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PatchMerchantsMerchantIdStoresStoreIdSecurity security;
-    public PatchMerchantsMerchantIdStoresStoreIdRequest withSecurity(PatchMerchantsMerchantIdStoresStoreIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the store.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public PatchMerchantsMerchantIdStoresStoreIdRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

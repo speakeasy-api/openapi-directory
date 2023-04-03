@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWebinarParticipantsRequest {
-    
-    public ListWebinarParticipantsPathParams pathParams;
-    public ListWebinarParticipantsRequest withPathParams(ListWebinarParticipantsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ListWebinarParticipantsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListWebinarParticipantsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public ListWebinarParticipantsQueryParams queryParams;
-    public ListWebinarParticipantsRequest withQueryParams(ListWebinarParticipantsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier of the webinar. You can retrieve the value of this field by calling the [list webinars](https://marketplace.zoom.us/docs/api-reference/zoom-api/webinars/webinars) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public String webinarId;
+    public ListWebinarParticipantsRequest withWebinarId(String webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

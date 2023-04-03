@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateProjectPermissionsInOrgRequest {
-    
-    public TeamsAddOrUpdateProjectPermissionsInOrgPathParams pathParams;
-    public TeamsAddOrUpdateProjectPermissionsInOrgRequest withPathParams(TeamsAddOrUpdateProjectPermissionsInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsAddOrUpdateProjectPermissionsInOrgRequestBody requestBody;
+    public TeamsAddOrUpdateProjectPermissionsInOrgRequest withRequestBody(TeamsAddOrUpdateProjectPermissionsInOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddOrUpdateProjectPermissionsInOrgRequestBody request;
-    public TeamsAddOrUpdateProjectPermissionsInOrgRequest withRequest(TeamsAddOrUpdateProjectPermissionsInOrgRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsAddOrUpdateProjectPermissionsInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public TeamsAddOrUpdateProjectPermissionsInOrgRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsAddOrUpdateProjectPermissionsInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutTargetsTargetIdFindingsIdRequest {
-    
-    public PutTargetsTargetIdFindingsIdPathParams pathParams;
-    public PutTargetsTargetIdFindingsIdRequest withPathParams(PutTargetsTargetIdFindingsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.FindingUpdateInput findingUpdateInput;
+    public PutTargetsTargetIdFindingsIdRequest withFindingUpdateInput(org.openapis.openapi.models.shared.FindingUpdateInput findingUpdateInput) {
+        this.findingUpdateInput = findingUpdateInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FindingUpdateInput request;
-    public PutTargetsTargetIdFindingsIdRequest withRequest(org.openapis.openapi.models.shared.FindingUpdateInput request) {
-        this.request = request;
+    /**
+     * Object Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutTargetsTargetIdFindingsIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public PutTargetsTargetIdFindingsIdRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

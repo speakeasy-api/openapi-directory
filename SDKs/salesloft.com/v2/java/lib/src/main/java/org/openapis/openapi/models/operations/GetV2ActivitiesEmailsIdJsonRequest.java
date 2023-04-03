@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2ActivitiesEmailsIdJsonRequest {
-    
-    public GetV2ActivitiesEmailsIdJsonPathParams pathParams;
-    public GetV2ActivitiesEmailsIdJsonRequest withPathParams(GetV2ActivitiesEmailsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Email ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetV2ActivitiesEmailsIdJsonRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

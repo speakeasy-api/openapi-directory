@@ -30,6 +30,5 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/ConvertRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/ConvertRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ConvertResponse.java
 USAGE.md

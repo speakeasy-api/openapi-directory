@@ -35,19 +35,20 @@ public class Files {
     /**
      * Get the content of a File
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DownloadFileByIDResponse downloadFileByID(org.openapis.openapi.models.operations.DownloadFileByIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DownloadFileByIDResponse downloadFileByID(org.openapis.openapi.models.operations.DownloadFileByIDRequest request, org.openapis.openapi.models.operations.DownloadFileByIDSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileByIDPathParams.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadFileByIDRequest.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,25 +84,26 @@ public class Files {
     /**
      * Get the details of a File
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDetailsOfFileByIdResponse getDetailsOfFileById(org.openapis.openapi.models.operations.GetDetailsOfFileByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDetailsOfFileByIdResponse getDetailsOfFileById(org.openapis.openapi.models.operations.GetDetailsOfFileByIdRequest request, org.openapis.openapi.models.operations.GetDetailsOfFileByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDetailsOfFileByIdPathParams.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDetailsOfFileByIdRequest.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}/files/{fileUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDetailsOfFileByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDetailsOfFileByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -136,25 +138,26 @@ public class Files {
     /**
      * Get all the files inside an Item
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemFilesResponse getItemFiles(org.openapis.openapi.models.operations.GetItemFilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemFilesResponse getItemFiles(org.openapis.openapi.models.operations.GetItemFilesRequest request, org.openapis.openapi.models.operations.GetItemFilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemFilesPathParams.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemFilesRequest.class, baseUrl, "/vaults/{vaultUuid}/items/{itemUuid}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemFilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemFilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

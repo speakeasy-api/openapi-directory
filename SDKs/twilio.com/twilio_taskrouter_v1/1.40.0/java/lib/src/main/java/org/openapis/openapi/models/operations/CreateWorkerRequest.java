@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWorkerRequest {
-    
-    public CreateWorkerPathParams pathParams;
-    public CreateWorkerRequest withPathParams(CreateWorkerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateWorkerCreateWorkerRequest request;
-    public CreateWorkerRequest withRequest(CreateWorkerCreateWorkerRequest request) {
-        this.request = request;
+    public CreateWorkerCreateWorkerRequest requestBody;
+    public CreateWorkerRequest withRequestBody(CreateWorkerCreateWorkerRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateWorkerSecurity security;
-    public CreateWorkerRequest withSecurity(CreateWorkerSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateWorkerRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace that the new Worker belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public CreateWorkerRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

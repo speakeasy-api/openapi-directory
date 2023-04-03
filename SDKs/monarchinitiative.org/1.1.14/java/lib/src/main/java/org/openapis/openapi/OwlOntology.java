@@ -40,7 +40,7 @@ public class OwlOntology {
      */
     public org.openapis.openapi.models.operations.GetDlQueryResponse getDlQuery(org.openapis.openapi.models.operations.GetDlQueryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDlQueryPathParams.class, baseUrl, "/owl/ontology/dlquery/{query}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDlQueryRequest.class, baseUrl, "/owl/ontology/dlquery/{query}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,7 +78,7 @@ public class OwlOntology {
      */
     public org.openapis.openapi.models.operations.GetSparqlQueryResponse getSparqlQuery(org.openapis.openapi.models.operations.GetSparqlQueryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSparqlQueryPathParams.class, baseUrl, "/owl/ontology/sparql/{query}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSparqlQueryRequest.class, baseUrl, "/owl/ontology/sparql/{query}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

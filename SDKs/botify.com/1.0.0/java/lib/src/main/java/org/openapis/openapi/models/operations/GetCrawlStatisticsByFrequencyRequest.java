@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCrawlStatisticsByFrequencyRequest {
-    
-    public GetCrawlStatisticsByFrequencyPathParams pathParams;
-    public GetCrawlStatisticsByFrequencyRequest withPathParams(GetCrawlStatisticsByFrequencyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetCrawlStatisticsByFrequencyRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
         return this;
     }
     
+    /**
+     * Aggregation frequency
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=frequency")
+    public GetCrawlStatisticsByFrequencyFrequencyEnum frequency;
+    public GetCrawlStatisticsByFrequencyRequest withFrequency(GetCrawlStatisticsByFrequencyFrequencyEnum frequency) {
+        this.frequency = frequency;
+        return this;
+    }
     
-    public GetCrawlStatisticsByFrequencyQueryParams queryParams;
-    public GetCrawlStatisticsByFrequencyRequest withQueryParams(GetCrawlStatisticsByFrequencyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * max number of elements to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetCrawlStatisticsByFrequencyRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetCrawlStatisticsByFrequencyRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetCrawlStatisticsByFrequencyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

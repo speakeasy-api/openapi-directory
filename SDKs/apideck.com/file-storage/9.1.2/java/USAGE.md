@@ -5,12 +5,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DriveGroupsAddSecurity;
-import org.openapis.openapi.models.operations.DriveGroupsAddQueryParams;
-import org.openapis.openapi.models.operations.DriveGroupsAddHeaders;
 import org.openapis.openapi.models.operations.DriveGroupsAddRequest;
 import org.openapis.openapi.models.operations.DriveGroupsAddResponse;
 import org.openapis.openapi.models.shared.DriveGroupInput;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -19,27 +16,20 @@ public class Application {
                 .build();
 
             DriveGroupsAddRequest req = new DriveGroupsAddRequest() {{
-                security = new DriveGroupsAddSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new DriveGroupsAddQueryParams() {{
-                    raw = false;
-                }};
-                headers = new DriveGroupsAddHeaders() {{
-                    xApideckAppId = "corrupti";
-                    xApideckConsumerId = "provident";
-                    xApideckServiceId = "distinctio";
-                }};
-                request = new DriveGroupInput() {{
+                driveGroupInput = new DriveGroupInput() {{
                     description = "A description";
                     displayName = "accounting";
                     name = "accounting";
                 }};
-            }};            
+                raw = false;
+                xApideckAppId = "corrupti";
+                xApideckConsumerId = "provident";
+                xApideckServiceId = "distinctio";
+            }}            
 
-            DriveGroupsAddResponse res = sdk.driveGroups.driveGroupsAdd(req);
+            DriveGroupsAddResponse res = sdk.driveGroups.driveGroupsAdd(req, new DriveGroupsAddSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.createDriveGroupResponse.isPresent()) {
                 // handle response

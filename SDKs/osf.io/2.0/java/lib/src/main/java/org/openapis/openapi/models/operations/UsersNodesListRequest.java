@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersNodesListRequest {
-    
-    public UsersNodesListPathParams pathParams;
-    public UsersNodesListRequest withPathParams(UsersNodesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public UsersNodesListRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

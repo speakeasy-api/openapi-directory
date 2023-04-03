@@ -4,27 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest {
-    
-    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesPathParams pathParams;
-    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withPathParams(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activity_type")
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesActivityTypeEnum activityType;
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withActivityType(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesActivityTypeEnum activityType) {
+        this.activityType = activityType;
         return this;
     }
     
-    
-    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesQueryParams queryParams;
-    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withQueryParams(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesDirectionEnum direction;
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withDirection(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesItemsEnum items;
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withItems(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesItemsEnum items) {
+        this.items = items;
+        return this;
+    }
     
-    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesSecurity security;
-    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withSecurity(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organization_id")
+    public String organizationId;
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesSortEnum sort;
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withSort(GetWorkspaceSlugOrganizationsOrganizationIdActivitiesSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspaceSlugOrganizationsOrganizationIdActivitiesRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

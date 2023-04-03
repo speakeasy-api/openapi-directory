@@ -7,24 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWorkspacesWorkspaceProjectsProjectKeyRequest {
-    
-    public PutWorkspacesWorkspaceProjectsProjectKeyPathParams pathParams;
-    public PutWorkspacesWorkspaceProjectsProjectKeyRequest withPathParams(PutWorkspacesWorkspaceProjectsProjectKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PutWorkspacesWorkspaceProjectsProjectKeyRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PutWorkspacesWorkspaceProjectsProjectKeyRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The project in question. This is the actual `key` assigned
+     * to the project.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_key")
+    public String projectKey;
+    public PutWorkspacesWorkspaceProjectsProjectKeyRequest withProjectKey(String projectKey) {
+        this.projectKey = projectKey;
+        return this;
+    }
     
-    public PutWorkspacesWorkspaceProjectsProjectKeySecurity security;
-    public PutWorkspacesWorkspaceProjectsProjectKeyRequest withSecurity(PutWorkspacesWorkspaceProjectsProjectKeySecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PutWorkspacesWorkspaceProjectsProjectKeyRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

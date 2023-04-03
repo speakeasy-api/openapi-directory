@@ -7,31 +7,52 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ItemsUpdateRequest {
-    
-    public ItemsUpdatePathParams pathParams;
-    public ItemsUpdateRequest withPathParams(ItemsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ItemsUpdateRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ItemsUpdateQueryParams queryParams;
-    public ItemsUpdateRequest withQueryParams(ItemsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ItemsUpdateHeaders headers;
-    public ItemsUpdateRequest withHeaders(ItemsUpdateHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ItemsUpdateRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ItemsUpdateRequestBody request;
-    public ItemsUpdateRequest withRequest(ItemsUpdateRequestBody request) {
-        this.request = request;
+    public ItemsUpdateRequestBody requestBody;
+    public ItemsUpdateRequest withRequestBody(ItemsUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * In order to optimize performance, this parameter allows some information to not be updated when there are changes in the minicart. For instance, if a shopper adds another unit of a given SKU to the cart, it may not be necessary to recalculate payment information, which could impact performance.
+     * 
+     * This array accepts strings and currently the only possible value is `\u201dpaymentData\u201d`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowedOutdatedData")
+    public Object[] allowedOutdatedData;
+    public ItemsUpdateRequest withAllowedOutdatedData(Object[] allowedOutdatedData) {
+        this.allowedOutdatedData = allowedOutdatedData;
+        return this;
+    }
+    
+    /**
+     * ID of the `orderForm` corresponding to the cart whose items you want to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
+    public String orderFormId;
+    public ItemsUpdateRequest withOrderFormId(String orderFormId) {
+        this.orderFormId = orderFormId;
         return this;
     }
     

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaHeaders;
 import org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaRequest;
 import org.openapis.openapi.models.operations.GetVCustomPricesSessionSchemaResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetVCustomPricesSessionSchemaRequest req = new GetVCustomPricesSessionSchemaRequest() {{
-                headers = new GetVCustomPricesSessionSchemaHeaders() {{
-                    accept = "corrupti";
-                    contentType = "provident";
-                }};
-            }};            
+                accept = "corrupti";
+                contentType = "provident";
+            }}            
 
             GetVCustomPricesSessionSchemaResponse res = sdk.customPrices.getVCustomPricesSessionSchema(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### customPrices

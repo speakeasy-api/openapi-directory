@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JoinGroupRequest {
-    
-    public JoinGroupPathParams pathParams;
-    public JoinGroupRequest withPathParams(JoinGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Double groupId;
+    public JoinGroupRequest withGroupId(Double groupId) {
+        this.groupId = groupId;
         return this;
     }
     
-    
-    public JoinGroupSecurity security;
-    public JoinGroupRequest withSecurity(JoinGroupSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public JoinGroupRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

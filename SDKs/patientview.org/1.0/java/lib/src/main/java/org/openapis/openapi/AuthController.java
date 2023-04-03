@@ -39,7 +39,7 @@ public class AuthController {
      */
     public org.openapis.openapi.models.operations.GetBasicUserInformationResponse getBasicUserInformation(org.openapis.openapi.models.operations.GetBasicUserInformationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBasicUserInformationPathParams.class, baseUrl, "/auth/{token}/basicuserinformation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBasicUserInformationRequest.class, baseUrl, "/auth/{token}/basicuserinformation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,7 +77,7 @@ public class AuthController {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LogInResponse logIn(org.openapis.openapi.models.operations.LogInRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LogInResponse logIn(org.openapis.openapi.models.shared.Credentials request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/login");
         
@@ -121,7 +121,7 @@ public class AuthController {
      */
     public org.openapis.openapi.models.operations.LogOutResponse logOut(org.openapis.openapi.models.operations.LogOutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LogOutPathParams.class, baseUrl, "/auth/logout/{token}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LogOutRequest.class, baseUrl, "/auth/logout/{token}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

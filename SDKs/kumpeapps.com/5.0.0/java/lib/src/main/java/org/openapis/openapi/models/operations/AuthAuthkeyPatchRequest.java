@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthAuthkeyPatchRequest {
+    /**
+     * auth key to mark as compromised
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth_key")
+    public String authKey;
+    public AuthAuthkeyPatchRequest withAuthKey(String authKey) {
+        this.authKey = authKey;
+        return this;
+    }
     
-    public AuthAuthkeyPatchQueryParams queryParams;
-    public AuthAuthkeyPatchRequest withQueryParams(AuthAuthkeyPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comments (like how was this compromised)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=comments")
+    public String comments;
+    public AuthAuthkeyPatchRequest withComments(String comments) {
+        this.comments = comments;
         return this;
     }
     

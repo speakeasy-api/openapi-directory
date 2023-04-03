@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAnApiRequest {
-    
-    public UpdateAnApiPathParams pathParams;
-    public UpdateAnApiRequest withPathParams(UpdateAnApiPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateAnApiRequestBody requestBody;
+    public UpdateAnApiRequest withRequestBody(UpdateAnApiRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateAnApiRequestBody request;
-    public UpdateAnApiRequest withRequest(UpdateAnApiRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public UpdateAnApiRequest withApiId(String apiId) {
+        this.apiId = apiId;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ControlChargerChargingRequest {
-    
-    public ControlChargerChargingPathParams pathParams;
-    public ControlChargerChargingRequest withPathParams(ControlChargerChargingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ControlChargerChargingRequestBody request;
-    public ControlChargerChargingRequest withRequest(ControlChargerChargingRequestBody request) {
-        this.request = request;
+    public ControlChargerChargingRequestBody requestBody;
+    public ControlChargerChargingRequest withRequestBody(ControlChargerChargingRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public ControlChargerChargingSecurity security;
-    public ControlChargerChargingRequest withSecurity(ControlChargerChargingSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Charger
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chargerId")
+    public String chargerId;
+    public ControlChargerChargingRequest withChargerId(String chargerId) {
+        this.chargerId = chargerId;
         return this;
     }
     

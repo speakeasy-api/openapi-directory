@@ -47,19 +47,20 @@ public class BranchRestrictions {
      * Delete a branch restriction rule
      * Deletes an existing branch restriction rule.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse deleteRepositoriesWorkspaceRepoSlugBranchRestrictionsId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse deleteRepositoriesWorkspaceRepoSlugBranchRestrictionsId(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest request, org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -90,25 +91,26 @@ public class BranchRestrictions {
      * Returns a paginated list of all branch restrictions on the
      * repository.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse getRepositoriesWorkspaceRepoSlugBranchRestrictions(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse getRepositoriesWorkspaceRepoSlugBranchRestrictions(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -144,19 +146,20 @@ public class BranchRestrictions {
      * Get a branch restriction rule
      * Returns a specific branch restriction rule.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse getRepositoriesWorkspaceRepoSlugBranchRestrictionsId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse getRepositoriesWorkspaceRepoSlugBranchRestrictionsId(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -231,24 +234,25 @@ public class BranchRestrictions {
      * Note that branch restrictions with overlapping matchers is allowed,
      * but the resulting behavior may be surprising.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse postRepositoriesWorkspaceRepoSlugBranchRestrictions(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse postRepositoriesWorkspaceRepoSlugBranchRestrictions(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugBranchRestrictionsRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -288,24 +292,25 @@ public class BranchRestrictions {
      * 
      * See [`POST`](/cloud/bitbucket/rest/api-group-branch-restrictions/#api-repositories-workspace-repo-slug-branch-restrictions-post) for details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse putRepositoriesWorkspaceRepoSlugBranchRestrictionsId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdResponse putRepositoriesWorkspaceRepoSlugBranchRestrictionsId(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest request, org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/branch-restrictions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

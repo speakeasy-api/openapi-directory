@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceSwitchRoutingInterfaceDhcpRequest {
-    
-    public UpdateDeviceSwitchRoutingInterfaceDhcpPathParams pathParams;
-    public UpdateDeviceSwitchRoutingInterfaceDhcpRequest withPathParams(UpdateDeviceSwitchRoutingInterfaceDhcpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceSwitchRoutingInterfaceDhcpRequestBody requestBody;
+    public UpdateDeviceSwitchRoutingInterfaceDhcpRequest withRequestBody(UpdateDeviceSwitchRoutingInterfaceDhcpRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceSwitchRoutingInterfaceDhcpRequestBody request;
-    public UpdateDeviceSwitchRoutingInterfaceDhcpRequest withRequest(UpdateDeviceSwitchRoutingInterfaceDhcpRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interfaceId")
+    public String interfaceId;
+    public UpdateDeviceSwitchRoutingInterfaceDhcpRequest withInterfaceId(String interfaceId) {
+        this.interfaceId = interfaceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceSwitchRoutingInterfaceDhcpRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

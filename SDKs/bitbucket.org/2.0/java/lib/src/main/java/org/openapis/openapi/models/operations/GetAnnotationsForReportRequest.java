@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAnnotationsForReportRequest {
+    /**
+     * The commit for which to retrieve reports.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
+    public String commit;
+    public GetAnnotationsForReportRequest withCommit(String commit) {
+        this.commit = commit;
+        return this;
+    }
     
-    public GetAnnotationsForReportPathParams pathParams;
-    public GetAnnotationsForReportRequest withPathParams(GetAnnotationsForReportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetAnnotationsForReportRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * Uuid or external-if of the report for which to get annotations for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
+    public String reportId;
+    public GetAnnotationsForReportRequest withReportId(String reportId) {
+        this.reportId = reportId;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetAnnotationsForReportRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

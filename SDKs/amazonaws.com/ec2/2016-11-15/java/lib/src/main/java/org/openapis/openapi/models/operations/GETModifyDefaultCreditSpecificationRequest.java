@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyDefaultCreditSpecificationRequest {
-    
-    public GETModifyDefaultCreditSpecificationQueryParams queryParams;
-    public GETModifyDefaultCreditSpecificationRequest withQueryParams(GETModifyDefaultCreditSpecificationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyDefaultCreditSpecificationActionEnum action;
+    public GETModifyDefaultCreditSpecificationRequest withAction(GETModifyDefaultCreditSpecificationActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The credit option for CPU usage of the instance family.&lt;/p&gt; &lt;p&gt;Valid Values: &lt;code&gt;standard&lt;/code&gt; | &lt;code&gt;unlimited&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CpuCredits")
+    public String cpuCredits;
+    public GETModifyDefaultCreditSpecificationRequest withCpuCredits(String cpuCredits) {
+        this.cpuCredits = cpuCredits;
+        return this;
+    }
     
-    public GETModifyDefaultCreditSpecificationHeaders headers;
-    public GETModifyDefaultCreditSpecificationRequest withHeaders(GETModifyDefaultCreditSpecificationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyDefaultCreditSpecificationRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The instance family.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceFamily")
+    public GETModifyDefaultCreditSpecificationInstanceFamilyEnum instanceFamily;
+    public GETModifyDefaultCreditSpecificationRequest withInstanceFamily(GETModifyDefaultCreditSpecificationInstanceFamilyEnum instanceFamily) {
+        this.instanceFamily = instanceFamily;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyDefaultCreditSpecificationVersionEnum version;
+    public GETModifyDefaultCreditSpecificationRequest withVersion(GETModifyDefaultCreditSpecificationVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyDefaultCreditSpecificationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyDefaultCreditSpecificationRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyDefaultCreditSpecificationRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyDefaultCreditSpecificationRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyDefaultCreditSpecificationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyDefaultCreditSpecificationRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyDefaultCreditSpecificationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

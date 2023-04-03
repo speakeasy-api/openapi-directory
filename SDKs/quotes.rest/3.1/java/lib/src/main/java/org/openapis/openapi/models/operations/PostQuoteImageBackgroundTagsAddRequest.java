@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostQuoteImageBackgroundTagsAddRequest {
-    
-    public PostQuoteImageBackgroundTagsAddQueryParams queryParams;
-    public PostQuoteImageBackgroundTagsAddRequest withQueryParams(PostQuoteImageBackgroundTagsAddQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Image ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public PostQuoteImageBackgroundTagsAddRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PostQuoteImageBackgroundTagsAddSecurity security;
-    public PostQuoteImageBackgroundTagsAddRequest withSecurity(PostQuoteImageBackgroundTagsAddSecurity security) {
-        this.security = security;
+    /**
+     * Comma Separated tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public PostQuoteImageBackgroundTagsAddRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

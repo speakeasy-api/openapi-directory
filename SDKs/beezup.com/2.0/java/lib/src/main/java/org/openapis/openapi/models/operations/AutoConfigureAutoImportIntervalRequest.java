@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoConfigureAutoImportIntervalRequest {
-    
-    public AutoConfigureAutoImportIntervalPathParams pathParams;
-    public AutoConfigureAutoImportIntervalRequest withPathParams(AutoConfigureAutoImportIntervalPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ConfigureAutoImportIntervalRequest configureAutoImportIntervalRequest;
+    public AutoConfigureAutoImportIntervalRequest withConfigureAutoImportIntervalRequest(org.openapis.openapi.models.shared.ConfigureAutoImportIntervalRequest configureAutoImportIntervalRequest) {
+        this.configureAutoImportIntervalRequest = configureAutoImportIntervalRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConfigureAutoImportIntervalRequest request;
-    public AutoConfigureAutoImportIntervalRequest withRequest(org.openapis.openapi.models.shared.ConfigureAutoImportIntervalRequest request) {
-        this.request = request;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public AutoConfigureAutoImportIntervalRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

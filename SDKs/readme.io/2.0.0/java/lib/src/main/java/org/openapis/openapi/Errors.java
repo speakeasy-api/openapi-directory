@@ -29,11 +29,10 @@ public class Errors {
     /**
      * Get errors
      * Returns with all of the error page types for this project
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetErrorsResponse getErrors(org.openapis.openapi.models.operations.GetErrorsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetErrorsResponse getErrors() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/errors");
         
@@ -42,8 +41,7 @@ public class Errors {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

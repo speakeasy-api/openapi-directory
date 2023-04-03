@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2CddriveFoldersFolderIdItemsRequest {
-    
-    public GetApiV2CddriveFoldersFolderIdItemsPathParams pathParams;
-    public GetApiV2CddriveFoldersFolderIdItemsRequest withPathParams(GetApiV2CddriveFoldersFolderIdItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the folder to get. Folder ID 0 represents the uppermost CD drive folder.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folder-id")
+    public Long folderId;
+    public GetApiV2CddriveFoldersFolderIdItemsRequest withFolderId(Long folderId) {
+        this.folderId = folderId;
         return this;
     }
     
-    
-    public GetApiV2CddriveFoldersFolderIdItemsQueryParams queryParams;
-    public GetApiV2CddriveFoldersFolderIdItemsRequest withQueryParams(GetApiV2CddriveFoldersFolderIdItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of items to return in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetApiV2CddriveFoldersFolderIdItemsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetApiV2CddriveFoldersFolderIdItemsSecurity security;
-    public GetApiV2CddriveFoldersFolderIdItemsRequest withSecurity(GetApiV2CddriveFoldersFolderIdItemsSecurity security) {
-        this.security = security;
+    /**
+     * The offset into the items to begin the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetApiV2CddriveFoldersFolderIdItemsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

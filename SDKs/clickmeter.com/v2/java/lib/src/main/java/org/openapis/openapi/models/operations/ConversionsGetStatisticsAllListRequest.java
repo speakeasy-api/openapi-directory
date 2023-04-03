@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsGetStatisticsAllListRequest {
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public ConversionsGetStatisticsAllListRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
     
-    public ConversionsGetStatisticsAllListQueryParams queryParams;
-    public ConversionsGetStatisticsAllListRequest withQueryParams(ConversionsGetStatisticsAllListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
+    public ConversionsGetStatisticsAllListGroupByEnum groupBy;
+    public ConversionsGetStatisticsAllListRequest withGroupBy(ConversionsGetStatisticsAllListGroupByEnum groupBy) {
+        this.groupBy = groupBy;
+        return this;
+    }
+    
+    /**
+     * Status of conversion ("deleted"/"active")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ConversionsGetStatisticsAllListStatusEnum status;
+    public ConversionsGetStatisticsAllListRequest withStatus(ConversionsGetStatisticsAllListStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public ConversionsGetStatisticsAllListTimeFrameEnum timeFrame;
+    public ConversionsGetStatisticsAllListRequest withTimeFrame(ConversionsGetStatisticsAllListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public ConversionsGetStatisticsAllListRequest withToDay(String toDay) {
+        this.toDay = toDay;
         return this;
     }
     

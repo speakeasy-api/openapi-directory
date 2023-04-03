@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemovesinglecustomfieldvalueRequest {
-    
-    public RemovesinglecustomfieldvaluePathParams pathParams;
-    public RemovesinglecustomfieldvalueRequest withPathParams(RemovesinglecustomfieldvaluePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public RemovesinglecustomfieldvalueRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RemovesinglecustomfieldvalueRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public RemovesinglecustomfieldvalueHeaders headers;
-    public RemovesinglecustomfieldvalueRequest withHeaders(RemovesinglecustomfieldvalueHeaders headers) {
-        this.headers = headers;
+    /**
+     * Name of the app's field created through the Update orderForm Configuration endpoint and which will be deleted.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appFieldName")
+    public String appFieldName;
+    public RemovesinglecustomfieldvalueRequest withAppFieldName(String appFieldName) {
+        this.appFieldName = appFieldName;
+        return this;
+    }
+    
+    /**
+     * ID of the app created through the Update orderForm Configuration endpoint.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public String appId;
+    public RemovesinglecustomfieldvalueRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    
+    /**
+     * The ID of the orderForm from which you want to remove the custom field value.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
+    public String orderFormId;
+    public RemovesinglecustomfieldvalueRequest withOrderFormId(String orderFormId) {
+        this.orderFormId = orderFormId;
         return this;
     }
     

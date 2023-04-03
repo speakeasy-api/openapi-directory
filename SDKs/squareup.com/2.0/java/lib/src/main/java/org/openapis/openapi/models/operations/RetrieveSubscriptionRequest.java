@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSubscriptionRequest {
-    
-    public RetrieveSubscriptionPathParams pathParams;
-    public RetrieveSubscriptionRequest withPathParams(RetrieveSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveSubscriptionSecurity security;
-    public RetrieveSubscriptionRequest withSecurity(RetrieveSubscriptionSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the subscription to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscription_id")
+    public String subscriptionId;
+    public RetrieveSubscriptionRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

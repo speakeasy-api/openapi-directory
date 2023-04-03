@@ -7,31 +7,65 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ObjectPUTFeatureRequest {
-    
-    public ObjectPUTFeaturePathParams pathParams;
-    public ObjectPUTFeatureRequest withPathParams(ObjectPUTFeaturePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ObjectPUTFeatureQueryParams queryParams;
-    public ObjectPUTFeatureRequest withQueryParams(ObjectPUTFeatureQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ObjectPUTFeatureHeaders headers;
-    public ObjectPUTFeatureRequest withHeaders(ObjectPUTFeatureHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProxyModifyFeature request;
-    public ObjectPUTFeatureRequest withRequest(org.openapis.openapi.models.shared.ProxyModifyFeature request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProxyModifyFeature proxyModifyFeature;
+    public ObjectPUTFeatureRequest withProxyModifyFeature(org.openapis.openapi.models.shared.ProxyModifyFeature proxyModifyFeature) {
+        this.proxyModifyFeature = proxyModifyFeature;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public ObjectPUTFeatureRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public ObjectPUTFeatureRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * Object id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ObjectPUTFeatureRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Specifies whether the call fails if the request body contains unknown fields.
+     * With `rejectUnknownFields` set to `true`, Zuora returns a 400 response if
+     * the request body contains unknown fields. The body of the 400 response is:
+     * 
+     * ```json
+     * {
+     *     "message": "Error - unrecognised fields"
+     * }
+     * ```
+     * 
+     * By default, Zuora ignores unknown fields in the request body.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rejectUnknownFields")
+    public Boolean rejectUnknownFields;
+    public ObjectPUTFeatureRequest withRejectUnknownFields(Boolean rejectUnknownFields) {
+        this.rejectUnknownFields = rejectUnknownFields;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WithdrawPayoutV3Request {
-    
-    public WithdrawPayoutV3PathParams pathParams;
-    public WithdrawPayoutV3Request withPathParams(WithdrawPayoutV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the payout
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutId")
+    public String payoutId;
+    public WithdrawPayoutV3Request withPayoutId(String payoutId) {
+        this.payoutId = payoutId;
         return this;
     }
     

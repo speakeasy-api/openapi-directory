@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2ApprovePendingRequest {
-    
-    public GroupV2ApprovePendingPathParams pathParams;
-    public GroupV2ApprovePendingRequest withPathParams(GroupV2ApprovePendingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2ApprovePendingRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * The membership id being approved.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2ApprovePendingRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
     
-    public GroupV2ApprovePendingSecurity security;
-    public GroupV2ApprovePendingRequest withSecurity(GroupV2ApprovePendingSecurity security) {
-        this.security = security;
+    /**
+     * Membership type of the supplied membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2ApprovePendingRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

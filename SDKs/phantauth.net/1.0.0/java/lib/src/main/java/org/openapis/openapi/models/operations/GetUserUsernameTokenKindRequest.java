@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserUsernameTokenKindRequest {
-    
-    public GetUserUsernameTokenKindPathParams pathParams;
-    public GetUserUsernameTokenKindRequest withPathParams(GetUserUsernameTokenKindPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Token type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=kind")
+    public GetUserUsernameTokenKindKindEnum kind;
+    public GetUserUsernameTokenKindRequest withKind(GetUserUsernameTokenKindKindEnum kind) {
+        this.kind = kind;
         return this;
     }
     
+    /**
+     * OpenID Connect scope
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public GetUserUsernameTokenKindRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
     
-    public GetUserUsernameTokenKindQueryParams queryParams;
-    public GetUserUsernameTokenKindRequest withQueryParams(GetUserUsernameTokenKindQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A username or email.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUserUsernameTokenKindRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

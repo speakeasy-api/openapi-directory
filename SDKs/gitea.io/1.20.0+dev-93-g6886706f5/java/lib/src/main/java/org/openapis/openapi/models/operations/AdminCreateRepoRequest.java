@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminCreateRepoRequest {
-    
-    public AdminCreateRepoPathParams pathParams;
-    public AdminCreateRepoRequest withPathParams(AdminCreateRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateRepoOption createRepoOption;
+    public AdminCreateRepoRequest withCreateRepoOption(org.openapis.openapi.models.shared.CreateRepoOption createRepoOption) {
+        this.createRepoOption = createRepoOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateRepoOption request;
-    public AdminCreateRepoRequest withRequest(org.openapis.openapi.models.shared.CreateRepoOption request) {
-        this.request = request;
+    /**
+     * username of the user. This user will own the created repository
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public AdminCreateRepoRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

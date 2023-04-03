@@ -31,24 +31,24 @@ public class Discovery {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusResponse trafficdirectorDiscoveryClientStatus(org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusResponse trafficdirectorDiscoveryClientStatus(org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusRequest request, org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/discovery:client_status");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "clientStatusRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TrafficdirectorDiscoveryClientStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

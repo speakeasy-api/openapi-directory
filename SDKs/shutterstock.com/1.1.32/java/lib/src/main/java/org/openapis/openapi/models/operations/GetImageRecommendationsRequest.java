@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageRecommendationsRequest {
-    
-    public GetImageRecommendationsQueryParams queryParams;
-    public GetImageRecommendationsRequest withQueryParams(GetImageRecommendationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Image IDs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String[] id;
+    public GetImageRecommendationsRequest withId(String[] id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Maximum number of results returned in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_items")
+    public Long maxItems;
+    public GetImageRecommendationsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
     
-    public GetImageRecommendationsSecurity security;
-    public GetImageRecommendationsRequest withSecurity(GetImageRecommendationsSecurity security) {
-        this.security = security;
+    /**
+     * Restrict results to safe images
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
+    public Boolean safe;
+    public GetImageRecommendationsRequest withSafe(Boolean safe) {
+        this.safe = safe;
         return this;
     }
     

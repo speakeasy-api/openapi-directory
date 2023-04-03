@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitCreateTreeRequest {
-    
-    public GitCreateTreePathParams pathParams;
-    public GitCreateTreeRequest withPathParams(GitCreateTreePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GitCreateTreeRequestBody requestBody;
+    public GitCreateTreeRequest withRequestBody(GitCreateTreeRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public GitCreateTreeRequestBody request;
-    public GitCreateTreeRequest withRequest(GitCreateTreeRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitCreateTreeRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitCreateTreeRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

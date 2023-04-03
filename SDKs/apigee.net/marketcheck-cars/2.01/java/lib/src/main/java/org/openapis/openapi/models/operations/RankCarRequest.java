@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RankCarRequest {
-    
-    public RankCarQueryParams queryParams;
-    public RankCarRequest withQueryParams(RankCarQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Inputs needed for ranking a group of car listings
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CarRankRequest request;
-    public RankCarRequest withRequest(org.openapis.openapi.models.shared.CarRankRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CarRankRequest carRankRequest;
+    public RankCarRequest withCarRankRequest(org.openapis.openapi.models.shared.CarRankRequest carRankRequest) {
+        this.carRankRequest = carRankRequest;
+        return this;
+    }
+    
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public RankCarRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * Flag on whether to include api_key in response API urls (if any)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=append_api_key")
+    public Boolean appendApiKey;
+    public RankCarRequest withAppendApiKey(Boolean appendApiKey) {
+        this.appendApiKey = appendApiKey;
         return this;
     }
     

@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutContainersQuotaRequest {
-    
-    public PutContainersQuotaHeaders headers;
-    public PutContainersQuotaRequest withHeaders(PutContainersQuotaHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * The space quota details that you want to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContainersQuotaList request;
-    public PutContainersQuotaRequest withRequest(org.openapis.openapi.models.shared.ContainersQuotaList request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ContainersQuotaList containersQuotaList;
+    public PutContainersQuotaRequest withContainersQuotaList(org.openapis.openapi.models.shared.ContainersQuotaList containersQuotaList) {
+        this.containersQuotaList = containersQuotaList;
+        return this;
+    }
+    
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PutContainersQuotaRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
+        return this;
+    }
+    
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PutContainersQuotaRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
         return this;
     }
     

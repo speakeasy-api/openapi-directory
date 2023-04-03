@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HooksPOSTRequest {
+    /**
+     * Determines the action to execute.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public HooksPOSTActionEnum action;
+    public HooksPOSTRequest withAction(HooksPOSTActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public HooksPOSTQueryParams queryParams;
-    public HooksPOSTRequest withQueryParams(HooksPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of event for which you would like to receive a webhook.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_type")
+    public HooksPOSTEventTypeEnum eventType;
+    public HooksPOSTRequest withEventType(HooksPOSTEventTypeEnum eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    
+    /**
+     * The Webhook ID you wish to unsubscribe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Long id;
+    public HooksPOSTRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Request method in which you want to receive the webhook.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request_method")
+    public HooksPOSTRequestMethodEnum requestMethod;
+    public HooksPOSTRequest withRequestMethod(HooksPOSTRequestMethodEnum requestMethod) {
+        this.requestMethod = requestMethod;
+        return this;
+    }
+    
+    /**
+     * Target URL of your Webhook.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target_url")
+    public String targetUrl;
+    public HooksPOSTRequest withTargetUrl(String targetUrl) {
+        this.targetUrl = targetUrl;
         return this;
     }
     

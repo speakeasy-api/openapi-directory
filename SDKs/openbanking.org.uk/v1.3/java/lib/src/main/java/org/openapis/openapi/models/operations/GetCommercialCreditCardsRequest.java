@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommercialCreditCardsRequest {
+    /**
+     * Used for conditional request, to retrieve data only if modified since a given date
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public GetCommercialCreditCardsRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
+        return this;
+    }
     
-    public GetCommercialCreditCardsHeaders headers;
-    public GetCommercialCreditCardsRequest withHeaders(GetCommercialCreditCardsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Used for conditional request, to retrieve data only if the given Etag value does not match
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetCommercialCreditCardsRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     

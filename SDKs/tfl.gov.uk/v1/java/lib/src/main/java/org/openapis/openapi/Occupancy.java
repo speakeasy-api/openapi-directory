@@ -37,7 +37,7 @@ public class Occupancy {
      */
     public org.openapis.openapi.models.operations.OccupancyGetResponse occupancyGet(org.openapis.openapi.models.operations.OccupancyGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OccupancyGetPathParams.class, baseUrl, "/Occupancy/CarPark/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OccupancyGetRequest.class, baseUrl, "/Occupancy/CarPark/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -144,7 +144,7 @@ public class Occupancy {
      */
     public org.openapis.openapi.models.operations.OccupancyGetBikePointsOccupanciesResponse occupancyGetBikePointsOccupancies(org.openapis.openapi.models.operations.OccupancyGetBikePointsOccupanciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OccupancyGetBikePointsOccupanciesPathParams.class, baseUrl, "/Occupancy/BikePoints/{ids}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OccupancyGetBikePointsOccupanciesRequest.class, baseUrl, "/Occupancy/BikePoints/{ids}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -198,7 +198,7 @@ public class Occupancy {
      */
     public org.openapis.openapi.models.operations.OccupancyGetChargeConnectorStatusResponse occupancyGetChargeConnectorStatus(org.openapis.openapi.models.operations.OccupancyGetChargeConnectorStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OccupancyGetChargeConnectorStatusPathParams.class, baseUrl, "/Occupancy/ChargeConnector/{ids}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OccupancyGetChargeConnectorStatusRequest.class, baseUrl, "/Occupancy/ChargeConnector/{ids}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

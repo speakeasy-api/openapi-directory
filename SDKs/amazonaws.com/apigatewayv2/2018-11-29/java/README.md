@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateApiHeaders;
 import org.openapis.openapi.models.operations.CreateApiRequestBodyCorsConfiguration;
 import org.openapis.openapi.models.operations.CreateApiRequestBodyProtocolTypeEnum;
 import org.openapis.openapi.models.operations.CreateApiRequestBody;
@@ -29,62 +28,64 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateApiRequest req = new CreateApiRequest() {{
-                headers = new CreateApiHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateApiRequestBody() {{
-                    apiKeySelectionExpression = "illum";
+                requestBody = new CreateApiRequestBody() {{
+                    apiKeySelectionExpression = "corrupti";
                     corsConfiguration = new CreateApiRequestBodyCorsConfiguration() {{
                         allowCredentials = false;
                         allowHeaders = new String[]{{
-                            add("error"),
-                            add("deserunt"),
+                            add("distinctio"),
+                            add("quibusdam"),
+                            add("unde"),
                         }};
                         allowMethods = new String[]{{
+                            add("corrupti"),
+                            add("illum"),
+                            add("vel"),
+                            add("error"),
+                        }};
+                        allowOrigins = new String[]{{
+                            add("suscipit"),
                             add("iure"),
                             add("magnam"),
                         }};
-                        allowOrigins = new String[]{{
+                        exposeHeaders = new String[]{{
                             add("ipsa"),
                             add("delectus"),
                             add("tempora"),
                             add("suscipit"),
                         }};
-                        exposeHeaders = new String[]{{
-                            add("minus"),
-                            add("placeat"),
-                        }};
-                        maxAge = 528895;
+                        maxAge = 477665;
                     }};
-                    credentialsArn = "iusto";
-                    description = "excepturi";
+                    credentialsArn = "minus";
+                    description = "placeat";
                     disableExecuteApiEndpoint = false;
                     disableSchemaValidation = false;
-                    name = "nisi";
-                    protocolType = "HTTP";
-                    routeKey = "temporibus";
-                    routeSelectionExpression = "ab";
+                    name = "voluptatum";
+                    protocolType = "WEBSOCKET";
+                    routeKey = "excepturi";
+                    routeSelectionExpression = "nisi";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("veritatis", "deserunt");
-                        put("perferendis", "ipsam");
+                        put("temporibus", "ab");
+                        put("quis", "veritatis");
+                        put("deserunt", "perferendis");
+                        put("ipsam", "repellendus");
                     }};
-                    target = "repellendus";
-                    version = "sapiente";
+                    target = "sapiente";
+                    version = "quo";
                 }};
-            }};            
+                xAmzAlgorithm = "odit";
+                xAmzContentSha256 = "at";
+                xAmzCredential = "at";
+                xAmzDate = "maiores";
+                xAmzSecurityToken = "molestiae";
+                xAmzSignature = "quod";
+                xAmzSignedHeaders = "quod";
+            }}            
 
             CreateApiResponse res = sdk.createApi(req);
 
@@ -98,7 +99,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

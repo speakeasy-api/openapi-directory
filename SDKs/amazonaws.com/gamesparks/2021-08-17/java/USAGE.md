@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateGameHeaders;
 import org.openapis.openapi.models.operations.CreateGameRequestBody;
 import org.openapis.openapi.models.operations.CreateGameRequest;
 import org.openapis.openapi.models.operations.CreateGameResponse;
@@ -14,33 +13,30 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateGameRequest req = new CreateGameRequest() {{
-                headers = new CreateGameHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateGameRequestBody() {{
-                    clientToken = "illum";
-                    description = "vel";
-                    gameName = "error";
+                requestBody = new CreateGameRequestBody() {{
+                    clientToken = "corrupti";
+                    description = "provident";
+                    gameName = "distinctio";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("suscipit", "iure");
-                        put("magnam", "debitis");
-                        put("ipsa", "delectus");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "iure";
+                xAmzContentSha256 = "magnam";
+                xAmzCredential = "debitis";
+                xAmzDate = "ipsa";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "tempora";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             CreateGameResponse res = sdk.createGame(req);
 

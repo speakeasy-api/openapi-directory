@@ -7,34 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpgradePlanRequest {
-    
-    public UpgradePlanPathParams pathParams;
-    public UpgradePlanRequest withPathParams(UpgradePlanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpgradePlanQueryParams queryParams;
-    public UpgradePlanRequest withQueryParams(UpgradePlanQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Details of an upgrade request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ItvUpgradePlanRequest request;
-    public UpgradePlanRequest withRequest(org.openapis.openapi.models.shared.ItvUpgradePlanRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ItvUpgradePlanRequest itvUpgradePlanRequest;
+    public UpgradePlanRequest withItvUpgradePlanRequest(org.openapis.openapi.models.shared.ItvUpgradePlanRequest itvUpgradePlanRequest) {
+        this.itvUpgradePlanRequest = itvUpgradePlanRequest;
         return this;
     }
     
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public UpgradePlanRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
     
-    public UpgradePlanSecurity security;
-    public UpgradePlanRequest withSecurity(UpgradePlanSecurity security) {
-        this.security = security;
+    /**
+     * The identifier of the payment platform (stripe/itunes). Only Stripe is supported
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
+    public String platform;
+    public UpgradePlanRequest withPlatform(String platform) {
+        this.platform = platform;
         return this;
     }
     

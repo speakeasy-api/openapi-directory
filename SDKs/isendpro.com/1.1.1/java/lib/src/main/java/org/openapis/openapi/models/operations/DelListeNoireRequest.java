@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelListeNoireRequest {
+    /**
+     * Doit valoir "1"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delListeNoire")
+    public DelListeNoireDelListeNoireEnum delListeNoire;
+    public DelListeNoireRequest withDelListeNoire(DelListeNoireDelListeNoireEnum delListeNoire) {
+        this.delListeNoire = delListeNoire;
+        return this;
+    }
     
-    public DelListeNoireQueryParams queryParams;
-    public DelListeNoireRequest withQueryParams(DelListeNoireQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cl\u00e9 API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyid")
+    public String keyid;
+    public DelListeNoireRequest withKeyid(String keyid) {
+        this.keyid = keyid;
+        return this;
+    }
+    
+    /**
+     * num\u00e9ro de mobile \u00e0 supprimer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=num")
+    public String num;
+    public DelListeNoireRequest withNum(String num) {
+        this.num = num;
         return this;
     }
     

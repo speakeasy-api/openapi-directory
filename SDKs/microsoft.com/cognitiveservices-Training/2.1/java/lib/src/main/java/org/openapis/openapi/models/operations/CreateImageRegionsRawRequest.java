@@ -7,27 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImageRegionsRawRequest {
-    
-    public CreateImageRegionsRawPathParams pathParams;
-    public CreateImageRegionsRawRequest withPathParams(CreateImageRegionsRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateImageRegionsRawHeaders headers;
-    public CreateImageRegionsRawRequest withHeaders(CreateImageRegionsRawHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Batch of image regions which include a tag and bounding box. Limited to 64
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public CreateImageRegionsRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public CreateImageRegionsRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public CreateImageRegionsRawRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateImageRegionsRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

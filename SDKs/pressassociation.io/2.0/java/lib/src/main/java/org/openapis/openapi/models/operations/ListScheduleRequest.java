@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListScheduleRequest {
-    
-    public ListScheduleQueryParams queryParams;
-    public ListScheduleRequest withQueryParams(ListScheduleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public ListScheduleRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     
+    /**
+     * The identifier for the selected channel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelId")
+    public String channelId;
+    public ListScheduleRequest withChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public ListScheduleSecurity security;
-    public ListScheduleRequest withSecurity(ListScheduleSecurity security) {
-        this.security = security;
+    /**
+     * The End Date for the schedule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public ListScheduleRequest withEnd(String end) {
+        this.end = end;
+        return this;
+    }
+    
+    /**
+     * The Start Date for the schedule.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public ListScheduleRequest withStart(String start) {
+        this.start = start;
         return this;
     }
     

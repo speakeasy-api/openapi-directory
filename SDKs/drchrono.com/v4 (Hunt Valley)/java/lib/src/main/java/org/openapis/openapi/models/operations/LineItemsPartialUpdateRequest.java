@@ -4,27 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LineItemsPartialUpdateRequest {
-    
-    public LineItemsPartialUpdatePathParams pathParams;
-    public LineItemsPartialUpdateRequest withPathParams(LineItemsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public LineItemsPartialUpdateRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public LineItemsPartialUpdateQueryParams queryParams;
-    public LineItemsPartialUpdateRequest withQueryParams(LineItemsPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public LineItemsPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LineItemsPartialUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public LineItemsPartialUpdateSecurity security;
-    public LineItemsPartialUpdateRequest withSecurity(LineItemsPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public LineItemsPartialUpdateRequest withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public LineItemsPartialUpdateRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posted_date")
+    public String postedDate;
+    public LineItemsPartialUpdateRequest withPostedDate(String postedDate) {
+        this.postedDate = postedDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_date")
+    public String serviceDate;
+    public LineItemsPartialUpdateRequest withServiceDate(String serviceDate) {
+        this.serviceDate = serviceDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public LineItemsPartialUpdateRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

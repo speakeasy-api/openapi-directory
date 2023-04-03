@@ -39,7 +39,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetConnectionLogonResponse protocolTelnetConnectionLogon(org.openapis.openapi.models.operations.ProtocolTelnetConnectionLogonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetConnectionLogonPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/logon/{connectionID}/{user}/{password}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetConnectionLogonRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/logon/{connectionID}/{user}/{password}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -81,7 +81,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetConnectionRequestResponse protocolTelnetConnectionRequest(org.openapis.openapi.models.operations.ProtocolTelnetConnectionRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetConnectionRequestPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/request/{connectionID}/{command}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetConnectionRequestRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/request/{connectionID}/{command}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -123,7 +123,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetConnectionSignalResponse protocolTelnetConnectionSignal(org.openapis.openapi.models.operations.ProtocolTelnetConnectionSignalRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetConnectionSignalPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/signal/{connectionID}/{signalName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetConnectionSignalRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/connection/signal/{connectionID}/{signalName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -165,7 +165,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetGetArgsResponse protocolTelnetGetArgs(org.openapis.openapi.models.operations.ProtocolTelnetGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -207,7 +207,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetGetConfigResponse protocolTelnetGetConfig(org.openapis.openapi.models.operations.ProtocolTelnetGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -249,7 +249,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetGetStatisticsResponse protocolTelnetGetStatistics(org.openapis.openapi.models.operations.ProtocolTelnetGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -332,7 +332,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetGetTraceResponse protocolTelnetGetTrace(org.openapis.openapi.models.operations.ProtocolTelnetGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -374,7 +374,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetIpaliasDisableResponse protocolTelnetIpaliasDisable(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasDisableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasDisablePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/disable/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasDisableRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/disable/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -415,7 +415,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetIpaliasEnableResponse protocolTelnetIpaliasEnable(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasEnableRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasEnablePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/enable/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasEnableRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/enable/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -456,7 +456,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetIpaliasIsenabledResponse protocolTelnetIpaliasIsenabled(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasIsenabledRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasIsenabledPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/isenabled/{ipaddress}/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasIsenabledRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/isenabled/{ipaddress}/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -497,7 +497,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetIpaliasListResponse protocolTelnetIpaliasList(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetIpaliasListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/ipalias/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -539,7 +539,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetServerGetConnectionsResponse protocolTelnetServerGetConnections(org.openapis.openapi.models.operations.ProtocolTelnetServerGetConnectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetConnectionsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetConnectionsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -581,7 +581,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetServerGetKeymapResponse protocolTelnetServerGetKeymap(org.openapis.openapi.models.operations.ProtocolTelnetServerGetKeymapRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetKeymapPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/keymap", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetKeymapRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/keymap", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -623,7 +623,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetServerGetRulesdbResponse protocolTelnetServerGetRulesdb(org.openapis.openapi.models.operations.ProtocolTelnetServerGetRulesdbRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetRulesdbPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/rulesdb", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetRulesdbRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/rulesdb", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -665,7 +665,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetServerGetStateResponse protocolTelnetServerGetState(org.openapis.openapi.models.operations.ProtocolTelnetServerGetStateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetStatePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/state", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetStateRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/state", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -707,7 +707,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetServerGetUserdbResponse protocolTelnetServerGetUserdb(org.openapis.openapi.models.operations.ProtocolTelnetServerGetUserdbRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetUserdbPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/userdb", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetUserdbRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/userdb", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -749,7 +749,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetServerGetUsersResponse protocolTelnetServerGetUsers(org.openapis.openapi.models.operations.ProtocolTelnetServerGetUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetUsersPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetServerGetUsersRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/server/get/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -791,7 +791,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetSetConfigResponse protocolTelnetSetConfig(org.openapis.openapi.models.operations.ProtocolTelnetSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -832,7 +832,7 @@ public class Telnet {
      */
     public org.openapis.openapi.models.operations.ProtocolTelnetSetTraceResponse protocolTelnetSetTrace(org.openapis.openapi.models.operations.ProtocolTelnetSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolTelnetSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/telnet/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

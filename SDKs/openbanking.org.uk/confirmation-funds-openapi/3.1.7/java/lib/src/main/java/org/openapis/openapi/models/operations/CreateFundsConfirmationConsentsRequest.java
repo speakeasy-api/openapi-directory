@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateFundsConfirmationConsentsRequest {
-    
-    public CreateFundsConfirmationConsentsHeaders headers;
-    public CreateFundsConfirmationConsentsRequest withHeaders(CreateFundsConfirmationConsentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * An Authorisation Token as per https://tools.ietf.org/html/rfc6750
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public CreateFundsConfirmationConsentsRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,16 +21,51 @@ public class CreateFundsConfirmationConsentsRequest {
      * Default
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.OBFundsConfirmationConsent1 request;
-    public CreateFundsConfirmationConsentsRequest withRequest(org.openapis.openapi.models.shared.OBFundsConfirmationConsent1 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.OBFundsConfirmationConsent1 obFundsConfirmationConsent1;
+    public CreateFundsConfirmationConsentsRequest withOBFundsConfirmationConsent1(org.openapis.openapi.models.shared.OBFundsConfirmationConsent1 obFundsConfirmationConsent1) {
+        this.obFundsConfirmationConsent1 = obFundsConfirmationConsent1;
         return this;
     }
     
+    /**
+     * Indicates the user-agent that the PSU is using.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
+    public String xCustomerUserAgent;
+    public CreateFundsConfirmationConsentsRequest withXCustomerUserAgent(String xCustomerUserAgent) {
+        this.xCustomerUserAgent = xCustomerUserAgent;
+        return this;
+    }
     
-    public CreateFundsConfirmationConsentsSecurity security;
-    public CreateFundsConfirmationConsentsRequest withSecurity(CreateFundsConfirmationConsentsSecurity security) {
-        this.security = security;
+    /**
+     * The time when the PSU last logged in with the TPP. 
+     * All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
+     * Sun, 10 Sep 2017 19:43:31 UTC
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
+    public String xFapiAuthDate;
+    public CreateFundsConfirmationConsentsRequest withXFapiAuthDate(String xFapiAuthDate) {
+        this.xFapiAuthDate = xFapiAuthDate;
+        return this;
+    }
+    
+    /**
+     * The PSU's IP address if the PSU is currently logged in with the TPP.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
+    public String xFapiCustomerIpAddress;
+    public CreateFundsConfirmationConsentsRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
+        this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
+        return this;
+    }
+    
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
+    public String xFapiInteractionId;
+    public CreateFundsConfirmationConsentsRequest withXFapiInteractionId(String xFapiInteractionId) {
+        this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     

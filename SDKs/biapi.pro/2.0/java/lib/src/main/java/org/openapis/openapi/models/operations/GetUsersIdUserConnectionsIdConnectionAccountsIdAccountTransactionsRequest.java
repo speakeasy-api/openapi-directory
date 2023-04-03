@@ -4,20 +4,179 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest {
-    
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsPathParams pathParams;
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withPathParams(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * display all transactions, including deleted ones
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
+    public Boolean all;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withAll(Boolean all) {
+        this.all = all;
         return this;
     }
     
+    /**
+     * display only deleted transactions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deleted")
+    public Boolean deleted;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withDeleted(Boolean deleted) {
+        this.deleted = deleted;
+        return this;
+    }
     
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsQueryParams queryParams;
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withQueryParams(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
+    
+    /**
+     * filter on given category id(s) (comma separated) or "null"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id_category")
+    public Long idCategory;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdCategory(Long idCategory) {
+        this.idCategory = idCategory;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIdUser(String idUser) {
+        this.idUser = idUser;
+        return this;
+    }
+    
+    /**
+     * filter on income or expenditures
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=income")
+    public Boolean income;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withIncome(Boolean income) {
+        this.income = income;
+        return this;
+    }
+    
+    /**
+     * get only transactions updated after the specified datetime
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_update")
+    public OffsetDateTime lastUpdate;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withLastUpdate(OffsetDateTime lastUpdate) {
+        this.lastUpdate = lastUpdate;
+        return this;
+    }
+    
+    /**
+     * limit number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * maximum (inclusive) date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * maximum (inclusive) value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_value")
+    public Float maxValue;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withMaxValue(Float maxValue) {
+        this.maxValue = maxValue;
+        return this;
+    }
+    
+    /**
+     * minimal (inclusive) date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * minimal (inclusive) value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_value")
+    public Float minValue;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withMinValue(Float minValue) {
+        this.minValue = minValue;
+        return this;
+    }
+    
+    /**
+     * offset of first result
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * search in labels, dates, values and categories
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * "XX|-XX" or "\u00b1XX"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=value")
+    public String value;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withValue(String value) {
+        this.value = value;
+        return this;
+    }
+    
+    /**
+     * filter transactions containing the given string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wording")
+    public String wording;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountTransactionsRequest withWording(String wording) {
+        this.wording = wording;
         return this;
     }
     

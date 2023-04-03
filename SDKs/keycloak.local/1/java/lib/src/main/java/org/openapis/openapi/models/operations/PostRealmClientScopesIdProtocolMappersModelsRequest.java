@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmClientScopesIdProtocolMappersModelsRequest {
-    
-    public PostRealmClientScopesIdProtocolMappersModelsPathParams pathParams;
-    public PostRealmClientScopesIdProtocolMappersModelsRequest withPathParams(PostRealmClientScopesIdProtocolMappersModelsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ProtocolMapperRepresentation protocolMapperRepresentation;
+    public PostRealmClientScopesIdProtocolMappersModelsRequest withProtocolMapperRepresentation(org.openapis.openapi.models.shared.ProtocolMapperRepresentation protocolMapperRepresentation) {
+        this.protocolMapperRepresentation = protocolMapperRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProtocolMapperRepresentation request;
-    public PostRealmClientScopesIdProtocolMappersModelsRequest withRequest(org.openapis.openapi.models.shared.ProtocolMapperRepresentation request) {
-        this.request = request;
+    /**
+     * id of client scope (not name)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmClientScopesIdProtocolMappersModelsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmClientScopesIdProtocolMappersModelsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

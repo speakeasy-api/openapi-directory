@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoCheckCollaboratorRequest {
+    /**
+     * username of the collaborator
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collaborator")
+    public String collaborator;
+    public RepoCheckCollaboratorRequest withCollaborator(String collaborator) {
+        this.collaborator = collaborator;
+        return this;
+    }
     
-    public RepoCheckCollaboratorPathParams pathParams;
-    public RepoCheckCollaboratorRequest withPathParams(RepoCheckCollaboratorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoCheckCollaboratorRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoCheckCollaboratorRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

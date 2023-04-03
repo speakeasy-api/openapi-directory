@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTerminalCheckoutRequest {
-    
-    public GetTerminalCheckoutPathParams pathParams;
-    public GetTerminalCheckoutRequest withPathParams(GetTerminalCheckoutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTerminalCheckoutSecurity security;
-    public GetTerminalCheckoutRequest withSecurity(GetTerminalCheckoutSecurity security) {
-        this.security = security;
+    /**
+     * The unique ID for the desired `TerminalCheckout`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=checkout_id")
+    public String checkoutId;
+    public GetTerminalCheckoutRequest withCheckoutId(String checkoutId) {
+        this.checkoutId = checkoutId;
         return this;
     }
     

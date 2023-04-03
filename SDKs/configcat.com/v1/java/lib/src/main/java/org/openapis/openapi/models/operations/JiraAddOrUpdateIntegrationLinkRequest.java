@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JiraAddOrUpdateIntegrationLinkRequest {
-    
-    public JiraAddOrUpdateIntegrationLinkPathParams pathParams;
-    public JiraAddOrUpdateIntegrationLinkRequest withPathParams(JiraAddOrUpdateIntegrationLinkPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AddOrUpdateJiraIntegrationLinkModel addOrUpdateJiraIntegrationLinkModel;
+    public JiraAddOrUpdateIntegrationLinkRequest withAddOrUpdateJiraIntegrationLinkModel(org.openapis.openapi.models.shared.AddOrUpdateJiraIntegrationLinkModel addOrUpdateJiraIntegrationLinkModel) {
+        this.addOrUpdateJiraIntegrationLinkModel = addOrUpdateJiraIntegrationLinkModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddOrUpdateJiraIntegrationLinkModel request;
-    public JiraAddOrUpdateIntegrationLinkRequest withRequest(org.openapis.openapi.models.shared.AddOrUpdateJiraIntegrationLinkModel request) {
-        this.request = request;
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
+    public String environmentId;
+    public JiraAddOrUpdateIntegrationLinkRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    
+    /**
+     * The key of the integration link.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public JiraAddOrUpdateIntegrationLinkRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The id of the Setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
+    public Integer settingId;
+    public JiraAddOrUpdateIntegrationLinkRequest withSettingId(Integer settingId) {
+        this.settingId = settingId;
         return this;
     }
     

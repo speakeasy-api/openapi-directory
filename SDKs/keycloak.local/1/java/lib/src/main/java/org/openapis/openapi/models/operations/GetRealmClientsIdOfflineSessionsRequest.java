@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmClientsIdOfflineSessionsRequest {
-    
-    public GetRealmClientsIdOfflineSessionsPathParams pathParams;
-    public GetRealmClientsIdOfflineSessionsRequest withPathParams(GetRealmClientsIdOfflineSessionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Paging offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Integer first;
+    public GetRealmClientsIdOfflineSessionsRequest withFirst(Integer first) {
+        this.first = first;
         return this;
     }
     
+    /**
+     * id of client (not client-id)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRealmClientsIdOfflineSessionsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetRealmClientsIdOfflineSessionsQueryParams queryParams;
-    public GetRealmClientsIdOfflineSessionsRequest withQueryParams(GetRealmClientsIdOfflineSessionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum results size (defaults to 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Integer max;
+    public GetRealmClientsIdOfflineSessionsRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmClientsIdOfflineSessionsRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

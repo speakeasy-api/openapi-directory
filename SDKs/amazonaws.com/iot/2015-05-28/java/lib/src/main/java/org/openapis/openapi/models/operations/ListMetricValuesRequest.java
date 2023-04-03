@@ -4,20 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMetricValuesRequest {
-    
-    public ListMetricValuesQueryParams queryParams;
-    public ListMetricValuesRequest withQueryParams(ListMetricValuesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListMetricValuesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListMetricValuesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListMetricValuesHeaders headers;
-    public ListMetricValuesRequest withHeaders(ListMetricValuesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListMetricValuesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListMetricValuesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListMetricValuesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListMetricValuesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListMetricValuesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The dimension name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimensionName")
+    public String dimensionName;
+    public ListMetricValuesRequest withDimensionName(String dimensionName) {
+        this.dimensionName = dimensionName;
+        return this;
+    }
+    
+    /**
+     * The dimension value operator.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimensionValueOperator")
+    public ListMetricValuesDimensionValueOperatorEnum dimensionValueOperator;
+    public ListMetricValuesRequest withDimensionValueOperator(ListMetricValuesDimensionValueOperatorEnum dimensionValueOperator) {
+        this.dimensionValueOperator = dimensionValueOperator;
+        return this;
+    }
+    
+    /**
+     * The end of the time period for which metric values are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
+    public ListMetricValuesRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return at one time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListMetricValuesRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The name of the security profile metric for which values are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metricName")
+    public String metricName;
+    public ListMetricValuesRequest withMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListMetricValuesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The start of the time period for which metric values are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
+    public ListMetricValuesRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    /**
+     * The name of the thing for which security profile metric values are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thingName")
+    public String thingName;
+    public ListMetricValuesRequest withThingName(String thingName) {
+        this.thingName = thingName;
         return this;
     }
     

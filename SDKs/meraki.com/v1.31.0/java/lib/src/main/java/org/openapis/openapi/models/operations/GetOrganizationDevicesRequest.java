@@ -4,20 +4,183 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationDevicesRequest {
-    
-    public GetOrganizationDevicesPathParams pathParams;
-    public GetOrganizationDevicesRequest withPathParams(GetOrganizationDevicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter results by whether or not the device's configuration has been updated after the given timestamp
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configurationUpdatedAfter")
+    public String configurationUpdatedAfter;
+    public GetOrganizationDevicesRequest withConfigurationUpdatedAfter(String configurationUpdatedAfter) {
+        this.configurationUpdatedAfter = configurationUpdatedAfter;
         return this;
     }
     
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationDevicesRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
+        return this;
+    }
     
-    public GetOrganizationDevicesQueryParams queryParams;
-    public GetOrganizationDevicesRequest withQueryParams(GetOrganizationDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional parameter to filter devices by MAC address. All returned devices will have a MAC address that contains the search term or is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mac")
+    public String mac;
+    public GetOrganizationDevicesRequest withMac(String mac) {
+        this.mac = mac;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by one or more MAC addresses. All returned devices will have a MAC address that is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=macs")
+    public String[] macs;
+    public GetOrganizationDevicesRequest withMacs(String[] macs) {
+        this.macs = macs;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by model. All returned devices will have a model that contains the search term or is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public GetOrganizationDevicesRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by one or more models. All returned devices will have a model that is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=models")
+    public String[] models;
+    public GetOrganizationDevicesRequest withModels(String[] models) {
+        this.models = models;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by name. All returned devices will have a name that contains the search term or is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetOrganizationDevicesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=networkIds")
+    public String[] networkIds;
+    public GetOrganizationDevicesRequest withNetworkIds(String[] networkIds) {
+        this.networkIds = networkIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationDevicesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationDevicesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=productTypes")
+    public GetOrganizationDevicesProductTypesEnum[] productTypes;
+    public GetOrganizationDevicesRequest withProductTypes(GetOrganizationDevicesProductTypesEnum[] productTypes) {
+        this.productTypes = productTypes;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by the alert profiles that are bound to them. Only applies to sensor devices.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sensorAlertProfileIds")
+    public String[] sensorAlertProfileIds;
+    public GetOrganizationDevicesRequest withSensorAlertProfileIds(String[] sensorAlertProfileIds) {
+        this.sensorAlertProfileIds = sensorAlertProfileIds;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by the metrics that they provide. Only applies to sensor devices.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sensorMetrics")
+    public String[] sensorMetrics;
+    public GetOrganizationDevicesRequest withSensorMetrics(String[] sensorMetrics) {
+        this.sensorMetrics = sensorMetrics;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by serial number. All returned devices will have a serial number that contains the search term or is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serial")
+    public String serial;
+    public GetOrganizationDevicesRequest withSerial(String serial) {
+        this.serial = serial;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by one or more serial numbers. All returned devices will have a serial number that is an exact match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=serials")
+    public String[] serials;
+    public GetOrganizationDevicesRequest withSerials(String[] serials) {
+        this.serials = serials;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationDevicesRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    /**
+     * Optional parameter to filter devices by tags.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tags")
+    public String[] tags;
+    public GetOrganizationDevicesRequest withTags(String[] tags) {
+        this.tags = tags;
+        return this;
+    }
+    
+    /**
+     * Optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagsFilterType")
+    public GetOrganizationDevicesTagsFilterTypeEnum tagsFilterType;
+    public GetOrganizationDevicesRequest withTagsFilterType(GetOrganizationDevicesTagsFilterTypeEnum tagsFilterType) {
+        this.tagsFilterType = tagsFilterType;
         return this;
     }
     

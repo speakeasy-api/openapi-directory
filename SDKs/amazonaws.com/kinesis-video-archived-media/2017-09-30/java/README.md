@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetClipHeaders;
 import org.openapis.openapi.models.operations.GetClipRequestBodyClipFragmentSelector;
 import org.openapis.openapi.models.operations.GetClipRequestBody;
 import org.openapis.openapi.models.operations.GetClipRequest;
@@ -30,34 +29,30 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetClipRequest req = new GetClipRequest() {{
-                headers = new GetClipHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new GetClipRequestBody() {{
+                requestBody = new GetClipRequestBody() {{
                     clipFragmentSelector = new GetClipRequestBodyClipFragmentSelector() {{
                         fragmentSelectorType = "SERVER_TIMESTAMP";
                         timestampRange = new ClipTimestampRange() {{
-                            endTimestamp = "2022-05-18T09:34:54.894Z";
-                            startTimestamp = "2022-03-26T09:37:56.283Z";
+                            endTimestamp = "2021-07-27T21:52:56.087Z";
+                            startTimestamp = "2021-03-11T23:22:42.658Z";
                         }};
                     }};
-                    streamARN = "iure";
-                    streamName = "magnam";
+                    streamARN = "nulla";
+                    streamName = "corrupti";
                 }};
-            }};            
+                xAmzAlgorithm = "illum";
+                xAmzContentSha256 = "vel";
+                xAmzCredential = "error";
+                xAmzDate = "deserunt";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "iure";
+                xAmzSignedHeaders = "magnam";
+            }}            
 
             GetClipResponse res = sdk.getClip(req);
 
@@ -71,7 +66,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

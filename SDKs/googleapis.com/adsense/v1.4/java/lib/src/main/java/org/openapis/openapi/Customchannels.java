@@ -33,25 +33,26 @@ public class Customchannels {
     /**
      * List all ad units in the specified custom channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListResponse adsenseCustomchannelsAdunitsList(org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListResponse adsenseCustomchannelsAdunitsList(org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListRequest request, org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListPathParams.class, baseUrl, "/adclients/{adClientId}/customchannels/{customChannelId}/adunits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListRequest.class, baseUrl, "/adclients/{adClientId}/customchannels/{customChannelId}/adunits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseCustomchannelsAdunitsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Customchannels {
     /**
      * Get the specified custom channel from the specified ad client.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseCustomchannelsGetResponse adsenseCustomchannelsGet(org.openapis.openapi.models.operations.AdsenseCustomchannelsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseCustomchannelsGetResponse adsenseCustomchannelsGet(org.openapis.openapi.models.operations.AdsenseCustomchannelsGetRequest request, org.openapis.openapi.models.operations.AdsenseCustomchannelsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseCustomchannelsGetPathParams.class, baseUrl, "/adclients/{adClientId}/customchannels/{customChannelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseCustomchannelsGetRequest.class, baseUrl, "/adclients/{adClientId}/customchannels/{customChannelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseCustomchannelsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseCustomchannelsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class Customchannels {
     /**
      * List all custom channels in the specified ad client for this AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseCustomchannelsListResponse adsenseCustomchannelsList(org.openapis.openapi.models.operations.AdsenseCustomchannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseCustomchannelsListResponse adsenseCustomchannelsList(org.openapis.openapi.models.operations.AdsenseCustomchannelsListRequest request, org.openapis.openapi.models.operations.AdsenseCustomchannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseCustomchannelsListPathParams.class, baseUrl, "/adclients/{adClientId}/customchannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseCustomchannelsListRequest.class, baseUrl, "/adclients/{adClientId}/customchannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseCustomchannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseCustomchannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSyncSyncMapPermissionRequest {
-    
-    public DeleteSyncSyncMapPermissionPathParams pathParams;
-    public DeleteSyncSyncMapPermissionRequest withPathParams(DeleteSyncSyncMapPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Arbitrary string identifier representing a user associated with an FPA token, assigned by the developer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public DeleteSyncSyncMapPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
         return this;
     }
     
-    
-    public DeleteSyncSyncMapPermissionSecurity security;
-    public DeleteSyncSyncMapPermissionRequest withSecurity(DeleteSyncSyncMapPermissionSecurity security) {
-        this.security = security;
+    /**
+     * Identifier of the Sync Map. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MapSid")
+    public String mapSid;
+    public DeleteSyncSyncMapPermissionRequest withMapSid(String mapSid) {
+        this.mapSid = mapSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteSyncSyncMapPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteSyncSyncMapPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

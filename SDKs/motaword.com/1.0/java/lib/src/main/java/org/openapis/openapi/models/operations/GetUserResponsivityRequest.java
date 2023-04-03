@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserResponsivityRequest {
-    
-    public GetUserResponsivityPathParams pathParams;
-    public GetUserResponsivityRequest withPathParams(GetUserResponsivityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Period for calcualtion.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public GetUserResponsivityPeriodEnum period;
+    public GetUserResponsivityRequest withPeriod(GetUserResponsivityPeriodEnum period) {
+        this.period = period;
         return this;
     }
     
-    
-    public GetUserResponsivityQueryParams queryParams;
-    public GetUserResponsivityRequest withQueryParams(GetUserResponsivityQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetUserResponsivitySecurity security;
-    public GetUserResponsivityRequest withSecurity(GetUserResponsivitySecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public GetUserResponsivityRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

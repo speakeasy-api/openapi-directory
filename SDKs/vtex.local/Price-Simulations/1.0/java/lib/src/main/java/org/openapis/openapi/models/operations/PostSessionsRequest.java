@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSessionsRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PostSessionsRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public PostSessionsHeaders headers;
-    public PostSessionsRequest withHeaders(PostSessionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PostSessionsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSessionsRequestBody request;
-    public PostSessionsRequest withRequest(PostSessionsRequestBody request) {
-        this.request = request;
+    public PostSessionsRequestBody requestBody;
+    public PostSessionsRequest withRequestBody(PostSessionsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

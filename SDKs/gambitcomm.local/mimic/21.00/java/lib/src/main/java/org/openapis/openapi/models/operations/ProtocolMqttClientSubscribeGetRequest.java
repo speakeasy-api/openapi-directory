@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSubscribeGetRequest {
+    /**
+     * Agent to show MQTT state
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientSubscribeGetRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolMqttClientSubscribeGetPathParams pathParams;
-    public ProtocolMqttClientSubscribeGetRequest withPathParams(ProtocolMqttClientSubscribeGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Attribute
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attr")
+    public String attr;
+    public ProtocolMqttClientSubscribeGetRequest withAttr(String attr) {
+        this.attr = attr;
+        return this;
+    }
+    
+    /**
+     * Subscribe Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subNum")
+    public Integer subNum;
+    public ProtocolMqttClientSubscribeGetRequest withSubNum(Integer subNum) {
+        this.subNum = subNum;
         return this;
     }
     

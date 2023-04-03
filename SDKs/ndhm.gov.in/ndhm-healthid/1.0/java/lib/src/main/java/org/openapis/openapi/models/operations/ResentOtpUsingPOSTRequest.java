@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResentOtpUsingPOSTRequest {
-    
-    public ResentOtpUsingPOSTHeaders headers;
-    public ResentOtpUsingPOSTRequest withHeaders(ResentOtpUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ResentOtpUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class ResentOtpUsingPOSTRequest {
      * resendRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResendOTPRequest request;
-    public ResentOtpUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.ResendOTPRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public ResentOtpUsingPOSTSecurity security;
-    public ResentOtpUsingPOSTRequest withSecurity(ResentOtpUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.ResendOTPRequest resendOTPRequest;
+    public ResentOtpUsingPOSTRequest withResendOTPRequest(org.openapis.openapi.models.shared.ResendOTPRequest resendOTPRequest) {
+        this.resendOTPRequest = resendOTPRequest;
         return this;
     }
     

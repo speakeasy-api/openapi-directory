@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPagesIdJsonRequest {
-    
-    public PutPagesIdJsonPathParams pathParams;
-    public PutPagesIdJsonRequest withPathParams(PutPagesIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutPagesIdJsonQueryParams queryParams;
-    public PutPagesIdJsonRequest withQueryParams(PutPagesIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Page parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PageModify request;
-    public PutPagesIdJsonRequest withRequest(org.openapis.openapi.models.shared.PageModify request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PageModify pageModify;
+    public PutPagesIdJsonRequest withPageModify(org.openapis.openapi.models.shared.PageModify pageModify) {
+        this.pageModify = pageModify;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutPagesIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Page
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutPagesIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutPagesIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

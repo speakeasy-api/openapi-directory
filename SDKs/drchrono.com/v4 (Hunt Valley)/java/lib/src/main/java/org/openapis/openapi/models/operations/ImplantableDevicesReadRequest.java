@@ -4,27 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImplantableDevicesReadRequest {
-    
-    public ImplantableDevicesReadPathParams pathParams;
-    public ImplantableDevicesReadRequest withPathParams(ImplantableDevicesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ImplantableDevicesReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public ImplantableDevicesReadQueryParams queryParams;
-    public ImplantableDevicesReadRequest withQueryParams(ImplantableDevicesReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ImplantableDevicesReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date")
+    public String muDate;
+    public ImplantableDevicesReadRequest withMuDate(String muDate) {
+        this.muDate = muDate;
+        return this;
+    }
     
-    public ImplantableDevicesReadSecurity security;
-    public ImplantableDevicesReadRequest withSecurity(ImplantableDevicesReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date_range")
+    public String muDateRange;
+    public ImplantableDevicesReadRequest withMuDateRange(String muDateRange) {
+        this.muDateRange = muDateRange;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public ImplantableDevicesReadRequest withPatient(Long patient) {
+        this.patient = patient;
         return this;
     }
     

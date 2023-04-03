@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETQueueUrlRequest {
-    
-    public GETGETQueueUrlQueryParams queryParams;
-    public GETGETQueueUrlRequest withQueryParams(GETGETQueueUrlQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETQueueUrlActionEnum action;
+    public GETGETQueueUrlRequest withAction(GETGETQueueUrlActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The name of the queue whose URL must be fetched. Maximum 80 characters. Valid values: alphanumeric characters, hyphens (&lt;code&gt;-&lt;/code&gt;), and underscores (&lt;code&gt;_&lt;/code&gt;).&lt;/p&gt; &lt;p&gt;Queue URLs and names are case-sensitive.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=QueueName")
+    public String queueName;
+    public GETGETQueueUrlRequest withQueueName(String queueName) {
+        this.queueName = queueName;
+        return this;
+    }
     
-    public GETGETQueueUrlHeaders headers;
-    public GETGETQueueUrlRequest withHeaders(GETGETQueueUrlHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Web Services account ID of the account that created the queue.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=QueueOwnerAWSAccountId")
+    public String queueOwnerAWSAccountId;
+    public GETGETQueueUrlRequest withQueueOwnerAWSAccountId(String queueOwnerAWSAccountId) {
+        this.queueOwnerAWSAccountId = queueOwnerAWSAccountId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETQueueUrlVersionEnum version;
+    public GETGETQueueUrlRequest withVersion(GETGETQueueUrlVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETQueueUrlRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETQueueUrlRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETQueueUrlRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETQueueUrlRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETQueueUrlRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETQueueUrlRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETQueueUrlRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchDisassociateClientDeviceFromCoreDeviceRequest {
-    
-    public BatchDisassociateClientDeviceFromCoreDevicePathParams pathParams;
-    public BatchDisassociateClientDeviceFromCoreDeviceRequest withPathParams(BatchDisassociateClientDeviceFromCoreDevicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public BatchDisassociateClientDeviceFromCoreDeviceHeaders headers;
-    public BatchDisassociateClientDeviceFromCoreDeviceRequest withHeaders(BatchDisassociateClientDeviceFromCoreDeviceHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BatchDisassociateClientDeviceFromCoreDeviceRequestBody request;
-    public BatchDisassociateClientDeviceFromCoreDeviceRequest withRequest(BatchDisassociateClientDeviceFromCoreDeviceRequestBody request) {
-        this.request = request;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequestBody requestBody;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withRequestBody(BatchDisassociateClientDeviceFromCoreDeviceRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the core device. This is also the name of the IoT thing.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=coreDeviceThingName")
+    public String coreDeviceThingName;
+    public BatchDisassociateClientDeviceFromCoreDeviceRequest withCoreDeviceThingName(String coreDeviceThingName) {
+        this.coreDeviceThingName = coreDeviceThingName;
         return this;
     }
     

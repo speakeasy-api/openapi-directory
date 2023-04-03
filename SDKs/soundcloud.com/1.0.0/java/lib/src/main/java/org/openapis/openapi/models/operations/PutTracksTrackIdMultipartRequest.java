@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutTracksTrackIdMultipartRequest {
-    
-    public PutTracksTrackIdMultipartPathParams pathParams;
-    public PutTracksTrackIdMultipartRequest withPathParams(PutTracksTrackIdMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Track payload
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.TrackDataRequest request;
-    public PutTracksTrackIdMultipartRequest withRequest(org.openapis.openapi.models.shared.TrackDataRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TrackDataRequest trackDataRequest;
+    public PutTracksTrackIdMultipartRequest withTrackDataRequest(org.openapis.openapi.models.shared.TrackDataRequest trackDataRequest) {
+        this.trackDataRequest = trackDataRequest;
         return this;
     }
     
-    
-    public PutTracksTrackIdMultipartSecurity security;
-    public PutTracksTrackIdMultipartRequest withSecurity(PutTracksTrackIdMultipartSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud Track id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
+    public Long trackId;
+    public PutTracksTrackIdMultipartRequest withTrackId(Long trackId) {
+        this.trackId = trackId;
         return this;
     }
     

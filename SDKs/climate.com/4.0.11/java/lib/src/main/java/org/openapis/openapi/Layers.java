@@ -41,10 +41,11 @@ public class Layers {
      * Retrieve a list of application activities
      * Retrieve a list of application activities. The id in the response is used for  GET /v4/layers/asApplied/{activityId}/contents.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersAsAppliedResponse getV4LayersAsApplied(org.openapis.openapi.models.operations.GetV4LayersAsAppliedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersAsAppliedResponse getV4LayersAsApplied(org.openapis.openapi.models.operations.GetV4LayersAsAppliedRequest request, org.openapis.openapi.models.operations.GetV4LayersAsAppliedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/layers/asApplied");
         
@@ -52,13 +53,13 @@ public class Layers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV4LayersAsAppliedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV4LayersAsAppliedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -67,7 +68,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -117,18 +118,19 @@ public class Layers {
      * Retrieve the raw application activity
      * Retrieve an individual application activity by id.  Ids are retrieved via the  /layers/asApplied route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`). The data is compressed using .zip format.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsResponse getV4LayersAsAppliedActivityIdContents(org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsResponse getV4LayersAsAppliedActivityIdContents(org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsRequest request, org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsPathParams.class, baseUrl, "/v4/layers/asApplied/{activityId}/contents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersAsAppliedActivityIdContentsRequest.class, baseUrl, "/v4/layers/asApplied/{activityId}/contents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -137,7 +139,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -186,10 +188,11 @@ public class Layers {
      * Retrieve a list of harvest activities
      * Retrieve a list of harvest activities. The id in the response is used for  GET /v4/layers/asHarvested/{activityId}/contents.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersAsHarvestedResponse getV4LayersAsHarvested(org.openapis.openapi.models.operations.GetV4LayersAsHarvestedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersAsHarvestedResponse getV4LayersAsHarvested(org.openapis.openapi.models.operations.GetV4LayersAsHarvestedRequest request, org.openapis.openapi.models.operations.GetV4LayersAsHarvestedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/layers/asHarvested");
         
@@ -197,13 +200,13 @@ public class Layers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV4LayersAsHarvestedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV4LayersAsHarvestedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -212,7 +215,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -262,18 +265,19 @@ public class Layers {
      * Retrieve the raw harvest activity
      * Retrieve an individual harvest activity by id.  Ids are retrieved via the  /layers/asHarvested route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`). The data is compressed using .zip format.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsResponse getV4LayersAsHarvestedActivityIdContents(org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsResponse getV4LayersAsHarvestedActivityIdContents(org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsRequest request, org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsPathParams.class, baseUrl, "/v4/layers/asHarvested/{activityId}/contents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersAsHarvestedActivityIdContentsRequest.class, baseUrl, "/v4/layers/asHarvested/{activityId}/contents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -282,7 +286,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -331,10 +335,11 @@ public class Layers {
      * Retrieve a list of planting activities
      * Retrieve a list of planting activities. The id in the response is used for  GET /v4/layers/asPlanted/{activityId}/contents.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersAsPlantedResponse getV4LayersAsPlanted(org.openapis.openapi.models.operations.GetV4LayersAsPlantedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersAsPlantedResponse getV4LayersAsPlanted(org.openapis.openapi.models.operations.GetV4LayersAsPlantedRequest request, org.openapis.openapi.models.operations.GetV4LayersAsPlantedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/layers/asPlanted");
         
@@ -342,13 +347,13 @@ public class Layers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV4LayersAsPlantedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV4LayersAsPlantedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -357,7 +362,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -407,18 +412,19 @@ public class Layers {
      * Retrieve the raw planting activity
      * Retrieve an individual planting activity by id.  Ids are retrieved via the  /layers/asPlanted route. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB`  (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`).  The data is compressed using .zip format.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsResponse getV4LayersAsPlantedActivityIdContents(org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsResponse getV4LayersAsPlantedActivityIdContents(org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsRequest request, org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsPathParams.class, baseUrl, "/v4/layers/asPlanted/{activityId}/contents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersAsPlantedActivityIdContentsRequest.class, baseUrl, "/v4/layers/asPlanted/{activityId}/contents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -427,7 +433,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -476,10 +482,11 @@ public class Layers {
      * Retrieve a list of scouting observations
      * Retrieve a list of scouting observations created or updated by the user identified by the Authorization header.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsResponse getV4LayersScoutingObservations(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsResponse getV4LayersScoutingObservations(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsRequest request, org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/layers/scoutingObservations");
         
@@ -487,13 +494,13 @@ public class Layers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -502,7 +509,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -552,19 +559,20 @@ public class Layers {
      * Retrieve individual scouting observation
      * Retrieve an individual scouting observation by id.  Ids are retrieved via the /layers/scoutingObservations route.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdResponse getV4LayersScoutingObservationsScoutingObservationId(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdResponse getV4LayersScoutingObservationsScoutingObservationId(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdRequest request, org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdPathParams.class, baseUrl, "/v4/layers/scoutingObservations/{scoutingObservationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdRequest.class, baseUrl, "/v4/layers/scoutingObservations/{scoutingObservationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -604,18 +612,19 @@ public class Layers {
      * Retrieve attachments associated with a given scouting observation.
      * Retrieve attachments associated with a given scouting observation. Photos added to scouting notes in the FieldView app are capped to 20MB, and we won\u2019t store photos larger than that in a scouting note.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse getV4LayersScoutingObservationsScoutingObservationIdAttachments(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse getV4LayersScoutingObservationsScoutingObservationIdAttachments(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest request, org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsPathParams.class, baseUrl, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest.class, baseUrl, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -624,7 +633,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -682,18 +691,19 @@ public class Layers {
      * Retrieve the binary contents of a scouting observation\u2019s attachment.
      * Photos added to scouting notes in the FieldView app are capped to `20MiB` (`20971520 bytes`), and we won\u2019t store photos larger than that in a scouting note. Downloads larger than `5MiB` (`5242880 bytes`) in size, must be downloaded in chunks no larger than `5MiB` (`5242880 bytes`) and no smaller than `1MiB` (`1048576 bytes`). The last chunk could be less than `1MiB` (`1048576 bytes`).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsResponse getV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContents(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsResponse getV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContents(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest request, org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsPathParams.class, baseUrl, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments/{attachmentId}/contents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsAttachmentIdContentsRequest.class, baseUrl, "/v4/layers/scoutingObservations/{scoutingObservationId}/attachments/{attachmentId}/contents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -702,7 +712,7 @@ public class Layers {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

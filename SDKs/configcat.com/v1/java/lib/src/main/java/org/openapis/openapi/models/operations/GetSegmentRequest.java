@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSegmentRequest {
-    
-    public GetSegmentPathParams pathParams;
-    public GetSegmentRequest withPathParams(GetSegmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the Segment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=segmentId")
+    public String segmentId;
+    public GetSegmentRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
         return this;
     }
     

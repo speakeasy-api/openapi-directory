@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTeamSeasonStatsRequest {
+    /**
+     * Conference abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetTeamSeasonStatsRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
     
-    public GetTeamSeasonStatsQueryParams queryParams;
-    public GetTeamSeasonStatsRequest withQueryParams(GetTeamSeasonStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Starting week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endWeek")
+    public Long endWeek;
+    public GetTeamSeasonStatsRequest withEndWeek(Long endWeek) {
+        this.endWeek = endWeek;
+        return this;
+    }
+    
+    /**
+     * Starting week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startWeek")
+    public Long startWeek;
+    public GetTeamSeasonStatsRequest withStartWeek(Long startWeek) {
+        this.startWeek = startWeek;
+        return this;
+    }
+    
+    /**
+     * Team filter (required if no year specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetTeamSeasonStatsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Year filter (required if no team specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetTeamSeasonStatsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

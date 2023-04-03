@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitCreateCommitRequest {
-    
-    public GitCreateCommitPathParams pathParams;
-    public GitCreateCommitRequest withPathParams(GitCreateCommitPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public GitCreateCommitRequestBody requestBody;
+    public GitCreateCommitRequest withRequestBody(GitCreateCommitRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public GitCreateCommitRequestBody request;
-    public GitCreateCommitRequest withRequest(GitCreateCommitRequestBody request) {
-        this.request = request;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GitCreateCommitRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GitCreateCommitRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

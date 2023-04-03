@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealmGroupByPathPathRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetRealmGroupByPathPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
     
-    public GetRealmGroupByPathPathPathParams pathParams;
-    public GetRealmGroupByPathPathRequest withPathParams(GetRealmGroupByPathPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public GetRealmGroupByPathPathRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

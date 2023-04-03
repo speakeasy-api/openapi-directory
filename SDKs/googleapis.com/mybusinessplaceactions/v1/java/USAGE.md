@@ -4,13 +4,11 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams;
-import org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams;
 import org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest;
 import org.openapis.openapi.models.operations.MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.PlaceActionLinkPlaceActionTypeEnum;
 import org.openapis.openapi.models.shared.PlaceActionLinkInput;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -20,29 +18,25 @@ public class Application {
                 .build();
 
             MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest req = new MybusinessplaceactionsLocationsPlaceActionLinksCreateRequest() {{
-                pathParams = new MybusinessplaceactionsLocationsPlaceActionLinksCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new MybusinessplaceactionsLocationsPlaceActionLinksCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new PlaceActionLinkInput() {{
+                dollarXgafv = "2";
+                placeActionLinkInput = new PlaceActionLinkInput() {{
                     isPreferred = false;
-                    name = "suscipit";
-                    placeActionType = "DINING_RESERVATION";
-                    uri = "http://unique-baboon.org";
+                    name = "provident";
+                    placeActionType = "FOOD_DELIVERY";
+                    uri = "https://outstanding-strait.name";
                 }};
-            }};            
+                accessToken = "illum";
+                alt = "media";
+                callback = "error";
+                fields = "deserunt";
+                key = "suscipit";
+                oauthToken = "iure";
+                parent = "magnam";
+                prettyPrint = false;
+                quotaUser = "debitis";
+                uploadType = "ipsa";
+                uploadProtocol = "delectus";
+            }}            
 
             MybusinessplaceactionsLocationsPlaceActionLinksCreateResponse res = sdk.locations.mybusinessplaceactionsLocationsPlaceActionLinksCreate(req);
 

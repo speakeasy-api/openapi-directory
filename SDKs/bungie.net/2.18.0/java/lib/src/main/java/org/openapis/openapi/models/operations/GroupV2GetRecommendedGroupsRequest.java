@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetRecommendedGroupsRequest {
-    
-    public GroupV2GetRecommendedGroupsPathParams pathParams;
-    public GroupV2GetRecommendedGroupsRequest withPathParams(GroupV2GetRecommendedGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Requested range in which to pull recommended groups
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=createDateRange")
+    public Integer createDateRange;
+    public GroupV2GetRecommendedGroupsRequest withCreateDateRange(Integer createDateRange) {
+        this.createDateRange = createDateRange;
         return this;
     }
     
-    
-    public GroupV2GetRecommendedGroupsSecurity security;
-    public GroupV2GetRecommendedGroupsRequest withSecurity(GroupV2GetRecommendedGroupsSecurity security) {
-        this.security = security;
+    /**
+     * Type of groups requested
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupType")
+    public Integer groupType;
+    public GroupV2GetRecommendedGroupsRequest withGroupType(Integer groupType) {
+        this.groupType = groupType;
         return this;
     }
     

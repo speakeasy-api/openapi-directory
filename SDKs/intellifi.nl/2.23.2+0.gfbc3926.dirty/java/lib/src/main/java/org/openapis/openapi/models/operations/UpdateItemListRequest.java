@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateItemListRequest {
-    
-    public UpdateItemListPathParams pathParams;
-    public UpdateItemListRequest withPathParams(UpdateItemListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object containing item list information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ItemListInput request;
-    public UpdateItemListRequest withRequest(org.openapis.openapi.models.shared.ItemListInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ItemListInput itemListInput;
+    public UpdateItemListRequest withItemListInput(org.openapis.openapi.models.shared.ItemListInput itemListInput) {
+        this.itemListInput = itemListInput;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateItemListRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyUsageLimitRequest {
-    
-    public GETModifyUsageLimitQueryParams queryParams;
-    public GETModifyUsageLimitRequest withQueryParams(GETModifyUsageLimitQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyUsageLimitActionEnum action;
+    public GETModifyUsageLimitRequest withAction(GETModifyUsageLimitActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The new limit amount. For more information about this parameter, see &lt;a&gt;UsageLimit&lt;/a&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Amount")
+    public Long amount;
+    public GETModifyUsageLimitRequest withAmount(Long amount) {
+        this.amount = amount;
+        return this;
+    }
     
-    public GETModifyUsageLimitHeaders headers;
-    public GETModifyUsageLimitRequest withHeaders(GETModifyUsageLimitHeaders headers) {
-        this.headers = headers;
+    /**
+     * The new action that Amazon Redshift takes when the limit is reached. For more information about this parameter, see &lt;a&gt;UsageLimit&lt;/a&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BreachAction")
+    public GETModifyUsageLimitBreachActionEnum breachAction;
+    public GETModifyUsageLimitRequest withBreachAction(GETModifyUsageLimitBreachActionEnum breachAction) {
+        this.breachAction = breachAction;
+        return this;
+    }
+    
+    /**
+     * The identifier of the usage limit to modify.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UsageLimitId")
+    public String usageLimitId;
+    public GETModifyUsageLimitRequest withUsageLimitId(String usageLimitId) {
+        this.usageLimitId = usageLimitId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyUsageLimitVersionEnum version;
+    public GETModifyUsageLimitRequest withVersion(GETModifyUsageLimitVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyUsageLimitRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyUsageLimitRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyUsageLimitRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyUsageLimitRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyUsageLimitRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyUsageLimitRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyUsageLimitRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

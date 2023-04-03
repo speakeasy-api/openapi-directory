@@ -4,27 +4,74 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTaxationItemsOfDebitMemoItemRequest {
-    
-    public GETTaxationItemsOfDebitMemoItemPathParams pathParams;
-    public GETTaxationItemsOfDebitMemoItemRequest withPathParams(GETTaxationItemsOfDebitMemoItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETTaxationItemsOfDebitMemoItemRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
-    
-    public GETTaxationItemsOfDebitMemoItemQueryParams queryParams;
-    public GETTaxationItemsOfDebitMemoItemRequest withQueryParams(GETTaxationItemsOfDebitMemoItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETTaxationItemsOfDebitMemoItemRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
+    /**
+     * The unique ID of a debit memo. For example, 8a8082e65b27f6c3015ba419f3c2644e.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=debitMemoId")
+    public String debitMemoId;
+    public GETTaxationItemsOfDebitMemoItemRequest withDebitMemoId(String debitMemoId) {
+        this.debitMemoId = debitMemoId;
+        return this;
+    }
     
-    public GETTaxationItemsOfDebitMemoItemHeaders headers;
-    public GETTaxationItemsOfDebitMemoItemRequest withHeaders(GETTaxationItemsOfDebitMemoItemHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of a debit memo item. You can get the debit memo item ID from the response of [List debit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_DebitMemoItems).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dmitemid")
+    public String dmitemid;
+    public GETTaxationItemsOfDebitMemoItemRequest withDmitemid(String dmitemid) {
+        this.dmitemid = dmitemid;
+        return this;
+    }
+    
+    /**
+     * Page number.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GETTaxationItemsOfDebitMemoItemRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETTaxationItemsOfDebitMemoItemRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

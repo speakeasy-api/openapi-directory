@@ -7,31 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMessageRequest {
-    
-    public UpdateMessagePathParams pathParams;
-    public UpdateMessageRequest withPathParams(UpdateMessagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public UpdateMessageRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateMessageUpdateMessageRequest request;
-    public UpdateMessageRequest withRequest(UpdateMessageUpdateMessageRequest request) {
-        this.request = request;
+    public UpdateMessageUpdateMessageRequest requestBody;
+    public UpdateMessageRequest withRequestBody(UpdateMessageUpdateMessageRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateMessageSecurity security;
-    public UpdateMessageRequest withSecurity(UpdateMessageSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateMessageRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateMessageRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateMessageRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

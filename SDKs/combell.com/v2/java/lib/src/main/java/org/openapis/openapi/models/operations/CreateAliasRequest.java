@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAliasRequest {
-    
-    public CreateAliasPathParams pathParams;
-    public CreateAliasRequest withPathParams(CreateAliasPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateAliasQueryParams queryParams;
-    public CreateAliasRequest withQueryParams(CreateAliasQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains the alias information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateAliasRequest request;
-    public CreateAliasRequest withRequest(org.openapis.openapi.models.shared.CreateAliasRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateAliasRequest createAliasRequest;
+    public CreateAliasRequest withCreateAliasRequest(org.openapis.openapi.models.shared.CreateAliasRequest createAliasRequest) {
+        this.createAliasRequest = createAliasRequest;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public CreateAliasRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Mail zone domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public CreateAliasRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

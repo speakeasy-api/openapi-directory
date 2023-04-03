@@ -7,24 +7,61 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTCreateOrderAsynchronouslyRequest {
-    
-    public POSTCreateOrderAsynchronouslyQueryParams queryParams;
-    public POSTCreateOrderAsynchronouslyRequest withQueryParams(POSTCreateOrderAsynchronouslyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public POSTCreateOrderAsynchronouslyHeaders headers;
-    public POSTCreateOrderAsynchronouslyRequest withHeaders(POSTCreateOrderAsynchronouslyHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.POSTOrderRequestType request;
-    public POSTCreateOrderAsynchronouslyRequest withRequest(org.openapis.openapi.models.shared.POSTOrderRequestType request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.POSTOrderRequestType postOrderRequestType;
+    public POSTCreateOrderAsynchronouslyRequest withPOSTOrderRequestType(org.openapis.openapi.models.shared.POSTOrderRequestType postOrderRequestType) {
+        this.postOrderRequestType = postOrderRequestType;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public POSTCreateOrderAsynchronouslyRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public POSTCreateOrderAsynchronouslyRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * Specify whether to return IDs for the [Get job status and response](https://www.zuora.com/developer/api-reference/#operation/GET_JobStatusAndResponse) operation. If you set this query parameter to `true`, the corresponding IDs, which are associated with the numbers returned in this operation, can be returned in the "Get job status and response" response body.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnIds")
+    public Boolean returnIds;
+    public POSTCreateOrderAsynchronouslyRequest withReturnIds(Boolean returnIds) {
+        this.returnIds = returnIds;
+        return this;
+    }
+    
+    /**
+     * The minor version of the Zuora REST API. 
+     * 
+     * You need to set this parameter if you want to use the following fields:
+     * * subscriptions
+     * * subscriptionNumbers
+     * * subscriptionIds (when the `returnId` query parameter is set to `true`)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=zuora-version")
+    public String zuoraVersion;
+    public POSTCreateOrderAsynchronouslyRequest withZuoraVersion(String zuoraVersion) {
+        this.zuoraVersion = zuoraVersion;
         return this;
     }
     

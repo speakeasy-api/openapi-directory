@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceNotificationRequest {
-    
-    public InvoiceNotificationPathParams pathParams;
-    public InvoiceNotificationRequest withPathParams(InvoiceNotificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InvoiceNotificationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public InvoiceNotificationHeaders headers;
-    public InvoiceNotificationRequest withHeaders(InvoiceNotificationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InvoiceNotificationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InvoiceNotificationRequest request;
-    public InvoiceNotificationRequest withRequest(org.openapis.openapi.models.shared.InvoiceNotificationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InvoiceNotificationRequest invoiceNotificationRequest;
+    public InvoiceNotificationRequest withInvoiceNotificationRequest(org.openapis.openapi.models.shared.InvoiceNotificationRequest invoiceNotificationRequest) {
+        this.invoiceNotificationRequest = invoiceNotificationRequest;
+        return this;
+    }
+    
+    /**
+     * Unique code that identifies the order whose invoice is being sent.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public InvoiceNotificationRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

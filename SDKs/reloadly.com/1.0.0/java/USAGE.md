@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateANewQuestionRequestBody;
-import org.openapis.openapi.models.operations.CreateANewQuestionRequest;
 import org.openapis.openapi.models.operations.CreateANewQuestionResponse;
 
 public class Application {
@@ -14,16 +13,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateANewQuestionRequest req = new CreateANewQuestionRequest() {{
-                request = new CreateANewQuestionRequestBody() {{
-                    choices = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
-                    question = "unde";
+            CreateANewQuestionRequestBody req = new CreateANewQuestionRequestBody() {{
+                choices = new String[]{{
+                    add("provident"),
+                    add("distinctio"),
+                    add("quibusdam"),
                 }};
-            }};            
+                question = "unde";
+            }}            
 
             CreateANewQuestionResponse res = sdk.createANewQuestion(req);
 

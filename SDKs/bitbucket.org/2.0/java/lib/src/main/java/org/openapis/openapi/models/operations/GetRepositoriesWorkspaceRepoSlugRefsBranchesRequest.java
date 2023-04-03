@@ -4,27 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugRefsBranchesPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withPathParams(GetRepositoriesWorkspaceRepoSlugRefsBranchesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugRefsBranchesQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugRefsBranchesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
+    /**
+     * Field by which the results should be sorted as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering). The `name`
+     * field is handled specially for branches in that, if specified as the sort field, it
+     * uses a natural sort order instead of the default lexicographical sort order. For example,
+     * it will return ['branch1', 'branch2', 'branch10'] instead of ['branch1', 'branch10', 'branch2'].
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withSecurity(GetRepositoriesWorkspaceRepoSlugRefsBranchesSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugRefsBranchesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

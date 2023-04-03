@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPricingPipelineCatalogPriceTableIdRequest {
-    
-    public PutPricingPipelineCatalogPriceTableIdPathParams pathParams;
-    public PutPricingPipelineCatalogPriceTableIdRequest withPathParams(PutPricingPipelineCatalogPriceTableIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PutPricingPipelineCatalogPriceTableIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PutPricingPipelineCatalogPriceTableIdHeaders headers;
-    public PutPricingPipelineCatalogPriceTableIdRequest withHeaders(PutPricingPipelineCatalogPriceTableIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PutPricingPipelineCatalogPriceTableIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutPricingPipelineCatalogPriceTableIdRequestBody request;
-    public PutPricingPipelineCatalogPriceTableIdRequest withRequest(PutPricingPipelineCatalogPriceTableIdRequestBody request) {
-        this.request = request;
+    public PutPricingPipelineCatalogPriceTableIdRequestBody requestBody;
+    public PutPricingPipelineCatalogPriceTableIdRequest withRequestBody(PutPricingPipelineCatalogPriceTableIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Price Table Name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
+    public String priceTableId;
+    public PutPricingPipelineCatalogPriceTableIdRequest withPriceTableId(String priceTableId) {
+        this.priceTableId = priceTableId;
         return this;
     }
     

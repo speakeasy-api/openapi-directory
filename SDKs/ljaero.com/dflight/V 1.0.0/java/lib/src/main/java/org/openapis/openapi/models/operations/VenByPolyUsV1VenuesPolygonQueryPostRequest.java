@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VenByPolyUsV1VenuesPolygonQueryPostRequest {
-    
-    public VenByPolyUsV1VenuesPolygonQueryPostHeaders headers;
-    public VenByPolyUsV1VenuesPolygonQueryPostRequest withHeaders(VenByPolyUsV1VenuesPolygonQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.VenuesByPolygon venuesByPolygon;
+    public VenByPolyUsV1VenuesPolygonQueryPostRequest withVenuesByPolygon(org.openapis.openapi.models.shared.VenuesByPolygon venuesByPolygon) {
+        this.venuesByPolygon = venuesByPolygon;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VenuesByPolygon request;
-    public VenByPolyUsV1VenuesPolygonQueryPostRequest withRequest(org.openapis.openapi.models.shared.VenuesByPolygon request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public VenByPolyUsV1VenuesPolygonQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

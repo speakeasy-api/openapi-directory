@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVSMAccountRequest {
-    
-    public GetVSMAccountPathParams pathParams;
-    public GetVSMAccountRequest withPathParams(GetVSMAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetVSMAccountSecurity security;
-    public GetVSMAccountRequest withSecurity(GetVSMAccountSecurity security) {
-        this.security = security;
+    /**
+     * External id of the account you want to retrieve. In this case it will be your Viber Service Message ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
+    public String externalId;
+    public GetVSMAccountRequest withExternalId(String externalId) {
+        this.externalId = externalId;
         return this;
     }
     

@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistibutionReleasesInstallAnalyticsRequest {
-    
-    public DistibutionReleasesInstallAnalyticsPathParams pathParams;
-    public DistibutionReleasesInstallAnalyticsRequest withPathParams(DistibutionReleasesInstallAnalyticsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The install analytics request payload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistibutionReleasesInstallAnalyticsRequestBody request;
-    public DistibutionReleasesInstallAnalyticsRequest withRequest(DistibutionReleasesInstallAnalyticsRequestBody request) {
-        this.request = request;
+    public DistibutionReleasesInstallAnalyticsRequestBody requestBody;
+    public DistibutionReleasesInstallAnalyticsRequest withRequestBody(DistibutionReleasesInstallAnalyticsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The name of the app
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DistibutionReleasesInstallAnalyticsRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    
+    /**
+     * The name of the app owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DistibutionReleasesInstallAnalyticsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

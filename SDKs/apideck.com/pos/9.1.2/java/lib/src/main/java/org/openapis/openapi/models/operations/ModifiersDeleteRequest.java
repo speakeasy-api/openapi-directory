@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ModifiersDeleteRequest {
-    
-    public ModifiersDeletePathParams pathParams;
-    public ModifiersDeleteRequest withPathParams(ModifiersDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Apply filters
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public org.openapis.openapi.models.shared.ModifierGroupFilter filter;
+    public ModifiersDeleteRequest withFilter(org.openapis.openapi.models.shared.ModifierGroupFilter filter) {
+        this.filter = filter;
         return this;
     }
     
-    
-    public ModifiersDeleteQueryParams queryParams;
-    public ModifiersDeleteRequest withQueryParams(ModifiersDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ModifiersDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ModifiersDeleteHeaders headers;
-    public ModifiersDeleteRequest withHeaders(ModifiersDeleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public ModifiersDeleteRequest withRaw(Boolean raw) {
+        this.raw = raw;
         return this;
     }
     
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ModifiersDeleteRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
     
-    public ModifiersDeleteSecurity security;
-    public ModifiersDeleteRequest withSecurity(ModifiersDeleteSecurity security) {
-        this.security = security;
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public ModifiersDeleteRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public ModifiersDeleteRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

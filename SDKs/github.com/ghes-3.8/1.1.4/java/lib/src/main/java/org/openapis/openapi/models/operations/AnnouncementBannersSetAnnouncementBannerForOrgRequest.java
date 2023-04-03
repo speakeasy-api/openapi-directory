@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnnouncementBannersSetAnnouncementBannerForOrgRequest {
-    
-    public AnnouncementBannersSetAnnouncementBannerForOrgPathParams pathParams;
-    public AnnouncementBannersSetAnnouncementBannerForOrgRequest withPathParams(AnnouncementBannersSetAnnouncementBannerForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Announcement announcement;
+    public AnnouncementBannersSetAnnouncementBannerForOrgRequest withAnnouncement(org.openapis.openapi.models.shared.Announcement announcement) {
+        this.announcement = announcement;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Announcement request;
-    public AnnouncementBannersSetAnnouncementBannerForOrgRequest withRequest(org.openapis.openapi.models.shared.Announcement request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public AnnouncementBannersSetAnnouncementBannerForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

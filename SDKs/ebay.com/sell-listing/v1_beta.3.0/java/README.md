@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateItemDraftSecurity;
-import org.openapis.openapi.models.operations.CreateItemDraftHeaders;
 import org.openapis.openapi.models.operations.CreateItemDraftRequest;
 import org.openapis.openapi.models.operations.CreateItemDraftResponse;
 import org.openapis.openapi.models.shared.ItemDraft;
@@ -27,7 +26,6 @@ import org.openapis.openapi.models.shared.Aspect;
 import org.openapis.openapi.models.shared.PricingSummary;
 import org.openapis.openapi.models.shared.Amount;
 import org.openapis.openapi.models.shared.Charity;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,67 +34,65 @@ public class Application {
                 .build();
 
             CreateItemDraftRequest req = new CreateItemDraftRequest() {{
-                security = new CreateItemDraftSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                headers = new CreateItemDraftHeaders() {{
-                    contentLanguage = "corrupti";
-                    xEbayCMarketplaceId = "provident";
-                }};
-                request = new ItemDraft() {{
-                    categoryId = "distinctio";
+                contentLanguage = "corrupti";
+                itemDraft = new ItemDraft() {{
+                    categoryId = "provident";
                     charity = new Charity() {{
-                        charityId = "quibusdam";
-                        donationPercentage = "unde";
+                        charityId = "distinctio";
+                        donationPercentage = "quibusdam";
                     }};
-                    condition = "nulla";
-                    format = "corrupti";
+                    condition = "unde";
+                    format = "nulla";
                     pricingSummary = new PricingSummary() {{
                         auctionReservePrice = new Amount() {{
-                            currency = "illum";
-                            value = "vel";
+                            currency = "corrupti";
+                            value = "illum";
                         }};
                         auctionStartPrice = new Amount() {{
-                            currency = "error";
-                            value = "deserunt";
+                            currency = "vel";
+                            value = "error";
                         }};
                         price = new Amount() {{
-                            currency = "suscipit";
-                            value = "iure";
+                            currency = "deserunt";
+                            value = "suscipit";
                         }};
                     }};
                     product = new Product() {{
                         aspects = new org.openapis.openapi.models.shared.Aspect[]{{
                             add(new Aspect() {{
-                                name = "debitis";
+                                name = "magnam";
                                 values = new String[]{{
+                                    add("ipsa"),
                                     add("delectus"),
+                                    add("tempora"),
+                                    add("suscipit"),
                                 }};
                             }}),
                             add(new Aspect() {{
-                                name = "tempora";
+                                name = "molestiae";
                                 values = new String[]{{
-                                    add("molestiae"),
-                                    add("minus"),
+                                    add("placeat"),
+                                    add("voluptatum"),
+                                    add("iusto"),
+                                    add("excepturi"),
                                 }};
                             }}),
                         }};
-                        brand = "placeat";
-                        description = "voluptatum";
-                        epid = "iusto";
+                        brand = "nisi";
+                        description = "recusandae";
+                        epid = "temporibus";
                         imageUrls = new String[]{{
-                            add("nisi"),
-                            add("recusandae"),
-                            add("temporibus"),
+                            add("quis"),
                         }};
                         title = "Mr.";
                     }};
                 }};
-            }};            
+                xEbayCMarketplaceId = "deserunt";
+            }}            
 
-            CreateItemDraftResponse res = sdk.itemDraft.createItemDraft(req);
+            CreateItemDraftResponse res = sdk.itemDraft.createItemDraft(req, new CreateItemDraftSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.itemDraftResponse.isPresent()) {
                 // handle response
@@ -108,7 +104,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### itemDraft

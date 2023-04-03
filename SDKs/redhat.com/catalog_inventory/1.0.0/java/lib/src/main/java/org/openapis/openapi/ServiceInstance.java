@@ -46,7 +46,7 @@ public class ServiceInstance {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceInstancesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListServiceInstancesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -86,7 +86,7 @@ public class ServiceInstance {
      */
     public org.openapis.openapi.models.operations.ShowServiceInstanceResponse showServiceInstance(org.openapis.openapi.models.operations.ShowServiceInstanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowServiceInstancePathParams.class, baseUrl, "/service_instances/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowServiceInstanceRequest.class, baseUrl, "/service_instances/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

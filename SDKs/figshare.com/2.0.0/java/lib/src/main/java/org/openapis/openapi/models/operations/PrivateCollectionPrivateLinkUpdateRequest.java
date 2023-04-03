@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionPrivateLinkUpdateRequest {
-    
-    public PrivateCollectionPrivateLinkUpdatePathParams pathParams;
-    public PrivateCollectionPrivateLinkUpdateRequest withPathParams(PrivateCollectionPrivateLinkUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CollectionPrivateLinkCreator request;
-    public PrivateCollectionPrivateLinkUpdateRequest withRequest(org.openapis.openapi.models.shared.CollectionPrivateLinkCreator request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CollectionPrivateLinkCreator collectionPrivateLinkCreator;
+    public PrivateCollectionPrivateLinkUpdateRequest withCollectionPrivateLinkCreator(org.openapis.openapi.models.shared.CollectionPrivateLinkCreator collectionPrivateLinkCreator) {
+        this.collectionPrivateLinkCreator = collectionPrivateLinkCreator;
         return this;
     }
     
+    /**
+     * Collection unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public Long collectionId;
+    public PrivateCollectionPrivateLinkUpdateRequest withCollectionId(Long collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
     
-    public PrivateCollectionPrivateLinkUpdateSecurity security;
-    public PrivateCollectionPrivateLinkUpdateRequest withSecurity(PrivateCollectionPrivateLinkUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Private link token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
+    public String linkId;
+    public PrivateCollectionPrivateLinkUpdateRequest withLinkId(String linkId) {
+        this.linkId = linkId;
         return this;
     }
     

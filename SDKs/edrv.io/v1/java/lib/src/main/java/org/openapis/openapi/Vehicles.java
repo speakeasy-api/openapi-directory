@@ -39,13 +39,13 @@ public class Vehicles {
      */
     public org.openapis.openapi.models.operations.GetVehicleResponse getVehicle(org.openapis.openapi.models.operations.GetVehicleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehiclePathParams.class, baseUrl, "/v1/vehicles/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleRequest.class, baseUrl, "/v1/vehicles/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVehicleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVehicleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -78,7 +78,7 @@ public class Vehicles {
      */
     public org.openapis.openapi.models.operations.GetVehicleBatteryResponse getVehicleBattery(org.openapis.openapi.models.operations.GetVehicleBatteryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleBatteryPathParams.class, baseUrl, "/v1/vehicles/{id}/battery", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleBatteryRequest.class, baseUrl, "/v1/vehicles/{id}/battery", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -111,7 +111,7 @@ public class Vehicles {
      */
     public org.openapis.openapi.models.operations.GetVehicleChargeResponse getVehicleCharge(org.openapis.openapi.models.operations.GetVehicleChargeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleChargePathParams.class, baseUrl, "/v1/vehicles/{id}/charge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleChargeRequest.class, baseUrl, "/v1/vehicles/{id}/charge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -144,7 +144,7 @@ public class Vehicles {
      */
     public org.openapis.openapi.models.operations.GetVehicleLocationResponse getVehicleLocation(org.openapis.openapi.models.operations.GetVehicleLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleLocationPathParams.class, baseUrl, "/v1/vehicles/{id}/location", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleLocationRequest.class, baseUrl, "/v1/vehicles/{id}/location", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -177,7 +177,7 @@ public class Vehicles {
      */
     public org.openapis.openapi.models.operations.GetVehicleOdometerResponse getVehicleOdometer(org.openapis.openapi.models.operations.GetVehicleOdometerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleOdometerPathParams.class, baseUrl, "/v1/vehicles/{id}/odometer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVehicleOdometerRequest.class, baseUrl, "/v1/vehicles/{id}/odometer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -216,7 +216,7 @@ public class Vehicles {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVehiclesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVehiclesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -257,12 +257,12 @@ public class Vehicles {
      */
     public org.openapis.openapi.models.operations.PostChargeResponse postCharge(org.openapis.openapi.models.operations.PostChargeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostChargePathParams.class, baseUrl, "/v1/vehicles/{id}/charge", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostChargeRequest.class, baseUrl, "/v1/vehicles/{id}/charge", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

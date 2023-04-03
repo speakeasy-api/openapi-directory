@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiSendMessageFormRequest {
-    
-    public OrderApiSendMessageFormPathParams pathParams;
-    public OrderApiSendMessageFormRequest withPathParams(OrderApiSendMessageFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The message model
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel request;
-    public OrderApiSendMessageFormRequest withRequest(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel;
+    public OrderApiSendMessageFormRequest withRechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel) {
+        this.rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel = rechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel;
+        return this;
+    }
+    
+    /**
+     * The id of the order
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrderApiSendMessageFormRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiInfoItemRequest {
-    
-    public GetApiInfoItemQueryParams queryParams;
-    public GetApiInfoItemRequest withQueryParams(GetApiInfoItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetApiInfoItemRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

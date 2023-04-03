@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayByPlayRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public PlayByPlayFormatEnum format;
+    public PlayByPlayRequest withFormat(PlayByPlayFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public PlayByPlayPathParams pathParams;
-    public PlayByPlayRequest withPathParams(PlayByPlayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The GameID of an NHL game.  GameIDs can be found in the Games API.  Valid entries are &lt;code&gt;14620&lt;/code&gt; or &lt;code&gt;16905&lt;/code&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gameid")
+    public String gameid;
+    public PlayByPlayRequest withGameid(String gameid) {
+        this.gameid = gameid;
         return this;
     }
     

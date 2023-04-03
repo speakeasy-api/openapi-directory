@@ -4,13 +4,155 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidatesTotalsByOfficeRequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCandidatesTotalsByOfficeRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetCandidatesTotalsByOfficeQueryParams queryParams;
-    public GetCandidatesTotalsByOfficeRequest withQueryParams(GetCandidatesTotalsByOfficeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * `True` indicates that full election period of a candidate.
+     * `False` indicates that two year election cycle.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
+    public Boolean electionFull;
+    public GetCandidatesTotalsByOfficeRequest withElectionFull(Boolean electionFull) {
+        this.electionFull = electionFull;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
+    public Integer[] electionYear;
+    public GetCandidatesTotalsByOfficeRequest withElectionYear(Integer[] electionYear) {
+        this.electionYear = electionYear;
+        return this;
+    }
+    
+    /**
+     *  Candidates who are actively seeking office. If no value is specified, all candidates
+     * are returned. When True is specified, only active candidates are returned. When False is
+     * specified, only inactive candidates are returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active_candidate")
+    public Boolean isActiveCandidate;
+    public GetCandidatesTotalsByOfficeRequest withIsActiveCandidate(Boolean isActiveCandidate) {
+        this.isActiveCandidate = isActiveCandidate;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that are applicable to a given two-year
+     * period. This cycle follows the traditional House election cycle and
+     * subdivides the presidential and Senate elections into comparable
+     * two-year blocks. The cycle begins with an odd year and is named for its
+     * ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_election_cycle")
+    public Integer maxElectionCycle;
+    public GetCandidatesTotalsByOfficeRequest withMaxElectionCycle(Integer maxElectionCycle) {
+        this.maxElectionCycle = maxElectionCycle;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that are applicable to a given two-year
+     * period. This cycle follows the traditional House election cycle and
+     * subdivides the presidential and Senate elections into comparable
+     * two-year blocks. The cycle begins with an odd year and is named for its
+     * ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_election_cycle")
+    public Integer minElectionCycle;
+    public GetCandidatesTotalsByOfficeRequest withMinElectionCycle(Integer minElectionCycle) {
+        this.minElectionCycle = minElectionCycle;
+        return this;
+    }
+    
+    /**
+     * Federal office candidate runs for: H, S or P
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public GetCandidatesTotalsByOfficeOfficeEnum office;
+    public GetCandidatesTotalsByOfficeRequest withOffice(GetCandidatesTotalsByOfficeOfficeEnum office) {
+        this.office = office;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCandidatesTotalsByOfficeRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCandidatesTotalsByOfficeRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetCandidatesTotalsByOfficeRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCandidatesTotalsByOfficeRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCandidatesTotalsByOfficeRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCandidatesTotalsByOfficeRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

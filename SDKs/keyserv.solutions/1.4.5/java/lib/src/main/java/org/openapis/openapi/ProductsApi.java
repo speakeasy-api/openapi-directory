@@ -31,7 +31,7 @@ public class ProductsApi {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.ProductsApiCountResponse productsApiCount(org.openapis.openapi.models.operations.ProductsApiCountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductsApiCountResponse productsApiCount(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ProductsApi/Count");
         
@@ -70,13 +70,13 @@ public class ProductsApi {
 
     public org.openapis.openapi.models.operations.ProductsApiDeleteProductResponse productsApiDeleteProduct(org.openapis.openapi.models.operations.ProductsApiDeleteProductRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductsApiDeleteProductPathParams.class, baseUrl, "/v1/ProductsApi/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductsApiDeleteProductRequest.class, baseUrl, "/v1/ProductsApi/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -104,13 +104,13 @@ public class ProductsApi {
 
     public org.openapis.openapi.models.operations.ProductsApiDeleteProduct2Response productsApiDeleteProduct2(org.openapis.openapi.models.operations.ProductsApiDeleteProduct2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductsApiDeleteProduct2PathParams.class, baseUrl, "/v1/ProductsApi/{serial}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProductsApiDeleteProduct2Request.class, baseUrl, "/v1/ProductsApi/{serial}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -143,13 +143,13 @@ public class ProductsApi {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProductsApiFindQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProductsApiFindRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -186,13 +186,13 @@ public class ProductsApi {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProductsApiListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ProductsApiListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -222,7 +222,7 @@ public class ProductsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ProductsApiPatchProductResponse productsApiPatchProduct(org.openapis.openapi.models.operations.ProductsApiPatchProductRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductsApiPatchProductResponse productsApiPatchProduct(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ProductsApi");
         
@@ -253,7 +253,7 @@ public class ProductsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ProductsApiPatchProduct2Response productsApiPatchProduct2(org.openapis.openapi.models.operations.ProductsApiPatchProduct2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductsApiPatchProduct2Response productsApiPatchProduct2(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ProductsApi");
         
@@ -284,7 +284,7 @@ public class ProductsApi {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ProductsApiSaveResponse productsApiSave(org.openapis.openapi.models.operations.ProductsApiSaveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ProductsApiSaveResponse productsApiSave(Object request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ProductsApi/Save");
         

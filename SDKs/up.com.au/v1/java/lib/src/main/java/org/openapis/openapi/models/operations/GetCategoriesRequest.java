@@ -4,13 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoriesRequest {
-    
-    public GetCategoriesQueryParams queryParams;
-    public GetCategoriesRequest withQueryParams(GetCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of a parent category for which to
+     * return only its children. Providing an invalid category
+     * identifier results in a `404` response.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[parent]")
+    public String filterParent;
+    public GetCategoriesRequest withFilterParent(String filterParent) {
+        this.filterParent = filterParent;
         return this;
     }
     

@@ -33,25 +33,26 @@ public class Accounts {
     /**
      * Get Auto ad code for a given ad client.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodeResponse adsenseAccountsAdclientsGetAdCode(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodeResponse adsenseAccountsAdclientsGetAdCode(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodeRequest request, org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodePathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adcode", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodeRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adcode", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsGetAdCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class Accounts {
     /**
      * List all ad clients in the specified account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListResponse adsenseAccountsAdclientsList(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListResponse adsenseAccountsAdclientsList(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListPathParams.class, baseUrl, "/accounts/{accountId}/adclients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListRequest.class, baseUrl, "/accounts/{accountId}/adclients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdclientsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,25 +125,26 @@ public class Accounts {
     /**
      * List all custom channels which the specified ad unit belongs to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListResponse adsenseAccountsAdunitsCustomchannelsList(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListResponse adsenseAccountsAdunitsCustomchannelsList(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListPathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/customchannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/customchannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsCustomchannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,25 +171,26 @@ public class Accounts {
     /**
      * Gets the specified ad unit in the specified ad client for the specified account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetResponse adsenseAccountsAdunitsGet(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetResponse adsenseAccountsAdunitsGet(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetRequest request, org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetPathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,25 +217,26 @@ public class Accounts {
     /**
      * Get ad code for the specified ad unit.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodeResponse adsenseAccountsAdunitsGetAdCode(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodeResponse adsenseAccountsAdunitsGetAdCode(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodeRequest request, org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodePathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodeRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adunits/{adUnitId}/adcode", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsGetAdCodeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -258,25 +263,26 @@ public class Accounts {
     /**
      * List all ad units in the specified ad client for the specified account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListResponse adsenseAccountsAdunitsList(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListResponse adsenseAccountsAdunitsList(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListPathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adunits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/adunits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAdunitsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -303,25 +309,26 @@ public class Accounts {
     /**
      * Dismiss (delete) the specified alert from the specified publisher AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeleteResponse adsenseAccountsAlertsDelete(org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeleteResponse adsenseAccountsAlertsDelete(org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeleteRequest request, org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeletePathParams.class, baseUrl, "/accounts/{accountId}/alerts/{alertId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeleteRequest.class, baseUrl, "/accounts/{accountId}/alerts/{alertId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAlertsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -342,25 +349,26 @@ public class Accounts {
     /**
      * List the alerts for the specified AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsAlertsListResponse adsenseAccountsAlertsList(org.openapis.openapi.models.operations.AdsenseAccountsAlertsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsAlertsListResponse adsenseAccountsAlertsList(org.openapis.openapi.models.operations.AdsenseAccountsAlertsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsAlertsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAlertsListPathParams.class, baseUrl, "/accounts/{accountId}/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsAlertsListRequest.class, baseUrl, "/accounts/{accountId}/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAlertsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsAlertsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -387,25 +395,26 @@ public class Accounts {
     /**
      * List all ad units in the specified custom channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListResponse adsenseAccountsCustomchannelsAdunitsList(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListResponse adsenseAccountsCustomchannelsAdunitsList(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListPathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}/adunits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}/adunits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsAdunitsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -432,25 +441,26 @@ public class Accounts {
     /**
      * Get the specified custom channel from the specified ad client for the specified account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetResponse adsenseAccountsCustomchannelsGet(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetResponse adsenseAccountsCustomchannelsGet(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetRequest request, org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetPathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/customchannels/{customChannelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -477,25 +487,26 @@ public class Accounts {
     /**
      * List all custom channels in the specified ad client for the specified account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListResponse adsenseAccountsCustomchannelsList(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListResponse adsenseAccountsCustomchannelsList(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListPathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/customchannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/customchannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsCustomchannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -522,25 +533,26 @@ public class Accounts {
     /**
      * Get information about the selected AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsGetResponse adsenseAccountsGet(org.openapis.openapi.models.operations.AdsenseAccountsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsGetResponse adsenseAccountsGet(org.openapis.openapi.models.operations.AdsenseAccountsGetRequest request, org.openapis.openapi.models.operations.AdsenseAccountsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsGetPathParams.class, baseUrl, "/accounts/{accountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsGetRequest.class, baseUrl, "/accounts/{accountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -567,10 +579,11 @@ public class Accounts {
     /**
      * List all accounts available to this AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsListResponse adsenseAccountsList(org.openapis.openapi.models.operations.AdsenseAccountsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsListResponse adsenseAccountsList(org.openapis.openapi.models.operations.AdsenseAccountsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/accounts");
         
@@ -578,14 +591,14 @@ public class Accounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -612,25 +625,26 @@ public class Accounts {
     /**
      * List the payments for the specified AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListResponse adsenseAccountsPaymentsList(org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListResponse adsenseAccountsPaymentsList(org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListPathParams.class, baseUrl, "/accounts/{accountId}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListRequest.class, baseUrl, "/accounts/{accountId}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsPaymentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -657,25 +671,26 @@ public class Accounts {
     /**
      * Generate an AdSense report based on the report request sent in the query parameters. Returns the result as JSON; to retrieve output in CSV format specify "alt=csv" as a query parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateResponse adsenseAccountsReportsGenerate(org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateResponse adsenseAccountsReportsGenerate(org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateRequest request, org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsReportsGeneratePathParams.class, baseUrl, "/accounts/{accountId}/reports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateRequest.class, baseUrl, "/accounts/{accountId}/reports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsReportsGenerateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -702,25 +717,26 @@ public class Accounts {
     /**
      * Generate an AdSense report based on the saved report ID sent in the query parameters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateResponse adsenseAccountsReportsSavedGenerate(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateResponse adsenseAccountsReportsSavedGenerate(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateRequest request, org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGeneratePathParams.class, baseUrl, "/accounts/{accountId}/reports/{savedReportId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateRequest.class, baseUrl, "/accounts/{accountId}/reports/{savedReportId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedGenerateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -747,25 +763,26 @@ public class Accounts {
     /**
      * List all saved reports in the specified AdSense account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListResponse adsenseAccountsReportsSavedList(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListResponse adsenseAccountsReportsSavedList(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListPathParams.class, baseUrl, "/accounts/{accountId}/reports/saved", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListRequest.class, baseUrl, "/accounts/{accountId}/reports/saved", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsReportsSavedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -792,25 +809,26 @@ public class Accounts {
     /**
      * List a specific saved ad style for the specified account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetResponse adsenseAccountsSavedadstylesGet(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetResponse adsenseAccountsSavedadstylesGet(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetRequest request, org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetPathParams.class, baseUrl, "/accounts/{accountId}/savedadstyles/{savedAdStyleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetRequest.class, baseUrl, "/accounts/{accountId}/savedadstyles/{savedAdStyleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -837,25 +855,26 @@ public class Accounts {
     /**
      * List all saved ad styles in the specified account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListResponse adsenseAccountsSavedadstylesList(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListResponse adsenseAccountsSavedadstylesList(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListPathParams.class, baseUrl, "/accounts/{accountId}/savedadstyles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListRequest.class, baseUrl, "/accounts/{accountId}/savedadstyles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsSavedadstylesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -882,25 +901,26 @@ public class Accounts {
     /**
      * List all URL channels in the specified ad client for the specified account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListResponse adsenseAccountsUrlchannelsList(org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListResponse adsenseAccountsUrlchannelsList(org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListRequest request, org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListPathParams.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/urlchannels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListRequest.class, baseUrl, "/accounts/{accountId}/adclients/{adClientId}/urlchannels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AdsenseAccountsUrlchannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

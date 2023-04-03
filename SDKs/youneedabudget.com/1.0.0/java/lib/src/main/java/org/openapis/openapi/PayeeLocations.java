@@ -41,7 +41,7 @@ public class PayeeLocations {
      */
     public org.openapis.openapi.models.operations.GetPayeeLocationByIdResponse getPayeeLocationById(org.openapis.openapi.models.operations.GetPayeeLocationByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeLocationByIdPathParams.class, baseUrl, "/budgets/{budget_id}/payee_locations/{payee_location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeLocationByIdRequest.class, baseUrl, "/budgets/{budget_id}/payee_locations/{payee_location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -89,7 +89,7 @@ public class PayeeLocations {
      */
     public org.openapis.openapi.models.operations.GetPayeeLocationsResponse getPayeeLocations(org.openapis.openapi.models.operations.GetPayeeLocationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeLocationsPathParams.class, baseUrl, "/budgets/{budget_id}/payee_locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeLocationsRequest.class, baseUrl, "/budgets/{budget_id}/payee_locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -137,7 +137,7 @@ public class PayeeLocations {
      */
     public org.openapis.openapi.models.operations.GetPayeeLocationsByPayeeResponse getPayeeLocationsByPayee(org.openapis.openapi.models.operations.GetPayeeLocationsByPayeeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeLocationsByPayeePathParams.class, baseUrl, "/budgets/{budget_id}/payees/{payee_id}/payee_locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPayeeLocationsByPayeeRequest.class, baseUrl, "/budgets/{budget_id}/payees/{payee_id}/payee_locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDraftPicksRequest {
+    /**
+     * Player college filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=college")
+    public String college;
+    public GetDraftPicksRequest withCollege(String college) {
+        this.college = college;
+        return this;
+    }
     
-    public GetDraftPicksQueryParams queryParams;
-    public GetDraftPicksRequest withQueryParams(GetDraftPicksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * College confrence abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetDraftPicksRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
+    
+    /**
+     * NFL team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nflTeam")
+    public String nflTeam;
+    public GetDraftPicksRequest withNflTeam(String nflTeam) {
+        this.nflTeam = nflTeam;
+        return this;
+    }
+    
+    /**
+     * NFL position filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
+    public String position;
+    public GetDraftPicksRequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetDraftPicksRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

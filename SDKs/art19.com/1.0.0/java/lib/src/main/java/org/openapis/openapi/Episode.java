@@ -41,10 +41,11 @@ public class Episode {
      * your account, depending on the filter(s) being used. Be careful to filter the results as needed.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEpisodesResponse getEpisodes(org.openapis.openapi.models.operations.GetEpisodesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEpisodesResponse getEpisodes(org.openapis.openapi.models.operations.GetEpisodesRequest request, org.openapis.openapi.models.operations.GetEpisodesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/episodes");
         
@@ -52,14 +53,14 @@ public class Episode {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEpisodesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEpisodesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -100,19 +101,20 @@ public class Episode {
     /**
      * Get a specific episode
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEpisodesIdResponse getEpisodesId(org.openapis.openapi.models.operations.GetEpisodesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEpisodesIdResponse getEpisodesId(org.openapis.openapi.models.operations.GetEpisodesIdRequest request, org.openapis.openapi.models.operations.GetEpisodesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEpisodesIdPathParams.class, baseUrl, "/episodes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEpisodesIdRequest.class, baseUrl, "/episodes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -145,25 +147,26 @@ public class Episode {
     /**
      * Get the episode released right after the specified one
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingResponse getEpisodesIdNextSibling(org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingResponse getEpisodesIdNextSibling(org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingRequest request, org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingPathParams.class, baseUrl, "/episodes/{id}/next_sibling", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingRequest.class, baseUrl, "/episodes/{id}/next_sibling", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEpisodesIdNextSiblingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -196,25 +199,26 @@ public class Episode {
     /**
      * Get the episode released right before the specified one
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingResponse getEpisodesIdPreviousSibling(org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingResponse getEpisodesIdPreviousSibling(org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingRequest request, org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingPathParams.class, baseUrl, "/episodes/{id}/previous_sibling", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingRequest.class, baseUrl, "/episodes/{id}/previous_sibling", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEpisodesIdPreviousSiblingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchAssetRequest {
-    
-    public FetchAssetPathParams pathParams;
-    public FetchAssetRequest withPathParams(FetchAssetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service to fetch the Asset resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchAssetRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchAssetSecurity security;
-    public FetchAssetRequest withSecurity(FetchAssetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchAssetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID that identifies the Asset resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchAssetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

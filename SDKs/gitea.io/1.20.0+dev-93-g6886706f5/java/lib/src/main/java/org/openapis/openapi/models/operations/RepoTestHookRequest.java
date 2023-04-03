@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoTestHookRequest {
-    
-    public RepoTestHookPathParams pathParams;
-    public RepoTestHookRequest withPathParams(RepoTestHookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of the hook to test
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoTestHookRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoTestHookRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RepoTestHookQueryParams queryParams;
-    public RepoTestHookRequest withQueryParams(RepoTestHookQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the commit/branch/tag, indicates which commit will be loaded to the webhook payload.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public RepoTestHookRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoTestHookRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

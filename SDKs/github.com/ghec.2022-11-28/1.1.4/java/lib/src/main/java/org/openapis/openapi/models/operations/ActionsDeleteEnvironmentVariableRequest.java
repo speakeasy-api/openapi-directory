@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDeleteEnvironmentVariableRequest {
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ActionsDeleteEnvironmentVariableRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
     
-    public ActionsDeleteEnvironmentVariablePathParams pathParams;
-    public ActionsDeleteEnvironmentVariableRequest withPathParams(ActionsDeleteEnvironmentVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsDeleteEnvironmentVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsDeleteEnvironmentVariableRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
         return this;
     }
     

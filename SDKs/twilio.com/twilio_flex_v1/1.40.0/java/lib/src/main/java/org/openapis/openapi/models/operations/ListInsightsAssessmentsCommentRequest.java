@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInsightsAssessmentsCommentRequest {
-    
-    public ListInsightsAssessmentsCommentQueryParams queryParams;
-    public ListInsightsAssessmentsCommentRequest withQueryParams(ListInsightsAssessmentsCommentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the agent.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AgentId")
+    public String agentId;
+    public ListInsightsAssessmentsCommentRequest withAgentId(String agentId) {
+        this.agentId = agentId;
         return this;
     }
     
-    
-    public ListInsightsAssessmentsCommentHeaders headers;
-    public ListInsightsAssessmentsCommentRequest withHeaders(ListInsightsAssessmentsCommentHeaders headers) {
-        this.headers = headers;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListInsightsAssessmentsCommentRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListInsightsAssessmentsCommentSecurity security;
-    public ListInsightsAssessmentsCommentRequest withSecurity(ListInsightsAssessmentsCommentSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListInsightsAssessmentsCommentRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListInsightsAssessmentsCommentRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListInsightsAssessmentsCommentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The id of the segment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SegmentId")
+    public String segmentId;
+    public ListInsightsAssessmentsCommentRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
+        return this;
+    }
+    
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public ListInsightsAssessmentsCommentRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

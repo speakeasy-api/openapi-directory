@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveInventoryTransferRequest {
-    
-    public RetrieveInventoryTransferPathParams pathParams;
-    public RetrieveInventoryTransferRequest withPathParams(RetrieveInventoryTransferPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveInventoryTransferSecurity security;
-    public RetrieveInventoryTransferRequest withSecurity(RetrieveInventoryTransferSecurity security) {
-        this.security = security;
+    /**
+     * ID of the [InventoryTransfer](https://developer.squareup.com/reference/square_2021-08-18/objects/InventoryTransfer) to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transfer_id")
+    public String transferId;
+    public RetrieveInventoryTransferRequest withTransferId(String transferId) {
+        this.transferId = transferId;
         return this;
     }
     

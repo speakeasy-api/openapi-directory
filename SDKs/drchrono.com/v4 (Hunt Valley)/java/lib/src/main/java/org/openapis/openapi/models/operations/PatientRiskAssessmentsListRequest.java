@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientRiskAssessmentsListRequest {
-    
-    public PatientRiskAssessmentsListQueryParams queryParams;
-    public PatientRiskAssessmentsListRequest withQueryParams(PatientRiskAssessmentsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public PatientRiskAssessmentsListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientRiskAssessmentsListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public PatientRiskAssessmentsListSecurity security;
-    public PatientRiskAssessmentsListRequest withSecurity(PatientRiskAssessmentsListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PatientRiskAssessmentsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PatientRiskAssessmentsListRequest withPatient(Long patient) {
+        this.patient = patient;
         return this;
     }
     

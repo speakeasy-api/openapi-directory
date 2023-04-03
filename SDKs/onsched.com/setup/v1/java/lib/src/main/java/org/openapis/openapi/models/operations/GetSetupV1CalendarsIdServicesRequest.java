@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1CalendarsIdServicesRequest {
-    
-    public GetSetupV1CalendarsIdServicesPathParams pathParams;
-    public GetSetupV1CalendarsIdServicesRequest withPathParams(GetSetupV1CalendarsIdServicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of calendar object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1CalendarsIdServicesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1CalendarsIdServicesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public GetSetupV1CalendarsIdServicesQueryParams queryParams;
-    public GetSetupV1CalendarsIdServicesRequest withQueryParams(GetSetupV1CalendarsIdServicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1CalendarsIdServicesRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

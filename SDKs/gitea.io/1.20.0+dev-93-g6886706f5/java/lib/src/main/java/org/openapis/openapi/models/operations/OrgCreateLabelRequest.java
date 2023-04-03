@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgCreateLabelRequest {
-    
-    public OrgCreateLabelPathParams pathParams;
-    public OrgCreateLabelRequest withPathParams(OrgCreateLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateLabelOption createLabelOption;
+    public OrgCreateLabelRequest withCreateLabelOption(org.openapis.openapi.models.shared.CreateLabelOption createLabelOption) {
+        this.createLabelOption = createLabelOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateLabelOption request;
-    public OrgCreateLabelRequest withRequest(org.openapis.openapi.models.shared.CreateLabelOption request) {
-        this.request = request;
+    /**
+     * name of the organization
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgCreateLabelRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     

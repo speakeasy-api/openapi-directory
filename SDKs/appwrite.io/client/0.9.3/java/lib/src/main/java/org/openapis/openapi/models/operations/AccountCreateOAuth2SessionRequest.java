@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountCreateOAuth2SessionRequest {
-    
-    public AccountCreateOAuth2SessionPathParams pathParams;
-    public AccountCreateOAuth2SessionRequest withPathParams(AccountCreateOAuth2SessionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * URL to redirect back to your app after a failed login attempt.  Only URLs from hostnames in your project platform list are allowed. This requirement helps to prevent an [open redirect](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) attack against your project API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=failure")
+    public String failure;
+    public AccountCreateOAuth2SessionRequest withFailure(String failure) {
+        this.failure = failure;
         return this;
     }
     
-    
-    public AccountCreateOAuth2SessionQueryParams queryParams;
-    public AccountCreateOAuth2SessionRequest withQueryParams(AccountCreateOAuth2SessionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth2 Provider. Currently, supported providers are: amazon, apple, bitbucket, bitly, box, discord, dropbox, facebook, github, gitlab, google, linkedin, microsoft, paypal, paypalSandbox, salesforce, slack, spotify, tradeshift, tradeshiftBox, twitch, vk, yahoo, yandex, wordpress.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=provider")
+    public String provider;
+    public AccountCreateOAuth2SessionRequest withProvider(String provider) {
+        this.provider = provider;
         return this;
     }
     
+    /**
+     * A list of custom OAuth2 scopes. Check each provider internal docs for a list of supported scopes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scopes")
+    public String[] scopes;
+    public AccountCreateOAuth2SessionRequest withScopes(String[] scopes) {
+        this.scopes = scopes;
+        return this;
+    }
     
-    public AccountCreateOAuth2SessionSecurity security;
-    public AccountCreateOAuth2SessionRequest withSecurity(AccountCreateOAuth2SessionSecurity security) {
-        this.security = security;
+    /**
+     * URL to redirect back to your app after a successful login attempt.  Only URLs from hostnames in your project platform list are allowed. This requirement helps to prevent an [open redirect](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html) attack against your project API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=success")
+    public String success;
+    public AccountCreateOAuth2SessionRequest withSuccess(String success) {
+        this.success = success;
         return this;
     }
     

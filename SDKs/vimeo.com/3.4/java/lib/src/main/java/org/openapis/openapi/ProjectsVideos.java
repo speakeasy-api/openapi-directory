@@ -34,19 +34,20 @@ public class ProjectsVideos {
      * Add a specific video to a project
      * This method adds a single video to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToProjectResponse addVideoToProject(org.openapis.openapi.models.operations.AddVideoToProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToProjectResponse addVideoToProject(org.openapis.openapi.models.operations.AddVideoToProjectRequest request, org.openapis.openapi.models.operations.AddVideoToProjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToProjectPathParams.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToProjectRequest.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -76,19 +77,20 @@ public class ProjectsVideos {
      * Add a specific video to a project
      * This method adds a single video to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoToProjectAlt1Response addVideoToProjectAlt1(org.openapis.openapi.models.operations.AddVideoToProjectAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoToProjectAlt1Response addVideoToProjectAlt1(org.openapis.openapi.models.operations.AddVideoToProjectAlt1Request request, org.openapis.openapi.models.operations.AddVideoToProjectAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToProjectAlt1PathParams.class, baseUrl, "/me/projects/{project_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoToProjectAlt1Request.class, baseUrl, "/me/projects/{project_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,25 +120,26 @@ public class ProjectsVideos {
      * Add a list of videos to a project
      * This method adds multiple videos to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideosToProjectResponse addVideosToProject(org.openapis.openapi.models.operations.AddVideosToProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideosToProjectResponse addVideosToProject(org.openapis.openapi.models.operations.AddVideosToProjectRequest request, org.openapis.openapi.models.operations.AddVideosToProjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideosToProjectPathParams.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideosToProjectRequest.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddVideosToProjectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddVideosToProjectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -166,25 +169,26 @@ public class ProjectsVideos {
      * Add a list of videos to a project
      * This method adds multiple videos to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideosToProjectAlt1Response addVideosToProjectAlt1(org.openapis.openapi.models.operations.AddVideosToProjectAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideosToProjectAlt1Response addVideosToProjectAlt1(org.openapis.openapi.models.operations.AddVideosToProjectAlt1Request request, org.openapis.openapi.models.operations.AddVideosToProjectAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideosToProjectAlt1PathParams.class, baseUrl, "/me/projects/{project_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideosToProjectAlt1Request.class, baseUrl, "/me/projects/{project_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddVideosToProjectAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AddVideosToProjectAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,25 +218,26 @@ public class ProjectsVideos {
      * Get all the videos in a project
      * This method gets all the videos that belong to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProjectVideosResponse getProjectVideos(org.openapis.openapi.models.operations.GetProjectVideosRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProjectVideosResponse getProjectVideos(org.openapis.openapi.models.operations.GetProjectVideosRequest request, org.openapis.openapi.models.operations.GetProjectVideosSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectVideosPathParams.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectVideosRequest.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectVideosQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectVideosRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,25 +273,26 @@ public class ProjectsVideos {
      * Get all the videos in a project
      * This method gets all the videos that belong to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetProjectVideosAlt1Response getProjectVideosAlt1(org.openapis.openapi.models.operations.GetProjectVideosAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.GetProjectVideosAlt1Response getProjectVideosAlt1(org.openapis.openapi.models.operations.GetProjectVideosAlt1Request request, org.openapis.openapi.models.operations.GetProjectVideosAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectVideosAlt1PathParams.class, baseUrl, "/me/projects/{project_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectVideosAlt1Request.class, baseUrl, "/me/projects/{project_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectVideosAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProjectVideosAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -322,19 +328,20 @@ public class ProjectsVideos {
      * Remove a specific video from a project
      * This method removes a single video from the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveVideoFromProjectResponse removeVideoFromProject(org.openapis.openapi.models.operations.RemoveVideoFromProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveVideoFromProjectResponse removeVideoFromProject(org.openapis.openapi.models.operations.RemoveVideoFromProjectRequest request, org.openapis.openapi.models.operations.RemoveVideoFromProjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideoFromProjectPathParams.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideoFromProjectRequest.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -364,19 +371,20 @@ public class ProjectsVideos {
      * Remove a specific video from a project
      * This method removes a single video from the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveVideoFromProjectAlt1Response removeVideoFromProjectAlt1(org.openapis.openapi.models.operations.RemoveVideoFromProjectAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveVideoFromProjectAlt1Response removeVideoFromProjectAlt1(org.openapis.openapi.models.operations.RemoveVideoFromProjectAlt1Request request, org.openapis.openapi.models.operations.RemoveVideoFromProjectAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideoFromProjectAlt1PathParams.class, baseUrl, "/me/projects/{project_id}/videos/{video_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideoFromProjectAlt1Request.class, baseUrl, "/me/projects/{project_id}/videos/{video_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -406,25 +414,26 @@ public class ProjectsVideos {
      * Remove a list of videos from a project
      * This method removed multiple videos from the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveVideosFromProjectResponse removeVideosFromProject(org.openapis.openapi.models.operations.RemoveVideosFromProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveVideosFromProjectResponse removeVideosFromProject(org.openapis.openapi.models.operations.RemoveVideosFromProjectRequest request, org.openapis.openapi.models.operations.RemoveVideosFromProjectSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideosFromProjectPathParams.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideosFromProjectRequest.class, baseUrl, "/users/{user_id}/projects/{project_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemoveVideosFromProjectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemoveVideosFromProjectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,25 +463,26 @@ public class ProjectsVideos {
      * Remove a list of videos from a project
      * This method removed multiple videos from the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1Response removeVideosFromProjectAlt1(org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1Response removeVideosFromProjectAlt1(org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1Request request, org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1PathParams.class, baseUrl, "/me/projects/{project_id}/videos", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1Request.class, baseUrl, "/me/projects/{project_id}/videos", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemoveVideosFromProjectAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

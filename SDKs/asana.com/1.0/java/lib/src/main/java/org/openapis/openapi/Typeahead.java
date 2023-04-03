@@ -77,13 +77,13 @@ public class Typeahead {
      */
     public org.openapis.openapi.models.operations.TypeaheadForWorkspaceResponse typeaheadForWorkspace(org.openapis.openapi.models.operations.TypeaheadForWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TypeaheadForWorkspacePathParams.class, baseUrl, "/workspaces/{workspace_gid}/typeahead", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TypeaheadForWorkspaceRequest.class, baseUrl, "/workspaces/{workspace_gid}/typeahead", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TypeaheadForWorkspaceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TypeaheadForWorkspaceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,20 +4,180 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberNearbySearchExtRequest {
-    
-    public GetSearchVersionNumberNearbySearchExtPathParams pathParams;
-    public GetSearchVersionNumberNearbySearchExtRequest withPathParams(GetSearchVersionNumberNearbySearchExtPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Bottom right position of the bounding box. This is specified as a comma separated string composed of lat., lon.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=btmRight")
+    public String btmRight;
+    public GetSearchVersionNumberNearbySearchExtRequest withBtmRight(String btmRight) {
+        this.btmRight = btmRight;
         return this;
     }
     
+    /**
+     * Comma separated string of country codes. This will limit the search to the specified countries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countrySet")
+    public String countrySet;
+    public GetSearchVersionNumberNearbySearchExtRequest withCountrySet(String countrySet) {
+        this.countrySet = countrySet;
+        return this;
+    }
     
-    public GetSearchVersionNumberNearbySearchExtQueryParams queryParams;
-    public GetSearchVersionNumberNearbySearchExtRequest withQueryParams(GetSearchVersionNumberNearbySearchExtQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public GetSearchVersionNumberNearbySearchExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
+        return this;
+    }
+    
+    /**
+     * Indexes for which extended postal codes should be included in the results. Available indexes are:
+     *   - &lt;b&gt;Addr&lt;/b&gt; = Address ranges
+     *   - &lt;b&gt;Geo&lt;/b&gt; = Geographies
+     *   - &lt;b&gt;PAD&lt;/b&gt; = Point Addresses
+     *   - &lt;b&gt;POI&lt;/b&gt; = Points of Interest
+     *   - &lt;b&gt;Str&lt;/b&gt; = Streets
+     *   - &lt;b&gt;XStr&lt;/b&gt; = Cross Streets (intersections)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
+    public String extendedPostalCodesFor;
+    public GetSearchVersionNumberNearbySearchExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
+        this.extendedPostalCodesFor = extendedPostalCodesFor;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of indexes which should be utilized for the search. Item order does not matter. Available indexes are:
+     *   - &lt;b&gt;Addr&lt;/b&gt; = Address range interpolation (when there is no PAD)
+     *   - &lt;b&gt;Geo&lt;/b&gt; = Geographies
+     *   - &lt;b&gt;PAD&lt;/b&gt; = Point Addresses
+     *   - &lt;b&gt;POI&lt;/b&gt; = Points of interest
+     *   - &lt;b&gt;Str&lt;/b&gt; = Streets
+     *   - &lt;b&gt;Xstr&lt;/b&gt; = Cross Streets (intersections)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idxSet")
+    public String idxSet;
+    public GetSearchVersionNumberNearbySearchExtRequest withIdxSet(String idxSet) {
+        this.idxSet = idxSet;
+        return this;
+    }
+    
+    /**
+     * Language in which search results should be returned. Should be one of &lt;a href="/search-api/search-api-documentation/supported-languages"&gt;supported IETF language tags&lt;/a&gt;, case insensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public GetSearchVersionNumberNearbySearchExtRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Latitude where results should be biased.
+     * NOTE: supplying a lat/lon without a radius will return search results biased to that point.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public Float lat;
+    public GetSearchVersionNumberNearbySearchExtRequest withLat(Float lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    /**
+     * Maximum number of search results that will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSearchVersionNumberNearbySearchExtRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Longitude where results should be biased
+     * NOTE: supplying a lat/lon without a radius will return search results biased to that point.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
+    public Float lon;
+    public GetSearchVersionNumberNearbySearchExtRequest withLon(Float lon) {
+        this.lon = lon;
+        return this;
+    }
+    
+    /**
+     * Maximum fuzziness level to be used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxFuzzyLevel")
+    public Long maxFuzzyLevel;
+    public GetSearchVersionNumberNearbySearchExtRequest withMaxFuzzyLevel(Long maxFuzzyLevel) {
+        this.maxFuzzyLevel = maxFuzzyLevel;
+        return this;
+    }
+    
+    /**
+     * Minimum fuzziness level to be used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minFuzzyLevel")
+    public Long minFuzzyLevel;
+    public GetSearchVersionNumberNearbySearchExtRequest withMinFuzzyLevel(Long minFuzzyLevel) {
+        this.minFuzzyLevel = minFuzzyLevel;
+        return this;
+    }
+    
+    /**
+     * Starting offset of the returned results within the full result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ofs")
+    public Long ofs;
+    public GetSearchVersionNumberNearbySearchExtRequest withOfs(Long ofs) {
+        this.ofs = ofs;
+        return this;
+    }
+    
+    /**
+     * If radius and position are set, the results will be constrained to the defined area. The radius parameter is specified in meters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Long radius;
+    public GetSearchVersionNumberNearbySearchExtRequest withRadius(Long radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * Top left position of the bounding box. This is specified as a comma separated string composed of lat., lon.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topLeft")
+    public String topLeft;
+    public GetSearchVersionNumberNearbySearchExtRequest withTopLeft(String topLeft) {
+        this.topLeft = topLeft;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public GetSearchVersionNumberNearbySearchExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
+        return this;
+    }
+    
+    /**
+     * Geopolitical View.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public org.openapis.openapi.models.shared.ViewEnum view;
+    public GetSearchVersionNumberNearbySearchExtRequest withView(org.openapis.openapi.models.shared.ViewEnum view) {
+        this.view = view;
         return this;
     }
     

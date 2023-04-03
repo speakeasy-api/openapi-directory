@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppPkgIdGETRequest {
-    
-    public AppPkgIdGETPathParams pathParams;
-    public AppPkgIdGETRequest withPathParams(AppPkgIdGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Include all complex attributes in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all_fields")
+    public String allFields;
+    public AppPkgIdGETRequest withAllFields(String allFields) {
+        this.allFields = allFields;
         return this;
     }
     
+    /**
+     * Identifier of an on-boarded individual application package
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appPkgId")
+    public String appPkgId;
+    public AppPkgIdGETRequest withAppPkgId(String appPkgId) {
+        this.appPkgId = appPkgId;
+        return this;
+    }
     
-    public AppPkgIdGETQueryParams queryParams;
-    public AppPkgIdGETRequest withQueryParams(AppPkgIdGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates to exclude the following complex attributes of AppPkgInfo from the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_default")
+    public String excludeDefault;
+    public AppPkgIdGETRequest withExcludeDefault(String excludeDefault) {
+        this.excludeDefault = excludeDefault;
+        return this;
+    }
+    
+    /**
+     * Complex attributes of AppPkgInfo to be excluded from the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_fields")
+    public String excludeFields;
+    public AppPkgIdGETRequest withExcludeFields(String excludeFields) {
+        this.excludeFields = excludeFields;
+        return this;
+    }
+    
+    /**
+     * Complex attributes of AppPkgInfo to be included into the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AppPkgIdGETRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Attribute-based filtering parameters according to ETSI GS MEC 009
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public AppPkgIdGETRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     

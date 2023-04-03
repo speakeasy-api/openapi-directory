@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdatePreReceiveEnvironmentRequest {
-    
-    public EnterpriseAdminUpdatePreReceiveEnvironmentPathParams pathParams;
-    public EnterpriseAdminUpdatePreReceiveEnvironmentRequest withPathParams(EnterpriseAdminUpdatePreReceiveEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody requestBody;
+    public EnterpriseAdminUpdatePreReceiveEnvironmentRequest withRequestBody(EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody request;
-    public EnterpriseAdminUpdatePreReceiveEnvironmentRequest withRequest(EnterpriseAdminUpdatePreReceiveEnvironmentRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pre_receive_environment_id")
+    public Long preReceiveEnvironmentId;
+    public EnterpriseAdminUpdatePreReceiveEnvironmentRequest withPreReceiveEnvironmentId(Long preReceiveEnvironmentId) {
+        this.preReceiveEnvironmentId = preReceiveEnvironmentId;
         return this;
     }
     

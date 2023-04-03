@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksFetchAllRequest {
-    
-    public WebhooksFetchAllPathParams pathParams;
-    public WebhooksFetchAllRequest withPathParams(WebhooksFetchAllPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebhooksFetchAllSecurity security;
-    public WebhooksFetchAllRequest withSecurity(WebhooksFetchAllSecurity security) {
-        this.security = security;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public WebhooksFetchAllRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     

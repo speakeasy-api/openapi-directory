@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTopicTimerRequest {
-    
-    public CreateTopicTimerPathParams pathParams;
-    public CreateTopicTimerRequest withPathParams(CreateTopicTimerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public CreateTopicTimerRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public CreateTopicTimerHeaders headers;
-    public CreateTopicTimerRequest withHeaders(CreateTopicTimerHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public CreateTopicTimerRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateTopicTimerRequestBody request;
-    public CreateTopicTimerRequest withRequest(CreateTopicTimerRequestBody request) {
-        this.request = request;
+    public CreateTopicTimerRequestBody requestBody;
+    public CreateTopicTimerRequest withRequestBody(CreateTopicTimerRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CreateTopicTimerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

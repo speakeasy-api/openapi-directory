@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TrendingGetTrendingCategoryRequest {
+    /**
+     * The ID of the category for whom you want additional results.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryId")
+    public String categoryId;
+    public TrendingGetTrendingCategoryRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
     
-    public TrendingGetTrendingCategoryPathParams pathParams;
-    public TrendingGetTrendingCategoryRequest withPathParams(TrendingGetTrendingCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page # of results to return.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageNumber")
+    public Integer pageNumber;
+    public TrendingGetTrendingCategoryRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     

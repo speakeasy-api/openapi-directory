@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVolumesNameRequest {
-    
-    public PostVolumesNamePathParams pathParams;
-    public PostVolumesNameRequest withPathParams(PostVolumesNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostVolumesNameHeaders headers;
-    public PostVolumesNameRequest withHeaders(PostVolumesNameHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Input parameter that are required to provision an existing volume to a new space and to unprovision it from a space.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateVolume request;
-    public PostVolumesNameRequest withRequest(org.openapis.openapi.models.shared.UpdateVolume request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateVolume updateVolume;
+    public PostVolumesNameRequest withUpdateVolume(org.openapis.openapi.models.shared.UpdateVolume updateVolume) {
+        this.updateVolume = updateVolume;
+        return this;
+    }
+    
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostVolumesNameRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
+        return this;
+    }
+    
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostVolumesNameRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
+    
+    /**
+     * The name of the volume that you want to share with another space in your organization.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public PostVolumesNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

@@ -53,7 +53,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsChildrenListResponse registrationsChildrenList(org.openapis.openapi.models.operations.RegistrationsChildrenListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsChildrenListPathParams.class, baseUrl, "/registrations/{registration_id}/children/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsChildrenListRequest.class, baseUrl, "/registrations/{registration_id}/children/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -93,7 +93,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsCitationReadResponse registrationsCitationRead(org.openapis.openapi.models.operations.RegistrationsCitationReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsCitationReadPathParams.class, baseUrl, "/registrations/{registration_id}/citations/{citation_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsCitationReadRequest.class, baseUrl, "/registrations/{registration_id}/citations/{citation_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -143,7 +143,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsCitationsListResponse registrationsCitationsList(org.openapis.openapi.models.operations.RegistrationsCitationsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsCitationsListPathParams.class, baseUrl, "/registrations/{registration_id}/citations/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsCitationsListRequest.class, baseUrl, "/registrations/{registration_id}/citations/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -204,7 +204,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsCommentsListResponse registrationsCommentsList(org.openapis.openapi.models.operations.RegistrationsCommentsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsCommentsListPathParams.class, baseUrl, "/registrations/{registration_id}/comments/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsCommentsListRequest.class, baseUrl, "/registrations/{registration_id}/comments/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -260,7 +260,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsContributorsListResponse registrationsContributorsList(org.openapis.openapi.models.operations.RegistrationsContributorsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsContributorsListPathParams.class, baseUrl, "/registrations/{registration_id}/contributors/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsContributorsListRequest.class, baseUrl, "/registrations/{registration_id}/contributors/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -303,7 +303,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsContributorsReadResponse registrationsContributorsRead(org.openapis.openapi.models.operations.RegistrationsContributorsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsContributorsReadPathParams.class, baseUrl, "/registrations/{registration_id}/contributors/{user_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsContributorsReadRequest.class, baseUrl, "/registrations/{registration_id}/contributors/{user_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -355,7 +355,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsFilesListResponse registrationsFilesList(org.openapis.openapi.models.operations.RegistrationsFilesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsFilesListPathParams.class, baseUrl, "/registrations/{registration_id}/files/{provider}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsFilesListRequest.class, baseUrl, "/registrations/{registration_id}/files/{provider}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -397,7 +397,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsFilesReadResponse registrationsFilesRead(org.openapis.openapi.models.operations.RegistrationsFilesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsFilesReadPathParams.class, baseUrl, "/registrations/{registration_id}/files/{provider}/{path}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsFilesReadRequest.class, baseUrl, "/registrations/{registration_id}/files/{provider}/{path}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -448,7 +448,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsForksCreateResponse registrationsForksCreate(org.openapis.openapi.models.operations.RegistrationsForksCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsForksCreatePathParams.class, baseUrl, "/registrations/{registration_id}/forks/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsForksCreateRequest.class, baseUrl, "/registrations/{registration_id}/forks/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -492,7 +492,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsForksListResponse registrationsForksList(org.openapis.openapi.models.operations.RegistrationsForksListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsForksListPathParams.class, baseUrl, "/registrations/{registration_id}/forks/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsForksListRequest.class, baseUrl, "/registrations/{registration_id}/forks/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -541,7 +541,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsIdentifiersListResponse registrationsIdentifiersList(org.openapis.openapi.models.operations.RegistrationsIdentifiersListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsIdentifiersListPathParams.class, baseUrl, "/registrations/{registration_id}/identifiers/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsIdentifiersListRequest.class, baseUrl, "/registrations/{registration_id}/identifiers/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -585,7 +585,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsInstitutionsListResponse registrationsInstitutionsList(org.openapis.openapi.models.operations.RegistrationsInstitutionsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsInstitutionsListPathParams.class, baseUrl, "/registrations/{registration_id}/institutions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsInstitutionsListRequest.class, baseUrl, "/registrations/{registration_id}/institutions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -633,7 +633,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsLinkedNodesListResponse registrationsLinkedNodesList(org.openapis.openapi.models.operations.RegistrationsLinkedNodesListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsLinkedNodesListPathParams.class, baseUrl, "/registrations/{registration_id}/linked_nodes/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsLinkedNodesListRequest.class, baseUrl, "/registrations/{registration_id}/linked_nodes/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -745,7 +745,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsLogsListResponse registrationsLogsList(org.openapis.openapi.models.operations.RegistrationsLogsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsLogsListPathParams.class, baseUrl, "/registrations/{registration_id}/logs/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsLogsListRequest.class, baseUrl, "/registrations/{registration_id}/logs/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -793,7 +793,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsPartialUpdateResponse registrationsPartialUpdate(org.openapis.openapi.models.operations.RegistrationsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsPartialUpdatePathParams.class, baseUrl, "/registrations/{registration_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsPartialUpdateRequest.class, baseUrl, "/registrations/{registration_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
@@ -838,7 +838,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsProvidersListResponse registrationsProvidersList(org.openapis.openapi.models.operations.RegistrationsProvidersListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsProvidersListPathParams.class, baseUrl, "/registrations/{registration_id}/files/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsProvidersListRequest.class, baseUrl, "/registrations/{registration_id}/files/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -891,7 +891,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsReadResponse registrationsRead(org.openapis.openapi.models.operations.RegistrationsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsReadPathParams.class, baseUrl, "/registrations/{registration_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsReadRequest.class, baseUrl, "/registrations/{registration_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -945,7 +945,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsViewOnlyLinksListResponse registrationsViewOnlyLinksList(org.openapis.openapi.models.operations.RegistrationsViewOnlyLinksListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsViewOnlyLinksListPathParams.class, baseUrl, "/registrations/{registration_id}/view_only_links/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsViewOnlyLinksListRequest.class, baseUrl, "/registrations/{registration_id}/view_only_links/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -990,7 +990,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsViewOnlyLinksReadResponse registrationsViewOnlyLinksRead(org.openapis.openapi.models.operations.RegistrationsViewOnlyLinksReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsViewOnlyLinksReadPathParams.class, baseUrl, "/registrations/{registration_id}/view_only_links/{link_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsViewOnlyLinksReadRequest.class, baseUrl, "/registrations/{registration_id}/view_only_links/{link_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1038,7 +1038,7 @@ public class Registrations {
      */
     public org.openapis.openapi.models.operations.RegistrationsWikisListResponse registrationsWikisList(org.openapis.openapi.models.operations.RegistrationsWikisListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsWikisListPathParams.class, baseUrl, "/registrations/{registration_id}/wikis/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RegistrationsWikisListRequest.class, baseUrl, "/registrations/{registration_id}/wikis/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

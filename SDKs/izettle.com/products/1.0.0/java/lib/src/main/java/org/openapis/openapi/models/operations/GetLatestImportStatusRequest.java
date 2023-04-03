@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLatestImportStatusRequest {
-    
-    public GetLatestImportStatusPathParams pathParams;
-    public GetLatestImportStatusRequest withPathParams(GetLatestImportStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetLatestImportStatusSecurity security;
-    public GetLatestImportStatusRequest withSecurity(GetLatestImportStatusSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public GetLatestImportStatusRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

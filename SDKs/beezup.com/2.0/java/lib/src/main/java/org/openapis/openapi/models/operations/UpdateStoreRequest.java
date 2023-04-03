@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateStoreRequest {
-    
-    public UpdateStorePathParams pathParams;
-    public UpdateStoreRequest withPathParams(UpdateStorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public UpdateStoreRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateStoreRequest request;
-    public UpdateStoreRequest withRequest(org.openapis.openapi.models.shared.UpdateStoreRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateStoreRequest updateStoreRequest;
+    public UpdateStoreRequest withUpdateStoreRequest(org.openapis.openapi.models.shared.UpdateStoreRequest updateStoreRequest) {
+        this.updateStoreRequest = updateStoreRequest;
         return this;
     }
     

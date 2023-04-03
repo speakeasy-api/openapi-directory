@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveRevisionUsingPOSTRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=padID")
+    public String padID;
+    public SaveRevisionUsingPOSTRequest withPadID(String padID) {
+        this.padID = padID;
+        return this;
+    }
     
-    public SaveRevisionUsingPOSTQueryParams queryParams;
-    public SaveRevisionUsingPOSTRequest withQueryParams(SaveRevisionUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rev")
+    public String rev;
+    public SaveRevisionUsingPOSTRequest withRev(String rev) {
+        this.rev = rev;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2SearchDestinyPlayerByBungieNameRequest {
-    
-    public Destiny2SearchDestinyPlayerByBungieNamePathParams pathParams;
-    public Destiny2SearchDestinyPlayerByBungieNameRequest withPathParams(Destiny2SearchDestinyPlayerByBungieNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A valid non-BungieNet membership type, or All. Indicates which memberships to return. You probably want this set to All.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2SearchDestinyPlayerByBungieNameRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

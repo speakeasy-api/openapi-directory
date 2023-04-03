@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDisputesRequest {
-    
-    public ListDisputesQueryParams queryParams;
-    public ListDisputesRequest withQueryParams(ListDisputesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this cursor to retrieve the next set of results for the original query.
+     * For more information, see [Pagination](https://developer.squareup.com/docs/basics/api101/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListDisputesRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The ID of the location for which to return a list of disputes. If not specified, the endpoint returns
+     * all open disputes (the dispute status is not `INQUIRY_CLOSED`, `WON`, or `LOST`) associated with all locations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListDisputesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
     
-    public ListDisputesSecurity security;
-    public ListDisputesRequest withSecurity(ListDisputesSecurity security) {
-        this.security = security;
+    /**
+     * The dispute states to filter the result.
+     * If not specified, the endpoint returns all open disputes (the dispute status is not `INQUIRY_CLOSED`, `WON`,
+     * or `LOST`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public String states;
+    public ListDisputesRequest withStates(String states) {
+        this.states = states;
         return this;
     }
     

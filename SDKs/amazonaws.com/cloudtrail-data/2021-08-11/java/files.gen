@@ -29,8 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PutAuditEventsQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/PutAuditEventsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutAuditEventsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutAuditEventsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutAuditEventsResponse.java
@@ -38,6 +36,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/PutAuditEventsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuditEventResultEntry.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResultErrorEntry.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuditEvent.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWorkflowSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/CreateWorkflowRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateWorkflowResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Response.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorInvalidParameters.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/FailoverPropertyConditionSt
 lib/src/main/java/org/openapis/openapi/models/shared/FailoverProperty.java
 lib/src/main/java/org/openapis/openapi/models/shared/SendMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBearerAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/FinalReportLinksMessagesChannelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FinalReportLinksMessagesStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FinalReportLinksMessagesUsageCurrencyEnum.java
@@ -81,7 +79,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusUsageCurrencyE
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusUsage.java
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatus.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/CreateWorkflowMessageStatusResponse.java
-lib/src/main/java/org/openapis/openapi/models/callbacks/CreateWorkflowMessageStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/CreateWorkflowFinalReportResponse.java
-lib/src/main/java/org/openapis/openapi/models/callbacks/CreateWorkflowFinalReportRequest.java
 USAGE.md

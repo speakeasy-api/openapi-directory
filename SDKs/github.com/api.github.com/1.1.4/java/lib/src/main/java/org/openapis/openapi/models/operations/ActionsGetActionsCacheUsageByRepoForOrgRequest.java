@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetActionsCacheUsageByRepoForOrgRequest {
-    
-    public ActionsGetActionsCacheUsageByRepoForOrgPathParams pathParams;
-    public ActionsGetActionsCacheUsageByRepoForOrgRequest withPathParams(ActionsGetActionsCacheUsageByRepoForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsGetActionsCacheUsageByRepoForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsGetActionsCacheUsageByRepoForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActionsGetActionsCacheUsageByRepoForOrgQueryParams queryParams;
-    public ActionsGetActionsCacheUsageByRepoForOrgRequest withQueryParams(ActionsGetActionsCacheUsageByRepoForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsGetActionsCacheUsageByRepoForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

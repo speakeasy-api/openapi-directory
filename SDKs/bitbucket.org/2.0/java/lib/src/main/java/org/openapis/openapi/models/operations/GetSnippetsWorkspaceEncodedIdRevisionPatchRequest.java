@@ -4,20 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsWorkspaceEncodedIdRevisionPatchRequest {
-    
-    public GetSnippetsWorkspaceEncodedIdRevisionPatchPathParams pathParams;
-    public GetSnippetsWorkspaceEncodedIdRevisionPatchRequest withPathParams(GetSnippetsWorkspaceEncodedIdRevisionPatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public GetSnippetsWorkspaceEncodedIdRevisionPatchRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
         return this;
     }
     
+    /**
+     * A revspec expression. This can simply be a commit SHA1, a ref name, or a compare expression like `staging..production`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=revision")
+    public String revision;
+    public GetSnippetsWorkspaceEncodedIdRevisionPatchRequest withRevision(String revision) {
+        this.revision = revision;
+        return this;
+    }
     
-    public GetSnippetsWorkspaceEncodedIdRevisionPatchSecurity security;
-    public GetSnippetsWorkspaceEncodedIdRevisionPatchRequest withSecurity(GetSnippetsWorkspaceEncodedIdRevisionPatchSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetSnippetsWorkspaceEncodedIdRevisionPatchRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

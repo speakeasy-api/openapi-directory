@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDismissPullReviewJsonRequest {
-    
-    public RepoDismissPullReviewJsonPathParams pathParams;
-    public RepoDismissPullReviewJsonRequest withPathParams(RepoDismissPullReviewJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DismissPullReviewOptions dismissPullReviewOptions;
+    public RepoDismissPullReviewJsonRequest withDismissPullReviewOptions(org.openapis.openapi.models.shared.DismissPullReviewOptions dismissPullReviewOptions) {
+        this.dismissPullReviewOptions = dismissPullReviewOptions;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DismissPullReviewOptions request;
-    public RepoDismissPullReviewJsonRequest withRequest(org.openapis.openapi.models.shared.DismissPullReviewOptions request) {
-        this.request = request;
+    /**
+     * id of the review
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RepoDismissPullReviewJsonRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * index of the pull request
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public RepoDismissPullReviewJsonRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDismissPullReviewJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDismissPullReviewJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

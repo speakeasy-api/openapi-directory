@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchExportStatusByIdRequest {
-    
-    public FetchExportStatusByIdPathParams pathParams;
-    public FetchExportStatusByIdRequest withPathParams(FetchExportStatusByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchExportStatusByIdSecurity security;
-    public FetchExportStatusByIdRequest withSecurity(FetchExportStatusByIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of an Export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=exportId")
+    public String exportId;
+    public FetchExportStatusByIdRequest withExportId(String exportId) {
+        this.exportId = exportId;
         return this;
     }
     

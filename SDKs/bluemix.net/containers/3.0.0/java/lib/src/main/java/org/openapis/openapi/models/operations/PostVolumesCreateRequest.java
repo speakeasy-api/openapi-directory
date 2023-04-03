@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVolumesCreateRequest {
-    
-    public PostVolumesCreateQueryParams queryParams;
-    public PostVolumesCreateRequest withQueryParams(PostVolumesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostVolumesCreateRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostVolumesCreateRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
     
-    public PostVolumesCreateHeaders headers;
-    public PostVolumesCreateRequest withHeaders(PostVolumesCreateHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the file share that the volume is hosted on. File shares can have different storage sizes and IOPS based on the required workload. If this field is left blank, the volume is hosted on the default file share.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fsName")
+    public String fsName;
+    public PostVolumesCreateRequest withFsName(String fsName) {
+        this.fsName = fsName;
+        return this;
+    }
+    
+    /**
+     * The name of the volume. The name must be unique for a space and can contain uppercase letters, lowercase letters, numbers, underscores (_), and hyphens (-).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PostVolumesCreateRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

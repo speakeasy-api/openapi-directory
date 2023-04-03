@@ -37,7 +37,7 @@ public class InformationRetrieval {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.KeywordExtractionResponse keywordExtraction(org.openapis.openapi.models.operations.KeywordExtractionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.KeywordExtractionResponse keywordExtraction(org.openapis.openapi.models.operations.KeywordExtractionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/KeywordExtraction.json");
         
@@ -72,7 +72,7 @@ public class InformationRetrieval {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TextExtractionResponse textExtraction(org.openapis.openapi.models.operations.TextExtractionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TextExtractionResponse textExtraction(org.openapis.openapi.models.operations.TextExtractionRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/1.0/TextExtraction.json");
         

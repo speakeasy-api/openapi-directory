@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversationsCloseRequest {
-    
-    public ConversationsClosePathParams pathParams;
-    public ConversationsCloseRequest withPathParams(ConversationsClosePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public ConversationsCloseRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public ConversationsCloseSecurity security;
-    public ConversationsCloseRequest withSecurity(ConversationsCloseSecurity security) {
-        this.security = security;
+    /**
+     * ID of conversation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversationId")
+    public String conversationId;
+    public ConversationsCloseRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     

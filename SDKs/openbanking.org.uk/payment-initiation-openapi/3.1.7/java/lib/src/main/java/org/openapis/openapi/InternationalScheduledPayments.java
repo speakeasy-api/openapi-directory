@@ -35,23 +35,24 @@ public class InternationalScheduledPayments {
     /**
      * Create International Scheduled Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonResponse createInternationalScheduledPaymentConsentsJson(org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonResponse createInternationalScheduledPaymentConsentsJson(org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonRequest request, org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/international-scheduled-payment-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteInternationalScheduledConsent5", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class InternationalScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,23 +124,24 @@ public class InternationalScheduledPayments {
     /**
      * Create International Scheduled Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawResponse createInternationalScheduledPaymentConsentsRaw(org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawResponse createInternationalScheduledPaymentConsentsRaw(org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawRequest request, org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentConsentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/international-scheduled-payment-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -148,7 +150,7 @@ public class InternationalScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,23 +213,24 @@ public class InternationalScheduledPayments {
     /**
      * Create International Scheduled Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonResponse createInternationalScheduledPaymentsJson(org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonResponse createInternationalScheduledPaymentsJson(org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonRequest request, org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/international-scheduled-payments");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteInternationalScheduled3", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -236,7 +239,7 @@ public class InternationalScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -299,23 +302,24 @@ public class InternationalScheduledPayments {
     /**
      * Create International Scheduled Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawResponse createInternationalScheduledPaymentsRaw(org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawResponse createInternationalScheduledPaymentsRaw(org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawRequest request, org.openapis.openapi.models.operations.CreateInternationalScheduledPaymentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/international-scheduled-payments");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -324,7 +328,7 @@ public class InternationalScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -387,18 +391,19 @@ public class InternationalScheduledPayments {
     /**
      * Get International Scheduled Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdResponse getInternationalScheduledPaymentConsentsConsentId(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdResponse getInternationalScheduledPaymentConsentsConsentId(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdRequest request, org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdPathParams.class, baseUrl, "/international-scheduled-payment-consents/{ConsentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdRequest.class, baseUrl, "/international-scheduled-payment-consents/{ConsentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -407,7 +412,7 @@ public class InternationalScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -470,18 +475,19 @@ public class InternationalScheduledPayments {
     /**
      * Get International Scheduled Payment Consents Funds Confirmation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationResponse getInternationalScheduledPaymentConsentsConsentIdFundsConfirmation(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationResponse getInternationalScheduledPaymentConsentsConsentIdFundsConfirmation(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationRequest request, org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationPathParams.class, baseUrl, "/international-scheduled-payment-consents/{ConsentId}/funds-confirmation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmationRequest.class, baseUrl, "/international-scheduled-payment-consents/{ConsentId}/funds-confirmation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -490,7 +496,7 @@ public class InternationalScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -553,18 +559,19 @@ public class InternationalScheduledPayments {
     /**
      * Get International Scheduled Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdResponse getInternationalScheduledPaymentsInternationalScheduledPaymentId(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdResponse getInternationalScheduledPaymentsInternationalScheduledPaymentId(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest request, org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPathParams.class, baseUrl, "/international-scheduled-payments/{InternationalScheduledPaymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInternationalScheduledPaymentsInternationalScheduledPaymentIdRequest.class, baseUrl, "/international-scheduled-payments/{InternationalScheduledPaymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -573,7 +580,7 @@ public class InternationalScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

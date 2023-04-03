@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrganisationsPartyIdAddressesRequest {
-    
-    public PostOrganisationsPartyIdAddressesPathParams pathParams;
-    public PostOrganisationsPartyIdAddressesRequest withPathParams(PostOrganisationsPartyIdAddressesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostOrganisationsPartyIdAddressesHeaders headers;
-    public PostOrganisationsPartyIdAddressesRequest withHeaders(PostOrganisationsPartyIdAddressesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Address resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddressInput request;
-    public PostOrganisationsPartyIdAddressesRequest withRequest(org.openapis.openapi.models.shared.AddressInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddressInput addressInput;
+    public PostOrganisationsPartyIdAddressesRequest withAddressInput(org.openapis.openapi.models.shared.AddressInput addressInput) {
+        this.addressInput = addressInput;
+        return this;
+    }
+    
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PostOrganisationsPartyIdAddressesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PostOrganisationsPartyIdAddressesRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

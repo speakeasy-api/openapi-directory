@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFilesPathRequest {
-    
-    public DeleteFilesPathPathParams pathParams;
-    public DeleteFilesPathRequest withPathParams(DeleteFilesPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Path to operate on.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public DeleteFilesPathRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     
-    
-    public DeleteFilesPathQueryParams queryParams;
-    public DeleteFilesPathRequest withQueryParams(DeleteFilesPathQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If true, will recursively delete folers.  Otherwise, will error on non-empty folders.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public DeleteFilesPathRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
         return this;
     }
     

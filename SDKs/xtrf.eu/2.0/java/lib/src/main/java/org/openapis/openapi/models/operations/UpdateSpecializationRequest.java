@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSpecializationRequest {
-    
-    public UpdateSpecializationPathParams pathParams;
-    public UpdateSpecializationRequest withPathParams(UpdateSpecializationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated specialization for a project.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SpecializationDTO request;
-    public UpdateSpecializationRequest withRequest(org.openapis.openapi.models.shared.SpecializationDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SpecializationDTO specializationDTO;
+    public UpdateSpecializationRequest withSpecializationDTO(org.openapis.openapi.models.shared.SpecializationDTO specializationDTO) {
+        this.specializationDTO = specializationDTO;
+        return this;
+    }
+    
+    /**
+     * project's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public UpdateSpecializationRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

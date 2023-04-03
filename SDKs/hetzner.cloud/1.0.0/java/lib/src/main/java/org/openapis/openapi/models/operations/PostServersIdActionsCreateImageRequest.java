@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostServersIdActionsCreateImageRequest {
-    
-    public PostServersIdActionsCreateImagePathParams pathParams;
-    public PostServersIdActionsCreateImageRequest withPathParams(PostServersIdActionsCreateImagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostServersIdActionsCreateImageCreateImageRequest requestBody;
+    public PostServersIdActionsCreateImageRequest withRequestBody(PostServersIdActionsCreateImageCreateImageRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostServersIdActionsCreateImageCreateImageRequest request;
-    public PostServersIdActionsCreateImageRequest withRequest(PostServersIdActionsCreateImageCreateImageRequest request) {
-        this.request = request;
+    /**
+     * ID of the Server
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostServersIdActionsCreateImageRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

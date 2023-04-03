@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateGroupApplicationRequest {
-    
-    public ValidateGroupApplicationPathParams pathParams;
-    public ValidateGroupApplicationRequest withPathParams(ValidateGroupApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the application in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application_id")
+    public String applicationId;
+    public ValidateGroupApplicationRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     

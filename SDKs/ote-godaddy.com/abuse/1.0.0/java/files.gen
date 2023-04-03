@@ -30,13 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/CreateTicketRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTicketResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTicketInfoPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTicketInfoRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTicketInfoResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTicketsTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTicketsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTicketsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTicketsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/AbuseTicketId.java

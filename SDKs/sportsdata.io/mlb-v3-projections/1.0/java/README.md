@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DepthChartsFormatEnum;
-import org.openapis.openapi.models.operations.DepthChartsPathParams;
 import org.openapis.openapi.models.operations.DepthChartsRequest;
 import org.openapis.openapi.models.operations.DepthChartsResponse;
 
@@ -27,17 +26,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DepthChartsRequest req = new DepthChartsRequest() {{
-                pathParams = new DepthChartsPathParams() {{
-                    format = "JSON";
-                }};
-            }};            
+                format = "JSON";
+            }}            
 
             DepthChartsResponse res = sdk.depthCharts(req);
 
@@ -51,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

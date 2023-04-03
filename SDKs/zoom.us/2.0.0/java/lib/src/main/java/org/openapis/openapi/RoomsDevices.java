@@ -43,12 +43,12 @@ public class RoomsDevices {
      */
     public org.openapis.openapi.models.operations.ChangeZoomRoomsAppVersionResponse changeZoomRoomsAppVersion(org.openapis.openapi.models.operations.ChangeZoomRoomsAppVersionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeZoomRoomsAppVersionPathParams.class, baseUrl, "/rooms/{roomId}/devices/{deviceId}/app_version", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeZoomRoomsAppVersionRequest.class, baseUrl, "/rooms/{roomId}/devices/{deviceId}/app_version", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

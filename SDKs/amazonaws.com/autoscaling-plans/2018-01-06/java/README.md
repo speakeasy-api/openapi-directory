@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateScalingPlanXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateScalingPlanHeaders;
 import org.openapis.openapi.models.operations.CreateScalingPlanRequest;
 import org.openapis.openapi.models.operations.CreateScalingPlanResponse;
 import org.openapis.openapi.models.shared.CreateScalingPlanRequest;
@@ -45,39 +44,39 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateScalingPlanRequest req = new CreateScalingPlanRequest() {{
-                headers = new CreateScalingPlanHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AnyScaleScalingPlannerFrontendService.CreateScalingPlan";
-                }};
-                request = new CreateScalingPlanRequest() {{
+                createScalingPlanRequest = new CreateScalingPlanRequest() {{
                     applicationSource = new ApplicationSource() {{
-                        cloudFormationStackARN = "illum";
+                        cloudFormationStackARN = "corrupti";
                         tagFilters = new org.openapis.openapi.models.shared.TagFilter[]{{
                             add(new TagFilter() {{
-                                key = "error";
+                                key = "distinctio";
                                 values = new String[]{{
-                                    add("suscipit"),
-                                    add("iure"),
-                                    add("magnam"),
+                                    add("unde"),
+                                    add("nulla"),
+                                    add("corrupti"),
+                                    add("illum"),
                                 }};
                             }}),
                             add(new TagFilter() {{
-                                key = "debitis";
+                                key = "vel";
                                 values = new String[]{{
+                                    add("deserunt"),
+                                    add("suscipit"),
+                                    add("iure"),
+                                }};
+                            }}),
+                            add(new TagFilter() {{
+                                key = "magnam";
+                                values = new String[]{{
+                                    add("ipsa"),
                                     add("delectus"),
+                                    add("tempora"),
+                                    add("suscipit"),
                                 }};
                             }}),
                         }};
@@ -87,150 +86,131 @@ public class Application {
                             customizedLoadMetricSpecification = new CustomizedLoadMetricSpecification() {{
                                 dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                     add(new MetricDimension() {{
-                                        name = "molestiae";
-                                        value = "minus";
-                                    }}),
-                                    add(new MetricDimension() {{
                                         name = "placeat";
                                         value = "voluptatum";
                                     }}),
+                                    add(new MetricDimension() {{
+                                        name = "iusto";
+                                        value = "excepturi";
+                                    }}),
+                                    add(new MetricDimension() {{
+                                        name = "nisi";
+                                        value = "recusandae";
+                                    }}),
+                                    add(new MetricDimension() {{
+                                        name = "temporibus";
+                                        value = "ab";
+                                    }}),
                                 }};
-                                metricName = "iusto";
-                                namespace = "excepturi";
-                                statistic = "Minimum";
-                                unit = "recusandae";
+                                metricName = "quis";
+                                namespace = "veritatis";
+                                statistic = "SampleCount";
+                                unit = "perferendis";
                             }};
                             disableDynamicScaling = false;
-                            maxCapacity = 836079;
-                            minCapacity = 71036;
+                            maxCapacity = 368241;
+                            minCapacity = 832620;
                             predefinedLoadMetricSpecification = new PredefinedLoadMetricSpecification() {{
-                                predefinedLoadMetricType = "ASGTotalNetworkIn";
-                                resourceLabel = "veritatis";
+                                predefinedLoadMetricType = "ALBTargetGroupRequestCount";
+                                resourceLabel = "quo";
                             }};
-                            predictiveScalingMaxCapacityBehavior = "SetMaxCapacityToForecastCapacity";
-                            predictiveScalingMaxCapacityBuffer = 20218;
-                            predictiveScalingMode = "ForecastAndScale";
-                            resourceId = "repellendus";
-                            scalableDimension = "dynamodb:index:WriteCapacityUnits";
+                            predictiveScalingMaxCapacityBehavior = "SetForecastCapacityToMaxCapacity";
+                            predictiveScalingMaxCapacityBuffer = 870013;
+                            predictiveScalingMode = "ForecastOnly";
+                            resourceId = "maiores";
+                            scalableDimension = "rds:cluster:ReadReplicaCount";
                             scalingPolicyUpdateBehavior = "ReplaceExternalPolicies";
-                            scheduledActionBufferTime = 140350;
-                            serviceNamespace = "dynamodb";
+                            scheduledActionBufferTime = 800911;
+                            serviceNamespace = "ec2";
                             targetTrackingConfigurations = new org.openapis.openapi.models.shared.TargetTrackingConfiguration[]{{
                                 add(new TargetTrackingConfiguration() {{
                                     customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
                                         dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                             add(new MetricDimension() {{
-                                                name = "molestiae";
-                                                value = "quod";
-                                            }}),
-                                            add(new MetricDimension() {{
-                                                name = "quod";
-                                                value = "esse";
-                                            }}),
-                                            add(new MetricDimension() {{
-                                                name = "totam";
-                                                value = "porro";
-                                            }}),
-                                            add(new MetricDimension() {{
                                                 name = "dolorum";
                                                 value = "dicta";
                                             }}),
-                                        }};
-                                        metricName = "nam";
-                                        namespace = "officia";
-                                        statistic = "Maximum";
-                                        unit = "fugit";
-                                    }};
-                                    disableScaleIn = false;
-                                    estimatedInstanceWarmup = 537373;
-                                    predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
-                                        predefinedScalingMetricType = "EC2SpotFleetRequestAverageNetworkOut";
-                                        resourceLabel = "optio";
-                                    }};
-                                    scaleInCooldown = 521848;
-                                    scaleOutCooldown = 105907;
-                                    targetValue = 4146.62;
-                                }}),
-                                add(new TargetTrackingConfiguration() {{
-                                    customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
-                                        dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                             add(new MetricDimension() {{
-                                                name = "modi";
-                                                value = "qui";
+                                                name = "nam";
+                                                value = "officia";
                                             }}),
                                             add(new MetricDimension() {{
-                                                name = "impedit";
-                                                value = "cum";
+                                                name = "occaecati";
+                                                value = "fugit";
                                             }}),
-                                        }};
-                                        metricName = "esse";
-                                        namespace = "ipsum";
-                                        statistic = "Maximum";
-                                        unit = "aspernatur";
-                                    }};
-                                    disableScaleIn = false;
-                                    estimatedInstanceWarmup = 18789;
-                                    predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
-                                        predefinedScalingMetricType = "DynamoDBWriteCapacityUtilization";
-                                        resourceLabel = "natus";
-                                    }};
-                                    scaleInCooldown = 149675;
-                                    scaleOutCooldown = 612096;
-                                    targetValue = 2223.21;
-                                }}),
-                                add(new TargetTrackingConfiguration() {{
-                                    customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
-                                        dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                             add(new MetricDimension() {{
-                                                name = "laboriosam";
+                                                name = "deleniti";
                                                 value = "hic";
                                             }}),
+                                        }};
+                                        metricName = "optio";
+                                        namespace = "totam";
+                                        statistic = "Average";
+                                        unit = "commodi";
+                                    }};
+                                    disableScaleIn = false;
+                                    estimatedInstanceWarmup = 473600;
+                                    predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
+                                        predefinedScalingMetricType = "DynamoDBReadCapacityUtilization";
+                                        resourceLabel = "qui";
+                                    }};
+                                    scaleInCooldown = 774234;
+                                    scaleOutCooldown = 736918;
+                                    targetValue = 4561.5;
+                                }}),
+                                add(new TargetTrackingConfiguration() {{
+                                    customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
+                                        dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                             add(new MetricDimension() {{
-                                                name = "saepe";
-                                                value = "fuga";
+                                                name = "excepturi";
+                                                value = "aspernatur";
                                             }}),
+                                        }};
+                                        metricName = "perferendis";
+                                        namespace = "ad";
+                                        statistic = "SampleCount";
+                                        unit = "sed";
+                                    }};
+                                    disableScaleIn = false;
+                                    estimatedInstanceWarmup = 612096;
+                                    predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
+                                        predefinedScalingMetricType = "ASGAverageNetworkOut";
+                                        resourceLabel = "natus";
+                                    }};
+                                    scaleInCooldown = 386489;
+                                    scaleOutCooldown = 943749;
+                                    targetValue = 9025.99;
+                                }}),
+                                add(new TargetTrackingConfiguration() {{
+                                    customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
+                                        dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                             add(new MetricDimension() {{
                                                 name = "in";
                                                 value = "corporis";
                                             }}),
-                                        }};
-                                        metricName = "iste";
-                                        namespace = "iure";
-                                        statistic = "Sum";
-                                        unit = "quidem";
-                                    }};
-                                    disableScaleIn = false;
-                                    estimatedInstanceWarmup = 99280;
-                                    predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
-                                        predefinedScalingMetricType = "ASGAverageCPUUtilization";
-                                        resourceLabel = "reiciendis";
-                                    }};
-                                    scaleInCooldown = 666767;
-                                    scaleOutCooldown = 653140;
-                                    targetValue = 6706.38;
-                                }}),
-                                add(new TargetTrackingConfiguration() {{
-                                    customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
-                                        dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                             add(new MetricDimension() {{
-                                                name = "dolorem";
-                                                value = "corporis";
+                                                name = "iste";
+                                                value = "iure";
+                                            }}),
+                                            add(new MetricDimension() {{
+                                                name = "saepe";
+                                                value = "quidem";
                                             }}),
                                         }};
-                                        metricName = "explicabo";
-                                        namespace = "nobis";
-                                        statistic = "Minimum";
-                                        unit = "omnis";
+                                        metricName = "architecto";
+                                        namespace = "ipsa";
+                                        statistic = "Sum";
+                                        unit = "est";
                                     }};
                                     disableScaleIn = false;
-                                    estimatedInstanceWarmup = 363711;
+                                    estimatedInstanceWarmup = 653140;
                                     predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
-                                        predefinedScalingMetricType = "DynamoDBWriteCapacityUtilization";
-                                        resourceLabel = "excepturi";
+                                        predefinedScalingMetricType = "RDSReaderAverageCPUUtilization";
+                                        resourceLabel = "dolores";
                                     }};
-                                    scaleInCooldown = 38425;
-                                    scaleOutCooldown = 438601;
-                                    targetValue = 6342.74;
+                                    scaleInCooldown = 210382;
+                                    scaleOutCooldown = 358152;
+                                    targetValue = 1289.26;
                                 }}),
                             }};
                         }}),
@@ -238,153 +218,84 @@ public class Application {
                             customizedLoadMetricSpecification = new CustomizedLoadMetricSpecification() {{
                                 dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                     add(new MetricDimension() {{
-                                        name = "sapiente";
-                                        value = "architecto";
+                                        name = "enim";
+                                        value = "omnis";
                                     }}),
                                     add(new MetricDimension() {{
-                                        name = "mollitia";
-                                        value = "dolorem";
+                                        name = "nemo";
+                                        value = "minima";
                                     }}),
                                     add(new MetricDimension() {{
-                                        name = "culpa";
-                                        value = "consequuntur";
+                                        name = "excepturi";
+                                        value = "accusantium";
                                     }}),
                                     add(new MetricDimension() {{
-                                        name = "repellat";
-                                        value = "mollitia";
+                                        name = "iure";
+                                        value = "culpa";
                                     }}),
                                 }};
-                                metricName = "occaecati";
-                                namespace = "numquam";
-                                statistic = "Maximum";
-                                unit = "quam";
+                                metricName = "doloribus";
+                                namespace = "sapiente";
+                                statistic = "Average";
+                                unit = "mollitia";
                             }};
                             disableDynamicScaling = false;
-                            maxCapacity = 474697;
-                            minCapacity = 244425;
+                            maxCapacity = 208876;
+                            minCapacity = 635059;
                             predefinedLoadMetricSpecification = new PredefinedLoadMetricSpecification() {{
-                                predefinedLoadMetricType = "ASGTotalNetworkOut";
-                                resourceLabel = "quia";
+                                predefinedLoadMetricType = "ASGTotalCPUUtilization";
+                                resourceLabel = "repellat";
                             }};
                             predictiveScalingMaxCapacityBehavior = "SetMaxCapacityToForecastCapacity";
-                            predictiveScalingMaxCapacityBuffer = 110375;
-                            predictiveScalingMode = "ForecastOnly";
-                            resourceId = "animi";
-                            scalableDimension = "ec2:spot-fleet-request:TargetCapacity";
+                            predictiveScalingMaxCapacityBuffer = 581850;
+                            predictiveScalingMode = "ForecastAndScale";
+                            resourceId = "commodi";
+                            scalableDimension = "rds:cluster:ReadReplicaCount";
                             scalingPolicyUpdateBehavior = "KeepExternalPolicies";
-                            scheduledActionBufferTime = 778346;
-                            serviceNamespace = "autoscaling";
+                            scheduledActionBufferTime = 244425;
+                            serviceNamespace = "rds";
                             targetTrackingConfigurations = new org.openapis.openapi.models.shared.TargetTrackingConfiguration[]{{
                                 add(new TargetTrackingConfiguration() {{
                                     customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
                                         dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
                                             add(new MetricDimension() {{
-                                                name = "id";
-                                                value = "possimus";
+                                                name = "vitae";
+                                                value = "laborum";
                                             }}),
                                             add(new MetricDimension() {{
-                                                name = "aut";
-                                                value = "quasi";
-                                            }}),
-                                        }};
-                                        metricName = "error";
-                                        namespace = "temporibus";
-                                        statistic = "SampleCount";
-                                        unit = "quasi";
-                                    }};
-                                    disableScaleIn = false;
-                                    estimatedInstanceWarmup = 971945;
-                                    predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
-                                        predefinedScalingMetricType = "EC2SpotFleetRequestAverageNetworkOut";
-                                        resourceLabel = "vero";
-                                    }};
-                                    scaleInCooldown = 468651;
-                                    scaleOutCooldown = 509624;
-                                    targetValue = 9767.62;
-                                }}),
-                                add(new TargetTrackingConfiguration() {{
-                                    customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
-                                        dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
-                                            add(new MetricDimension() {{
-                                                name = "omnis";
-                                                value = "voluptate";
-                                            }}),
-                                        }};
-                                        metricName = "cum";
-                                        namespace = "perferendis";
-                                        statistic = "Average";
-                                        unit = "reprehenderit";
-                                    }};
-                                    disableScaleIn = false;
-                                    estimatedInstanceWarmup = 282807;
-                                    predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
-                                        predefinedScalingMetricType = "EC2SpotFleetRequestAverageNetworkOut";
-                                        resourceLabel = "dicta";
-                                    }};
-                                    scaleInCooldown = 359444;
-                                    scaleOutCooldown = 296140;
-                                    targetValue = 4808.94;
-                                }}),
-                                add(new TargetTrackingConfiguration() {{
-                                    customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
-                                        dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
-                                            add(new MetricDimension() {{
-                                                name = "harum";
+                                                name = "animi";
                                                 value = "enim";
                                             }}),
                                         }};
-                                        metricName = "accusamus";
-                                        namespace = "commodi";
-                                        statistic = "Sum";
-                                        unit = "quae";
+                                        metricName = "odit";
+                                        namespace = "quo";
+                                        statistic = "Average";
+                                        unit = "tenetur";
                                     }};
                                     disableScaleIn = false;
-                                    estimatedInstanceWarmup = 216822;
+                                    estimatedInstanceWarmup = 368725;
                                     predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
-                                        predefinedScalingMetricType = "RDSReaderAverageDatabaseConnections";
-                                        resourceLabel = "molestias";
+                                        predefinedScalingMetricType = "RDSReaderAverageCPUUtilization";
+                                        resourceLabel = "possimus";
                                     }};
-                                    scaleInCooldown = 566602;
-                                    scaleOutCooldown = 865103;
-                                    targetValue = 2653.89;
-                                }}),
-                                add(new TargetTrackingConfiguration() {{
-                                    customizedScalingMetricSpecification = new CustomizedScalingMetricSpecification() {{
-                                        dimensions = new org.openapis.openapi.models.shared.MetricDimension[]{{
-                                            add(new MetricDimension() {{
-                                                name = "rem";
-                                                value = "voluptates";
-                                            }}),
-                                            add(new MetricDimension() {{
-                                                name = "quasi";
-                                                value = "repudiandae";
-                                            }}),
-                                            add(new MetricDimension() {{
-                                                name = "sint";
-                                                value = "veritatis";
-                                            }}),
-                                        }};
-                                        metricName = "itaque";
-                                        namespace = "incidunt";
-                                        statistic = "Minimum";
-                                        unit = "consequatur";
-                                    }};
-                                    disableScaleIn = false;
-                                    estimatedInstanceWarmup = 667411;
-                                    predefinedScalingMetricSpecification = new PredefinedScalingMetricSpecification() {{
-                                        predefinedScalingMetricType = "EC2SpotFleetRequestAverageCPUUtilization";
-                                        resourceLabel = "explicabo";
-                                    }};
-                                    scaleInCooldown = 647174;
-                                    scaleOutCooldown = 716327;
-                                    targetValue = 8413.86;
+                                    scaleInCooldown = 13571;
+                                    scaleOutCooldown = 97101;
+                                    targetValue = 6228.46;
                                 }}),
                             }};
                         }}),
                     }};
-                    scalingPlanName = "labore";
+                    scalingPlanName = "temporibus";
                 }};
-            }};            
+                xAmzAlgorithm = "laborum";
+                xAmzContentSha256 = "quasi";
+                xAmzCredential = "reiciendis";
+                xAmzDate = "voluptatibus";
+                xAmzSecurityToken = "vero";
+                xAmzSignature = "nihil";
+                xAmzSignedHeaders = "praesentium";
+                xAmzTarget = "AnyScaleScalingPlannerFrontendService.CreateScalingPlan";
+            }}            
 
             CreateScalingPlanResponse res = sdk.createScalingPlan(req);
 
@@ -398,7 +309,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

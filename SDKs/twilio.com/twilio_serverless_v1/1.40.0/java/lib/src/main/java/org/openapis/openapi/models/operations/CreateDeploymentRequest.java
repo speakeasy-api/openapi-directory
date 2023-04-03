@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDeploymentRequest {
-    
-    public CreateDeploymentPathParams pathParams;
-    public CreateDeploymentRequest withPathParams(CreateDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Environment for the Deployment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EnvironmentSid")
+    public String environmentSid;
+    public CreateDeploymentRequest withEnvironmentSid(String environmentSid) {
+        this.environmentSid = environmentSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateDeploymentCreateDeploymentRequest request;
-    public CreateDeploymentRequest withRequest(CreateDeploymentCreateDeploymentRequest request) {
-        this.request = request;
+    public CreateDeploymentCreateDeploymentRequest requestBody;
+    public CreateDeploymentRequest withRequestBody(CreateDeploymentCreateDeploymentRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateDeploymentSecurity security;
-    public CreateDeploymentRequest withSecurity(CreateDeploymentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateDeploymentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service to create the Deployment resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateDeploymentRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

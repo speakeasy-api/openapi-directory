@@ -4,20 +4,332 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTotalsEntityTypeRequest {
-    
-    public GetTotalsEntityTypePathParams pathParams;
-    public GetTotalsEntityTypeRequest withPathParams(GetTotalsEntityTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetTotalsEntityTypeRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * The one-letter designation code of the organization:
+     *          - A authorized by a candidate
+     *          - J joint fundraising committee
+     *          - P principal campaign committee of a candidate
+     *          - U unauthorized
+     *          - B lobbyist/registrant PAC
+     *          - D leadership PAC
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_designation")
+    public String[] committeeDesignation;
+    public GetTotalsEntityTypeRequest withCommitteeDesignation(String[] committeeDesignation) {
+        this.committeeDesignation = committeeDesignation;
+        return this;
+    }
     
-    public GetTotalsEntityTypeQueryParams queryParams;
-    public GetTotalsEntityTypeRequest withQueryParams(GetTotalsEntityTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetTotalsEntityTypeRequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * US state or territory
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_state")
+    public String[] committeeState;
+    public GetTotalsEntityTypeRequest withCommitteeState(String[] committeeState) {
+        this.committeeState = committeeState;
+        return this;
+    }
+    
+    /**
+     * The one-letter type code of the organization:
+     *         - C communication cost
+     *         - D delegate
+     *         - E electioneering communication
+     *         - H House
+     *         - I independent expenditure filer (not a committee)
+     *         - N PAC - nonqualified
+     *         - O independent expenditure-only (super PACs)
+     *         - P presidential
+     *         - Q PAC - qualified
+     *         - S Senate
+     *         - U single candidate independent expenditure
+     *         - V PAC with non-contribution account, nonqualified
+     *         - W PAC with non-contribution account, qualified
+     *         - X party, nonqualified
+     *         - Y party, qualified
+     *         - Z national party non-federal account
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_type")
+    public String[] committeeType;
+    public GetTotalsEntityTypeRequest withCommitteeType(String[] committeeType) {
+        this.committeeType = committeeType;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer[] cycle;
+    public GetTotalsEntityTypeRequest withCycle(Integer[] cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * Committee groupings based on FEC filing form.                 Choose one of: `presidential`, `pac`, `party`, `pac-party`,                 `house-senate`, or `ie-only`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entity_type")
+    public GetTotalsEntityTypeEntityTypeEnum entityType;
+    public GetTotalsEntityTypeRequest withEntityType(GetTotalsEntityTypeEntityTypeEnum entityType) {
+        this.entityType = entityType;
+        return this;
+    }
+    
+    /**
+     * The one-letter 
+     *     code of the filing frequency:
+     *          - A Administratively terminated
+     *          - D Debt
+     *          - M Monthly filer
+     *          - Q Quarterly filer
+     *          - T Terminated
+     *          - W Waived
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filing_frequency")
+    public GetTotalsEntityTypeFilingFrequencyEnum[] filingFrequency;
+    public GetTotalsEntityTypeRequest withFilingFrequency(GetTotalsEntityTypeFilingFrequencyEnum[] filingFrequency) {
+        this.filingFrequency = filingFrequency;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_disbursements")
+    public String maxDisbursements;
+    public GetTotalsEntityTypeRequest withMaxDisbursements(String maxDisbursements) {
+        this.maxDisbursements = maxDisbursements;
+        return this;
+    }
+    
+    /**
+     * Filter for committees whose first Form 1 was received on or before this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_first_f1_date")
+    public LocalDate maxFirstF1Date;
+    public GetTotalsEntityTypeRequest withMaxFirstF1Date(LocalDate maxFirstF1Date) {
+        this.maxFirstF1Date = maxFirstF1Date;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_last_cash_on_hand_end_period")
+    public String maxLastCashOnHandEndPeriod;
+    public GetTotalsEntityTypeRequest withMaxLastCashOnHandEndPeriod(String maxLastCashOnHandEndPeriod) {
+        this.maxLastCashOnHandEndPeriod = maxLastCashOnHandEndPeriod;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_last_debts_owed_by_committee")
+    public String maxLastDebtsOwedByCommittee;
+    public GetTotalsEntityTypeRequest withMaxLastDebtsOwedByCommittee(String maxLastDebtsOwedByCommittee) {
+        this.maxLastDebtsOwedByCommittee = maxLastDebtsOwedByCommittee;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipts")
+    public String maxReceipts;
+    public GetTotalsEntityTypeRequest withMaxReceipts(String maxReceipts) {
+        this.maxReceipts = maxReceipts;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_disbursements")
+    public String minDisbursements;
+    public GetTotalsEntityTypeRequest withMinDisbursements(String minDisbursements) {
+        this.minDisbursements = minDisbursements;
+        return this;
+    }
+    
+    /**
+     * Filter for committees whose first Form 1 was received on or after this date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_first_f1_date")
+    public LocalDate minFirstF1Date;
+    public GetTotalsEntityTypeRequest withMinFirstF1Date(LocalDate minFirstF1Date) {
+        this.minFirstF1Date = minFirstF1Date;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_last_cash_on_hand_end_period")
+    public String minLastCashOnHandEndPeriod;
+    public GetTotalsEntityTypeRequest withMinLastCashOnHandEndPeriod(String minLastCashOnHandEndPeriod) {
+        this.minLastCashOnHandEndPeriod = minLastCashOnHandEndPeriod;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_last_debts_owed_by_committee")
+    public String minLastDebtsOwedByCommittee;
+    public GetTotalsEntityTypeRequest withMinLastDebtsOwedByCommittee(String minLastDebtsOwedByCommittee) {
+        this.minLastDebtsOwedByCommittee = minLastDebtsOwedByCommittee;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipts")
+    public String minReceipts;
+    public GetTotalsEntityTypeRequest withMinReceipts(String minReceipts) {
+        this.minReceipts = minReceipts;
+        return this;
+    }
+    
+    /**
+     * The one-letter code for the kind for organization:
+     *         - C corporation
+     *         - L labor organization
+     *         - M membership organization
+     *         - T trade association
+     *         - V cooperative
+     *         - W corporation without capital stock
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organization_type")
+    public GetTotalsEntityTypeOrganizationTypeEnum[] organizationType;
+    public GetTotalsEntityTypeRequest withOrganizationType(GetTotalsEntityTypeOrganizationTypeEnum[] organizationType) {
+        this.organizationType = organizationType;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetTotalsEntityTypeRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetTotalsEntityTypeRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetTotalsEntityTypeRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetTotalsEntityTypeRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetTotalsEntityTypeRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetTotalsEntityTypeRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office. This is a filter for Leadership PAC sponsor.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sponsor_candidate_id")
+    public String[] sponsorCandidateId;
+    public GetTotalsEntityTypeRequest withSponsorCandidateId(String[] sponsorCandidateId) {
+        this.sponsorCandidateId = sponsorCandidateId;
+        return this;
+    }
+    
+    /**
+     * Name of the Committee's treasurer. If multiple treasurers for the committee, the most recent treasurer will be shown.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=treasurer_name")
+    public String[] treasurerName;
+    public GetTotalsEntityTypeRequest withTreasurerName(String[] treasurerName) {
+        this.treasurerName = treasurerName;
         return this;
     }
     

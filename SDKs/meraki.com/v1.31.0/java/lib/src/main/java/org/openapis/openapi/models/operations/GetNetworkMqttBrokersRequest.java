@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkMqttBrokersRequest {
-    
-    public GetNetworkMqttBrokersPathParams pathParams;
-    public GetNetworkMqttBrokersRequest withPathParams(GetNetworkMqttBrokersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkMqttBrokersRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

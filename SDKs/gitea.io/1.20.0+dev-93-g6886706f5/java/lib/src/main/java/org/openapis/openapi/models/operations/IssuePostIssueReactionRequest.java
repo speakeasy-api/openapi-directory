@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuePostIssueReactionRequest {
-    
-    public IssuePostIssueReactionPathParams pathParams;
-    public IssuePostIssueReactionRequest withPathParams(IssuePostIssueReactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditReactionOption editReactionOption;
+    public IssuePostIssueReactionRequest withEditReactionOption(org.openapis.openapi.models.shared.EditReactionOption editReactionOption) {
+        this.editReactionOption = editReactionOption;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditReactionOption request;
-    public IssuePostIssueReactionRequest withRequest(org.openapis.openapi.models.shared.EditReactionOption request) {
-        this.request = request;
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssuePostIssueReactionRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuePostIssueReactionRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuePostIssueReactionRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

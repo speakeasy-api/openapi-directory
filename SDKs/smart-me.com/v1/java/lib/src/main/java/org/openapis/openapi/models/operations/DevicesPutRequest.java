@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesPutRequest {
-    
-    public DevicesPutPathParams pathParams;
-    public DevicesPutRequest withPathParams(DevicesPutPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the device
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DevicesPutRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * The number of the switch if there are multiple (1 for L1, 3 for L3)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=switchNumber")
+    public Integer switchNumber;
+    public DevicesPutRequest withSwitchNumber(Integer switchNumber) {
+        this.switchNumber = switchNumber;
+        return this;
+    }
     
-    public DevicesPutQueryParams queryParams;
-    public DevicesPutRequest withQueryParams(DevicesPutQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The new state of the switch
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=switchState")
+    public Boolean switchState;
+    public DevicesPutRequest withSwitchState(Boolean switchState) {
+        this.switchState = switchState;
         return this;
     }
     

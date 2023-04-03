@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolGetConfigRequest {
+    /**
+     * Agent to show the protocol configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolGetConfigRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolGetConfigPathParams pathParams;
-    public ProtocolGetConfigRequest withPathParams(ProtocolGetConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Protocol to show configuration
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=prot")
+    public String prot;
+    public ProtocolGetConfigRequest withProt(String prot) {
+        this.prot = prot;
         return this;
     }
     

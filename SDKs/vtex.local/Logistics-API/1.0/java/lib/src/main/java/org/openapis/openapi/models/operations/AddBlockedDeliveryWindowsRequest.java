@@ -7,24 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddBlockedDeliveryWindowsRequest {
-    
-    public AddBlockedDeliveryWindowsPathParams pathParams;
-    public AddBlockedDeliveryWindowsRequest withPathParams(AddBlockedDeliveryWindowsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AddBlockedDeliveryWindowsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AddBlockedDeliveryWindowsHeaders headers;
-    public AddBlockedDeliveryWindowsRequest withHeaders(AddBlockedDeliveryWindowsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AddBlockedDeliveryWindowsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public AddBlockedDeliveryWindowsRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public AddBlockedDeliveryWindowsRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrierId")
+    public String carrierId;
+    public AddBlockedDeliveryWindowsRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
         return this;
     }
     

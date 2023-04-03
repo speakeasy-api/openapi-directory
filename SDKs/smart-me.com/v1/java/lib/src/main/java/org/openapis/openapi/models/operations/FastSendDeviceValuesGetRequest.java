@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FastSendDeviceValuesGetRequest {
-    
-    public FastSendDeviceValuesGetPathParams pathParams;
-    public FastSendDeviceValuesGetRequest withPathParams(FastSendDeviceValuesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FastSendDeviceValuesGetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

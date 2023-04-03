@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteContactRequest {
-    
-    public DeleteContactPathParams pathParams;
-    public DeleteContactRequest withPathParams(DeleteContactPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteContactSecurity security;
-    public DeleteContactRequest withSecurity(DeleteContactSecurity security) {
-        this.security = security;
+    /**
+     * An Id of a contact
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteContactRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

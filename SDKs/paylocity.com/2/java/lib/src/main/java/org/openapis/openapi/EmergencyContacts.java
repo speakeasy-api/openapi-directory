@@ -34,24 +34,25 @@ public class EmergencyContacts {
      * Add/update emergency contacts
      * Sends new or updated employee emergency contacts directly to Web Pay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsResponse addOrUpdateEmergencyContacts(org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsResponse addOrUpdateEmergencyContacts(org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsRequest request, org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/emergencyContacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/emergencyContacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "emergencyContact", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

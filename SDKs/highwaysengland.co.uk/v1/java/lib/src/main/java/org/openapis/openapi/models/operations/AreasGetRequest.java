@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AreasGetRequest {
-    
-    public AreasGetPathParams pathParams;
-    public AreasGetRequest withPathParams(AreasGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public AreasGetRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

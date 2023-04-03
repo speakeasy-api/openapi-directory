@@ -7,24 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditCollectionRequest {
-    
-    public EditCollectionPathParams pathParams;
-    public EditCollectionRequest withPathParams(EditCollectionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CollectionModification request;
-    public EditCollectionRequest withRequest(org.openapis.openapi.models.shared.CollectionModification request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CollectionModification collectionModification;
+    public EditCollectionRequest withCollectionModification(org.openapis.openapi.models.shared.CollectionModification collectionModification) {
+        this.collectionModification = collectionModification;
         return this;
     }
     
-    
-    public EditCollectionSecurity security;
-    public EditCollectionRequest withSecurity(EditCollectionSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the collection.
+     * The following aliases are supported:
+     * - `root`: The root collection of the account
+     * - `sharedWithMe`: Automatically contains new resources that have been shared individually
+     * - `trash`: Automatically contains resources that have been deleted
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
+    public String collection;
+    public EditCollectionRequest withCollection(String collection) {
+        this.collection = collection;
         return this;
     }
     

@@ -4,20 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2SegmentsRequest {
-    
-    public GetApiV2SegmentsQueryParams queryParams;
-    public GetApiV2SegmentsRequest withQueryParams(GetApiV2SegmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the episode that owns the segment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=episodeId")
+    public Long episodeId;
+    public GetApiV2SegmentsRequest withEpisodeId(Long episodeId) {
+        this.episodeId = episodeId;
         return this;
     }
     
+    /**
+     * The sort order of the list of segments, based on segment ID. If unspecified, the segments are returned in random order. If using paging to iterate through the results, sort order should be specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderById")
+    public GetApiV2SegmentsOrderByIDEnum orderById;
+    public GetApiV2SegmentsRequest withOrderById(GetApiV2SegmentsOrderByIDEnum orderById) {
+        this.orderById = orderById;
+        return this;
+    }
     
-    public GetApiV2SegmentsSecurity security;
-    public GetApiV2SegmentsRequest withSecurity(GetApiV2SegmentsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to return. Must be between 0 and 500, inclusive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetApiV2SegmentsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The start page of the results to return. The first item is indexed at 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageStart")
+    public Integer pageStart;
+    public GetApiV2SegmentsRequest withPageStart(Integer pageStart) {
+        this.pageStart = pageStart;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segmentNumber")
+    public Integer segmentNumber;
+    public GetApiV2SegmentsRequest withSegmentNumber(Integer segmentNumber) {
+        this.segmentNumber = segmentNumber;
         return this;
     }
     

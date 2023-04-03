@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConfigurationSetTrackingOptionsRequest {
-    
-    public PutConfigurationSetTrackingOptionsPathParams pathParams;
-    public PutConfigurationSetTrackingOptionsRequest withPathParams(PutConfigurationSetTrackingOptionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutConfigurationSetTrackingOptionsHeaders headers;
-    public PutConfigurationSetTrackingOptionsRequest withHeaders(PutConfigurationSetTrackingOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the configuration set that you want to add a custom tracking domain to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConfigurationSetName")
+    public String configurationSetName;
+    public PutConfigurationSetTrackingOptionsRequest withConfigurationSetName(String configurationSetName) {
+        this.configurationSetName = configurationSetName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutConfigurationSetTrackingOptionsRequestBody request;
-    public PutConfigurationSetTrackingOptionsRequest withRequest(PutConfigurationSetTrackingOptionsRequestBody request) {
-        this.request = request;
+    public PutConfigurationSetTrackingOptionsRequestBody requestBody;
+    public PutConfigurationSetTrackingOptionsRequest withRequestBody(PutConfigurationSetTrackingOptionsRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutConfigurationSetTrackingOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutConfigurationSetTrackingOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutConfigurationSetTrackingOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutConfigurationSetTrackingOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutConfigurationSetTrackingOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutConfigurationSetTrackingOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutConfigurationSetTrackingOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

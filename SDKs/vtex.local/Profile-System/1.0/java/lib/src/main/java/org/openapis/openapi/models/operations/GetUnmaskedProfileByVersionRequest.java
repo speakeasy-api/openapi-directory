@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUnmaskedProfileByVersionRequest {
-    
-    public GetUnmaskedProfileByVersionPathParams pathParams;
-    public GetUnmaskedProfileByVersionRequest withPathParams(GetUnmaskedProfileByVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetUnmaskedProfileByVersionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetUnmaskedProfileByVersionQueryParams queryParams;
-    public GetUnmaskedProfileByVersionRequest withQueryParams(GetUnmaskedProfileByVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetUnmaskedProfileByVersionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public GetUnmaskedProfileByVersionRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
     
-    public GetUnmaskedProfileByVersionHeaders headers;
-    public GetUnmaskedProfileByVersionRequest withHeaders(GetUnmaskedProfileByVersionHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the version of the client's profile as returned by endpoints that create or update profile information in the `version` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileVersionId")
+    public String profileVersionId;
+    public GetUnmaskedProfileByVersionRequest withProfileVersionId(String profileVersionId) {
+        this.profileVersionId = profileVersionId;
+        return this;
+    }
+    
+    /**
+     * Reason for requesting unmasked data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public GetUnmaskedProfileByVersionRequest withReason(String reason) {
+        this.reason = reason;
         return this;
     }
     

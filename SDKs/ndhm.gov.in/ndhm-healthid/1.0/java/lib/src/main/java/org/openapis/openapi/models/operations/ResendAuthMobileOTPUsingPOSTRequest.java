@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendAuthMobileOTPUsingPOSTRequest {
-    
-    public ResendAuthMobileOTPUsingPOSTHeaders headers;
-    public ResendAuthMobileOTPUsingPOSTRequest withHeaders(ResendAuthMobileOTPUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ResendAuthMobileOTPUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class ResendAuthMobileOTPUsingPOSTRequest {
      * resendOtpRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResendOTPRequest request;
-    public ResendAuthMobileOTPUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.ResendOTPRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public ResendAuthMobileOTPUsingPOSTSecurity security;
-    public ResendAuthMobileOTPUsingPOSTRequest withSecurity(ResendAuthMobileOTPUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.ResendOTPRequest resendOTPRequest;
+    public ResendAuthMobileOTPUsingPOSTRequest withResendOTPRequest(org.openapis.openapi.models.shared.ResendOTPRequest resendOTPRequest) {
+        this.resendOTPRequest = resendOTPRequest;
         return this;
     }
     

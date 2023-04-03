@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVolumesIdActionsActionIdRequest {
+    /**
+     * ID of the Action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action_id")
+    public Long actionId;
+    public GetVolumesIdActionsActionIdRequest withActionId(Long actionId) {
+        this.actionId = actionId;
+        return this;
+    }
     
-    public GetVolumesIdActionsActionIdPathParams pathParams;
-    public GetVolumesIdActionsActionIdRequest withPathParams(GetVolumesIdActionsActionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Volume
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetVolumesIdActionsActionIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

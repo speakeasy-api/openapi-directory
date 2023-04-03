@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EcommerceDeliveryRequest {
-    
-    public EcommerceDeliveryHeaders headers;
-    public EcommerceDeliveryRequest withHeaders(EcommerceDeliveryHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public EcommerceDeliveryRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public EcommerceDeliveryRequestBody request;
-    public EcommerceDeliveryRequest withRequest(EcommerceDeliveryRequestBody request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public EcommerceDeliveryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public EcommerceDeliveryRequestBody requestBody;
+    public EcommerceDeliveryRequest withRequestBody(EcommerceDeliveryRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

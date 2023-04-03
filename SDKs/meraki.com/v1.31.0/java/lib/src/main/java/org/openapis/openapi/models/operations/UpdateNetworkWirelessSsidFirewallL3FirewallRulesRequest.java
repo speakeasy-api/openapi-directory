@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest {
-    
-    public UpdateNetworkWirelessSsidFirewallL3FirewallRulesPathParams pathParams;
-    public UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest withPathParams(UpdateNetworkWirelessSsidFirewallL3FirewallRulesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequestBody requestBody;
+    public UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest withRequestBody(UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequestBody request;
-    public UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest withRequest(UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNetworkWirelessSsidFirewallL3FirewallRulesRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

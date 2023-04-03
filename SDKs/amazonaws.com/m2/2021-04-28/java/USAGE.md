@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CancelBatchJobExecutionPathParams;
-import org.openapis.openapi.models.operations.CancelBatchJobExecutionHeaders;
 import org.openapis.openapi.models.operations.CancelBatchJobExecutionRequest;
 import org.openapis.openapi.models.operations.CancelBatchJobExecutionResponse;
 
@@ -14,27 +12,21 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelBatchJobExecutionRequest req = new CancelBatchJobExecutionRequest() {{
-                pathParams = new CancelBatchJobExecutionPathParams() {{
-                    applicationId = "corrupti";
-                    executionId = "provident";
-                }};
-                headers = new CancelBatchJobExecutionHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                applicationId = "illum";
+                executionId = "vel";
+            }}            
 
             CancelBatchJobExecutionResponse res = sdk.cancelBatchJobExecution(req);
 

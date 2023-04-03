@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WikiContentRequest {
-    
-    public WikiContentPathParams pathParams;
-    public WikiContentRequest withPathParams(WikiContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the wiki.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wiki_id")
+    public String wikiId;
+    public WikiContentRequest withWikiId(String wikiId) {
+        this.wikiId = wikiId;
         return this;
     }
     

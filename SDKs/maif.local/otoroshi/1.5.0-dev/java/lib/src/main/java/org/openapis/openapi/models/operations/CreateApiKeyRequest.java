@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateApiKeyRequest {
-    
-    public CreateApiKeyPathParams pathParams;
-    public CreateApiKeyRequest withPathParams(CreateApiKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiKey request;
-    public CreateApiKeyRequest withRequest(org.openapis.openapi.models.shared.ApiKey request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiKey apiKey;
+    public CreateApiKeyRequest withApiKey(org.openapis.openapi.models.shared.ApiKey apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public CreateApiKeySecurity security;
-    public CreateApiKeyRequest withSecurity(CreateApiKeySecurity security) {
-        this.security = security;
+    /**
+     * The api key service id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceId")
+    public String serviceId;
+    public CreateApiKeyRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     

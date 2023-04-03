@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesCreateLabelRequest {
-    
-    public IssuesCreateLabelPathParams pathParams;
-    public IssuesCreateLabelRequest withPathParams(IssuesCreateLabelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public IssuesCreateLabelRequestBody requestBody;
+    public IssuesCreateLabelRequest withRequestBody(IssuesCreateLabelRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public IssuesCreateLabelRequestBody request;
-    public IssuesCreateLabelRequest withRequest(IssuesCreateLabelRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesCreateLabelRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesCreateLabelRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

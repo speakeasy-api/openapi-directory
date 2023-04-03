@@ -5,11 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetCustomerServiceMetricSecurity;
-import org.openapis.openapi.models.operations.GetCustomerServiceMetricPathParams;
-import org.openapis.openapi.models.operations.GetCustomerServiceMetricQueryParams;
 import org.openapis.openapi.models.operations.GetCustomerServiceMetricRequest;
 import org.openapis.openapi.models.operations.GetCustomerServiceMetricResponse;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -18,21 +15,14 @@ public class Application {
                 .build();
 
             GetCustomerServiceMetricRequest req = new GetCustomerServiceMetricRequest() {{
-                security = new GetCustomerServiceMetricSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new GetCustomerServiceMetricPathParams() {{
-                    customerServiceMetricType = "corrupti";
-                    evaluationType = "provident";
-                }};
-                queryParams = new GetCustomerServiceMetricQueryParams() {{
-                    evaluationMarketplaceId = "distinctio";
-                }};
-            }};            
+                customerServiceMetricType = "corrupti";
+                evaluationMarketplaceId = "provident";
+                evaluationType = "distinctio";
+            }}            
 
-            GetCustomerServiceMetricResponse res = sdk.customerServiceMetric.getCustomerServiceMetric(req);
+            GetCustomerServiceMetricResponse res = sdk.customerServiceMetric.getCustomerServiceMetric(req, new GetCustomerServiceMetricSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.getCustomerServiceMetricResponse.isPresent()) {
                 // handle response

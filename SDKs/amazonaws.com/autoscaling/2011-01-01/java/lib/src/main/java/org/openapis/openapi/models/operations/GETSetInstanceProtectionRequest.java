@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetInstanceProtectionRequest {
-    
-    public GETSetInstanceProtectionQueryParams queryParams;
-    public GETSetInstanceProtectionRequest withQueryParams(GETSetInstanceProtectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetInstanceProtectionActionEnum action;
+    public GETSetInstanceProtectionRequest withAction(GETSetInstanceProtectionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETSetInstanceProtectionRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETSetInstanceProtectionHeaders headers;
-    public GETSetInstanceProtectionRequest withHeaders(GETSetInstanceProtectionHeaders headers) {
-        this.headers = headers;
+    /**
+     * One or more instance IDs. You can specify up to 50 instances.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceIds")
+    public String[] instanceIds;
+    public GETSetInstanceProtectionRequest withInstanceIds(String[] instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    
+    /**
+     * Indicates whether the instance is protected from termination by Amazon EC2 Auto Scaling when scaling in.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProtectedFromScaleIn")
+    public Boolean protectedFromScaleIn;
+    public GETSetInstanceProtectionRequest withProtectedFromScaleIn(Boolean protectedFromScaleIn) {
+        this.protectedFromScaleIn = protectedFromScaleIn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetInstanceProtectionVersionEnum version;
+    public GETSetInstanceProtectionRequest withVersion(GETSetInstanceProtectionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetInstanceProtectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetInstanceProtectionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetInstanceProtectionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetInstanceProtectionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetInstanceProtectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetInstanceProtectionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetInstanceProtectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteItemIdFromItemListRequest {
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteItemIdFromItemListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteItemIdFromItemListPathParams pathParams;
-    public DeleteItemIdFromItemListRequest withPathParams(DeleteItemIdFromItemListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Item ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public String itemId;
+    public DeleteItemIdFromItemListRequest withItemId(String itemId) {
+        this.itemId = itemId;
         return this;
     }
     

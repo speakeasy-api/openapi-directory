@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1FollowRequestsIdAuthorizeRequest {
-    
-    public PostApiV1FollowRequestsIdAuthorizePathParams pathParams;
-    public PostApiV1FollowRequestsIdAuthorizeRequest withPathParams(PostApiV1FollowRequestsIdAuthorizePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1FollowRequestsIdAuthorizeSecurity security;
-    public PostApiV1FollowRequestsIdAuthorizeRequest withSecurity(PostApiV1FollowRequestsIdAuthorizeSecurity security) {
-        this.security = security;
+    /**
+     * The id of the account in the database
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1FollowRequestsIdAuthorizeRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

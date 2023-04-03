@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateorupdatefixedpricesonpricetableortradepolicyRequest {
-    
-    public CreateorupdatefixedpricesonpricetableortradepolicyPathParams pathParams;
-    public CreateorupdatefixedpricesonpricetableortradepolicyRequest withPathParams(CreateorupdatefixedpricesonpricetableortradepolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateorupdatefixedpricesonpricetableortradepolicyRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateorupdatefixedpricesonpricetableortradepolicyHeaders headers;
-    public CreateorupdatefixedpricesonpricetableortradepolicyRequest withHeaders(CreateorupdatefixedpricesonpricetableortradepolicyHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateorupdatefixedpricesonpricetableortradepolicyRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateorupdatefixedpricesonpricetableortradepolicyRequestBody[] request;
-    public CreateorupdatefixedpricesonpricetableortradepolicyRequest withRequest(CreateorupdatefixedpricesonpricetableortradepolicyRequestBody[] request) {
-        this.request = request;
+    public CreateorupdatefixedpricesonpricetableortradepolicyRequestBody[] requestBody;
+    public CreateorupdatefixedpricesonpricetableortradepolicyRequest withRequestBody(CreateorupdatefixedpricesonpricetableortradepolicyRequestBody[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * SKU ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public CreateorupdatefixedpricesonpricetableortradepolicyRequest withItemId(Long itemId) {
+        this.itemId = itemId;
+        return this;
+    }
+    
+    /**
+     * SKU **price table** name or **trade policy** ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
+    public String priceTableId;
+    public CreateorupdatefixedpricesonpricetableortradepolicyRequest withPriceTableId(String priceTableId) {
+        this.priceTableId = priceTableId;
         return this;
     }
     

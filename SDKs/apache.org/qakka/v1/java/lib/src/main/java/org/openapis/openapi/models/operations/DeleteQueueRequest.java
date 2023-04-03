@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteQueueRequest {
-    
-    public DeleteQueuePathParams pathParams;
-    public DeleteQueueRequest withPathParams(DeleteQueuePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=confirm")
+    public Boolean confirm;
+    public DeleteQueueRequest withConfirm(Boolean confirm) {
+        this.confirm = confirm;
         return this;
     }
     
-    
-    public DeleteQueueQueryParams queryParams;
-    public DeleteQueueRequest withQueryParams(DeleteQueueQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
+    public String queueName;
+    public DeleteQueueRequest withQueueName(String queueName) {
+        this.queueName = queueName;
         return this;
     }
     

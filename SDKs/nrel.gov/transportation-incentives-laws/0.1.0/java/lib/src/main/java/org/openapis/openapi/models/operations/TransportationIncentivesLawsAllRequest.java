@@ -4,20 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransportationIncentivesLawsAllRequest {
-    
-    public TransportationIncentivesLawsAllPathParams pathParams;
-    public TransportationIncentivesLawsAllRequest withPathParams(TransportationIncentivesLawsAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public TransportationIncentivesLawsAllRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * The 'true' value returns only expired, repealed, or archived laws and incentives. The default 'false' value returns only current laws and incentives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expired")
+    public Boolean expired;
+    public TransportationIncentivesLawsAllRequest withExpired(Boolean expired) {
+        this.expired = expired;
+        return this;
+    }
     
-    public TransportationIncentivesLawsAllQueryParams queryParams;
-    public TransportationIncentivesLawsAllRequest withQueryParams(TransportationIncentivesLawsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Search by the incentive type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'GNT' for Grants, 'TAX' for Tax Incentives, 'LOANS' for Loans and Leases, 'RBATE' for Rebates, 'EXEM' for Exemptions, 'TOU' for Time-of-Use Rate, and 'OTHER' for Other.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=incentive_type")
+    public String incentiveType;
+    public TransportationIncentivesLawsAllRequest withIncentiveType(String incentiveType) {
+        this.incentiveType = incentiveType;
+        return this;
+    }
+    
+    /**
+     * Return laws for the given Jurisdiction. Jurisdiction must be given as a two character state code (eg, 'CO' for Colorado). A single jurisdiction, or a comma-separate list of multiple jurisdiction, may be given.  Use the code 'US' for federal laws and the code 'DC' for Washington D.C.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jurisdiction")
+    public String jurisdiction;
+    public TransportationIncentivesLawsAllRequest withJurisdiction(String jurisdiction) {
+        this.jurisdiction = jurisdiction;
+        return this;
+    }
+    
+    /**
+     * Search laws by keyword in title or text.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
+    public String keyword;
+    public TransportationIncentivesLawsAllRequest withKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    
+    /**
+     * Search by the law type. A single type, or a comma-separate list of multiple types, may be given. Values are as follows: 'STATEINC' for State Incentives, 'UPINC ' for Utility/Private Incentives, 'LAWREG' for Laws and Regulations, 'INC' for Incentives, 'PROG' for Programs, 'LUP' for Last Updated, 'OVIEW' for Overview, and 'HILITE' for Highlights.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=law_type")
+    public String lawType;
+    public TransportationIncentivesLawsAllRequest withLawType(String lawType) {
+        this.lawType = lawType;
+        return this;
+    }
+    
+    /**
+     * Limit the number of laws returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public TransportationIncentivesLawsAllRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Show only local examples of laws and incentives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=local")
+    public Boolean local;
+    public TransportationIncentivesLawsAllRequest withLocal(Boolean local) {
+        this.local = local;
+        return this;
+    }
+    
+    /**
+     * Response format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=output_format")
+    public TransportationIncentivesLawsAllOutputFormatEnum outputFormat;
+    public TransportationIncentivesLawsAllRequest withOutputFormat(TransportationIncentivesLawsAllOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * Include points of contacts in the return value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=poc")
+    public Boolean poc;
+    public TransportationIncentivesLawsAllRequest withPoc(Boolean poc) {
+        this.poc = poc;
+        return this;
+    }
+    
+    /**
+     * Return only recently added or updated laws and incentives
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recent")
+    public Boolean recent;
+    public TransportationIncentivesLawsAllRequest withRecent(Boolean recent) {
+        this.recent = recent;
+        return this;
+    }
+    
+    /**
+     * Search by the regulation type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'REQ' for Acquisition / Fuel Use, 'DREST' for Driving / Idling, 'REGIS' for Registration / Licensing, 'EVFEE' for EV Registration Fee, 'FUEL' for Fuel Taxes, 'STD' for Fuel Production / Quality, 'RFS' for Renewable Fuel Standard / Mandate, 'AIRQEMISSIONS' for Air Quality / Emissions, 'CCEINIT' for Climate Change / Energy Initiatives, 'UTILITY' for Utility Definition, 'BUILD' for Building Codes, 'RTC' for Right-to-Charge, and 'OTHER' for Other.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regulation_type")
+    public String regulationType;
+    public TransportationIncentivesLawsAllRequest withRegulationType(String regulationType) {
+        this.regulationType = regulationType;
+        return this;
+    }
+    
+    /**
+     * Search by the technology type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'BIOD' for Biodiesel, 'ETH' for Ethanol / Flexible Fuel Vehicles, 'NG' for Natural Gas / Natural Gas Vehicles, 'LPG' for Liquefied Petroleum Gas (Propane) / Propane Vehicles, 'HY' for Hydrogen / Fuel Cell Electric Vehicles, 'ELEC' for All-Electric Vehicles (EVs), 'PHEV' for Plug-In Hybrid Electric Vehicles (PHEVs), 'HEV' for Hybrid Electric Vehicles (HEVs), 'NEVS' for Neighborhood Electric Vehicles (NEVs), 'RD' for Renewable Diesel, 'AFTMKTCONV' for Aftermarket Conversions, 'EFFEC' for Fuel Economy / Efficiency, 'IR' for Idle Reduction, 'AUTONOMOUS' for Connected and Autonomous Vehicles, and 'OTHER' for Other.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=technology")
+    public String technology;
+    public TransportationIncentivesLawsAllRequest withTechnology(String technology) {
+        this.technology = technology;
+        return this;
+    }
+    
+    /**
+     * Search by the user type. A single type, or a comma-separate list of multiple types, may be given. Values and what they stand for are as follows: 'FLEET' for Commercial, 'GOV' for Government Entity, 'TRIBAL' for Tribal Government, 'IND' for Personal Vehicle Owner or Driver, 'STATION' for Alternative Fuel Infrastructure Operator, 'AFP' for Alternative Fuel Producer, 'PURCH' for Alternative Fuel Purchaser, 'MAN' for Alternative Fuel Vehicle (AFV) Manufacturer or Retrofitter, 'MUD' for Multi-Unit Dwelling, 'TRANS' for Transit, and 'OTHER' for Other.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_type")
+    public String userType;
+    public TransportationIncentivesLawsAllRequest withUserType(String userType) {
+        this.userType = userType;
         return this;
     }
     

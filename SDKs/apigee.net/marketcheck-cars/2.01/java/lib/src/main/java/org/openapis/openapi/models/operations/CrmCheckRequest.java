@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrmCheckRequest {
-    
-    public CrmCheckPathParams pathParams;
-    public CrmCheckRequest withPathParams(CrmCheckPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public CrmCheckRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * sale date to check whether after this listing has appeared or not. Must be 8 character long, with YYYYMMDD format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sale_date")
+    public String saleDate;
+    public CrmCheckRequest withSaleDate(String saleDate) {
+        this.saleDate = saleDate;
+        return this;
+    }
     
-    public CrmCheckQueryParams queryParams;
-    public CrmCheckRequest withQueryParams(CrmCheckQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The VIN to identify the car. Must be a valid 17 char VIN
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vin")
+    public String vin;
+    public CrmCheckRequest withVin(String vin) {
+        this.vin = vin;
         return this;
     }
     

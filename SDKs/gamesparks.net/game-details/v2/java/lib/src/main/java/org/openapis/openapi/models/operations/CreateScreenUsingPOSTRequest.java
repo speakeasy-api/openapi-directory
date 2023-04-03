@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateScreenUsingPOSTRequest {
-    
-    public CreateScreenUsingPOSTPathParams pathParams;
-    public CreateScreenUsingPOSTRequest withPathParams(CreateScreenUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * screen
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ManageScreen request;
-    public CreateScreenUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.ManageScreen request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ManageScreen manageScreen;
+    public CreateScreenUsingPOSTRequest withManageScreen(org.openapis.openapi.models.shared.ManageScreen manageScreen) {
+        this.manageScreen = manageScreen;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public CreateScreenUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

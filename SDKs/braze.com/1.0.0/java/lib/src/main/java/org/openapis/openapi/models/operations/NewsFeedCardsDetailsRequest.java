@@ -4,13 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewsFeedCardsDetailsRequest {
-    
-    public NewsFeedCardsDetailsQueryParams queryParams;
-    public NewsFeedCardsDetailsRequest withQueryParams(NewsFeedCardsDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) String
+     * 
+     * Card API identifier 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=card_id")
+    public String cardId;
+    public NewsFeedCardsDetailsRequest withCardId(String cardId) {
+        this.cardId = cardId;
         return this;
     }
     

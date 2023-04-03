@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackRequest {
-    
-    public GetTrackQueryParams queryParams;
-    public GetTrackRequest withQueryParams(GetTrackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingNumber")
+    public String trackingNumber;
+    public GetTrackRequest withTrackingNumber(String trackingNumber) {
+        this.trackingNumber = trackingNumber;
         return this;
     }
     

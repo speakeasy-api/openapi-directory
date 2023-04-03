@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAutoReceptionistRequest {
-    
-    public UpdateAutoReceptionistPathParams pathParams;
-    public UpdateAutoReceptionistRequest withPathParams(UpdateAutoReceptionistPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateAutoReceptionistApplicationJSON request;
-    public UpdateAutoReceptionistRequest withRequest(UpdateAutoReceptionistApplicationJSON request) {
-        this.request = request;
+    public UpdateAutoReceptionistApplicationJSON requestBody;
+    public UpdateAutoReceptionistRequest withRequestBody(UpdateAutoReceptionistApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateAutoReceptionistSecurity security;
-    public UpdateAutoReceptionistRequest withSecurity(UpdateAutoReceptionistSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=autoReceptionistId")
+    public String autoReceptionistId;
+    public UpdateAutoReceptionistRequest withAutoReceptionistId(String autoReceptionistId) {
+        this.autoReceptionistId = autoReceptionistId;
         return this;
     }
     

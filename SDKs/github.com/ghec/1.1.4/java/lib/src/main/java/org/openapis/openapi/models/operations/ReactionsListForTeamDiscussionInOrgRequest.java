@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionInOrgRequest {
-    
-    public ReactionsListForTeamDiscussionInOrgPathParams pathParams;
-    public ReactionsListForTeamDiscussionInOrgRequest withPathParams(ReactionsListForTeamDiscussionInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-cloud@latest//rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForTeamDiscussionInOrgContentEnum content;
+    public ReactionsListForTeamDiscussionInOrgRequest withContent(ReactionsListForTeamDiscussionInOrgContentEnum content) {
+        this.content = content;
         return this;
     }
     
+    /**
+     * The number that identifies the discussion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsListForTeamDiscussionInOrgRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
     
-    public ReactionsListForTeamDiscussionInOrgQueryParams queryParams;
-    public ReactionsListForTeamDiscussionInOrgRequest withQueryParams(ReactionsListForTeamDiscussionInOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ReactionsListForTeamDiscussionInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForTeamDiscussionInOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForTeamDiscussionInOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public ReactionsListForTeamDiscussionInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

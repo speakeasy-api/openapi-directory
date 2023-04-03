@@ -4,27 +4,115 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListJobExecutionsForThingRequest {
-    
-    public ListJobExecutionsForThingPathParams pathParams;
-    public ListJobExecutionsForThingRequest withPathParams(ListJobExecutionsForThingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListJobExecutionsForThingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ListJobExecutionsForThingQueryParams queryParams;
-    public ListJobExecutionsForThingRequest withQueryParams(ListJobExecutionsForThingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListJobExecutionsForThingRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListJobExecutionsForThingRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ListJobExecutionsForThingHeaders headers;
-    public ListJobExecutionsForThingRequest withHeaders(ListJobExecutionsForThingHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListJobExecutionsForThingRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListJobExecutionsForThingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListJobExecutionsForThingRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListJobExecutionsForThingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The unique identifier you assigned to this job when it was created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=jobId")
+    public String jobId;
+    public ListJobExecutionsForThingRequest withJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to be returned per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListJobExecutionsForThingRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The namespace used to indicate that a job is a customer-managed job.&lt;/p&gt; &lt;p&gt;When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.&lt;/p&gt; &lt;p&gt; &lt;code&gt;$aws/things/&lt;i&gt;THING_NAME&lt;/i&gt;/jobs/&lt;i&gt;JOB_ID&lt;/i&gt;/notify-namespace-&lt;i&gt;NAMESPACE_ID&lt;/i&gt;/&lt;/code&gt; &lt;/p&gt; &lt;note&gt; &lt;p&gt;The &lt;code&gt;namespaceId&lt;/code&gt; feature is in public preview.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=namespaceId")
+    public String namespaceId;
+    public ListJobExecutionsForThingRequest withNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
+        return this;
+    }
+    
+    /**
+     * The token to retrieve the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListJobExecutionsForThingRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * An optional filter that lets you search for jobs that have the specified status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ListJobExecutionsForThingStatusEnum status;
+    public ListJobExecutionsForThingRequest withStatus(ListJobExecutionsForThingStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * The thing name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thingName")
+    public String thingName;
+    public ListJobExecutionsForThingRequest withThingName(String thingName) {
+        this.thingName = thingName;
         return this;
     }
     

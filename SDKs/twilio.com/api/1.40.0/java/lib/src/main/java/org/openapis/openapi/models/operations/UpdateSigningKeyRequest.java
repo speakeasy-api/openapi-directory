@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSigningKeyRequest {
-    
-    public UpdateSigningKeyPathParams pathParams;
-    public UpdateSigningKeyRequest withPathParams(UpdateSigningKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateSigningKeyRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSigningKeyUpdateSigningKeyRequest request;
-    public UpdateSigningKeyRequest withRequest(UpdateSigningKeyUpdateSigningKeyRequest request) {
-        this.request = request;
+    public UpdateSigningKeyUpdateSigningKeyRequest requestBody;
+    public UpdateSigningKeyRequest withRequestBody(UpdateSigningKeyUpdateSigningKeyRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSigningKeySecurity security;
-    public UpdateSigningKeyRequest withSecurity(UpdateSigningKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSigningKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSigningKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

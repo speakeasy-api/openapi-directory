@@ -4,20 +4,178 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependabotListAlertsForRepoRequest {
-    
-    public DependabotListAlertsForRepoPathParams pathParams;
-    public DependabotListAlertsForRepoRequest withPathParams(DependabotListAlertsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results after this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
+    public String after;
+    public DependabotListAlertsForRepoRequest withAfter(String after) {
+        this.after = after;
         return this;
     }
     
+    /**
+     * A cursor, as given in the [Link header](https://docs.github.com/rest/overview/resources-in-the-rest-api#link-header). If specified, the query only searches for results before this cursor.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
+    public String before;
+    public DependabotListAlertsForRepoRequest withBefore(String before) {
+        this.before = before;
+        return this;
+    }
     
-    public DependabotListAlertsForRepoQueryParams queryParams;
-    public DependabotListAlertsForRepoRequest withQueryParams(DependabotListAlertsForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction to sort the results by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public org.openapis.openapi.models.shared.DirectionEnum direction;
+    public DependabotListAlertsForRepoRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
+     * 
+     * Can be: `composer`, `go`, `maven`, `npm`, `nuget`, `pip`, `pub`, `rubygems`, `rust`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ecosystem")
+    public String ecosystem;
+    public DependabotListAlertsForRepoRequest withEcosystem(String ecosystem) {
+        this.ecosystem = ecosystem;
+        return this;
+    }
+    
+    /**
+     * **Deprecated**. The number of results per page (max 100), starting from the first matching result.
+     * This parameter must not be used in combination with `last`.
+     * Instead, use `per_page` in combination with `after` to fetch the first page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first")
+    public Long first;
+    public DependabotListAlertsForRepoRequest withFirst(Long first) {
+        this.first = first;
+        return this;
+    }
+    
+    /**
+     * **Deprecated**. The number of results per page (max 100), starting from the last matching result.
+     * This parameter must not be used in combination with `first`.
+     * Instead, use `per_page` in combination with `before` to fetch the last page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last")
+    public Long last;
+    public DependabotListAlertsForRepoRequest withLast(Long last) {
+        this.last = last;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manifest")
+    public String manifest;
+    public DependabotListAlertsForRepoRequest withManifest(String manifest) {
+        this.manifest = manifest;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public DependabotListAlertsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of package names. If specified, only alerts for these packages will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=package")
+    public String package_;
+    public DependabotListAlertsForRepoRequest withPackage(String package_) {
+        this.package_ = package_;
+        return this;
+    }
+    
+    /**
+     * **Deprecated**. Page number of the results to fetch. Use cursor-based pagination with `before` or `after` instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public DependabotListAlertsForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public DependabotListAlertsForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public DependabotListAlertsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public org.openapis.openapi.models.shared.DependabotAlertScopeEnum scope;
+    public DependabotListAlertsForRepoRequest withScope(org.openapis.openapi.models.shared.DependabotAlertScopeEnum scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of severities. If specified, only alerts with these severities will be returned.
+     * 
+     * Can be: `low`, `medium`, `high`, `critical`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=severity")
+    public String severity;
+    public DependabotListAlertsForRepoRequest withSeverity(String severity) {
+        this.severity = severity;
+        return this;
+    }
+    
+    /**
+     * The property by which to sort the results.
+     * `created` means when the alert was created.
+     * `updated` means when the alert's state last changed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public org.openapis.openapi.models.shared.DependabotAlertSortEnum sort;
+    public DependabotListAlertsForRepoRequest withSort(org.openapis.openapi.models.shared.DependabotAlertSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of states. If specified, only alerts with these states will be returned.
+     * 
+     * Can be: `dismissed`, `fixed`, `open`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public DependabotListAlertsForRepoRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

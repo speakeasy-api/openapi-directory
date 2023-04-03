@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RoadDisruptionRequest {
-    
-    public RoadDisruptionPathParams pathParams;
-    public RoadDisruptionRequest withPathParams(RoadDisruptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * an optional list of category names to filter on (a valid list of categories can be obtained from the /Road/Meta/categories endpoint)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
+    public String[] categories;
+    public RoadDisruptionRequest withCategories(String[] categories) {
+        this.categories = categories;
         return this;
     }
     
+    /**
+     * Optional, defaults to true. When true, always includes disruptions that have road closures, regardless of the severity filter. When false, the severity filter works as normal.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closures")
+    public Boolean closures;
+    public RoadDisruptionRequest withClosures(Boolean closures) {
+        this.closures = closures;
+        return this;
+    }
     
-    public RoadDisruptionQueryParams queryParams;
-    public RoadDisruptionRequest withQueryParams(RoadDisruptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comma-separated list of road identifiers e.g. "A406, A2" use all for all to ignore id filter (a full list of supported road identifiers can be found at the /Road/ endpoint)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public RoadDisruptionRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * an optional list of Severity names to filter on (a valid list of severities can be obtained from the /Road/Meta/severities endpoint)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=severities")
+    public String[] severities;
+    public RoadDisruptionRequest withSeverities(String[] severities) {
+        this.severities = severities;
+        return this;
+    }
+    
+    /**
+     * Optional, defaults to false. When true, removes every property/node except for id, point, severity, severityDescription, startDate, endDate, corridor details, location, comments and streets
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stripContent")
+    public Boolean stripContent;
+    public RoadDisruptionRequest withStripContent(Boolean stripContent) {
+        this.stripContent = stripContent;
         return this;
     }
     

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PostDisableRequest;
 import org.openapis.openapi.models.operations.PostDisableResponse;
 import org.openapis.openapi.models.shared.DisableRequest;
 
@@ -14,14 +13,12 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostDisableRequest req = new PostDisableRequest() {{
-                request = new DisableRequest() {{
-                    contract = "corrupti";
-                    merchantAccount = "provident";
-                    recurringDetailReference = "distinctio";
-                    shopperReference = "quibusdam";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.DisableRequest req = new DisableRequest() {{
+                contract = "corrupti";
+                merchantAccount = "provident";
+                recurringDetailReference = "distinctio";
+                shopperReference = "quibusdam";
+            }}            
 
             PostDisableResponse res = sdk.postDisable(req);
 

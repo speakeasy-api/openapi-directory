@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest {
-    
-    public TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams pathParams;
-    public TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest withPathParams(TeamsCreateOrUpdateIdpGroupConnectionsLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody requestBody;
+    public TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest withRequestBody(TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody request;
-    public TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest withRequest(TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsCreateOrUpdateIdpGroupConnectionsLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

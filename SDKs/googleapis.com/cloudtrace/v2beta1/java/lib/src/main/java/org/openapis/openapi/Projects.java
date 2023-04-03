@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a sink that exports trace spans to a destination. The export of newly-ingested traces begins immediately, unless the sink's `writer_identity` is not permitted to write to the destination. A sink can export traces only from the resource owning the sink (the 'parent').
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateResponse cloudtraceProjectsTraceSinksCreate(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateResponse cloudtraceProjectsTraceSinksCreate(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreatePathParams.class, baseUrl, "/v2beta1/{parent}/traceSinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateRequest.class, baseUrl, "/v2beta1/{parent}/traceSinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "traceSinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes a sink.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteResponse cloudtraceProjectsTraceSinksDelete(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteResponse cloudtraceProjectsTraceSinksDelete(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeletePathParams.class, baseUrl, "/v2beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteRequest.class, baseUrl, "/v2beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Get a trace sink by name under the parent resource (GCP project).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetResponse cloudtraceProjectsTraceSinksGet(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetResponse cloudtraceProjectsTraceSinksGet(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetPathParams.class, baseUrl, "/v2beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetRequest.class, baseUrl, "/v2beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class Projects {
     /**
      * List all sinks for the parent resource (GCP project).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListResponse cloudtraceProjectsTraceSinksList(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListResponse cloudtraceProjectsTraceSinksList(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListPathParams.class, baseUrl, "/v2beta1/{parent}/traceSinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListRequest.class, baseUrl, "/v2beta1/{parent}/traceSinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class Projects {
     /**
      * Updates a sink. This method updates fields in the existing sink according to the provided update mask. The sink's name cannot be changed nor any output-only fields (e.g. the writer_identity).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchResponse cloudtraceProjectsTraceSinksPatch(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchResponse cloudtraceProjectsTraceSinksPatch(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchRequest request, org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchPathParams.class, baseUrl, "/v2beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchRequest.class, baseUrl, "/v2beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "traceSinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudtraceProjectsTraceSinksPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

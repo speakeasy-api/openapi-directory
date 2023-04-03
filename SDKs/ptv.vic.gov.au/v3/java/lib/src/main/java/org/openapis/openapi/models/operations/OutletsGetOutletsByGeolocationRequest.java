@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OutletsGetOutletsByGeolocationRequest {
-    
-    public OutletsGetOutletsByGeolocationPathParams pathParams;
-    public OutletsGetOutletsByGeolocationRequest withPathParams(OutletsGetOutletsByGeolocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public OutletsGetOutletsByGeolocationRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Geographic coordinate of latitude
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=latitude")
+    public Float latitude;
+    public OutletsGetOutletsByGeolocationRequest withLatitude(Float latitude) {
+        this.latitude = latitude;
+        return this;
+    }
     
-    public OutletsGetOutletsByGeolocationQueryParams queryParams;
-    public OutletsGetOutletsByGeolocationRequest withQueryParams(OutletsGetOutletsByGeolocationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Geographic coordinate of longitude
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=longitude")
+    public Float longitude;
+    public OutletsGetOutletsByGeolocationRequest withLongitude(Float longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * Filter by maximum distance (in metres) from location specified via latitude and longitude parameters (default = 300)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_distance")
+    public Double maxDistance;
+    public OutletsGetOutletsByGeolocationRequest withMaxDistance(Double maxDistance) {
+        this.maxDistance = maxDistance;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results returned (default = 30)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_results")
+    public Integer maxResults;
+    public OutletsGetOutletsByGeolocationRequest withMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public OutletsGetOutletsByGeolocationRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public OutletsGetOutletsByGeolocationRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

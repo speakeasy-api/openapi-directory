@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicensesGetAllCommonlyUsedRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featured")
+    public Boolean featured;
+    public LicensesGetAllCommonlyUsedRequest withFeatured(Boolean featured) {
+        this.featured = featured;
+        return this;
+    }
     
-    public LicensesGetAllCommonlyUsedQueryParams queryParams;
-    public LicensesGetAllCommonlyUsedRequest withQueryParams(LicensesGetAllCommonlyUsedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public LicensesGetAllCommonlyUsedRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public LicensesGetAllCommonlyUsedRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

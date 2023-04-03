@@ -41,12 +41,12 @@ public class ActionBatches {
      */
     public org.openapis.openapi.models.operations.CreateOrganizationActionBatchResponse createOrganizationActionBatch(org.openapis.openapi.models.operations.CreateOrganizationActionBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationActionBatchPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateOrganizationActionBatchRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,7 +86,7 @@ public class ActionBatches {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationActionBatchResponse deleteOrganizationActionBatch(org.openapis.openapi.models.operations.DeleteOrganizationActionBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationActionBatchPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationActionBatchRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -120,7 +120,7 @@ public class ActionBatches {
      */
     public org.openapis.openapi.models.operations.GetOrganizationActionBatchResponse getOrganizationActionBatch(org.openapis.openapi.models.operations.GetOrganizationActionBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationActionBatchPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationActionBatchRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,13 +160,13 @@ public class ActionBatches {
      */
     public org.openapis.openapi.models.operations.GetOrganizationActionBatchesResponse getOrganizationActionBatches(org.openapis.openapi.models.operations.GetOrganizationActionBatchesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationActionBatchesPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationActionBatchesRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationActionBatchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationActionBatchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -206,12 +206,12 @@ public class ActionBatches {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationActionBatchResponse updateOrganizationActionBatch(org.openapis.openapi.models.operations.UpdateOrganizationActionBatchRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationActionBatchPathParams.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationActionBatchRequest.class, baseUrl, "/organizations/{organizationId}/actionBatches/{actionBatchId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

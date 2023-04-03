@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTextTrackRequest {
-    
-    public DeleteTextTrackPathParams pathParams;
-    public DeleteTextTrackRequest withPathParams(DeleteTextTrackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the text track.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=texttrack_id")
+    public Double texttrackId;
+    public DeleteTextTrackRequest withTexttrackId(Double texttrackId) {
+        this.texttrackId = texttrackId;
         return this;
     }
     
-    
-    public DeleteTextTrackSecurity security;
-    public DeleteTextTrackRequest withSecurity(DeleteTextTrackSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public DeleteTextTrackRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

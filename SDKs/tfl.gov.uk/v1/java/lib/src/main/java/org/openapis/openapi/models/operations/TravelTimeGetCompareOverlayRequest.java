@@ -4,20 +4,140 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TravelTimeGetCompareOverlayRequest {
-    
-    public TravelTimeGetCompareOverlayPathParams pathParams;
-    public TravelTimeGetCompareOverlayRequest withPathParams(TravelTimeGetCompareOverlayPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compareType")
+    public String compareType;
+    public TravelTimeGetCompareOverlayRequest withCompareType(String compareType) {
+        this.compareType = compareType;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=compareValue")
+    public String compareValue;
+    public TravelTimeGetCompareOverlayRequest withCompareValue(String compareValue) {
+        this.compareValue = compareValue;
+        return this;
+    }
     
-    public TravelTimeGetCompareOverlayQueryParams queryParams;
-    public TravelTimeGetCompareOverlayRequest withQueryParams(TravelTimeGetCompareOverlayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction of travel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public TravelTimeGetCompareOverlayDirectionEnum direction;
+    public TravelTimeGetCompareOverlayRequest withDirection(TravelTimeGetCompareOverlayDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * The height of the requested overlay.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=height")
+    public Integer height;
+    public TravelTimeGetCompareOverlayRequest withHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    
+    /**
+     * The map center latitude.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapCenterLat")
+    public Double mapCenterLat;
+    public TravelTimeGetCompareOverlayRequest withMapCenterLat(Double mapCenterLat) {
+        this.mapCenterLat = mapCenterLat;
+        return this;
+    }
+    
+    /**
+     * The map center longitude.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapCenterLon")
+    public Double mapCenterLon;
+    public TravelTimeGetCompareOverlayRequest withMapCenterLon(Double mapCenterLon) {
+        this.mapCenterLon = mapCenterLon;
+        return this;
+    }
+    
+    /**
+     * The id of the mode.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modeId")
+    public String modeId;
+    public TravelTimeGetCompareOverlayRequest withModeId(String modeId) {
+        this.modeId = modeId;
+        return this;
+    }
+    
+    /**
+     * The latitude of the pin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pinLat")
+    public Double pinLat;
+    public TravelTimeGetCompareOverlayRequest withPinLat(Double pinLat) {
+        this.pinLat = pinLat;
+        return this;
+    }
+    
+    /**
+     * The longitude of the pin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pinLon")
+    public Double pinLon;
+    public TravelTimeGetCompareOverlayRequest withPinLon(Double pinLon) {
+        this.pinLon = pinLon;
+        return this;
+    }
+    
+    /**
+     * The title of the scenario.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scenarioTitle")
+    public String scenarioTitle;
+    public TravelTimeGetCompareOverlayRequest withScenarioTitle(String scenarioTitle) {
+        this.scenarioTitle = scenarioTitle;
+        return this;
+    }
+    
+    /**
+     * The id for the time of day (AM/INTER/PM)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeOfDayId")
+    public String timeOfDayId;
+    public TravelTimeGetCompareOverlayRequest withTimeOfDayId(String timeOfDayId) {
+        this.timeOfDayId = timeOfDayId;
+        return this;
+    }
+    
+    /**
+     * The total minutes between the travel time bands
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelTimeInterval")
+    public Integer travelTimeInterval;
+    public TravelTimeGetCompareOverlayRequest withTravelTimeInterval(Integer travelTimeInterval) {
+        this.travelTimeInterval = travelTimeInterval;
+        return this;
+    }
+    
+    /**
+     * The width of the requested overlay.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=width")
+    public Integer width;
+    public TravelTimeGetCompareOverlayRequest withWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    
+    /**
+     * The zoom level.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
+    public Integer z;
+    public TravelTimeGetCompareOverlayRequest withZ(Integer z) {
+        this.z = z;
         return this;
     }
     

@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.BranchControllerGetBranchesPathParams;
-import org.openapis.openapi.models.operations.BranchControllerGetBranchesQueryParams;
 import org.openapis.openapi.models.operations.BranchControllerGetBranchesRequest;
 import org.openapis.openapi.models.operations.BranchControllerGetBranchesResponse;
 
@@ -29,14 +27,10 @@ public class Application {
                 .build();
 
             BranchControllerGetBranchesRequest req = new BranchControllerGetBranchesRequest() {{
-                pathParams = new BranchControllerGetBranchesPathParams() {{
-                    shortName = "corrupti";
-                }};
-                queryParams = new BranchControllerGetBranchesQueryParams() {{
-                    count = 592845;
-                    offset = 715190;
-                }};
-            }};            
+                count = 548814;
+                offset = 592845;
+                shortName = "distinctio";
+            }}            
 
             BranchControllerGetBranchesResponse res = sdk.branchController.branchControllerGetBranches(req);
 
@@ -50,7 +44,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### branchController

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.RetrieveattachmentPathParams;
 import org.openapis.openapi.models.operations.RetrieveattachmentRequest;
 import org.openapis.openapi.models.operations.RetrieveattachmentResponse;
 
@@ -26,23 +25,17 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             RetrieveattachmentRequest req = new RetrieveattachmentRequest() {{
-                pathParams = new RetrieveattachmentPathParams() {{
-                    acronym = "corrupti";
-                    field = "provident";
-                    fileName = "distinctio";
-                    id = "quibusdam";
-                }};
-            }};            
+                acronym = "corrupti";
+                field = "provident";
+                fileName = "distinctio";
+                id = "quibusdam";
+            }}            
 
             RetrieveattachmentResponse res = sdk.attachments.retrieveattachment(req);
 
@@ -56,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### attachments

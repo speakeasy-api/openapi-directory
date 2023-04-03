@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MassiveGenerationRequest {
-    
-    public MassiveGenerationQueryParams queryParams;
-    public MassiveGenerationRequest withQueryParams(MassiveGenerationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public MassiveGenerationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public MassiveGenerationHeaders headers;
-    public MassiveGenerationRequest withHeaders(MassiveGenerationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public MassiveGenerationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public MassiveGenerationRequestBody request;
-    public MassiveGenerationRequest withRequest(MassiveGenerationRequestBody request) {
-        this.request = request;
+    public MassiveGenerationRequestBody requestBody;
+    public MassiveGenerationRequest withRequestBody(MassiveGenerationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Quantity of coupons to generate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quantity")
+    public Long quantity;
+    public MassiveGenerationRequest withQuantity(Long quantity) {
+        this.quantity = quantity;
         return this;
     }
     

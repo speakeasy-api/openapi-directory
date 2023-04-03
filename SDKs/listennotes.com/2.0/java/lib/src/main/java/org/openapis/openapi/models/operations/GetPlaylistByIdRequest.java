@@ -4,27 +4,65 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistByIdRequest {
-    
-    public GetPlaylistByIdPathParams pathParams;
-    public GetPlaylistByIdRequest withPathParams(GetPlaylistByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetPlaylistByIdRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetPlaylistByIdQueryParams queryParams;
-    public GetPlaylistByIdRequest withQueryParams(GetPlaylistByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Playlist id (always 11 characters, e.g., m1pe7z60bsw).
+     * You can get the podcast id from the url of a playlist, e.g.,
+     * m1pe7z60bsw is the playlist id of listennotes.com/listen/podcasts-about-podcasting-m1pe7z60bsw
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPlaylistByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * For playlist items pagination.
+     * It's the value of **last_timestamp_ms** from the response of last request.
+     * If it's 0 or not specified, just return the latest or the oldest 20 items,
+     * depending on the value of the **sort** parameter.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_timestamp_ms")
+    public Long lastTimestampMs;
+    public GetPlaylistByIdRequest withLastTimestampMs(Long lastTimestampMs) {
+        this.lastTimestampMs = lastTimestampMs;
+        return this;
+    }
     
-    public GetPlaylistByIdHeaders headers;
-    public GetPlaylistByIdRequest withHeaders(GetPlaylistByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * How do you want to sort playlist items?
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetPlaylistByIdSortEnum sort;
+    public GetPlaylistByIdRequest withSort(GetPlaylistByIdSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The type of this playlist, which should be either **episode_list** or **podcast_list**.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetPlaylistByIdTypeEnum type;
+    public GetPlaylistByIdRequest withType(GetPlaylistByIdTypeEnum type) {
+        this.type = type;
         return this;
     }
     

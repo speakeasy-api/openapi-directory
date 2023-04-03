@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest {
-    
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompletePathParams pathParams;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withPathParams(PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteQueryParams queryParams;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withQueryParams(PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MarketingEventCompleteRequestParams request;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withRequest(org.openapis.openapi.models.shared.MarketingEventCompleteRequestParams request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MarketingEventCompleteRequestParams marketingEventCompleteRequestParams;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withMarketingEventCompleteRequestParams(org.openapis.openapi.models.shared.MarketingEventCompleteRequestParams marketingEventCompleteRequestParams) {
+        this.marketingEventCompleteRequestParams = marketingEventCompleteRequestParams;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
+    public String externalAccountId;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
+        return this;
+    }
     
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteSecurity security;
-    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withSecurity(PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
         return this;
     }
     

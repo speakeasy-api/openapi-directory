@@ -33,25 +33,26 @@ public class Archive {
     /**
      * Inserts a new mail into the archive of the Google group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertResponse groupsmigrationArchiveInsert(org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertResponse groupsmigrationArchiveInsert(org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertRequest request, org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertPathParams.class, baseUrl, "/groups/v1/groups/{groupId}/archive", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertRequest.class, baseUrl, "/groups/v1/groups/{groupId}/archive", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GroupsmigrationArchiveInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

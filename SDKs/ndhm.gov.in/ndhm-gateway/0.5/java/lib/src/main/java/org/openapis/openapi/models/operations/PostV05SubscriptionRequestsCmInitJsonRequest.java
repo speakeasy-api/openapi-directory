@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05SubscriptionRequestsCmInitJsonRequest {
-    
-    public PostV05SubscriptionRequestsCmInitJsonHeaders headers;
-    public PostV05SubscriptionRequestsCmInitJsonRequest withHeaders(PostV05SubscriptionRequestsCmInitJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05SubscriptionRequestsCmInitJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SubscriptionRequest request;
-    public PostV05SubscriptionRequestsCmInitJsonRequest withRequest(org.openapis.openapi.models.shared.SubscriptionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SubscriptionRequest subscriptionRequest;
+    public PostV05SubscriptionRequestsCmInitJsonRequest withSubscriptionRequest(org.openapis.openapi.models.shared.SubscriptionRequest subscriptionRequest) {
+        this.subscriptionRequest = subscriptionRequest;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05SubscriptionRequestsCmInitJsonRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersIdRequest {
-    
-    public PatchSpacesSpaceIdFoldersIdPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersIdRequest withPathParams(PatchSpacesSpaceIdFoldersIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Folder to modify (except Name, Class,ModificationDate and ArchivalDate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersIdRequestBody request;
-    public PatchSpacesSpaceIdFoldersIdRequest withRequest(PatchSpacesSpaceIdFoldersIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersIdRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersIdRequest withRequestBody(PatchSpacesSpaceIdFoldersIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesSpaceIdFoldersIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

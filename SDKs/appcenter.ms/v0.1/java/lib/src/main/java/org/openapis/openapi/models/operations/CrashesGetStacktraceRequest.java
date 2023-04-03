@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesGetStacktraceRequest {
-    
-    public CrashesGetStacktracePathParams pathParams;
-    public CrashesGetStacktraceRequest withPathParams(CrashesGetStacktracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesGetStacktraceRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public CrashesGetStacktraceQueryParams queryParams;
-    public CrashesGetStacktraceRequest withQueryParams(CrashesGetStacktraceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of a specific group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public CrashesGetStacktraceRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
         return this;
     }
     
+    /**
+     * id of a specific crash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
+    public String crashId;
+    public CrashesGetStacktraceRequest withCrashId(String crashId) {
+        this.crashId = crashId;
+        return this;
+    }
     
-    public CrashesGetStacktraceSecurity security;
-    public CrashesGetStacktraceRequest withSecurity(CrashesGetStacktraceSecurity security) {
-        this.security = security;
+    /**
+     * true if the stacktrace should be only the relevant thread / exception. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=grouping_only")
+    public Boolean groupingOnly;
+    public CrashesGetStacktraceRequest withGroupingOnly(Boolean groupingOnly) {
+        this.groupingOnly = groupingOnly;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesGetStacktraceRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

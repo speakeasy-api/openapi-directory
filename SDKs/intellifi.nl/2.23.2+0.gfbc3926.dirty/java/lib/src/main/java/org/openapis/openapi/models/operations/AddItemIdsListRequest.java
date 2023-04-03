@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddItemIdsListRequest {
-    
-    public AddItemIdsListPathParams pathParams;
-    public AddItemIdsListRequest withPathParams(AddItemIdsListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON array containing item ids
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public AddItemIdsListRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public AddItemIdsListRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AddItemIdsListRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdTerminalSettingsRequest {
-    
-    public PatchCompaniesCompanyIdTerminalSettingsPathParams pathParams;
-    public PatchCompaniesCompanyIdTerminalSettingsRequest withPathParams(PatchCompaniesCompanyIdTerminalSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TerminalSettings request;
-    public PatchCompaniesCompanyIdTerminalSettingsRequest withRequest(org.openapis.openapi.models.shared.TerminalSettings request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+    public PatchCompaniesCompanyIdTerminalSettingsRequest withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
+        this.terminalSettings = terminalSettings;
         return this;
     }
     
-    
-    public PatchCompaniesCompanyIdTerminalSettingsSecurity security;
-    public PatchCompaniesCompanyIdTerminalSettingsRequest withSecurity(PatchCompaniesCompanyIdTerminalSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PatchCompaniesCompanyIdTerminalSettingsRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTaskRequest {
-    
-    public CreateTaskPathParams pathParams;
-    public CreateTaskRequest withPathParams(CreateTaskPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateTaskRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateTaskCreateTaskRequest request;
-    public CreateTaskRequest withRequest(CreateTaskCreateTaskRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateTaskSecurity security;
-    public CreateTaskRequest withSecurity(CreateTaskSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateTaskRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateTaskCreateTaskRequest requestBody;
+    public CreateTaskRequest withRequestBody(CreateTaskCreateTaskRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

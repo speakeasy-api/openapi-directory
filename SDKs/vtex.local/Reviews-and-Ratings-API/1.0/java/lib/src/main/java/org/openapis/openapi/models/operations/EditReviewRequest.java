@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditReviewRequest {
-    
-    public EditReviewPathParams pathParams;
-    public EditReviewRequest withPathParams(EditReviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public EditReviewRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public EditReviewHeaders headers;
-    public EditReviewRequest withHeaders(EditReviewHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public EditReviewRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public EditReviewRequestBody request;
-    public EditReviewRequest withRequest(EditReviewRequestBody request) {
-        this.request = request;
+    public EditReviewRequestBody requestBody;
+    public EditReviewRequest withRequestBody(EditReviewRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Review ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
+    public String reviewId;
+    public EditReviewRequest withReviewId(String reviewId) {
+        this.reviewId = reviewId;
         return this;
     }
     

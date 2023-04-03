@@ -4,27 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBucketRequest {
-    
-    public GetBucketPathParams pathParams;
-    public GetBucketRequest withPathParams(GetBucketPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public GetBucketRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public GetBucketQueryParams queryParams;
-    public GetBucketRequest withQueryParams(GetBucketQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetBucketRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
+    public String[] fields;
+    public GetBucketRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public GetBucketHeaders headers;
-    public GetBucketRequest withHeaders(GetBucketHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetBucketRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

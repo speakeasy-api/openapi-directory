@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResolveUsaRequest {
-    
-    public ResolveUsaPathParams pathParams;
-    public ResolveUsaRequest withPathParams(ResolveUsaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of address suggestion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
+    public ResolveUsaRequest withAddress(String address) {
+        this.address = address;
         return this;
     }
     
-    
-    public ResolveUsaQueryParams queryParams;
-    public ResolveUsaRequest withQueryParams(ResolveUsaQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public ResolveUsaRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

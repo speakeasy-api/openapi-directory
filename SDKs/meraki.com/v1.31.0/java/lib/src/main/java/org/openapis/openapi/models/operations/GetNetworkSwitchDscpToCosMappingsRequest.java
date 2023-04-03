@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSwitchDscpToCosMappingsRequest {
-    
-    public GetNetworkSwitchDscpToCosMappingsPathParams pathParams;
-    public GetNetworkSwitchDscpToCosMappingsRequest withPathParams(GetNetworkSwitchDscpToCosMappingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSwitchDscpToCosMappingsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVodPromotionsRequest {
-    
-    public GetVodPromotionsPathParams pathParams;
-    public GetVodPromotionsRequest withPathParams(GetVodPromotionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The filter to apply to the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetVodPromotionsFilterEnum filter;
+    public GetVodPromotionsRequest withFilter(GetVodPromotionsFilterEnum filter) {
+        this.filter = filter;
         return this;
     }
     
-    
-    public GetVodPromotionsQueryParams queryParams;
-    public GetVodPromotionsRequest withQueryParams(GetVodPromotionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public GetVodPromotionsRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVodPromotionsRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetVodPromotionsSecurity security;
-    public GetVodPromotionsRequest withSecurity(GetVodPromotionsSecurity security) {
-        this.security = security;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVodPromotionsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
         return this;
     }
     

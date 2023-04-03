@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveReportFilterRequest {
-    
-    public SaveReportFilterPathParams pathParams;
-    public SaveReportFilterRequest withPathParams(SaveReportFilterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your report filter identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportFilterId")
+    public String reportFilterId;
+    public SaveReportFilterRequest withReportFilterId(String reportFilterId) {
+        this.reportFilterId = reportFilterId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SaveReportFilterRequest request;
-    public SaveReportFilterRequest withRequest(org.openapis.openapi.models.shared.SaveReportFilterRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SaveReportFilterRequest saveReportFilterRequest;
+    public SaveReportFilterRequest withSaveReportFilterRequest(org.openapis.openapi.models.shared.SaveReportFilterRequest saveReportFilterRequest) {
+        this.saveReportFilterRequest = saveReportFilterRequest;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public SaveReportFilterRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePayRunRequest {
-    
-    public UpdatePayRunPathParams pathParams;
-    public UpdatePayRunRequest withPathParams(UpdatePayRunPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdatePayRunHeaders headers;
-    public UpdatePayRunRequest withHeaders(UpdatePayRunHeaders headers) {
-        this.headers = headers;
+    /**
+     * PayRun id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PayRunID")
+    public String payRunID;
+    public UpdatePayRunRequest withPayRunID(String payRunID) {
+        this.payRunID = payRunID;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayRunInput[] request;
-    public UpdatePayRunRequest withRequest(org.openapis.openapi.models.shared.PayRunInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayRunInput[] requestBody;
+    public UpdatePayRunRequest withRequestBody(org.openapis.openapi.models.shared.PayRunInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdatePayRunSecurity security;
-    public UpdatePayRunRequest withSecurity(UpdatePayRunSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public UpdatePayRunRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

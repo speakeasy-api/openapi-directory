@@ -7,31 +7,41 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuickTestImageRequest {
-    
-    public QuickTestImagePathParams pathParams;
-    public QuickTestImageRequest withPathParams(QuickTestImagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QuickTestImageQueryParams queryParams;
-    public QuickTestImageRequest withQueryParams(QuickTestImageQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public QuickTestImageHeaders headers;
-    public QuickTestImageRequest withHeaders(QuickTestImageHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public QuickTestImageRequestBody request;
-    public QuickTestImageRequest withRequest(QuickTestImageRequestBody request) {
-        this.request = request;
+    public QuickTestImageRequestBody requestBody;
+    public QuickTestImageRequest withRequestBody(QuickTestImageRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public QuickTestImageRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the id of a particular iteration to evaluate against.
+     *             The default iteration for the project will be used when not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public QuickTestImageRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QuickTestImageRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPersonasIdRequest {
-    
-    public GetPersonasIdPathParams pathParams;
-    public GetPersonasIdRequest withPathParams(GetPersonasIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Allows to select extra fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String[] expand;
+    public GetPersonasIdRequest withExpand(String[] expand) {
+        this.expand = expand;
         return this;
     }
     
+    /**
+     * Allows to select only needed fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+    public GetPersonasIdRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public GetPersonasIdQueryParams queryParams;
-    public GetPersonasIdRequest withQueryParams(GetPersonasIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetPersonasIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

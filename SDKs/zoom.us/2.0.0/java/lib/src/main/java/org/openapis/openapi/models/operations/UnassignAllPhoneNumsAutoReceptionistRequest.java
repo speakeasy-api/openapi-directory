@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnassignAllPhoneNumsAutoReceptionistRequest {
-    
-    public UnassignAllPhoneNumsAutoReceptionistPathParams pathParams;
-    public UnassignAllPhoneNumsAutoReceptionistRequest withPathParams(UnassignAllPhoneNumsAutoReceptionistPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UnassignAllPhoneNumsAutoReceptionistSecurity security;
-    public UnassignAllPhoneNumsAutoReceptionistRequest withSecurity(UnassignAllPhoneNumsAutoReceptionistSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=autoReceptionistId")
+    public String autoReceptionistId;
+    public UnassignAllPhoneNumsAutoReceptionistRequest withAutoReceptionistId(String autoReceptionistId) {
+        this.autoReceptionistId = autoReceptionistId;
         return this;
     }
     

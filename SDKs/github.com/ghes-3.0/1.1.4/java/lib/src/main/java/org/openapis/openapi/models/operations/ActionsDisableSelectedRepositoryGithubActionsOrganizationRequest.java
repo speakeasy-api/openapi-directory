@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsDisableSelectedRepositoryGithubActionsOrganizationRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsDisableSelectedRepositoryGithubActionsOrganizationRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public ActionsDisableSelectedRepositoryGithubActionsOrganizationPathParams pathParams;
-    public ActionsDisableSelectedRepositoryGithubActionsOrganizationRequest withPathParams(ActionsDisableSelectedRepositoryGithubActionsOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsDisableSelectedRepositoryGithubActionsOrganizationRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
         return this;
     }
     

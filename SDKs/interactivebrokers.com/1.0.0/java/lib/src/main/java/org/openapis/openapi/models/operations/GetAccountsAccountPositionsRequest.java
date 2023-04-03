@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsAccountPositionsRequest {
-    
-    public GetAccountsAccountPositionsPathParams pathParams;
-    public GetAccountsAccountPositionsRequest withPathParams(GetAccountsAccountPositionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public String account;
+    public GetAccountsAccountPositionsRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

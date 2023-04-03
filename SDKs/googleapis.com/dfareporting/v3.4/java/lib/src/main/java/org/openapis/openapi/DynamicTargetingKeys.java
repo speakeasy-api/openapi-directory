@@ -34,25 +34,26 @@ public class DynamicTargetingKeys {
     /**
      * Deletes an existing dynamic targeting key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteResponse dfareportingDynamicTargetingKeysDelete(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteResponse dfareportingDynamicTargetingKeysDelete(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteRequest request, org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeletePathParams.class, baseUrl, "/userprofiles/{profileId}/dynamicTargetingKeys/{objectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteRequest.class, baseUrl, "/userprofiles/{profileId}/dynamicTargetingKeys/{objectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,27 +74,28 @@ public class DynamicTargetingKeys {
     /**
      * Inserts a new dynamic targeting key. Keys must be created at the advertiser level before being assigned to the advertiser's ads, creatives, or placements. There is a maximum of 1000 keys per advertiser, out of which a maximum of 20 keys can be assigned per ad, creative, or placement.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertResponse dfareportingDynamicTargetingKeysInsert(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertResponse dfareportingDynamicTargetingKeysInsert(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertRequest request, org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/dynamicTargetingKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertRequest.class, baseUrl, "/userprofiles/{profileId}/dynamicTargetingKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dynamicTargetingKey", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class DynamicTargetingKeys {
     /**
      * Retrieves a list of dynamic targeting keys.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListResponse dfareportingDynamicTargetingKeysList(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListResponse dfareportingDynamicTargetingKeysList(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListRequest request, org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListPathParams.class, baseUrl, "/userprofiles/{profileId}/dynamicTargetingKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListRequest.class, baseUrl, "/userprofiles/{profileId}/dynamicTargetingKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingDynamicTargetingKeysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

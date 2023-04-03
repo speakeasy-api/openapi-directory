@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.SearchHeaders;
 import org.openapis.openapi.models.operations.SearchRequestBodyAddress;
 import org.openapis.openapi.models.operations.SearchRequestBody;
 import org.openapis.openapi.models.operations.SearchRequest;
@@ -30,25 +29,23 @@ public class Application {
                 .build();
 
             SearchRequest req = new SearchRequest() {{
-                headers = new SearchHeaders() {{
-                    galaxyApName = "corrupti";
-                    galaxyApPassword = "provident";
-                    galaxySearchType = "distinctio";
-                }};
-                request = new SearchRequestBody() {{
+                requestBody = new SearchRequestBody() {{
                     address = new SearchRequestBodyAddress() {{
-                        addressLine1 = "quibusdam";
-                        addressLine2 = "unde";
+                        addressLine1 = "corrupti";
+                        addressLine2 = "provident";
                     }};
-                    age = 8579.46;
-                    dob = "corrupti";
-                    email = "Henry.Mueller@hotmail.com";
-                    firstName = "Hunter";
-                    lastName = "Gulgowski";
-                    middleName = "debitis";
-                    phoneNumber = "ipsa";
+                    age = 7151.9;
+                    dob = "quibusdam";
+                    email = "Ryan.Little62@yahoo.com";
+                    firstName = "Luna";
+                    lastName = "Hoppe";
+                    middleName = "iure";
+                    phoneNumber = "magnam";
                 }};
-            }};            
+                galaxyApName = "debitis";
+                galaxyApPassword = "ipsa";
+                galaxySearchType = "delectus";
+            }}            
 
             SearchResponse res = sdk.search(req);
 
@@ -62,7 +59,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancellationReasonsRequest {
-    
-    public CancellationReasonsHeaders headers;
-    public CancellationReasonsRequest withHeaders(CancellationReasonsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CancellationReasonsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public CancellationReasonsRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     

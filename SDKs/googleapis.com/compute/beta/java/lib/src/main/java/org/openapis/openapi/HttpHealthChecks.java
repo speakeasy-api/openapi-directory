@@ -34,25 +34,26 @@ public class HttpHealthChecks {
     /**
      * Deletes the specified HttpHealthCheck resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeleteResponse computeHttpHealthChecksDelete(org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeleteResponse computeHttpHealthChecksDelete(org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeleteRequest request, org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeletePathParams.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{httpHealthCheck}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeleteRequest.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{httpHealthCheck}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class HttpHealthChecks {
     /**
      * Returns the specified HttpHealthCheck resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetResponse computeHttpHealthChecksGet(org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetResponse computeHttpHealthChecksGet(org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetRequest request, org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetPathParams.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{httpHealthCheck}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetRequest.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{httpHealthCheck}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class HttpHealthChecks {
     /**
      * Creates a HttpHealthCheck resource in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertResponse computeHttpHealthChecksInsert(org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertResponse computeHttpHealthChecksInsert(org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertRequest request, org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertPathParams.class, baseUrl, "/projects/{project}/global/httpHealthChecks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertRequest.class, baseUrl, "/projects/{project}/global/httpHealthChecks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "httpHealthCheck1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class HttpHealthChecks {
     /**
      * Retrieves the list of HttpHealthCheck resources available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksListResponse computeHttpHealthChecksList(org.openapis.openapi.models.operations.ComputeHttpHealthChecksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksListResponse computeHttpHealthChecksList(org.openapis.openapi.models.operations.ComputeHttpHealthChecksListRequest request, org.openapis.openapi.models.operations.ComputeHttpHealthChecksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksListPathParams.class, baseUrl, "/projects/{project}/global/httpHealthChecks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksListRequest.class, baseUrl, "/projects/{project}/global/httpHealthChecks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class HttpHealthChecks {
     /**
      * Updates a HttpHealthCheck resource in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchResponse computeHttpHealthChecksPatch(org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchResponse computeHttpHealthChecksPatch(org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchRequest request, org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchPathParams.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{httpHealthCheck}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchRequest.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{httpHealthCheck}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "httpHealthCheck1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,27 +268,28 @@ public class HttpHealthChecks {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsResponse computeHttpHealthChecksTestIamPermissions(org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsResponse computeHttpHealthChecksTestIamPermissions(org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -310,27 +316,28 @@ public class HttpHealthChecks {
     /**
      * Updates a HttpHealthCheck resource in the specified project using the data included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdateResponse computeHttpHealthChecksUpdate(org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdateResponse computeHttpHealthChecksUpdate(org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdateRequest request, org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdatePathParams.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{httpHealthCheck}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdateRequest.class, baseUrl, "/projects/{project}/global/httpHealthChecks/{httpHealthCheck}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "httpHealthCheck1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeHttpHealthChecksUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

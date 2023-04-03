@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateServiceLinkedRoleRequest {
-    
-    public GETCreateServiceLinkedRoleQueryParams queryParams;
-    public GETCreateServiceLinkedRoleRequest withQueryParams(GETCreateServiceLinkedRoleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * &lt;p&gt;The service principal for the Amazon Web Services service to which this role is attached. You use a string similar to a URL but without the http:// in front. For example: &lt;code&gt;elasticbeanstalk.amazonaws.com&lt;/code&gt;. &lt;/p&gt; &lt;p&gt;Service principals are unique and case-sensitive. To find the exact service principal for your service-linked role, see &lt;a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html"&gt;Amazon Web Services services that work with IAM&lt;/a&gt; in the &lt;i&gt;IAM User Guide&lt;/i&gt;. Look for the services that have &lt;b&gt;Yes &lt;/b&gt;in the &lt;b&gt;Service-Linked Role&lt;/b&gt; column. Choose the &lt;b&gt;Yes&lt;/b&gt; link to view the service-linked role documentation for that service.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSServiceName")
+    public String awsServiceName;
+    public GETCreateServiceLinkedRoleRequest withAWSServiceName(String awsServiceName) {
+        this.awsServiceName = awsServiceName;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCreateServiceLinkedRoleActionEnum action;
+    public GETCreateServiceLinkedRoleRequest withAction(GETCreateServiceLinkedRoleActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETCreateServiceLinkedRoleHeaders headers;
-    public GETCreateServiceLinkedRoleRequest withHeaders(GETCreateServiceLinkedRoleHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p/&gt; &lt;p&gt;A string that you provide, which is combined with the service-provided prefix to form the complete role name. If you make multiple requests for the same service, then you must supply a different &lt;code&gt;CustomSuffix&lt;/code&gt; for each request. Otherwise the request fails with a duplicate role name error. For example, you could add &lt;code&gt;-1&lt;/code&gt; or &lt;code&gt;-debug&lt;/code&gt; to the suffix.&lt;/p&gt; &lt;p&gt;Some services do not support the &lt;code&gt;CustomSuffix&lt;/code&gt; parameter. If you provide an optional suffix and the operation fails, try the operation again without the suffix.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CustomSuffix")
+    public String customSuffix;
+    public GETCreateServiceLinkedRoleRequest withCustomSuffix(String customSuffix) {
+        this.customSuffix = customSuffix;
+        return this;
+    }
+    
+    /**
+     * The description of the role.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Description")
+    public String description;
+    public GETCreateServiceLinkedRoleRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCreateServiceLinkedRoleVersionEnum version;
+    public GETCreateServiceLinkedRoleRequest withVersion(GETCreateServiceLinkedRoleVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCreateServiceLinkedRoleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCreateServiceLinkedRoleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCreateServiceLinkedRoleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCreateServiceLinkedRoleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCreateServiceLinkedRoleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCreateServiceLinkedRoleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCreateServiceLinkedRoleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

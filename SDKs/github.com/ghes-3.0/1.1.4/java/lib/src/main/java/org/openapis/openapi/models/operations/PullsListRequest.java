@@ -4,20 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsListRequest {
-    
-    public PullsListPathParams pathParams;
-    public PullsListRequest withPathParams(PullsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter pulls by base branch name. Example: `gh-pages`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base")
+    public String base;
+    public PullsListRequest withBase(String base) {
+        this.base = base;
         return this;
     }
     
+    /**
+     * The direction of the sort. Can be either `asc` or `desc`. Default: `desc` when sort is `created` or sort is not specified, otherwise `asc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public PullsListDirectionEnum direction;
+    public PullsListRequest withDirection(PullsListDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public PullsListQueryParams queryParams;
-    public PullsListRequest withQueryParams(PullsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter pulls by head user or head organization and branch name in the format of `user:ref-name` or `organization:ref-name`. For example: `github:new-script-format` or `octocat:test-branch`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
+    public String head;
+    public PullsListRequest withHead(String head) {
+        this.head = head;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsListRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public PullsListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public PullsListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsListRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * What to sort results by. Can be either `created`, `updated`, `popularity` (comment count) or `long-running` (age, filtering by pulls updated in the last month).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public PullsListSortEnum sort;
+    public PullsListRequest withSort(PullsListSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Either `open`, `closed`, or `all` to filter by state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public PullsListStateEnum state;
+    public PullsListRequest withState(PullsListStateEnum state) {
+        this.state = state;
         return this;
     }
     

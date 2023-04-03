@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BalanceSheetOneRequest {
-    
-    public BalanceSheetOneQueryParams queryParams;
-    public BalanceSheetOneRequest withQueryParams(BalanceSheetOneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Apply filters
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=filter")
+    public org.openapis.openapi.models.shared.BalanceSheetFilter filter;
+    public BalanceSheetOneRequest withFilter(org.openapis.openapi.models.shared.BalanceSheetFilter filter) {
+        this.filter = filter;
         return this;
     }
     
-    
-    public BalanceSheetOneHeaders headers;
-    public BalanceSheetOneRequest withHeaders(BalanceSheetOneHeaders headers) {
-        this.headers = headers;
+    /**
+     * Optional unmapped key/values that will be passed through to downstream as query parameters
+     */
+    @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=pass_through")
+    public java.util.Map<String, Object> passThrough;
+    public BalanceSheetOneRequest withPassThrough(java.util.Map<String, Object> passThrough) {
+        this.passThrough = passThrough;
         return this;
     }
     
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public BalanceSheetOneRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
     
-    public BalanceSheetOneSecurity security;
-    public BalanceSheetOneRequest withSecurity(BalanceSheetOneSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public BalanceSheetOneRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public BalanceSheetOneRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public BalanceSheetOneRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

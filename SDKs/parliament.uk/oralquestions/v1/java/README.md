@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetPathParams;
 import org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetRequest;
 import org.openapis.openapi.models.operations.PublishedEarlyDayMotionGetResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             PublishedEarlyDayMotionGetRequest req = new PublishedEarlyDayMotionGetRequest() {{
-                pathParams = new PublishedEarlyDayMotionGetPathParams() {{
-                    id = 548814;
-                }};
-            }};            
+                id = 548814;
+            }}            
 
             PublishedEarlyDayMotionGetResponse res = sdk.earlyDayMotions.publishedEarlyDayMotionGet(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### earlyDayMotions

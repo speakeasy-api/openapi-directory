@@ -7,27 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportsRequest {
-    
-    public PostReportsQueryParams queryParams;
-    public PostReportsRequest withQueryParams(PostReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The public health information being routed
      */
     @SpeakeasyMetadata("request:mediaType=text/csv")
-    public String request;
-    public PostReportsRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public PostReportsRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The client's name that matches the client name in metadata
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client")
+    public String client;
+    public PostReportsRequest withClient(String client) {
+        this.client = client;
+        return this;
+    }
     
-    public PostReportsSecurity security;
-    public PostReportsRequest withSecurity(PostReportsSecurity security) {
-        this.security = security;
+    /**
+     * Dynamic default values for an element. ':' or %3A is used to seperate element name and value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=default")
+    public String[] default_;
+    public PostReportsRequest withDefault(String[] default_) {
+        this.default_ = default_;
+        return this;
+    }
+    
+    /**
+     * Optional ways to process the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=option")
+    public PostReportsOptionEnum option;
+    public PostReportsRequest withOption(PostReportsOptionEnum option) {
+        this.option = option;
+        return this;
+    }
+    
+    /**
+     * A comma speparated list of receiver names. Limit the list of possible receivers to these receivers.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeTo")
+    public String[] routeTo;
+    public PostReportsRequest withRouteTo(String[] routeTo) {
+        this.routeTo = routeTo;
         return this;
     }
     

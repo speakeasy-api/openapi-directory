@@ -39,10 +39,11 @@ public class Boundaries {
      * Retrieve Boundaries in batch
      * Retrieve multiple **Boundaries** (up to 10 per request).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchBoundariesResponse fetchBoundaries(org.openapis.openapi.models.operations.FetchBoundariesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchBoundariesResponse fetchBoundaries(org.openapis.openapi.models.shared.BoundariesQuery request, org.openapis.openapi.models.operations.FetchBoundariesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/boundaries/query");
         
@@ -53,7 +54,7 @@ public class Boundaries {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -91,19 +92,20 @@ public class Boundaries {
      * Retrieve a Boundary by ID
      * Retrieve a **Boundary** by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchBoundaryByIdResponse fetchBoundaryById(org.openapis.openapi.models.operations.FetchBoundaryByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchBoundaryByIdResponse fetchBoundaryById(org.openapis.openapi.models.operations.FetchBoundaryByIdRequest request, org.openapis.openapi.models.operations.FetchBoundaryByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchBoundaryByIdPathParams.class, baseUrl, "/v4/boundaries/{boundaryId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchBoundaryByIdRequest.class, baseUrl, "/v4/boundaries/{boundaryId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,10 +145,11 @@ public class Boundaries {
      * This is restricted to callers with **boundaries:write** scope.
      * To upload a field boundary for field creation in Climate FieldView, please use **POST /v4/uploads**.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadBoundaryResponse uploadBoundary(org.openapis.openapi.models.operations.UploadBoundaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadBoundaryResponse uploadBoundary(org.openapis.openapi.models.shared.BoundaryUpload request, org.openapis.openapi.models.operations.UploadBoundarySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v4/boundaries");
         
@@ -157,7 +160,7 @@ public class Boundaries {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateSecurity;
-import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreatePathParams;
-import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateQueryParams;
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateRequest;
 import org.openapis.openapi.models.operations.WebsecurityscannerProjectsScanConfigsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ScanConfigTargetPlatformsEnum;
 import org.openapis.openapi.models.shared.ScanConfigUserAgentEnum;
 import org.openapis.openapi.models.shared.ScanConfig;
@@ -32,10 +31,7 @@ import org.openapis.openapi.models.shared.ScanRun;
 import org.openapis.openapi.models.shared.Authentication;
 import org.openapis.openapi.models.shared.GoogleAccount;
 import org.openapis.openapi.models.shared.CustomAccount;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -44,79 +40,67 @@ public class Application {
                 .build();
 
             WebsecurityscannerProjectsScanConfigsCreateRequest req = new WebsecurityscannerProjectsScanConfigsCreateRequest() {{
-                security = new WebsecurityscannerProjectsScanConfigsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new WebsecurityscannerProjectsScanConfigsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new WebsecurityscannerProjectsScanConfigsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new ScanConfig() {{
+                dollarXgafv = "2";
+                scanConfig = new ScanConfig() {{
                     authentication = new Authentication() {{
                         customAccount = new CustomAccount() {{
-                            loginUrl = "suscipit";
-                            password = "iure";
-                            username = "Eli96";
+                            loginUrl = "provident";
+                            password = "distinctio";
+                            username = "Rosalinda_Mitchell84";
                         }};
                         googleAccount = new GoogleAccount() {{
-                            password = "tempora";
-                            username = "Geraldine_Kreiger52";
+                            password = "vel";
+                            username = "Linda.Oberbrunner";
                         }};
                     }};
                     blacklistPatterns = new String[]{{
-                        add("excepturi"),
-                        add("nisi"),
+                        add("debitis"),
+                        add("ipsa"),
                     }};
-                    displayName = "recusandae";
+                    displayName = "delectus";
                     latestRun = new ScanRun() {{
-                        endTime = "temporibus";
-                        executionState = "EXECUTION_STATE_UNSPECIFIED";
+                        endTime = "tempora";
+                        executionState = "QUEUED";
                         hasVulnerabilities = false;
-                        name = "quis";
-                        progressPercent = 87129;
-                        resultState = "ERROR";
-                        startTime = "perferendis";
-                        urlsCrawledCount = "ipsam";
-                        urlsTestedCount = "repellendus";
+                        name = "molestiae";
+                        progressPercent = 791725;
+                        resultState = "KILLED";
+                        startTime = "voluptatum";
+                        urlsCrawledCount = "iusto";
+                        urlsTestedCount = "excepturi";
                     }};
-                    maxQps = 957156;
-                    name = "quo";
+                    maxQps = 392785;
+                    name = "recusandae";
                     schedule = new Schedule() {{
-                        intervalDurationDays = 140350;
-                        scheduleTime = "at";
+                        intervalDurationDays = 836079;
+                        scheduleTime = "ab";
                     }};
                     startingUrls = new String[]{{
-                        add("maiores"),
-                        add("molestiae"),
-                        add("quod"),
-                        add("quod"),
+                        add("veritatis"),
+                        add("deserunt"),
                     }};
                     targetPlatforms = new org.openapis.openapi.models.shared.ScanConfigTargetPlatformsEnum[]{{
-                        add("COMPUTE"),
-                        add("CLOUD_RUN"),
+                        add("APP_ENGINE"),
                     }};
-                    userAgent = "CHROME_ANDROID";
+                    userAgent = "SAFARI_IPHONE";
                 }};
-            }};            
+                accessToken = "sapiente";
+                alt = "proto";
+                callback = "odit";
+                fields = "at";
+                key = "at";
+                oauthToken = "maiores";
+                parent = "molestiae";
+                prettyPrint = false;
+                quotaUser = "quod";
+                uploadType = "quod";
+                uploadProtocol = "esse";
+            }}            
 
-            WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req);
+            WebsecurityscannerProjectsScanConfigsCreateResponse res = sdk.projects.websecurityscannerProjectsScanConfigsCreate(req, new WebsecurityscannerProjectsScanConfigsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.scanConfig.isPresent()) {
                 // handle response
@@ -128,7 +112,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFileRequest {
-    
-    public UploadFilePathParams pathParams;
-    public UploadFileRequest withPathParams(UploadFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("multipartForm:file request:mediaType=multipart/form-data")
+    public UploadFileRequestBody requestBody;
+    public UploadFileRequest withRequestBody(UploadFileRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("multipartForm:file request:mediaType=multipart/form-data")
-    public UploadFileRequestBody request;
-    public UploadFileRequest withRequest(UploadFileRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public UploadFileRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public UploadFileRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

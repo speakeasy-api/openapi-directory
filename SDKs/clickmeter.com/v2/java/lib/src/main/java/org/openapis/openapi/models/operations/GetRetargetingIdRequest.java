@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRetargetingIdRequest {
-    
-    public GetRetargetingIdPathParams pathParams;
-    public GetRetargetingIdRequest withPathParams(GetRetargetingIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the retargeting script
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetRetargetingIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

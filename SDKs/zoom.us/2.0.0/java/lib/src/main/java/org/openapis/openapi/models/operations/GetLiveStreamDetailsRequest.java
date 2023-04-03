@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLiveStreamDetailsRequest {
-    
-    public GetLiveStreamDetailsPathParams pathParams;
-    public GetLiveStreamDetailsRequest withPathParams(GetLiveStreamDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the meeting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public GetLiveStreamDetailsRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     

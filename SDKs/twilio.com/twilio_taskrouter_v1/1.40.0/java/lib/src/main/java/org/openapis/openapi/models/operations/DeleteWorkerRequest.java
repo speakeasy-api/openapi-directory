@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkerRequest {
-    
-    public DeleteWorkerPathParams pathParams;
-    public DeleteWorkerRequest withPathParams(DeleteWorkerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The If-Match HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public DeleteWorkerRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public DeleteWorkerHeaders headers;
-    public DeleteWorkerRequest withHeaders(DeleteWorkerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the Worker resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteWorkerRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteWorkerSecurity security;
-    public DeleteWorkerRequest withSecurity(DeleteWorkerSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteWorkerRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Worker to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public DeleteWorkerRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

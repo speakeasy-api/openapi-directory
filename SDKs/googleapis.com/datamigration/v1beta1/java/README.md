@@ -18,10 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateSecurity;
-import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreatePathParams;
-import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams;
 import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateRequest;
 import org.openapis.openapi.models.operations.DatamigrationProjectsLocationsConnectionProfilesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ConnectionProfileProviderEnum;
 import org.openapis.openapi.models.shared.ConnectionProfileStateEnum;
 import org.openapis.openapi.models.shared.ConnectionProfileInput;
@@ -35,10 +34,7 @@ import org.openapis.openapi.models.shared.CloudSqlSettingsDatabaseVersionEnum;
 import org.openapis.openapi.models.shared.CloudSqlSettingsInput;
 import org.openapis.openapi.models.shared.SqlIpConfig;
 import org.openapis.openapi.models.shared.SqlAclEntry;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -47,136 +43,116 @@ public class Application {
                 .build();
 
             DatamigrationProjectsLocationsConnectionProfilesCreateRequest req = new DatamigrationProjectsLocationsConnectionProfilesCreateRequest() {{
-                security = new DatamigrationProjectsLocationsConnectionProfilesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DatamigrationProjectsLocationsConnectionProfilesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    connectionProfileId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    requestId = "deserunt";
-                    uploadType = "suscipit";
-                    uploadProtocol = "iure";
-                }};
-                request = new ConnectionProfileInput() {{
+                dollarXgafv = "2";
+                connectionProfileInput = new ConnectionProfileInput() {{
                     cloudsql = new CloudSqlConnectionProfileInput() {{
                         settings = new CloudSqlSettingsInput() {{
-                            activationPolicy = "SQL_ACTIVATION_POLICY_UNSPECIFIED";
+                            activationPolicy = "ALWAYS";
                             autoStorageIncrease = false;
-                            dataDiskSizeGb = "debitis";
-                            dataDiskType = "SQL_DATA_DISK_TYPE_UNSPECIFIED";
+                            dataDiskSizeGb = "distinctio";
+                            dataDiskType = "PD_HDD";
                             databaseFlags = new java.util.HashMap<String, String>() {{
-                                put("tempora", "suscipit");
-                                put("molestiae", "minus");
-                                put("placeat", "voluptatum");
-                                put("iusto", "excepturi");
+                                put("nulla", "corrupti");
+                                put("illum", "vel");
+                                put("error", "deserunt");
                             }};
                             databaseVersion = "MYSQL_5_6";
                             ipConfig = new SqlIpConfig() {{
                                 authorizedNetworks = new org.openapis.openapi.models.shared.SqlAclEntry[]{{
                                     add(new SqlAclEntry() {{
-                                        expireTime = "temporibus";
-                                        label = "ab";
-                                        ttl = "quis";
-                                        value = "veritatis";
+                                        expireTime = "magnam";
+                                        label = "debitis";
+                                        ttl = "ipsa";
+                                        value = "delectus";
                                     }}),
                                     add(new SqlAclEntry() {{
-                                        expireTime = "deserunt";
-                                        label = "perferendis";
-                                        ttl = "ipsam";
-                                        value = "repellendus";
-                                    }}),
-                                    add(new SqlAclEntry() {{
-                                        expireTime = "sapiente";
-                                        label = "quo";
-                                        ttl = "odit";
-                                        value = "at";
-                                    }}),
-                                    add(new SqlAclEntry() {{
-                                        expireTime = "at";
-                                        label = "maiores";
+                                        expireTime = "tempora";
+                                        label = "suscipit";
                                         ttl = "molestiae";
-                                        value = "quod";
+                                        value = "minus";
                                     }}),
                                 }};
                                 enableIpv4 = false;
-                                privateNetwork = "quod";
+                                privateNetwork = "placeat";
                                 requireSsl = false;
                             }};
-                            rootPassword = "esse";
-                            sourceId = "totam";
-                            storageAutoResizeLimit = "porro";
-                            tier = "dolorum";
+                            rootPassword = "voluptatum";
+                            sourceId = "iusto";
+                            storageAutoResizeLimit = "excepturi";
+                            tier = "nisi";
                             userLabels = new java.util.HashMap<String, String>() {{
-                                put("nam", "officia");
+                                put("temporibus", "ab");
+                                put("quis", "veritatis");
+                                put("deserunt", "perferendis");
+                                put("ipsam", "repellendus");
                             }};
-                            zone = "occaecati";
+                            zone = "sapiente";
                         }};
                     }};
-                    displayName = "fugit";
+                    displayName = "quo";
                     error = new Status() {{
-                        code = 537373;
+                        code = 140350;
                         details = new java.util.HashMap<String, Object>[]{{
                             add(new java.util.HashMap<String, Object>() {{
+                                put("maiores", "molestiae");
+                                put("quod", "quod");
+                                put("esse", "totam");
+                                put("porro", "dolorum");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("nam", "officia");
+                            }}),
+                            add(new java.util.HashMap<String, Object>() {{
+                                put("fugit", "deleniti");
+                                put("hic", "optio");
                                 put("totam", "beatae");
-                                put("commodi", "molestiae");
-                                put("modi", "qui");
-                                put("impedit", "cum");
                             }}),
                             add(new java.util.HashMap<String, Object>() {{
-                                put("ipsum", "excepturi");
-                                put("aspernatur", "perferendis");
-                            }}),
-                            add(new java.util.HashMap<String, Object>() {{
-                                put("natus", "sed");
-                                put("iste", "dolor");
-                            }}),
-                            add(new java.util.HashMap<String, Object>() {{
-                                put("laboriosam", "hic");
-                                put("saepe", "fuga");
-                                put("in", "corporis");
+                                put("molestiae", "modi");
+                                put("qui", "impedit");
                             }}),
                         }};
-                        message = "iste";
+                        message = "cum";
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("saepe", "quidem");
-                        put("architecto", "ipsa");
+                        put("ipsum", "excepturi");
+                        put("aspernatur", "perferendis");
                     }};
                     mysql = new MySqlConnectionProfileInput() {{
-                        cloudSqlId = "reiciendis";
-                        host = "est";
-                        password = "mollitia";
-                        port = 670638;
+                        cloudSqlId = "ad";
+                        host = "natus";
+                        password = "sed";
+                        port = 612096;
                         ssl = new SslConfigInput() {{
-                            caCertificate = "dolores";
-                            clientCertificate = "dolorem";
-                            clientKey = "corporis";
+                            caCertificate = "dolor";
+                            clientCertificate = "natus";
+                            clientKey = "laboriosam";
                         }};
-                        username = "Braulio60";
+                        username = "Tyra.Turcotte35";
                     }};
-                    name = "nemo";
-                    provider = "DATABASE_PROVIDER_UNSPECIFIED";
-                    state = "UPDATING";
+                    name = "iste";
+                    provider = "CLOUDSQL";
+                    state = "FAILED";
                 }};
-            }};            
+                accessToken = "quidem";
+                alt = "json";
+                callback = "ipsa";
+                connectionProfileId = "reiciendis";
+                fields = "est";
+                key = "mollitia";
+                oauthToken = "laborum";
+                parent = "dolores";
+                prettyPrint = false;
+                quotaUser = "dolorem";
+                requestId = "corporis";
+                uploadType = "explicabo";
+                uploadProtocol = "nobis";
+            }}            
 
-            DatamigrationProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datamigrationProjectsLocationsConnectionProfilesCreate(req);
+            DatamigrationProjectsLocationsConnectionProfilesCreateResponse res = sdk.projects.datamigrationProjectsLocationsConnectionProfilesCreate(req, new DatamigrationProjectsLocationsConnectionProfilesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.operation.isPresent()) {
                 // handle response
@@ -188,7 +164,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

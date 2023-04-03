@@ -4,13 +4,184 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddressesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public AddressesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public AddressesQueryParams queryParams;
-    public AddressesRequest withQueryParams(AddressesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_country")
+    public String biasCountry;
+    public AddressesRequest withBiasCountry(String biasCountry) {
+        this.biasCountry = biasCountry;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_lonlat")
+    public String biasLonlat;
+    public AddressesRequest withBiasLonlat(String biasLonlat) {
+        this.biasLonlat = biasLonlat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_post_town")
+    public String biasPostTown;
+    public AddressesRequest withBiasPostTown(String biasPostTown) {
+        this.biasPostTown = biasPostTown;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_postcode")
+    public String biasPostcode;
+    public AddressesRequest withBiasPostcode(String biasPostcode) {
+        this.biasPostcode = biasPostcode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_postcode_area")
+    public String biasPostcodeArea;
+    public AddressesRequest withBiasPostcodeArea(String biasPostcodeArea) {
+        this.biasPostcodeArea = biasPostcodeArea;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_postcode_outward")
+    public String biasPostcodeOutward;
+    public AddressesRequest withBiasPostcodeOutward(String biasPostcodeOutward) {
+        this.biasPostcodeOutward = biasPostcodeOutward;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_postcode_sector")
+    public String biasPostcodeSector;
+    public AddressesRequest withBiasPostcodeSector(String biasPostcodeSector) {
+        this.biasPostcodeSector = biasPostcodeSector;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_thoroughfare")
+    public String biasThoroughfare;
+    public AddressesRequest withBiasThoroughfare(String biasThoroughfare) {
+        this.biasThoroughfare = biasThoroughfare;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=box")
+    public String box;
+    public AddressesRequest withBox(String box) {
+        this.box = box;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=country")
+    public String country;
+    public AddressesRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=filter")
+    public String filter;
+    public AddressesRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=lat")
+    public Float lat;
+    public AddressesRequest withLat(Float lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=limit")
+    public Integer limit;
+    public AddressesRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=lon")
+    public Float lon;
+    public AddressesRequest withLon(Float lon) {
+        this.lon = lon;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=page")
+    public Integer page;
+    public AddressesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=post_town")
+    public String postTown;
+    public AddressesRequest withPostTown(String postTown) {
+        this.postTown = postTown;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=postcode")
+    public String postcode;
+    public AddressesRequest withPostcode(String postcode) {
+        this.postcode = postcode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=postcode_area")
+    public String postcodeArea;
+    public AddressesRequest withPostcodeArea(String postcodeArea) {
+        this.postcodeArea = postcodeArea;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=postcode_outward")
+    public String postcodeOutward;
+    public AddressesRequest withPostcodeOutward(String postcodeOutward) {
+        this.postcodeOutward = postcodeOutward;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=postcode_sector")
+    public String postcodeSector;
+    public AddressesRequest withPostcodeSector(String postcodeSector) {
+        this.postcodeSector = postcodeSector;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=postcode_type")
+    public String postcodeType;
+    public AddressesRequest withPostcodeType(String postcodeType) {
+        this.postcodeType = postcodeType;
+        return this;
+    }
+    
+    /**
+     * Specifies the address you wish to query. Query can be shortened to `q=`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=query")
+    public String query;
+    public AddressesRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=su_organisation_indicator")
+    public String suOrganisationIndicator;
+    public AddressesRequest withSuOrganisationIndicator(String suOrganisationIndicator) {
+        this.suOrganisationIndicator = suOrganisationIndicator;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=uprn")
+    public Long uprn;
+    public AddressesRequest withUprn(Long uprn) {
+        this.uprn = uprn;
         return this;
     }
     

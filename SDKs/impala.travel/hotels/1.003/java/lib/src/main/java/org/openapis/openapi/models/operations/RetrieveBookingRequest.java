@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveBookingRequest {
-    
-    public RetrieveBookingPathParams pathParams;
-    public RetrieveBookingRequest withPathParams(RetrieveBookingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the booking you would like to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bookingId")
+    public String bookingId;
+    public RetrieveBookingRequest withBookingId(String bookingId) {
+        this.bookingId = bookingId;
         return this;
     }
     

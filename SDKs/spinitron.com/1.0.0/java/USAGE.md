@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetPersonasQueryParams;
 import org.openapis.openapi.models.operations.GetPersonasRequest;
 import org.openapis.openapi.models.operations.GetPersonasResponse;
 
@@ -13,30 +12,26 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    accessToken = new SchemeAccessToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    accessToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetPersonasRequest req = new GetPersonasRequest() {{
-                queryParams = new GetPersonasQueryParams() {{
-                    count = 548814;
-                    expand = new String[]{{
-                        add("distinctio"),
-                        add("quibusdam"),
-                        add("unde"),
-                    }};
-                    fields = new String[]{{
-                        add("corrupti"),
-                        add("illum"),
-                        add("vel"),
-                        add("error"),
-                    }};
-                    name = "deserunt";
-                    page = 384382;
+                count = 548814;
+                expand = new String[]{{
+                    add("distinctio"),
+                    add("quibusdam"),
+                    add("unde"),
                 }};
-            }};            
+                fields = new String[]{{
+                    add("corrupti"),
+                    add("illum"),
+                    add("vel"),
+                    add("error"),
+                }};
+                name = "deserunt";
+                page = 384382;
+            }}            
 
             GetPersonasResponse res = sdk.persona.getPersonas(req);
 

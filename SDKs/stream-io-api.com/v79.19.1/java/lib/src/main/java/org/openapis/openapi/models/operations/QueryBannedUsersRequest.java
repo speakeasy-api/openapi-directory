@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryBannedUsersRequest {
-    
-    public QueryBannedUsersQueryParams queryParams;
-    public QueryBannedUsersRequest withQueryParams(QueryBannedUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:serialization=json,name=payload")
+    public org.openapis.openapi.models.shared.QueryBannedUsersRequest payload;
+    public QueryBannedUsersRequest withPayload(org.openapis.openapi.models.shared.QueryBannedUsersRequest payload) {
+        this.payload = payload;
         return this;
     }
     

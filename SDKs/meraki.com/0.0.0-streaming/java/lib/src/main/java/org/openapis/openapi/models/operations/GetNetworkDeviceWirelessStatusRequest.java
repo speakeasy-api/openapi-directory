@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkDeviceWirelessStatusRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkDeviceWirelessStatusRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public GetNetworkDeviceWirelessStatusPathParams pathParams;
-    public GetNetworkDeviceWirelessStatusRequest withPathParams(GetNetworkDeviceWirelessStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetNetworkDeviceWirelessStatusRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

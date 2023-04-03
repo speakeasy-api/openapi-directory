@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTrunksRequest {
-    
-    public FetchTrunksPathParams pathParams;
-    public FetchTrunksRequest withPathParams(FetchTrunksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchTrunksSecurity security;
-    public FetchTrunksRequest withSecurity(FetchTrunksSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTrunksRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The absolute URL of the SIP Trunk
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SipTrunkDomain")
+    public String sipTrunkDomain;
+    public FetchTrunksRequest withSipTrunkDomain(String sipTrunkDomain) {
+        this.sipTrunkDomain = sipTrunkDomain;
         return this;
     }
     

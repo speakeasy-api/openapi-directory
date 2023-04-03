@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuittungZugferdRequest {
-    
-    public QuittungZugferdQueryParams queryParams;
-    public QuittungZugferdRequest withQueryParams(QuittungZugferdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Quittung Identifier  (serialnumber generated during receipt generation process)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
+    public String account;
+    public QuittungZugferdRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

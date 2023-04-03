@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdUsersUserIdRequest {
-    
-    public PatchMerchantsMerchantIdUsersUserIdPathParams pathParams;
-    public PatchMerchantsMerchantIdUsersUserIdRequest withPathParams(PatchMerchantsMerchantIdUsersUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateMerchantUserRequest request;
-    public PatchMerchantsMerchantIdUsersUserIdRequest withRequest(org.openapis.openapi.models.shared.UpdateMerchantUserRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateMerchantUserRequest updateMerchantUserRequest;
+    public PatchMerchantsMerchantIdUsersUserIdRequest withUpdateMerchantUserRequest(org.openapis.openapi.models.shared.UpdateMerchantUserRequest updateMerchantUserRequest) {
+        this.updateMerchantUserRequest = updateMerchantUserRequest;
         return this;
     }
     
+    /**
+     * Unique identifier of the merchant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdUsersUserIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PatchMerchantsMerchantIdUsersUserIdSecurity security;
-    public PatchMerchantsMerchantIdUsersUserIdRequest withSecurity(PatchMerchantsMerchantIdUsersUserIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PatchMerchantsMerchantIdUsersUserIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

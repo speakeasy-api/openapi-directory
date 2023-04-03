@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStagesStageRequest {
-    
-    public GetStagesStagePathParams pathParams;
-    public GetStagesStageRequest withPathParams(GetStagesStagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stage")
+    public String stage;
+    public GetStagesStageRequest withStage(String stage) {
+        this.stage = stage;
         return this;
     }
     

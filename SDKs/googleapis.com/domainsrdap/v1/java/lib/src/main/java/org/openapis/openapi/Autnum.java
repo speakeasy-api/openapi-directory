@@ -38,13 +38,13 @@ public class Autnum {
      */
     public org.openapis.openapi.models.operations.DomainsrdapAutnumGetResponse domainsrdapAutnumGet(org.openapis.openapi.models.operations.DomainsrdapAutnumGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsrdapAutnumGetPathParams.class, baseUrl, "/v1/autnum/{autnumId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DomainsrdapAutnumGetRequest.class, baseUrl, "/v1/autnum/{autnumId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsrdapAutnumGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DomainsrdapAutnumGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

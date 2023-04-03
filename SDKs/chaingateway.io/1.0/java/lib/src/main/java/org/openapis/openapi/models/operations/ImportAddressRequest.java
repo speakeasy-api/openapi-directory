@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportAddressRequest {
-    
-    public ImportAddressHeaders headers;
-    public ImportAddressRequest withHeaders(ImportAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public ImportAddressRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImportAddressRequest request;
-    public ImportAddressRequest withRequest(org.openapis.openapi.models.shared.ImportAddressRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImportAddressRequest importAddressRequest;
+    public ImportAddressRequest withImportAddressRequest(org.openapis.openapi.models.shared.ImportAddressRequest importAddressRequest) {
+        this.importAddressRequest = importAddressRequest;
         return this;
     }
     

@@ -7,20 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateProductRequest {
-    
-    public UpdateProductPathParams pathParams;
-    public UpdateProductRequest withPathParams(UpdateProductPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Product object that you would like to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProductInput request;
-    public UpdateProductRequest withRequest(org.openapis.openapi.models.shared.ProductInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProductInput productInput;
+    public UpdateProductRequest withProductInput(org.openapis.openapi.models.shared.ProductInput productInput) {
+        this.productInput = productInput;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateProductRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -32,22 +32,22 @@ public class MarketingEventsExternal {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveResponse deleteMarketingV3MarketingEventsEventsExternalEventIdArchive(org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveResponse deleteMarketingV3MarketingEventsEventsExternalEventIdArchive(org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest request, org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchivePathParams.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -72,22 +72,22 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse getMarketingV3MarketingEventsEventsExternalEventIdGetById(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse getMarketingV3MarketingEventsEventsExternalEventIdGetById(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest request, org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdPathParams.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +118,27 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateResponse patchMarketingV3MarketingEventsEventsExternalEventIdUpdate(org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateResponse patchMarketingV3MarketingEventsEventsExternalEventIdUpdate(org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest request, org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdatePathParams.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "marketingEventUpdateRequestParams", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,7 +169,7 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse postMarketingV3MarketingEventsEventsDeleteArchiveBatch(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse postMarketingV3MarketingEventsEventsDeleteArchiveBatch(org.openapis.openapi.models.shared.BatchInputMarketingEventExternalUniqueIdentifier request, org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/marketing/v3/marketing-events/events/delete");
         
@@ -183,7 +183,7 @@ public class MarketingEventsExternal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -206,7 +206,7 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse postMarketingV3MarketingEventsEventsUpsertDoUpsert(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse postMarketingV3MarketingEventsEventsUpsertDoUpsert(org.openapis.openapi.models.shared.BatchInputMarketingEventCreateRequestParams request, org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/marketing/v3/marketing-events/events/upsert");
         
@@ -220,7 +220,7 @@ public class MarketingEventsExternal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,22 +251,22 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse postMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancel(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse postMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancel(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest request, org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelPathParams.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -297,27 +297,27 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteResponse postMarketingV3MarketingEventsEventsExternalEventIdCompleteComplete(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteResponse postMarketingV3MarketingEventsEventsExternalEventIdCompleteComplete(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest request, org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompletePathParams.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}/complete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}/complete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "marketingEventCompleteRequestParams", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -348,27 +348,27 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdResponse postMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertById(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdResponse postMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertById(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest request, org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdPathParams.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}/{subscriberState}/email-upsert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}/{subscriberState}/email-upsert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchInputMarketingEventEmailSubscriber", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -391,27 +391,27 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdResponse postMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertById(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdResponse postMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertById(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest request, org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdPathParams.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}/{subscriberState}/upsert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}/{subscriberState}/upsert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchInputMarketingEventSubscriber", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -434,7 +434,7 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsCreateResponse postMarketingV3MarketingEventsEventsCreate(org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsCreateResponse postMarketingV3MarketingEventsEventsCreate(org.openapis.openapi.models.shared.MarketingEventCreateRequestParams request, org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/marketing/v3/marketing-events/events");
         
@@ -448,7 +448,7 @@ public class MarketingEventsExternal {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -479,21 +479,21 @@ public class MarketingEventsExternal {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse putMarketingV3MarketingEventsEventsExternalEventIdReplace(org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse putMarketingV3MarketingEventsEventsExternalEventIdReplace(org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest request, org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplacePathParams.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceRequest.class, baseUrl, "/marketing/v3/marketing-events/events/{externalEventId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "marketingEventCreateRequestParams", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

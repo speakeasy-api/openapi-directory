@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnsubscribeFromCategoryRequest {
-    
-    public UnsubscribeFromCategoryPathParams pathParams;
-    public UnsubscribeFromCategoryRequest withPathParams(UnsubscribeFromCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public UnsubscribeFromCategoryRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
-    
-    public UnsubscribeFromCategorySecurity security;
-    public UnsubscribeFromCategoryRequest withSecurity(UnsubscribeFromCategorySecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public UnsubscribeFromCategoryRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

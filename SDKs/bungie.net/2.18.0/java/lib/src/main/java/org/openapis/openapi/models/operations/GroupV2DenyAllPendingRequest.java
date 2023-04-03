@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2DenyAllPendingRequest {
-    
-    public GroupV2DenyAllPendingPathParams pathParams;
-    public GroupV2DenyAllPendingRequest withPathParams(GroupV2DenyAllPendingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GroupV2DenyAllPendingSecurity security;
-    public GroupV2DenyAllPendingRequest withSecurity(GroupV2DenyAllPendingSecurity security) {
-        this.security = security;
+    /**
+     * ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2DenyAllPendingRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest {
-    
-    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdPathParams pathParams;
-    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withPathParams(PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatePayoutSettingsRequest request;
-    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withRequest(org.openapis.openapi.models.shared.UpdatePayoutSettingsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdatePayoutSettingsRequest updatePayoutSettingsRequest;
+    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withUpdatePayoutSettingsRequest(org.openapis.openapi.models.shared.UpdatePayoutSettingsRequest updatePayoutSettingsRequest) {
+        this.updatePayoutSettingsRequest = updatePayoutSettingsRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
+        return this;
+    }
     
-    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdSecurity security;
-    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withSecurity(PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the payout setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutSettingsId")
+    public String payoutSettingsId;
+    public PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdRequest withPayoutSettingsId(String payoutSettingsId) {
+        this.payoutSettingsId = payoutSettingsId;
         return this;
     }
     

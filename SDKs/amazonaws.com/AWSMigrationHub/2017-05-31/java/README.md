@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateCreatedArtifactXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateCreatedArtifactHeaders;
 import org.openapis.openapi.models.operations.AssociateCreatedArtifactRequest;
 import org.openapis.openapi.models.operations.AssociateCreatedArtifactResponse;
 import org.openapis.openapi.models.shared.AssociateCreatedArtifactRequest;
@@ -29,33 +28,29 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateCreatedArtifactRequest req = new AssociateCreatedArtifactRequest() {{
-                headers = new AssociateCreatedArtifactHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSMigrationHub.AssociateCreatedArtifact";
-                }};
-                request = new AssociateCreatedArtifactRequest() {{
+                associateCreatedArtifactRequest = new AssociateCreatedArtifactRequest() {{
                     createdArtifact = new CreatedArtifact() {{
-                        description = "illum";
-                        name = "vel";
+                        description = "corrupti";
+                        name = "provident";
                     }};
                     dryRun = false;
-                    migrationTaskName = "error";
-                    progressUpdateStream = "deserunt";
+                    migrationTaskName = "distinctio";
+                    progressUpdateStream = "quibusdam";
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "AWSMigrationHub.AssociateCreatedArtifact";
+            }}            
 
             AssociateCreatedArtifactResponse res = sdk.associateCreatedArtifact(req);
 
@@ -69,7 +64,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

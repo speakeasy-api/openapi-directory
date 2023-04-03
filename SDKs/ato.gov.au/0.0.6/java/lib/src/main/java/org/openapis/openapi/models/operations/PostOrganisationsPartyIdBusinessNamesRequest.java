@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOrganisationsPartyIdBusinessNamesRequest {
-    
-    public PostOrganisationsPartyIdBusinessNamesPathParams pathParams;
-    public PostOrganisationsPartyIdBusinessNamesRequest withPathParams(PostOrganisationsPartyIdBusinessNamesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostOrganisationsPartyIdBusinessNamesHeaders headers;
-    public PostOrganisationsPartyIdBusinessNamesRequest withHeaders(PostOrganisationsPartyIdBusinessNamesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PostOrganisationsPartyIdBusinessNamesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class PostOrganisationsPartyIdBusinessNamesRequest {
      * Business Name resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BusinessNameInput request;
-    public PostOrganisationsPartyIdBusinessNamesRequest withRequest(org.openapis.openapi.models.shared.BusinessNameInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BusinessNameInput businessNameInput;
+    public PostOrganisationsPartyIdBusinessNamesRequest withBusinessNameInput(org.openapis.openapi.models.shared.BusinessNameInput businessNameInput) {
+        this.businessNameInput = businessNameInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PostOrganisationsPartyIdBusinessNamesRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

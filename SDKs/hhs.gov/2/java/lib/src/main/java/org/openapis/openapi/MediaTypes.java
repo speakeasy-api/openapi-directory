@@ -41,7 +41,7 @@ public class MediaTypes {
      */
     public org.openapis.openapi.models.operations.GetResourcesMediaTypesFormatResponse getResourcesMediaTypesFormat(org.openapis.openapi.models.operations.GetResourcesMediaTypesFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaTypesFormatPathParams.class, baseUrl, "/resources/mediaTypes.{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesMediaTypesFormatRequest.class, baseUrl, "/resources/mediaTypes.{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

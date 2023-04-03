@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNhFurnitureFurnitureRequest {
-    
-    public GetNhFurnitureFurniturePathParams pathParams;
-    public GetNhFurnitureFurnitureRequest withPathParams(GetNhFurnitureFurniturePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the API you are calling, written as `1.0.0`. This is specified as required as good practice, but it is not actually enforced by the API. If you do not specify a version, you will be served the latest version, which may eventually result in breaking changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Version")
+    public String acceptVersion;
+    public GetNhFurnitureFurnitureRequest withAcceptVersion(String acceptVersion) {
+        this.acceptVersion = acceptVersion;
         return this;
     }
     
-    
-    public GetNhFurnitureFurnitureQueryParams queryParams;
-    public GetNhFurnitureFurnitureRequest withQueryParams(GetNhFurnitureFurnitureQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your UUID secret key, granted to you by the Nookipedia team. Required for accessing the API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-API-KEY")
+    public String xApiKey;
+    public GetNhFurnitureFurnitureRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     
+    /**
+     * The name of the furniture you wish to retrieve information about.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=furniture")
+    public String furniture;
+    public GetNhFurnitureFurnitureRequest withFurniture(String furniture) {
+        this.furniture = furniture;
+        return this;
+    }
     
-    public GetNhFurnitureFurnitureHeaders headers;
-    public GetNhFurnitureFurnitureRequest withHeaders(GetNhFurnitureFurnitureHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specify the desired width of returned image URLs. When unspecified, the linked image(s) returned by the API will be full-resolution. Note that images can only be reduced in size; specifying a width greater than than the maximum size will return the default full-size image URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thumbsize")
+    public Long thumbsize;
+    public GetNhFurnitureFurnitureRequest withThumbsize(Long thumbsize) {
+        this.thumbsize = thumbsize;
         return this;
     }
     

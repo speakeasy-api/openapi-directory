@@ -4,20 +4,65 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetPostsThreadedPagedRequest {
-    
-    public ForumGetPostsThreadedPagedPathParams pathParams;
-    public ForumGetPostsThreadedPagedRequest withPathParams(ForumGetPostsThreadedPagedPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=getParentPost")
+    public Boolean getParentPost;
+    public ForumGetPostsThreadedPagedRequest withGetParentPost(Boolean getParentPost) {
+        this.getParentPost = getParentPost;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public ForumGetPostsThreadedPagedRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public ForumGetPostsThreadedPagedQueryParams queryParams;
-    public ForumGetPostsThreadedPagedRequest withQueryParams(ForumGetPostsThreadedPagedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageSize")
+    public Integer pageSize;
+    public ForumGetPostsThreadedPagedRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parentPostId")
+    public Long parentPostId;
+    public ForumGetPostsThreadedPagedRequest withParentPostId(Long parentPostId) {
+        this.parentPostId = parentPostId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=replySize")
+    public Integer replySize;
+    public ForumGetPostsThreadedPagedRequest withReplySize(Integer replySize) {
+        this.replySize = replySize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rootThreadMode")
+    public Boolean rootThreadMode;
+    public ForumGetPostsThreadedPagedRequest withRootThreadMode(Boolean rootThreadMode) {
+        this.rootThreadMode = rootThreadMode;
+        return this;
+    }
+    
+    /**
+     * If this value is not null or empty, banned posts are requested to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showbanned")
+    public String showbanned;
+    public ForumGetPostsThreadedPagedRequest withShowbanned(String showbanned) {
+        this.showbanned = showbanned;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sortMode")
+    public Integer sortMode;
+    public ForumGetPostsThreadedPagedRequest withSortMode(Integer sortMode) {
+        this.sortMode = sortMode;
         return this;
     }
     

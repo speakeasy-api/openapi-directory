@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStatisticsChargingSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken;
-    public GetStatisticsChargingSecurity withUserAccessToken(org.openapis.openapi.models.shared.SchemeUserAccessToken userAccessToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String userAccessToken;
+    public GetStatisticsChargingSecurity withUserAccessToken(String userAccessToken) {
         this.userAccessToken = userAccessToken;
         return this;
     }

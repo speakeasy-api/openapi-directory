@@ -36,10 +36,11 @@ public class PayorsPrivate {
      * Create a Payor Link
      * This endpoint allows you to create a payor link.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreatePayorLinksResponse createPayorLinks(org.openapis.openapi.models.operations.CreatePayorLinksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreatePayorLinksResponse createPayorLinks(org.openapis.openapi.models.shared.CreatePayorLinkRequest request, org.openapis.openapi.models.operations.CreatePayorLinksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/payorLinks");
         
@@ -53,7 +54,7 @@ public class PayorsPrivate {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ArticleAddMeasureUnitRequest;
 import org.openapis.openapi.models.operations.ArticleAddMeasureUnitResponse;
 import org.openapis.openapi.models.shared.MeasureUnitDTO;
 
@@ -26,31 +25,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearer = new SchemeBearer() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    bearer = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
-            ArticleAddMeasureUnitRequest req = new ArticleAddMeasureUnitRequest() {{
-                request = new org.openapis.openapi.models.shared.MeasureUnitDTO[]{{
-                    add(new MeasureUnitDTO() {{
-                        id = 592845;
-                        name = "distinctio";
-                        type = "quibusdam";
-                    }}),
-                    add(new MeasureUnitDTO() {{
-                        id = 602763;
-                        name = "nulla";
-                        type = "corrupti";
-                    }}),
-                    add(new MeasureUnitDTO() {{
-                        id = 847252;
-                        name = "vel";
-                        type = "error";
-                    }}),
-                }};
-            }};            
+            org.openapis.openapi.models.. req = new org.openapis.openapi.models.shared.MeasureUnitDTO[]{{
+                add(new MeasureUnitDTO() {{
+                    id = 592845;
+                    name = "distinctio";
+                    type = "quibusdam";
+                }}),
+                add(new MeasureUnitDTO() {{
+                    id = 602763;
+                    name = "nulla";
+                    type = "corrupti";
+                }}),
+                add(new MeasureUnitDTO() {{
+                    id = 847252;
+                    name = "vel";
+                    type = "error";
+                }}),
+            }}            
 
             ArticleAddMeasureUnitResponse res = sdk.article.articleAddMeasureUnit(req);
 
@@ -64,7 +59,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### article

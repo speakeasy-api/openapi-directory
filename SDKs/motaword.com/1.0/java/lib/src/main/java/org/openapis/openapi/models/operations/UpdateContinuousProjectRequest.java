@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateContinuousProjectRequest {
-    
-    public UpdateContinuousProjectPathParams pathParams;
-    public UpdateContinuousProjectRequest withPathParams(UpdateContinuousProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ContinuousProjectUpdateContent continuousProjectUpdateContent;
+    public UpdateContinuousProjectRequest withContinuousProjectUpdateContent(org.openapis.openapi.models.shared.ContinuousProjectUpdateContent continuousProjectUpdateContent) {
+        this.continuousProjectUpdateContent = continuousProjectUpdateContent;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ContinuousProjectUpdateContent request;
-    public UpdateContinuousProjectRequest withRequest(org.openapis.openapi.models.shared.ContinuousProjectUpdateContent request) {
-        this.request = request;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UpdateContinuousProjectRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

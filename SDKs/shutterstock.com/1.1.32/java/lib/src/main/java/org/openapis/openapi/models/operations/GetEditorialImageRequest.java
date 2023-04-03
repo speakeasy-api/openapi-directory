@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEditorialImageRequest {
-    
-    public GetEditorialImagePathParams pathParams;
-    public GetEditorialImageRequest withPathParams(GetEditorialImagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns only if the content is available for distribution in a certain country
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetEditorialImageRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public GetEditorialImageQueryParams queryParams;
-    public GetEditorialImageRequest withQueryParams(GetEditorialImageQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetEditorialImageSecurity security;
-    public GetEditorialImageRequest withSecurity(GetEditorialImageSecurity security) {
-        this.security = security;
+    /**
+     * Editorial ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetEditorialImageRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

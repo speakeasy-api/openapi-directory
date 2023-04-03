@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GsiDispatchRequest {
+    /**
+     * Any valid Stromkonto account (address).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GsiDispatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public GsiDispatchQueryParams queryParams;
-    public GsiDispatchRequest withQueryParams(GsiDispatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Zipcode (Postleitzahl) of a city in Germany.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public GsiDispatchRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

@@ -4,13 +4,38 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest {
+    /**
+     * The date of the game(s).
+     * &lt;br&gt;Examples: &lt;code&gt;2017-02-27&lt;/code&gt;, &lt;code&gt;2017-09-01&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
+    public String date;
+    public ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
     
-    public ProjectedPlayerGameStatsByPlayerWDfsSalariesPathParams pathParams;
-    public ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest withPathParams(ProjectedPlayerGameStatsByPlayerWDfsSalariesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public ProjectedPlayerGameStatsByPlayerWDfsSalariesFormatEnum format;
+    public ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest withFormat(ProjectedPlayerGameStatsByPlayerWDfsSalariesFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Unique FantasyData Player ID.
+     * Example:&lt;code&gt;90026231&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
+    public String playerid;
+    public ProjectedPlayerGameStatsByPlayerWDfsSalariesRequest withPlayerid(String playerid) {
+        this.playerid = playerid;
         return this;
     }
     

@@ -32,19 +32,20 @@ public class Onboarding {
     /**
      * &lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; This method is no longer applicable, as all seller accounts globally have been enabled for the new eBay payment and checkout flow.&lt;/span&gt;&lt;br/&gt;&lt;br/&gt;This method retrieves a seller's onboarding status for a payments program for a specified marketplace. The overall onboarding status of the seller and the status of each onboarding step is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingResponse getPaymentsProgramOnboarding(org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingResponse getPaymentsProgramOnboarding(org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingRequest request, org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingPathParams.class, baseUrl, "/payments_program/{marketplace_id}/{payments_program_type}/onboarding", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingRequest.class, baseUrl, "/payments_program/{marketplace_id}/{payments_program_type}/onboarding", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

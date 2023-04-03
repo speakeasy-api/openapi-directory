@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV2SpotsIdRequest {
-    
-    public DeleteApiV2SpotsIdPathParams pathParams;
-    public DeleteApiV2SpotsIdRequest withPathParams(DeleteApiV2SpotsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteApiV2SpotsIdSecurity security;
-    public DeleteApiV2SpotsIdRequest withSecurity(DeleteApiV2SpotsIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteApiV2SpotsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

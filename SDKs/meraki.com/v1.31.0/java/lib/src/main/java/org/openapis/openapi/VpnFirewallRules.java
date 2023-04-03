@@ -40,7 +40,7 @@ public class VpnFirewallRules {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceVpnVpnFirewallRulesResponse getOrganizationApplianceVpnVpnFirewallRules(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnVpnFirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnVpnFirewallRulesPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceVpnVpnFirewallRulesRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class VpnFirewallRules {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationApplianceVpnVpnFirewallRulesResponse updateOrganizationApplianceVpnVpnFirewallRules(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVpnVpnFirewallRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVpnVpnFirewallRulesPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceVpnVpnFirewallRulesRequest.class, baseUrl, "/organizations/{organizationId}/appliance/vpn/vpnFirewallRules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

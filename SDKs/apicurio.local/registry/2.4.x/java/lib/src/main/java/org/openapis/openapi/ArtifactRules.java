@@ -52,12 +52,12 @@ public class ArtifactRules {
      */
     public org.openapis.openapi.models.operations.CreateArtifactRuleResponse createArtifactRule(org.openapis.openapi.models.operations.CreateArtifactRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactRulePathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateArtifactRuleRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rule", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -108,7 +108,7 @@ public class ArtifactRules {
      */
     public org.openapis.openapi.models.operations.DeleteArtifactRuleResponse deleteArtifactRule(org.openapis.openapi.models.operations.DeleteArtifactRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactRulePathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactRuleRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -155,7 +155,7 @@ public class ArtifactRules {
      */
     public org.openapis.openapi.models.operations.DeleteArtifactRulesResponse deleteArtifactRules(org.openapis.openapi.models.operations.DeleteArtifactRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactRulesPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactRulesRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -204,7 +204,7 @@ public class ArtifactRules {
      */
     public org.openapis.openapi.models.operations.GetArtifactRuleConfigResponse getArtifactRuleConfig(org.openapis.openapi.models.operations.GetArtifactRuleConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactRuleConfigPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArtifactRuleConfigRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -259,7 +259,7 @@ public class ArtifactRules {
      */
     public org.openapis.openapi.models.operations.ListArtifactRulesResponse listArtifactRules(org.openapis.openapi.models.operations.ListArtifactRulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListArtifactRulesPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListArtifactRulesRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -325,12 +325,12 @@ public class ArtifactRules {
      */
     public org.openapis.openapi.models.operations.TestUpdateArtifactResponse testUpdateArtifact(org.openapis.openapi.models.operations.TestUpdateArtifactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUpdateArtifactPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/test", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestUpdateArtifactRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/test", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -389,12 +389,12 @@ public class ArtifactRules {
      */
     public org.openapis.openapi.models.operations.UpdateArtifactRuleConfigResponse updateArtifactRuleConfig(org.openapis.openapi.models.operations.UpdateArtifactRuleConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactRuleConfigPathParams.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateArtifactRuleConfigRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rule1", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

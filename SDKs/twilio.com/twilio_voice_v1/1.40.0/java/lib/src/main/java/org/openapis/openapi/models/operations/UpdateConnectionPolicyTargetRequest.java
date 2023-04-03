@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConnectionPolicyTargetRequest {
-    
-    public UpdateConnectionPolicyTargetPathParams pathParams;
-    public UpdateConnectionPolicyTargetRequest withPathParams(UpdateConnectionPolicyTargetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Connection Policy that owns the Target.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectionPolicySid")
+    public String connectionPolicySid;
+    public UpdateConnectionPolicyTargetRequest withConnectionPolicySid(String connectionPolicySid) {
+        this.connectionPolicySid = connectionPolicySid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateConnectionPolicyTargetUpdateConnectionPolicyTargetRequest request;
-    public UpdateConnectionPolicyTargetRequest withRequest(UpdateConnectionPolicyTargetUpdateConnectionPolicyTargetRequest request) {
-        this.request = request;
+    public UpdateConnectionPolicyTargetUpdateConnectionPolicyTargetRequest requestBody;
+    public UpdateConnectionPolicyTargetRequest withRequestBody(UpdateConnectionPolicyTargetUpdateConnectionPolicyTargetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateConnectionPolicyTargetSecurity security;
-    public UpdateConnectionPolicyTargetRequest withSecurity(UpdateConnectionPolicyTargetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateConnectionPolicyTargetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Target resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateConnectionPolicyTargetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

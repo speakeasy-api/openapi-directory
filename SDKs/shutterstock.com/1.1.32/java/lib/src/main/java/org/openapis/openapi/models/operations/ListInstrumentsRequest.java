@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListInstrumentsRequest {
-    
-    public ListInstrumentsQueryParams queryParams;
-    public ListInstrumentsRequest withQueryParams(ListInstrumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListInstrumentsSecurity security;
-    public ListInstrumentsRequest withSecurity(ListInstrumentsSecurity security) {
-        this.security = security;
+    /**
+     * Which language the instruments will be returned in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public String language;
+    public ListInstrumentsRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     

@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceSwitchPortStatusesPacketsRequest {
-    
-    public GetDeviceSwitchPortStatusesPacketsPathParams pathParams;
-    public GetDeviceSwitchPortStatusesPacketsRequest withPathParams(GetDeviceSwitchPortStatusesPacketsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public GetDeviceSwitchPortStatusesPacketsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     
+    /**
+     * The beginning of the timespan for the data. The maximum lookback period is 1 day from today.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetDeviceSwitchPortStatusesPacketsRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
     
-    public GetDeviceSwitchPortStatusesPacketsQueryParams queryParams;
-    public GetDeviceSwitchPortStatusesPacketsRequest withQueryParams(GetDeviceSwitchPortStatusesPacketsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 1 day. The default is 1 day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetDeviceSwitchPortStatusesPacketsRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

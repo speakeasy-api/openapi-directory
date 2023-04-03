@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVideoPrivacyDomainRequest {
-    
-    public DeleteVideoPrivacyDomainPathParams pathParams;
-    public DeleteVideoPrivacyDomainRequest withPathParams(DeleteVideoPrivacyDomainPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The domain name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domain")
+    public String domain;
+    public DeleteVideoPrivacyDomainRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     
-    
-    public DeleteVideoPrivacyDomainSecurity security;
-    public DeleteVideoPrivacyDomainRequest withSecurity(DeleteVideoPrivacyDomainSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public DeleteVideoPrivacyDomainRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

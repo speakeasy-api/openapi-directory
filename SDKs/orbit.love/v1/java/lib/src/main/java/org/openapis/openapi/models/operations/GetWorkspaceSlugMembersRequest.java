@@ -4,27 +4,196 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspaceSlugMembersRequest {
-    
-    public GetWorkspaceSlugMembersPathParams pathParams;
-    public GetWorkspaceSlugMembersRequest withPathParams(GetWorkspaceSlugMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activities_count_max")
+    public String activitiesCountMax;
+    public GetWorkspaceSlugMembersRequest withActivitiesCountMax(String activitiesCountMax) {
+        this.activitiesCountMax = activitiesCountMax;
         return this;
     }
     
-    
-    public GetWorkspaceSlugMembersQueryParams queryParams;
-    public GetWorkspaceSlugMembersRequest withQueryParams(GetWorkspaceSlugMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activities_count_min")
+    public String activitiesCountMin;
+    public GetWorkspaceSlugMembersRequest withActivitiesCountMin(String activitiesCountMin) {
+        this.activitiesCountMin = activitiesCountMin;
         return this;
     }
     
+    /**
+     * Comma separated list of activity types
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activity_type")
+    public GetWorkspaceSlugMembersActivityTypeEnum activityType;
+    public GetWorkspaceSlugMembersRequest withActivityType(GetWorkspaceSlugMembersActivityTypeEnum activityType) {
+        this.activityType = activityType;
+        return this;
+    }
     
-    public GetWorkspaceSlugMembersSecurity security;
-    public GetWorkspaceSlugMembersRequest withSecurity(GetWorkspaceSlugMembersSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=affiliation")
+    public GetWorkspaceSlugMembersAffiliationEnum affiliation;
+    public GetWorkspaceSlugMembersRequest withAffiliation(GetWorkspaceSlugMembersAffiliationEnum affiliation) {
+        this.affiliation = affiliation;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of cities. The union (OR) of cities is applied.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cities[]")
+    public String cities;
+    public GetWorkspaceSlugMembersRequest withCities(String cities) {
+        this.cities = cities;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of companies. The union (OR) of companies is applied.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company[]")
+    public String company;
+    public GetWorkspaceSlugMembersRequest withCompany(String company) {
+        this.company = company;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of countries. The union (OR) of countries is applied.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countries[]")
+    public String countries;
+    public GetWorkspaceSlugMembersRequest withCountries(String countries) {
+        this.countries = countries;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetWorkspaceSlugMembersDirectionEnum direction;
+    public GetWorkspaceSlugMembersRequest withDirection(GetWorkspaceSlugMembersDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * Filter activities before this date. Format: YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public GetWorkspaceSlugMembersRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identity")
+    public GetWorkspaceSlugMembersIdentityEnum identity;
+    public GetWorkspaceSlugMembersRequest withIdentity(GetWorkspaceSlugMembersIdentityEnum identity) {
+        this.identity = identity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=items")
+    public GetWorkspaceSlugMembersItemsEnum items;
+    public GetWorkspaceSlugMembersRequest withItems(GetWorkspaceSlugMembersItemsEnum items) {
+        this.items = items;
+        return this;
+    }
+    
+    /**
+     * The list of tags to filter against. Separate tags with `,` to do an intersection (AND), or with `|` to do a union (OR)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=member_tags")
+    public String memberTags;
+    public GetWorkspaceSlugMembersRequest withMemberTags(String memberTags) {
+        this.memberTags = memberTags;
+        return this;
+    }
+    
+    /**
+     * The list of orbit levels to filter against. Accepted values are 1, 2, 3, 4, n. In the request, a format like `23` would include levels 2 and 3. `n` is for members with no orbit level.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orbit")
+    public String orbit;
+    public GetWorkspaceSlugMembersRequest withOrbit(String orbit) {
+        this.orbit = orbit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetWorkspaceSlugMembersRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetWorkspaceSlugMembersRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of regions. The union (OR) of regions is applied.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regions[]")
+    public String regions;
+    public GetWorkspaceSlugMembersRequest withRegions(String regions) {
+        this.regions = regions;
+        return this;
+    }
+    
+    /**
+     * Relative timeframes. Format: this_&lt;integer&gt;_&lt;period&gt;, with period in [days, weeks, months, years]. For example, this_30_days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relative")
+    public String relative;
+    public GetWorkspaceSlugMembersRequest withRelative(String relative) {
+        this.relative = relative;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetWorkspaceSlugMembersSortEnum sort;
+    public GetWorkspaceSlugMembersRequest withSort(GetWorkspaceSlugMembersSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter activities after this date. Format: YYYY-MM-DD.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public GetWorkspaceSlugMembersRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of job titles. The union (OR) of job titles is applied.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title[]")
+    public String title;
+    public GetWorkspaceSlugMembersRequest withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    
+    /**
+     * Deprecated in favor of the activity_type parameter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public GetWorkspaceSlugMembersRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public GetWorkspaceSlugMembersRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

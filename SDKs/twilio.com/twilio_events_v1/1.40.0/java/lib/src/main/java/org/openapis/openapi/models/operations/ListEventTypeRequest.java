@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEventTypeRequest {
-    
-    public ListEventTypeQueryParams queryParams;
-    public ListEventTypeRequest withQueryParams(ListEventTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListEventTypeRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListEventTypeSecurity security;
-    public ListEventTypeRequest withSecurity(ListEventTypeSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListEventTypeRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListEventTypeRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListEventTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A string parameter filtering the results to return only the Event Types using a given schema.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SchemaId")
+    public String schemaId;
+    public ListEventTypeRequest withSchemaId(String schemaId) {
+        this.schemaId = schemaId;
         return this;
     }
     

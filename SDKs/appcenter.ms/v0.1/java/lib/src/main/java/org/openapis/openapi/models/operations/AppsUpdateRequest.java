@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsUpdateRequest {
-    
-    public AppsUpdatePathParams pathParams;
-    public AppsUpdateRequest withPathParams(AppsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The partial data for the app
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppsUpdateRequestBody request;
-    public AppsUpdateRequest withRequest(AppsUpdateRequestBody request) {
-        this.request = request;
+    public AppsUpdateRequestBody requestBody;
+    public AppsUpdateRequest withRequestBody(AppsUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppsUpdateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppsUpdateSecurity security;
-    public AppsUpdateRequest withSecurity(AppsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppsUpdateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

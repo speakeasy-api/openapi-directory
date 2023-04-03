@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SyncscheduleRequest {
-    
-    public SyncscheduleQueryParams queryParams;
-    public SyncscheduleRequest withQueryParams(SyncscheduleQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The thermostat program (zones, timetable and name)
      */
     @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public SyncscheduleRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public SyncscheduleRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The relay id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public SyncscheduleRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
     
-    public SyncscheduleSecurity security;
-    public SyncscheduleRequest withSecurity(SyncscheduleSecurity security) {
-        this.security = security;
+    /**
+     * The thermostat id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
+    public String moduleId;
+    public SyncscheduleRequest withModuleId(String moduleId) {
+        this.moduleId = moduleId;
         return this;
     }
     

@@ -42,12 +42,12 @@ public class Experiments {
      */
     public org.openapis.openapi.models.operations.CreateExperimentUsingPOSTResponse createExperimentUsingPOST(org.openapis.openapi.models.operations.CreateExperimentUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateExperimentUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateExperimentUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "experimentModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -95,7 +95,7 @@ public class Experiments {
      */
     public org.openapis.openapi.models.operations.DELETEExperimentUsingDELETEResponse deleteExperimentUsingDELETE(org.openapis.openapi.models.operations.DELETEExperimentUsingDELETERequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETEExperimentUsingDELETEPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETEExperimentUsingDELETERequest.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -135,7 +135,7 @@ public class Experiments {
      */
     public org.openapis.openapi.models.operations.DoActionExperimentUsingPOSTResponse doActionExperimentUsingPOST(org.openapis.openapi.models.operations.DoActionExperimentUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoActionExperimentUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments/{id}/{action}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DoActionExperimentUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments/{id}/{action}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -183,7 +183,7 @@ public class Experiments {
      */
     public org.openapis.openapi.models.operations.GETExperimentUsingGETResponse getExperimentUsingGET(org.openapis.openapi.models.operations.GETExperimentUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETExperimentUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETExperimentUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -231,7 +231,7 @@ public class Experiments {
      */
     public org.openapis.openapi.models.operations.GETExperimentsUsingGETResponse getExperimentsUsingGET(org.openapis.openapi.models.operations.GETExperimentsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETExperimentsUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETExperimentsUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -279,12 +279,12 @@ public class Experiments {
      */
     public org.openapis.openapi.models.operations.UpdateExperimentUsingPUTResponse updateExperimentUsingPUT(org.openapis.openapi.models.operations.UpdateExperimentUsingPUTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateExperimentUsingPUTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateExperimentUsingPUTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/experiments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "experimentModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

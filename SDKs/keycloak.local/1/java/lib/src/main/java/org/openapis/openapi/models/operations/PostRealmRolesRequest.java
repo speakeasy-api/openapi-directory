@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmRolesRequest {
-    
-    public PostRealmRolesPathParams pathParams;
-    public PostRealmRolesRequest withPathParams(PostRealmRolesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RoleRepresentation roleRepresentation;
+    public PostRealmRolesRequest withRoleRepresentation(org.openapis.openapi.models.shared.RoleRepresentation roleRepresentation) {
+        this.roleRepresentation = roleRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RoleRepresentation request;
-    public PostRealmRolesRequest withRequest(org.openapis.openapi.models.shared.RoleRepresentation request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmRolesRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

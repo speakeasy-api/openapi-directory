@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEventNotificationRequest {
-    
-    public CreateEventNotificationHeaders headers;
-    public CreateEventNotificationRequest withHeaders(CreateEventNotificationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Create an Callback URI
      */
     @SpeakeasyMetadata("request:mediaType=application/jwt")
-    public String request;
-    public CreateEventNotificationRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public CreateEventNotificationRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-financial-id")
+    public String xFapiFinancialId;
+    public CreateEventNotificationRequest withXFapiFinancialId(String xFapiFinancialId) {
+        this.xFapiFinancialId = xFapiFinancialId;
+        return this;
+    }
+    
+    /**
+     * An RFC4122 UID used as a correlation id.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
+    public String xFapiInteractionId;
+    public CreateEventNotificationRequest withXFapiInteractionId(String xFapiInteractionId) {
+        this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     

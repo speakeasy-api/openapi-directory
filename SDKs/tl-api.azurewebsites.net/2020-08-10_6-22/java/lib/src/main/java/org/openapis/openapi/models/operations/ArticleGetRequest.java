@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetRequest {
-    
-    public ArticleGetPathParams pathParams;
-    public ArticleGetRequest withPathParams(ArticleGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * indentity number (primary key) for article object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=articleID")
+    public Integer articleID;
+    public ArticleGetRequest withArticleID(Integer articleID) {
+        this.articleID = articleID;
         return this;
     }
     

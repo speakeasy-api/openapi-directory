@@ -36,11 +36,10 @@ public class Certificates {
     /**
      * Get all certificates
      * Get all certificates
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllCertsResponse allCerts(org.openapis.openapi.models.operations.AllCertsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllCertsResponse allCerts() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/certificates");
         
@@ -49,8 +48,7 @@ public class Certificates {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -79,10 +77,11 @@ public class Certificates {
      * Create one certificate
      * Create one certificate
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCertResponse createCert(org.openapis.openapi.models.operations.CreateCertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCertResponse createCert(org.openapis.openapi.models.shared.Certificate request, org.openapis.openapi.models.operations.CreateCertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/certificates");
         
@@ -93,7 +92,7 @@ public class Certificates {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,19 +122,20 @@ public class Certificates {
      * Delete one certificate by id
      * Delete one certificate by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCertResponse deleteCert(org.openapis.openapi.models.operations.DeleteCertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCertResponse deleteCert(org.openapis.openapi.models.operations.DeleteCertRequest request, org.openapis.openapi.models.operations.DeleteCertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCertPathParams.class, baseUrl, "/api/certificates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCertRequest.class, baseUrl, "/api/certificates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,19 +165,20 @@ public class Certificates {
      * Get one certificate by id
      * Get one certificate by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OneCertResponse oneCert(org.openapis.openapi.models.operations.OneCertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OneCertResponse oneCert(org.openapis.openapi.models.operations.OneCertRequest request, org.openapis.openapi.models.operations.OneCertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OneCertPathParams.class, baseUrl, "/api/certificates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OneCertRequest.class, baseUrl, "/api/certificates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -207,21 +208,22 @@ public class Certificates {
      * Update one certificate by id
      * Update one certificate by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchCertResponse patchCert(org.openapis.openapi.models.operations.PatchCertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchCertResponse patchCert(org.openapis.openapi.models.operations.PatchCertRequest request, org.openapis.openapi.models.operations.PatchCertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCertPathParams.class, baseUrl, "/api/certificates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCertRequest.class, baseUrl, "/api/certificates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,21 +253,22 @@ public class Certificates {
      * Update one certificate by id
      * Update one certificate by id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutCertResponse putCert(org.openapis.openapi.models.operations.PutCertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutCertResponse putCert(org.openapis.openapi.models.operations.PutCertRequest request, org.openapis.openapi.models.operations.PutCertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCertPathParams.class, baseUrl, "/api/certificates/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCertRequest.class, baseUrl, "/api/certificates/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "certificate", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

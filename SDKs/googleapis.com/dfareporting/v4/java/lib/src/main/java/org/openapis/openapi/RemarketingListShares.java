@@ -34,25 +34,26 @@ public class RemarketingListShares {
     /**
      * Gets one remarketing list share by remarketing list ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetResponse dfareportingRemarketingListSharesGet(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetResponse dfareportingRemarketingListSharesGet(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetRequest request, org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/remarketingListShares/{remarketingListId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetRequest.class, baseUrl, "/userprofiles/{profileId}/remarketingListShares/{remarketingListId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class RemarketingListShares {
     /**
      * Updates an existing remarketing list share. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchResponse dfareportingRemarketingListSharesPatch(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchResponse dfareportingRemarketingListSharesPatch(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchRequest request, org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/remarketingListShares", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchRequest.class, baseUrl, "/userprofiles/{profileId}/remarketingListShares", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "remarketingListShare", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,27 +128,28 @@ public class RemarketingListShares {
     /**
      * Updates an existing remarketing list share.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateResponse dfareportingRemarketingListSharesUpdate(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateResponse dfareportingRemarketingListSharesUpdate(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateRequest request, org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/remarketingListShares", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/remarketingListShares", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "remarketingListShare", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

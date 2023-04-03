@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokensGetBungieRewardsForPlatformUserRequest {
-    
-    public TokensGetBungieRewardsForPlatformUserPathParams pathParams;
-    public TokensGetBungieRewardsForPlatformUserRequest withPathParams(TokensGetBungieRewardsForPlatformUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * users platform membershipId for requested user rewards. If not self, elevated permissions are required.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public TokensGetBungieRewardsForPlatformUserRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
         return this;
     }
     
-    
-    public TokensGetBungieRewardsForPlatformUserSecurity security;
-    public TokensGetBungieRewardsForPlatformUserRequest withSecurity(TokensGetBungieRewardsForPlatformUserSecurity security) {
-        this.security = security;
+    /**
+     * The target Destiny 2 membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public TokensGetBungieRewardsForPlatformUserRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

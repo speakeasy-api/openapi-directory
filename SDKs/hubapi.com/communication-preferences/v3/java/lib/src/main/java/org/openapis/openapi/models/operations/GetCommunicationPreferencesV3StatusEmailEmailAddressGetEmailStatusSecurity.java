@@ -7,37 +7,37 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeHapikey hapikey;
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withHapikey(org.openapis.openapi.models.shared.SchemeHapikey hapikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
+    public String hapikey;
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy;
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withOauth2Legacy(org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Legacy;
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy1;
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withOauth2Legacy1(org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy1) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Legacy1;
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withOauth2Legacy1(String oauth2Legacy1) {
         this.oauth2Legacy1 = oauth2Legacy1;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy;
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withPrivateAppsLegacy(org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
+    public String privateAppsLegacy;
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy1;
-    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withPrivateAppsLegacy1(org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy1) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
+    public String privateAppsLegacy1;
+    public GetCommunicationPreferencesV3StatusEmailEmailAddressGetEmailStatusSecurity withPrivateAppsLegacy1(String privateAppsLegacy1) {
         this.privateAppsLegacy1 = privateAppsLegacy1;
         return this;
     }

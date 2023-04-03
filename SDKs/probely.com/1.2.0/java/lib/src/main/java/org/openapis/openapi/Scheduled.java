@@ -45,7 +45,7 @@ public class Scheduled {
      */
     public org.openapis.openapi.models.operations.DeleteTargetsTargetIdScheduledscansIdResponse deleteTargetsTargetIdScheduledscansId(org.openapis.openapi.models.operations.DeleteTargetsTargetIdScheduledscansIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTargetsTargetIdScheduledscansIdPathParams.class, baseUrl, "/targets/{target_id}/scheduledscans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTargetsTargetIdScheduledscansIdRequest.class, baseUrl, "/targets/{target_id}/scheduledscans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -100,7 +100,7 @@ public class Scheduled {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsAllScheduledscansExpandedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsAllScheduledscansExpandedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -147,13 +147,13 @@ public class Scheduled {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansResponse getTargetsTargetIdScheduledscans(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansPathParams.class, baseUrl, "/targets/{target_id}/scheduledscans/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansRequest.class, baseUrl, "/targets/{target_id}/scheduledscans/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -208,13 +208,13 @@ public class Scheduled {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansExpandedResponse getTargetsTargetIdScheduledscansExpanded(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansExpandedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansExpandedPathParams.class, baseUrl, "/targets/{target_id}/scheduledscans/expanded/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansExpandedRequest.class, baseUrl, "/targets/{target_id}/scheduledscans/expanded/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansExpandedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansExpandedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -261,7 +261,7 @@ public class Scheduled {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansIdResponse getTargetsTargetIdScheduledscansId(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansIdPathParams.class, baseUrl, "/targets/{target_id}/scheduledscans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdScheduledscansIdRequest.class, baseUrl, "/targets/{target_id}/scheduledscans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -316,12 +316,12 @@ public class Scheduled {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdScheduledscansIdResponse patchTargetsTargetIdScheduledscansId(org.openapis.openapi.models.operations.PatchTargetsTargetIdScheduledscansIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdScheduledscansIdPathParams.class, baseUrl, "/targets/{target_id}/scheduledscans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdScheduledscansIdRequest.class, baseUrl, "/targets/{target_id}/scheduledscans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -392,12 +392,12 @@ public class Scheduled {
      */
     public org.openapis.openapi.models.operations.PostTargetsTargetIdScheduledscansResponse postTargetsTargetIdScheduledscans(org.openapis.openapi.models.operations.PostTargetsTargetIdScheduledscansRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdScheduledscansPathParams.class, baseUrl, "/targets/{target_id}/scheduledscans/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTargetsTargetIdScheduledscansRequest.class, baseUrl, "/targets/{target_id}/scheduledscans/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -468,12 +468,12 @@ public class Scheduled {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdScheduledscansIdResponse putTargetsTargetIdScheduledscansId(org.openapis.openapi.models.operations.PutTargetsTargetIdScheduledscansIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdScheduledscansIdPathParams.class, baseUrl, "/targets/{target_id}/scheduledscans/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdScheduledscansIdRequest.class, baseUrl, "/targets/{target_id}/scheduledscans/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

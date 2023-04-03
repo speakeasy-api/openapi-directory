@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeneratePresignedUrlsPublicRequest {
-    
-    public GeneratePresignedUrlsPublicPathParams pathParams;
-    public GeneratePresignedUrlsPublicRequest withPathParams(GeneratePresignedUrlsPublicPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GeneratePresignedUrlsPublicHeaders headers;
-    public GeneratePresignedUrlsPublicRequest withHeaders(GeneratePresignedUrlsPublicHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GeneratePresignedUrlsRequest request;
-    public GeneratePresignedUrlsPublicRequest withRequest(org.openapis.openapi.models.shared.GeneratePresignedUrlsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GeneratePresignedUrlsRequest generatePresignedUrlsRequest;
+    public GeneratePresignedUrlsPublicRequest withGeneratePresignedUrlsRequest(org.openapis.openapi.models.shared.GeneratePresignedUrlsRequest generatePresignedUrlsRequest) {
+        this.generatePresignedUrlsRequest = generatePresignedUrlsRequest;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public GeneratePresignedUrlsPublicXSdsDateFormatEnum xSdsDateFormat;
+    public GeneratePresignedUrlsPublicRequest withXSdsDateFormat(GeneratePresignedUrlsPublicXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Access key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=access_key")
+    public String accessKey;
+    public GeneratePresignedUrlsPublicRequest withAccessKey(String accessKey) {
+        this.accessKey = accessKey;
+        return this;
+    }
+    
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public GeneratePresignedUrlsPublicRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

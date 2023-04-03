@@ -4,20 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetHistoricalStatsRequest {
-    
-    public Destiny2GetHistoricalStatsPathParams pathParams;
-    public Destiny2GetHistoricalStatsRequest withPathParams(Destiny2GetHistoricalStatsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the character to retrieve. You can omit this character ID or set it to 0 to get aggregate stats across all characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetHistoricalStatsRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
         return this;
     }
     
+    /**
+     * Last day to return when daily stats are requested. Use the format YYYY-MM-DD. Currently, we cannot allow more than 31 days of daily data to be requested in a single request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dayend")
+    public OffsetDateTime dayend;
+    public Destiny2GetHistoricalStatsRequest withDayend(OffsetDateTime dayend) {
+        this.dayend = dayend;
+        return this;
+    }
     
-    public Destiny2GetHistoricalStatsQueryParams queryParams;
-    public Destiny2GetHistoricalStatsRequest withQueryParams(Destiny2GetHistoricalStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * First day to return when daily stats are requested. Use the format YYYY-MM-DD. Currently, we cannot allow more than 31 days of daily data to be requested in a single request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=daystart")
+    public OffsetDateTime daystart;
+    public Destiny2GetHistoricalStatsRequest withDaystart(OffsetDateTime daystart) {
+        this.daystart = daystart;
+        return this;
+    }
+    
+    /**
+     * The Destiny membershipId of the user to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetHistoricalStatsRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
+    
+    /**
+     * Group of stats to include, otherwise only general stats are returned. Comma separated list is allowed. Values: General, Weapons, Medals
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=groups")
+    public Integer[] groups;
+    public Destiny2GetHistoricalStatsRequest withGroups(Integer[] groups) {
+        this.groups = groups;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetHistoricalStatsRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
+        return this;
+    }
+    
+    /**
+     * Game modes to return. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=modes")
+    public Integer[] modes;
+    public Destiny2GetHistoricalStatsRequest withModes(Integer[] modes) {
+        this.modes = modes;
+        return this;
+    }
+    
+    /**
+     * Indicates a specific period type to return. Optional. May be: Daily, AllTime, or Activity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=periodType")
+    public Integer periodType;
+    public Destiny2GetHistoricalStatsRequest withPeriodType(Integer periodType) {
+        this.periodType = periodType;
         return this;
     }
     

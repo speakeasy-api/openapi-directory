@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPlatformsRequest {
-    
-    public ListPlatformsQueryParams queryParams;
-    public ListPlatformsRequest withQueryParams(ListPlatformsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListPlatformsSecurity security;
-    public ListPlatformsRequest withSecurity(ListPlatformsSecurity security) {
-        this.security = security;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public ListPlatformsRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     

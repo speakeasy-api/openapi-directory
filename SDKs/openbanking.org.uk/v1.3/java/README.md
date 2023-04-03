@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAtmsHeaders;
 import org.openapis.openapi.models.operations.GetAtmsRequest;
 import org.openapis.openapi.models.operations.GetAtmsResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetAtmsRequest req = new GetAtmsRequest() {{
-                headers = new GetAtmsHeaders() {{
-                    ifModifiedSince = "corrupti";
-                    ifNoneMatch = "provident";
-                }};
-            }};            
+                ifModifiedSince = "corrupti";
+                ifNoneMatch = "provident";
+            }}            
 
             GetAtmsResponse res = sdk.atm.getAtms(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### atm

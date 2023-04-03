@@ -4,34 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWorkerReservationRequest {
-    
-    public ListWorkerReservationPathParams pathParams;
-    public ListWorkerReservationRequest withPathParams(ListWorkerReservationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListWorkerReservationRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListWorkerReservationQueryParams queryParams;
-    public ListWorkerReservationRequest withQueryParams(ListWorkerReservationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListWorkerReservationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListWorkerReservationSecurity security;
-    public ListWorkerReservationRequest withSecurity(ListWorkerReservationSecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListWorkerReservationRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
+    /**
+     * Returns the list of reservations for a worker with a specified ReservationStatus. Can be: `pending`, `accepted`, `rejected`, `timeout`, `canceled`, or `rescinded`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservationStatus")
+    public org.openapis.openapi.models.shared.WorkerReservationEnumStatusEnum reservationStatus;
+    public ListWorkerReservationRequest withReservationStatus(org.openapis.openapi.models.shared.WorkerReservationEnumStatusEnum reservationStatus) {
+        this.reservationStatus = reservationStatus;
+        return this;
+    }
     
-    public String serverURL;
-    public ListWorkerReservationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the reserved Worker resource with the WorkerReservation resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkerSid")
+    public String workerSid;
+    public ListWorkerReservationRequest withWorkerSid(String workerSid) {
+        this.workerSid = workerSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the Workspace with the WorkerReservation resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public ListWorkerReservationRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

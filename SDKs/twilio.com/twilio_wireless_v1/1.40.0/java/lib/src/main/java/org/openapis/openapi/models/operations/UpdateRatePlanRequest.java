@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRatePlanRequest {
-    
-    public UpdateRatePlanPathParams pathParams;
-    public UpdateRatePlanRequest withPathParams(UpdateRatePlanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateRatePlanUpdateRatePlanRequest request;
-    public UpdateRatePlanRequest withRequest(UpdateRatePlanUpdateRatePlanRequest request) {
-        this.request = request;
+    public UpdateRatePlanUpdateRatePlanRequest requestBody;
+    public UpdateRatePlanRequest withRequestBody(UpdateRatePlanUpdateRatePlanRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRatePlanSecurity security;
-    public UpdateRatePlanRequest withSecurity(UpdateRatePlanSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateRatePlanRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the RatePlan resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateRatePlanRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

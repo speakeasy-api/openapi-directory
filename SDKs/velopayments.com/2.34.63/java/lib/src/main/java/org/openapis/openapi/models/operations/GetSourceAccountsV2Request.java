@@ -4,13 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSourceAccountsV2Request {
+    /**
+     * The funding account ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fundingAccountId")
+    public String fundingAccountId;
+    public GetSourceAccountsV2Request withFundingAccountId(String fundingAccountId) {
+        this.fundingAccountId = fundingAccountId;
+        return this;
+    }
     
-    public GetSourceAccountsV2QueryParams queryParams;
-    public GetSourceAccountsV2Request withQueryParams(GetSourceAccountsV2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetSourceAccountsV2Request withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results to return in a page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetSourceAccountsV2Request withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The account owner Payor ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public GetSourceAccountsV2Request withPayorId(String payorId) {
+        this.payorId = payorId;
+        return this;
+    }
+    
+    /**
+     * The physical account ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=physicalAccountId")
+    public String physicalAccountId;
+    public GetSourceAccountsV2Request withPhysicalAccountId(String physicalAccountId) {
+        this.physicalAccountId = physicalAccountId;
+        return this;
+    }
+    
+    /**
+     * Physical Account Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=physicalAccountName")
+    public String physicalAccountName;
+    public GetSourceAccountsV2Request withPhysicalAccountName(String physicalAccountName) {
+        this.physicalAccountName = physicalAccountName;
+        return this;
+    }
+    
+    /**
+     * List of sort fields e.g. ?sort=name:asc
+     * Default is name:asc
+     * The supported sort fields are - fundingRef, name, balance
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetSourceAccountsV2Request withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

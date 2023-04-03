@@ -4,20 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ParticipantWebinarFeedbackRequest {
-    
-    public ParticipantWebinarFeedbackPathParams pathParams;
-    public ParticipantWebinarFeedbackRequest withPathParams(ParticipantWebinarFeedbackPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ParticipantWebinarFeedbackRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ParticipantWebinarFeedbackRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public ParticipantWebinarFeedbackQueryParams queryParams;
-    public ParticipantWebinarFeedbackRequest withQueryParams(ParticipantWebinarFeedbackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Specify a value to get the response for the corresponding meeting type. The value of this field can be one of the following:&lt;br&gt; &lt;br&gt;`past` - Meeting that already occurred in the specified date range.&lt;br&gt;`pastOne` - Past meetings that were attended by only one user. &lt;br&gt;`live` - Live meetings.&lt;br&gt;&lt;br&gt;
+     * 
+     * If you do not provide this field, the default value will be `live` and thus, the API will only query responses for live meetings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public ParticipantWebinarFeedbackTypeEnum type;
+    public ParticipantWebinarFeedbackRequest withType(ParticipantWebinarFeedbackTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    /**
+     * The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public String webinarId;
+    public ParticipantWebinarFeedbackRequest withWebinarId(String webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

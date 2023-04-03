@@ -42,7 +42,7 @@ public class CinemaDetail {
      */
     public org.openapis.openapi.models.operations.CinemaDetailSearchReadResponse cinemaDetailSearchRead(org.openapis.openapi.models.operations.CinemaDetailSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CinemaDetailSearchReadPathParams.class, baseUrl, "/api/v1/cinema-detail/search/{cinema_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CinemaDetailSearchReadRequest.class, baseUrl, "/api/v1/cinema-detail/search/{cinema_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

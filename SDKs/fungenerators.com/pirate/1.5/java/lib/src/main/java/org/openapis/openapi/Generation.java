@@ -34,10 +34,11 @@ public class Generation {
     /**
      * Generate random pirate insults.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPirateGenerateInsultResponse getPirateGenerateInsult(org.openapis.openapi.models.operations.GetPirateGenerateInsultRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPirateGenerateInsultResponse getPirateGenerateInsult(org.openapis.openapi.models.operations.GetPirateGenerateInsultRequest request, org.openapis.openapi.models.operations.GetPirateGenerateInsultSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pirate/generate/insult");
         
@@ -45,14 +46,14 @@ public class Generation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPirateGenerateInsultQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPirateGenerateInsultRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,10 +74,11 @@ public class Generation {
     /**
      * Generate pirate lorem ipsum.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPirateGenerateLoremIpsumResponse getPirateGenerateLoremIpsum(org.openapis.openapi.models.operations.GetPirateGenerateLoremIpsumRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPirateGenerateLoremIpsumResponse getPirateGenerateLoremIpsum(org.openapis.openapi.models.operations.GetPirateGenerateLoremIpsumRequest request, org.openapis.openapi.models.operations.GetPirateGenerateLoremIpsumSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pirate/generate/lorem-ipsum");
         
@@ -84,14 +86,14 @@ public class Generation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPirateGenerateLoremIpsumQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPirateGenerateLoremIpsumRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -112,10 +114,11 @@ public class Generation {
     /**
      * Generate random pirate names.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPirateGenerateNameResponse getPirateGenerateName(org.openapis.openapi.models.operations.GetPirateGenerateNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPirateGenerateNameResponse getPirateGenerateName(org.openapis.openapi.models.operations.GetPirateGenerateNameRequest request, org.openapis.openapi.models.operations.GetPirateGenerateNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/pirate/generate/name");
         
@@ -123,14 +126,14 @@ public class Generation {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPirateGenerateNameQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPirateGenerateNameRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

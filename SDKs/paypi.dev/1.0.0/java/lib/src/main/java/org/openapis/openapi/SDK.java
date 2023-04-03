@@ -154,7 +154,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCheckCodeResponse postCheckCode(org.openapis.openapi.models.operations.PostCheckCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCheckCodeResponse postCheckCode(org.openapis.openapi.models.operations.PostCheckCodeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/checkCode");
         
@@ -215,7 +215,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostSendCodeResponse postSendCode(org.openapis.openapi.models.operations.PostSendCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostSendCodeResponse postSendCode(org.openapis.openapi.models.operations.PostSendCodeRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sendCode");
         

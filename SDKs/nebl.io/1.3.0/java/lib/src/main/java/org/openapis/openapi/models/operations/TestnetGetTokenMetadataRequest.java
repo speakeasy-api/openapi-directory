@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetTokenMetadataRequest {
-    
-    public TestnetGetTokenMetadataPathParams pathParams;
-    public TestnetGetTokenMetadataRequest withPathParams(TestnetGetTokenMetadataPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * TokenId to request metadata for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenid")
+    public String tokenid;
+    public TestnetGetTokenMetadataRequest withTokenid(String tokenid) {
+        this.tokenid = tokenid;
         return this;
     }
     
-    
-    public TestnetGetTokenMetadataQueryParams queryParams;
-    public TestnetGetTokenMetadataRequest withQueryParams(TestnetGetTokenMetadataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * 0 (Default) is fastest, 1 contains token stats, 2 contains token holding addresses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=verbosity")
+    public Double verbosity;
+    public TestnetGetTokenMetadataRequest withVerbosity(Double verbosity) {
+        this.verbosity = verbosity;
         return this;
     }
     

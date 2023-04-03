@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest withPathParams(GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The milestone's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=milestone_id")
+    public Long milestoneId;
+    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest withMilestoneId(Long milestoneId) {
+        this.milestoneId = milestoneId;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest withSecurity(GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

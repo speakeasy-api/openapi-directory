@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCacheRequest {
-    
-    public DeleteCachePathParams pathParams;
-    public DeleteCacheRequest withPathParams(DeleteCachePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Cache key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public DeleteCacheRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

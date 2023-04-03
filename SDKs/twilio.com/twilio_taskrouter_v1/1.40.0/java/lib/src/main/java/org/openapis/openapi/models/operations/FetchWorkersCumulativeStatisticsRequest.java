@@ -4,34 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWorkersCumulativeStatisticsRequest {
-    
-    public FetchWorkersCumulativeStatisticsPathParams pathParams;
-    public FetchWorkersCumulativeStatisticsRequest withPathParams(FetchWorkersCumulativeStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only calculate statistics from this date and time and earlier, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public FetchWorkersCumulativeStatisticsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
-    
-    public FetchWorkersCumulativeStatisticsQueryParams queryParams;
-    public FetchWorkersCumulativeStatisticsRequest withQueryParams(FetchWorkersCumulativeStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only calculate statistics since this many minutes in the past. The default 15 minutes. This is helpful for displaying statistics for the last 15 minutes, 240 minutes (4 hours), and 480 minutes (8 hours) to see trends.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Minutes")
+    public Long minutes;
+    public FetchWorkersCumulativeStatisticsRequest withMinutes(Long minutes) {
+        this.minutes = minutes;
         return this;
     }
     
-    
-    public FetchWorkersCumulativeStatisticsSecurity security;
-    public FetchWorkersCumulativeStatisticsRequest withSecurity(FetchWorkersCumulativeStatisticsSecurity security) {
-        this.security = security;
+    /**
+     * Only calculate statistics from this date and time and later, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public FetchWorkersCumulativeStatisticsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     
+    /**
+     * Only calculate cumulative statistics on this TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskChannel")
+    public String taskChannel;
+    public FetchWorkersCumulativeStatisticsRequest withTaskChannel(String taskChannel) {
+        this.taskChannel = taskChannel;
+        return this;
+    }
     
-    public String serverURL;
-    public FetchWorkersCumulativeStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchWorkersCumulativeStatisticsRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

@@ -4,34 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetallpagedRequest {
-    
-    public GetallpagedPathParams pathParams;
-    public GetallpagedRequest withPathParams(GetallpagedPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetallpagedRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetallpagedQueryParams queryParams;
-    public GetallpagedRequest withQueryParams(GetallpagedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetallpagedRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public GetallpagedHeaders headers;
-    public GetallpagedRequest withHeaders(GetallpagedHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
+    public String an;
+    public GetallpagedRequest withAn(String an) {
+        this.an = an;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public String page;
+    public GetallpagedRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public GetallpagedRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageSize")
+    public String pageSize;
+    public GetallpagedRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

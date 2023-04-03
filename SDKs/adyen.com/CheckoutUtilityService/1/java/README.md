@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PostOriginKeysRequest;
 import org.openapis.openapi.models.operations.PostOriginKeysResponse;
 import org.openapis.openapi.models.shared.CheckoutUtilityRequest;
 
@@ -27,15 +26,13 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostOriginKeysRequest req = new PostOriginKeysRequest() {{
-                request = new CheckoutUtilityRequest() {{
-                    originDomains = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
+            org.openapis.openapi.models.shared.CheckoutUtilityRequest req = new CheckoutUtilityRequest() {{
+                originDomains = new String[]{{
+                    add("provident"),
+                    add("distinctio"),
+                    add("quibusdam"),
                 }};
-            }};            
+            }}            
 
             PostOriginKeysResponse res = sdk.postOriginKeys(req);
 
@@ -49,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

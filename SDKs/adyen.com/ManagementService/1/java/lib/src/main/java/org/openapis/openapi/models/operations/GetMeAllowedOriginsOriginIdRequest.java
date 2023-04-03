@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeAllowedOriginsOriginIdRequest {
-    
-    public GetMeAllowedOriginsOriginIdPathParams pathParams;
-    public GetMeAllowedOriginsOriginIdRequest withPathParams(GetMeAllowedOriginsOriginIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetMeAllowedOriginsOriginIdSecurity security;
-    public GetMeAllowedOriginsOriginIdRequest withSecurity(GetMeAllowedOriginsOriginIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the allowed origin.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=originId")
+    public String originId;
+    public GetMeAllowedOriginsOriginIdRequest withOriginId(String originId) {
+        this.originId = originId;
         return this;
     }
     

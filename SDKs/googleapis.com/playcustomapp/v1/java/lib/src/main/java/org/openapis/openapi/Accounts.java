@@ -34,27 +34,28 @@ public class Accounts {
     /**
      * Creates a new custom app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreateResponse playcustomappAccountsCustomAppsCreate(org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreateResponse playcustomappAccountsCustomAppsCreate(org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreateRequest request, org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreatePathParams.class, baseUrl, "/playcustomapp/v1/accounts/{account}/customApps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreateRequest.class, baseUrl, "/playcustomapp/v1/accounts/{account}/customApps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PlaycustomappAccountsCustomAppsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserEmailOfferingsRequest {
-    
-    public PostUsersUserEmailOfferingsPathParams pathParams;
-    public PostUsersUserEmailOfferingsRequest withPathParams(PostUsersUserEmailOfferingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * offering ids
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public PostUsersUserEmailOfferingsRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public PostUsersUserEmailOfferingsRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public PostUsersUserEmailOfferingsRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

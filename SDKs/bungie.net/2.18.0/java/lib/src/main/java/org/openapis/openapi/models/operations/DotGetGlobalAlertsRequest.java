@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DotGetGlobalAlertsRequest {
-    
-    public DotGetGlobalAlertsQueryParams queryParams;
-    public DotGetGlobalAlertsRequest withQueryParams(DotGetGlobalAlertsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Determines whether Streaming Alerts are included in results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includestreaming")
+    public Boolean includestreaming;
+    public DotGetGlobalAlertsRequest withIncludestreaming(Boolean includestreaming) {
+        this.includestreaming = includestreaming;
         return this;
     }
     

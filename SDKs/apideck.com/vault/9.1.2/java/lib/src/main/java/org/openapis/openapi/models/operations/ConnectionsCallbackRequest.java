@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectionsCallbackRequest {
+    /**
+     * An authorization code from the connector which Apideck Vault will later exchange for an access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public ConnectionsCallbackRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public ConnectionsCallbackQueryParams queryParams;
-    public ConnectionsCallbackRequest withQueryParams(ConnectionsCallbackQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An opaque value the applications adds to the initial request that the authorization server includes when redirecting the back to the application. This value must be used by the application to prevent CSRF attacks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public ConnectionsCallbackRequest withState(String state) {
+        this.state = state;
         return this;
     }
     

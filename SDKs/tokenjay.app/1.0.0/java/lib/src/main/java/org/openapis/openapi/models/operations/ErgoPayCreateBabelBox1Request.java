@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErgoPayCreateBabelBox1Request {
-    
-    public ErgoPayCreateBabelBox1PathParams pathParams;
-    public ErgoPayCreateBabelBox1Request withPathParams(ErgoPayCreateBabelBox1PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=boxId")
+    public String boxId;
+    public ErgoPayCreateBabelBox1Request withBoxId(String boxId) {
+        this.boxId = boxId;
         return this;
     }
     

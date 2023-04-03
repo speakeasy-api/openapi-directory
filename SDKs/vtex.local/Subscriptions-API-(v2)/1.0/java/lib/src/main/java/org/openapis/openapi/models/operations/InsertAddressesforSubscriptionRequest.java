@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertAddressesforSubscriptionRequest {
-    
-    public InsertAddressesforSubscriptionPathParams pathParams;
-    public InsertAddressesforSubscriptionRequest withPathParams(InsertAddressesforSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public InsertAddressesforSubscriptionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public InsertAddressesforSubscriptionHeaders headers;
-    public InsertAddressesforSubscriptionRequest withHeaders(InsertAddressesforSubscriptionHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public InsertAddressesforSubscriptionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InsertAddressesforSubscriptionRequest[] request;
-    public InsertAddressesforSubscriptionRequest withRequest(org.openapis.openapi.models.shared.InsertAddressesforSubscriptionRequest[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InsertAddressesforSubscriptionRequest[] requestBody;
+    public InsertAddressesforSubscriptionRequest withRequestBody(org.openapis.openapi.models.shared.InsertAddressesforSubscriptionRequest[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Subscription ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public String subscriptionId;
+    public InsertAddressesforSubscriptionRequest withSubscriptionId(String subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

@@ -5,17 +5,13 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateSecurity;
-import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreatePathParams;
-import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateQueryParams;
 import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateRequest;
 import org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ContainerEnabledBuiltInVariableEnum;
 import org.openapis.openapi.models.shared.ContainerUsageContextEnum;
 import org.openapis.openapi.models.shared.Container;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -24,59 +20,48 @@ public class Application {
                 .build();
 
             TagmanagerAccountsContainersCreateRequest req = new TagmanagerAccountsContainersCreateRequest() {{
-                security = new TagmanagerAccountsContainersCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new TagmanagerAccountsContainersCreatePathParams() {{
-                    accountId = "corrupti";
-                }};
-                queryParams = new TagmanagerAccountsContainersCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new Container() {{
-                    accountId = "suscipit";
-                    containerId = "iure";
+                dollarXgafv = "2";
+                container = new Container() {{
+                    accountId = "provident";
+                    containerId = "distinctio";
                     domainName = new String[]{{
-                        add("debitis"),
-                        add("ipsa"),
+                        add("unde"),
+                        add("nulla"),
+                        add("corrupti"),
+                        add("illum"),
                     }};
                     enabledBuiltInVariable = new org.openapis.openapi.models.shared.ContainerEnabledBuiltInVariableEnum[]{{
-                        add("historySource"),
-                        add("sdkVersion"),
-                        add("ampReferrer"),
-                        add("firebaseEventParameterNotificationTopic"),
+                        add("ampGtmEvent"),
+                        add("firebaseEventParameterCampaign"),
                     }};
-                    fingerprint = "placeat";
-                    name = "voluptatum";
-                    notes = "iusto";
-                    publicId = "excepturi";
-                    timeZoneCountryId = "nisi";
-                    timeZoneId = "recusandae";
+                    fingerprint = "suscipit";
+                    name = "iure";
+                    notes = "magnam";
+                    publicId = "debitis";
+                    timeZoneCountryId = "ipsa";
+                    timeZoneId = "delectus";
                     usageContext = new org.openapis.openapi.models.shared.ContainerUsageContextEnum[]{{
-                        add("web"),
                         add("ios"),
-                        add("web"),
-                        add("androidSdk5"),
+                        add("ios"),
                     }};
                 }};
-            }};            
+                accessToken = "minus";
+                accountId = "placeat";
+                alt = "media";
+                callback = "iusto";
+                fields = "excepturi";
+                key = "nisi";
+                oauthToken = "recusandae";
+                prettyPrint = false;
+                quotaUser = "temporibus";
+                uploadType = "ab";
+                uploadProtocol = "quis";
+            }}            
 
-            TagmanagerAccountsContainersCreateResponse res = sdk.accounts.tagmanagerAccountsContainersCreate(req);
+            TagmanagerAccountsContainersCreateResponse res = sdk.accounts.tagmanagerAccountsContainersCreate(req, new TagmanagerAccountsContainersCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.container.isPresent()) {
                 // handle response

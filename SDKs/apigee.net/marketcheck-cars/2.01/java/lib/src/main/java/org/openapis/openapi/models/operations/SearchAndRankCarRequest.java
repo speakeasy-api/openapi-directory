@@ -7,20 +7,873 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchAndRankCarRequest {
-    
-    public SearchAndRankCarQueryParams queryParams;
-    public SearchAndRankCarRequest withQueryParams(SearchAndRankCarQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Inputs needed for ranking a group of car listings
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CarRankRequest request;
-    public SearchAndRankCarRequest withRequest(org.openapis.openapi.models.shared.CarRankRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CarRankRequest carRankRequest;
+    public SearchAndRankCarRequest withCarRankRequest(org.openapis.openapi.models.shared.CarRankRequest carRankRequest) {
+        this.carRankRequest = carRankRequest;
+        return this;
+    }
+    
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public SearchAndRankCarRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * Flag on whether to include api_key in response API urls (if any)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=append_api_key")
+    public Boolean appendApiKey;
+    public SearchAndRankCarRequest withAppendApiKey(Boolean appendApiKey) {
+        this.appendApiKey = appendApiKey;
+        return this;
+    }
+    
+    /**
+     * Base exterior color to match. Valid filter values are those that our Search facets API returns for unique base exterior colors. You can pass in multiple base interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base_exterior_color")
+    public String baseExteriorColor;
+    public SearchAndRankCarRequest withBaseExteriorColor(String baseExteriorColor) {
+        this.baseExteriorColor = baseExteriorColor;
+        return this;
+    }
+    
+    /**
+     * Base interior color to match. Valid filter values are those that our Search facets API returns for unique base interior colors. You can pass in multiple base interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base_interior_color")
+    public String baseInteriorColor;
+    public SearchAndRankCarRequest withBaseInteriorColor(String baseInteriorColor) {
+        this.baseInteriorColor = baseInteriorColor;
+        return this;
+    }
+    
+    /**
+     * Body subtype to filter the listings on. Valid filter values are those that our Search facets API returns for unique body subtypes. You can pass in multiple body subtype values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body_subtype")
+    public String bodySubtype;
+    public SearchAndRankCarRequest withBodySubtype(String bodySubtype) {
+        this.bodySubtype = bodySubtype;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their body type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body_type")
+    public String bodyType;
+    public SearchAndRankCarRequest withBodyType(String bodyType) {
+        this.bodyType = bodyType;
+        return this;
+    }
+    
+    /**
+     * Car type. Allowed values are - new / used / certified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=car_type")
+    public org.openapis.openapi.models.shared.CarCarTypeEnum carType;
+    public SearchAndRankCarRequest withCarType(org.openapis.openapi.models.shared.CarCarTypeEnum carType) {
+        this.carType = carType;
+        return this;
+    }
+    
+    /**
+     * Indicates whether car has had only one owner or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carfax_1_owner")
+    public org.openapis.openapi.models.shared.Carfax1OwnerEnum carfax1Owner;
+    public SearchAndRankCarRequest withCarfax1Owner(org.openapis.openapi.models.shared.Carfax1OwnerEnum carfax1Owner) {
+        this.carfax1Owner = carfax1Owner;
+        return this;
+    }
+    
+    /**
+     * Indicates whether car has clean ownership records
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carfax_clean_title")
+    public org.openapis.openapi.models.shared.CarfaxCleanTitleEnum carfaxCleanTitle;
+    public SearchAndRankCarRequest withCarfaxCleanTitle(org.openapis.openapi.models.shared.CarfaxCleanTitleEnum carfaxCleanTitle) {
+        this.carfaxCleanTitle = carfaxCleanTitle;
+        return this;
+    }
+    
+    /**
+     * To filter listing on City in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
+    public String city;
+    public SearchAndRankCarRequest withCity(String city) {
+        this.city = city;
+        return this;
+    }
+    
+    /**
+     * City mileage range to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city_mpg_range")
+    public String cityMpgRange;
+    public SearchAndRankCarRequest withCityMpgRange(String cityMpgRange) {
+        this.cityMpgRange = cityMpgRange;
+        return this;
+    }
+    
+    /**
+     * To filter listing on Country in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public org.openapis.openapi.models.shared.CarCountryEnum country;
+    public SearchAndRankCarRequest withCountry(org.openapis.openapi.models.shared.CarCountryEnum country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their cylinders
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cylinders")
+    public String cylinders;
+    public SearchAndRankCarRequest withCylinders(String cylinders) {
+        this.cylinders = cylinders;
+        return this;
+    }
+    
+    /**
+     * Filter based on dealer type independant or franchise
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dealer_type")
+    public org.openapis.openapi.models.shared.DealerTypeEnum dealerType;
+    public SearchAndRankCarRequest withDealerType(org.openapis.openapi.models.shared.DealerTypeEnum dealerType) {
+        this.dealerType = dealerType;
+        return this;
+    }
+    
+    /**
+     * If dedup is set to true then will give results with is_searchable irrespecive of dealer_id or source
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dedup")
+    public Boolean dedup;
+    public SearchAndRankCarRequest withDedup(Boolean dedup) {
+        this.dedup = dedup;
+        return this;
+    }
+    
+    /**
+     * Last 180 Days on Market range to filter cars with the DOM within the given range. Range to be given in the format - min-max e.g. 10-50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dom_180_range")
+    public String dom180Range;
+    public SearchAndRankCarRequest withDom180Range(String dom180Range) {
+        this.dom180Range = dom180Range;
+        return this;
+    }
+    
+    /**
+     * Active Days on Market range to filter cars with the DOM within the given range. Range to be given in the format - min-max e.g. 10-50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dom_active_range")
+    public String domActiveRange;
+    public SearchAndRankCarRequest withDomActiveRange(String domActiveRange) {
+        this.domActiveRange = domActiveRange;
+        return this;
+    }
+    
+    /**
+     * Days on Market range to filter cars with the DOM within the given range. Range to be given in the format - min-max e.g. 10-50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dom_range")
+    public String domRange;
+    public SearchAndRankCarRequest withDomRange(String domRange) {
+        this.domRange = domRange;
+        return this;
+    }
+    
+    /**
+     * Doors to filter the cars on. Valid filter values are those that our Search facets API returns for unique doors. You can pass in multiple doors values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doors")
+    public String doors;
+    public SearchAndRankCarRequest withDoors(String doors) {
+        this.doors = doors;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their drivetrain
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drivetrain")
+    public String drivetrain;
+    public SearchAndRankCarRequest withDrivetrain(String drivetrain) {
+        this.drivetrain = drivetrain;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their engine
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine")
+    public String engine;
+    public SearchAndRankCarRequest withEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    
+    /**
+     * Engine Aspiration to match. Valid filter values are those that our Search facets API returns for unique Engine Aspirations. You can pass in multiple Engine aspirations values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_aspiration")
+    public String engineAspiration;
+    public SearchAndRankCarRequest withEngineAspiration(String engineAspiration) {
+        this.engineAspiration = engineAspiration;
+        return this;
+    }
+    
+    /**
+     * Engine Block to match. Valid filter values are those that our Search facets API returns for unique Engine Block. You can pass in multiple Engine Block values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_block")
+    public String engineBlock;
+    public SearchAndRankCarRequest withEngineBlock(String engineBlock) {
+        this.engineBlock = engineBlock;
+        return this;
+    }
+    
+    /**
+     * Engine Size to match. Valid filter values are those that our Search facets API returns for unique engine size. You can pass in multiple engine size values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_size")
+    public String engineSize;
+    public SearchAndRankCarRequest withEngineSize(String engineSize) {
+        this.engineSize = engineSize;
+        return this;
+    }
+    
+    /**
+     * Boolean param to exclude certified cars from search results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_certified")
+    public Boolean excludeCertified;
+    public SearchAndRankCarRequest withExcludeCertified(Boolean excludeCertified) {
+        this.excludeCertified = excludeCertified;
+        return this;
+    }
+    
+    /**
+     * Exterior color to match. Valid filter values are those that our Search facets API returns for unique exterior colors. You can pass in multiple exterior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exterior_color")
+    public String exteriorColor;
+    public SearchAndRankCarRequest withExteriorColor(String exteriorColor) {
+        this.exteriorColor = exteriorColor;
+        return this;
+    }
+    
+    /**
+     * Control sort order of facets with this parameter with default sort being on count, Other available sort is alphabetical sort, which can be obtained by using index as value for this param
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facet_sort")
+    public org.openapis.openapi.models.shared.FacetSortEnum facetSort;
+    public SearchAndRankCarRequest withFacetSort(org.openapis.openapi.models.shared.FacetSortEnum facetSort) {
+        this.facetSort = facetSort;
+        return this;
+    }
+    
+    /**
+     * The comma separated list of fields for which facets are requested. Facets could be requested in addition to the listings for the search. Please note - The API calls with lots of facet fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=facets")
+    public String facets;
+    public SearchAndRankCarRequest withFacets(String facets) {
+        this.facets = facets;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact down payment in finance offers, or inside a range with min and max seperated by a dash like finance_down_payment=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_down_payment")
+    public String financeDownPayment;
+    public SearchAndRankCarRequest withFinanceDownPayment(String financeDownPayment) {
+        this.financeDownPayment = financeDownPayment;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact down payment percentage in finance offers, or inside a range with min and max seperated by a dash like finance_down_payment_per=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_down_payment_per")
+    public String financeDownPaymentPer;
+    public SearchAndRankCarRequest withFinanceDownPaymentPer(String financeDownPaymentPer) {
+        this.financeDownPaymentPer = financeDownPaymentPer;
+        return this;
+    }
+    
+    /**
+     * Search listings with finance offers exactly matching Estimated Monthly Payment(EMI), or inside a range with min and max seperated by a dash like finance_emp=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_emp")
+    public String financeEmp;
+    public SearchAndRankCarRequest withFinanceEmp(String financeEmp) {
+        this.financeEmp = financeEmp;
+        return this;
+    }
+    
+    /**
+     * Search listings with finance offers exactly matching loans Annual Percentage Rate, or inside a range with min and max seperated by a dash like finance_loan_apr=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_loan_apr")
+    public String financeLoanApr;
+    public SearchAndRankCarRequest withFinanceLoanApr(String financeLoanApr) {
+        this.financeLoanApr = financeLoanApr;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact finance loan term, or inside a range with min and max seperated by a dash like finance_loan_term=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=finance_loan_term")
+    public String financeLoanTerm;
+    public SearchAndRankCarRequest withFinanceLoanTerm(String financeLoanTerm) {
+        this.financeLoanTerm = financeLoanTerm;
+        return this;
+    }
+    
+    /**
+     * First seen at MC days range to filter listings with the first seen at MC in the range given. Range to be given in the format - min-max e.g. 25-12
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_at_mc_days")
+    public String firstSeenAtMcDays;
+    public SearchAndRankCarRequest withFirstSeenAtMcDays(String firstSeenAtMcDays) {
+        this.firstSeenAtMcDays = firstSeenAtMcDays;
+        return this;
+    }
+    
+    /**
+     * First seen at MC date range to filter listings with the first seen at MC in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_at_mc_range")
+    public String firstSeenAtMcRange;
+    public SearchAndRankCarRequest withFirstSeenAtMcRange(String firstSeenAtMcRange) {
+        this.firstSeenAtMcRange = firstSeenAtMcRange;
+        return this;
+    }
+    
+    /**
+     * First seen at source days range to filter listings with the first seen at source in the range given. Range to be given in the format - min-max e.g. 25-12
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_at_source_days")
+    public String firstSeenAtSourceDays;
+    public SearchAndRankCarRequest withFirstSeenAtSourceDays(String firstSeenAtSourceDays) {
+        this.firstSeenAtSourceDays = firstSeenAtSourceDays;
+        return this;
+    }
+    
+    /**
+     * First seen at source date range to filter listings with the first seen at source in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_at_source_range")
+    public String firstSeenAtSourceRange;
+    public SearchAndRankCarRequest withFirstSeenAtSourceRange(String firstSeenAtSourceRange) {
+        this.firstSeenAtSourceRange = firstSeenAtSourceRange;
+        return this;
+    }
+    
+    /**
+     * First seen days range to filter listings with the first seen in the range given. Range to be given in the format - min-max e.g. 25-12
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_days")
+    public String firstSeenDays;
+    public SearchAndRankCarRequest withFirstSeenDays(String firstSeenDays) {
+        this.firstSeenDays = firstSeenDays;
+        return this;
+    }
+    
+    /**
+     * First seen date range to filter listings with the first seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_seen_range")
+    public String firstSeenRange;
+    public SearchAndRankCarRequest withFirstSeenRange(String firstSeenRange) {
+        this.firstSeenRange = firstSeenRange;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their fuel type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuel_type")
+    public String fuelType;
+    public SearchAndRankCarRequest withFuelType(String fuelType) {
+        this.fuelType = fuelType;
+        return this;
+    }
+    
+    /**
+     * Highway mileage range to filter listings with the mileage in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highway_mpg_range")
+    public String highwayMpgRange;
+    public SearchAndRankCarRequest withHighwayMpgRange(String highwayMpgRange) {
+        this.highwayMpgRange = highwayMpgRange;
+        return this;
+    }
+    
+    /**
+     * Boolean param to search for listings that include finance options in them
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_finance")
+    public Boolean includeFinance;
+    public SearchAndRankCarRequest withIncludeFinance(Boolean includeFinance) {
+        this.includeFinance = includeFinance;
+        return this;
+    }
+    
+    /**
+     * Boolean param to search for listings that include leasing options in them
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_lease")
+    public Boolean includeLease;
+    public SearchAndRankCarRequest withIncludeLease(Boolean includeLease) {
+        this.includeLease = includeLease;
+        return this;
+    }
+    
+    /**
+     * To include non vin listings. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_non_vin_listings")
+    public Boolean includeNonVinListings;
+    public SearchAndRankCarRequest withIncludeNonVinListings(Boolean includeNonVinListings) {
+        this.includeNonVinListings = includeNonVinListings;
+        return this;
+    }
+    
+    /**
+     * Interior color to match. Valid filter values are those that our Search facets API returns for unique interior colors. You can pass in multiple interior color values comma separated
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interior_color")
+    public String interiorColor;
+    public SearchAndRankCarRequest withInteriorColor(String interiorColor) {
+        this.interiorColor = interiorColor;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their condition. Either used or new
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inventory_type")
+    public org.openapis.openapi.models.shared.InventoryTypeEnum inventoryType;
+    public SearchAndRankCarRequest withInventoryType(org.openapis.openapi.models.shared.InventoryTypeEnum inventoryType) {
+        this.inventoryType = inventoryType;
+        return this;
+    }
+    
+    /**
+     * Last seen days range to filter listings with the last seen in the range given. Range to be given in the format - min-max e.g. 25-12
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_seen_days")
+    public String lastSeenDays;
+    public SearchAndRankCarRequest withLastSeenDays(String lastSeenDays) {
+        this.lastSeenDays = lastSeenDays;
+        return this;
+    }
+    
+    /**
+     * Last seen date range to filter listings with the last seen in the range given. Range to be given in the format [YYYYMMDD] - min-max e.g. 20190523-20190623
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_seen_range")
+    public String lastSeenRange;
+    public SearchAndRankCarRequest withLastSeenRange(String lastSeenRange) {
+        this.lastSeenRange = lastSeenRange;
+        return this;
+    }
+    
+    /**
+     * Latitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public SearchAndRankCarRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact down payment in lease offers, or inside a range with min and max seperated by a dash like lease_down_payment=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lease_down_payment")
+    public String leaseDownPayment;
+    public SearchAndRankCarRequest withLeaseDownPayment(String leaseDownPayment) {
+        this.leaseDownPayment = leaseDownPayment;
+        return this;
+    }
+    
+    /**
+     * Search listings with lease offers exactly matching Estimated Monthly Payment(EMI), or inside a range with min and max seperated by a dash like lease_emp=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lease_emp")
+    public String leaseEmp;
+    public SearchAndRankCarRequest withLeaseEmp(String leaseEmp) {
+        this.leaseEmp = leaseEmp;
+        return this;
+    }
+    
+    /**
+     * Search listings with exact lease term, or inside a range with min and max seperated by a dash like lease_term=30-60
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lease_term")
+    public String leaseTerm;
+    public SearchAndRankCarRequest withLeaseTerm(String leaseTerm) {
+        this.leaseTerm = leaseTerm;
+        return this;
+    }
+    
+    /**
+     * Longitude component of location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public SearchAndRankCarRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their make
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=make")
+    public String make;
+    public SearchAndRankCarRequest withMake(String make) {
+        this.make = make;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of Year, Make, Model, Trim fields. For example - year,make,model,trim fields for which user wants to do an exact match
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=match")
+    public String match;
+    public SearchAndRankCarRequest withMatch(String match) {
+        this.match = match;
+        return this;
+    }
+    
+    /**
+     * Miles range to filter listings with miles in the given range. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=miles_range")
+    public String milesRange;
+    public SearchAndRankCarRequest withMilesRange(String milesRange) {
+        this.milesRange = milesRange;
+        return this;
+    }
+    
+    /**
+     * To filter listings on their model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public SearchAndRankCarRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * To filter listing on msa code in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msa_code")
+    public String msaCode;
+    public SearchAndRankCarRequest withMsaCode(String msaCode) {
+        this.msaCode = msaCode;
+        return this;
+    }
+    
+    /**
+     * MSRP range to filter listings with the msrp in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=msrp_range")
+    public String msrpRange;
+    public SearchAndRankCarRequest withMsrpRange(String msrpRange) {
+        this.msrpRange = msrpRange;
+        return this;
+    }
+    
+    /**
+     * If nodedup is set to true then API will give results without is_searchable i.e multiple listings for single vin
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nodedup")
+    public Boolean nodedup;
+    public SearchAndRankCarRequest withNodedup(Boolean nodedup) {
+        this.nodedup = nodedup;
+        return this;
+    }
+    
+    /**
+     * Used in combination with dealer_id or source, when true returns the listings actually owned by dealer himself
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=owned")
+    public Boolean owned;
+    public SearchAndRankCarRequest withOwned(Boolean owned) {
+        this.owned = owned;
+        return this;
+    }
+    
+    /**
+     * Page number to fetch the results for the given criteria. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public SearchAndRankCarRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * A boolean indicating whether to include only those listings that have photo_links in search results, And discard those that don't have them
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=photo_links")
+    public Boolean photoLinks;
+    public SearchAndRankCarRequest withPhotoLinks(Boolean photoLinks) {
+        this.photoLinks = photoLinks;
+        return this;
+    }
+    
+    /**
+     * A boolean indicating whether to include only those listings that have photo_links_cached in search results, And discard those that don't have them
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=photo_links_cached")
+    public Boolean photoLinksCached;
+    public SearchAndRankCarRequest withPhotoLinksCached(Boolean photoLinksCached) {
+        this.photoLinksCached = photoLinksCached;
+        return this;
+    }
+    
+    /**
+     * If plot has value true results in around 25k coordinates with limited fields to plot respective graph
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=plot")
+    public Boolean plot;
+    public SearchAndRankCarRequest withPlot(Boolean plot) {
+        this.plot = plot;
+        return this;
+    }
+    
+    /**
+     * Price range to filter listings with the price in the range given. Range to be given in the format - min-max e.g. 1000-5000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=price_range")
+    public String priceRange;
+    public SearchAndRankCarRequest withPriceRange(String priceRange) {
+        this.priceRange = priceRange;
+        return this;
+    }
+    
+    /**
+     * Radius around the search location (Unit - Miles)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Integer radius;
+    public SearchAndRankCarRequest withRadius(Integer radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * The comma separated list of numeric fields for which range facets are requested. Range facets could be requested in addition to the listings for the search. Please note - The API calls with lots of range facet fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=range_facets")
+    public String rangeFacets;
+    public SearchAndRankCarRequest withRangeFacets(String rangeFacets) {
+        this.rangeFacets = rangeFacets;
+        return this;
+    }
+    
+    /**
+     * Number of results to return. Default is 10. Max is 50
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Integer rows;
+    public SearchAndRankCarRequest withRows(Integer rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * Sort by field. Default sort field is distance from the given point
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public SearchAndRankCarRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Sort order - asc or desc. Default sort order is asc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public org.openapis.openapi.models.shared.SortOrderEnum sortOrder;
+    public SearchAndRankCarRequest withSortOrder(org.openapis.openapi.models.shared.SortOrderEnum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Page number to fetch the results for the given criteria. Default is 0. Pagination is allowed only till first 10000 results for the search and sort criteria. The page value can be only between 1 to 10000/rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Integer start;
+    public SearchAndRankCarRequest withStart(Integer start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * To filter listing on State in which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public SearchAndRankCarRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * The list of fields for which stats need to be generated based on the matching listings for the search criteria. The stats consists of mean, max, average and count of listings based on which the stats are calculated for the field. Stats could be requested in addition to the listings for the search. Please note - The API calls with the stats fields may take longer to respond.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stats")
+    public String stats;
+    public SearchAndRankCarRequest withStats(String stats) {
+        this.stats = stats;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their stock number on lot
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stock_no")
+    public String stockNo;
+    public SearchAndRankCarRequest withStockNo(String stockNo) {
+        this.stockNo = stockNo;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of 10 letters excert from the 17 letter VIN. The 10 letters to be picked up from the 17 letter VIN are - first 8 letters and the 10th and 11th letter. E.g. For a VIN - 1FTFW1EF3EKE57182 the taxonomy vin would be - 1FTFW1EFEK  A taxonomy VIN identified a build of a car and could be used to filter our cars of a particular build. This is an alternative to the vin or ymmt parameters to the search API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxonomy_vins")
+    public String taxonomyVins;
+    public SearchAndRankCarRequest withTaxonomyVins(String taxonomyVins) {
+        this.taxonomyVins = taxonomyVins;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their transmission
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transmission")
+    public String transmission;
+    public SearchAndRankCarRequest withTransmission(String transmission) {
+        this.transmission = transmission;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their trim
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trim")
+    public String trim;
+    public SearchAndRankCarRequest withTrim(String trim) {
+        this.trim = trim;
+        return this;
+    }
+    
+    /**
+     * Filter listings on web scraped trim
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trim_o")
+    public String trimO;
+    public SearchAndRankCarRequest withTrimO(String trimO) {
+        this.trimO = trimO;
+        return this;
+    }
+    
+    /**
+     * Filter trim on custom possible matches
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trim_r")
+    public String trimR;
+    public SearchAndRankCarRequest withTrimR(String trimR) {
+        this.trimR = trimR;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their vehicle type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vehicle_type")
+    public String vehicleType;
+    public SearchAndRankCarRequest withVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their VIN
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vin")
+    public String vin;
+    public SearchAndRankCarRequest withVin(String vin) {
+        this.vin = vin;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of 17 digit vins to search the matching cars for. Only 10 VINs allowed per request. If the request contains more than 10 VINs the first 10 VINs will be considered. Could be used as a More Like This or Similar Vehicles search for the given VINs. Ths vins parameter is an alternative to taxonomy_vins or ymmt parameters available with the search API. vins and taxonomy_vins parameters could be used to filter our cars with the exact build represented by the vins or taxonomy_vins whereas ymmt is a top level filter that does not filter cars by the build attributes like doors, drivetrain, cylinders, body type, body subtype, vehicle type etc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vins")
+    public String vins;
+    public SearchAndRankCarRequest withVins(String vins) {
+        this.vins = vins;
+        return this;
+    }
+    
+    /**
+     * To filter listing on their year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public String year;
+    public SearchAndRankCarRequest withYear(String year) {
+        this.year = year;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of Year, Make, Model, Trim combinations. Each combination needs to have the year,make,model, trim values separated by a pipe '|' character in the form year|make|model|trim. e.g. 2010|Audi|A5,2014|Nissan|Sentra|S 6MT,|Honda|City|   You could just provide strings of the form - 'year|make||' or 'year|make|model' or '|make|model|' combinations. Individual year / make / model filters provied with the API calls will take precedence over the Year, Make, Model, Trim combinations. The Make, Model, Trim values must be valid values as per the Marketcheck Vin Decoder. If you are using a separate vin decoder then look at using the 'vins' or 'taxonomy_vins' parameter to the search api instead the year|make|model|trim combinations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ymmt")
+    public String ymmt;
+    public SearchAndRankCarRequest withYmmt(String ymmt) {
+        this.ymmt = ymmt;
+        return this;
+    }
+    
+    /**
+     * To filter listing on ZIP around which they are listed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public SearchAndRankCarRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

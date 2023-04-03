@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AllGamesExampleParametersQueryParams;
 import org.openapis.openapi.models.operations.AllGamesExampleParametersRequest;
 import org.openapis.openapi.models.operations.AllGamesExampleParametersResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             AllGamesExampleParametersRequest req = new AllGamesExampleParametersRequest() {{
-                queryParams = new AllGamesExampleParametersQueryParams() {{
-                    seasons = "2018";
-                    teamIds = "1";
-                }};
-            }};            
+                seasons = "2018";
+                teamIds = "1";
+            }}            
 
             AllGamesExampleParametersResponse res = sdk.games.allGamesExampleParameters(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### games

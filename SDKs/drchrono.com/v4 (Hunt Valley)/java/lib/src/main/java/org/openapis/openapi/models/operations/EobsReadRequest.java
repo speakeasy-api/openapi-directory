@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EobsReadRequest {
-    
-    public EobsReadPathParams pathParams;
-    public EobsReadRequest withPathParams(EobsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public EobsReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public EobsReadQueryParams queryParams;
-    public EobsReadRequest withQueryParams(EobsReadQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public EobsReadSecurity security;
-    public EobsReadRequest withSecurity(EobsReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public EobsReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

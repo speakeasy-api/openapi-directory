@@ -42,7 +42,7 @@ public class People {
      */
     public org.openapis.openapi.models.operations.DeleteV2PeopleIdJsonResponse deleteV2PeopleIdJson(org.openapis.openapi.models.operations.DeleteV2PeopleIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2PeopleIdJsonPathParams.class, baseUrl, "/v2/people/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteV2PeopleIdJsonRequest.class, baseUrl, "/v2/people/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -83,7 +83,7 @@ public class People {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2PeopleJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2PeopleJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -122,7 +122,7 @@ public class People {
      */
     public org.openapis.openapi.models.operations.GetV2PeopleIdJsonResponse getV2PeopleIdJson(org.openapis.openapi.models.operations.GetV2PeopleIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2PeopleIdJsonPathParams.class, baseUrl, "/v2/people/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2PeopleIdJsonRequest.class, baseUrl, "/v2/people/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -160,7 +160,7 @@ public class People {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2PeopleJsonResponse postV2PeopleJson(org.openapis.openapi.models.operations.PostV2PeopleJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2PeopleJsonResponse postV2PeopleJson(org.openapis.openapi.models.operations.PostV2PeopleJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/people.json");
         
@@ -203,12 +203,12 @@ public class People {
      */
     public org.openapis.openapi.models.operations.PutV2PeopleIdJsonResponse putV2PeopleIdJson(org.openapis.openapi.models.operations.PutV2PeopleIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2PeopleIdJsonPathParams.class, baseUrl, "/v2/people/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2PeopleIdJsonRequest.class, baseUrl, "/v2/people/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         

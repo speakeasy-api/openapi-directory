@@ -4,27 +4,71 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListWirelessSimRequest {
-    
-    public ListWirelessSimQueryParams queryParams;
-    public ListWirelessSimRequest withQueryParams(ListWirelessSimQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EId")
+    public String eId;
+    public ListWirelessSimRequest withEId(String eId) {
+        this.eId = eId;
         return this;
     }
     
-    
-    public ListWirelessSimSecurity security;
-    public ListWirelessSimRequest withSecurity(ListWirelessSimSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Iccid")
+    public String iccid;
+    public ListWirelessSimRequest withIccid(String iccid) {
+        this.iccid = iccid;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListWirelessSimRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListWirelessSimRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListWirelessSimRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListWirelessSimRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RatePlan")
+    public String ratePlan;
+    public ListWirelessSimRequest withRatePlan(String ratePlan) {
+        this.ratePlan = ratePlan;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SimRegistrationCode")
+    public String simRegistrationCode;
+    public ListWirelessSimRequest withSimRegistrationCode(String simRegistrationCode) {
+        this.simRegistrationCode = simRegistrationCode;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public String status;
+    public ListWirelessSimRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

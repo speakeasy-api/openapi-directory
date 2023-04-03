@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsInfoTextPatternRequest {
-    
-    public GetOfferingsInfoTextPatternPathParams pathParams;
-    public GetOfferingsInfoTextPatternRequest withPathParams(GetOfferingsInfoTextPatternPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Text pattern to search for (minimum of 3 characters length).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=textPattern")
+    public String textPattern;
+    public GetOfferingsInfoTextPatternRequest withTextPattern(String textPattern) {
+        this.textPattern = textPattern;
         return this;
     }
     

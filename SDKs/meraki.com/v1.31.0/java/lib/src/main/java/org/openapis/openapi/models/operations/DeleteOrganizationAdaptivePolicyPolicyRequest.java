@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOrganizationAdaptivePolicyPolicyRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteOrganizationAdaptivePolicyPolicyRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteOrganizationAdaptivePolicyPolicyPathParams pathParams;
-    public DeleteOrganizationAdaptivePolicyPolicyRequest withPathParams(DeleteOrganizationAdaptivePolicyPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public DeleteOrganizationAdaptivePolicyPolicyRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

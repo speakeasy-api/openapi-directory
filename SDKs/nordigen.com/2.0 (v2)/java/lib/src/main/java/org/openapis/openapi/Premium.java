@@ -39,13 +39,13 @@ public class Premium {
      */
     public org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2Response retrieveAccountTransactionsV2(org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2PathParams.class, baseUrl, "/api/v2/accounts/premium/{id}/transactions/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2Request.class, baseUrl, "/api/v2/accounts/premium/{id}/transactions/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveAccountTransactionsV2Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

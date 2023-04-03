@@ -133,19 +133,20 @@ public class SDK {
      * Cancel the execution of a report
      * Cancel the execution of a pending or processing report.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelReportResponse cancelReport(org.openapis.openapi.models.operations.CancelReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelReportResponse cancelReport(org.openapis.openapi.models.operations.CancelReportRequest request, org.openapis.openapi.models.operations.CancelReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelReportPathParams.class, baseUrl, "/v2/reports/{report_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelReportRequest.class, baseUrl, "/v2/reports/{report_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,10 +198,11 @@ public class SDK {
      * Create an asynchronous report
      * Request a report on your account activity
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAsyncReportResponse createAsyncReport(org.openapis.openapi.models.operations.CreateAsyncReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAsyncReportResponse createAsyncReport(Object request, org.openapis.openapi.models.operations.CreateAsyncReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/reports");
         
@@ -211,7 +213,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -272,19 +274,20 @@ public class SDK {
      * Download a zipped archive of the rendered report. The file is available for download for 72 hours.&lt;br&gt; The zip file will be named `&lt;PRODUCT&gt;_&lt;REPORT_ID&gt;.zip`&lt;br&gt; The csv file in the zip archive will be named as `report_&lt;PRODUCT&gt;_&lt;ACCOUNT_ID&gt;_&lt;DATE&gt;.csv` the date will be formatted as `yyyyMMdd`.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DownloadReportResponse downloadReport(org.openapis.openapi.models.operations.DownloadReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DownloadReportResponse downloadReport(org.openapis.openapi.models.operations.DownloadReportRequest request, org.openapis.openapi.models.operations.DownloadReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadReportPathParams.class, baseUrl, "/v3/media/{file_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadReportRequest.class, baseUrl, "/v3/media/{file_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -327,10 +330,11 @@ public class SDK {
      * Load records synchronously
      * Fetch usage data synchronously
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRecordsResponse getRecords(org.openapis.openapi.models.operations.GetRecordsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRecordsResponse getRecords(org.openapis.openapi.models.operations.GetRecordsRequest request, org.openapis.openapi.models.operations.GetRecordsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/reports/records");
         
@@ -338,14 +342,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRecordsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRecordsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -389,19 +393,20 @@ public class SDK {
      * Get status of report
      * Retrieve status and metadata about a requested report.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetReportResponse getReport(org.openapis.openapi.models.operations.GetReportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetReportResponse getReport(org.openapis.openapi.models.operations.GetReportRequest request, org.openapis.openapi.models.operations.GetReportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportPathParams.class, baseUrl, "/v2/reports/{report_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReportRequest.class, baseUrl, "/v2/reports/{report_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -445,10 +450,11 @@ public class SDK {
      * List reports
      * List reports created by the specified account based on filtered provided.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListReportsResponse listReports(org.openapis.openapi.models.operations.ListReportsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListReportsResponse listReports(org.openapis.openapi.models.operations.ListReportsRequest request, org.openapis.openapi.models.operations.ListReportsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/reports");
         
@@ -456,14 +462,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListReportsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListReportsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

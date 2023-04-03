@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLocalSettingsRequest {
-    
-    public UpdateLocalSettingsPathParams pathParams;
-    public UpdateLocalSettingsRequest withPathParams(UpdateLocalSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated view's local settings (for current user).
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LocalSettingsDTO request;
-    public UpdateLocalSettingsRequest withRequest(org.openapis.openapi.models.shared.LocalSettingsDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LocalSettingsDTO localSettingsDTO;
+    public UpdateLocalSettingsRequest withLocalSettingsDTO(org.openapis.openapi.models.shared.LocalSettingsDTO localSettingsDTO) {
+        this.localSettingsDTO = localSettingsDTO;
+        return this;
+    }
+    
+    /**
+     * view's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
+    public Long viewId;
+    public UpdateLocalSettingsRequest withViewId(Long viewId) {
+        this.viewId = viewId;
         return this;
     }
     

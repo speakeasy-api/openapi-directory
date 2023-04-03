@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountRequest {
-    
-    public GetAccountQueryParams queryParams;
-    public GetAccountRequest withQueryParams(GetAccountQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetAccountSecurity security;
-    public GetAccountRequest withSecurity(GetAccountSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetAccountRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     

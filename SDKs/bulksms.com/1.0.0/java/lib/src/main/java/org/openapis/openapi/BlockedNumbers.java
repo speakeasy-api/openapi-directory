@@ -34,10 +34,11 @@ public class BlockedNumbers {
     /**
      * List blocked numbers
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBlockedNumbersResponse getBlockedNumbers(org.openapis.openapi.models.operations.GetBlockedNumbersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBlockedNumbersResponse getBlockedNumbers(org.openapis.openapi.models.operations.GetBlockedNumbersRequest request, org.openapis.openapi.models.operations.GetBlockedNumbersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/blocked-numbers");
         
@@ -45,14 +46,14 @@ public class BlockedNumbers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBlockedNumbersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBlockedNumbersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,10 +87,11 @@ public class BlockedNumbers {
      * `FAILED.BLOCKED`. Messages sent to blocked numbers are billed to your account.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBlockedNumbersResponse postBlockedNumbers(org.openapis.openapi.models.operations.PostBlockedNumbersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBlockedNumbersResponse postBlockedNumbers(String[] request, org.openapis.openapi.models.operations.PostBlockedNumbersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/blocked-numbers");
         
@@ -103,7 +105,7 @@ public class BlockedNumbers {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

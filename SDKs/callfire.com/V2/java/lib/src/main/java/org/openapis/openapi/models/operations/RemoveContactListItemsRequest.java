@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveContactListItemsRequest {
-    
-    public RemoveContactListItemsPathParams pathParams;
-    public RemoveContactListItemsRequest withPathParams(RemoveContactListItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An id of a contact entity in the CallFire system
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contactId")
+    public Long[] contactId;
+    public RemoveContactListItemsRequest withContactId(Long[] contactId) {
+        this.contactId = contactId;
         return this;
     }
     
-    
-    public RemoveContactListItemsQueryParams queryParams;
-    public RemoveContactListItemsRequest withQueryParams(RemoveContactListItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public RemoveContactListItemsSecurity security;
-    public RemoveContactListItemsRequest withSecurity(RemoveContactListItemsSecurity security) {
-        this.security = security;
+    /**
+     * A id of a contact list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RemoveContactListItemsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

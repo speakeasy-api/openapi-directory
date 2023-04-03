@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateChannelRequest {
-    
-    public CreateChannelPathParams pathParams;
-    public CreateChannelRequest withPathParams(CreateChannelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateChannelApplicationJSON request;
-    public CreateChannelRequest withRequest(CreateChannelApplicationJSON request) {
-        this.request = request;
+    public CreateChannelApplicationJSON requestBody;
+    public CreateChannelRequest withRequestBody(CreateChannelApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateChannelSecurity security;
-    public CreateChannelRequest withSecurity(CreateChannelSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public CreateChannelRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserTokenRequest {
-    
-    public UserTokenPathParams pathParams;
-    public UserTokenRequest withPathParams(UserTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Use this field in conjunction with the `type` field where the value of `type` field is `zak`. The value of this field denotes the expiry time of the `zak` token in seconds. For example, if you would like the zak token to be expired after one hour of the token generation, the value of this field should be `3600`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ttl")
+    public Long ttl;
+    public UserTokenRequest withTtl(Long ttl) {
+        this.ttl = ttl;
         return this;
     }
     
-    
-    public UserTokenQueryParams queryParams;
-    public UserTokenRequest withQueryParams(UserTokenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * User token types:&lt;br&gt;`token` - Used for starting meetings with the client SDK. This token expires in 14 days and a new token will be returned after the expiry.&lt;br&gt;`zak` - Used for generating the start meeting URL. The token expiration time is two hours. For API users, the expiration time is 90 days.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public UserTokenTypeEnum type;
+    public UserTokenRequest withType(UserTokenTypeEnum type) {
+        this.type = type;
         return this;
     }
     
-    
-    public UserTokenSecurity security;
-    public UserTokenRequest withSecurity(UserTokenSecurity security) {
-        this.security = security;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserTokenRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

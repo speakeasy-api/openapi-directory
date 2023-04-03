@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeApimKey apimKey;
-    public Security withApimKey(SchemeApimKey apimKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Ocp-Apim-Subscription-Key")
+    public String apimKey;
+    public Security withApimKey(String apimKey) {
         this.apimKey = apimKey;
         return this;
     }

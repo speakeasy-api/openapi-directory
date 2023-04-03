@@ -82,7 +82,7 @@ public class AnalyticsGlobal {
      */
     public org.openapis.openapi.models.operations.AnalyticsStoreIndexResponse analyticsStoreIndex(org.openapis.openapi.models.operations.AnalyticsStoreIndexRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsStoreIndexPathParams.class, baseUrl, "/v2/user/analytics/{storeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsStoreIndexRequest.class, baseUrl, "/v2/user/analytics/{storeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

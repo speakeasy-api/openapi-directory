@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDeviceLiveToolsPingRequest {
-    
-    public CreateDeviceLiveToolsPingPathParams pathParams;
-    public CreateDeviceLiveToolsPingRequest withPathParams(CreateDeviceLiveToolsPingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateDeviceLiveToolsPingRequestBody requestBody;
+    public CreateDeviceLiveToolsPingRequest withRequestBody(CreateDeviceLiveToolsPingRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateDeviceLiveToolsPingRequestBody request;
-    public CreateDeviceLiveToolsPingRequest withRequest(CreateDeviceLiveToolsPingRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public CreateDeviceLiveToolsPingRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

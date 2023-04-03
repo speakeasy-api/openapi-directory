@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLicenseRequest {
-    
-    public UpdateLicensePathParams pathParams;
-    public UpdateLicenseRequest withPathParams(UpdateLicensePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateLicenseRequestBody request;
-    public UpdateLicenseRequest withRequest(UpdateLicenseRequestBody request) {
-        this.request = request;
+    public UpdateLicenseRequestBody requestBody;
+    public UpdateLicenseRequest withRequestBody(UpdateLicenseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateLicenseSecurity security;
-    public UpdateLicenseRequest withSecurity(UpdateLicenseSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products/Licensees of a Vendor) that identifies the License. Vendor can assign this number when creating a License or let NetLicensing generate one. Read-only after corresponding creation Transaction status is set to closed.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseNumber")
+    public String licenseNumber;
+    public UpdateLicenseRequest withLicenseNumber(String licenseNumber) {
+        this.licenseNumber = licenseNumber;
         return this;
     }
     

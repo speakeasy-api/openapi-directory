@@ -7,31 +7,100 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdexchangebuyerPretargetingConfigPatchRequest {
-    
-    public AdexchangebuyerPretargetingConfigPatchPathParams pathParams;
-    public AdexchangebuyerPretargetingConfigPatchRequest withPathParams(AdexchangebuyerPretargetingConfigPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AdexchangebuyerPretargetingConfigPatchQueryParams queryParams;
-    public AdexchangebuyerPretargetingConfigPatchRequest withQueryParams(AdexchangebuyerPretargetingConfigPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PretargetingConfig request;
-    public AdexchangebuyerPretargetingConfigPatchRequest withRequest(org.openapis.openapi.models.shared.PretargetingConfig request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PretargetingConfig pretargetingConfig;
+    public AdexchangebuyerPretargetingConfigPatchRequest withPretargetingConfig(org.openapis.openapi.models.shared.PretargetingConfig pretargetingConfig) {
+        this.pretargetingConfig = pretargetingConfig;
         return this;
     }
     
+    /**
+     * The account id to update the pretargeting config for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public AdexchangebuyerPretargetingConfigPatchRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public AdexchangebuyerPretargetingConfigPatchSecurity security;
-    public AdexchangebuyerPretargetingConfigPatchRequest withSecurity(AdexchangebuyerPretargetingConfigPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AdexchangebuyerPretargetingConfigPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * The specific id of the configuration to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configId")
+    public String configId;
+    public AdexchangebuyerPretargetingConfigPatchRequest withConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AdexchangebuyerPretargetingConfigPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AdexchangebuyerPretargetingConfigPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AdexchangebuyerPretargetingConfigPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AdexchangebuyerPretargetingConfigPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AdexchangebuyerPretargetingConfigPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AdexchangebuyerPretargetingConfigPatchRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

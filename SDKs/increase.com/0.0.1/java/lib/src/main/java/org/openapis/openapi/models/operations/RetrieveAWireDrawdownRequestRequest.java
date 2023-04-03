@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAWireDrawdownRequestRequest {
-    
-    public RetrieveAWireDrawdownRequestPathParams pathParams;
-    public RetrieveAWireDrawdownRequestRequest withPathParams(RetrieveAWireDrawdownRequestPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wire_drawdown_request_id")
+    public String wireDrawdownRequestId;
+    public RetrieveAWireDrawdownRequestRequest withWireDrawdownRequestId(String wireDrawdownRequestId) {
+        this.wireDrawdownRequestId = wireDrawdownRequestId;
         return this;
     }
     

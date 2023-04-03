@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompanyEmployeesEmployeeIdRequest {
-    
-    public GetCompanyEmployeesEmployeeIdPathParams pathParams;
-    public GetCompanyEmployeesEmployeeIdRequest withPathParams(GetCompanyEmployeesEmployeeIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Numeric `id` of the employee
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employee_id")
+    public Integer employeeId;
+    public GetCompanyEmployeesEmployeeIdRequest withEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     

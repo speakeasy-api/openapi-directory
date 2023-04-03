@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadBackupRequest {
-    
-    public DownloadBackupPathParams pathParams;
-    public DownloadBackupRequest withPathParams(DownloadBackupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
+    public String filename;
+    public DownloadBackupRequest withFilename(String filename) {
+        this.filename = filename;
         return this;
     }
     
-    
-    public DownloadBackupQueryParams queryParams;
-    public DownloadBackupRequest withQueryParams(DownloadBackupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DownloadBackupRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

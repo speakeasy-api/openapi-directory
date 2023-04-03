@@ -38,7 +38,7 @@ public class Access {
      */
     public org.openapis.openapi.models.operations.AccessAddResponse accessAdd(org.openapis.openapi.models.operations.AccessAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessAddPathParams.class, baseUrl, "/mimic/access/add/{user}/{agents}/{mask}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessAddRequest.class, baseUrl, "/mimic/access/add/{user}/{agents}/{mask}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -79,7 +79,7 @@ public class Access {
      */
     public org.openapis.openapi.models.operations.AccessDelResponse accessDel(org.openapis.openapi.models.operations.AccessDelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessDelPathParams.class, baseUrl, "/mimic/access/del/{user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessDelRequest.class, baseUrl, "/mimic/access/del/{user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -321,7 +321,7 @@ public class Access {
      */
     public org.openapis.openapi.models.operations.AccessLoadResponse accessLoad(org.openapis.openapi.models.operations.AccessLoadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessLoadPathParams.class, baseUrl, "/mimic/access/load/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessLoadRequest.class, baseUrl, "/mimic/access/load/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -363,7 +363,7 @@ public class Access {
      */
     public org.openapis.openapi.models.operations.AccessSaveResponse accessSave(org.openapis.openapi.models.operations.AccessSaveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessSavePathParams.class, baseUrl, "/mimic/access/save/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessSaveRequest.class, baseUrl, "/mimic/access/save/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -405,7 +405,7 @@ public class Access {
      */
     public org.openapis.openapi.models.operations.AccessSetAcldbResponse accessSetAcldb(org.openapis.openapi.models.operations.AccessSetAcldbRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessSetAcldbPathParams.class, baseUrl, "/mimic/access/set/acldb/{databaseName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessSetAcldbRequest.class, baseUrl, "/mimic/access/set/acldb/{databaseName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -446,7 +446,7 @@ public class Access {
      */
     public org.openapis.openapi.models.operations.AccessSetEnabledResponse accessSetEnabled(org.openapis.openapi.models.operations.AccessSetEnabledRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessSetEnabledPathParams.class, baseUrl, "/mimic/access/set/enabled/{enabledOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccessSetEnabledRequest.class, baseUrl, "/mimic/access/set/enabled/{enabledOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

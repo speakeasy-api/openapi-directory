@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdLegalEntitiesIdCustomersRequest {
-    
-    public PostSpacesSpaceIdLegalEntitiesIdCustomersPathParams pathParams;
-    public PostSpacesSpaceIdLegalEntitiesIdCustomersRequest withPathParams(PostSpacesSpaceIdLegalEntitiesIdCustomersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Customer to add (except name, class and archivaldate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdLegalEntitiesIdCustomersRequestBody request;
-    public PostSpacesSpaceIdLegalEntitiesIdCustomersRequest withRequest(PostSpacesSpaceIdLegalEntitiesIdCustomersRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdLegalEntitiesIdCustomersRequestBody requestBody;
+    public PostSpacesSpaceIdLegalEntitiesIdCustomersRequest withRequestBody(PostSpacesSpaceIdLegalEntitiesIdCustomersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the customer or memberId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdLegalEntitiesIdCustomersRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdLegalEntitiesIdCustomersSecurity security;
-    public PostSpacesSpaceIdLegalEntitiesIdCustomersRequest withSecurity(PostSpacesSpaceIdLegalEntitiesIdCustomersSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdLegalEntitiesIdCustomersRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

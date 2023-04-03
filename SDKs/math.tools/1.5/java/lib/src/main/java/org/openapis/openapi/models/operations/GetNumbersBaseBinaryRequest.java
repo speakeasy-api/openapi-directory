@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersBaseBinaryRequest {
-    
-    public GetNumbersBaseBinaryQueryParams queryParams;
-    public GetNumbersBaseBinaryRequest withQueryParams(GetNumbersBaseBinaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Base of the supplied number (Optional base 10 assumed by default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Long from;
+    public GetNumbersBaseBinaryRequest withFrom(Long from) {
+        this.from = from;
         return this;
     }
     
-    
-    public GetNumbersBaseBinarySecurity security;
-    public GetNumbersBaseBinaryRequest withSecurity(GetNumbersBaseBinarySecurity security) {
-        this.security = security;
+    /**
+     * Number to convert to binary
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersBaseBinaryRequest withNumber(Long number) {
+        this.number = number;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowResumeRequest {
-    
-    public ProtocolNetflowResumePathParams pathParams;
-    public ProtocolNetflowResumeRequest withPathParams(ProtocolNetflowResumePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to set the NETFLOW
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolNetflowResumeRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

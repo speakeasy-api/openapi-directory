@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchRemoteServersIdRequest {
-    
-    public PatchRemoteServersIdPathParams pathParams;
-    public PatchRemoteServersIdRequest withPathParams(PatchRemoteServersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchRemoteServersIdRequestBody requestBody;
+    public PatchRemoteServersIdRequest withRequestBody(PatchRemoteServersIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchRemoteServersIdRequestBody request;
-    public PatchRemoteServersIdRequest withRequest(PatchRemoteServersIdRequestBody request) {
-        this.request = request;
+    /**
+     * Remote Server ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchRemoteServersIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

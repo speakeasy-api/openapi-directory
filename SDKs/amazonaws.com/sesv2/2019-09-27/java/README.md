@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchGetMetricDataHeaders;
 import org.openapis.openapi.models.operations.BatchGetMetricDataRequestBody;
 import org.openapis.openapi.models.operations.BatchGetMetricDataRequest;
 import org.openapis.openapi.models.operations.BatchGetMetricDataResponse;
@@ -30,72 +29,59 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetMetricDataRequest req = new BatchGetMetricDataRequest() {{
-                headers = new BatchGetMetricDataHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new BatchGetMetricDataRequestBody() {{
+                requestBody = new BatchGetMetricDataRequestBody() {{
                     queries = new org.openapis.openapi.models.shared.BatchGetMetricDataQuery[]{{
                         add(new BatchGetMetricDataQuery() {{
                             dimensions = new java.util.HashMap<String, String>() {{
-                                put("error", "deserunt");
-                                put("suscipit", "iure");
+                                put("distinctio", "quibusdam");
+                                put("unde", "nulla");
+                                put("corrupti", "illum");
                             }};
-                            endDate = "2022-02-09T12:04:06.508Z";
-                            id = "ipsa";
+                            endDate = "2022-05-18T09:34:54.894Z";
+                            id = "deserunt";
+                            metric = "TRANSIENT_BOUNCE";
+                            namespace = "VDM";
+                            startDate = "2022-09-14T09:35:47.986Z";
+                        }}),
+                        add(new BatchGetMetricDataQuery() {{
+                            dimensions = new java.util.HashMap<String, String>() {{
+                                put("ipsa", "delectus");
+                                put("tempora", "suscipit");
+                                put("molestiae", "minus");
+                                put("placeat", "voluptatum");
+                            }};
+                            endDate = "2022-06-07T15:55:46.205Z";
+                            id = "nisi";
                             metric = "DELIVERY_COMPLAINT";
                             namespace = "VDM";
-                            startDate = "2022-08-14T01:03:07.567Z";
+                            startDate = "2022-10-15T05:10:19.629Z";
                         }}),
                         add(new BatchGetMetricDataQuery() {{
                             dimensions = new java.util.HashMap<String, String>() {{
-                                put("minus", "placeat");
-                                put("voluptatum", "iusto");
+                                put("veritatis", "deserunt");
+                                put("perferendis", "ipsam");
                             }};
-                            endDate = "2022-03-20T06:24:36.919Z";
-                            id = "recusandae";
-                            metric = "DELIVERY_CLICK";
+                            endDate = "2020-02-17T21:57:45.117Z";
+                            id = "quo";
+                            metric = "COMPLAINT";
                             namespace = "VDM";
-                            startDate = "2022-08-30T20:24:33.984Z";
-                        }}),
-                        add(new BatchGetMetricDataQuery() {{
-                            dimensions = new java.util.HashMap<String, String>() {{
-                                put("deserunt", "perferendis");
-                            }};
-                            endDate = "2022-03-03T02:15:00.468Z";
-                            id = "sapiente";
-                            metric = "DELIVERY_OPEN";
-                            namespace = "VDM";
-                            startDate = "2022-02-17T10:41:36.857Z";
-                        }}),
-                        add(new BatchGetMetricDataQuery() {{
-                            dimensions = new java.util.HashMap<String, String>() {{
-                                put("maiores", "molestiae");
-                                put("quod", "quod");
-                                put("esse", "totam");
-                                put("porro", "dolorum");
-                            }};
-                            endDate = "2022-04-12T23:15:28.420Z";
-                            id = "officia";
-                            metric = "CLICK";
-                            namespace = "VDM";
-                            startDate = "2022-06-18T20:36:37.412Z";
+                            startDate = "2020-05-23T06:06:25.221Z";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "maiores";
+                xAmzContentSha256 = "molestiae";
+                xAmzCredential = "quod";
+                xAmzDate = "quod";
+                xAmzSecurityToken = "esse";
+                xAmzSignature = "totam";
+                xAmzSignedHeaders = "porro";
+            }}            
 
             BatchGetMetricDataResponse res = sdk.batchGetMetricData(req);
 
@@ -109,7 +95,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

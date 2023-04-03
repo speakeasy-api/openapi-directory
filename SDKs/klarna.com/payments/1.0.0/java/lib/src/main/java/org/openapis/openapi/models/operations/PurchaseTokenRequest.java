@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PurchaseTokenRequest {
-    
-    public PurchaseTokenPathParams pathParams;
-    public PurchaseTokenRequest withPathParams(PurchaseTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizationToken")
+    public String authorizationToken;
+    public PurchaseTokenRequest withAuthorizationToken(String authorizationToken) {
+        this.authorizationToken = authorizationToken;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomerTokenCreationRequest request;
-    public PurchaseTokenRequest withRequest(org.openapis.openapi.models.shared.CustomerTokenCreationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomerTokenCreationRequest customerTokenCreationRequest;
+    public PurchaseTokenRequest withCustomerTokenCreationRequest(org.openapis.openapi.models.shared.CustomerTokenCreationRequest customerTokenCreationRequest) {
+        this.customerTokenCreationRequest = customerTokenCreationRequest;
         return this;
     }
     

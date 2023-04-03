@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdTrendAnalysisRequest {
-    
-    public GetUsersIdTrendAnalysisPathParams pathParams;
-    public GetUsersIdTrendAnalysisRequest withPathParams(GetUsersIdTrendAnalysisPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of category IDs to analyse.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
+    public String categories;
+    public GetUsersIdTrendAnalysisRequest withCategories(String categories) {
+        this.categories = categories;
         return this;
     }
     
+    /**
+     * The date to stop analysing the budget from. This will be bumped out to make full periods as necessary.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public GetUsersIdTrendAnalysisRequest withEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GetUsersIdTrendAnalysisQueryParams queryParams;
-    public GetUsersIdTrendAnalysisRequest withQueryParams(GetUsersIdTrendAnalysisQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetUsersIdTrendAnalysisRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The period interval, e.g. if the interval is 2 and the period is weeks, the budget will be analysed fortnightly.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
+    public Long interval;
+    public GetUsersIdTrendAnalysisRequest withInterval(Long interval) {
+        this.interval = interval;
+        return this;
+    }
+    
+    /**
+     * The period to analyse in, one of `weeks`, `months` or `years`. Also supported is `event`, although event period analysis is only possible when the budget events gathered align, so in this case where all categories are analysed together, it's highly unlikely that event period analysis will be possible.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public GetUsersIdTrendAnalysisPeriodEnum period;
+    public GetUsersIdTrendAnalysisRequest withPeriod(GetUsersIdTrendAnalysisPeriodEnum period) {
+        this.period = period;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of scenario IDs to analyse. You're likely going to want to include all a user's scenarios here, unless you have reason to only analyse for a subset of scenarios. Regardless of what scenarios are analysed, all actuals (transactions) across all accounts will be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scenarios")
+    public String scenarios;
+    public GetUsersIdTrendAnalysisRequest withScenarios(String scenarios) {
+        this.scenarios = scenarios;
+        return this;
+    }
+    
+    /**
+     * The date to start analysing the budget from. This will be bumped out to make full periods as necessary.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public GetUsersIdTrendAnalysisRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

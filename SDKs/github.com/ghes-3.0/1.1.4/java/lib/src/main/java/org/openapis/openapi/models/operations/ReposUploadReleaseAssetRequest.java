@@ -7,31 +7,48 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUploadReleaseAssetRequest {
-    
-    public ReposUploadReleaseAssetPathParams pathParams;
-    public ReposUploadReleaseAssetRequest withPathParams(ReposUploadReleaseAssetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ReposUploadReleaseAssetQueryParams queryParams;
-    public ReposUploadReleaseAssetRequest withQueryParams(ReposUploadReleaseAssetQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=*/*")
-    public String request;
-    public ReposUploadReleaseAssetRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public ReposUploadReleaseAssetRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
+    public String label;
+    public ReposUploadReleaseAssetRequest withLabel(String label) {
+        this.label = label;
+        return this;
+    }
     
-    public String serverURL;
-    public ReposUploadReleaseAssetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public ReposUploadReleaseAssetRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposUploadReleaseAssetRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * release_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReposUploadReleaseAssetRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposUploadReleaseAssetRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

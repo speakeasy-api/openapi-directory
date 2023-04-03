@@ -4,13 +4,415 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesScheduleERequest {
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetSchedulesScheduleERequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetSchedulesScheduleEQueryParams queryParams;
-    public GetSchedulesScheduleERequest withQueryParams(GetSchedulesScheduleEQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A unique identifier assigned to each candidate registered with the FEC.
+     * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
+    public String[] candidateId;
+    public GetSchedulesScheduleERequest withCandidateId(String[] candidateId) {
+        this.candidateId = candidateId;
+        return this;
+    }
+    
+    /**
+     * Federal office candidate runs for: H, S or P
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_office")
+    public GetSchedulesScheduleECandidateOfficeEnum[] candidateOffice;
+    public GetSchedulesScheduleERequest withCandidateOffice(GetSchedulesScheduleECandidateOfficeEnum[] candidateOffice) {
+        this.candidateOffice = candidateOffice;
+        return this;
+    }
+    
+    /**
+     * Two-digit US House distirict of the office the candidate is running for. Presidential, Senate and House at-large candidates will have District 00.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_office_district")
+    public String[] candidateOfficeDistrict;
+    public GetSchedulesScheduleERequest withCandidateOfficeDistrict(String[] candidateOfficeDistrict) {
+        this.candidateOfficeDistrict = candidateOfficeDistrict;
+        return this;
+    }
+    
+    /**
+     * US state or territory
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_office_state")
+    public String[] candidateOfficeState;
+    public GetSchedulesScheduleERequest withCandidateOfficeState(String[] candidateOfficeState) {
+        this.candidateOfficeState = candidateOfficeState;
+        return this;
+    }
+    
+    /**
+     * Three-letter code for the party affiliated with a candidate or committee. For example, DEM for Democratic Party and REP for Republican Party.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_party")
+    public String[] candidateParty;
+    public GetSchedulesScheduleERequest withCandidateParty(String[] candidateParty) {
+        this.candidateParty = candidateParty;
+        return this;
+    }
+    
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetSchedulesScheduleERequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * Filter records to only those that were applicable to a given
+     * two-year period.The cycle begins with an odd year and is named
+     * for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
+    public Integer[] cycle;
+    public GetSchedulesScheduleERequest withCycle(Integer[] cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * The form where the underlying data comes from, for example, Form 1 would appear as F1:
+     *     - F1   Statement of Organization
+     *     - F1M  Notification of Multicandidate Status
+     *     - F2   Statement of Candidacy
+     *     - F3   Report of Receipts and Disbursements for an Authorized Committee
+     *     - F3P  Report of Receipts and Disbursements by an Authorized Committee of a Candidate for     The Office of President or Vice President
+     *     - F3L  Report of Contributions Bundled by Lobbyists/Registrants and Lobbyist/Registrant PACs
+     *     - F3X  Report of Receipts and Disbursements for other than an Authorized Committee
+     *     - F4   Report of Receipts and Disbursements for a Committee or Organization Supporting a Nomination Convention
+     *     - F5   Report of Independent Expenditures Made and Contributions Received
+     *     - F6   48 Hour Notice of Contributions/Loans Received
+     *     - F7   Report of Communication Costs by Corporations and Membership Organizations
+     *     - F8   Debt Settlement Plan
+     *     - F9   24 Hour Notice of Disbursements for Electioneering Communications
+     *     - F13  Report of Donations Accepted for Inaugural Committee
+     *     - F99  Miscellaneous Text
+     *     - FRQ  Request for Additional Information
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filing_form")
+    public String[] filingForm;
+    public GetSchedulesScheduleERequest withFilingForm(String[] filingForm) {
+        this.filingForm = filingForm;
+        return this;
+    }
+    
+    /**
+     * An unique identifier for each page where the electronic or paper filing is reported.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_number")
+    public String[] imageNumber;
+    public GetSchedulesScheduleERequest withImageNumber(String[] imageNumber) {
+        this.imageNumber = imageNumber;
+        return this;
+    }
+    
+    /**
+     * Record filed as 24- or 48-hour notice.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_notice")
+    public Boolean[] isNotice;
+    public GetSchedulesScheduleERequest withIsNotice(Boolean[] isNotice) {
+        this.isNotice = isNotice;
+        return this;
+    }
+    
+    /**
+     * When sorting by `expenditure_amount`,
+     * this is populated with the `expenditure_amount` of the last result.
+     * However, you will need to pass the index of that last result to
+     * `last_index` to get the next page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_expenditure_amount")
+    public Float lastExpenditureAmount;
+    public GetSchedulesScheduleERequest withLastExpenditureAmount(Float lastExpenditureAmount) {
+        this.lastExpenditureAmount = lastExpenditureAmount;
+        return this;
+    }
+    
+    /**
+     * When sorting by `expenditure_date`,
+     * this is populated with the `expenditure_date` of the last result.
+     * However, you will need to pass the index of that last result to
+     * `last_index` to get the next page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_expenditure_date")
+    public LocalDate lastExpenditureDate;
+    public GetSchedulesScheduleERequest withLastExpenditureDate(LocalDate lastExpenditureDate) {
+        this.lastExpenditureDate = lastExpenditureDate;
+        return this;
+    }
+    
+    /**
+     * Index of last result from previous page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_index")
+    public Integer lastIndex;
+    public GetSchedulesScheduleERequest withLastIndex(Integer lastIndex) {
+        this.lastIndex = lastIndex;
+        return this;
+    }
+    
+    /**
+     * When sorting by `office_total_ytd`,
+     * this is populated with the `office_total_ytd` of the last result.
+     * However, you will need to pass the index of that last result to
+     * `last_index` to get the next page.'
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_office_total_ytd")
+    public Float lastOfficeTotalYtd;
+    public GetSchedulesScheduleERequest withLastOfficeTotalYtd(Float lastOfficeTotalYtd) {
+        this.lastOfficeTotalYtd = lastOfficeTotalYtd;
+        return this;
+    }
+    
+    /**
+     * When sorting by `support_oppose_indicator`,
+     * this is populated with the `support_oppose_indicator` of the last result.
+     * However, you will need to pass the index of that last result to `last_index`
+     * to get the next page.'
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_support_oppose_indicator")
+    public String lastSupportOpposeIndicator;
+    public GetSchedulesScheduleERequest withLastSupportOpposeIndicator(String lastSupportOpposeIndicator) {
+        this.lastSupportOpposeIndicator = lastSupportOpposeIndicator;
+        return this;
+    }
+    
+    /**
+     * Filter for form and line number using the following format: `FORM-LINENUMBER`.  For example an argument such as `F3X-16` would filter down to all entries from form `F3X` line number `16`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=line_number")
+    public String lineNumber;
+    public GetSchedulesScheduleERequest withLineNumber(String lineNumber) {
+        this.lineNumber = lineNumber;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts less than a value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_amount")
+    public String maxAmount;
+    public GetSchedulesScheduleERequest withMaxAmount(String maxAmount) {
+        this.maxAmount = maxAmount;
+        return this;
+    }
+    
+    /**
+     * Maximum date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetSchedulesScheduleERequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * Selects all items distributed by this committee before this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_dissemination_date")
+    public LocalDate maxDisseminationDate;
+    public GetSchedulesScheduleERequest withMaxDisseminationDate(LocalDate maxDisseminationDate) {
+        this.maxDisseminationDate = maxDisseminationDate;
+        return this;
+    }
+    
+    /**
+     * Selects all filings received before this date
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_filing_date")
+    public LocalDate maxFilingDate;
+    public GetSchedulesScheduleERequest withMaxFilingDate(LocalDate maxFilingDate) {
+        this.maxFilingDate = maxFilingDate;
+        return this;
+    }
+    
+    /**
+     * Maxium image number of the page where the schedule item is reported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_image_number")
+    public String maxImageNumber;
+    public GetSchedulesScheduleERequest withMaxImageNumber(String maxImageNumber) {
+        this.maxImageNumber = maxImageNumber;
+        return this;
+    }
+    
+    /**
+     * Filter for all amounts greater than a value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_amount")
+    public String minAmount;
+    public GetSchedulesScheduleERequest withMinAmount(String minAmount) {
+        this.minAmount = minAmount;
+        return this;
+    }
+    
+    /**
+     * Minimum date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetSchedulesScheduleERequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * Selects all items distributed by this committee after this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_dissemination_date")
+    public LocalDate minDisseminationDate;
+    public GetSchedulesScheduleERequest withMinDisseminationDate(LocalDate minDisseminationDate) {
+        this.minDisseminationDate = minDisseminationDate;
+        return this;
+    }
+    
+    /**
+     * Selects all filings received after this date
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_filing_date")
+    public LocalDate minFilingDate;
+    public GetSchedulesScheduleERequest withMinFilingDate(LocalDate minFilingDate) {
+        this.minFilingDate = minFilingDate;
+        return this;
+    }
+    
+    /**
+     * Minium image number of the page where the schedule item is reported
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_image_number")
+    public String minImageNumber;
+    public GetSchedulesScheduleERequest withMinImageNumber(String minImageNumber) {
+        this.minImageNumber = minImageNumber;
+        return this;
+    }
+    
+    /**
+     * The report associated with the transaction is either new or is the most-recently filed amendment. Undetermined version (`null`) is always included.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=most_recent")
+    public Boolean mostRecent;
+    public GetSchedulesScheduleERequest withMostRecent(Boolean mostRecent) {
+        this.mostRecent = mostRecent;
+        return this;
+    }
+    
+    /**
+     * Name of the entity that received the payment.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payee_name")
+    public String[] payeeName;
+    public GetSchedulesScheduleERequest withPayeeName(String[] payeeName) {
+        this.payeeName = payeeName;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetSchedulesScheduleERequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Keyword search for spender name or ID
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q_spender")
+    public String[] qSpender;
+    public GetSchedulesScheduleERequest withQSpender(String[] qSpender) {
+        this.qSpender = qSpender;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetSchedulesScheduleERequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetSchedulesScheduleERequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetSchedulesScheduleERequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetSchedulesScheduleERequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * Explains if the money was spent in order to support or oppose a candidate or candidates. (Coded S or O for support or oppose.) This indicator applies to independent expenditures and communication costs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=support_oppose_indicator")
+    public GetSchedulesScheduleESupportOpposeIndicatorEnum[] supportOpposeIndicator;
+    public GetSchedulesScheduleERequest withSupportOpposeIndicator(GetSchedulesScheduleESupportOpposeIndicatorEnum[] supportOpposeIndicator) {
+        this.supportOpposeIndicator = supportOpposeIndicator;
         return this;
     }
     

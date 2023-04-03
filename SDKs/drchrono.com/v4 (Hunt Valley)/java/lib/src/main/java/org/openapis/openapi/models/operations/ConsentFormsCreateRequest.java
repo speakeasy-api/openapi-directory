@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsentFormsCreateRequest {
-    
-    public ConsentFormsCreateQueryParams queryParams;
-    public ConsentFormsCreateRequest withQueryParams(ConsentFormsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ConsentFormsCreateSecurity security;
-    public ConsentFormsCreateRequest withSecurity(ConsentFormsCreateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ConsentFormsCreateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     

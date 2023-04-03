@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsStatusStatusCountJsonRequest {
-    
-    public GetProductsStatusStatusCountJsonPathParams pathParams;
-    public GetProductsStatusStatusCountJsonRequest withPathParams(GetProductsStatusStatusCountJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetProductsStatusStatusCountJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Locale code of the translation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
+    public String locale;
+    public GetProductsStatusStatusCountJsonRequest withLocale(String locale) {
+        this.locale = locale;
+        return this;
+    }
     
-    public GetProductsStatusStatusCountJsonQueryParams queryParams;
-    public GetProductsStatusStatusCountJsonRequest withQueryParams(GetProductsStatusStatusCountJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetProductsStatusStatusCountJsonRequest withLogin(String login) {
+        this.login = login;
+        return this;
+    }
+    
+    /**
+     * Status of the Product used as filter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=status")
+    public GetProductsStatusStatusCountJsonStatusEnum status;
+    public GetProductsStatusStatusCountJsonRequest withStatus(GetProductsStatusStatusCountJsonStatusEnum status) {
+        this.status = status;
         return this;
     }
     

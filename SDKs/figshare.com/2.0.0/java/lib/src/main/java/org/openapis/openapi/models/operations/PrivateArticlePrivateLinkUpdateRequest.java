@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticlePrivateLinkUpdateRequest {
-    
-    public PrivateArticlePrivateLinkUpdatePathParams pathParams;
-    public PrivateArticlePrivateLinkUpdateRequest withPathParams(PrivateArticlePrivateLinkUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PrivateLinkCreator request;
-    public PrivateArticlePrivateLinkUpdateRequest withRequest(org.openapis.openapi.models.shared.PrivateLinkCreator request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PrivateLinkCreator privateLinkCreator;
+    public PrivateArticlePrivateLinkUpdateRequest withPrivateLinkCreator(org.openapis.openapi.models.shared.PrivateLinkCreator privateLinkCreator) {
+        this.privateLinkCreator = privateLinkCreator;
         return this;
     }
     
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateArticlePrivateLinkUpdateRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
+        return this;
+    }
     
-    public PrivateArticlePrivateLinkUpdateSecurity security;
-    public PrivateArticlePrivateLinkUpdateRequest withSecurity(PrivateArticlePrivateLinkUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Private link token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
+    public String linkId;
+    public PrivateArticlePrivateLinkUpdateRequest withLinkId(String linkId) {
+        this.linkId = linkId;
         return this;
     }
     

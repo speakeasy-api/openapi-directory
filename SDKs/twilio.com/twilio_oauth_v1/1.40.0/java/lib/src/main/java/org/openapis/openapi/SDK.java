@@ -154,13 +154,26 @@ public class SDK {
     /**
      * Issues a new Access token (optionally identity_token &amp; refresh_token) in exchange of Oauth grant
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDeviceCodeResponse createDeviceCode(org.openapis.openapi.models.operations.CreateDeviceCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDeviceCodeResponse createDeviceCode(org.openapis.openapi.models.operations.CreateDeviceCodeCreateDeviceCodeRequest request, org.openapis.openapi.models.operations.CreateDeviceCodeSecurity security) throws Exception {
+        return this.createDeviceCode(request, security, null);
+    }
+
+    /**
+     * Issues a new Access token (optionally identity_token &amp; refresh_token) in exchange of Oauth grant
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateDeviceCodeResponse createDeviceCode(org.openapis.openapi.models.operations.CreateDeviceCodeCreateDeviceCodeRequest request, org.openapis.openapi.models.operations.CreateDeviceCodeSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_DEVICE_CODE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/device/code");
@@ -172,7 +185,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -199,13 +212,26 @@ public class SDK {
     /**
      * Issues a new Access token (optionally identity_token &amp; refresh_token) in exchange of Oauth grant
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTokenResponse createToken(org.openapis.openapi.models.operations.CreateTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTokenResponse createToken(org.openapis.openapi.models.operations.CreateTokenCreateTokenRequest request, org.openapis.openapi.models.operations.CreateTokenSecurity security) throws Exception {
+        return this.createToken(request, security, null);
+    }
+
+    /**
+     * Issues a new Access token (optionally identity_token &amp; refresh_token) in exchange of Oauth grant
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateTokenResponse createToken(org.openapis.openapi.models.operations.CreateTokenCreateTokenRequest request, org.openapis.openapi.models.operations.CreateTokenSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_TOKEN_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/token");
@@ -217,7 +243,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -243,14 +269,23 @@ public class SDK {
 
     /**
      * Fetches public JWKs
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchCertsResponse fetchCerts(org.openapis.openapi.models.operations.FetchCertsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchCertsResponse fetchCerts() throws Exception {
+        return this.fetchCerts(null);
+    }
+
+    /**
+     * Fetches public JWKs
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchCertsResponse fetchCerts(String serverURL) throws Exception {
         String baseUrl = FETCH_CERTS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/certs");
@@ -260,8 +295,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -286,14 +320,23 @@ public class SDK {
 
     /**
      * Fetch configuration details about the OpenID Connect Authorization Server
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchOpenidDiscoveryResponse fetchOpenidDiscovery(org.openapis.openapi.models.operations.FetchOpenidDiscoveryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchOpenidDiscoveryResponse fetchOpenidDiscovery() throws Exception {
+        return this.fetchOpenidDiscovery(null);
+    }
+
+    /**
+     * Fetch configuration details about the OpenID Connect Authorization Server
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchOpenidDiscoveryResponse fetchOpenidDiscovery(String serverURL) throws Exception {
         String baseUrl = FETCH_OPENID_DISCOVERY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/.well-known/openid-configuration");
@@ -303,8 +346,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -329,14 +371,23 @@ public class SDK {
 
     /**
      * Retrieves the consented UserInfo and other claims about the logged-in subject (end-user).
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchUserInfoResponse fetchUserInfo(org.openapis.openapi.models.operations.FetchUserInfoRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchUserInfoResponse fetchUserInfo() throws Exception {
+        return this.fetchUserInfo(null);
+    }
+
+    /**
+     * Retrieves the consented UserInfo and other claims about the logged-in subject (end-user).
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchUserInfoResponse fetchUserInfo(String serverURL) throws Exception {
         String baseUrl = FETCH_USER_INFO_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/userinfo");
@@ -346,8 +397,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

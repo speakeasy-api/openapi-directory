@@ -4,13 +4,170 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRadAnalystRequest {
+    /**
+     * ID of RAD analyst
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analyst_id")
+    public Integer[] analystId;
+    public GetRadAnalystRequest withAnalystId(Integer[] analystId) {
+        this.analystId = analystId;
+        return this;
+    }
     
-    public GetRadAnalystQueryParams queryParams;
-    public GetRadAnalystRequest withQueryParams(GetRadAnalystQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Short ID of RAD analyst
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analyst_short_id")
+    public Integer[] analystShortId;
+    public GetRadAnalystRequest withAnalystShortId(Integer[] analystShortId) {
+        this.analystShortId = analystShortId;
+        return this;
+    }
+    
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetRadAnalystRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
+    public String[] committeeId;
+    public GetRadAnalystRequest withCommitteeId(String[] committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
+    
+    /**
+     * Email of RAD analyst
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String[] email;
+    public GetRadAnalystRequest withEmail(String[] email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * Filter results for assignment updates made before this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_assignment_update_date")
+    public LocalDate maxAssignmentUpdateDate;
+    public GetRadAnalystRequest withMaxAssignmentUpdateDate(LocalDate maxAssignmentUpdateDate) {
+        this.maxAssignmentUpdateDate = maxAssignmentUpdateDate;
+        return this;
+    }
+    
+    /**
+     * Filter results for assignment updates made after this date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_assignment_update_date")
+    public LocalDate minAssignmentUpdateDate;
+    public GetRadAnalystRequest withMinAssignmentUpdateDate(LocalDate minAssignmentUpdateDate) {
+        this.minAssignmentUpdateDate = minAssignmentUpdateDate;
+        return this;
+    }
+    
+    /**
+     * Name of RAD analyst
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String[] name;
+    public GetRadAnalystRequest withName(String[] name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetRadAnalystRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetRadAnalystRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRadAnalystRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetRadAnalystRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetRadAnalystRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetRadAnalystRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
+        return this;
+    }
+    
+    /**
+     * Telephone extension of RAD analyst
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=telephone_ext")
+    public Integer[] telephoneExt;
+    public GetRadAnalystRequest withTelephoneExt(Integer[] telephoneExt) {
+        this.telephoneExt = telephoneExt;
+        return this;
+    }
+    
+    /**
+     * Title of RAD analyst
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String[] title;
+    public GetRadAnalystRequest withTitle(String[] title) {
+        this.title = title;
         return this;
     }
     

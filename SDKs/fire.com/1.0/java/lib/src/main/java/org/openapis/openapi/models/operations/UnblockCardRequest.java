@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnblockCardRequest {
-    
-    public UnblockCardPathParams pathParams;
-    public UnblockCardRequest withPathParams(UnblockCardPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
+    public Long cardId;
+    public UnblockCardRequest withCardId(Long cardId) {
+        this.cardId = cardId;
         return this;
     }
     

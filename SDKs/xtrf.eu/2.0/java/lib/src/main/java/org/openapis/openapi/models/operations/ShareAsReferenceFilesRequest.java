@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShareAsReferenceFilesRequest {
-    
-    public ShareAsReferenceFilesPathParams pathParams;
-    public ShareAsReferenceFilesRequest withPathParams(ShareAsReferenceFilesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Shared selected files as Reference Files with a job in a project.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FilesDto request;
-    public ShareAsReferenceFilesRequest withRequest(org.openapis.openapi.models.shared.FilesDto request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FilesDto filesDto;
+    public ShareAsReferenceFilesRequest withFilesDto(org.openapis.openapi.models.shared.FilesDto filesDto) {
+        this.filesDto = filesDto;
+        return this;
+    }
+    
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public ShareAsReferenceFilesRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

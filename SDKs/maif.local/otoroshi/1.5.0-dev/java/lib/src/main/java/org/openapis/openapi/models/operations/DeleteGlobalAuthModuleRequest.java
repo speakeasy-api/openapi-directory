@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGlobalAuthModuleRequest {
-    
-    public DeleteGlobalAuthModulePathParams pathParams;
-    public DeleteGlobalAuthModuleRequest withPathParams(DeleteGlobalAuthModulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteGlobalAuthModuleSecurity security;
-    public DeleteGlobalAuthModuleRequest withSecurity(DeleteGlobalAuthModuleSecurity security) {
-        this.security = security;
+    /**
+     * The auth. config id id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteGlobalAuthModuleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

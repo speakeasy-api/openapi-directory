@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetusageRequest {
-    
-    public GetusagePathParams pathParams;
-    public GetusageRequest withPathParams(GetusagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetusageRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetusageRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetusageHeaders headers;
-    public GetusageRequest withHeaders(GetusageHeaders headers) {
-        this.headers = headers;
+    /**
+     * Coupon Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=couponCode")
+    public String couponCode;
+    public GetusageRequest withCouponCode(String couponCode) {
+        this.couponCode = couponCode;
         return this;
     }
     

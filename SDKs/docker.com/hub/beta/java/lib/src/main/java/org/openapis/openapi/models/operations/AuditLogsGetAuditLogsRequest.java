@@ -4,20 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuditLogsGetAuditLogsRequest {
-    
-    public AuditLogsGetAuditLogsPathParams pathParams;
-    public AuditLogsGetAuditLogsRequest withPathParams(AuditLogsGetAuditLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Namespace to query audit logs for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public String account;
+    public AuditLogsGetAuditLogsRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     
+    /**
+     * action name one of ["repo.tag.push", ...]. Optional parameter to filter specific audit log actions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public String action;
+    public AuditLogsGetAuditLogsRequest withAction(String action) {
+        this.action = action;
+        return this;
+    }
     
-    public AuditLogsGetAuditLogsQueryParams queryParams;
-    public AuditLogsGetAuditLogsRequest withQueryParams(AuditLogsGetAuditLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * actor name. Optional parameter to filter audit log events to the specific user who triggered the event.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor")
+    public String actor;
+    public AuditLogsGetAuditLogsRequest withActor(String actor) {
+        this.actor = actor;
+        return this;
+    }
+    
+    /**
+     * Start of the time window you wish to query audit events for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public OffsetDateTime from;
+    public AuditLogsGetAuditLogsRequest withFrom(OffsetDateTime from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * name. Optional parameter to filter audit log events to a specific name. For repository events, this is the name of the repository. For organization events, this is the name of the organization. For team member events, this is the username of the team member.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public AuditLogsGetAuditLogsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * page - specify page number. Page number to get.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public AuditLogsGetAuditLogsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * page_size - specify page size. Number of events to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Integer pageSize;
+    public AuditLogsGetAuditLogsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * End of the time window you wish to query audit events for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public OffsetDateTime to;
+    public AuditLogsGetAuditLogsRequest withTo(OffsetDateTime to) {
+        this.to = to;
         return this;
     }
     

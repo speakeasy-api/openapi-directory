@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkApplianceWarmSpareRequest {
-    
-    public UpdateNetworkApplianceWarmSparePathParams pathParams;
-    public UpdateNetworkApplianceWarmSpareRequest withPathParams(UpdateNetworkApplianceWarmSparePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkApplianceWarmSpareRequestBody requestBody;
+    public UpdateNetworkApplianceWarmSpareRequest withRequestBody(UpdateNetworkApplianceWarmSpareRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkApplianceWarmSpareRequestBody request;
-    public UpdateNetworkApplianceWarmSpareRequest withRequest(UpdateNetworkApplianceWarmSpareRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkApplianceWarmSpareRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

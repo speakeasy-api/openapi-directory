@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionsByCategoryRequest {
-    
-    public GetTransactionsByCategoryPathParams pathParams;
-    public GetTransactionsByCategoryRequest withPathParams(GetTransactionsByCategoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
+    public String budgetId;
+    public GetTransactionsByCategoryRequest withBudgetId(String budgetId) {
+        this.budgetId = budgetId;
         return this;
     }
     
+    /**
+     * The id of the category
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category_id")
+    public String categoryId;
+    public GetTransactionsByCategoryRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
     
-    public GetTransactionsByCategoryQueryParams queryParams;
-    public GetTransactionsByCategoryRequest withQueryParams(GetTransactionsByCategoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The starting server knowledge.  If provided, only entities that have changed since `last_knowledge_of_server` will be included.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_knowledge_of_server")
+    public Long lastKnowledgeOfServer;
+    public GetTransactionsByCategoryRequest withLastKnowledgeOfServer(Long lastKnowledgeOfServer) {
+        this.lastKnowledgeOfServer = lastKnowledgeOfServer;
+        return this;
+    }
+    
+    /**
+     * If specified, only transactions on or after this date will be included.  The date should be ISO formatted (e.g. 2016-12-30).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_date")
+    public LocalDate sinceDate;
+    public GetTransactionsByCategoryRequest withSinceDate(LocalDate sinceDate) {
+        this.sinceDate = sinceDate;
+        return this;
+    }
+    
+    /**
+     * If specified, only transactions of the specified type will be included. "uncategorized" and "unapproved" are currently supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public GetTransactionsByCategoryTypeEnum type;
+    public GetTransactionsByCategoryRequest withType(GetTransactionsByCategoryTypeEnum type) {
+        this.type = type;
         return this;
     }
     

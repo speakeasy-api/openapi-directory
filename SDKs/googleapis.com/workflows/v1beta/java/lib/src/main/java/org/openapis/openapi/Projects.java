@@ -34,25 +34,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListResponse workflowsProjectsLocationsList(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListResponse workflowsProjectsLocationsList(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListRequest request, org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListPathParams.class, baseUrl, "/v1beta/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListRequest.class, baseUrl, "/v1beta/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListResponse workflowsProjectsLocationsOperationsList(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListResponse workflowsProjectsLocationsOperationsList(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1beta/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListRequest.class, baseUrl, "/v1beta/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class Projects {
     /**
      * Creates a new workflow. If a workflow with the specified name already exists in the specified project and location, the long running operation will return ALREADY_EXISTS error.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreateResponse workflowsProjectsLocationsWorkflowsCreate(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreateResponse workflowsProjectsLocationsWorkflowsCreate(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreateRequest request, org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreatePathParams.class, baseUrl, "/v1beta/{parent}/workflows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreateRequest.class, baseUrl, "/v1beta/{parent}/workflows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workflowInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Projects {
     /**
      * Deletes a workflow with the specified name. This method also cancels and deletes all running executions of the workflow.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeleteResponse workflowsProjectsLocationsWorkflowsDelete(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeleteResponse workflowsProjectsLocationsWorkflowsDelete(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeleteRequest request, org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeletePathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeleteRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class Projects {
     /**
      * Gets details of a single Workflow.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetResponse workflowsProjectsLocationsWorkflowsGet(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetResponse workflowsProjectsLocationsWorkflowsGet(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetRequest request, org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class Projects {
     /**
      * Lists Workflows in a given project and location. The default order is not specified.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListResponse workflowsProjectsLocationsWorkflowsList(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListResponse workflowsProjectsLocationsWorkflowsList(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListRequest request, org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListPathParams.class, baseUrl, "/v1beta/{parent}/workflows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListRequest.class, baseUrl, "/v1beta/{parent}/workflows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class Projects {
     /**
      * Updates an existing workflow. Running this method has no impact on already running executions of the workflow. A new revision of the workflow may be created as a result of a successful update operation. In that case, such revision will be used in new workflow executions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchResponse workflowsProjectsLocationsWorkflowsPatch(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchResponse workflowsProjectsLocationsWorkflowsPatch(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchRequest request, org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "workflowInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WorkflowsProjectsLocationsWorkflowsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

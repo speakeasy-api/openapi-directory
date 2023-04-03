@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlatformRequest {
-    
-    public GetPlatformPathParams pathParams;
-    public GetPlatformRequest withPathParams(GetPlatformPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPlatformSecurity security;
-    public GetPlatformRequest withSecurity(GetPlatformSecurity security) {
-        this.security = security;
+    /**
+     * The identifier for the selected platform.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platformId")
+    public String platformId;
+    public GetPlatformRequest withPlatformId(String platformId) {
+        this.platformId = platformId;
         return this;
     }
     

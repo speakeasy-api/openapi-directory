@@ -36,19 +36,20 @@ public class BusinessLines {
      * 
      *  &gt;"If you delete a business line linked to a [payment method](https://docs.adyen.com/development-resources/paymentmethodvariant#management-api), it can affect your merchant account's ability to use the [payment method](https://docs.adyen.com/api-explorer/Management/latest/post/merchants/_merchantId_/paymentMethodSettings). The business line is removed from all linked merchant accounts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteBusinessLinesIdResponse deleteBusinessLinesId(org.openapis.openapi.models.operations.DeleteBusinessLinesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteBusinessLinesIdResponse deleteBusinessLinesId(org.openapis.openapi.models.operations.DeleteBusinessLinesIdRequest request, org.openapis.openapi.models.operations.DeleteBusinessLinesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBusinessLinesIdPathParams.class, baseUrl, "/businessLines/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBusinessLinesIdRequest.class, baseUrl, "/businessLines/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,19 +79,20 @@ public class BusinessLines {
      * Get a business line
      * Returns the detail of a business line.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBusinessLinesIdResponse getBusinessLinesId(org.openapis.openapi.models.operations.GetBusinessLinesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBusinessLinesIdResponse getBusinessLinesId(org.openapis.openapi.models.operations.GetBusinessLinesIdRequest request, org.openapis.openapi.models.operations.GetBusinessLinesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBusinessLinesIdPathParams.class, baseUrl, "/businessLines/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBusinessLinesIdRequest.class, baseUrl, "/businessLines/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,10 +130,11 @@ public class BusinessLines {
      * 
      * This resource contains information about your user's line of business, including their industry and their source of funds. Adyen uses this information to verify your users as required by payment industry regulations. Adyen informs you of the verification results through webhooks or API responses.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBusinessLinesResponse postBusinessLines(org.openapis.openapi.models.operations.PostBusinessLinesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBusinessLinesResponse postBusinessLines(org.openapis.openapi.models.shared.BusinessLineInfoInput request, org.openapis.openapi.models.operations.PostBusinessLinesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/businessLines");
         
@@ -142,7 +145,7 @@ public class BusinessLines {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -37,19 +37,20 @@ public class SoundEffects {
      * Download sound effects
      * This endpoint redownloads sound effects that you have already received a license for. The download links in the response are valid for 8 hours.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DownloadSfxResponse downloadSfx(org.openapis.openapi.models.operations.DownloadSfxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DownloadSfxResponse downloadSfx(org.openapis.openapi.models.operations.DownloadSfxRequest request, org.openapis.openapi.models.operations.DownloadSfxSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadSfxPathParams.class, baseUrl, "/v2/sfx/licenses/{id}/downloads", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadSfxRequest.class, baseUrl, "/v2/sfx/licenses/{id}/downloads", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class SoundEffects {
      * Get details about sound effects
      * This endpoint shows information about a sound effect.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSfxDetailsResponse getSfxDetails(org.openapis.openapi.models.operations.GetSfxDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSfxDetailsResponse getSfxDetails(org.openapis.openapi.models.operations.GetSfxDetailsRequest request, org.openapis.openapi.models.operations.GetSfxDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSfxDetailsPathParams.class, baseUrl, "/v2/sfx/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSfxDetailsRequest.class, baseUrl, "/v2/sfx/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSfxDetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSfxDetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,10 +129,11 @@ public class SoundEffects {
      * List sound effects licenses
      * This endpoint lists existing licenses.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSfxLicenseListResponse getSfxLicenseList(org.openapis.openapi.models.operations.GetSfxLicenseListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSfxLicenseListResponse getSfxLicenseList(org.openapis.openapi.models.operations.GetSfxLicenseListRequest request, org.openapis.openapi.models.operations.GetSfxLicenseListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/sfx/licenses");
         
@@ -138,14 +141,14 @@ public class SoundEffects {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSfxLicenseListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSfxLicenseListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,10 +178,11 @@ public class SoundEffects {
      * List details about sound effects
      * This endpoint shows information about sound effects.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSfxListDetailsResponse getSfxListDetails(org.openapis.openapi.models.operations.GetSfxListDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSfxListDetailsResponse getSfxListDetails(org.openapis.openapi.models.operations.GetSfxListDetailsRequest request, org.openapis.openapi.models.operations.GetSfxListDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/sfx");
         
@@ -186,14 +190,14 @@ public class SoundEffects {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSfxListDetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSfxListDetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -223,10 +227,11 @@ public class SoundEffects {
      * License sound effects
      * This endpoint licenses sounds effect assets.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LicensesSFXResponse licensesSFX(org.openapis.openapi.models.operations.LicensesSFXRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LicensesSFXResponse licensesSFX(org.openapis.openapi.models.shared.LicenseSFXRequest request, org.openapis.openapi.models.operations.LicensesSFXSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/sfx/licenses");
         
@@ -240,7 +245,7 @@ public class SoundEffects {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -270,10 +275,11 @@ public class SoundEffects {
      * Search for sound effects
      * This endpoint searches for sound effects. If you specify more than one search parameter, the API uses an AND condition.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchSFXResponse searchSFX(org.openapis.openapi.models.operations.SearchSFXRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchSFXResponse searchSFX(org.openapis.openapi.models.operations.SearchSFXRequest request, org.openapis.openapi.models.operations.SearchSFXSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/sfx/search");
         
@@ -281,14 +287,14 @@ public class SoundEffects {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchSFXQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchSFXRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConnectorsIdConnectorSourcesRequest {
-    
-    public PutConnectorsIdConnectorSourcesPathParams pathParams;
-    public PutConnectorsIdConnectorSourcesRequest withPathParams(PutConnectorsIdConnectorSourcesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutConnectorsIdConnectorSourcesQueryParams queryParams;
-    public PutConnectorsIdConnectorSourcesRequest withQueryParams(PutConnectorsIdConnectorSourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutConnectorsIdConnectorSourcesRequestBody request;
-    public PutConnectorsIdConnectorSourcesRequest withRequest(PutConnectorsIdConnectorSourcesRequestBody request) {
-        this.request = request;
+    public PutConnectorsIdConnectorSourcesRequestBody requestBody;
+    public PutConnectorsIdConnectorSourcesRequest withRequestBody(PutConnectorsIdConnectorSourcesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutConnectorsIdConnectorSourcesRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connector")
+    public Long idConnector;
+    public PutConnectorsIdConnectorSourcesRequest withIdConnector(Long idConnector) {
+        this.idConnector = idConnector;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCachedImageRequest {
-    
-    public GetCachedImagePathParams pathParams;
-    public GetCachedImageRequest withPathParams(GetCachedImagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCachedImageRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * ID of the image to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageID")
+    public String imageID;
+    public GetCachedImageRequest withImageID(String imageID) {
+        this.imageID = imageID;
+        return this;
+    }
     
-    public GetCachedImageQueryParams queryParams;
-    public GetCachedImageRequest withQueryParams(GetCachedImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the listing to fetch cached images for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=listingID")
+    public String listingID;
+    public GetCachedImageRequest withListingID(String listingID) {
+        this.listingID = listingID;
         return this;
     }
     

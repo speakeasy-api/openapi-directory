@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainsUpdateJsonRequest {
-    
-    public DomainsUpdateJsonPathParams pathParams;
-    public DomainsUpdateJsonRequest withPathParams(DomainsUpdateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The domain to update
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain request;
-    public DomainsUpdateJsonRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain;
+    public DomainsUpdateJsonRequest withApiCoreDtoDomainsDomain(org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain) {
+        this.apiCoreDtoDomainsDomain = apiCoreDtoDomainsDomain;
+        return this;
+    }
+    
+    /**
+     * Id of domain
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DomainsUpdateJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

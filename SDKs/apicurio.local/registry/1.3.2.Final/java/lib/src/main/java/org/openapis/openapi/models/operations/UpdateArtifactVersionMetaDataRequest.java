@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArtifactVersionMetaDataRequest {
-    
-    public UpdateArtifactVersionMetaDataPathParams pathParams;
-    public UpdateArtifactVersionMetaDataRequest withPathParams(UpdateArtifactVersionMetaDataPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EditableMetaData editableMetaData;
+    public UpdateArtifactVersionMetaDataRequest withEditableMetaData(org.openapis.openapi.models.shared.EditableMetaData editableMetaData) {
+        this.editableMetaData = editableMetaData;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EditableMetaData request;
-    public UpdateArtifactVersionMetaDataRequest withRequest(org.openapis.openapi.models.shared.EditableMetaData request) {
-        this.request = request;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or integer (server-generated) representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public UpdateArtifactVersionMetaDataRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of a specific version of the artifact content.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public Long version;
+    public UpdateArtifactVersionMetaDataRequest withVersion(Long version) {
+        this.version = version;
         return this;
     }
     

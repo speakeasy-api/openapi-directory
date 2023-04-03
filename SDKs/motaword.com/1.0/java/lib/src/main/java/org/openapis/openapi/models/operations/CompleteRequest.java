@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteRequest {
-    
-    public CompletePathParams pathParams;
-    public CompleteRequest withPathParams(CompletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CompleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

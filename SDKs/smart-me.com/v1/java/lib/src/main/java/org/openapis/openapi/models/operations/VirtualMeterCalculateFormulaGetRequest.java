@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualMeterCalculateFormulaGetRequest {
-    
-    public VirtualMeterCalculateFormulaGetQueryParams queryParams;
-    public VirtualMeterCalculateFormulaGetRequest withQueryParams(VirtualMeterCalculateFormulaGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=formula")
+    public String formula;
+    public VirtualMeterCalculateFormulaGetRequest withFormula(String formula) {
+        this.formula = formula;
         return this;
     }
     

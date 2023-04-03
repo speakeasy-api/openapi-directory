@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsListCommentsRequest {
-    
-    public GistsListCommentsPathParams pathParams;
-    public GistsListCommentsRequest withPathParams(GistsListCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * gist_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
+    public String gistId;
+    public GistsListCommentsRequest withGistId(String gistId) {
+        this.gistId = gistId;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GistsListCommentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GistsListCommentsQueryParams queryParams;
-    public GistsListCommentsRequest withQueryParams(GistsListCommentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GistsListCommentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

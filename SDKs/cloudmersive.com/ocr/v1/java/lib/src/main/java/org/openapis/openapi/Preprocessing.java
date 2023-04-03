@@ -34,10 +34,11 @@ public class Preprocessing {
      * Convert an image of text into a binarized (light and dark) view
      * Perform an adaptive binarization algorithm on the input image to prepare it for further OCR operations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PreprocessingBinarizeResponse preprocessingBinarize(org.openapis.openapi.models.operations.PreprocessingBinarizeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PreprocessingBinarizeResponse preprocessingBinarize(org.openapis.openapi.models.operations.PreprocessingBinarizeRequestBody request, org.openapis.openapi.models.operations.PreprocessingBinarizeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ocr/preprocessing/image/binarize");
         
@@ -51,7 +52,7 @@ public class Preprocessing {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -93,10 +94,11 @@ public class Preprocessing {
      * Convert an image of text into a binary (light and dark) view with ML
      * Perform an advanced adaptive, Deep Learning-based binarization algorithm on the input image to prepare it for further OCR operations.  Provides enhanced accuracy than adaptive binarization.  Image will be upsampled to 300 DPI if it has a DPI below 300.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedResponse preprocessingBinarizeAdvanced(org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedResponse preprocessingBinarizeAdvanced(org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedRequestBody request, org.openapis.openapi.models.operations.PreprocessingBinarizeAdvancedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ocr/preprocessing/image/binarize/advanced");
         
@@ -110,7 +112,7 @@ public class Preprocessing {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -152,10 +154,11 @@ public class Preprocessing {
      * Get the angle of the page / document / receipt
      * Analyzes a photo or image of a document and identifies the rotation angle of the page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PreprocessingGetPageAngleResponse preprocessingGetPageAngle(org.openapis.openapi.models.operations.PreprocessingGetPageAngleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PreprocessingGetPageAngleResponse preprocessingGetPageAngle(org.openapis.openapi.models.operations.PreprocessingGetPageAngleRequestBody request, org.openapis.openapi.models.operations.PreprocessingGetPageAngleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ocr/preprocessing/image/get-page-angle");
         
@@ -169,7 +172,7 @@ public class Preprocessing {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,10 +216,11 @@ public class Preprocessing {
      * Detect and unrotate a document image
      * Detect and unrotate an image of a document (e.g. that was scanned at an angle).  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PreprocessingUnrotateResponse preprocessingUnrotate(org.openapis.openapi.models.operations.PreprocessingUnrotateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PreprocessingUnrotateResponse preprocessingUnrotate(org.openapis.openapi.models.operations.PreprocessingUnrotateRequestBody request, org.openapis.openapi.models.operations.PreprocessingUnrotateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ocr/preprocessing/image/unrotate");
         
@@ -230,7 +234,7 @@ public class Preprocessing {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -272,10 +276,11 @@ public class Preprocessing {
      * Detect and unrotate a document image (advanced)
      * Detect and unrotate an image of a document (e.g. that was scanned at an angle) using deep learning.  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedResponse preprocessingUnrotateAdvanced(org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedResponse preprocessingUnrotateAdvanced(org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedRequestBody request, org.openapis.openapi.models.operations.PreprocessingUnrotateAdvancedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ocr/preprocessing/image/unrotate/advanced");
         
@@ -289,7 +294,7 @@ public class Preprocessing {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -331,10 +336,11 @@ public class Preprocessing {
      * Detect and unskew a photo of a document
      * Detect and unskew a photo of a document (e.g. taken on a cell phone) into a perfectly square image.  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PreprocessingUnskewResponse preprocessingUnskew(org.openapis.openapi.models.operations.PreprocessingUnskewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PreprocessingUnskewResponse preprocessingUnskew(org.openapis.openapi.models.operations.PreprocessingUnskewRequestBody request, org.openapis.openapi.models.operations.PreprocessingUnskewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ocr/preprocessing/image/unskew");
         
@@ -348,7 +354,7 @@ public class Preprocessing {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMibRequest {
+    /**
+     * Agent to show the MIB
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetMibRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public GetMibPathParams pathParams;
-    public GetMibRequest withPathParams(GetMibPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
+    public String object;
+    public GetMibRequest withObject(String object) {
+        this.object = object;
         return this;
     }
     

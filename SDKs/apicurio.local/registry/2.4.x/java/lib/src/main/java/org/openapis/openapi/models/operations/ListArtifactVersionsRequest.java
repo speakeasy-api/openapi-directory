@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListArtifactVersionsRequest {
-    
-    public ListArtifactVersionsPathParams pathParams;
-    public ListArtifactVersionsRequest withPathParams(ListArtifactVersionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public ListArtifactVersionsRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public ListArtifactVersionsRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public ListArtifactVersionsQueryParams queryParams;
-    public ListArtifactVersionsRequest withQueryParams(ListArtifactVersionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of versions to return.  Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListArtifactVersionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The number of versions to skip before starting to collect the result set.  Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListArtifactVersionsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

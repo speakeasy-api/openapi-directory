@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateLinkHeaders;
 import org.openapis.openapi.models.operations.CreateLinkRequestBody;
 import org.openapis.openapi.models.operations.CreateLinkRequest;
 import org.openapis.openapi.models.operations.CreateLinkResponse;
@@ -28,35 +27,33 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateLinkRequest req = new CreateLinkRequest() {{
-                headers = new CreateLinkHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateLinkRequestBody() {{
-                    labelTemplate = "illum";
+                requestBody = new CreateLinkRequestBody() {{
+                    labelTemplate = "corrupti";
                     resourceTypes = new org.openapis.openapi.models.shared.ResourceTypeEnum[]{{
-                        add("AWS::Logs::LogGroup"),
+                        add("AWS::XRay::Trace"),
+                        add("AWS::XRay::Trace"),
                         add("AWS::Logs::LogGroup"),
                     }};
-                    sinkIdentifier = "suscipit";
+                    sinkIdentifier = "nulla";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("magnam", "debitis");
-                        put("ipsa", "delectus");
+                        put("illum", "vel");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "magnam";
+                xAmzContentSha256 = "debitis";
+                xAmzCredential = "ipsa";
+                xAmzDate = "delectus";
+                xAmzSecurityToken = "tempora";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "molestiae";
+            }}            
 
             CreateLinkResponse res = sdk.createLink(req);
 
@@ -70,7 +67,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

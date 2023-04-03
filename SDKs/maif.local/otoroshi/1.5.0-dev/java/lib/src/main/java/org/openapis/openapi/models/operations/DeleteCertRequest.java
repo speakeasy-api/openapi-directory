@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCertRequest {
-    
-    public DeleteCertPathParams pathParams;
-    public DeleteCertRequest withPathParams(DeleteCertPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCertSecurity security;
-    public DeleteCertRequest withSecurity(DeleteCertSecurity security) {
-        this.security = security;
+    /**
+     * The certificate id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteCertRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

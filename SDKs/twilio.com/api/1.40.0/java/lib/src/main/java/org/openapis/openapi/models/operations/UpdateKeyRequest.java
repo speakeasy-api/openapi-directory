@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateKeyRequest {
-    
-    public UpdateKeyPathParams pathParams;
-    public UpdateKeyRequest withPathParams(UpdateKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Key resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public UpdateKeyRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateKeyUpdateKeyRequest request;
-    public UpdateKeyRequest withRequest(UpdateKeyUpdateKeyRequest request) {
-        this.request = request;
+    public UpdateKeyUpdateKeyRequest requestBody;
+    public UpdateKeyRequest withRequestBody(UpdateKeyUpdateKeyRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateKeySecurity security;
-    public UpdateKeyRequest withSecurity(UpdateKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Key resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

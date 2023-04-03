@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetInvitedIndividualsRequest {
-    
-    public GroupV2GetInvitedIndividualsPathParams pathParams;
-    public GroupV2GetInvitedIndividualsRequest withPathParams(GroupV2GetInvitedIndividualsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Page number (starting with 1). Each page has a fixed size of 50 items per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
+    public Integer currentpage;
+    public GroupV2GetInvitedIndividualsRequest withCurrentpage(Integer currentpage) {
+        this.currentpage = currentpage;
         return this;
     }
     
-    
-    public GroupV2GetInvitedIndividualsQueryParams queryParams;
-    public GroupV2GetInvitedIndividualsRequest withQueryParams(GroupV2GetInvitedIndividualsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GroupV2GetInvitedIndividualsSecurity security;
-    public GroupV2GetInvitedIndividualsRequest withSecurity(GroupV2GetInvitedIndividualsSecurity security) {
-        this.security = security;
+    /**
+     * ID of the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GroupV2GetInvitedIndividualsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

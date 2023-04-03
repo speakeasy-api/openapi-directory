@@ -4,27 +4,110 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestCustomerUsersRequest {
-    
-    public RequestCustomerUsersPathParams pathParams;
-    public RequestCustomerUsersRequest withPathParams(RequestCustomerUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestCustomerUsersXSdsDateFormatEnum xSdsDateFormat;
+    public RequestCustomerUsersRequest withXSdsDateFormat(RequestCustomerUsersXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
-    
-    public RequestCustomerUsersQueryParams queryParams;
-    public RequestCustomerUsersRequest withQueryParams(RequestCustomerUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public RequestCustomerUsersRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
         return this;
     }
     
+    /**
+     * Customer ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public Long customerId;
+    public RequestCustomerUsersRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
+        return this;
+    }
     
-    public RequestCustomerUsersHeaders headers;
-    public RequestCustomerUsersRequest withHeaders(RequestCustomerUsersHeaders headers) {
-        this.headers = headers;
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestCustomerUsersRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Include custom user attributes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_attributes")
+    public Boolean includeAttributes;
+    public RequestCustomerUsersRequest withIncludeAttributes(Boolean includeAttributes) {
+        this.includeAttributes = includeAttributes;
+        return this;
+    }
+    
+    /**
+     * Include hasManageableRooms (deprecated)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_manageable_rooms")
+    public Boolean includeManageableRooms;
+    public RequestCustomerUsersRequest withIncludeManageableRooms(Boolean includeManageableRooms) {
+        this.includeManageableRooms = includeManageableRooms;
+        return this;
+    }
+    
+    /**
+     * Include roles
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_roles")
+    public Boolean includeRoles;
+    public RequestCustomerUsersRequest withIncludeRoles(Boolean includeRoles) {
+        this.includeRoles = includeRoles;
+        return this;
+    }
+    
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestCustomerUsersRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestCustomerUsersRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestCustomerUsersRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

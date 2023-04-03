@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPrefixContractRequest {
-    
-    public GetPrefixContractPathParams pathParams;
-    public GetPrefixContractRequest withPathParams(GetPrefixContractPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * URI of entity to be contracted to identifier/CURIE, e.g "http://www.informatics.jax.org/accession/MGI:1"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uri")
+    public String uri;
+    public GetPrefixContractRequest withUri(String uri) {
+        this.uri = uri;
         return this;
     }
     

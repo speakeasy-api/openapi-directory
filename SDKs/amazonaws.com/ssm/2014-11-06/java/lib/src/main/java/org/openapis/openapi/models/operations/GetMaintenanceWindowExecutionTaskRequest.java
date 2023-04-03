@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMaintenanceWindowExecutionTaskRequest {
-    
-    public GetMaintenanceWindowExecutionTaskHeaders headers;
-    public GetMaintenanceWindowExecutionTaskRequest withHeaders(GetMaintenanceWindowExecutionTaskHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GetMaintenanceWindowExecutionTaskRequest getMaintenanceWindowExecutionTaskRequest;
+    public GetMaintenanceWindowExecutionTaskRequest withGetMaintenanceWindowExecutionTaskRequest(org.openapis.openapi.models.shared.GetMaintenanceWindowExecutionTaskRequest getMaintenanceWindowExecutionTaskRequest) {
+        this.getMaintenanceWindowExecutionTaskRequest = getMaintenanceWindowExecutionTaskRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetMaintenanceWindowExecutionTaskRequest request;
-    public GetMaintenanceWindowExecutionTaskRequest withRequest(org.openapis.openapi.models.shared.GetMaintenanceWindowExecutionTaskRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetMaintenanceWindowExecutionTaskRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetMaintenanceWindowExecutionTaskRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetMaintenanceWindowExecutionTaskRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetMaintenanceWindowExecutionTaskRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetMaintenanceWindowExecutionTaskRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetMaintenanceWindowExecutionTaskRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetMaintenanceWindowExecutionTaskRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public GetMaintenanceWindowExecutionTaskXAmzTargetEnum xAmzTarget;
+    public GetMaintenanceWindowExecutionTaskRequest withXAmzTarget(GetMaintenanceWindowExecutionTaskXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

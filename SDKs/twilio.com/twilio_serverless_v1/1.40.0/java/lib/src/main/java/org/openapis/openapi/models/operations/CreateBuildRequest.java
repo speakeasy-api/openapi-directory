@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBuildRequest {
-    
-    public CreateBuildPathParams pathParams;
-    public CreateBuildRequest withPathParams(CreateBuildPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateBuildCreateBuildRequest request;
-    public CreateBuildRequest withRequest(CreateBuildCreateBuildRequest request) {
-        this.request = request;
+    public CreateBuildCreateBuildRequest requestBody;
+    public CreateBuildRequest withRequestBody(CreateBuildCreateBuildRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateBuildSecurity security;
-    public CreateBuildRequest withSecurity(CreateBuildSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateBuildRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Service to create the Build resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateBuildRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

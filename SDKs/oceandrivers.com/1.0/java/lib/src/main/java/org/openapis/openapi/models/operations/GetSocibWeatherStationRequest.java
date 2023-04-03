@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSocibWeatherStationRequest {
+    /**
+     * Period of time to get the data. Options: lastdata lasthour lastday
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=period")
+    public String period;
+    public GetSocibWeatherStationRequest withPeriod(String period) {
+        this.period = period;
+        return this;
+    }
     
-    public GetSocibWeatherStationPathParams pathParams;
-    public GetSocibWeatherStationRequest withPathParams(GetSocibWeatherStationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * station name currently: boyaenderrocat | playadepalma
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stationName")
+    public String stationName;
+    public GetSocibWeatherStationRequest withStationName(String stationName) {
+        this.stationName = stationName;
         return this;
     }
     

@@ -7,14 +7,10 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelSecurityOption1;
 import org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelSecurityOption2;
 import org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelSecurity;
-import org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelPathParams;
-import org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelQueryParams;
 import org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelRequest;
 import org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -23,39 +19,31 @@ public class Application {
                 .build();
 
             RuntimeconfigOperationsCancelRequest req = new RuntimeconfigOperationsCancelRequest() {{
-                security = new RuntimeconfigOperationsCancelSecurity() {{
-                    option1 = new RuntimeconfigOperationsCancelSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
+                dollarXgafv = "2";
+                requestBody = new java.util.HashMap<String, Object>() {{
+                    put("distinctio", "quibusdam");
+                    put("unde", "nulla");
+                    put("corrupti", "illum");
                 }};
-                pathParams = new RuntimeconfigOperationsCancelPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new RuntimeconfigOperationsCancelQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new java.util.HashMap<String, Object>() {{
-                    put("iure", "magnam");
-                    put("debitis", "ipsa");
-                }};
-            }};            
+                accessToken = "vel";
+                alt = "media";
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                name = "magnam";
+                oauthToken = "debitis";
+                prettyPrint = false;
+                quotaUser = "ipsa";
+                uploadType = "delectus";
+                uploadProtocol = "tempora";
+            }}            
 
-            RuntimeconfigOperationsCancelResponse res = sdk.operations.runtimeconfigOperationsCancel(req);
+            RuntimeconfigOperationsCancelResponse res = sdk.operations.runtimeconfigOperationsCancel(req, new RuntimeconfigOperationsCancelSecurity() {{
+                option1 = new RuntimeconfigOperationsCancelSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.empty.isPresent()) {
                 // handle response

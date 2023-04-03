@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CemstSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CemstRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/CemstRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CemstRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/CemstRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cemst504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cemst504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cemst504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/CfmstSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CfmstRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/CfmstRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/CfmstRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/CfmstRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cfmst504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cfmst504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Cfmst504ApplicationJSON.java
@@ -88,7 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/HscerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/HscerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/HscerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/HscerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/HscerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hscer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hscer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Hscer504ApplicationJSON.java
@@ -115,7 +112,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/MicerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MicerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/MicerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/MicerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/MicerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Micer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Micer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Micer504ApplicationJSON.java
@@ -142,7 +138,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/SscerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SscerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/SscerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/SscerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/SscerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sscer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sscer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Sscer504ApplicationJSON.java
@@ -176,6 +171,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

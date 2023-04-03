@@ -4,20 +4,143 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutocompleteRequest {
-    
-    public GetAutocompletePathParams pathParams;
-    public GetAutocompleteRequest withPathParams(GetAutocompletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * boost function e.g. pow(edges,0.334)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=boost_fx")
+    public String[] boostFx;
+    public GetAutocompleteRequest withBoostFx(String[] boostFx) {
+        this.boostFx = boostFx;
         return this;
     }
     
+    /**
+     * boost query e.g. category:genotype^-10
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=boost_q")
+    public String[] boostQ;
+    public GetAutocompleteRequest withBoostQ(String[] boostQ) {
+        this.boostQ = boostQ;
+        return this;
+    }
     
-    public GetAutocompleteQueryParams queryParams;
-    public GetAutocompleteRequest withQueryParams(GetAutocompleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * e.g. gene, disease
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String[] category;
+    public GetAutocompleteRequest withCategory(String[] category) {
+        this.category = category;
+        return this;
+    }
+    
+    /**
+     * Exclude grouping classes (classes with subclasses)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_groups")
+    public Boolean excludeGroups;
+    public GetAutocompleteRequest withExcludeGroups(Boolean excludeGroups) {
+        this.excludeGroups = excludeGroups;
+        return this;
+    }
+    
+    /**
+     * fq string passed directly to solr, note that multiple filters will be combined with an AND operator. Combining fq_string with other parameters may result in unexpected behavior.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
+    public String[] fq;
+    public GetAutocompleteRequest withFq(String[] fq) {
+        this.fq = fq;
+        return this;
+    }
+    
+    /**
+     * highlight class
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highlight_class")
+    public String highlightClass;
+    public GetAutocompleteRequest withHighlightClass(String highlightClass) {
+        this.highlightClass = highlightClass;
+        return this;
+    }
+    
+    /**
+     * Include equivalent ids in prefix filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_eqs")
+    public Boolean includeEqs;
+    public GetAutocompleteRequest withIncludeEqs(Boolean includeEqs) {
+        this.includeEqs = includeEqs;
+        return this;
+    }
+    
+    /**
+     * minimum should match parameter, see solr docs for details
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_match")
+    public String minMatch;
+    public GetAutocompleteRequest withMinMatch(String minMatch) {
+        this.minMatch = minMatch;
+        return this;
+    }
+    
+    /**
+     * set to true to use the minimal tokenizer, good for variants and genotypes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minimal_tokenizer")
+    public Boolean minimalTokenizer;
+    public GetAutocompleteRequest withMinimalTokenizer(Boolean minimalTokenizer) {
+        this.minimalTokenizer = minimalTokenizer;
+        return this;
+    }
+    
+    /**
+     * ontology prefix: HP, -MONDO
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String[] prefix;
+    public GetAutocompleteRequest withPrefix(String[] prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    /**
+     * number of rows
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
+    public Long rows;
+    public GetAutocompleteRequest withRows(Long rows) {
+        this.rows = rows;
+        return this;
+    }
+    
+    /**
+     * row number to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public GetAutocompleteRequest withStart(String start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * taxon filter, eg NCBITaxon:9606, includes inferred taxa
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
+    public String[] taxon;
+    public GetAutocompleteRequest withTaxon(String[] taxon) {
+        this.taxon = taxon;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=term")
+    public String term;
+    public GetAutocompleteRequest withTerm(String term) {
+        this.term = term;
         return this;
     }
     

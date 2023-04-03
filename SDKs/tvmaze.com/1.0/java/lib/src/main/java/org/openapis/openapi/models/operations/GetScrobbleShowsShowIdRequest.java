@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScrobbleShowsShowIdRequest {
-    
-    public GetScrobbleShowsShowIdPathParams pathParams;
-    public GetScrobbleShowsShowIdRequest withPathParams(GetScrobbleShowsShowIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Embed full episode info
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetScrobbleShowsShowIdEmbedEnum embed;
+    public GetScrobbleShowsShowIdRequest withEmbed(GetScrobbleShowsShowIdEmbedEnum embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetScrobbleShowsShowIdQueryParams queryParams;
-    public GetScrobbleShowsShowIdRequest withQueryParams(GetScrobbleShowsShowIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the target show
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=show_id")
+    public Long showId;
+    public GetScrobbleShowsShowIdRequest withShowId(Long showId) {
+        this.showId = showId;
         return this;
     }
     

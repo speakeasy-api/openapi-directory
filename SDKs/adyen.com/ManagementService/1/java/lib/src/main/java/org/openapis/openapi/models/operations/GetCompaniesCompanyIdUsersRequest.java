@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdUsersRequest {
-    
-    public GetCompaniesCompanyIdUsersPathParams pathParams;
-    public GetCompaniesCompanyIdUsersRequest withPathParams(GetCompaniesCompanyIdUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdUsersRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdUsersQueryParams queryParams;
-    public GetCompaniesCompanyIdUsersRequest withQueryParams(GetCompaniesCompanyIdUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of the page to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
+    public Integer pageNumber;
+    public GetCompaniesCompanyIdUsersRequest withPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
+    /**
+     * The number of items to have on a page. Maximum value is **100**. The default is **10** items on a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public GetCompaniesCompanyIdUsersRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public GetCompaniesCompanyIdUsersSecurity security;
-    public GetCompaniesCompanyIdUsersRequest withSecurity(GetCompaniesCompanyIdUsersSecurity security) {
-        this.security = security;
+    /**
+     * The partial or complete username to select all users that match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public GetCompaniesCompanyIdUsersRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

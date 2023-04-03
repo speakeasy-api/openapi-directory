@@ -51,7 +51,7 @@ public class Client {
      */
     public org.openapis.openapi.models.operations.GetClientClientIdResponse getClientClientId(org.openapis.openapi.models.operations.GetClientClientIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientClientIdPathParams.class, baseUrl, "/client/{client_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientClientIdRequest.class, baseUrl, "/client/{client_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -92,7 +92,7 @@ public class Client {
      */
     public org.openapis.openapi.models.operations.GetClientClientIdTokenKindResponse getClientClientIdTokenKind(org.openapis.openapi.models.operations.GetClientClientIdTokenKindRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientClientIdTokenKindPathParams.class, baseUrl, "/client/{client_id}/token/{kind}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClientClientIdTokenKindRequest.class, baseUrl, "/client/{client_id}/token/{kind}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -125,7 +125,7 @@ public class Client {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostClientResponse postClient(org.openapis.openapi.models.operations.PostClientRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostClientResponse postClient(org.openapis.openapi.models.operations.PostClientRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/client");
         

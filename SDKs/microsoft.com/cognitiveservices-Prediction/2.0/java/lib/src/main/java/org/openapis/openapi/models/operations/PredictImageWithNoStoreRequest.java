@@ -7,31 +7,48 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageWithNoStoreRequest {
-    
-    public PredictImageWithNoStorePathParams pathParams;
-    public PredictImageWithNoStoreRequest withPathParams(PredictImageWithNoStorePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PredictImageWithNoStoreQueryParams queryParams;
-    public PredictImageWithNoStoreRequest withQueryParams(PredictImageWithNoStoreQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PredictImageWithNoStoreHeaders headers;
-    public PredictImageWithNoStoreRequest withHeaders(PredictImageWithNoStoreHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
+    public String predictionKey;
+    public PredictImageWithNoStoreRequest withPredictionKey(String predictionKey) {
+        this.predictionKey = predictionKey;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PredictImageWithNoStoreRequestBody request;
-    public PredictImageWithNoStoreRequest withRequest(PredictImageWithNoStoreRequestBody request) {
-        this.request = request;
+    public PredictImageWithNoStoreRequestBody requestBody;
+    public PredictImageWithNoStoreRequest withRequestBody(PredictImageWithNoStoreRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public PredictImageWithNoStoreRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the id of a particular iteration to evaluate against.
+     *             The default iteration for the project will be used when not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public PredictImageWithNoStoreRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public PredictImageWithNoStoreRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

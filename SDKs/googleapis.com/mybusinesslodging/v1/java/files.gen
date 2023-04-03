@@ -30,16 +30,10 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsGetLodgingPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsGetLodgingQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsGetLodgingRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsGetLodgingResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsLodgingGetGoogleUpdatedPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsLodgingGetGoogleUpdatedQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsLodgingGetGoogleUpdatedRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsLodgingGetGoogleUpdatedResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsUpdateLodgingPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsUpdateLodgingQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsUpdateLodgingRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/MybusinesslodgingLocationsUpdateLodgingResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LodgingInput.java

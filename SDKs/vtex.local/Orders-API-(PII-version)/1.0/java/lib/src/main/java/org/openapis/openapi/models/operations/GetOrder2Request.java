@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrder2Request {
-    
-    public GetOrder2PathParams pathParams;
-    public GetOrder2Request withPathParams(GetOrder2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetOrder2Request withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetOrder2QueryParams queryParams;
-    public GetOrder2Request withQueryParams(GetOrder2QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetOrder2Request withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * ID of the order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public GetOrder2Request withOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
     
-    public GetOrder2Headers headers;
-    public GetOrder2Request withHeaders(GetOrder2Headers headers) {
-        this.headers = headers;
+    /**
+     * Reason for requesting unmasked data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public GetOrder2Request withReason(String reason) {
+        this.reason = reason;
         return this;
     }
     

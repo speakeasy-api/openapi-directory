@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTransactionsTransactionIdRequest {
-    
-    public DeleteTransactionsTransactionIdPathParams pathParams;
-    public DeleteTransactionsTransactionIdRequest withPathParams(DeleteTransactionsTransactionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the transaction to be deleted
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
+    public String transactionId;
+    public DeleteTransactionsTransactionIdRequest withTransactionId(String transactionId) {
+        this.transactionId = transactionId;
         return this;
     }
     

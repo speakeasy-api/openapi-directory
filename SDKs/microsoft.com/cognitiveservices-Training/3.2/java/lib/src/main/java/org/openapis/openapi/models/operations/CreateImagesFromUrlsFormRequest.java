@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImagesFromUrlsFormRequest {
-    
-    public CreateImagesFromUrlsFormPathParams pathParams;
-    public CreateImagesFromUrlsFormRequest withPathParams(CreateImagesFromUrlsFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Image urls and tag ids. Limited to 64 images and 20 tags per batch.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ImageUrlCreateBatch request;
-    public CreateImagesFromUrlsFormRequest withRequest(org.openapis.openapi.models.shared.ImageUrlCreateBatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrlCreateBatch imageUrlCreateBatch;
+    public CreateImagesFromUrlsFormRequest withImageUrlCreateBatch(org.openapis.openapi.models.shared.ImageUrlCreateBatch imageUrlCreateBatch) {
+        this.imageUrlCreateBatch = imageUrlCreateBatch;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateImagesFromUrlsFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

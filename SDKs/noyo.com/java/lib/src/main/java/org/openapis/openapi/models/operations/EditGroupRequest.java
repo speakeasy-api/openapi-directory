@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditGroupRequest {
-    
-    public EditGroupPathParams pathParams;
-    public EditGroupRequest withPathParams(EditGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GroupEditRequest groupEditRequest;
+    public EditGroupRequest withGroupEditRequest(org.openapis.openapi.models.shared.GroupEditRequest groupEditRequest) {
+        this.groupEditRequest = groupEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GroupEditRequest request;
-    public EditGroupRequest withRequest(org.openapis.openapi.models.shared.GroupEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public EditGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditGroupRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

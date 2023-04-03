@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSubscriptionRequest {
-    
-    public DeleteSubscriptionPathParams pathParams;
-    public DeleteSubscriptionRequest withPathParams(DeleteSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteSubscriptionSecurity security;
-    public DeleteSubscriptionRequest withSecurity(DeleteSubscriptionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSubscriptionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this Subscription.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSubscriptionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

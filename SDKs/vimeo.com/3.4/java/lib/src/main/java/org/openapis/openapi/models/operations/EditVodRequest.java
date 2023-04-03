@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditVodRequest {
-    
-    public EditVodPathParams pathParams;
-    public EditVodRequest withPathParams(EditVodPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.ondemand.page+json")
-    public EditVodRequestBody request;
-    public EditVodRequest withRequest(EditVodRequestBody request) {
-        this.request = request;
+    public EditVodRequestBody requestBody;
+    public EditVodRequest withRequestBody(EditVodRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public EditVodSecurity security;
-    public EditVodRequest withSecurity(EditVodSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the On Demand.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ondemand_id")
+    public Double ondemandId;
+    public EditVodRequest withOndemandId(Double ondemandId) {
+        this.ondemandId = ondemandId;
         return this;
     }
     

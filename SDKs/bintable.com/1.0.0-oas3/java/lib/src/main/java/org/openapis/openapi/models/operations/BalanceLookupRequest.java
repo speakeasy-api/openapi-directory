@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BalanceLookupRequest {
-    
-    public BalanceLookupQueryParams queryParams;
-    public BalanceLookupRequest withQueryParams(BalanceLookupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The API key, which you can get from bintable.com website.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public BalanceLookupRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

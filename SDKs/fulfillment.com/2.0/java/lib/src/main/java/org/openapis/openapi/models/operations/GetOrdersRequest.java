@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrdersRequest {
-    
-    public GetOrdersQueryParams queryParams;
-    public GetOrdersRequest withQueryParams(GetOrdersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date-time in ISO 8601 format for selecting orders after, or at, the specified time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
+    public String fromDate;
+    public GetOrdersRequest withFromDate(String fromDate) {
+        this.fromDate = fromDate;
         return this;
     }
     
+    /**
+     * Adds additional information to the response, uses a CSV format for multiple values.'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=hydrate")
+    public org.openapis.openapi.models.shared.HydrateParamEnum[] hydrate;
+    public GetOrdersRequest withHydrate(org.openapis.openapi.models.shared.HydrateParamEnum[] hydrate) {
+        this.hydrate = hydrate;
+        return this;
+    }
     
-    public GetOrdersSecurity security;
-    public GetOrdersRequest withSecurity(GetOrdersSecurity security) {
-        this.security = security;
+    /**
+     * The numbers of items to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetOrdersRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * A CSV of merchant id, '123' or '1,2,3'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=merchantIds")
+    public Long[] merchantIds;
+    public GetOrdersRequest withMerchantIds(Long[] merchantIds) {
+        this.merchantIds = merchantIds;
+        return this;
+    }
+    
+    /**
+     * A multiplier of the number of items (limit parameter) to skip before returning results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetOrdersRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Date-time in ISO 8601 format for selecting orders before, or at, the specified time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
+    public String toDate;
+    public GetOrdersRequest withToDate(String toDate) {
+        this.toDate = toDate;
+        return this;
+    }
+    
+    /**
+     * A CSV of warehouse id, '123' or '1,2,3'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=warehouseIds")
+    public Long[] warehouseIds;
+    public GetOrdersRequest withWarehouseIds(Long[] warehouseIds) {
+        this.warehouseIds = warehouseIds;
         return this;
     }
     

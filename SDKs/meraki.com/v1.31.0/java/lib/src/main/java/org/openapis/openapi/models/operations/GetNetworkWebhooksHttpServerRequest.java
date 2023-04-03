@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWebhooksHttpServerRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=httpServerId")
+    public String httpServerId;
+    public GetNetworkWebhooksHttpServerRequest withHttpServerId(String httpServerId) {
+        this.httpServerId = httpServerId;
+        return this;
+    }
     
-    public GetNetworkWebhooksHttpServerPathParams pathParams;
-    public GetNetworkWebhooksHttpServerRequest withPathParams(GetNetworkWebhooksHttpServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWebhooksHttpServerRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

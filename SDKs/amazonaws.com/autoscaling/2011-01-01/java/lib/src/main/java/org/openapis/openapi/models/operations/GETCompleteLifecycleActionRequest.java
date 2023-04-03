@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCompleteLifecycleActionRequest {
-    
-    public GETCompleteLifecycleActionQueryParams queryParams;
-    public GETCompleteLifecycleActionRequest withQueryParams(GETCompleteLifecycleActionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETCompleteLifecycleActionActionEnum action;
+    public GETCompleteLifecycleActionRequest withAction(GETCompleteLifecycleActionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Auto Scaling group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
+    public String autoScalingGroupName;
+    public GETCompleteLifecycleActionRequest withAutoScalingGroupName(String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        return this;
+    }
     
-    public GETCompleteLifecycleActionHeaders headers;
-    public GETCompleteLifecycleActionRequest withHeaders(GETCompleteLifecycleActionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETCompleteLifecycleActionRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * The action for the group to take. You can specify either &lt;code&gt;CONTINUE&lt;/code&gt; or &lt;code&gt;ABANDON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleActionResult")
+    public String lifecycleActionResult;
+    public GETCompleteLifecycleActionRequest withLifecycleActionResult(String lifecycleActionResult) {
+        this.lifecycleActionResult = lifecycleActionResult;
+        return this;
+    }
+    
+    /**
+     * A universally unique identifier (UUID) that identifies a specific lifecycle action associated with an instance. Amazon EC2 Auto Scaling sends this token to the notification target you specified when you created the lifecycle hook.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleActionToken")
+    public String lifecycleActionToken;
+    public GETCompleteLifecycleActionRequest withLifecycleActionToken(String lifecycleActionToken) {
+        this.lifecycleActionToken = lifecycleActionToken;
+        return this;
+    }
+    
+    /**
+     * The name of the lifecycle hook.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LifecycleHookName")
+    public String lifecycleHookName;
+    public GETCompleteLifecycleActionRequest withLifecycleHookName(String lifecycleHookName) {
+        this.lifecycleHookName = lifecycleHookName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETCompleteLifecycleActionVersionEnum version;
+    public GETCompleteLifecycleActionRequest withVersion(GETCompleteLifecycleActionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETCompleteLifecycleActionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETCompleteLifecycleActionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETCompleteLifecycleActionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETCompleteLifecycleActionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETCompleteLifecycleActionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETCompleteLifecycleActionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETCompleteLifecycleActionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

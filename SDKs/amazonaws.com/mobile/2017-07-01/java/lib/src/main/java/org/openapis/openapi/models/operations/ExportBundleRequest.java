@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportBundleRequest {
-    
-    public ExportBundlePathParams pathParams;
-    public ExportBundleRequest withPathParams(ExportBundlePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ExportBundleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public ExportBundleQueryParams queryParams;
-    public ExportBundleRequest withQueryParams(ExportBundleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ExportBundleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ExportBundleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public ExportBundleHeaders headers;
-    public ExportBundleRequest withHeaders(ExportBundleHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ExportBundleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ExportBundleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ExportBundleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ExportBundleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     *  Unique bundle identifier. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bundleId")
+    public String bundleId;
+    public ExportBundleRequest withBundleId(String bundleId) {
+        this.bundleId = bundleId;
+        return this;
+    }
+    
+    /**
+     *  Developer desktop or target application platform. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform")
+    public ExportBundlePlatformEnum platform;
+    public ExportBundleRequest withPlatform(ExportBundlePlatformEnum platform) {
+        this.platform = platform;
+        return this;
+    }
+    
+    /**
+     *  Unique project identifier. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projectId")
+    public String projectId;
+    public ExportBundleRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

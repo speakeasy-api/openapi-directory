@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETReservedNodeExchangeConfigurationOptionsRequest {
-    
-    public GETGETReservedNodeExchangeConfigurationOptionsQueryParams queryParams;
-    public GETGETReservedNodeExchangeConfigurationOptionsRequest withQueryParams(GETGETReservedNodeExchangeConfigurationOptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETReservedNodeExchangeConfigurationOptionsActionEnum action;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withAction(GETGETReservedNodeExchangeConfigurationOptionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The action type of the reserved-node configuration. The action type can be an exchange initiated from either a snapshot or a resize.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ActionType")
+    public GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum actionType;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withActionType(GETGETReservedNodeExchangeConfigurationOptionsActionTypeEnum actionType) {
+        this.actionType = actionType;
+        return this;
+    }
     
-    public GETGETReservedNodeExchangeConfigurationOptionsHeaders headers;
-    public GETGETReservedNodeExchangeConfigurationOptionsRequest withHeaders(GETGETReservedNodeExchangeConfigurationOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identifier for the cluster that is the source for a reserved-node exchange.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * An optional pagination token provided by a previous &lt;code&gt;GetReservedNodeExchangeConfigurationOptions&lt;/code&gt; request. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by the &lt;code&gt;MaxRecords&lt;/code&gt; parameter. You can retrieve the next set of response records by providing the returned marker value in the &lt;code&gt;Marker&lt;/code&gt; parameter and retrying the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * The maximum number of response records to return in each call. If the number of remaining response records exceeds the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a value is returned in a &lt;code&gt;Marker&lt;/code&gt; field of the response. You can retrieve the next set of records by retrying the command with the returned marker value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The identifier for the snapshot that is the source for the reserved-node exchange.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnapshotIdentifier")
+    public String snapshotIdentifier;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withSnapshotIdentifier(String snapshotIdentifier) {
+        this.snapshotIdentifier = snapshotIdentifier;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETReservedNodeExchangeConfigurationOptionsVersionEnum version;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withVersion(GETGETReservedNodeExchangeConfigurationOptionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETReservedNodeExchangeConfigurationOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

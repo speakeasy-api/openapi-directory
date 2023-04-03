@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TanzaniaRegionsRequest {
-    
-    public TanzaniaRegionsPathParams pathParams;
-    public TanzaniaRegionsRequest withPathParams(TanzaniaRegionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Country name in lowercase eg (Tanzania)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
+    public String country;
+    public TanzaniaRegionsRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     

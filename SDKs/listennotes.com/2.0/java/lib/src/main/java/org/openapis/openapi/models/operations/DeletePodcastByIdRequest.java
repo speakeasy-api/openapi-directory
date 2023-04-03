@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePodcastByIdRequest {
-    
-    public DeletePodcastByIdPathParams pathParams;
-    public DeletePodcastByIdRequest withPathParams(DeletePodcastByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public DeletePodcastByIdRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public DeletePodcastByIdQueryParams queryParams;
-    public DeletePodcastByIdRequest withQueryParams(DeletePodcastByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Podcast id. You can get podcast id from using other endpoints, e.g., `GET /search`, `GET /best_podcasts`...
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeletePodcastByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeletePodcastByIdHeaders headers;
-    public DeletePodcastByIdRequest withHeaders(DeletePodcastByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The reason why this podcast should be deleted, e.g., copyright violation, the podcaster wants to delete it... You can put "testing" here to indicate that you are testing this endpoint, so we will not actually delete the podcast.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public DeletePodcastByIdRequest withReason(String reason) {
+        this.reason = reason;
         return this;
     }
     

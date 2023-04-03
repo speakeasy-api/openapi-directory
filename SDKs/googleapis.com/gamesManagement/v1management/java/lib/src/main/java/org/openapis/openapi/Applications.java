@@ -33,25 +33,26 @@ public class Applications {
     /**
      * Get the list of players hidden from the given application. This method is only available to user accounts for your developer console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenResponse gamesManagementApplicationsListHidden(org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenResponse gamesManagementApplicationsListHidden(org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenRequest request, org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenPathParams.class, baseUrl, "/games/v1management/applications/{applicationId}/players/hidden", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenRequest.class, baseUrl, "/games/v1management/applications/{applicationId}/players/hidden", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementApplicationsListHiddenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

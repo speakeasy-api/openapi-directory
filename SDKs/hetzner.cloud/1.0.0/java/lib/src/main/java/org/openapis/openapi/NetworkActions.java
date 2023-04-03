@@ -40,13 +40,13 @@ public class NetworkActions {
      */
     public org.openapis.openapi.models.operations.GetNetworksIdActionsResponse getNetworksIdActions(org.openapis.openapi.models.operations.GetNetworksIdActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworksIdActionsPathParams.class, baseUrl, "/networks/{id}/actions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworksIdActionsRequest.class, baseUrl, "/networks/{id}/actions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworksIdActionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworksIdActionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -85,7 +85,7 @@ public class NetworkActions {
      */
     public org.openapis.openapi.models.operations.GetNetworksIdActionsActionIdResponse getNetworksIdActionsActionId(org.openapis.openapi.models.operations.GetNetworksIdActionsActionIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworksIdActionsActionIdPathParams.class, baseUrl, "/networks/{id}/actions/{action_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworksIdActionsActionIdRequest.class, baseUrl, "/networks/{id}/actions/{action_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -127,12 +127,12 @@ public class NetworkActions {
      */
     public org.openapis.openapi.models.operations.PostNetworksIdActionsAddRouteResponse postNetworksIdActionsAddRoute(org.openapis.openapi.models.operations.PostNetworksIdActionsAddRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsAddRoutePathParams.class, baseUrl, "/networks/{id}/actions/add_route", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsAddRouteRequest.class, baseUrl, "/networks/{id}/actions/add_route", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -171,12 +171,12 @@ public class NetworkActions {
      */
     public org.openapis.openapi.models.operations.PostNetworksIdActionsAddSubnetResponse postNetworksIdActionsAddSubnet(org.openapis.openapi.models.operations.PostNetworksIdActionsAddSubnetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsAddSubnetPathParams.class, baseUrl, "/networks/{id}/actions/add_subnet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsAddSubnetRequest.class, baseUrl, "/networks/{id}/actions/add_subnet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -219,12 +219,12 @@ public class NetworkActions {
      */
     public org.openapis.openapi.models.operations.PostNetworksIdActionsChangeIpRangeResponse postNetworksIdActionsChangeIpRange(org.openapis.openapi.models.operations.PostNetworksIdActionsChangeIpRangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsChangeIpRangePathParams.class, baseUrl, "/networks/{id}/actions/change_ip_range", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsChangeIpRangeRequest.class, baseUrl, "/networks/{id}/actions/change_ip_range", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -263,12 +263,12 @@ public class NetworkActions {
      */
     public org.openapis.openapi.models.operations.PostNetworksIdActionsChangeProtectionResponse postNetworksIdActionsChangeProtection(org.openapis.openapi.models.operations.PostNetworksIdActionsChangeProtectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsChangeProtectionPathParams.class, baseUrl, "/networks/{id}/actions/change_protection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsChangeProtectionRequest.class, baseUrl, "/networks/{id}/actions/change_protection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -307,12 +307,12 @@ public class NetworkActions {
      */
     public org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteRouteResponse postNetworksIdActionsDeleteRoute(org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteRouteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteRoutePathParams.class, baseUrl, "/networks/{id}/actions/delete_route", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteRouteRequest.class, baseUrl, "/networks/{id}/actions/delete_route", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -351,12 +351,12 @@ public class NetworkActions {
      */
     public org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteSubnetResponse postNetworksIdActionsDeleteSubnet(org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteSubnetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteSubnetPathParams.class, baseUrl, "/networks/{id}/actions/delete_subnet", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteSubnetRequest.class, baseUrl, "/networks/{id}/actions/delete_subnet", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

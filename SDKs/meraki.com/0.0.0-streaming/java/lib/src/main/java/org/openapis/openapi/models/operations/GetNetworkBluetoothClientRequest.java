@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkBluetoothClientRequest {
-    
-    public GetNetworkBluetoothClientPathParams pathParams;
-    public GetNetworkBluetoothClientRequest withPathParams(GetNetworkBluetoothClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bluetoothClientId")
+    public String bluetoothClientId;
+    public GetNetworkBluetoothClientRequest withBluetoothClientId(String bluetoothClientId) {
+        this.bluetoothClientId = bluetoothClientId;
         return this;
     }
     
+    /**
+     * The timespan, in seconds, for the connectivityHistory data. By default 1 day, 86400, will be used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectivityHistoryTimespan")
+    public Long connectivityHistoryTimespan;
+    public GetNetworkBluetoothClientRequest withConnectivityHistoryTimespan(Long connectivityHistoryTimespan) {
+        this.connectivityHistoryTimespan = connectivityHistoryTimespan;
+        return this;
+    }
     
-    public GetNetworkBluetoothClientQueryParams queryParams;
-    public GetNetworkBluetoothClientRequest withQueryParams(GetNetworkBluetoothClientQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include the connectivity history for this client
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeConnectivityHistory")
+    public Boolean includeConnectivityHistory;
+    public GetNetworkBluetoothClientRequest withIncludeConnectivityHistory(Boolean includeConnectivityHistory) {
+        this.includeConnectivityHistory = includeConnectivityHistory;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkBluetoothClientRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

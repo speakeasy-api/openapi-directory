@@ -41,7 +41,7 @@ public class UserAccessDevices {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSmUserAccessDeviceResponse deleteNetworkSmUserAccessDevice(org.openapis.openapi.models.operations.DeleteNetworkSmUserAccessDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSmUserAccessDevicePathParams.class, baseUrl, "/networks/{networkId}/sm/userAccessDevices/{userAccessDeviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSmUserAccessDeviceRequest.class, baseUrl, "/networks/{networkId}/sm/userAccessDevices/{userAccessDeviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -75,13 +75,13 @@ public class UserAccessDevices {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmUserAccessDevicesResponse getNetworkSmUserAccessDevices(org.openapis.openapi.models.operations.GetNetworkSmUserAccessDevicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserAccessDevicesPathParams.class, baseUrl, "/networks/{networkId}/sm/userAccessDevices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserAccessDevicesRequest.class, baseUrl, "/networks/{networkId}/sm/userAccessDevices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmUserAccessDevicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmUserAccessDevicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolProxyPortListRequest {
-    
-    public ProtocolProxyPortListPathParams pathParams;
-    public ProtocolProxyPortListRequest withPathParams(ProtocolProxyPortListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to manipulate PROXY target
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolProxyPortListRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

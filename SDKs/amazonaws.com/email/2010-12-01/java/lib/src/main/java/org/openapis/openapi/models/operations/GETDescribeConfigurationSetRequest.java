@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeConfigurationSetRequest {
-    
-    public GETDescribeConfigurationSetQueryParams queryParams;
-    public GETDescribeConfigurationSetRequest withQueryParams(GETDescribeConfigurationSetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeConfigurationSetActionEnum action;
+    public GETDescribeConfigurationSetRequest withAction(GETDescribeConfigurationSetActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A list of configuration set attributes to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetAttributeNames")
+    public org.openapis.openapi.models.shared.ConfigurationSetAttributeEnum[] configurationSetAttributeNames;
+    public GETDescribeConfigurationSetRequest withConfigurationSetAttributeNames(org.openapis.openapi.models.shared.ConfigurationSetAttributeEnum[] configurationSetAttributeNames) {
+        this.configurationSetAttributeNames = configurationSetAttributeNames;
+        return this;
+    }
     
-    public GETDescribeConfigurationSetHeaders headers;
-    public GETDescribeConfigurationSetRequest withHeaders(GETDescribeConfigurationSetHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the configuration set to describe.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetName")
+    public String configurationSetName;
+    public GETDescribeConfigurationSetRequest withConfigurationSetName(String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeConfigurationSetVersionEnum version;
+    public GETDescribeConfigurationSetRequest withVersion(GETDescribeConfigurationSetVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeConfigurationSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeConfigurationSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeConfigurationSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeConfigurationSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeConfigurationSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeConfigurationSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeConfigurationSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

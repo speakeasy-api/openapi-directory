@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateClusterHeaders;
 import org.openapis.openapi.models.operations.CreateClusterRequestBody;
 import org.openapis.openapi.models.operations.CreateClusterRequest;
 import org.openapis.openapi.models.operations.CreateClusterResponse;
@@ -14,32 +13,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateClusterRequest req = new CreateClusterRequest() {{
-                headers = new CreateClusterHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateClusterRequestBody() {{
-                    clientToken = "illum";
-                    clusterName = "vel";
+                requestBody = new CreateClusterRequestBody() {{
+                    clientToken = "corrupti";
+                    clusterName = "provident";
                     tags = new java.util.HashMap<String, String>() {{
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "error";
+                xAmzContentSha256 = "deserunt";
+                xAmzCredential = "suscipit";
+                xAmzDate = "iure";
+                xAmzSecurityToken = "magnam";
+                xAmzSignature = "debitis";
+                xAmzSignedHeaders = "ipsa";
+            }}            
 
             CreateClusterResponse res = sdk.createCluster(req);
 

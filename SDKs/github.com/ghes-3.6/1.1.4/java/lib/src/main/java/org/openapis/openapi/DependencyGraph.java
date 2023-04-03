@@ -45,13 +45,13 @@ public class DependencyGraph {
      */
     public org.openapis.openapi.models.operations.DependencyGraphDiffRangeResponse dependencyGraphDiffRange(org.openapis.openapi.models.operations.DependencyGraphDiffRangeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependencyGraphDiffRangePathParams.class, baseUrl, "/repos/{owner}/{repo}/dependency-graph/compare/{basehead}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DependencyGraphDiffRangeRequest.class, baseUrl, "/repos/{owner}/{repo}/dependency-graph/compare/{basehead}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependencyGraphDiffRangeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DependencyGraphDiffRangeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

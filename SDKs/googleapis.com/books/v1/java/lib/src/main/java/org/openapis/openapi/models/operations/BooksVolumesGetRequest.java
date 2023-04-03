@@ -4,27 +4,183 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksVolumesGetRequest {
-    
-    public BooksVolumesGetPathParams pathParams;
-    public BooksVolumesGetRequest withPathParams(BooksVolumesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BooksVolumesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
-    
-    public BooksVolumesGetQueryParams queryParams;
-    public BooksVolumesGetRequest withQueryParams(BooksVolumesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BooksVolumesGetRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
         return this;
     }
     
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BooksVolumesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public BooksVolumesGetSecurity security;
-    public BooksVolumesGetRequest withSecurity(BooksVolumesGetSecurity security) {
-        this.security = security;
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BooksVolumesGetRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * ISO-3166-1 code to override the IP-based location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public BooksVolumesGetRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BooksVolumesGetRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Set to true to include non-comics series. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeNonComicsSeries")
+    public Boolean includeNonComicsSeries;
+    public BooksVolumesGetRequest withIncludeNonComicsSeries(Boolean includeNonComicsSeries) {
+        this.includeNonComicsSeries = includeNonComicsSeries;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BooksVolumesGetRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BooksVolumesGetRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Brand results for partner ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner")
+    public String partner;
+    public BooksVolumesGetRequest withPartner(String partner) {
+        this.partner = partner;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BooksVolumesGetRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Restrict information returned to a set of selected fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public BooksVolumesGetProjectionEnum projection;
+    public BooksVolumesGetRequest withProjection(BooksVolumesGetProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BooksVolumesGetRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * string to identify the originator of this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public BooksVolumesGetRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BooksVolumesGetRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BooksVolumesGetRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_library_consistent_read")
+    public Boolean userLibraryConsistentRead;
+    public BooksVolumesGetRequest withUserLibraryConsistentRead(Boolean userLibraryConsistentRead) {
+        this.userLibraryConsistentRead = userLibraryConsistentRead;
+        return this;
+    }
+    
+    /**
+     * ID of volume to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=volumeId")
+    public String volumeId;
+    public BooksVolumesGetRequest withVolumeId(String volumeId) {
+        this.volumeId = volumeId;
         return this;
     }
     

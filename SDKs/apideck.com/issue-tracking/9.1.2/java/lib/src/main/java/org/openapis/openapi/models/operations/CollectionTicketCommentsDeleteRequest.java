@@ -4,34 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionTicketCommentsDeleteRequest {
-    
-    public CollectionTicketCommentsDeletePathParams pathParams;
-    public CollectionTicketCommentsDeleteRequest withPathParams(CollectionTicketCommentsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionTicketCommentsDeleteRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     
-    
-    public CollectionTicketCommentsDeleteQueryParams queryParams;
-    public CollectionTicketCommentsDeleteRequest withQueryParams(CollectionTicketCommentsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CollectionTicketCommentsDeleteRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public CollectionTicketCommentsDeleteHeaders headers;
-    public CollectionTicketCommentsDeleteRequest withHeaders(CollectionTicketCommentsDeleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public CollectionTicketCommentsDeleteRequest withRaw(Boolean raw) {
+        this.raw = raw;
         return this;
     }
     
+    /**
+     * ID of the ticket you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticket_id")
+    public String ticketId;
+    public CollectionTicketCommentsDeleteRequest withTicketId(String ticketId) {
+        this.ticketId = ticketId;
+        return this;
+    }
     
-    public CollectionTicketCommentsDeleteSecurity security;
-    public CollectionTicketCommentsDeleteRequest withSecurity(CollectionTicketCommentsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public CollectionTicketCommentsDeleteRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public CollectionTicketCommentsDeleteRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public CollectionTicketCommentsDeleteRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

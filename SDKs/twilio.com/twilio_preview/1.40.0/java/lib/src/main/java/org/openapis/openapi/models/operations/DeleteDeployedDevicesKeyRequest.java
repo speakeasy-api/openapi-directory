@@ -4,27 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDeployedDevicesKeyRequest {
-    
-    public DeleteDeployedDevicesKeyPathParams pathParams;
-    public DeleteDeployedDevicesKeyRequest withPathParams(DeleteDeployedDevicesKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public DeleteDeployedDevicesKeyRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
-    
-    public DeleteDeployedDevicesKeySecurity security;
-    public DeleteDeployedDevicesKeyRequest withSecurity(DeleteDeployedDevicesKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteDeployedDevicesKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Key credential resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteDeployedDevicesKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

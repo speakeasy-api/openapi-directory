@@ -4,20 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListJobsForWorkflowRunAttemptRequest {
-    
-    public ActionsListJobsForWorkflowRunAttemptPathParams pathParams;
-    public ActionsListJobsForWorkflowRunAttemptRequest withPathParams(ActionsListJobsForWorkflowRunAttemptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The attempt number of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attempt_number")
+    public Long attemptNumber;
+    public ActionsListJobsForWorkflowRunAttemptRequest withAttemptNumber(Long attemptNumber) {
+        this.attemptNumber = attemptNumber;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsListJobsForWorkflowRunAttemptRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ActionsListJobsForWorkflowRunAttemptQueryParams queryParams;
-    public ActionsListJobsForWorkflowRunAttemptRequest withQueryParams(ActionsListJobsForWorkflowRunAttemptQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListJobsForWorkflowRunAttemptRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListJobsForWorkflowRunAttemptRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsListJobsForWorkflowRunAttemptRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the workflow run.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
+    public Long runId;
+    public ActionsListJobsForWorkflowRunAttemptRequest withRunId(Long runId) {
+        this.runId = runId;
         return this;
     }
     

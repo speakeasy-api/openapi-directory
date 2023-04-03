@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionOrganizationFollowerListRequest {
-    
-    public GetActionOrganizationFollowerListQueryParams queryParams;
-    public GetActionOrganizationFollowerListRequest withQueryParams(GetActionOrganizationFollowerListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id or name of the organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionOrganizationFollowerListRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

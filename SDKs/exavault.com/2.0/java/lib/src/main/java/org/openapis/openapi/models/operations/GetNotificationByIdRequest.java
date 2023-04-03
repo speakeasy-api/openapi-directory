@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNotificationByIdRequest {
-    
-    public GetNotificationByIdPathParams pathParams;
-    public GetNotificationByIdRequest withPathParams(GetNotificationByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public GetNotificationByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
         return this;
     }
     
-    
-    public GetNotificationByIdQueryParams queryParams;
-    public GetNotificationByIdRequest withQueryParams(GetNotificationByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public GetNotificationByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     
+    /**
+     * ID of the notification. Use [GET /notifications](#operation/listNotifications) if you need to lookup an ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetNotificationByIdRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetNotificationByIdHeaders headers;
-    public GetNotificationByIdRequest withHeaders(GetNotificationByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Related record types to include in the response. You can include multiple types by separating them with commas. Valid options are **ownerUser**, **resource**, and **share**.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetNotificationByIdRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     

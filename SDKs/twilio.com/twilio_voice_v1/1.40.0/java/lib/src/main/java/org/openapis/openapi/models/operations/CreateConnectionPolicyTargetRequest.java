@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateConnectionPolicyTargetRequest {
-    
-    public CreateConnectionPolicyTargetPathParams pathParams;
-    public CreateConnectionPolicyTargetRequest withPathParams(CreateConnectionPolicyTargetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Connection Policy that owns the Target.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectionPolicySid")
+    public String connectionPolicySid;
+    public CreateConnectionPolicyTargetRequest withConnectionPolicySid(String connectionPolicySid) {
+        this.connectionPolicySid = connectionPolicySid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateConnectionPolicyTargetCreateConnectionPolicyTargetRequest request;
-    public CreateConnectionPolicyTargetRequest withRequest(CreateConnectionPolicyTargetCreateConnectionPolicyTargetRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateConnectionPolicyTargetSecurity security;
-    public CreateConnectionPolicyTargetRequest withSecurity(CreateConnectionPolicyTargetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateConnectionPolicyTargetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateConnectionPolicyTargetCreateConnectionPolicyTargetRequest requestBody;
+    public CreateConnectionPolicyTargetRequest withRequestBody(CreateConnectionPolicyTargetCreateConnectionPolicyTargetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

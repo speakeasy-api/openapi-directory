@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetApplicationsApplicationIdPathParams;
 import org.openapis.openapi.models.operations.GetApplicationsApplicationIdRequest;
 import org.openapis.openapi.models.operations.GetApplicationsApplicationIdResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    bearerToken = new SchemeBearerToken() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
+                    bearerToken = "Bearer YOUR_BEARER_TOKEN_HERE";
                 }})
                 .build();
 
             GetApplicationsApplicationIdRequest req = new GetApplicationsApplicationIdRequest() {{
-                pathParams = new GetApplicationsApplicationIdPathParams() {{
-                    applicationId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-            }};            
+                applicationId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
+            }}            
 
             GetApplicationsApplicationIdResponse res = sdk.applications.getApplicationsApplicationId(req);
 

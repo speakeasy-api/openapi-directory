@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateIntegrationLinkRequest {
-    
-    public AddOrUpdateIntegrationLinkPathParams pathParams;
-    public AddOrUpdateIntegrationLinkRequest withPathParams(AddOrUpdateIntegrationLinkPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AddOrUpdateIntegrationLinkModel addOrUpdateIntegrationLinkModel;
+    public AddOrUpdateIntegrationLinkRequest withAddOrUpdateIntegrationLinkModel(org.openapis.openapi.models.shared.AddOrUpdateIntegrationLinkModel addOrUpdateIntegrationLinkModel) {
+        this.addOrUpdateIntegrationLinkModel = addOrUpdateIntegrationLinkModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddOrUpdateIntegrationLinkModel request;
-    public AddOrUpdateIntegrationLinkRequest withRequest(org.openapis.openapi.models.shared.AddOrUpdateIntegrationLinkModel request) {
-        this.request = request;
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
+    public String environmentId;
+    public AddOrUpdateIntegrationLinkRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    
+    /**
+     * The integration link's type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=integrationLinkType")
+    public org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType;
+    public AddOrUpdateIntegrationLinkRequest withIntegrationLinkType(org.openapis.openapi.models.shared.IntegrationLinkTypeEnum integrationLinkType) {
+        this.integrationLinkType = integrationLinkType;
+        return this;
+    }
+    
+    /**
+     * The key of the integration link.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public AddOrUpdateIntegrationLinkRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The id of the Setting.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
+    public Integer settingId;
+    public AddOrUpdateIntegrationLinkRequest withSettingId(Integer settingId) {
+        this.settingId = settingId;
         return this;
     }
     

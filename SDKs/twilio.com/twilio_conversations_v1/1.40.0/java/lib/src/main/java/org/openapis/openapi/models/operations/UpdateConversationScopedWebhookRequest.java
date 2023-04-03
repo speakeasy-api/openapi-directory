@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConversationScopedWebhookRequest {
-    
-    public UpdateConversationScopedWebhookPathParams pathParams;
-    public UpdateConversationScopedWebhookRequest withPathParams(UpdateConversationScopedWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Conversation](https://www.twilio.com/docs/conversations/api/conversation-resource) for this webhook.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConversationSid")
+    public String conversationSid;
+    public UpdateConversationScopedWebhookRequest withConversationSid(String conversationSid) {
+        this.conversationSid = conversationSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateConversationScopedWebhookUpdateConversationScopedWebhookRequest request;
-    public UpdateConversationScopedWebhookRequest withRequest(UpdateConversationScopedWebhookUpdateConversationScopedWebhookRequest request) {
-        this.request = request;
+    public UpdateConversationScopedWebhookUpdateConversationScopedWebhookRequest requestBody;
+    public UpdateConversationScopedWebhookRequest withRequestBody(UpdateConversationScopedWebhookUpdateConversationScopedWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateConversationScopedWebhookSecurity security;
-    public UpdateConversationScopedWebhookRequest withSecurity(UpdateConversationScopedWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateConversationScopedWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * A 34 character string that uniquely identifies this resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateConversationScopedWebhookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

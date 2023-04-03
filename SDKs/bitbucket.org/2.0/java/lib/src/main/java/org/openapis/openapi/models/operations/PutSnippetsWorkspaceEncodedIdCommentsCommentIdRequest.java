@@ -7,27 +7,45 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
-    
-    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdPathParams pathParams;
-    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withPathParams(PutSnippetsWorkspaceEncodedIdCommentsCommentIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The contents to update the comment to.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The id of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
     
-    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdSecurity security;
-    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withSecurity(PutSnippetsWorkspaceEncodedIdCommentsCommentIdSecurity security) {
-        this.security = security;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

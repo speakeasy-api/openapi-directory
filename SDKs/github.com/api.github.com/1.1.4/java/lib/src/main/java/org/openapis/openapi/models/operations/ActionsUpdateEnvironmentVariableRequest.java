@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsUpdateEnvironmentVariableRequest {
-    
-    public ActionsUpdateEnvironmentVariablePathParams pathParams;
-    public ActionsUpdateEnvironmentVariableRequest withPathParams(ActionsUpdateEnvironmentVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsUpdateEnvironmentVariableRequestBody requestBody;
+    public ActionsUpdateEnvironmentVariableRequest withRequestBody(ActionsUpdateEnvironmentVariableRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsUpdateEnvironmentVariableRequestBody request;
-    public ActionsUpdateEnvironmentVariableRequest withRequest(ActionsUpdateEnvironmentVariableRequestBody request) {
-        this.request = request;
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ActionsUpdateEnvironmentVariableRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsUpdateEnvironmentVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsUpdateEnvironmentVariableRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
         return this;
     }
     

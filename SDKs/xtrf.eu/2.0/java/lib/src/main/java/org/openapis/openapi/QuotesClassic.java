@@ -43,12 +43,12 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.CreateLanguageCombination1Response createLanguageCombination1(org.openapis.openapi.models.operations.CreateLanguageCombination1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateLanguageCombination1PathParams.class, baseUrl, "/quotes/{quoteId}/languageCombinations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateLanguageCombination1Request.class, baseUrl, "/quotes/{quoteId}/languageCombinations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "commonLanguageCombinationDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -88,12 +88,12 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.CreatePayable1Response createPayable1(org.openapis.openapi.models.operations.CreatePayable1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePayable1PathParams.class, baseUrl, "/quotes/{quoteId}/finance/payables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreatePayable1Request.class, baseUrl, "/quotes/{quoteId}/finance/payables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payableCreateDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -133,12 +133,12 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.CreateReceivable1Response createReceivable1(org.openapis.openapi.models.operations.CreateReceivable1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateReceivable1PathParams.class, baseUrl, "/quotes/{quoteId}/finance/receivables", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateReceivable1Request.class, baseUrl, "/quotes/{quoteId}/finance/receivables", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "receivableCreateDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -178,12 +178,12 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.CreateTask1Response createTask1(org.openapis.openapi.models.operations.CreateTask1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTask1PathParams.class, baseUrl, "/quotes/{quoteId}/tasks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateTask1Request.class, baseUrl, "/quotes/{quoteId}/tasks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "taskDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -223,7 +223,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.DeletePayable1Response deletePayable1(org.openapis.openapi.models.operations.DeletePayable1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayable1PathParams.class, baseUrl, "/quotes/{quoteId}/finance/payables/{payableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePayable1Request.class, baseUrl, "/quotes/{quoteId}/finance/payables/{payableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -257,7 +257,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.DeleteReceivable1Response deleteReceivable1(org.openapis.openapi.models.operations.DeleteReceivable1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReceivable1PathParams.class, baseUrl, "/quotes/{quoteId}/finance/receivables/{receivableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteReceivable1Request.class, baseUrl, "/quotes/{quoteId}/finance/receivables/{receivableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -291,7 +291,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.Delete13Response delete13(org.openapis.openapi.models.operations.Delete13Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete13PathParams.class, baseUrl, "/quotes/{quoteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Delete13Request.class, baseUrl, "/quotes/{quoteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -331,7 +331,7 @@ public class QuotesClassic {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIds7QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAllIds7Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -371,13 +371,13 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.GetById8Response getById8(org.openapis.openapi.models.operations.GetById8Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById8PathParams.class, baseUrl, "/quotes/{quoteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById8Request.class, baseUrl, "/quotes/{quoteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetById8QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetById8Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -417,7 +417,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.GetCustomFields6Response getCustomFields6(org.openapis.openapi.models.operations.GetCustomFields6Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields6PathParams.class, baseUrl, "/quotes/{quoteId}/customFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields6Request.class, baseUrl, "/quotes/{quoteId}/customFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -457,7 +457,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.GetDates2Response getDates2(org.openapis.openapi.models.operations.GetDates2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDates2PathParams.class, baseUrl, "/quotes/{quoteId}/dates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDates2Request.class, baseUrl, "/quotes/{quoteId}/dates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -497,7 +497,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.GetFinance1Response getFinance1(org.openapis.openapi.models.operations.GetFinance1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFinance1PathParams.class, baseUrl, "/quotes/{quoteId}/finance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFinance1Request.class, baseUrl, "/quotes/{quoteId}/finance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -537,7 +537,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.GetInstructions1Response getInstructions1(org.openapis.openapi.models.operations.GetInstructions1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInstructions1PathParams.class, baseUrl, "/quotes/{quoteId}/instructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInstructions1Request.class, baseUrl, "/quotes/{quoteId}/instructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -577,7 +577,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.Send1Response send1(org.openapis.openapi.models.operations.Send1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Send1PathParams.class, baseUrl, "/quotes/{quoteId}/confirmation/send", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Send1Request.class, baseUrl, "/quotes/{quoteId}/confirmation/send", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -611,7 +611,7 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.StartResponse start(org.openapis.openapi.models.operations.StartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartPathParams.class, baseUrl, "/quotes/{quoteId}/start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartRequest.class, baseUrl, "/quotes/{quoteId}/start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -645,12 +645,12 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.UpdateCustomFields4Response updateCustomFields4(org.openapis.openapi.models.operations.UpdateCustomFields4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomFields4PathParams.class, baseUrl, "/quotes/{quoteId}/customFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomFields4Request.class, baseUrl, "/quotes/{quoteId}/customFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -690,12 +690,12 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.UpdateInstructions2Response updateInstructions2(org.openapis.openapi.models.operations.UpdateInstructions2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInstructions2PathParams.class, baseUrl, "/quotes/{quoteId}/instructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateInstructions2Request.class, baseUrl, "/quotes/{quoteId}/instructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instructionsDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -735,12 +735,12 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.UpdatePayable1Response updatePayable1(org.openapis.openapi.models.operations.UpdatePayable1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePayable1PathParams.class, baseUrl, "/quotes/{quoteId}/finance/payables/{payableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePayable1Request.class, baseUrl, "/quotes/{quoteId}/finance/payables/{payableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "payableDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -780,12 +780,12 @@ public class QuotesClassic {
      */
     public org.openapis.openapi.models.operations.UpdateReceivable1Response updateReceivable1(org.openapis.openapi.models.operations.UpdateReceivable1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateReceivable1PathParams.class, baseUrl, "/quotes/{quoteId}/finance/receivables/{receivableId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateReceivable1Request.class, baseUrl, "/quotes/{quoteId}/finance/receivables/{receivableId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "receivableDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

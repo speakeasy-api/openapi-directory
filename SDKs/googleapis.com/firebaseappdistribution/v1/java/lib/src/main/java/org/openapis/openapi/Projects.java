@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Deletes releases. A maximum of 100 releases can be deleted per request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteResponse firebaseappdistributionProjectsAppsReleasesBatchDelete(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteResponse firebaseappdistributionProjectsAppsReleasesBatchDelete(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeletePathParams.class, baseUrl, "/v1/{parent}/releases:batchDelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteRequest.class, baseUrl, "/v1/{parent}/releases:batchDelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppdistroV1BatchDeleteReleasesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Distributes a release to testers. This call does the following: 1. Creates testers for the specified emails, if none exist. 2. Adds the testers and groups to the release. 3. Sends new testers an invitation email. 4. Sends existing testers a new release email. The request will fail with a `INVALID_ARGUMENT` if it contains a group that doesn't exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributeResponse firebaseappdistributionProjectsAppsReleasesDistribute(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributeResponse firebaseappdistributionProjectsAppsReleasesDistribute(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributeRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributePathParams.class, baseUrl, "/v1/{name}:distribute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributeRequest.class, baseUrl, "/v1/{name}:distribute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppdistroV1DistributeReleaseRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesDistributeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Lists feedback reports. By default, sorts by `createTime` in descending order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListResponse firebaseappdistributionProjectsAppsReleasesFeedbackReportsList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListResponse firebaseappdistributionProjectsAppsReleasesFeedbackReportsList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListPathParams.class, baseUrl, "/v1/{parent}/feedbackReports", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest.class, baseUrl, "/v1/{parent}/feedbackReports", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesFeedbackReportsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Lists releases. By default, sorts by `createTime` in descending order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListResponse firebaseappdistributionProjectsAppsReleasesList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListResponse firebaseappdistributionProjectsAppsReleasesList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListPathParams.class, baseUrl, "/v1/{parent}/releases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListRequest.class, baseUrl, "/v1/{parent}/releases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelResponse firebaseappdistributionProjectsAppsReleasesOperationsCancel(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelResponse firebaseappdistributionProjectsAppsReleasesOperationsCancel(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListResponse firebaseappdistributionProjectsAppsReleasesOperationsList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListResponse firebaseappdistributionProjectsAppsReleasesOperationsList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Waits until the specified long-running operation is done or reaches at most a specified timeout, returning the latest state. If the operation is already done, the latest state is immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC timeout is used. If the server does not support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return the latest state before the specified timeout (including immediately), meaning even an immediate response is no guarantee that the operation is done.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitResponse firebaseappdistributionProjectsAppsReleasesOperationsWait(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitResponse firebaseappdistributionProjectsAppsReleasesOperationsWait(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitPathParams.class, baseUrl, "/v1/{name}:wait", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitRequest.class, baseUrl, "/v1/{name}:wait", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleLongrunningWaitOperationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsAppsReleasesOperationsWaitRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Batch adds members to a group. The testers will gain access to all releases that the groups have access to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinResponse firebaseappdistributionProjectsGroupsBatchJoin(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinResponse firebaseappdistributionProjectsGroupsBatchJoin(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinPathParams.class, baseUrl, "/v1/{group}:batchJoin", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinRequest.class, baseUrl, "/v1/{group}:batchJoin", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppdistroV1BatchJoinGroupRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchJoinRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,27 +413,28 @@ public class Projects {
     /**
      * Batch removed members from a group. The testers will lose access to all releases that the groups have access to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeaveResponse firebaseappdistributionProjectsGroupsBatchLeave(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeaveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeaveResponse firebaseappdistributionProjectsGroupsBatchLeave(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeaveRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeaveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeavePathParams.class, baseUrl, "/v1/{group}:batchLeave", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeaveRequest.class, baseUrl, "/v1/{group}:batchLeave", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppdistroV1BatchLeaveGroupRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeaveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsBatchLeaveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,27 +461,28 @@ public class Projects {
     /**
      * Create a group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreateResponse firebaseappdistributionProjectsGroupsCreate(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreateResponse firebaseappdistributionProjectsGroupsCreate(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreateRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreatePathParams.class, baseUrl, "/v1/{parent}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreateRequest.class, baseUrl, "/v1/{parent}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppdistroV1GroupInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,25 +509,26 @@ public class Projects {
     /**
      * Delete a group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeleteResponse firebaseappdistributionProjectsGroupsDelete(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeleteResponse firebaseappdistributionProjectsGroupsDelete(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeleteRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,25 +555,26 @@ public class Projects {
     /**
      * Get a group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetResponse firebaseappdistributionProjectsGroupsGet(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetResponse firebaseappdistributionProjectsGroupsGet(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,25 +601,26 @@ public class Projects {
     /**
      * List groups.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListResponse firebaseappdistributionProjectsGroupsList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListResponse firebaseappdistributionProjectsGroupsList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListPathParams.class, baseUrl, "/v1/{parent}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListRequest.class, baseUrl, "/v1/{parent}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Batch adds testers. This call adds testers for the specified emails if they don't already exist. Returns all testers specified in the request, including newly created and previously existing testers. This action is idempotent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddResponse firebaseappdistributionProjectsTestersBatchAdd(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddResponse firebaseappdistributionProjectsTestersBatchAdd(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddPathParams.class, baseUrl, "/v1/{project}/testers:batchAdd", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddRequest.class, baseUrl, "/v1/{project}/testers:batchAdd", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppdistroV1BatchAddTestersRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,27 +695,28 @@ public class Projects {
     /**
      * Batch removes testers. If found, this call deletes testers for the specified emails. Returns all deleted testers.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemoveResponse firebaseappdistributionProjectsTestersBatchRemove(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemoveResponse firebaseappdistributionProjectsTestersBatchRemove(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemoveRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemovePathParams.class, baseUrl, "/v1/{project}/testers:batchRemove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemoveRequest.class, baseUrl, "/v1/{project}/testers:batchRemove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppdistroV1BatchRemoveTestersRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersBatchRemoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -728,25 +743,26 @@ public class Projects {
     /**
      * Lists testers and their resource ids.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListResponse firebaseappdistributionProjectsTestersList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListResponse firebaseappdistributionProjectsTestersList(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListPathParams.class, baseUrl, "/v1/{parent}/testers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListRequest.class, baseUrl, "/v1/{parent}/testers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -773,27 +789,28 @@ public class Projects {
     /**
      * Update a tester. If the testers joins a group they gain access to all releases that the group has access to.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchResponse firebaseappdistributionProjectsTestersPatch(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchResponse firebaseappdistributionProjectsTestersPatch(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchRequest request, org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleFirebaseAppdistroV1TesterInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FirebaseappdistributionProjectsTestersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

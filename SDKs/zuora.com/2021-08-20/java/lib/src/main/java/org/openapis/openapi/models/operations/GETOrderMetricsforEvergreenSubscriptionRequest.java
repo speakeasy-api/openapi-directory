@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETOrderMetricsforEvergreenSubscriptionRequest {
-    
-    public GETOrderMetricsforEvergreenSubscriptionPathParams pathParams;
-    public GETOrderMetricsforEvergreenSubscriptionRequest withPathParams(GETOrderMetricsforEvergreenSubscriptionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETOrderMetricsforEvergreenSubscriptionRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
-    
-    public GETOrderMetricsforEvergreenSubscriptionQueryParams queryParams;
-    public GETOrderMetricsforEvergreenSubscriptionRequest withQueryParams(GETOrderMetricsforEvergreenSubscriptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETOrderMetricsforEvergreenSubscriptionRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
+    /**
+     * The end date of the date range for which you want to get the metrics. The date must be in yyyy-mm-dd format. For example, 2017-12-03.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public LocalDate endDate;
+    public GETOrderMetricsforEvergreenSubscriptionRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
     
-    public GETOrderMetricsforEvergreenSubscriptionHeaders headers;
-    public GETOrderMetricsforEvergreenSubscriptionRequest withHeaders(GETOrderMetricsforEvergreenSubscriptionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The order number.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderNumber")
+    public String orderNumber;
+    public GETOrderMetricsforEvergreenSubscriptionRequest withOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
+        return this;
+    }
+    
+    /**
+     * The start date of the date range for which you want to get the metrics. The date must be in yyyy-mm-dd format. For example, 2017-12-03.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public LocalDate startDate;
+    public GETOrderMetricsforEvergreenSubscriptionRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    /**
+     * The subscription number you want to get the metrics for.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionNumber")
+    public String subscriptionNumber;
+    public GETOrderMetricsforEvergreenSubscriptionRequest withSubscriptionNumber(String subscriptionNumber) {
+        this.subscriptionNumber = subscriptionNumber;
         return this;
     }
     

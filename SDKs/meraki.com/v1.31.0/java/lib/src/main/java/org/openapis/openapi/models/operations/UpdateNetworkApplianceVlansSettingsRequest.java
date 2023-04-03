@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkApplianceVlansSettingsRequest {
-    
-    public UpdateNetworkApplianceVlansSettingsPathParams pathParams;
-    public UpdateNetworkApplianceVlansSettingsRequest withPathParams(UpdateNetworkApplianceVlansSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkApplianceVlansSettingsRequestBody requestBody;
+    public UpdateNetworkApplianceVlansSettingsRequest withRequestBody(UpdateNetworkApplianceVlansSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkApplianceVlansSettingsRequestBody request;
-    public UpdateNetworkApplianceVlansSettingsRequest withRequest(UpdateNetworkApplianceVlansSettingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkApplianceVlansSettingsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

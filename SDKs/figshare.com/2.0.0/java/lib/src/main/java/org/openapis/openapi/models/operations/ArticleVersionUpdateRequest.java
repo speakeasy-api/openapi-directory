@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleVersionUpdateRequest {
-    
-    public ArticleVersionUpdatePathParams pathParams;
-    public ArticleVersionUpdateRequest withPathParams(ArticleVersionUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Article description
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ArticleUpdate request;
-    public ArticleVersionUpdateRequest withRequest(org.openapis.openapi.models.shared.ArticleUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ArticleUpdate articleUpdate;
+    public ArticleVersionUpdateRequest withArticleUpdate(org.openapis.openapi.models.shared.ArticleUpdate articleUpdate) {
+        this.articleUpdate = articleUpdate;
         return this;
     }
     
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public ArticleVersionUpdateRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
+        return this;
+    }
     
-    public ArticleVersionUpdateSecurity security;
-    public ArticleVersionUpdateRequest withSecurity(ArticleVersionUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Article version identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version_id")
+    public Long versionId;
+    public ArticleVersionUpdateRequest withVersionId(Long versionId) {
+        this.versionId = versionId;
         return this;
     }
     

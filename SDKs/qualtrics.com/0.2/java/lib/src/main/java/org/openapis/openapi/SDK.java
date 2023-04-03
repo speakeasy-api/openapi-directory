@@ -134,12 +134,12 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CreateContactInMailinglistResponse createContactInMailinglist(org.openapis.openapi.models.operations.CreateContactInMailinglistRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateContactInMailinglistPathParams.class, baseUrl, "/directories/{DirectoryId}/mailinglists/{MailingListId}/contacts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateContactInMailinglistRequest.class, baseUrl, "/directories/{DirectoryId}/mailinglists/{MailingListId}/contacts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createContactInMailingList", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -170,7 +170,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GenerateDistributionLinksResponse generateDistributionLinks(org.openapis.openapi.models.operations.GenerateDistributionLinksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GenerateDistributionLinksResponse generateDistributionLinks(org.openapis.openapi.models.shared.CreateDistributionLinks request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/distributions");
         
@@ -216,7 +216,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDistributionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDistributionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -255,7 +255,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetEventSubscriptionsResponse getEventSubscriptions(org.openapis.openapi.models.operations.GetEventSubscriptionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventSubscriptionsPathParams.class, baseUrl, "/eventsubscriptions/{SubscriptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEventSubscriptionsRequest.class, baseUrl, "/eventsubscriptions/{SubscriptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -294,7 +294,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetSurveyResponse getSurvey(org.openapis.openapi.models.operations.GetSurveyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSurveyPathParams.class, baseUrl, "/survey-definitions/{SurveyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSurveyRequest.class, baseUrl, "/survey-definitions/{SurveyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -335,13 +335,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RetrievedistributionlinksResponse retrievedistributionlinks(org.openapis.openapi.models.operations.RetrievedistributionlinksRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievedistributionlinksPathParams.class, baseUrl, "/distributions/{DistributionId}/links", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrievedistributionlinksRequest.class, baseUrl, "/distributions/{DistributionId}/links", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrievedistributionlinksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrievedistributionlinksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -378,7 +378,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebhookDeleteResponse webhookDelete(org.openapis.openapi.models.operations.WebhookDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebhookDeleteResponse webhookDelete(org.openapis.openapi.models.shared.SubscribeToEventBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/eventsubscriptions/");
         
@@ -422,7 +422,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WhenAResponseIsReceivedResponse whenAResponseIsReceived(org.openapis.openapi.models.operations.WhenAResponseIsReceivedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WhenAResponseIsReceivedResponse whenAResponseIsReceived(org.openapis.openapi.models.shared.SubscribeToEventBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/eventsubscriptions/");
         

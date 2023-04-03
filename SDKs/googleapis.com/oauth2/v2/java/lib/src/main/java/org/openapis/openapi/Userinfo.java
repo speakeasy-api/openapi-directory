@@ -30,7 +30,7 @@ public class Userinfo {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.Oauth2UserinfoGetResponse oauth2UserinfoGet(org.openapis.openapi.models.operations.Oauth2UserinfoGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Oauth2UserinfoGetResponse oauth2UserinfoGet(org.openapis.openapi.models.operations.Oauth2UserinfoGetRequest request, org.openapis.openapi.models.operations.Oauth2UserinfoGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth2/v2/userinfo");
         
@@ -38,14 +38,14 @@ public class Userinfo {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Oauth2UserinfoGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Oauth2UserinfoGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -69,7 +69,7 @@ public class Userinfo {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetResponse oauth2UserinfoV2MeGet(org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetResponse oauth2UserinfoV2MeGet(org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetRequest request, org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/userinfo/v2/me");
         
@@ -77,14 +77,14 @@ public class Userinfo {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.Oauth2UserinfoV2MeGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

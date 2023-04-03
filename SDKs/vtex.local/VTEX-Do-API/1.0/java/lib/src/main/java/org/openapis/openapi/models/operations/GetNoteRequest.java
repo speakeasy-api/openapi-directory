@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNoteRequest {
-    
-    public GetNotePathParams pathParams;
-    public GetNoteRequest withPathParams(GetNotePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetNoteRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetNoteQueryParams queryParams;
-    public GetNoteRequest withQueryParams(GetNoteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetNoteRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Note's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=noteId")
+    public String noteId;
+    public GetNoteRequest withNoteId(String noteId) {
+        this.noteId = noteId;
+        return this;
+    }
     
-    public GetNoteHeaders headers;
-    public GetNoteRequest withHeaders(GetNoteHeaders headers) {
-        this.headers = headers;
+    /**
+     * This parameter is relevant only for PII-compliant accounts. When sending requests to this endpoint, PII-compliant accounts can use this parameter to declare the reason for requesting unmasked data. Otherwise, this endpoint will return masked PII data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
+    public String reason;
+    public GetNoteRequest withReason(String reason) {
+        this.reason = reason;
         return this;
     }
     

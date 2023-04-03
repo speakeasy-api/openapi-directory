@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdProvidersRequest {
-    
-    public GetSpacesSpaceIdProvidersPathParams pathParams;
-    public GetSpacesSpaceIdProvidersRequest withPathParams(GetSpacesSpaceIdProvidersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * if present returns infos of the ContractingPartner too
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WithContractingPartner")
+    public String withContractingPartner;
+    public GetSpacesSpaceIdProvidersRequest withWithContractingPartner(String withContractingPartner) {
+        this.withContractingPartner = withContractingPartner;
         return this;
     }
     
-    
-    public GetSpacesSpaceIdProvidersQueryParams queryParams;
-    public GetSpacesSpaceIdProvidersRequest withQueryParams(GetSpacesSpaceIdProvidersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdProvidersRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

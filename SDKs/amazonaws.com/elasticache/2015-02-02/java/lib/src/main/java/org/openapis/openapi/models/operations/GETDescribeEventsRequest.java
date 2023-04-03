@@ -4,20 +4,140 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeEventsRequest {
-    
-    public GETDescribeEventsQueryParams queryParams;
-    public GETDescribeEventsRequest withQueryParams(GETDescribeEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeEventsActionEnum action;
+    public GETDescribeEventsRequest withAction(GETDescribeEventsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The number of minutes worth of events to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Duration")
+    public Long duration;
+    public GETDescribeEventsRequest withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
     
-    public GETDescribeEventsHeaders headers;
-    public GETDescribeEventsRequest withHeaders(GETDescribeEventsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The end of the time interval for which to retrieve events, specified in ISO 8601 format.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Example:&lt;/b&gt; 2017-03-30T07:03:49.555Z&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndTime")
+    public OffsetDateTime endTime;
+    public GETDescribeEventsRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by &lt;code&gt;MaxRecords&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeEventsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of records to include in the response. If more records exist than the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a marker is included in the response so that the remaining results can be retrieved.&lt;/p&gt; &lt;p&gt;Default: 100&lt;/p&gt; &lt;p&gt;Constraints: minimum 20; maximum 100.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeEventsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The identifier of the event source for which events are returned. If not specified, all sources are included in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceIdentifier")
+    public String sourceIdentifier;
+    public GETDescribeEventsRequest withSourceIdentifier(String sourceIdentifier) {
+        this.sourceIdentifier = sourceIdentifier;
+        return this;
+    }
+    
+    /**
+     * The event source to retrieve events for. If no value is specified, all events are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceType")
+    public GETDescribeEventsSourceTypeEnum sourceType;
+    public GETDescribeEventsRequest withSourceType(GETDescribeEventsSourceTypeEnum sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The beginning of the time interval to retrieve events for, specified in ISO 8601 format.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Example:&lt;/b&gt; 2017-03-30T07:03:49.555Z&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartTime")
+    public OffsetDateTime startTime;
+    public GETDescribeEventsRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeEventsVersionEnum version;
+    public GETDescribeEventsRequest withVersion(GETDescribeEventsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeEventsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeEventsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeEventsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeEventsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeEventsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeEventsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeEventsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetStoreTrackedOrdersRequest {
-    
-    public GetStoreTrackedOrdersPathParams pathParams;
-    public GetStoreTrackedOrdersRequest withPathParams(GetStoreTrackedOrdersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The amount of orders to retrieve
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Long count;
+    public GetStoreTrackedOrdersRequest withCount(Long count) {
+        this.count = count;
         return this;
     }
     
-    
-    public GetStoreTrackedOrdersQueryParams queryParams;
-    public GetStoreTrackedOrdersRequest withQueryParams(GetStoreTrackedOrdersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public GetStoreTrackedOrdersRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

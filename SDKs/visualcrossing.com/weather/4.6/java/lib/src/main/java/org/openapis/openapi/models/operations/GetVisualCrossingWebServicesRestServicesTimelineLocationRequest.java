@@ -4,27 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVisualCrossingWebServicesRestServicesTimelineLocationRequest {
-    
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationPathParams pathParams;
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withPathParams(GetVisualCrossingWebServicesRestServicesTimelineLocationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * data format of the output either json or CSV
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
+    public String contentType;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationQueryParams queryParams;
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withQueryParams(GetVisualCrossingWebServicesRestServicesTimelineLocationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * data to include in the output (required for CSV format - days,hours,alerts,current,events )
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include")
+    public String include;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withInclude(String include) {
+        this.include = include;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public String serverURL;
-    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Language to use for weather descriptions
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * Locaton of interest as an address, partial address or decimal latitude,longtude value
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitGroup")
+    public String unitGroup;
+    public GetVisualCrossingWebServicesRestServicesTimelineLocationRequest withUnitGroup(String unitGroup) {
+        this.unitGroup = unitGroup;
         return this;
     }
     

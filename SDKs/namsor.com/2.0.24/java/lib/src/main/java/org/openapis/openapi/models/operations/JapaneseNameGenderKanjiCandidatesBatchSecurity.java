@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JapaneseNameGenderKanjiCandidatesBatchSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public JapaneseNameGenderKanjiCandidatesBatchSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-KEY")
+    public String apiKey;
+    public JapaneseNameGenderKanjiCandidatesBatchSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }

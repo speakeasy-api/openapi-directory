@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ModifySubaccountRequest {
-    
-    public ModifySubaccountPathParams pathParams;
-    public ModifySubaccountRequest withPathParams(ModifySubaccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ModifySubaccountRequest request;
-    public ModifySubaccountRequest withRequest(org.openapis.openapi.models.shared.ModifySubaccountRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ModifySubaccountRequest modifySubaccountRequest;
+    public ModifySubaccountRequest withModifySubaccountRequest(org.openapis.openapi.models.shared.ModifySubaccountRequest modifySubaccountRequest) {
+        this.modifySubaccountRequest = modifySubaccountRequest;
         return this;
     }
     
+    /**
+     * ID of the primary account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public ModifySubaccountRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public ModifySubaccountSecurity security;
-    public ModifySubaccountRequest withSecurity(ModifySubaccountSecurity security) {
-        this.security = security;
+    /**
+     * ID of the subaccount
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subaccount_key")
+    public String subaccountKey;
+    public ModifySubaccountRequest withSubaccountKey(String subaccountKey) {
+        this.subaccountKey = subaccountKey;
         return this;
     }
     

@@ -53,12 +53,12 @@ public class PrimaryIPActions {
      */
     public org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsAssignResponse postPrimaryIpsIdActionsAssign(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsAssignRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsAssignPathParams.class, baseUrl, "/primary_ips/{id}/actions/assign", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsAssignRequest.class, baseUrl, "/primary_ips/{id}/actions/assign", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -94,12 +94,12 @@ public class PrimaryIPActions {
      */
     public org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeDnsPtrResponse postPrimaryIpsIdActionsChangeDnsPtr(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeDnsPtrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeDnsPtrPathParams.class, baseUrl, "/primary_ips/{id}/actions/change_dns_ptr", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeDnsPtrRequest.class, baseUrl, "/primary_ips/{id}/actions/change_dns_ptr", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -138,12 +138,12 @@ public class PrimaryIPActions {
      */
     public org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeProtectionResponse postPrimaryIpsIdActionsChangeProtection(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeProtectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeProtectionPathParams.class, baseUrl, "/primary_ips/{id}/actions/change_protection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsChangeProtectionRequest.class, baseUrl, "/primary_ips/{id}/actions/change_protection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -191,7 +191,7 @@ public class PrimaryIPActions {
      */
     public org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsUnassignResponse postPrimaryIpsIdActionsUnassign(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsUnassignRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsUnassignPathParams.class, baseUrl, "/primary_ips/{id}/actions/unassign", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostPrimaryIpsIdActionsUnassignRequest.class, baseUrl, "/primary_ips/{id}/actions/unassign", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

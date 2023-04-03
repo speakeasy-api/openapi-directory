@@ -39,7 +39,7 @@ public class Conversation {
      */
     public org.openapis.openapi.models.operations.StoryIdMessagesGetResponse storyIdMessagesGet(org.openapis.openapi.models.operations.StoryIdMessagesGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdMessagesGetPathParams.class, baseUrl, "/{id}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdMessagesGetRequest.class, baseUrl, "/{id}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,12 +86,12 @@ public class Conversation {
      */
     public org.openapis.openapi.models.operations.StoryIdMessagesPostResponse storyIdMessagesPost(org.openapis.openapi.models.operations.StoryIdMessagesPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdMessagesPostPathParams.class, baseUrl, "/{id}/messages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdMessagesPostRequest.class, baseUrl, "/{id}/messages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

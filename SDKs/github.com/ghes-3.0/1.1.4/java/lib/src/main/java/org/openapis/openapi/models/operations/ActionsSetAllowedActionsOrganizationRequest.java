@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetAllowedActionsOrganizationRequest {
-    
-    public ActionsSetAllowedActionsOrganizationPathParams pathParams;
-    public ActionsSetAllowedActionsOrganizationRequest withPathParams(ActionsSetAllowedActionsOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsSetAllowedActionsOrganizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SelectedActions request;
-    public ActionsSetAllowedActionsOrganizationRequest withRequest(org.openapis.openapi.models.shared.SelectedActions request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SelectedActions selectedActions;
+    public ActionsSetAllowedActionsOrganizationRequest withSelectedActions(org.openapis.openapi.models.shared.SelectedActions selectedActions) {
+        this.selectedActions = selectedActions;
         return this;
     }
     

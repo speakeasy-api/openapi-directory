@@ -40,7 +40,7 @@ public class AlternateManagementInterface {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchAlternateManagementInterfaceResponse getNetworkSwitchAlternateManagementInterface(org.openapis.openapi.models.operations.GetNetworkSwitchAlternateManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAlternateManagementInterfacePathParams.class, baseUrl, "/networks/{networkId}/switch/alternateManagementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAlternateManagementInterfaceRequest.class, baseUrl, "/networks/{networkId}/switch/alternateManagementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class AlternateManagementInterface {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessAlternateManagementInterfaceResponse getNetworkWirelessAlternateManagementInterface(org.openapis.openapi.models.operations.GetNetworkWirelessAlternateManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessAlternateManagementInterfacePathParams.class, baseUrl, "/networks/{networkId}/wireless/alternateManagementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessAlternateManagementInterfaceRequest.class, baseUrl, "/networks/{networkId}/wireless/alternateManagementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class AlternateManagementInterface {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchAlternateManagementInterfaceResponse updateNetworkSwitchAlternateManagementInterface(org.openapis.openapi.models.operations.UpdateNetworkSwitchAlternateManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAlternateManagementInterfacePathParams.class, baseUrl, "/networks/{networkId}/switch/alternateManagementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAlternateManagementInterfaceRequest.class, baseUrl, "/networks/{networkId}/switch/alternateManagementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -162,12 +162,12 @@ public class AlternateManagementInterface {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessAlternateManagementInterfaceResponse updateNetworkWirelessAlternateManagementInterface(org.openapis.openapi.models.operations.UpdateNetworkWirelessAlternateManagementInterfaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessAlternateManagementInterfacePathParams.class, baseUrl, "/networks/{networkId}/wireless/alternateManagementInterface", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessAlternateManagementInterfaceRequest.class, baseUrl, "/networks/{networkId}/wireless/alternateManagementInterface", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -37,7 +37,7 @@ public class Map {
      */
     public org.openapis.openapi.models.operations.GETChromosomeByAssemblyUsingGETResponse getChromosomeByAssemblyUsingGET(org.openapis.openapi.models.operations.GETChromosomeByAssemblyUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETChromosomeByAssemblyUsingGETPathParams.class, baseUrl, "/maps/chr/{chromosome}/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETChromosomeByAssemblyUsingGETRequest.class, baseUrl, "/maps/chr/{chromosome}/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -76,7 +76,7 @@ public class Map {
      */
     public org.openapis.openapi.models.operations.GETChromosomesByAssemblyUsingGETResponse getChromosomesByAssemblyUsingGET(org.openapis.openapi.models.operations.GETChromosomesByAssemblyUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETChromosomesByAssemblyUsingGETPathParams.class, baseUrl, "/maps/chr/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETChromosomesByAssemblyUsingGETRequest.class, baseUrl, "/maps/chr/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -115,7 +115,7 @@ public class Map {
      */
     public org.openapis.openapi.models.operations.GETMapsBySpeciesUsingGETResponse getMapsBySpeciesUsingGET(org.openapis.openapi.models.operations.GETMapsBySpeciesUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMapsBySpeciesUsingGETPathParams.class, baseUrl, "/maps/{speciesTypeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMapsBySpeciesUsingGETRequest.class, baseUrl, "/maps/{speciesTypeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

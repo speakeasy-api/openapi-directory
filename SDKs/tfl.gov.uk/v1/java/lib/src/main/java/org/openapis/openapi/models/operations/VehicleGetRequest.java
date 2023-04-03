@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VehicleGetRequest {
-    
-    public VehicleGetPathParams pathParams;
-    public VehicleGetRequest withPathParams(VehicleGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A comma-separated list of vehicle ids e.g. LX58CFV,LX11AZB,LX58CFE. Max approx. 25 ids.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
+    public String[] ids;
+    public VehicleGetRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     

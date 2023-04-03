@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEffectiveRecommendationPreferencesRequest {
-    
-    public GetEffectiveRecommendationPreferencesHeaders headers;
-    public GetEffectiveRecommendationPreferencesRequest withHeaders(GetEffectiveRecommendationPreferencesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GetEffectiveRecommendationPreferencesRequest getEffectiveRecommendationPreferencesRequest;
+    public GetEffectiveRecommendationPreferencesRequest withGetEffectiveRecommendationPreferencesRequest(org.openapis.openapi.models.shared.GetEffectiveRecommendationPreferencesRequest getEffectiveRecommendationPreferencesRequest) {
+        this.getEffectiveRecommendationPreferencesRequest = getEffectiveRecommendationPreferencesRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetEffectiveRecommendationPreferencesRequest request;
-    public GetEffectiveRecommendationPreferencesRequest withRequest(org.openapis.openapi.models.shared.GetEffectiveRecommendationPreferencesRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetEffectiveRecommendationPreferencesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetEffectiveRecommendationPreferencesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetEffectiveRecommendationPreferencesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetEffectiveRecommendationPreferencesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetEffectiveRecommendationPreferencesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetEffectiveRecommendationPreferencesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetEffectiveRecommendationPreferencesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public GetEffectiveRecommendationPreferencesXAmzTargetEnum xAmzTarget;
+    public GetEffectiveRecommendationPreferencesRequest withXAmzTarget(GetEffectiveRecommendationPreferencesXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

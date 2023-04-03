@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackingSnippetRequest {
-    
-    public GetTrackingSnippetQueryParams queryParams;
-    public GetTrackingSnippetRequest withQueryParams(GetTrackingSnippetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The domain you want to receive a snippet for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
+    public String domain;
+    public GetTrackingSnippetRequest withDomain(String domain) {
+        this.domain = domain;
         return this;
     }
     

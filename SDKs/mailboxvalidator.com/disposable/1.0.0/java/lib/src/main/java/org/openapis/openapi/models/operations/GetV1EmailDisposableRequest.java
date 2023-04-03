@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1EmailDisposableRequest {
+    /**
+     * The email address to check if is from a disposable email provider.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetV1EmailDisposableRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
     
-    public GetV1EmailDisposableQueryParams queryParams;
-    public GetV1EmailDisposableRequest withQueryParams(GetV1EmailDisposableQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return the result in json (default) or xml format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetV1EmailDisposableFormatEnum format;
+    public GetV1EmailDisposableRequest withFormat(GetV1EmailDisposableFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetV1EmailDisposableRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

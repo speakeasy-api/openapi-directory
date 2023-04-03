@@ -7,24 +7,42 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadFileAsMultipartRequest {
-    
-    public UploadFileAsMultipartPathParams pathParams;
-    public UploadFileAsMultipartRequest withPathParams(UploadFileAsMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UploadFileAsMultipartHeaders headers;
-    public UploadFileAsMultipartRequest withHeaders(UploadFileAsMultipartHeaders headers) {
-        this.headers = headers;
+    /**
+     * Content-Range 
+     * 
+     * e.g. `bytes 0-999/3980`
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Range")
+    public String contentRange;
+    public UploadFileAsMultipartRequest withContentRange(String contentRange) {
+        this.contentRange = contentRange;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UploadFileAsMultipartRequestBody request;
-    public UploadFileAsMultipartRequest withRequest(UploadFileAsMultipartRequestBody request) {
-        this.request = request;
+    public UploadFileAsMultipartRequestBody requestBody;
+    public UploadFileAsMultipartRequest withRequestBody(UploadFileAsMultipartRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UploadFileAsMultipartRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public UploadFileAsMultipartRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

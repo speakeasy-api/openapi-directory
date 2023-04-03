@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveEUAByIdV2Request {
-    
-    public RetrieveEUAByIdV2PathParams pathParams;
-    public RetrieveEUAByIdV2Request withPathParams(RetrieveEUAByIdV2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A UUID string identifying this end user agreement.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public RetrieveEUAByIdV2Request withId(String id) {
+        this.id = id;
         return this;
     }
     

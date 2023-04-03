@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCqActionsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorizableId")
+    public String authorizableId;
+    public PostCqActionsRequest withAuthorizableId(String authorizableId) {
+        this.authorizableId = authorizableId;
+        return this;
+    }
     
-    public PostCqActionsQueryParams queryParams;
-    public PostCqActionsRequest withQueryParams(PostCqActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changelog")
+    public String changelog;
+    public PostCqActionsRequest withChangelog(String changelog) {
+        this.changelog = changelog;
         return this;
     }
     

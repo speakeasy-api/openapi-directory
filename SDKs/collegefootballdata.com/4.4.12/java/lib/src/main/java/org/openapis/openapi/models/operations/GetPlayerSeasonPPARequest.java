@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlayerSeasonPPARequest {
+    /**
+     * Conference abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetPlayerSeasonPPARequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
     
-    public GetPlayerSeasonPPAQueryParams queryParams;
-    public GetPlayerSeasonPPARequest withQueryParams(GetPlayerSeasonPPAQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter to remove garbage time plays from calculations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeGarbageTime")
+    public Boolean excludeGarbageTime;
+    public GetPlayerSeasonPPARequest withExcludeGarbageTime(Boolean excludeGarbageTime) {
+        this.excludeGarbageTime = excludeGarbageTime;
+        return this;
+    }
+    
+    /**
+     * Player id filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=playerId")
+    public Long playerId;
+    public GetPlayerSeasonPPARequest withPlayerId(Long playerId) {
+        this.playerId = playerId;
+        return this;
+    }
+    
+    /**
+     * Position abbreviation filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=position")
+    public String position;
+    public GetPlayerSeasonPPARequest withPosition(String position) {
+        this.position = position;
+        return this;
+    }
+    
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetPlayerSeasonPPARequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Minimum play threshold filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=threshold")
+    public String threshold;
+    public GetPlayerSeasonPPARequest withThreshold(String threshold) {
+        this.threshold = threshold;
+        return this;
+    }
+    
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetPlayerSeasonPPARequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

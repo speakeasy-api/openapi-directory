@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleDeleteRequest {
-    
-    public ArticleDeleteQueryParams queryParams;
-    public ArticleDeleteRequest withQueryParams(ArticleDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * indentity number(primary key) for article object
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ArticleId")
+    public Integer articleId;
+    public ArticleDeleteRequest withArticleId(Integer articleId) {
+        this.articleId = articleId;
         return this;
     }
     

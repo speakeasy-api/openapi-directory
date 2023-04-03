@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalcSigmaUsdExchangeRequest {
-    
-    public CalcSigmaUsdExchangePathParams pathParams;
-    public CalcSigmaUsdExchangeRequest withPathParams(CalcSigmaUsdExchangePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=amount")
+    public Long amount;
+    public CalcSigmaUsdExchangeRequest withAmount(Long amount) {
+        this.amount = amount;
         return this;
     }
     

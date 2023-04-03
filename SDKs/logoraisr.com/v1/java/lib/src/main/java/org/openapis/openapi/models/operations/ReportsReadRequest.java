@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportsReadRequest {
-    
-    public ReportsReadPathParams pathParams;
-    public ReportsReadRequest withPathParams(ReportsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_number")
+    public String reportNumber;
+    public ReportsReadRequest withReportNumber(String reportNumber) {
+        this.reportNumber = reportNumber;
         return this;
     }
     

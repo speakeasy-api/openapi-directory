@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest {
-    
-    public DeleteProductsIdDigitalProductsDigitalProductIdJsonPathParams pathParams;
-    public DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest withPathParams(DeleteProductsIdDigitalProductsDigitalProductIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Product DigitalProduct
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=digital_product_id")
+    public Integer digitalProductId;
+    public DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest withDigitalProductId(Integer digitalProductId) {
+        this.digitalProductId = digitalProductId;
+        return this;
+    }
     
-    public DeleteProductsIdDigitalProductsDigitalProductIdJsonQueryParams queryParams;
-    public DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest withQueryParams(DeleteProductsIdDigitalProductsDigitalProductIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeleteProductsIdDigitalProductsDigitalProductIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

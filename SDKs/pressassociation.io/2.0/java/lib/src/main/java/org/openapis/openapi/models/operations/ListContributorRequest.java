@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListContributorRequest {
-    
-    public ListContributorQueryParams queryParams;
-    public ListContributorRequest withQueryParams(ListContributorQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public ListContributorRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     
+    /**
+     * Limit the the number of items to be returned per page. For example: 5.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ListContributorRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListContributorSecurity security;
-    public ListContributorRequest withSecurity(ListContributorSecurity security) {
-        this.security = security;
+    /**
+     * Updated After
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAfter")
+    public String updatedAfter;
+    public ListContributorRequest withUpdatedAfter(String updatedAfter) {
+        this.updatedAfter = updatedAfter;
         return this;
     }
     

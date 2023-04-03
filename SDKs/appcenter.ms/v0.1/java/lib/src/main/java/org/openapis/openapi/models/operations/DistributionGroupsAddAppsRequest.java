@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsAddAppsRequest {
-    
-    public DistributionGroupsAddAppsPathParams pathParams;
-    public DistributionGroupsAddAppsRequest withPathParams(DistributionGroupsAddAppsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The name of the apps to be added to the distribution group. The apps have to be owned by the organization.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsAddAppsRequestBody request;
-    public DistributionGroupsAddAppsRequest withRequest(DistributionGroupsAddAppsRequestBody request) {
-        this.request = request;
+    public DistributionGroupsAddAppsRequestBody requestBody;
+    public DistributionGroupsAddAppsRequest withRequestBody(DistributionGroupsAddAppsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsAddAppsRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
+        return this;
+    }
     
-    public DistributionGroupsAddAppsSecurity security;
-    public DistributionGroupsAddAppsRequest withSecurity(DistributionGroupsAddAppsSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsAddAppsRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

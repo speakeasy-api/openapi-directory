@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncMapRequest {
-    
-    public UpdateSyncMapPathParams pathParams;
-    public UpdateSyncMapRequest withPathParams(UpdateSyncMapPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncMapUpdateSyncMapRequest request;
-    public UpdateSyncMapRequest withRequest(UpdateSyncMapUpdateSyncMapRequest request) {
-        this.request = request;
+    public UpdateSyncMapUpdateSyncMapRequest requestBody;
+    public UpdateSyncMapRequest withRequestBody(UpdateSyncMapUpdateSyncMapRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncMapSecurity security;
-    public UpdateSyncMapRequest withSecurity(UpdateSyncMapSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Sync Service](https://www.twilio.com/docs/sync/api/service) with the Sync Map resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncMapRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateSyncMapRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Sync Map resource to update. Can be the Sync Map's `sid` or its `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateSyncMapRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

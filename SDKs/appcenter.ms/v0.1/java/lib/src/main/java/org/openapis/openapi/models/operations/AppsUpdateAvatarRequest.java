@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsUpdateAvatarRequest {
-    
-    public AppsUpdateAvatarPathParams pathParams;
-    public AppsUpdateAvatarRequest withPathParams(AppsUpdateAvatarPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public AppsUpdateAvatarRequestBody request;
-    public AppsUpdateAvatarRequest withRequest(AppsUpdateAvatarRequestBody request) {
-        this.request = request;
+    public AppsUpdateAvatarRequestBody requestBody;
+    public AppsUpdateAvatarRequest withRequestBody(AppsUpdateAvatarRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppsUpdateAvatarRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppsUpdateAvatarSecurity security;
-    public AppsUpdateAvatarRequest withSecurity(AppsUpdateAvatarSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppsUpdateAvatarRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

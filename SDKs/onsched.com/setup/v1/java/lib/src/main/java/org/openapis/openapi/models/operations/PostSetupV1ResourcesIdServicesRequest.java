@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSetupV1ResourcesIdServicesRequest {
-    
-    public PostSetupV1ResourcesIdServicesPathParams pathParams;
-    public PostSetupV1ResourcesIdServicesRequest withPathParams(PostSetupV1ResourcesIdServicesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Array of valid service object id's
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String[] request;
-    public PostSetupV1ResourcesIdServicesRequest withRequest(String[] request) {
-        this.request = request;
+    public String[] requestBody;
+    public PostSetupV1ResourcesIdServicesRequest withRequestBody(String[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * id of resource object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSetupV1ResourcesIdServicesRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

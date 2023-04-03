@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectNoteRequest {
-    
-    public PrivateProjectNotePathParams pathParams;
-    public PrivateProjectNoteRequest withPathParams(PrivateProjectNotePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Note unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=note_id")
+    public Long noteId;
+    public PrivateProjectNoteRequest withNoteId(Long noteId) {
+        this.noteId = noteId;
         return this;
     }
     
-    
-    public PrivateProjectNoteSecurity security;
-    public PrivateProjectNoteRequest withSecurity(PrivateProjectNoteSecurity security) {
-        this.security = security;
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectNoteRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

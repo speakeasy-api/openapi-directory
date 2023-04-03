@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestGdprExportAppRequest {
-    
-    public TestGdprExportAppPathParams pathParams;
-    public TestGdprExportAppRequest withPathParams(TestGdprExportAppPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestGdprExportAppRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public TestGdprExportAppSecurity security;
-    public TestGdprExportAppRequest withSecurity(TestGdprExportAppSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestGdprExportAppRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

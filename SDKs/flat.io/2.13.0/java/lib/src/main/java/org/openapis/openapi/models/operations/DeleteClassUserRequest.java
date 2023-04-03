@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteClassUserRequest {
-    
-    public DeleteClassUserPathParams pathParams;
-    public DeleteClassUserRequest withPathParams(DeleteClassUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public DeleteClassUserRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     
-    
-    public DeleteClassUserSecurity security;
-    public DeleteClassUserRequest withSecurity(DeleteClassUserSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public DeleteClassUserRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

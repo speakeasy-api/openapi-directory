@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetalistofReviewsRequest {
-    
-    public GetalistofReviewsQueryParams queryParams;
-    public GetalistofReviewsRequest withQueryParams(GetalistofReviewsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetalistofReviewsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetalistofReviewsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetalistofReviewsHeaders headers;
-    public GetalistofReviewsRequest withHeaders(GetalistofReviewsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Zero base starting record number, `0` is the default value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public GetalistofReviewsRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * Case-sensitive fieldName to order records (optionally add `:asc` or `:desc`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public String orderBy;
+    public GetalistofReviewsRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Filter the reviews by product ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_id")
+    public String productId;
+    public GetalistofReviewsRequest withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    
+    /**
+     * Returns Reviews that contain the search term in `productId`, `sku`, `shopperId`, or `reviewerName`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_term")
+    public String searchTerm;
+    public GetalistofReviewsRequest withSearchTerm(String searchTerm) {
+        this.searchTerm = searchTerm;
+        return this;
+    }
+    
+    /**
+     * Status of the review, approved (`true`) or not (`false`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Boolean status;
+    public GetalistofReviewsRequest withStatus(Boolean status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Zero base ending record number, `3` is the default value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public String to;
+    public GetalistofReviewsRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

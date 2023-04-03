@@ -33,10 +33,11 @@ public class PromotionReport {
     /**
      * This method generates a report that lists the seller's running, paused, and ended promotions for the specified eBay marketplace. The result set can be filtered by the promotion status and the number of results to return. You can also supply &lt;i&gt;keywords&lt;/i&gt; to limit the report to promotions that contain the specified keywords. &lt;br&gt;&lt;br&gt;Specify the eBay marketplace for which you want the report run using the &lt;b&gt;marketplace_id&lt;/b&gt; query parameter. Supply additional query parameters to control the report as needed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPromotionReportsResponse getPromotionReports(org.openapis.openapi.models.operations.GetPromotionReportsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPromotionReportsResponse getPromotionReports(org.openapis.openapi.models.operations.GetPromotionReportsRequest request, org.openapis.openapi.models.operations.GetPromotionReportsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/promotion_report");
         
@@ -44,14 +45,14 @@ public class PromotionReport {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPromotionReportsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPromotionReportsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

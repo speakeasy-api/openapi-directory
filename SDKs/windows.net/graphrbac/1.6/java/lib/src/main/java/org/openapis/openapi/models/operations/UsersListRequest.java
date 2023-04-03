@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersListRequest {
-    
-    public UsersListPathParams pathParams;
-    public UsersListRequest withPathParams(UsersListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The expand value for the operation result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$expand")
+    public String dollarExpand;
+    public UsersListRequest withDollarExpand(String dollarExpand) {
+        this.dollarExpand = dollarExpand;
         return this;
     }
     
+    /**
+     * The filter to apply to the operation.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
+    public String dollarFilter;
+    public UsersListRequest withDollarFilter(String dollarFilter) {
+        this.dollarFilter = dollarFilter;
+        return this;
+    }
     
-    public UsersListQueryParams queryParams;
-    public UsersListRequest withQueryParams(UsersListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) Set the maximum number of results per response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
+    public Long dollarTop;
+    public UsersListRequest withDollarTop(Long dollarTop) {
+        this.dollarTop = dollarTop;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public UsersListRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public UsersListRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

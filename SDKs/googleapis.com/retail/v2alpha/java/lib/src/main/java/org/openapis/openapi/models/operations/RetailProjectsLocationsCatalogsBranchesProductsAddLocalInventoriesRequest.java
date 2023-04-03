@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest {
-    
-    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesPathParams pathParams;
-    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withPathParams(RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesQueryParams queryParams;
-    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withQueryParams(RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudRetailV2alphaAddLocalInventoriesRequest request;
-    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2alphaAddLocalInventoriesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudRetailV2alphaAddLocalInventoriesRequest googleCloudRetailV2alphaAddLocalInventoriesRequest;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withGoogleCloudRetailV2alphaAddLocalInventoriesRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2alphaAddLocalInventoriesRequest googleCloudRetailV2alphaAddLocalInventoriesRequest) {
+        this.googleCloudRetailV2alphaAddLocalInventoriesRequest = googleCloudRetailV2alphaAddLocalInventoriesRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesSecurity security;
-    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withSecurity(RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Required. Full resource name of Product, such as `projects/* /locations/global/catalogs/default_catalog/branches/default_branch/products/some_product_id`. If the caller does not have permission to access the Product, regardless of whether or not it exists, a PERMISSION_DENIED error is returned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=product")
+    public String product;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

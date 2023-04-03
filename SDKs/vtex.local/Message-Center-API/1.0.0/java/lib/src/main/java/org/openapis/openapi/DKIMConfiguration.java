@@ -39,7 +39,7 @@ public class DKIMConfiguration {
      */
     public org.openapis.openapi.models.operations.CreateDKIMResponse createDKIM(org.openapis.openapi.models.operations.CreateDKIMRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDKIMPathParams.class, baseUrl, "/api/mail-service/pvt/providers/{EmailProvider}/dkim", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDKIMRequest.class, baseUrl, "/api/mail-service/pvt/providers/{EmailProvider}/dkim", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

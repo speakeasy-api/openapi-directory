@@ -18,12 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ControlChargerChargingSecurity;
-import org.openapis.openapi.models.operations.ControlChargerChargingPathParams;
 import org.openapis.openapi.models.operations.ControlChargerChargingRequestBodyActionEnum;
 import org.openapis.openapi.models.operations.ControlChargerChargingRequestBody;
 import org.openapis.openapi.models.operations.ControlChargerChargingRequest;
 import org.openapis.openapi.models.operations.ControlChargerChargingResponse;
-import org.openapis.openapi.models.shared.SchemeUserAccessToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,20 +30,15 @@ public class Application {
                 .build();
 
             ControlChargerChargingRequest req = new ControlChargerChargingRequest() {{
-                security = new ControlChargerChargingSecurity() {{
-                    userAccessToken = new SchemeUserAccessToken() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ControlChargerChargingPathParams() {{
-                    chargerId = "corrupti";
-                }};
-                request = new ControlChargerChargingRequestBody() {{
+                requestBody = new ControlChargerChargingRequestBody() {{
                     action = "START";
                 }};
-            }};            
+                chargerId = "corrupti";
+            }}            
 
-            ControlChargerChargingResponse res = sdk.chargers.controlChargerCharging(req);
+            ControlChargerChargingResponse res = sdk.chargers.controlChargerCharging(req, new ControlChargerChargingSecurity() {{
+                userAccessToken = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -57,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### chargers

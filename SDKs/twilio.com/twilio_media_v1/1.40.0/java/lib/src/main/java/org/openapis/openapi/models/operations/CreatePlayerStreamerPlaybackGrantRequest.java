@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePlayerStreamerPlaybackGrantRequest {
-    
-    public CreatePlayerStreamerPlaybackGrantPathParams pathParams;
-    public CreatePlayerStreamerPlaybackGrantRequest withPathParams(CreatePlayerStreamerPlaybackGrantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreatePlayerStreamerPlaybackGrantCreatePlayerStreamerPlaybackGrantRequest request;
-    public CreatePlayerStreamerPlaybackGrantRequest withRequest(CreatePlayerStreamerPlaybackGrantCreatePlayerStreamerPlaybackGrantRequest request) {
-        this.request = request;
+    public CreatePlayerStreamerPlaybackGrantCreatePlayerStreamerPlaybackGrantRequest requestBody;
+    public CreatePlayerStreamerPlaybackGrantRequest withRequestBody(CreatePlayerStreamerPlaybackGrantCreatePlayerStreamerPlaybackGrantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreatePlayerStreamerPlaybackGrantSecurity security;
-    public CreatePlayerStreamerPlaybackGrantRequest withSecurity(CreatePlayerStreamerPlaybackGrantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreatePlayerStreamerPlaybackGrantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string generated to identify the PlayerStreamer resource associated with this PlaybackGrant
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public CreatePlayerStreamerPlaybackGrantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

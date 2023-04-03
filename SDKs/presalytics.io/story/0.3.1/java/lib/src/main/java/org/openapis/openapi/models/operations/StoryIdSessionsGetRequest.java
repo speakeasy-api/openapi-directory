@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdSessionsGetRequest {
-    
-    public StoryIdSessionsGetPathParams pathParams;
-    public StoryIdSessionsGetRequest withPathParams(StoryIdSessionsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdSessionsGetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public StoryIdSessionsGetQueryParams queryParams;
-    public StoryIdSessionsGetRequest withQueryParams(StoryIdSessionsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicate whether the returned object should include child relationships
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_relationships")
+    public Boolean includeRelationships;
+    public StoryIdSessionsGetRequest withIncludeRelationships(Boolean includeRelationships) {
+        this.includeRelationships = includeRelationships;
         return this;
     }
     

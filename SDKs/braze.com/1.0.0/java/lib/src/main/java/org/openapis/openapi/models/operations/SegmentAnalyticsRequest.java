@@ -4,13 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SegmentAnalyticsRequest {
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Point in time when the data series should end - defaults to time of the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
+    public String endingAt;
+    public SegmentAnalyticsRequest withEndingAt(String endingAt) {
+        this.endingAt = endingAt;
+        return this;
+    }
     
-    public SegmentAnalyticsQueryParams queryParams;
-    public SegmentAnalyticsRequest withQueryParams(SegmentAnalyticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) Integer
+     * 
+     * Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 inclusive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public SegmentAnalyticsRequest withLength(String length) {
+        this.length = length;
+        return this;
+    }
+    
+    /**
+     * (Required) String
+     * 
+     * Segment API identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment_id")
+    public String segmentId;
+    public SegmentAnalyticsRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Attempt {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveStatsResponse saveStats(org.openapis.openapi.models.operations.SaveStatsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveStatsResponse saveStats(org.openapis.openapi.models.shared.SaveStatsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/attempt/save_stats");
         
@@ -82,7 +82,7 @@ public class Attempt {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SaveSyncConfigResponse saveSyncConfig(org.openapis.openapi.models.operations.SaveSyncConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SaveSyncConfigResponse saveSyncConfig(org.openapis.openapi.models.shared.SaveAttemptSyncConfigRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/attempt/save_sync_config");
         
@@ -125,7 +125,7 @@ public class Attempt {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetWorkflowInAttemptResponse setWorkflowInAttempt(org.openapis.openapi.models.operations.SetWorkflowInAttemptRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetWorkflowInAttemptResponse setWorkflowInAttempt(org.openapis.openapi.models.shared.SetWorkflowInAttemptRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/attempt/set_workflow_in_attempt");
         

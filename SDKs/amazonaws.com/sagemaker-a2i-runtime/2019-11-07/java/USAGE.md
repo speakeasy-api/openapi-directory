@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.DeleteHumanLoopPathParams;
-import org.openapis.openapi.models.operations.DeleteHumanLoopHeaders;
 import org.openapis.openapi.models.operations.DeleteHumanLoopRequest;
 import org.openapis.openapi.models.operations.DeleteHumanLoopResponse;
 
@@ -14,26 +12,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             DeleteHumanLoopRequest req = new DeleteHumanLoopRequest() {{
-                pathParams = new DeleteHumanLoopPathParams() {{
-                    humanLoopName = "corrupti";
-                }};
-                headers = new DeleteHumanLoopHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                humanLoopName = "corrupti";
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+            }}            
 
             DeleteHumanLoopResponse res = sdk.deleteHumanLoop(req);
 

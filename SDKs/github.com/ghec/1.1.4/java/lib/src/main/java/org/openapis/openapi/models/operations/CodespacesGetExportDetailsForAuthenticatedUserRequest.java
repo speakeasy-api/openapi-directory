@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesGetExportDetailsForAuthenticatedUserRequest {
+    /**
+     * The name of the codespace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=codespace_name")
+    public String codespaceName;
+    public CodespacesGetExportDetailsForAuthenticatedUserRequest withCodespaceName(String codespaceName) {
+        this.codespaceName = codespaceName;
+        return this;
+    }
     
-    public CodespacesGetExportDetailsForAuthenticatedUserPathParams pathParams;
-    public CodespacesGetExportDetailsForAuthenticatedUserRequest withPathParams(CodespacesGetExportDetailsForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the export operation, or `latest`. Currently only `latest` is currently supported.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=export_id")
+    public String exportId;
+    public CodespacesGetExportDetailsForAuthenticatedUserRequest withExportId(String exportId) {
+        this.exportId = exportId;
         return this;
     }
     

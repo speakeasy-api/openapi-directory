@@ -7,17 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsCreateReplyForReviewCommentRequest {
-    
-    public PullsCreateReplyForReviewCommentPathParams pathParams;
-    public PullsCreateReplyForReviewCommentRequest withPathParams(PullsCreateReplyForReviewCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PullsCreateReplyForReviewCommentRequestBody requestBody;
+    public PullsCreateReplyForReviewCommentRequest withRequestBody(PullsCreateReplyForReviewCommentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PullsCreateReplyForReviewCommentRequestBody request;
-    public PullsCreateReplyForReviewCommentRequest withRequest(PullsCreateReplyForReviewCommentRequestBody request) {
-        this.request = request;
+    /**
+     * The unique identifier of the comment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public PullsCreateReplyForReviewCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public PullsCreateReplyForReviewCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * The number that identifies the pull request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
+    public Long pullNumber;
+    public PullsCreateReplyForReviewCommentRequest withPullNumber(Long pullNumber) {
+        this.pullNumber = pullNumber;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public PullsCreateReplyForReviewCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

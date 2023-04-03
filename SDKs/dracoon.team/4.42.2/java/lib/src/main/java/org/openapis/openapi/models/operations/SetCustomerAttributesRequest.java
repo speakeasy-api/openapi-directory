@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetCustomerAttributesRequest {
-    
-    public SetCustomerAttributesPathParams pathParams;
-    public SetCustomerAttributesRequest withPathParams(SetCustomerAttributesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SetCustomerAttributesHeaders headers;
-    public SetCustomerAttributesRequest withHeaders(SetCustomerAttributesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CustomerAttributes request;
-    public SetCustomerAttributesRequest withRequest(org.openapis.openapi.models.shared.CustomerAttributes request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CustomerAttributes customerAttributes;
+    public SetCustomerAttributesRequest withCustomerAttributes(org.openapis.openapi.models.shared.CustomerAttributes customerAttributes) {
+        this.customerAttributes = customerAttributes;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public SetCustomerAttributesXSdsDateFormatEnum xSdsDateFormat;
+    public SetCustomerAttributesRequest withXSdsDateFormat(SetCustomerAttributesXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public SetCustomerAttributesRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
+        return this;
+    }
+    
+    /**
+     * Customer ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public Long customerId;
+    public SetCustomerAttributesRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WxByDistanceUsV1WxForecastDistanceQueryPostRequest {
-    
-    public WxByDistanceUsV1WxForecastDistanceQueryPostHeaders headers;
-    public WxByDistanceUsV1WxForecastDistanceQueryPostRequest withHeaders(WxByDistanceUsV1WxForecastDistanceQueryPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WxByDistance wxByDistance;
+    public WxByDistanceUsV1WxForecastDistanceQueryPostRequest withWxByDistance(org.openapis.openapi.models.shared.WxByDistance wxByDistance) {
+        this.wxByDistance = wxByDistance;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WxByDistance request;
-    public WxByDistanceUsV1WxForecastDistanceQueryPostRequest withRequest(org.openapis.openapi.models.shared.WxByDistance request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public WxByDistanceUsV1WxForecastDistanceQueryPostRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

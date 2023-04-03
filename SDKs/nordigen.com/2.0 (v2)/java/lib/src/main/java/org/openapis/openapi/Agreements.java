@@ -41,12 +41,12 @@ public class Agreements {
      */
     public org.openapis.openapi.models.operations.AcceptEUAResponse acceptEUA(org.openapis.openapi.models.operations.AcceptEUARequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcceptEUAPathParams.class, baseUrl, "/api/v2/agreements/enduser/{id}/accept/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AcceptEUARequest.class, baseUrl, "/api/v2/agreements/enduser/{id}/accept/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "enduserAcceptanceDetailsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -123,7 +123,7 @@ public class Agreements {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateEUAV2Response createEUAV2(org.openapis.openapi.models.operations.CreateEUAV2Request request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateEUAV2Response createEUAV2(org.openapis.openapi.models.shared.EndUserAgreementRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/agreements/enduser/");
         
@@ -193,7 +193,7 @@ public class Agreements {
      */
     public org.openapis.openapi.models.operations.DeleteEUAByIdV2Response deleteEUAByIdV2(org.openapis.openapi.models.operations.DeleteEUAByIdV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEUAByIdV2PathParams.class, baseUrl, "/api/v2/agreements/enduser/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEUAByIdV2Request.class, baseUrl, "/api/v2/agreements/enduser/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -256,7 +256,7 @@ public class Agreements {
      */
     public org.openapis.openapi.models.operations.RetrieveEUAByIdV2Response retrieveEUAByIdV2(org.openapis.openapi.models.operations.RetrieveEUAByIdV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEUAByIdV2PathParams.class, baseUrl, "/api/v2/agreements/enduser/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveEUAByIdV2Request.class, baseUrl, "/api/v2/agreements/enduser/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -333,7 +333,7 @@ public class Agreements {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveAllEUAsForAnEndUserV2QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetrieveAllEUAsForAnEndUserV2Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

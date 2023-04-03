@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListMembershipsForAuthenticatedUserRequest {
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgsListMembershipsForAuthenticatedUserRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public OrgsListMembershipsForAuthenticatedUserQueryParams queryParams;
-    public OrgsListMembershipsForAuthenticatedUserRequest withQueryParams(OrgsListMembershipsForAuthenticatedUserQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListMembershipsForAuthenticatedUserRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Indicates the state of the memberships to return. Can be either `active` or `pending`. If not specified, the API returns both active and pending memberships.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public OrgsListMembershipsForAuthenticatedUserStateEnum state;
+    public OrgsListMembershipsForAuthenticatedUserRequest withState(OrgsListMembershipsForAuthenticatedUserStateEnum state) {
+        this.state = state;
         return this;
     }
     

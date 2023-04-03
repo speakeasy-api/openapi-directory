@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSellerLeadRequest {
-    
-    public CreateSellerLeadQueryParams queryParams;
-    public CreateSellerLeadRequest withQueryParams(CreateSellerLeadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CreateSellerLeadRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CreateSellerLeadHeaders headers;
-    public CreateSellerLeadRequest withHeaders(CreateSellerLeadHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CreateSellerLeadRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateSellerLeadRequest request;
-    public CreateSellerLeadRequest withRequest(org.openapis.openapi.models.shared.CreateSellerLeadRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateSellerLeadRequest createSellerLeadRequest;
+    public CreateSellerLeadRequest withCreateSellerLeadRequest(org.openapis.openapi.models.shared.CreateSellerLeadRequest createSellerLeadRequest) {
+        this.createSellerLeadRequest = createSellerLeadRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public CreateSellerLeadRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public CreateSellerLeadRequest withEnvironment(String environment) {
+        this.environment = environment;
         return this;
     }
     

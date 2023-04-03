@@ -7,9 +7,9 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeDeveloperKey developerKey;
-    public Security withDeveloperKey(SchemeDeveloperKey developerKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Developer-Key")
+    public String developerKey;
+    public Security withDeveloperKey(String developerKey) {
         this.developerKey = developerKey;
         return this;
     }

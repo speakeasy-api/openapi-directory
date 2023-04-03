@@ -37,10 +37,11 @@ public class BroadcastServices {
     /**
      * Gets broadcast services matching the given criteria.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2BroadcastservicesResponse getApiV2Broadcastservices(org.openapis.openapi.models.operations.GetApiV2BroadcastservicesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2BroadcastservicesResponse getApiV2Broadcastservices(org.openapis.openapi.models.operations.GetApiV2BroadcastservicesRequest request, org.openapis.openapi.models.operations.GetApiV2BroadcastservicesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/broadcastservices");
         
@@ -48,14 +49,14 @@ public class BroadcastServices {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2BroadcastservicesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2BroadcastservicesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -92,19 +93,20 @@ public class BroadcastServices {
     /**
      * Returns the broadcast service matching the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdResponse getApiV2BroadcastservicesId(org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdResponse getApiV2BroadcastservicesId(org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdRequest request, org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdPathParams.class, baseUrl, "/api/v2/broadcastservices/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdRequest.class, baseUrl, "/api/v2/broadcastservices/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

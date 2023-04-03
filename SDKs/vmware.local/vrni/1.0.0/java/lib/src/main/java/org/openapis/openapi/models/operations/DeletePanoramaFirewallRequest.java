@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePanoramaFirewallRequest {
-    
-    public DeletePanoramaFirewallPathParams pathParams;
-    public DeletePanoramaFirewallRequest withPathParams(DeletePanoramaFirewallPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeletePanoramaFirewallSecurity security;
-    public DeletePanoramaFirewallRequest withSecurity(DeletePanoramaFirewallSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeletePanoramaFirewallRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

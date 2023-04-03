@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesDraftRegistrationsPartialUpdateRequest {
-    
-    public NodesDraftRegistrationsPartialUpdatePathParams pathParams;
-    public NodesDraftRegistrationsPartialUpdateRequest withPathParams(NodesDraftRegistrationsPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public NodesDraftRegistrationsPartialUpdateDraftRegistrationInput requestBody;
+    public NodesDraftRegistrationsPartialUpdateRequest withRequestBody(NodesDraftRegistrationsPartialUpdateDraftRegistrationInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public NodesDraftRegistrationsPartialUpdateDraftRegistrationInput request;
-    public NodesDraftRegistrationsPartialUpdateRequest withRequest(NodesDraftRegistrationsPartialUpdateDraftRegistrationInput request) {
-        this.request = request;
+    /**
+     * The unique identifier of the draft registration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=draft_id")
+    public String draftId;
+    public NodesDraftRegistrationsPartialUpdateRequest withDraftId(String draftId) {
+        this.draftId = draftId;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public String nodeId;
+    public NodesDraftRegistrationsPartialUpdateRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

@@ -4,20 +4,146 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindTextsRequest {
-    
-    public FindTextsQueryParams queryParams;
-    public FindTextsRequest withQueryParams(FindTextsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * An Id of a contact batch, queries for texts which are used in the particular contact batch
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchId")
+    public Long batchId;
+    public FindTextsRequest withBatchId(Long batchId) {
+        this.batchId = batchId;
         return this;
     }
     
+    /**
+     * An id of a campaign, queries for texts inside a particular campaign. Specify null to list texts of all campaigns or 0 for a default campaign
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
+    public Long campaignId;
+    public FindTextsRequest withCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
     
-    public FindTextsSecurity security;
-    public FindTextsRequest withSecurity(FindTextsSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindTextsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * A phone number in E.164 format (11-digit). Example: 12132000384, 67076
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromNumber")
+    public String fromNumber;
+    public FindTextsRequest withFromNumber(String fromNumber) {
+        this.fromNumber = fromNumber;
+        return this;
+    }
+    
+    /**
+     * List of Text ids to search for, if ids specified other query params ignored
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Long[] id;
+    public FindTextsRequest withId(Long[] id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Specify true for inbound or false for outbounds. Do not specify this parameter if you need to get both inbound and outbound texts listed in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inbound")
+    public Boolean inbound;
+    public FindTextsRequest withInbound(Boolean inbound) {
+        this.inbound = inbound;
+        return this;
+    }
+    
+    /**
+     * Start of the find time interval, formatted in unix time milliseconds. Example: 1473781817000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalBegin")
+    public Long intervalBegin;
+    public FindTextsRequest withIntervalBegin(Long intervalBegin) {
+        this.intervalBegin = intervalBegin;
+        return this;
+    }
+    
+    /**
+     * End of the find time interval, formatted in unix time milliseconds. Example: 1473781817000
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalEnd")
+    public Long intervalEnd;
+    public FindTextsRequest withIntervalEnd(Long intervalEnd) {
+        this.intervalEnd = intervalEnd;
+        return this;
+    }
+    
+    /**
+     * A label of a text message
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
+    public String label;
+    public FindTextsRequest withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindTextsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindTextsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Expected text results in comma separated string, available values: SENT, RECEIVED, DNT, TOO_BIG, INTERNAL_ERROR, CARRIER_ERROR, CARRIER_TEMP_ERROR, UNDIALED. See [call states and results](https://developers.callfire.com/results-responses-errors.html)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=results")
+    public String results;
+    public FindTextsRequest withResults(String results) {
+        this.results = results;
+        return this;
+    }
+    
+    /**
+     * Expected text statuses in comma separated string, available values: READY, SELECTED, CALLBACK, FINISHED, DISABLED, DNC, DUP, INVALID, TIMEOUT, PERIOD_LIMIT. See [call states and results](https://developers.callfire.com/results-responses-errors.html)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public String states;
+    public FindTextsRequest withStates(String states) {
+        this.states = states;
+        return this;
+    }
+    
+    /**
+     * A phone number in E.164 format (11-digit). Example: 12132000384, 67076
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toNumber")
+    public String toNumber;
+    public FindTextsRequest withToNumber(String toNumber) {
+        this.toNumber = toNumber;
         return this;
     }
     

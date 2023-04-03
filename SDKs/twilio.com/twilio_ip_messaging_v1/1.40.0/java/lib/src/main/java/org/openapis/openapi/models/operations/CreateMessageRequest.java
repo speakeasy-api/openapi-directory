@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMessageRequest {
-    
-    public CreateMessagePathParams pathParams;
-    public CreateMessageRequest withPathParams(CreateMessagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public CreateMessageRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateMessageCreateMessageRequest request;
-    public CreateMessageRequest withRequest(CreateMessageCreateMessageRequest request) {
-        this.request = request;
+    public CreateMessageCreateMessageRequest requestBody;
+    public CreateMessageRequest withRequestBody(CreateMessageCreateMessageRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateMessageSecurity security;
-    public CreateMessageRequest withSecurity(CreateMessageSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateMessageRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateMessageRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

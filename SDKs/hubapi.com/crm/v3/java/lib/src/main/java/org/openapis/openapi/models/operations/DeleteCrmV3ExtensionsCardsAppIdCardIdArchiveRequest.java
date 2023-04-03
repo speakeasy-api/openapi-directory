@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest {
-    
-    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams pathParams;
-    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest withPathParams(DeleteCrmV3ExtensionsCardsAppIdCardIdArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the target app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity security;
-    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest withSecurity(DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the card to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
+    public String cardId;
+    public DeleteCrmV3ExtensionsCardsAppIdCardIdArchiveRequest withCardId(String cardId) {
+        this.cardId = cardId;
         return this;
     }
     

@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIdentityHeadersInNotificationsEnabledRequest {
-    
-    public GETSetIdentityHeadersInNotificationsEnabledQueryParams queryParams;
-    public GETSetIdentityHeadersInNotificationsEnabledRequest withQueryParams(GETSetIdentityHeadersInNotificationsEnabledQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetIdentityHeadersInNotificationsEnabledActionEnum action;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withAction(GETSetIdentityHeadersInNotificationsEnabledActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;Sets whether Amazon SES includes the original email headers in Amazon SNS notifications of the specified notification type. A value of &lt;code&gt;true&lt;/code&gt; specifies that Amazon SES will include headers in notifications, and a value of &lt;code&gt;false&lt;/code&gt; specifies that Amazon SES will not include headers in notifications.&lt;/p&gt; &lt;p&gt;This value can only be set when &lt;code&gt;NotificationType&lt;/code&gt; is already set to use a particular Amazon SNS topic.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Enabled")
+    public Boolean enabled;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withEnabled(Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+    }
     
-    public GETSetIdentityHeadersInNotificationsEnabledHeaders headers;
-    public GETSetIdentityHeadersInNotificationsEnabledRequest withHeaders(GETSetIdentityHeadersInNotificationsEnabledHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identity for which to enable or disable headers in notifications. Examples: &lt;code&gt;user@example.com&lt;/code&gt;, &lt;code&gt;example.com&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
+    public String identity;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
+    
+    /**
+     * The notification type for which to enable or disable headers in notifications. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotificationType")
+    public GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum notificationType;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withNotificationType(GETSetIdentityHeadersInNotificationsEnabledNotificationTypeEnum notificationType) {
+        this.notificationType = notificationType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetIdentityHeadersInNotificationsEnabledVersionEnum version;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withVersion(GETSetIdentityHeadersInNotificationsEnabledVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetIdentityHeadersInNotificationsEnabledRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

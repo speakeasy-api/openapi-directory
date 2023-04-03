@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiDeleteFormRequest {
-    
-    public OrderApiDeleteFormHeaders headers;
-    public OrderApiDeleteFormRequest withHeaders(OrderApiDeleteFormHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
+    public org.openapis.openapi.models.shared.OrderDeleteApiModel orderDeleteApiModel;
+    public OrderApiDeleteFormRequest withOrderDeleteApiModel(org.openapis.openapi.models.shared.OrderDeleteApiModel orderDeleteApiModel) {
+        this.orderDeleteApiModel = orderDeleteApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.OrderDeleteApiModel request;
-    public OrderApiDeleteFormRequest withRequest(org.openapis.openapi.models.shared.OrderDeleteApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public OrderApiDeleteFormRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public OrderApiDeleteFormRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

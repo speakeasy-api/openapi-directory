@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersFloatingIpsIpReleaseRequest {
-    
-    public PostContainersFloatingIpsIpReleasePathParams pathParams;
-    public PostContainersFloatingIpsIpReleaseRequest withPathParams(PostContainersFloatingIpsIpReleasePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostContainersFloatingIpsIpReleaseRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostContainersFloatingIpsIpReleaseRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
     
-    public PostContainersFloatingIpsIpReleaseHeaders headers;
-    public PostContainersFloatingIpsIpReleaseRequest withHeaders(PostContainersFloatingIpsIpReleaseHeaders headers) {
-        this.headers = headers;
+    /**
+     * The public IP address that you want to release. Run `cf ic ip list` or call the `GET /containers/floating-ips?all=true` endpoint to review all public IP address that are allocated to your space. After a public IP address is released, it will no longer be allocated to your space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ip")
+    public String ip;
+    public PostContainersFloatingIpsIpReleaseRequest withIp(String ip) {
+        this.ip = ip;
         return this;
     }
     

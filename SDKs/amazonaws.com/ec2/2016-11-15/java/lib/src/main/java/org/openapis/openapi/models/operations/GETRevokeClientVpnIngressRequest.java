@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRevokeClientVpnIngressRequest {
-    
-    public GETRevokeClientVpnIngressQueryParams queryParams;
-    public GETRevokeClientVpnIngressRequest withQueryParams(GETRevokeClientVpnIngressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the Active Directory group for which to revoke access. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessGroupId")
+    public String accessGroupId;
+    public GETRevokeClientVpnIngressRequest withAccessGroupId(String accessGroupId) {
+        this.accessGroupId = accessGroupId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRevokeClientVpnIngressActionEnum action;
+    public GETRevokeClientVpnIngressRequest withAction(GETRevokeClientVpnIngressActionEnum action) {
+        this.action = action;
+        return this;
+    }
     
-    public GETRevokeClientVpnIngressHeaders headers;
-    public GETRevokeClientVpnIngressRequest withHeaders(GETRevokeClientVpnIngressHeaders headers) {
-        this.headers = headers;
+    /**
+     * The ID of the Client VPN endpoint with which the authorization rule is associated.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientVpnEndpointId")
+    public String clientVpnEndpointId;
+    public GETRevokeClientVpnIngressRequest withClientVpnEndpointId(String clientVpnEndpointId) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETRevokeClientVpnIngressRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * Indicates whether access should be revoked for all clients.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RevokeAllGroups")
+    public Boolean revokeAllGroups;
+    public GETRevokeClientVpnIngressRequest withRevokeAllGroups(Boolean revokeAllGroups) {
+        this.revokeAllGroups = revokeAllGroups;
+        return this;
+    }
+    
+    /**
+     * The IPv4 address range, in CIDR notation, of the network for which access is being removed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetNetworkCidr")
+    public String targetNetworkCidr;
+    public GETRevokeClientVpnIngressRequest withTargetNetworkCidr(String targetNetworkCidr) {
+        this.targetNetworkCidr = targetNetworkCidr;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRevokeClientVpnIngressVersionEnum version;
+    public GETRevokeClientVpnIngressRequest withVersion(GETRevokeClientVpnIngressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRevokeClientVpnIngressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRevokeClientVpnIngressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRevokeClientVpnIngressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRevokeClientVpnIngressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRevokeClientVpnIngressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRevokeClientVpnIngressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRevokeClientVpnIngressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

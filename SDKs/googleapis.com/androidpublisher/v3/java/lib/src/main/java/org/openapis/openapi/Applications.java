@@ -34,27 +34,28 @@ public class Applications {
     /**
      * Creates a new device tier config for an app.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse androidpublisherApplicationsDeviceTierConfigsCreate(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateResponse androidpublisherApplicationsDeviceTierConfigsCreate(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest request, org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreatePathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deviceTierConfigInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Applications {
     /**
      * Returns a particular device tier config.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse androidpublisherApplicationsDeviceTierConfigsGet(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetResponse androidpublisherApplicationsDeviceTierConfigsGet(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetRequest request, org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs/{deviceTierConfigId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs/{deviceTierConfigId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Applications {
     /**
      * Returns created device tier configs, ordered by descending creation time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse androidpublisherApplicationsDeviceTierConfigsList(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListResponse androidpublisherApplicationsDeviceTierConfigsList(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListRequest request, org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListPathParams.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListRequest.class, baseUrl, "/androidpublisher/v3/applications/{packageName}/deviceTierConfigs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AndroidpublisherApplicationsDeviceTierConfigsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

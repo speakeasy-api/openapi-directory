@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PhoneUserRequest {
-    
-    public PhoneUserPathParams pathParams;
-    public PhoneUserRequest withPathParams(PhoneUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PhoneUserSecurity security;
-    public PhoneUserRequest withSecurity(PhoneUserSecurity security) {
-        this.security = security;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PhoneUserRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

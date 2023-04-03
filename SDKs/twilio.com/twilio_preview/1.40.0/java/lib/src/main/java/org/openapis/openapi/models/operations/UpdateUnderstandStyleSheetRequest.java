@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateUnderstandStyleSheetRequest {
-    
-    public UpdateUnderstandStyleSheetPathParams pathParams;
-    public UpdateUnderstandStyleSheetRequest withPathParams(UpdateUnderstandStyleSheetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the Assistant
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public UpdateUnderstandStyleSheetRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateUnderstandStyleSheetUpdateUnderstandStyleSheetRequest request;
-    public UpdateUnderstandStyleSheetRequest withRequest(UpdateUnderstandStyleSheetUpdateUnderstandStyleSheetRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateUnderstandStyleSheetSecurity security;
-    public UpdateUnderstandStyleSheetRequest withSecurity(UpdateUnderstandStyleSheetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateUnderstandStyleSheetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateUnderstandStyleSheetUpdateUnderstandStyleSheetRequest requestBody;
+    public UpdateUnderstandStyleSheetRequest withRequestBody(UpdateUnderstandStyleSheetUpdateUnderstandStyleSheetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

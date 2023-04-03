@@ -18,11 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FetchPhoneNumberSecurity;
-import org.openapis.openapi.models.operations.FetchPhoneNumberPathParams;
-import org.openapis.openapi.models.operations.FetchPhoneNumberQueryParams;
 import org.openapis.openapi.models.operations.FetchPhoneNumberRequest;
 import org.openapis.openapi.models.operations.FetchPhoneNumberResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,35 +28,28 @@ public class Application {
                 .build();
 
             FetchPhoneNumberRequest req = new FetchPhoneNumberRequest() {{
-                security = new FetchPhoneNumberSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                addOns = new String[]{{
+                    add("provident"),
+                    add("distinctio"),
+                    add("quibusdam"),
                 }};
-                pathParams = new FetchPhoneNumberPathParams() {{
-                    phoneNumber = "corrupti";
+                addOnsData = new java.util.HashMap<String, Object>() {{
+                    put("nulla", "corrupti");
+                    put("illum", "vel");
+                    put("error", "deserunt");
                 }};
-                queryParams = new FetchPhoneNumberQueryParams() {{
-                    addOns = new String[]{{
-                        add("distinctio"),
-                        add("quibusdam"),
-                        add("unde"),
-                    }};
-                    addOnsData = new java.util.HashMap<String, Object>() {{
-                        put("corrupti", "illum");
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                    }};
-                    countryCode = "debitis";
-                    type = new String[]{{
-                        add("delectus"),
-                    }};
+                countryCode = "suscipit";
+                phoneNumber = "iure";
+                type = new String[]{{
+                    add("debitis"),
+                    add("ipsa"),
                 }};
-            }};            
+            }}            
 
-            FetchPhoneNumberResponse res = sdk.fetchPhoneNumber(req);
+            FetchPhoneNumberResponse res = sdk.fetchPhoneNumber(req, new FetchPhoneNumberSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.lookupsV1PhoneNumber.isPresent()) {
                 // handle response
@@ -71,7 +61,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

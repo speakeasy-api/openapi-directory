@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSessionInfoUsingGETRequest {
-    
-    public GETSessionInfoUsingGETQueryParams queryParams;
-    public GETSessionInfoUsingGETRequest withQueryParams(GETSessionInfoUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sessionID")
+    public String sessionID;
+    public GETSessionInfoUsingGETRequest withSessionID(String sessionID) {
+        this.sessionID = sessionID;
         return this;
     }
     

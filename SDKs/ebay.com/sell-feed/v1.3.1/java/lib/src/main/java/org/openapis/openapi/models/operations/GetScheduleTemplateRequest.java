@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScheduleTemplateRequest {
-    
-    public GetScheduleTemplatePathParams pathParams;
-    public GetScheduleTemplateRequest withPathParams(GetScheduleTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetScheduleTemplateSecurity security;
-    public GetScheduleTemplateRequest withSecurity(GetScheduleTemplateSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the template to retrieve. If you do not know the &lt;strong&gt;schedule_template_id&lt;/strong&gt;, refer to the documentation or use the &lt;strong&gt;getScheduleTemplates&lt;/strong&gt; method to find the available schedule templates.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_template_id")
+    public String scheduleTemplateId;
+    public GetScheduleTemplateRequest withScheduleTemplateId(String scheduleTemplateId) {
+        this.scheduleTemplateId = scheduleTemplateId;
         return this;
     }
     

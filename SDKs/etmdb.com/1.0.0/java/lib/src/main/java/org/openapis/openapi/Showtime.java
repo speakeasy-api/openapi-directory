@@ -43,7 +43,7 @@ public class Showtime {
      */
     public org.openapis.openapi.models.operations.ShowtimeSearchallReadResponse showtimeSearchallRead(org.openapis.openapi.models.operations.ShowtimeSearchallReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowtimeSearchallReadPathParams.class, baseUrl, "/api/v1/showtime/searchall/{param}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ShowtimeSearchallReadRequest.class, baseUrl, "/api/v1/showtime/searchall/{param}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

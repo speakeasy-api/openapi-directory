@@ -7,24 +7,47 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUrlsAggsRequest {
-    
-    public GetUrlsAggsPathParams pathParams;
-    public GetUrlsAggsRequest withPathParams(GetUrlsAggsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetUrlsAggsQueryParams queryParams;
-    public GetUrlsAggsRequest withQueryParams(GetUrlsAggsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UrlsAggsQuery[] request;
-    public GetUrlsAggsRequest withRequest(org.openapis.openapi.models.shared.UrlsAggsQuery[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UrlsAggsQuery[] requestBody;
+    public GetUrlsAggsRequest withRequestBody(org.openapis.openapi.models.shared.UrlsAggsQuery[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Analysis' identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
+    public String analysisSlug;
+    public GetUrlsAggsRequest withAnalysisSlug(String analysisSlug) {
+        this.analysisSlug = analysisSlug;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=area")
+    public GetUrlsAggsAreaEnum area;
+    public GetUrlsAggsRequest withArea(GetUrlsAggsAreaEnum area) {
+        this.area = area;
+        return this;
+    }
+    
+    /**
+     * Project's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
+    public String projectSlug;
+    public GetUrlsAggsRequest withProjectSlug(String projectSlug) {
+        this.projectSlug = projectSlug;
+        return this;
+    }
+    
+    /**
+     * User's identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetUrlsAggsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

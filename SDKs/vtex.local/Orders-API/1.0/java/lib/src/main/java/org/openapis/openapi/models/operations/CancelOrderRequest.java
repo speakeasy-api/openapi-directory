@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelOrderRequest {
-    
-    public CancelOrderPathParams pathParams;
-    public CancelOrderRequest withPathParams(CancelOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public CancelOrderRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public CancelOrderHeaders headers;
-    public CancelOrderRequest withHeaders(CancelOrderHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public CancelOrderRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CancelOrderRequestBody request;
-    public CancelOrderRequest withRequest(CancelOrderRequestBody request) {
-        this.request = request;
+    public CancelOrderRequestBody requestBody;
+    public CancelOrderRequest withRequestBody(CancelOrderRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID that identifies the order in the seller.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public CancelOrderRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

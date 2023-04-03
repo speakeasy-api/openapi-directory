@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteProxySecurity;
-import org.openapis.openapi.models.operations.DeleteProxyHeaders;
 import org.openapis.openapi.models.operations.DeleteProxyRequest;
 import org.openapis.openapi.models.operations.DeleteProxyResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,21 +28,16 @@ public class Application {
                 .build();
 
             DeleteProxyRequest req = new DeleteProxyRequest() {{
-                security = new DeleteProxySecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                headers = new DeleteProxyHeaders() {{
-                    xApideckAppId = "corrupti";
-                    xApideckConsumerId = "provident";
-                    xApideckDownstreamAuthorization = "distinctio";
-                    xApideckDownstreamUrl = "quibusdam";
-                    xApideckServiceId = "unde";
-                }};
-            }};            
+                xApideckAppId = "corrupti";
+                xApideckConsumerId = "provident";
+                xApideckDownstreamAuthorization = "distinctio";
+                xApideckDownstreamUrl = "quibusdam";
+                xApideckServiceId = "unde";
+            }}            
 
-            DeleteProxyResponse res = sdk.execute.deleteProxy(req);
+            DeleteProxyResponse res = sdk.execute.deleteProxy(req, new DeleteProxySecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.deleteProxy200ApplicationJSONAny.isPresent()) {
                 // handle response
@@ -56,7 +49,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### execute

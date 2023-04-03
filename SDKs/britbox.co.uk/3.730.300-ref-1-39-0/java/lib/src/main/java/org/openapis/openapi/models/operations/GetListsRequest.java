@@ -4,13 +4,165 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListsRequest {
+    /**
+     * The type of device the content is targeting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public GetListsRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
     
-    public GetListsQueryParams queryParams;
-    public GetListsRequest withQueryParams(GetListsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The set of opt in feature flags which cause breaking changes to responses.
+     * 
+     * While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
+     * may need to evolve over this time.
+     * 
+     * These feature flags allow clients to select which response formats they expect and avoid breaking
+     * clients as these formats evolve under the current major version.
+     * 
+     * ### Flags
+     * 
+     * - `all` - Enable all flags. Useful for testing. _Don't use in production_.
+     * - `idp` - Dynamic item detail pages with schedulable rows.
+     * - `ldp` - Dynamic list detail pages with schedulable rows.
+     * - `hb` - Hubble formatted image urls.
+     * - `rpt` - Updated resume point threshold logic.
+     * - `cas` - "Custom Asset Search", inlcude `customAssets` in search results.
+     * - `lrl` - Do not pre-populate related list if more than `max_list_prefetch` down the page.
+     * - `cd` - Custom Destination support.
+     * 
+     * See the `feature-flags.md` for available flag details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
+    public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+    public GetListsRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
+        this.ff = ff;
+        return this;
+    }
+    
+    /**
+     * A comma delimited list of item list identifiers.
+     * 
+     * These can be list ids e.g. `14354,65473,3234`
+     * 
+     * Or more complex sort/filter queries using pipes e.g.
+     * 
+     * `14354|max_rating=AUOFLC-E|order=asc|order_by=year-added,65473|page_size=30,3234`
+     * 
+     * _Note the id must always come first for each encoded list query_
+     * 
+     * List parameters may be provide without the `param=` prefix e.g. `14354|genre:action`
+     * 
+     * Only the following options can be present.
+     *   - `order`
+     *   - `order_by`
+     *   - `max_rating`
+     *   - `page_size`
+     *   - `item_type`
+     *   - `param`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public String[] ids;
+    public GetListsRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * The item type to filter by. Defaults to unspecified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
+    public org.openapis.openapi.models.shared.ItemTypeEnum itemType;
+    public GetListsRequest withItemType(org.openapis.openapi.models.shared.ItemTypeEnum itemType) {
+        this.itemType = itemType;
+        return this;
+    }
+    
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetListsRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The maximum rating (inclusive) of items returned, e.g. 'auoflc-pg'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_rating")
+    public String maxRating;
+    public GetListsRequest withMaxRating(String maxRating) {
+        this.maxRating = maxRating;
+        return this;
+    }
+    
+    /**
+     * The list sort order, either 'asc' or 'desc'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public org.openapis.openapi.models.shared.ListOrderEnum order;
+    public GetListsRequest withOrder(org.openapis.openapi.models.shared.ListOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * What to order by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
+    public org.openapis.openapi.models.shared.ListOrderByEnum orderBy;
+    public GetListsRequest withOrderBy(org.openapis.openapi.models.shared.ListOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * The number of items to return in a page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Integer pageSize;
+    public GetListsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The list of segments to filter the response by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
+    public String[] segments;
+    public GetListsRequest withSegments(String[] segments) {
+        this.segments = segments;
+        return this;
+    }
+    
+    /**
+     * The active subscription code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
+    public String sub;
+    public GetListsRequest withSub(String sub) {
+        this.sub = sub;
         return this;
     }
     

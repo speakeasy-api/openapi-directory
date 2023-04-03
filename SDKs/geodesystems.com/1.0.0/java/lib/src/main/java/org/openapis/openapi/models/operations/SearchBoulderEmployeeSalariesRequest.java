@@ -4,13 +4,257 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchBoulderEmployeeSalariesRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchBoulderEmployeeSalariesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchBoulderEmployeeSalariesQueryParams queryParams;
-    public SearchBoulderEmployeeSalariesRequest withQueryParams(SearchBoulderEmployeeSalariesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchBoulderEmployeeSalariesRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchBoulderEmployeeSalariesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchBoulderEmployeeSalariesRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchBoulderEmployeeSalariesRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchBoulderEmployeeSalariesRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchBoulderEmployeeSalariesRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchBoulderEmployeeSalariesRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchBoulderEmployeeSalariesRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchBoulderEmployeeSalariesRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchBoulderEmployeeSalariesRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchBoulderEmployeeSalariesRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchBoulderEmployeeSalariesRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchBoulderEmployeeSalariesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Department
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_employee_salaries.department")
+    public String searchDbBoulderEmployeeSalariesDepartment;
+    public SearchBoulderEmployeeSalariesRequest withSearchDbBoulderEmployeeSalariesDepartment(String searchDbBoulderEmployeeSalariesDepartment) {
+        this.searchDbBoulderEmployeeSalariesDepartment = searchDbBoulderEmployeeSalariesDepartment;
+        return this;
+    }
+    
+    /**
+     * Employee Annual Base Salary
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_employee_salaries.employee_annual_base_salary")
+    public Double searchDbBoulderEmployeeSalariesEmployeeAnnualBaseSalary;
+    public SearchBoulderEmployeeSalariesRequest withSearchDbBoulderEmployeeSalariesEmployeeAnnualBaseSalary(Double searchDbBoulderEmployeeSalariesEmployeeAnnualBaseSalary) {
+        this.searchDbBoulderEmployeeSalariesEmployeeAnnualBaseSalary = searchDbBoulderEmployeeSalariesEmployeeAnnualBaseSalary;
+        return this;
+    }
+    
+    /**
+     * Employee Flsa Exempt Y N
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_employee_salaries.employee_flsa_exempt_y_n")
+    public String searchDbBoulderEmployeeSalariesEmployeeFlsaExemptYN;
+    public SearchBoulderEmployeeSalariesRequest withSearchDbBoulderEmployeeSalariesEmployeeFlsaExemptYN(String searchDbBoulderEmployeeSalariesEmployeeFlsaExemptYN) {
+        this.searchDbBoulderEmployeeSalariesEmployeeFlsaExemptYN = searchDbBoulderEmployeeSalariesEmployeeFlsaExemptYN;
+        return this;
+    }
+    
+    /**
+     * Employee Fte In This Position
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_employee_salaries.employee_fte_in_this_position")
+    public Double searchDbBoulderEmployeeSalariesEmployeeFteInThisPosition;
+    public SearchBoulderEmployeeSalariesRequest withSearchDbBoulderEmployeeSalariesEmployeeFteInThisPosition(Double searchDbBoulderEmployeeSalariesEmployeeFteInThisPosition) {
+        this.searchDbBoulderEmployeeSalariesEmployeeFteInThisPosition = searchDbBoulderEmployeeSalariesEmployeeFteInThisPosition;
+        return this;
+    }
+    
+    /**
+     * Employee Hourly Pay Rate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_employee_salaries.employee_hourly_pay_rate")
+    public Double searchDbBoulderEmployeeSalariesEmployeeHourlyPayRate;
+    public SearchBoulderEmployeeSalariesRequest withSearchDbBoulderEmployeeSalariesEmployeeHourlyPayRate(Double searchDbBoulderEmployeeSalariesEmployeeHourlyPayRate) {
+        this.searchDbBoulderEmployeeSalariesEmployeeHourlyPayRate = searchDbBoulderEmployeeSalariesEmployeeHourlyPayRate;
+        return this;
+    }
+    
+    /**
+     * Pay Range Max
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_employee_salaries.pay_range_max")
+    public Double searchDbBoulderEmployeeSalariesPayRangeMax;
+    public SearchBoulderEmployeeSalariesRequest withSearchDbBoulderEmployeeSalariesPayRangeMax(Double searchDbBoulderEmployeeSalariesPayRangeMax) {
+        this.searchDbBoulderEmployeeSalariesPayRangeMax = searchDbBoulderEmployeeSalariesPayRangeMax;
+        return this;
+    }
+    
+    /**
+     * Pay Range Min
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_employee_salaries.pay_range_min")
+    public Double searchDbBoulderEmployeeSalariesPayRangeMin;
+    public SearchBoulderEmployeeSalariesRequest withSearchDbBoulderEmployeeSalariesPayRangeMin(Double searchDbBoulderEmployeeSalariesPayRangeMin) {
+        this.searchDbBoulderEmployeeSalariesPayRangeMin = searchDbBoulderEmployeeSalariesPayRangeMin;
+        return this;
+    }
+    
+    /**
+     * Position Description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_boulder_employee_salaries.position_description")
+    public String searchDbBoulderEmployeeSalariesPositionDescription;
+    public SearchBoulderEmployeeSalariesRequest withSearchDbBoulderEmployeeSalariesPositionDescription(String searchDbBoulderEmployeeSalariesPositionDescription) {
+        this.searchDbBoulderEmployeeSalariesPositionDescription = searchDbBoulderEmployeeSalariesPositionDescription;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchBoulderEmployeeSalariesRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchBoulderEmployeeSalariesRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchBoulderEmployeeSalariesRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

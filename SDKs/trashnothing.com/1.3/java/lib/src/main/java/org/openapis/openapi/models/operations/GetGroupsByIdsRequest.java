@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupsByIdsRequest {
-    
-    public GetGroupsByIdsQueryParams queryParams;
-    public GetGroupsByIdsRequest withQueryParams(GetGroupsByIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetGroupsByIdsSecurity security;
-    public GetGroupsByIdsRequest withSecurity(GetGroupsByIdsSecurity security) {
-        this.security = security;
+    /**
+     * The IDs of the groups to retrieve.  If more than 20 group IDs are passed, only the first 20 groups will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_ids")
+    public String groupIds;
+    public GetGroupsByIdsRequest withGroupIds(String groupIds) {
+        this.groupIds = groupIds;
         return this;
     }
     

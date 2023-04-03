@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDocumentRequest {
-    
-    public DeleteDocumentPathParams pathParams;
-    public DeleteDocumentRequest withPathParams(DeleteDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A backslash (/) delimited path to access values inside object and array documents. If the path points to an array, the server will attempt to convert the array index to an integer. If the path element cannot be converted to an integer, the server will respond with 404.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public DeleteDocumentRequest withPath(String path) {
+        this.path = path;
         return this;
     }
     

@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPlatformsListRequest {
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimPlatformsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public DcimPlatformsListQueryParams queryParams;
-    public DcimPlatformsListRequest withQueryParams(DcimPlatformsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer")
+    public String manufacturer;
+    public DcimPlatformsListRequest withManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=manufacturer_id")
+    public String manufacturerId;
+    public DcimPlatformsListRequest withManufacturerId(String manufacturerId) {
+        this.manufacturerId = manufacturerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimPlatformsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimPlatformsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slug")
+    public String slug;
+    public DcimPlatformsListRequest withSlug(String slug) {
+        this.slug = slug;
         return this;
     }
     

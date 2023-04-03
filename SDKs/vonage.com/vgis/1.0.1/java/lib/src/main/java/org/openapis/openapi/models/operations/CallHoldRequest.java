@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CallHoldRequest {
-    
-    public CallHoldPathParams pathParams;
-    public CallHoldRequest withPathParams(CallHoldPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the call
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CallHoldRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

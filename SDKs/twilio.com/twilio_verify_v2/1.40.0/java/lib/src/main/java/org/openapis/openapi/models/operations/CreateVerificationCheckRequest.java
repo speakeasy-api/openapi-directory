@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateVerificationCheckRequest {
-    
-    public CreateVerificationCheckPathParams pathParams;
-    public CreateVerificationCheckRequest withPathParams(CreateVerificationCheckPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateVerificationCheckCreateVerificationCheckRequest request;
-    public CreateVerificationCheckRequest withRequest(CreateVerificationCheckCreateVerificationCheckRequest request) {
-        this.request = request;
+    public CreateVerificationCheckCreateVerificationCheckRequest requestBody;
+    public CreateVerificationCheckRequest withRequestBody(CreateVerificationCheckCreateVerificationCheckRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateVerificationCheckSecurity security;
-    public CreateVerificationCheckRequest withSecurity(CreateVerificationCheckSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateVerificationCheckRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the verification [Service](https://www.twilio.com/docs/verify/api/service) to create the resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateVerificationCheckRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

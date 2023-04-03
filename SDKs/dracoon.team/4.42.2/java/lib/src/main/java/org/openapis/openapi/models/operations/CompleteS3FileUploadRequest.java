@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompleteS3FileUploadRequest {
-    
-    public CompleteS3FileUploadPathParams pathParams;
-    public CompleteS3FileUploadRequest withPathParams(CompleteS3FileUploadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CompleteS3FileUploadHeaders headers;
-    public CompleteS3FileUploadRequest withHeaders(CompleteS3FileUploadHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CompleteS3FileUploadRequest request;
-    public CompleteS3FileUploadRequest withRequest(org.openapis.openapi.models.shared.CompleteS3FileUploadRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CompleteS3FileUploadRequest completeS3FileUploadRequest;
+    public CompleteS3FileUploadRequest withCompleteS3FileUploadRequest(org.openapis.openapi.models.shared.CompleteS3FileUploadRequest completeS3FileUploadRequest) {
+        this.completeS3FileUploadRequest = completeS3FileUploadRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CompleteS3FileUploadRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Upload channel ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public CompleteS3FileUploadRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

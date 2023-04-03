@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCommentAlt1Request {
-    
-    public CreateCommentAlt1PathParams pathParams;
-    public CreateCommentAlt1Request withPathParams(CreateCommentAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/vnd.vimeo.comment+json")
-    public CreateCommentAlt1RequestBody request;
-    public CreateCommentAlt1Request withRequest(CreateCommentAlt1RequestBody request) {
-        this.request = request;
+    public CreateCommentAlt1RequestBody requestBody;
+    public CreateCommentAlt1Request withRequestBody(CreateCommentAlt1RequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public CreateCommentAlt1Request withChannelId(Double channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public CreateCommentAlt1Security security;
-    public CreateCommentAlt1Request withSecurity(CreateCommentAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CreateCommentAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

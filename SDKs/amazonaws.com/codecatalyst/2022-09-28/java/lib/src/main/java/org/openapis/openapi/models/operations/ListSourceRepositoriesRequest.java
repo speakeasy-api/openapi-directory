@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSourceRepositoriesRequest {
-    
-    public ListSourceRepositoriesPathParams pathParams;
-    public ListSourceRepositoriesRequest withPathParams(ListSourceRepositoriesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListSourceRepositoriesQueryParams queryParams;
-    public ListSourceRepositoriesRequest withQueryParams(ListSourceRepositoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ListSourceRepositoriesRequestBody request;
-    public ListSourceRepositoriesRequest withRequest(ListSourceRepositoriesRequestBody request) {
-        this.request = request;
+    public ListSourceRepositoriesRequestBody requestBody;
+    public ListSourceRepositoriesRequest withRequestBody(ListSourceRepositoriesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Pagination limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public String maxResults;
+    public ListSourceRepositoriesRequest withMaxResults(String maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * Pagination token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListSourceRepositoriesRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The name of the project in the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
+    public String projectName;
+    public ListSourceRepositoriesRequest withProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    
+    /**
+     * The name of the space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
+    public String spaceName;
+    public ListSourceRepositoriesRequest withSpaceName(String spaceName) {
+        this.spaceName = spaceName;
         return this;
     }
     

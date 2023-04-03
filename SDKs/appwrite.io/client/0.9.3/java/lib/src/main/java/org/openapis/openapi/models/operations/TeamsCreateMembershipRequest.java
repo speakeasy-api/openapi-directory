@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCreateMembershipRequest {
-    
-    public TeamsCreateMembershipPathParams pathParams;
-    public TeamsCreateMembershipRequest withPathParams(TeamsCreateMembershipPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsCreateMembershipRequestBody request;
-    public TeamsCreateMembershipRequest withRequest(TeamsCreateMembershipRequestBody request) {
-        this.request = request;
+    public TeamsCreateMembershipRequestBody requestBody;
+    public TeamsCreateMembershipRequest withRequestBody(TeamsCreateMembershipRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public TeamsCreateMembershipSecurity security;
-    public TeamsCreateMembershipRequest withSecurity(TeamsCreateMembershipSecurity security) {
-        this.security = security;
+    /**
+     * Team unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamId")
+    public String teamId;
+    public TeamsCreateMembershipRequest withTeamId(String teamId) {
+        this.teamId = teamId;
         return this;
     }
     

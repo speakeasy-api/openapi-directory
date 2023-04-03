@@ -5,10 +5,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateSecurity;
-import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreatePathParams;
-import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateQueryParams;
 import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateRequest;
 import org.openapis.openapi.models.operations.DatapipelinesProjectsLocationsPipelinesCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineStateEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineTypeEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1PipelineInput;
@@ -23,10 +22,7 @@ import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1FlexTemplate
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentIpConfigurationEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment;
 import org.openapis.openapi.models.shared.GoogleCloudDatapipelinesV1ScheduleSpecInput;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,141 +31,139 @@ public class Application {
                 .build();
 
             DatapipelinesProjectsLocationsPipelinesCreateRequest req = new DatapipelinesProjectsLocationsPipelinesCreateRequest() {{
-                security = new DatapipelinesProjectsLocationsPipelinesCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DatapipelinesProjectsLocationsPipelinesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DatapipelinesProjectsLocationsPipelinesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleCloudDatapipelinesV1PipelineInput() {{
-                    displayName = "suscipit";
-                    name = "iure";
+                dollarXgafv = "2";
+                googleCloudDatapipelinesV1PipelineInput = new GoogleCloudDatapipelinesV1PipelineInput() {{
+                    displayName = "provident";
+                    name = "distinctio";
                     pipelineSources = new java.util.HashMap<String, String>() {{
-                        put("debitis", "ipsa");
-                        put("delectus", "tempora");
+                        put("unde", "nulla");
+                        put("corrupti", "illum");
+                        put("vel", "error");
+                        put("deserunt", "suscipit");
                     }};
                     scheduleInfo = new GoogleCloudDatapipelinesV1ScheduleSpecInput() {{
-                        schedule = "suscipit";
-                        timeZone = "molestiae";
+                        schedule = "iure";
+                        timeZone = "magnam";
                     }};
-                    schedulerServiceAccountEmail = "minus";
-                    state = "STATE_ARCHIVED";
-                    type = "PIPELINE_TYPE_BATCH";
+                    schedulerServiceAccountEmail = "debitis";
+                    state = "STATE_UNSPECIFIED";
+                    type = "PIPELINE_TYPE_STREAMING";
                     workload = new GoogleCloudDatapipelinesV1Workload() {{
                         dataflowFlexTemplateRequest = new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest() {{
                             launchParameter = new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter() {{
-                                containerSpecGcsPath = "iusto";
+                                containerSpecGcsPath = "tempora";
                                 environment = new GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment() {{
                                     additionalExperiments = new String[]{{
-                                        add("nisi"),
-                                        add("recusandae"),
-                                        add("temporibus"),
+                                        add("molestiae"),
+                                        add("minus"),
                                     }};
                                     additionalUserLabels = new java.util.HashMap<String, String>() {{
-                                        put("quis", "veritatis");
+                                        put("voluptatum", "iusto");
+                                        put("excepturi", "nisi");
+                                        put("recusandae", "temporibus");
+                                        put("ab", "quis");
                                     }};
                                     enableStreamingEngine = false;
-                                    flexrsGoal = "FLEXRS_SPEED_OPTIMIZED";
-                                    ipConfiguration = "WORKER_IP_UNSPECIFIED";
-                                    kmsKeyName = "ipsam";
-                                    machineType = "repellendus";
-                                    maxWorkers = 957156;
-                                    network = "quo";
-                                    numWorkers = 140350;
-                                    serviceAccountEmail = "at";
+                                    flexrsGoal = "FLEXRS_UNSPECIFIED";
+                                    ipConfiguration = "WORKER_IP_PUBLIC";
+                                    kmsKeyName = "perferendis";
+                                    machineType = "ipsam";
+                                    maxWorkers = 832620;
+                                    network = "sapiente";
+                                    numWorkers = 778157;
+                                    serviceAccountEmail = "odit";
                                     subnetwork = "at";
-                                    tempLocation = "maiores";
-                                    workerRegion = "molestiae";
-                                    workerZone = "quod";
+                                    tempLocation = "at";
+                                    workerRegion = "maiores";
+                                    workerZone = "molestiae";
                                     zone = "quod";
                                 }};
-                                jobName = "esse";
+                                jobName = "quod";
                                 launchOptions = new java.util.HashMap<String, String>() {{
-                                    put("porro", "dolorum");
-                                    put("dicta", "nam");
-                                    put("officia", "occaecati");
+                                    put("totam", "porro");
+                                    put("dolorum", "dicta");
                                 }};
                                 parameters = new java.util.HashMap<String, String>() {{
-                                    put("deleniti", "hic");
+                                    put("officia", "occaecati");
+                                    put("fugit", "deleniti");
+                                    put("hic", "optio");
                                 }};
                                 transformNameMappings = new java.util.HashMap<String, String>() {{
-                                    put("totam", "beatae");
-                                    put("commodi", "molestiae");
-                                    put("modi", "qui");
-                                    put("impedit", "cum");
+                                    put("beatae", "commodi");
+                                    put("molestiae", "modi");
+                                    put("qui", "impedit");
                                 }};
                                 update = false;
                             }};
-                            location = "esse";
-                            projectId = "ipsum";
+                            location = "cum";
+                            projectId = "esse";
                             validateOnly = false;
                         }};
                         dataflowLaunchTemplateRequest = new GoogleCloudDatapipelinesV1LaunchTemplateRequest() {{
-                            gcsPath = "excepturi";
+                            gcsPath = "ipsum";
                             launchParameters = new GoogleCloudDatapipelinesV1LaunchTemplateParameters() {{
                                 environment = new GoogleCloudDatapipelinesV1RuntimeEnvironment() {{
                                     additionalExperiments = new String[]{{
+                                        add("aspernatur"),
                                         add("perferendis"),
+                                        add("ad"),
                                     }};
                                     additionalUserLabels = new java.util.HashMap<String, String>() {{
-                                        put("natus", "sed");
-                                        put("iste", "dolor");
+                                        put("sed", "iste");
+                                        put("dolor", "natus");
+                                        put("laboriosam", "hic");
                                     }};
                                     bypassTempDirValidation = false;
                                     enableStreamingEngine = false;
-                                    ipConfiguration = "WORKER_IP_PUBLIC";
-                                    kmsKeyName = "laboriosam";
-                                    machineType = "hic";
-                                    maxWorkers = 902599;
-                                    network = "fuga";
-                                    numWorkers = 449950;
-                                    serviceAccountEmail = "corporis";
-                                    subnetwork = "iste";
-                                    tempLocation = "iure";
-                                    workerRegion = "saepe";
-                                    workerZone = "quidem";
-                                    zone = "architecto";
+                                    ipConfiguration = "WORKER_IP_PRIVATE";
+                                    kmsKeyName = "fuga";
+                                    machineType = "in";
+                                    maxWorkers = 359508;
+                                    network = "iste";
+                                    numWorkers = 437032;
+                                    serviceAccountEmail = "saepe";
+                                    subnetwork = "quidem";
+                                    tempLocation = "architecto";
+                                    workerRegion = "ipsa";
+                                    workerZone = "reiciendis";
+                                    zone = "est";
                                 }};
-                                jobName = "ipsa";
+                                jobName = "mollitia";
                                 parameters = new java.util.HashMap<String, String>() {{
-                                    put("est", "mollitia");
-                                    put("laborum", "dolores");
-                                    put("dolorem", "corporis");
-                                    put("explicabo", "nobis");
+                                    put("dolores", "dolorem");
+                                    put("corporis", "explicabo");
+                                    put("nobis", "enim");
                                 }};
                                 transformNameMapping = new java.util.HashMap<String, String>() {{
-                                    put("omnis", "nemo");
-                                    put("minima", "excepturi");
+                                    put("nemo", "minima");
+                                    put("excepturi", "accusantium");
+                                    put("iure", "culpa");
                                 }};
                                 update = false;
                             }};
-                            location = "accusantium";
-                            projectId = "iure";
+                            location = "doloribus";
+                            projectId = "sapiente";
                             validateOnly = false;
                         }};
                     }};
                 }};
-            }};            
+                accessToken = "architecto";
+                alt = "media";
+                callback = "dolorem";
+                fields = "culpa";
+                key = "consequuntur";
+                oauthToken = "repellat";
+                parent = "mollitia";
+                prettyPrint = false;
+                quotaUser = "occaecati";
+                uploadType = "numquam";
+                uploadProtocol = "commodi";
+            }}            
 
-            DatapipelinesProjectsLocationsPipelinesCreateResponse res = sdk.projects.datapipelinesProjectsLocationsPipelinesCreate(req);
+            DatapipelinesProjectsLocationsPipelinesCreateResponse res = sdk.projects.datapipelinesProjectsLocationsPipelinesCreate(req, new DatapipelinesProjectsLocationsPipelinesCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudDatapipelinesV1Pipeline.isPresent()) {
                 // handle response

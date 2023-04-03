@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEndUserTypeRequest {
-    
-    public FetchEndUserTypePathParams pathParams;
-    public FetchEndUserTypeRequest withPathParams(FetchEndUserTypePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchEndUserTypeSecurity security;
-    public FetchEndUserTypeRequest withSecurity(FetchEndUserTypeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchEndUserTypeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that identifies the End-User Type resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchEndUserTypeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowChangeTfsRequest {
+    /**
+     * Agent to set the NETFLOW
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolNetflowChangeTfsRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolNetflowChangeTfsPathParams pathParams;
-    public ProtocolNetflowChangeTfsRequest withPathParams(ProtocolNetflowChangeTfsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * NETFLOW export interval
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interval")
+    public Integer interval;
+    public ProtocolNetflowChangeTfsRequest withInterval(Integer interval) {
+        this.interval = interval;
         return this;
     }
     

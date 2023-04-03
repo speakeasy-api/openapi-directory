@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateNewCustomerAddressQueryParams;
-import org.openapis.openapi.models.operations.CreateNewCustomerAddressHeaders;
 import org.openapis.openapi.models.operations.CreateNewCustomerAddressRequest;
 import org.openapis.openapi.models.operations.CreateNewCustomerAddressResponse;
 import org.openapis.openapi.models.shared.CreateUpdateAddressRequests;
@@ -15,24 +13,16 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    appKey = new SchemeAppKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    appToken = new SchemeAppToken() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    appKey = "YOUR_API_KEY_HERE";
+                    appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateNewCustomerAddressRequest req = new CreateNewCustomerAddressRequest() {{
-                queryParams = new CreateNewCustomerAddressQueryParams() {{
-                    schema = "schema";
-                }};
-                headers = new CreateNewCustomerAddressHeaders() {{
-                    accept = "application/json";
-                    contentType = "application/json";
-                }};
-                request = new CreateUpdateAddressRequests() {{
+                accept = "application/json";
+                contentType = "application/json";
+                schema = "schema";
+                createUpdateAddressRequests = new CreateUpdateAddressRequests() {{
                     addressName = "My house";
                     addressType = "residential";
                     city = "Rio de Janeiro";
@@ -47,7 +37,7 @@ public class Application {
                     street = "Praia de Botafogo";
                     userId = "7e03m794-a33a-11e9-84rt6-0adfa64s5a8e";
                 }};
-            }};            
+            }}            
 
             CreateNewCustomerAddressResponse res = sdk.addresses.createNewCustomerAddress(req);
 

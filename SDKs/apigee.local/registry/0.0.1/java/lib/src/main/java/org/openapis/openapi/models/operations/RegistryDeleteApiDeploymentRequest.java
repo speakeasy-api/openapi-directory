@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryDeleteApiDeploymentRequest {
-    
-    public RegistryDeleteApiDeploymentPathParams pathParams;
-    public RegistryDeleteApiDeploymentRequest withPathParams(RegistryDeleteApiDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryDeleteApiDeploymentRequest withApi(String api) {
+        this.api = api;
         return this;
     }
     
+    /**
+     * The deployment id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public RegistryDeleteApiDeploymentRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
     
-    public RegistryDeleteApiDeploymentQueryParams queryParams;
-    public RegistryDeleteApiDeploymentRequest withQueryParams(RegistryDeleteApiDeploymentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If set to true, any child resources will also be deleted. (Otherwise, the request will only work if there are no child resources.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public Boolean force;
+    public RegistryDeleteApiDeploymentRequest withForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryDeleteApiDeploymentRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryDeleteApiDeploymentRequest withProject(String project) {
+        this.project = project;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWorkspaceRequest {
-    
-    public UpdateWorkspacePathParams pathParams;
-    public UpdateWorkspaceRequest withPathParams(UpdateWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateWorkspaceRequestBody requestBody;
+    public UpdateWorkspaceRequest withRequestBody(UpdateWorkspaceRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateWorkspaceRequestBody request;
-    public UpdateWorkspaceRequest withRequest(UpdateWorkspaceRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_id")
+    public String workspaceId;
+    public UpdateWorkspaceRequest withWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResultsReadRequest {
-    
-    public ResultsReadPathParams pathParams;
-    public ResultsReadRequest withPathParams(ResultsReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the result_file for which the result_file_url is generated.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=result_file_id")
+    public String resultFileId;
+    public ResultsReadRequest withResultFileId(String resultFileId) {
+        this.resultFileId = resultFileId;
         return this;
     }
     

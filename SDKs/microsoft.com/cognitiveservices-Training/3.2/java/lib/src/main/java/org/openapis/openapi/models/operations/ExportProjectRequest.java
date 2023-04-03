@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportProjectRequest {
-    
-    public ExportProjectPathParams pathParams;
-    public ExportProjectRequest withPathParams(ExportProjectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The project id of the project to export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ExportProjectRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

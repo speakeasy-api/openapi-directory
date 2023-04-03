@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntologyTermGraphRequest {
-    
-    public GetOntologyTermGraphPathParams pathParams;
-    public GetOntologyTermGraphRequest withPathParams(GetOntologyTermGraphPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * graph type ('topology_graph', 'regulates_transitivity_graph' or 'neighborhood_graph')
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=graph_type")
+    public GetOntologyTermGraphGraphTypeEnum graphType;
+    public GetOntologyTermGraphRequest withGraphType(GetOntologyTermGraphGraphTypeEnum graphType) {
+        this.graphType = graphType;
         return this;
     }
     
-    
-    public GetOntologyTermGraphQueryParams queryParams;
-    public GetOntologyTermGraphRequest withQueryParams(GetOntologyTermGraphQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * CURIE identifier of a GO term, e.g. GO:0000981
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetOntologyTermGraphRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

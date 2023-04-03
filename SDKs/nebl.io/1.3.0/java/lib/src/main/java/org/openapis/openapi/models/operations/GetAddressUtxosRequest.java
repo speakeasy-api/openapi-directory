@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddressUtxosRequest {
-    
-    public GetAddressUtxosPathParams pathParams;
-    public GetAddressUtxosRequest withPathParams(GetAddressUtxosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Address
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
+    public String address;
+    public GetAddressUtxosRequest withAddress(String address) {
+        this.address = address;
         return this;
     }
     

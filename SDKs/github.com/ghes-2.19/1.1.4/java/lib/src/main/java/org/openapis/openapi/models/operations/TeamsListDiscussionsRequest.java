@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListDiscussionsRequest {
-    
-    public TeamsListDiscussionsPathParams pathParams;
-    public TeamsListDiscussionsRequest withPathParams(TeamsListDiscussionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Sorts the discussion comments by the date they were created. To return the oldest comments first, set to `asc`. Can be one of `asc` or `desc`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public TeamsListDiscussionsDirectionEnum direction;
+    public TeamsListDiscussionsRequest withDirection(TeamsListDiscussionsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public TeamsListDiscussionsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public TeamsListDiscussionsQueryParams queryParams;
-    public TeamsListDiscussionsRequest withQueryParams(TeamsListDiscussionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public TeamsListDiscussionsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsListDiscussionsRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

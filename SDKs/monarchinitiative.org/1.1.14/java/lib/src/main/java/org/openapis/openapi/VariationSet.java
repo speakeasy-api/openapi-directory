@@ -43,7 +43,7 @@ public class VariationSet {
      */
     public org.openapis.openapi.models.operations.DeleteVariantSetItemResponse deleteVariantSetItem(org.openapis.openapi.models.operations.DeleteVariantSetItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVariantSetItemPathParams.class, baseUrl, "/variation/set/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVariantSetItemRequest.class, baseUrl, "/variation/set/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -75,7 +75,7 @@ public class VariationSet {
      */
     public org.openapis.openapi.models.operations.GetVariantAnalyzeResponse getVariantAnalyze(org.openapis.openapi.models.operations.GetVariantAnalyzeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantAnalyzePathParams.class, baseUrl, "/variation/set/analyze/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantAnalyzeRequest.class, baseUrl, "/variation/set/analyze/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -113,7 +113,7 @@ public class VariationSet {
      */
     public org.openapis.openapi.models.operations.GetVariantSetItemResponse getVariantSetItem(org.openapis.openapi.models.operations.GetVariantSetItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantSetItemPathParams.class, baseUrl, "/variation/set/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantSetItemRequest.class, baseUrl, "/variation/set/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -153,13 +153,13 @@ public class VariationSet {
      */
     public org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionResponse getVariantSetsArchiveCollection(org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionPathParams.class, baseUrl, "/variation/set/archive/{year}/{month}/{day}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionRequest.class, baseUrl, "/variation/set/archive/{year}/{month}/{day}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantSetsArchiveCollectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -203,7 +203,7 @@ public class VariationSet {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantSetsCollectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVariantSetsCollectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -239,7 +239,7 @@ public class VariationSet {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostVariantSetsCollectionResponse postVariantSetsCollection(org.openapis.openapi.models.operations.PostVariantSetsCollectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostVariantSetsCollectionResponse postVariantSetsCollection(org.openapis.openapi.models.shared.VariantSet request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/variation/set/");
         
@@ -278,12 +278,12 @@ public class VariationSet {
      */
     public org.openapis.openapi.models.operations.PutVariantSetItemResponse putVariantSetItem(org.openapis.openapi.models.operations.PutVariantSetItemRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutVariantSetItemPathParams.class, baseUrl, "/variation/set/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutVariantSetItemRequest.class, baseUrl, "/variation/set/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "variantSet", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

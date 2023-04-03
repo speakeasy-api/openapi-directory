@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlaceOrderRequest {
-    
-    public PlaceOrderQueryParams queryParams;
-    public PlaceOrderRequest withQueryParams(PlaceOrderQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PlaceOrderRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PlaceOrderHeaders headers;
-    public PlaceOrderRequest withHeaders(PlaceOrderHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PlaceOrderRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PlaceOrderRequestBody request;
-    public PlaceOrderRequest withRequest(PlaceOrderRequestBody request) {
-        this.request = request;
+    public PlaceOrderRequestBody requestBody;
+    public PlaceOrderRequest withRequestBody(PlaceOrderRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Trade Policy (Sales Channel) identification. This query can be used to create an order for a specific sales channel.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sc")
+    public Long sc;
+    public PlaceOrderRequest withSc(Long sc) {
+        this.sc = sc;
         return this;
     }
     

@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateAlphaSenderSecurity;
-import org.openapis.openapi.models.operations.CreateAlphaSenderPathParams;
 import org.openapis.openapi.models.operations.CreateAlphaSenderCreateAlphaSenderRequest;
 import org.openapis.openapi.models.operations.CreateAlphaSenderRequest;
 import org.openapis.openapi.models.operations.CreateAlphaSenderResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,21 +29,16 @@ public class Application {
                 .build();
 
             CreateAlphaSenderRequest req = new CreateAlphaSenderRequest() {{
-                security = new CreateAlphaSenderSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
+                requestBody = new CreateAlphaSenderCreateAlphaSenderRequest() {{
+                    alphaSender = "corrupti";
                 }};
-                pathParams = new CreateAlphaSenderPathParams() {{
-                    serviceSid = "corrupti";
-                }};
-                request = new CreateAlphaSenderCreateAlphaSenderRequest() {{
-                    alphaSender = "provident";
-                }};
-            }};            
+                serviceSid = "provident";
+            }}            
 
-            CreateAlphaSenderResponse res = sdk.createAlphaSender(req);
+            CreateAlphaSenderResponse res = sdk.createAlphaSender(req, new CreateAlphaSenderSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.messagingV1ServiceAlphaSender.isPresent()) {
                 // handle response
@@ -57,7 +50,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

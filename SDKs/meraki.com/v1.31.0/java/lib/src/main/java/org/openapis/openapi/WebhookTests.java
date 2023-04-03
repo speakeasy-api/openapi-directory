@@ -39,12 +39,12 @@ public class WebhookTests {
      */
     public org.openapis.openapi.models.operations.CreateNetworkWebhooksWebhookTestResponse createNetworkWebhooksWebhookTest(org.openapis.openapi.models.operations.CreateNetworkWebhooksWebhookTestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWebhooksWebhookTestPathParams.class, baseUrl, "/networks/{networkId}/webhooks/webhookTests", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkWebhooksWebhookTestRequest.class, baseUrl, "/networks/{networkId}/webhooks/webhookTests", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,7 +84,7 @@ public class WebhookTests {
      */
     public org.openapis.openapi.models.operations.GetNetworkWebhooksWebhookTestResponse getNetworkWebhooksWebhookTest(org.openapis.openapi.models.operations.GetNetworkWebhooksWebhookTestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksWebhookTestPathParams.class, baseUrl, "/networks/{networkId}/webhooks/webhookTests/{webhookTestId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWebhooksWebhookTestRequest.class, baseUrl, "/networks/{networkId}/webhooks/webhookTests/{webhookTestId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

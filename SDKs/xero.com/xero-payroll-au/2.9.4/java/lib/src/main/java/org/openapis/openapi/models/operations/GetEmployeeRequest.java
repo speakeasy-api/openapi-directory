@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEmployeeRequest {
-    
-    public GetEmployeePathParams pathParams;
-    public GetEmployeeRequest withPathParams(GetEmployeePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Employee id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployeeID")
+    public String employeeID;
+    public GetEmployeeRequest withEmployeeID(String employeeID) {
+        this.employeeID = employeeID;
         return this;
     }
     
-    
-    public GetEmployeeHeaders headers;
-    public GetEmployeeRequest withHeaders(GetEmployeeHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetEmployeeSecurity security;
-    public GetEmployeeRequest withSecurity(GetEmployeeSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetEmployeeRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

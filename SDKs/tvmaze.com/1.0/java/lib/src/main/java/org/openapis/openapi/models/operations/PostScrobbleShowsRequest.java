@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostScrobbleShowsRequest {
-    
-    public PostScrobbleShowsQueryParams queryParams;
-    public PostScrobbleShowsRequest withQueryParams(PostScrobbleShowsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostScrobbleShowsRequestBody[] requestBody;
+    public PostScrobbleShowsRequest withRequestBody(PostScrobbleShowsRequestBody[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostScrobbleShowsRequestBody[] request;
-    public PostScrobbleShowsRequest withRequest(PostScrobbleShowsRequestBody[] request) {
-        this.request = request;
+    /**
+     * The show's IMDB ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=imdb_id")
+    public Long imdbId;
+    public PostScrobbleShowsRequest withImdbId(Long imdbId) {
+        this.imdbId = imdbId;
+        return this;
+    }
+    
+    /**
+     * The show's TheTVDB ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thetvdb_id")
+    public Long thetvdbId;
+    public PostScrobbleShowsRequest withThetvdbId(Long thetvdbId) {
+        this.thetvdbId = thetvdbId;
+        return this;
+    }
+    
+    /**
+     * The show's TVmaze ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tvmaze_id")
+    public Long tvmazeId;
+    public PostScrobbleShowsRequest withTvmazeId(Long tvmazeId) {
+        this.tvmazeId = tvmazeId;
         return this;
     }
     

@@ -41,12 +41,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.AddDocumentResponse addDocument(org.openapis.openapi.models.operations.AddDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddDocumentPathParams.class, baseUrl, "/continuous_projects/{projectId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddDocumentRequest.class, baseUrl, "/continuous_projects/{projectId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addOrUpdateDocumentRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -83,12 +83,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.CollectAnalyticsResponse collectAnalytics(org.openapis.openapi.models.operations.CollectAnalyticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectAnalyticsPathParams.class, baseUrl, "/continuous_projects/{id}/collect-analytics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CollectAnalyticsRequest.class, baseUrl, "/continuous_projects/{id}/collect-analytics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "analyticsCollection", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -125,7 +125,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.CompleteResponse complete(org.openapis.openapi.models.operations.CompleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompletePathParams.class, baseUrl, "/continuous_projects/{id}/complete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteRequest.class, baseUrl, "/continuous_projects/{id}/complete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -165,7 +165,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.CompleteContinuousDocumentResponse completeContinuousDocument(org.openapis.openapi.models.operations.CompleteContinuousDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteContinuousDocumentPathParams.class, baseUrl, "/continuous_projects/{id}/documents/{documentId}/complete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteContinuousDocumentRequest.class, baseUrl, "/continuous_projects/{id}/documents/{documentId}/complete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -213,7 +213,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.CompleteLanguageResponse completeLanguage(org.openapis.openapi.models.operations.CompleteLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteLanguagePathParams.class, baseUrl, "/continuous_projects/{id}/languages/{targetLanguage}/complete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompleteLanguageRequest.class, baseUrl, "/continuous_projects/{id}/languages/{targetLanguage}/complete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -253,12 +253,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.CreateActiveWidgetResponse createActiveWidget(org.openapis.openapi.models.operations.CreateActiveWidgetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateActiveWidgetPathParams.class, baseUrl, "/continuous_projects/{projectId}/widgets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateActiveWidgetRequest.class, baseUrl, "/continuous_projects/{projectId}/widgets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "activeWidget", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -301,7 +301,7 @@ public class ContinuousProject {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateContinuousProjectResponse createContinuousProject(org.openapis.openapi.models.operations.CreateContinuousProjectRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateContinuousProjectResponse createContinuousProject(org.openapis.openapi.models.shared.ContinuousProject request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/continuous_projects");
         
@@ -345,12 +345,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.CreateSubscriptionResponse createSubscription(org.openapis.openapi.models.operations.CreateSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSubscriptionPathParams.class, baseUrl, "/continuous_projects/{id}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSubscriptionRequest.class, baseUrl, "/continuous_projects/{id}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscription", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -398,7 +398,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.DeleteActiveWidgetResponse deleteActiveWidget(org.openapis.openapi.models.operations.DeleteActiveWidgetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteActiveWidgetPathParams.class, baseUrl, "/continuous_projects/{projectId}/widgets/{widgetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteActiveWidgetRequest.class, baseUrl, "/continuous_projects/{projectId}/widgets/{widgetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -446,7 +446,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.DeleteContinuousProjectResponse deleteContinuousProject(org.openapis.openapi.models.operations.DeleteContinuousProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContinuousProjectPathParams.class, baseUrl, "/continuous_projects/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContinuousProjectRequest.class, baseUrl, "/continuous_projects/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -494,7 +494,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.DeleteSubscriptionResponse deleteSubscription(org.openapis.openapi.models.operations.DeleteSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubscriptionPathParams.class, baseUrl, "/continuous_projects/{id}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubscriptionRequest.class, baseUrl, "/continuous_projects/{id}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -542,7 +542,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetActiveWidgetResponse getActiveWidget(org.openapis.openapi.models.operations.GetActiveWidgetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActiveWidgetPathParams.class, baseUrl, "/continuous_projects/{projectId}/widgets/{widgetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActiveWidgetRequest.class, baseUrl, "/continuous_projects/{projectId}/widgets/{widgetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -590,7 +590,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetActiveWidgetsResponse getActiveWidgets(org.openapis.openapi.models.operations.GetActiveWidgetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActiveWidgetsPathParams.class, baseUrl, "/continuous_projects/{projectId}/widgets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetActiveWidgetsRequest.class, baseUrl, "/continuous_projects/{projectId}/widgets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -638,7 +638,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetAnalyticsTokenResponse getAnalyticsToken(org.openapis.openapi.models.operations.GetAnalyticsTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnalyticsTokenPathParams.class, baseUrl, "/continuous_projects/{id}/analytics-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnalyticsTokenRequest.class, baseUrl, "/continuous_projects/{id}/analytics-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -678,7 +678,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetContinuousProjectResponse getContinuousProject(org.openapis.openapi.models.operations.GetContinuousProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectPathParams.class, baseUrl, "/continuous_projects/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectRequest.class, baseUrl, "/continuous_projects/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -726,7 +726,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetContinuousProjectDocumentResponse getContinuousProjectDocument(org.openapis.openapi.models.operations.GetContinuousProjectDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectDocumentPathParams.class, baseUrl, "/continuous_projects/{projectId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectDocumentRequest.class, baseUrl, "/continuous_projects/{projectId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -774,13 +774,13 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetContinuousProjectDocumentProgressResponse getContinuousProjectDocumentProgress(org.openapis.openapi.models.operations.GetContinuousProjectDocumentProgressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectDocumentProgressPathParams.class, baseUrl, "/continuous_projects/{projectId}/documents/{documentId}/progress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectDocumentProgressRequest.class, baseUrl, "/continuous_projects/{projectId}/documents/{documentId}/progress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinuousProjectDocumentProgressQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinuousProjectDocumentProgressRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -828,13 +828,13 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetContinuousProjectDocumentsResponse getContinuousProjectDocuments(org.openapis.openapi.models.operations.GetContinuousProjectDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectDocumentsPathParams.class, baseUrl, "/continuous_projects/{projectId}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectDocumentsRequest.class, baseUrl, "/continuous_projects/{projectId}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinuousProjectDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinuousProjectDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -882,7 +882,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetContinuousProjectInvoicesResponse getContinuousProjectInvoices(org.openapis.openapi.models.operations.GetContinuousProjectInvoicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectInvoicesPathParams.class, baseUrl, "/continuous_projects/{projectId}/invoices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectInvoicesRequest.class, baseUrl, "/continuous_projects/{projectId}/invoices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -930,13 +930,13 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetContinuousProjectProgressResponse getContinuousProjectProgress(org.openapis.openapi.models.operations.GetContinuousProjectProgressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectProgressPathParams.class, baseUrl, "/continuous_projects/{projectId}/progress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContinuousProjectProgressRequest.class, baseUrl, "/continuous_projects/{projectId}/progress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinuousProjectProgressQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinuousProjectProgressRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -990,7 +990,7 @@ public class ContinuousProject {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinuousProjectsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContinuousProjectsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1030,7 +1030,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetQuoteForDocumentResponse getQuoteForDocument(org.openapis.openapi.models.operations.GetQuoteForDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteForDocumentPathParams.class, baseUrl, "/continuous_projects/{id}/documents/{documentId}/quote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteForDocumentRequest.class, baseUrl, "/continuous_projects/{id}/documents/{documentId}/quote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1078,12 +1078,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetQuoteForDocumentsResponse getQuoteForDocuments(org.openapis.openapi.models.operations.GetQuoteForDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteForDocumentsPathParams.class, baseUrl, "/continuous_projects/{id}/documents/quote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteForDocumentsRequest.class, baseUrl, "/continuous_projects/{id}/documents/quote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getQuotesForDocumentsBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1128,7 +1128,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetQuoteForLanguageResponse getQuoteForLanguage(org.openapis.openapi.models.operations.GetQuoteForLanguageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteForLanguagePathParams.class, baseUrl, "/continuous_projects/{id}/languages/{targetLanguage}/quote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteForLanguageRequest.class, baseUrl, "/continuous_projects/{id}/languages/{targetLanguage}/quote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1176,12 +1176,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetQuoteForLanguagesResponse getQuoteForLanguages(org.openapis.openapi.models.operations.GetQuoteForLanguagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteForLanguagesPathParams.class, baseUrl, "/continuous_projects/{id}/languages/quote", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetQuoteForLanguagesRequest.class, baseUrl, "/continuous_projects/{id}/languages/quote", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "getQuotesForLanguagesBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1226,7 +1226,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.GetSubscriptionResponse getSubscription(org.openapis.openapi.models.operations.GetSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionPathParams.class, baseUrl, "/continuous_projects/{id}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubscriptionRequest.class, baseUrl, "/continuous_projects/{id}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1274,12 +1274,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.PostContinuousProjectDocumentProgressResponse postContinuousProjectDocumentProgress(org.openapis.openapi.models.operations.PostContinuousProjectDocumentProgressRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContinuousProjectDocumentProgressPathParams.class, baseUrl, "/continuous_projects/{projectId}/documents/progress", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostContinuousProjectDocumentProgressRequest.class, baseUrl, "/continuous_projects/{projectId}/documents/progress", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "continuousProjectDocumentProgressBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1324,7 +1324,7 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.ResetActiveWidgetTokenResponse resetActiveWidgetToken(org.openapis.openapi.models.operations.ResetActiveWidgetTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetActiveWidgetTokenPathParams.class, baseUrl, "/continuous_projects/{projectId}/widgets/{widgetId}/reset-token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetActiveWidgetTokenRequest.class, baseUrl, "/continuous_projects/{projectId}/widgets/{widgetId}/reset-token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1372,12 +1372,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.TranslateResponse translate(org.openapis.openapi.models.operations.TranslateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslatePathParams.class, baseUrl, "/continuous_projects/{id}/translate/{targetLanguage}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranslateRequest.class, baseUrl, "/continuous_projects/{id}/translate/{targetLanguage}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "instantTranslationRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1414,12 +1414,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.UpdateActiveWidgetResponse updateActiveWidget(org.openapis.openapi.models.operations.UpdateActiveWidgetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateActiveWidgetPathParams.class, baseUrl, "/continuous_projects/{projectId}/widgets/{widgetId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateActiveWidgetRequest.class, baseUrl, "/continuous_projects/{projectId}/widgets/{widgetId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "activeWidget", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1464,12 +1464,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.UpdateContinuousProjectResponse updateContinuousProject(org.openapis.openapi.models.operations.UpdateContinuousProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContinuousProjectPathParams.class, baseUrl, "/continuous_projects/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContinuousProjectRequest.class, baseUrl, "/continuous_projects/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "continuousProjectUpdateContent", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1514,12 +1514,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.UpdateDocumentResponse updateDocument(org.openapis.openapi.models.operations.UpdateDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDocumentPathParams.class, baseUrl, "/continuous_projects/{projectId}/documents/{documentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDocumentRequest.class, baseUrl, "/continuous_projects/{projectId}/documents/{documentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addOrUpdateDocumentRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1556,12 +1556,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.UpdateSubscriptionResponse updateSubscription(org.openapis.openapi.models.operations.UpdateSubscriptionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionPathParams.class, baseUrl, "/continuous_projects/{id}/subscription", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionRequest.class, baseUrl, "/continuous_projects/{id}/subscription", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscription", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1609,12 +1609,12 @@ public class ContinuousProject {
      */
     public org.openapis.openapi.models.operations.UpdateSubscriptionPaymentMethodResponse updateSubscriptionPaymentMethod(org.openapis.openapi.models.operations.UpdateSubscriptionPaymentMethodRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionPaymentMethodPathParams.class, baseUrl, "/continuous_projects/{id}/subscription/payment", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSubscriptionPaymentMethodRequest.class, baseUrl, "/continuous_projects/{id}/subscription/payment", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "subscription", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

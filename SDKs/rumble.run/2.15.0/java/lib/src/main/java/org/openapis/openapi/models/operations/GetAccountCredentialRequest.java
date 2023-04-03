@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountCredentialRequest {
-    
-    public GetAccountCredentialPathParams pathParams;
-    public GetAccountCredentialRequest withPathParams(GetAccountCredentialPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAccountCredentialSecurity security;
-    public GetAccountCredentialRequest withSecurity(GetAccountCredentialSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the credential to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credential_id")
+    public String credentialId;
+    public GetAccountCredentialRequest withCredentialId(String credentialId) {
+        this.credentialId = credentialId;
         return this;
     }
     

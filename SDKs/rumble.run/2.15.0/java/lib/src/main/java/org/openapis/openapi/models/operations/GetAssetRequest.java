@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetRequest {
-    
-    public GetAssetPathParams pathParams;
-    public GetAssetRequest withPathParams(GetAssetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAssetSecurity security;
-    public GetAssetRequest withSecurity(GetAssetSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the asset to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
+    public String assetId;
+    public GetAssetRequest withAssetId(String assetId) {
+        this.assetId = assetId;
         return this;
     }
     

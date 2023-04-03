@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersRandomRequest {
-    
-    public GetNumbersRandomQueryParams queryParams;
-    public GetNumbersRandomRequest withQueryParams(GetNumbersRandomQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Maximum Number value
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public GetNumbersRandomRequest withMax(Long max) {
+        this.max = max;
         return this;
     }
     
+    /**
+     * Minimum Number value in the range
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
+    public Long min;
+    public GetNumbersRandomRequest withMin(Long min) {
+        this.min = min;
+        return this;
+    }
     
-    public GetNumbersRandomSecurity security;
-    public GetNumbersRandomRequest withSecurity(GetNumbersRandomSecurity security) {
-        this.security = security;
+    /**
+     * Total number of random numbers to generate. Defaults to 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=total")
+    public Long total;
+    public GetNumbersRandomRequest withTotal(Long total) {
+        this.total = total;
         return this;
     }
     

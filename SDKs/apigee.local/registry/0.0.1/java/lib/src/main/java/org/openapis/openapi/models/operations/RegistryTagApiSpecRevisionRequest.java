@@ -7,17 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryTagApiSpecRevisionRequest {
-    
-    public RegistryTagApiSpecRevisionPathParams pathParams;
-    public RegistryTagApiSpecRevisionRequest withPathParams(RegistryTagApiSpecRevisionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TagApiSpecRevisionRequest tagApiSpecRevisionRequest;
+    public RegistryTagApiSpecRevisionRequest withTagApiSpecRevisionRequest(org.openapis.openapi.models.shared.TagApiSpecRevisionRequest tagApiSpecRevisionRequest) {
+        this.tagApiSpecRevisionRequest = tagApiSpecRevisionRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TagApiSpecRevisionRequest request;
-    public RegistryTagApiSpecRevisionRequest withRequest(org.openapis.openapi.models.shared.TagApiSpecRevisionRequest request) {
-        this.request = request;
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryTagApiSpecRevisionRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryTagApiSpecRevisionRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryTagApiSpecRevisionRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The spec id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
+    public String spec;
+    public RegistryTagApiSpecRevisionRequest withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    
+    /**
+     * The version id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public RegistryTagApiSpecRevisionRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

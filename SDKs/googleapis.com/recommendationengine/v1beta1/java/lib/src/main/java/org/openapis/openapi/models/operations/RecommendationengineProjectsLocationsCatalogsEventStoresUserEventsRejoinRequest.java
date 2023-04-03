@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest {
-    
-    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinPathParams pathParams;
-    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withPathParams(RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinQueryParams queryParams;
-    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withQueryParams(RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest request;
-    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest googleCloudRecommendationengineV1beta1RejoinUserEventsRequest;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withGoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest(org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest googleCloudRecommendationengineV1beta1RejoinUserEventsRequest) {
+        this.googleCloudRecommendationengineV1beta1RejoinUserEventsRequest = googleCloudRecommendationengineV1beta1RejoinUserEventsRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinSecurity security;
-    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withSecurity(RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. Full resource name of user event, such as `projects/* /locations/* /catalogs/default_catalog/eventStores/default_event_store`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

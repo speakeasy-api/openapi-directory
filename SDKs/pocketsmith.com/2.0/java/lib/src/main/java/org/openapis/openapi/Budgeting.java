@@ -39,7 +39,7 @@ public class Budgeting {
      */
     public org.openapis.openapi.models.operations.DeleteUsersIdForecastCacheResponse deleteUsersIdForecastCache(org.openapis.openapi.models.operations.DeleteUsersIdForecastCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdForecastCachePathParams.class, baseUrl, "/users/{id}/forecast_cache", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdForecastCacheRequest.class, baseUrl, "/users/{id}/forecast_cache", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -81,13 +81,13 @@ public class Budgeting {
      */
     public org.openapis.openapi.models.operations.GetUsersIdBudgetResponse getUsersIdBudget(org.openapis.openapi.models.operations.GetUsersIdBudgetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdBudgetPathParams.class, baseUrl, "/users/{id}/budget", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdBudgetRequest.class, baseUrl, "/users/{id}/budget", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdBudgetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdBudgetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -127,13 +127,13 @@ public class Budgeting {
      */
     public org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryResponse getUsersIdBudgetSummary(org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryPathParams.class, baseUrl, "/users/{id}/budget_summary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryRequest.class, baseUrl, "/users/{id}/budget_summary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdBudgetSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -181,13 +181,13 @@ public class Budgeting {
      */
     public org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisResponse getUsersIdTrendAnalysis(org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisPathParams.class, baseUrl, "/users/{id}/trend_analysis", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisRequest.class, baseUrl, "/users/{id}/trend_analysis", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdTrendAnalysisRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

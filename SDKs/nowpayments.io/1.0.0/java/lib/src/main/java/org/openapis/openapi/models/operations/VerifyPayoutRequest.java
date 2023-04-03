@@ -7,24 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyPayoutRequest {
-    
-    public VerifyPayoutPathParams pathParams;
-    public VerifyPayoutRequest withPathParams(VerifyPayoutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public VerifyPayoutHeaders headers;
-    public VerifyPayoutRequest withHeaders(VerifyPayoutHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public VerifyPayoutRequestBody request;
-    public VerifyPayoutRequest withRequest(VerifyPayoutRequestBody request) {
-        this.request = request;
+    public VerifyPayoutRequestBody requestBody;
+    public VerifyPayoutRequest withRequestBody(VerifyPayoutRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=withdrawals-id")
+    public String withdrawalsId;
+    public VerifyPayoutRequest withWithdrawalsId(String withdrawalsId) {
+        this.withdrawalsId = withdrawalsId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public VerifyPayoutRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

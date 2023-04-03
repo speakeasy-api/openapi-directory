@@ -7,24 +7,210 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesInsertRequest {
-    
-    public DriveFilesInsertQueryParams queryParams;
-    public DriveFilesInsertRequest withQueryParams(DriveFilesInsertQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
-    public byte[] request;
-    public DriveFilesInsertRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public DriveFilesInsertRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveFilesInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DriveFilesInsertSecurity security;
-    public DriveFilesInsertRequest withSecurity(DriveFilesInsertSecurity security) {
-        this.security = security;
+    /**
+     * Whether to convert this file to the corresponding Docs Editors format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=convert")
+    public Boolean convert;
+    public DriveFilesInsertRequest withConvert(Boolean convert) {
+        this.convert = convert;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Creating files in multiple folders is no longer supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
+    public Boolean enforceSingleParent;
+    public DriveFilesInsertRequest withEnforceSingleParent(Boolean enforceSingleParent) {
+        this.enforceSingleParent = enforceSingleParent;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveFilesInsertRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
+    public String includeLabels;
+    public DriveFilesInsertRequest withIncludeLabels(String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+    }
+    
+    /**
+     * Specifies which additional view's permissions to include in the response. Only 'published' is supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
+    public String includePermissionsForView;
+    public DriveFilesInsertRequest withIncludePermissionsForView(String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveFilesInsertRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveFilesInsertRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Whether to attempt OCR on .jpg, .png, .gif, or .pdf uploads.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocr")
+    public Boolean ocr;
+    public DriveFilesInsertRequest withOcr(Boolean ocr) {
+        this.ocr = ocr;
+        return this;
+    }
+    
+    /**
+     * If ocr is true, hints at the language to use. Valid values are BCP 47 codes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocrLanguage")
+    public String ocrLanguage;
+    public DriveFilesInsertRequest withOcrLanguage(String ocrLanguage) {
+        this.ocrLanguage = ocrLanguage;
+        return this;
+    }
+    
+    /**
+     * Whether to pin the head revision of the uploaded file. A file can have a maximum of 200 pinned revisions.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pinned")
+    public Boolean pinned;
+    public DriveFilesInsertRequest withPinned(Boolean pinned) {
+        this.pinned = pinned;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveFilesInsertRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveFilesInsertRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
+    public Boolean supportsAllDrives;
+    public DriveFilesInsertRequest withSupportsAllDrives(Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
+    public Boolean supportsTeamDrives;
+    public DriveFilesInsertRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
+        this.supportsTeamDrives = supportsTeamDrives;
+        return this;
+    }
+    
+    /**
+     * The language of the timed text.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timedTextLanguage")
+    public String timedTextLanguage;
+    public DriveFilesInsertRequest withTimedTextLanguage(String timedTextLanguage) {
+        this.timedTextLanguage = timedTextLanguage;
+        return this;
+    }
+    
+    /**
+     * The timed text track name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timedTextTrackName")
+    public String timedTextTrackName;
+    public DriveFilesInsertRequest withTimedTextTrackName(String timedTextTrackName) {
+        this.timedTextTrackName = timedTextTrackName;
+        return this;
+    }
+    
+    /**
+     * Whether to use the content as indexable text.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useContentAsIndexableText")
+    public Boolean useContentAsIndexableText;
+    public DriveFilesInsertRequest withUseContentAsIndexableText(Boolean useContentAsIndexableText) {
+        this.useContentAsIndexableText = useContentAsIndexableText;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveFilesInsertRequest withUserIp(String userIp) {
+        this.userIp = userIp;
+        return this;
+    }
+    
+    /**
+     * The visibility of the new file. This parameter is only relevant when convert=false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
+    public DriveFilesInsertVisibilityEnum visibility;
+    public DriveFilesInsertRequest withVisibility(DriveFilesInsertVisibilityEnum visibility) {
+        this.visibility = visibility;
         return this;
     }
     

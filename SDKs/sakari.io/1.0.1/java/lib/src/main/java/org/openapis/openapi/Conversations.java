@@ -36,19 +36,20 @@ public class Conversations {
     /**
      * Closes a conversation
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConversationsCloseResponse conversationsClose(org.openapis.openapi.models.operations.ConversationsCloseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConversationsCloseResponse conversationsClose(org.openapis.openapi.models.operations.ConversationsCloseRequest request, org.openapis.openapi.models.operations.ConversationsCloseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversationsClosePathParams.class, baseUrl, "/v1/accounts/{accountId}/conversations/{conversationId}/close", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversationsCloseRequest.class, baseUrl, "/v1/accounts/{accountId}/conversations/{conversationId}/close", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,19 +76,20 @@ public class Conversations {
     /**
      * Fetch conversation by ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConversationsFetchResponse conversationsFetch(org.openapis.openapi.models.operations.ConversationsFetchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConversationsFetchResponse conversationsFetch(org.openapis.openapi.models.operations.ConversationsFetchRequest request, org.openapis.openapi.models.operations.ConversationsFetchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversationsFetchPathParams.class, baseUrl, "/v1/accounts/{accountId}/conversations/{conversationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversationsFetchRequest.class, baseUrl, "/v1/accounts/{accountId}/conversations/{conversationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -114,25 +116,26 @@ public class Conversations {
     /**
      * Fetch conversations
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConversationsFetchAllResponse conversationsFetchAll(org.openapis.openapi.models.operations.ConversationsFetchAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ConversationsFetchAllResponse conversationsFetchAll(org.openapis.openapi.models.operations.ConversationsFetchAllRequest request, org.openapis.openapi.models.operations.ConversationsFetchAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversationsFetchAllPathParams.class, baseUrl, "/v1/accounts/{accountId}/conversations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ConversationsFetchAllRequest.class, baseUrl, "/v1/accounts/{accountId}/conversations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversationsFetchAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConversationsFetchAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

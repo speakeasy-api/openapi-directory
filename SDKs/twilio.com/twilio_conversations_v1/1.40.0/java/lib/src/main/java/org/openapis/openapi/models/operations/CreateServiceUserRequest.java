@@ -7,38 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateServiceUserRequest {
-    
-    public CreateServiceUserPathParams pathParams;
-    public CreateServiceUserRequest withPathParams(CreateServiceUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateServiceUserHeaders headers;
-    public CreateServiceUserRequest withHeaders(CreateServiceUserHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the User resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public CreateServiceUserRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateServiceUserCreateServiceUserRequest request;
-    public CreateServiceUserRequest withRequest(CreateServiceUserCreateServiceUserRequest request) {
-        this.request = request;
+    public CreateServiceUserCreateServiceUserRequest requestBody;
+    public CreateServiceUserRequest withRequestBody(CreateServiceUserCreateServiceUserRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateServiceUserSecurity security;
-    public CreateServiceUserRequest withSecurity(CreateServiceUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateServiceUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ServiceUserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public CreateServiceUserRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ServiceUserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

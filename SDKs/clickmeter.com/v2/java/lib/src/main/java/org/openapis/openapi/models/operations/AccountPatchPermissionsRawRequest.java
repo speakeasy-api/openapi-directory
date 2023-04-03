@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountPatchPermissionsRawRequest {
-    
-    public AccountPatchPermissionsRawPathParams pathParams;
-    public AccountPatchPermissionsRawRequest withPathParams(AccountPatchPermissionsRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The patch permission request
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public AccountPatchPermissionsRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public AccountPatchPermissionsRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the guest
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
+    public Long guestId;
+    public AccountPatchPermissionsRawRequest withGuestId(Long guestId) {
+        this.guestId = guestId;
+        return this;
+    }
+    
+    /**
+     * Can be "datapoint" or "group"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public AccountPatchPermissionsRawTypeEnum type;
+    public AccountPatchPermissionsRawRequest withType(AccountPatchPermissionsRawTypeEnum type) {
+        this.type = type;
         return this;
     }
     

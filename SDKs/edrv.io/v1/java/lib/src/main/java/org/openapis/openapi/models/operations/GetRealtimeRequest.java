@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRealtimeRequest {
-    
-    public GetRealtimeHeaders headers;
-    public GetRealtimeRequest withHeaders(GetRealtimeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The JWT token to use for auth
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=sec-websocket-protocol")
+    public String secWebsocketProtocol;
+    public GetRealtimeRequest withSecWebsocketProtocol(String secWebsocketProtocol) {
+        this.secWebsocketProtocol = secWebsocketProtocol;
         return this;
     }
     

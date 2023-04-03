@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetVideoAsAlbumThumbnailAlt1Request {
-    
-    public SetVideoAsAlbumThumbnailAlt1PathParams pathParams;
-    public SetVideoAsAlbumThumbnailAlt1Request withPathParams(SetVideoAsAlbumThumbnailAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SetVideoAsAlbumThumbnailAlt1RequestBody request;
-    public SetVideoAsAlbumThumbnailAlt1Request withRequest(SetVideoAsAlbumThumbnailAlt1RequestBody request) {
-        this.request = request;
+    public SetVideoAsAlbumThumbnailAlt1RequestBody requestBody;
+    public SetVideoAsAlbumThumbnailAlt1Request withRequestBody(SetVideoAsAlbumThumbnailAlt1RequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public SetVideoAsAlbumThumbnailAlt1Request withAlbumId(Double albumId) {
+        this.albumId = albumId;
+        return this;
+    }
     
-    public SetVideoAsAlbumThumbnailAlt1Security security;
-    public SetVideoAsAlbumThumbnailAlt1Request withSecurity(SetVideoAsAlbumThumbnailAlt1Security security) {
-        this.security = security;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public SetVideoAsAlbumThumbnailAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

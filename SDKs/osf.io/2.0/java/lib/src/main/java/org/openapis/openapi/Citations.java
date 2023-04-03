@@ -91,7 +91,7 @@ public class Citations {
      */
     public org.openapis.openapi.models.operations.CitationsStylesReadResponse citationsStylesRead(org.openapis.openapi.models.operations.CitationsStylesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CitationsStylesReadPathParams.class, baseUrl, "/citations/styles/{style_id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CitationsStylesReadRequest.class, baseUrl, "/citations/styles/{style_id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

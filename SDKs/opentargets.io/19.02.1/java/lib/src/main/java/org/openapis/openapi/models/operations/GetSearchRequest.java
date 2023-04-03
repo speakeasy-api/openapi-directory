@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchRequest {
+    /**
+     * Restrict the search to the type requested. Eg. `target` or `disease`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetSearchRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
     
-    public GetSearchQueryParams queryParams;
-    public GetSearchRequest withQueryParams(GetSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many initial results should be skipped. Defaults to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public String from;
+    public GetSearchRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    
+    /**
+     * A full text query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetSearchRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Maximum amount of results to return. Defaults to 10, max is 10000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public String size;
+    public GetSearchRequest withSize(String size) {
+        this.size = size;
         return this;
     }
     

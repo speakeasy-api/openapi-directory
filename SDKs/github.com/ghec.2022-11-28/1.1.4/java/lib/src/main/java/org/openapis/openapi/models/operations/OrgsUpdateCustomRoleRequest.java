@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsUpdateCustomRoleRequest {
-    
-    public OrgsUpdateCustomRolePathParams pathParams;
-    public OrgsUpdateCustomRoleRequest withPathParams(OrgsUpdateCustomRolePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public OrgsUpdateCustomRoleRequestBody requestBody;
+    public OrgsUpdateCustomRoleRequest withRequestBody(OrgsUpdateCustomRoleRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public OrgsUpdateCustomRoleRequestBody request;
-    public OrgsUpdateCustomRoleRequest withRequest(OrgsUpdateCustomRoleRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsUpdateCustomRoleRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role_id")
+    public Long roleId;
+    public OrgsUpdateCustomRoleRequest withRoleId(Long roleId) {
+        this.roleId = roleId;
         return this;
     }
     

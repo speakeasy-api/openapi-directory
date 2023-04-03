@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientClientIdTokenKindRequest {
+    /**
+     * A client ID or email.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public GetClientClientIdTokenKindRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public GetClientClientIdTokenKindPathParams pathParams;
-    public GetClientClientIdTokenKindRequest withPathParams(GetClientClientIdTokenKindPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Token type
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=kind")
+    public GetClientClientIdTokenKindKindEnum kind;
+    public GetClientClientIdTokenKindRequest withKind(GetClientClientIdTokenKindKindEnum kind) {
+        this.kind = kind;
         return this;
     }
     

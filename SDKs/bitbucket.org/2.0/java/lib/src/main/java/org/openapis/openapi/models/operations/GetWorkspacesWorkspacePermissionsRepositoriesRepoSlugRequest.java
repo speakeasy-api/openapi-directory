@@ -4,27 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest {
-    
-    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugPathParams pathParams;
-    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest withPathParams(GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
-    
-    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugQueryParams queryParams;
-    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest withQueryParams(GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
+    /**
+     * Name of a response property sort the result by as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#sorting-query-results).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugSecurity security;
-    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest withSecurity(GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetWorkspacesWorkspacePermissionsRepositoriesRepoSlugRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

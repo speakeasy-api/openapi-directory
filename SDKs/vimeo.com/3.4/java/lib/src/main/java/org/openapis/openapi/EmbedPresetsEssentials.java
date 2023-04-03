@@ -39,12 +39,12 @@ public class EmbedPresetsEssentials {
      */
     public org.openapis.openapi.models.operations.EditEmbedPresetResponse editEmbedPreset(org.openapis.openapi.models.operations.EditEmbedPresetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditEmbedPresetPathParams.class, baseUrl, "/users/{user_id}/presets/{preset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditEmbedPresetRequest.class, baseUrl, "/users/{user_id}/presets/{preset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -88,12 +88,12 @@ public class EmbedPresetsEssentials {
      */
     public org.openapis.openapi.models.operations.EditEmbedPresetAlt1Response editEmbedPresetAlt1(org.openapis.openapi.models.operations.EditEmbedPresetAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditEmbedPresetAlt1PathParams.class, baseUrl, "/me/presets/{preset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditEmbedPresetAlt1Request.class, baseUrl, "/me/presets/{preset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -137,7 +137,7 @@ public class EmbedPresetsEssentials {
      */
     public org.openapis.openapi.models.operations.GetEmbedPresetResponse getEmbedPreset(org.openapis.openapi.models.operations.GetEmbedPresetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetPathParams.class, baseUrl, "/users/{user_id}/presets/{preset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetRequest.class, baseUrl, "/users/{user_id}/presets/{preset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -176,7 +176,7 @@ public class EmbedPresetsEssentials {
      */
     public org.openapis.openapi.models.operations.GetEmbedPresetAlt1Response getEmbedPresetAlt1(org.openapis.openapi.models.operations.GetEmbedPresetAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetAlt1PathParams.class, baseUrl, "/me/presets/{preset_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetAlt1Request.class, baseUrl, "/me/presets/{preset_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -215,13 +215,13 @@ public class EmbedPresetsEssentials {
      */
     public org.openapis.openapi.models.operations.GetEmbedPresetsResponse getEmbedPresets(org.openapis.openapi.models.operations.GetEmbedPresetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetsPathParams.class, baseUrl, "/users/{user_id}/presets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmbedPresetsRequest.class, baseUrl, "/users/{user_id}/presets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEmbedPresetsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEmbedPresetsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -266,7 +266,7 @@ public class EmbedPresetsEssentials {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEmbedPresetsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEmbedPresetsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

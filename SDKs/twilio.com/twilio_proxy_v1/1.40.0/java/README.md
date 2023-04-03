@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateMessageInteractionSecurity;
-import org.openapis.openapi.models.operations.CreateMessageInteractionPathParams;
 import org.openapis.openapi.models.operations.CreateMessageInteractionCreateMessageInteractionRequest;
 import org.openapis.openapi.models.operations.CreateMessageInteractionRequest;
 import org.openapis.openapi.models.operations.CreateMessageInteractionResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,28 +29,23 @@ public class Application {
                 .build();
 
             CreateMessageInteractionRequest req = new CreateMessageInteractionRequest() {{
-                security = new CreateMessageInteractionSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CreateMessageInteractionPathParams() {{
-                    participantSid = "corrupti";
-                    serviceSid = "provident";
-                    sessionSid = "distinctio";
-                }};
-                request = new CreateMessageInteractionCreateMessageInteractionRequest() {{
-                    body = "quibusdam";
+                participantSid = "corrupti";
+                requestBody = new CreateMessageInteractionCreateMessageInteractionRequest() {{
+                    body = "provident";
                     mediaUrl = new String[]{{
-                        add("https://moral-star.info"),
-                        add("https://present-giggle.info"),
-                        add("http://unique-baboon.org"),
+                        add("https://outstanding-strait.name"),
+                        add("https://impressive-ox.name"),
+                        add("http://innocent-effect.org"),
                     }};
                 }};
-            }};            
+                serviceSid = "ipsa";
+                sessionSid = "delectus";
+            }}            
 
-            CreateMessageInteractionResponse res = sdk.createMessageInteraction(req);
+            CreateMessageInteractionResponse res = sdk.createMessageInteraction(req, new CreateMessageInteractionSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.proxyV1ServiceSessionParticipantMessageInteraction.isPresent()) {
                 // handle response
@@ -64,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

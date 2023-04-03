@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEnvironmentRequest {
-    
-    public UpdateEnvironmentPathParams pathParams;
-    public UpdateEnvironmentRequest withPathParams(UpdateEnvironmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateEnvironmentModel updateEnvironmentModel;
+    public UpdateEnvironmentRequest withUpdateEnvironmentModel(org.openapis.openapi.models.shared.UpdateEnvironmentModel updateEnvironmentModel) {
+        this.updateEnvironmentModel = updateEnvironmentModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateEnvironmentModel request;
-    public UpdateEnvironmentRequest withRequest(org.openapis.openapi.models.shared.UpdateEnvironmentModel request) {
-        this.request = request;
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
+    public String environmentId;
+    public UpdateEnvironmentRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
         return this;
     }
     

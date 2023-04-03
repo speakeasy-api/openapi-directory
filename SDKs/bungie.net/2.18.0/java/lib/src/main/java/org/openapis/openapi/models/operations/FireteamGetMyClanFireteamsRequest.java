@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FireteamGetMyClanFireteamsRequest {
-    
-    public FireteamGetMyClanFireteamsPathParams pathParams;
-    public FireteamGetMyClanFireteamsRequest withPathParams(FireteamGetMyClanFireteamsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, filter by clan. Otherwise, ignore the clan and show all of the user's fireteams.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupFilter")
+    public Boolean groupFilter;
+    public FireteamGetMyClanFireteamsRequest withGroupFilter(Boolean groupFilter) {
+        this.groupFilter = groupFilter;
         return this;
     }
     
-    
-    public FireteamGetMyClanFireteamsQueryParams queryParams;
-    public FireteamGetMyClanFireteamsRequest withQueryParams(FireteamGetMyClanFireteamsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The group id of the clan. (This parameter is ignored unless the optional query parameter groupFilter is true).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public FireteamGetMyClanFireteamsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * If true, return fireteams that have been closed.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=includeClosed")
+    public Boolean includeClosed;
+    public FireteamGetMyClanFireteamsRequest withIncludeClosed(Boolean includeClosed) {
+        this.includeClosed = includeClosed;
+        return this;
+    }
     
-    public FireteamGetMyClanFireteamsSecurity security;
-    public FireteamGetMyClanFireteamsRequest withSecurity(FireteamGetMyClanFireteamsSecurity security) {
-        this.security = security;
+    /**
+     * An optional language filter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=langFilter")
+    public String langFilter;
+    public FireteamGetMyClanFireteamsRequest withLangFilter(String langFilter) {
+        this.langFilter = langFilter;
+        return this;
+    }
+    
+    /**
+     * Deprecated parameter, ignored.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
+    public Integer page;
+    public FireteamGetMyClanFireteamsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The platform filter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
+    public Long platform;
+    public FireteamGetMyClanFireteamsRequest withPlatform(Long platform) {
+        this.platform = platform;
         return this;
     }
     

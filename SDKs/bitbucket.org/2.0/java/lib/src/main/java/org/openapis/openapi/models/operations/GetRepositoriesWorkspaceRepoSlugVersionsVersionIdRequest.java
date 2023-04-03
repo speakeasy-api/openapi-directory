@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugVersionsVersionIdPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest withPathParams(GetRepositoriesWorkspaceRepoSlugVersionsVersionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
+    /**
+     * The version's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version_id")
+    public Long versionId;
+    public GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest withVersionId(Long versionId) {
+        this.versionId = versionId;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugVersionsVersionIdSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest withSecurity(GetRepositoriesWorkspaceRepoSlugVersionsVersionIdSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugVersionsVersionIdRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

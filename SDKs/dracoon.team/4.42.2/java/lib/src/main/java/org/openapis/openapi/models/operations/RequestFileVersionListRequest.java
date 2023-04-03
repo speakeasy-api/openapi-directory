@@ -4,27 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestFileVersionListRequest {
-    
-    public RequestFileVersionListPathParams pathParams;
-    public RequestFileVersionListRequest withPathParams(RequestFileVersionListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestFileVersionListRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestFileVersionListQueryParams queryParams;
-    public RequestFileVersionListRequest withQueryParams(RequestFileVersionListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestFileVersionListXSdsDateFormatEnum xSdsDateFormat;
+    public RequestFileVersionListRequest withXSdsDateFormat(RequestFileVersionListXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestFileVersionListRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RequestFileVersionListHeaders headers;
-    public RequestFileVersionListRequest withHeaders(RequestFileVersionListHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestFileVersionListRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Reference ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reference_id")
+    public Long referenceId;
+    public RequestFileVersionListRequest withReferenceId(Long referenceId) {
+        this.referenceId = referenceId;
         return this;
     }
     

@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HolidayRequest {
-    
-    public HolidayPathParams pathParams;
-    public HolidayRequest withPathParams(HolidayPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public HolidayRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public HolidayRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public HolidayHeaders headers;
-    public HolidayRequest withHeaders(HolidayHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=holidayId")
+    public String holidayId;
+    public HolidayRequest withHolidayId(String holidayId) {
+        this.holidayId = holidayId;
         return this;
     }
     

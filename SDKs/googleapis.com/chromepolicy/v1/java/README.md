@@ -18,17 +18,13 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity;
-import org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeletePathParams;
-import org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteQueryParams;
 import org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest;
 import org.openapis.openapi.models.operations.ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest;
 import org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest;
 import org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1PolicyTargetKey;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -37,59 +33,62 @@ public class Application {
                 .build();
 
             ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest req = new ChromepolicyCustomersPoliciesGroupsBatchDeleteRequest() {{
-                security = new ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ChromepolicyCustomersPoliciesGroupsBatchDeletePathParams() {{
-                    customer = "corrupti";
-                }};
-                queryParams = new ChromepolicyCustomersPoliciesGroupsBatchDeleteQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest() {{
+                dollarXgafv = "2";
+                googleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest = new GoogleChromePolicyVersionsV1BatchDeleteGroupPoliciesRequest() {{
                     requests = new org.openapis.openapi.models.shared.GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest[]{{
                         add(new GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest() {{
-                            policySchema = "iure";
+                            policySchema = "distinctio";
                             policyTargetKey = new GoogleChromePolicyVersionsV1PolicyTargetKey() {{
                                 additionalTargetKeys = new java.util.HashMap<String, String>() {{
-                                    put("debitis", "ipsa");
-                                    put("delectus", "tempora");
+                                    put("unde", "nulla");
+                                    put("corrupti", "illum");
+                                    put("vel", "error");
+                                    put("deserunt", "suscipit");
                                 }};
-                                targetResource = "suscipit";
+                                targetResource = "iure";
                             }};
                         }}),
                         add(new GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest() {{
-                            policySchema = "molestiae";
+                            policySchema = "magnam";
                             policyTargetKey = new GoogleChromePolicyVersionsV1PolicyTargetKey() {{
                                 additionalTargetKeys = new java.util.HashMap<String, String>() {{
+                                    put("ipsa", "delectus");
+                                    put("tempora", "suscipit");
+                                    put("molestiae", "minus");
                                     put("placeat", "voluptatum");
-                                    put("iusto", "excepturi");
-                                    put("nisi", "recusandae");
-                                    put("temporibus", "ab");
                                 }};
-                                targetResource = "quis";
+                                targetResource = "iusto";
+                            }};
+                        }}),
+                        add(new GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest() {{
+                            policySchema = "excepturi";
+                            policyTargetKey = new GoogleChromePolicyVersionsV1PolicyTargetKey() {{
+                                additionalTargetKeys = new java.util.HashMap<String, String>() {{
+                                    put("recusandae", "temporibus");
+                                    put("ab", "quis");
+                                }};
+                                targetResource = "veritatis";
                             }};
                         }}),
                     }};
                 }};
-            }};            
+                accessToken = "deserunt";
+                alt = "json";
+                callback = "ipsam";
+                customer = "repellendus";
+                fields = "sapiente";
+                key = "quo";
+                oauthToken = "odit";
+                prettyPrint = false;
+                quotaUser = "at";
+                uploadType = "at";
+                uploadProtocol = "maiores";
+            }}            
 
-            ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse res = sdk.customers.chromepolicyCustomersPoliciesGroupsBatchDelete(req);
+            ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse res = sdk.customers.chromepolicyCustomersPoliciesGroupsBatchDelete(req, new ChromepolicyCustomersPoliciesGroupsBatchDeleteSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleProtobufEmpty.isPresent()) {
                 // handle response
@@ -101,7 +100,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### customers

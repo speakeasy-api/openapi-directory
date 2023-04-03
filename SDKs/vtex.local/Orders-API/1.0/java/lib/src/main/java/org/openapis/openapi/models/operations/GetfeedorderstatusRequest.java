@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetfeedorderstatusRequest {
-    
-    public GetfeedorderstatusQueryParams queryParams;
-    public GetfeedorderstatusRequest withQueryParams(GetfeedorderstatusQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetfeedorderstatusRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetfeedorderstatusRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetfeedorderstatusHeaders headers;
-    public GetfeedorderstatusRequest withHeaders(GetfeedorderstatusHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxLot")
+    public String maxLot;
+    public GetfeedorderstatusRequest withMaxLot(String maxLot) {
+        this.maxLot = maxLot;
         return this;
     }
     

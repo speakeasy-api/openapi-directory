@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiV1AnnouncementsIdReactionsNameRequest {
-    
-    public PutApiV1AnnouncementsIdReactionsNamePathParams pathParams;
-    public PutApiV1AnnouncementsIdReactionsNameRequest withPathParams(PutApiV1AnnouncementsIdReactionsNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Local ID of an announcement in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutApiV1AnnouncementsIdReactionsNameRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public PutApiV1AnnouncementsIdReactionsNameSecurity security;
-    public PutApiV1AnnouncementsIdReactionsNameRequest withSecurity(PutApiV1AnnouncementsIdReactionsNameSecurity security) {
-        this.security = security;
+    /**
+     * Unicode emoji, or shortcode of custom emoji
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public PutApiV1AnnouncementsIdReactionsNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

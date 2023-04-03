@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MerchantsUpdateRequest {
-    
-    public MerchantsUpdatePathParams pathParams;
-    public MerchantsUpdateRequest withPathParams(MerchantsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public MerchantsUpdateQueryParams queryParams;
-    public MerchantsUpdateRequest withQueryParams(MerchantsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public MerchantsUpdateHeaders headers;
-    public MerchantsUpdateRequest withHeaders(MerchantsUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MerchantInput request;
-    public MerchantsUpdateRequest withRequest(org.openapis.openapi.models.shared.MerchantInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MerchantInput merchantInput;
+    public MerchantsUpdateRequest withMerchantInput(org.openapis.openapi.models.shared.MerchantInput merchantInput) {
+        this.merchantInput = merchantInput;
         return this;
     }
     
+    /**
+     * ID of the record you are acting upon.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public MerchantsUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public MerchantsUpdateSecurity security;
-    public MerchantsUpdateRequest withSecurity(MerchantsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public MerchantsUpdateRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public MerchantsUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public MerchantsUpdateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public MerchantsUpdateRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

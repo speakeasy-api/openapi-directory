@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributorRequest {
-    
-    public GetContributorPathParams pathParams;
-    public GetContributorRequest withPathParams(GetContributorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetContributorSecurity security;
-    public GetContributorRequest withSecurity(GetContributorSecurity security) {
-        this.security = security;
+    /**
+     * Contributor ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contributor_id")
+    public String contributorId;
+    public GetContributorRequest withContributorId(String contributorId) {
+        this.contributorId = contributorId;
         return this;
     }
     

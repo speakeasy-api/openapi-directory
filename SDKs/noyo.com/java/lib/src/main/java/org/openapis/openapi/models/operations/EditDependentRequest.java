@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditDependentRequest {
-    
-    public EditDependentPathParams pathParams;
-    public EditDependentRequest withPathParams(EditDependentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DependentEditRequest dependentEditRequest;
+    public EditDependentRequest withDependentEditRequest(org.openapis.openapi.models.shared.DependentEditRequest dependentEditRequest) {
+        this.dependentEditRequest = dependentEditRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DependentEditRequest request;
-    public EditDependentRequest withRequest(org.openapis.openapi.models.shared.DependentEditRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the employee in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dependent_id")
+    public String dependentId;
+    public EditDependentRequest withDependentId(String dependentId) {
+        this.dependentId = dependentId;
+        return this;
+    }
+    
+    /**
+     * The current version identifier of the dependent
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public EditDependentRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

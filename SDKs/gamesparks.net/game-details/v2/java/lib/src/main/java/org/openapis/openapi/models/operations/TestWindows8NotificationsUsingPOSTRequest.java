@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestWindows8NotificationsUsingPOSTRequest {
-    
-    public TestWindows8NotificationsUsingPOSTPathParams pathParams;
-    public TestWindows8NotificationsUsingPOSTRequest withPathParams(TestWindows8NotificationsUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * messageDetails
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PushNotificationTestModel request;
-    public TestWindows8NotificationsUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.PushNotificationTestModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel;
+    public TestWindows8NotificationsUsingPOSTRequest withPushNotificationTestModel(org.openapis.openapi.models.shared.PushNotificationTestModel pushNotificationTestModel) {
+        this.pushNotificationTestModel = pushNotificationTestModel;
+        return this;
+    }
+    
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public TestWindows8NotificationsUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

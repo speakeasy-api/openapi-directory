@@ -42,7 +42,7 @@ public class FilmographyType {
      */
     public org.openapis.openapi.models.operations.FilmographyTypeSearchReadResponse filmographyTypeSearchRead(org.openapis.openapi.models.operations.FilmographyTypeSearchReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilmographyTypeSearchReadPathParams.class, baseUrl, "/api/v1/filmography-type/search/{filmography_description}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FilmographyTypeSearchReadRequest.class, baseUrl, "/api/v1/filmography-type/search/{filmography_description}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

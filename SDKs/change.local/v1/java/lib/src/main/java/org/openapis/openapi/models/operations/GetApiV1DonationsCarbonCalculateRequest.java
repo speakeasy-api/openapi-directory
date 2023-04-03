@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1DonationsCarbonCalculateRequest {
-    
-    public GetApiV1DonationsCarbonCalculateQueryParams queryParams;
-    public GetApiV1DonationsCarbonCalculateRequest withQueryParams(GetApiV1DonationsCarbonCalculateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The destination zip code (US only) of the shipment. If you send this parameter, also send `origin_address`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination_address")
+    public Double destinationAddress;
+    public GetApiV1DonationsCarbonCalculateRequest withDestinationAddress(Double destinationAddress) {
+        this.destinationAddress = destinationAddress;
         return this;
     }
     
+    /**
+     * The total distance (in miles) of the shipment. You can use this parameter in place of `origin_address` and `destination_address`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance_mi")
+    public Double distanceMi;
+    public GetApiV1DonationsCarbonCalculateRequest withDistanceMi(Double distanceMi) {
+        this.distanceMi = distanceMi;
+        return this;
+    }
     
-    public GetApiV1DonationsCarbonCalculateSecurity security;
-    public GetApiV1DonationsCarbonCalculateRequest withSecurity(GetApiV1DonationsCarbonCalculateSecurity security) {
-        this.security = security;
+    /**
+     * The origin zip code (US only) of the shipment. If you send this parameter, also send `destination_address`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin_address")
+    public Double originAddress;
+    public GetApiV1DonationsCarbonCalculateRequest withOriginAddress(Double originAddress) {
+        this.originAddress = originAddress;
+        return this;
+    }
+    
+    /**
+     * The primary transportation method of the shipment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transportation_method")
+    public GetApiV1DonationsCarbonCalculateTransportationMethodEnum transportationMethod;
+    public GetApiV1DonationsCarbonCalculateRequest withTransportationMethod(GetApiV1DonationsCarbonCalculateTransportationMethodEnum transportationMethod) {
+        this.transportationMethod = transportationMethod;
+        return this;
+    }
+    
+    /**
+     * The total weight (in pounds) of the shipment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weight_lb")
+    public Double weightLb;
+    public GetApiV1DonationsCarbonCalculateRequest withWeightLb(Double weightLb) {
+        this.weightLb = weightLb;
         return this;
     }
     

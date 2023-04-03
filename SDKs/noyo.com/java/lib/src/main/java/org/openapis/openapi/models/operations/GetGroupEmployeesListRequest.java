@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupEmployeesListRequest {
-    
-    public GetGroupEmployeesListPathParams pathParams;
-    public GetGroupEmployeesListRequest withPathParams(GetGroupEmployeesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the group in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public GetGroupEmployeesListRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetGroupEmployeesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetGroupEmployeesListQueryParams queryParams;
-    public GetGroupEmployeesListRequest withQueryParams(GetGroupEmployeesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The max size of each page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetGroupEmployeesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

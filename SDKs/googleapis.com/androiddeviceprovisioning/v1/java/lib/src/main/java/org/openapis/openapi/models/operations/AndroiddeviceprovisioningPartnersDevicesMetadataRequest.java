@@ -7,24 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroiddeviceprovisioningPartnersDevicesMetadataRequest {
-    
-    public AndroiddeviceprovisioningPartnersDevicesMetadataPathParams pathParams;
-    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withPathParams(AndroiddeviceprovisioningPartnersDevicesMetadataPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AndroiddeviceprovisioningPartnersDevicesMetadataQueryParams queryParams;
-    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withQueryParams(AndroiddeviceprovisioningPartnersDevicesMetadataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateDeviceMetadataRequest request;
-    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withRequest(org.openapis.openapi.models.shared.UpdateDeviceMetadataRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateDeviceMetadataRequest updateDeviceMetadataRequest;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withUpdateDeviceMetadataRequest(org.openapis.openapi.models.shared.UpdateDeviceMetadataRequest updateDeviceMetadataRequest) {
+        this.updateDeviceMetadataRequest = updateDeviceMetadataRequest;
+        return this;
+    }
+    
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. The ID of the device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
+    public String deviceId;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The owner of the newly set metadata. Set this to the partner ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=metadataOwnerId")
+    public String metadataOwnerId;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withMetadataOwnerId(String metadataOwnerId) {
+        this.metadataOwnerId = metadataOwnerId;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AndroiddeviceprovisioningPartnersDevicesMetadataRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -31,25 +31,26 @@ public class Events {
     /**
      * Resets all player progress on the event with the given ID for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementEventsResetResponse gamesManagementEventsReset(org.openapis.openapi.models.operations.GamesManagementEventsResetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementEventsResetResponse gamesManagementEventsReset(org.openapis.openapi.models.operations.GamesManagementEventsResetRequest request, org.openapis.openapi.models.operations.GamesManagementEventsResetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementEventsResetPathParams.class, baseUrl, "/games/v1management/events/{eventId}/reset", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementEventsResetRequest.class, baseUrl, "/games/v1management/events/{eventId}/reset", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,10 +71,11 @@ public class Events {
     /**
      * Resets all player progress on all events for the currently authenticated player. This method is only accessible to whitelisted tester accounts for your application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementEventsResetAllResponse gamesManagementEventsResetAll(org.openapis.openapi.models.operations.GamesManagementEventsResetAllRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementEventsResetAllResponse gamesManagementEventsResetAll(org.openapis.openapi.models.operations.GamesManagementEventsResetAllRequest request, org.openapis.openapi.models.operations.GamesManagementEventsResetAllSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1management/events/reset");
         
@@ -81,14 +83,14 @@ public class Events {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +111,11 @@ public class Events {
     /**
      * Resets all draft events for all players. This method is only available to user accounts for your developer console.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersResponse gamesManagementEventsResetAllForAllPlayers(org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersResponse gamesManagementEventsResetAllForAllPlayers(org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersRequest request, org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1management/events/resetAllForAllPlayers");
         
@@ -120,14 +123,14 @@ public class Events {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,25 +151,26 @@ public class Events {
     /**
      * Resets the event with the given ID for all players. This method is only available to user accounts for your developer console. Only draft events can be reset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersResponse gamesManagementEventsResetForAllPlayers(org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersResponse gamesManagementEventsResetForAllPlayers(org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersRequest request, org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersPathParams.class, baseUrl, "/games/v1management/events/{eventId}/resetForAllPlayers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersRequest.class, baseUrl, "/games/v1management/events/{eventId}/resetForAllPlayers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -187,27 +191,28 @@ public class Events {
     /**
      * Resets events with the given IDs for all players. This method is only available to user accounts for your developer console. Only draft events may be reset.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersResponse gamesManagementEventsResetMultipleForAllPlayers(org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersResponse gamesManagementEventsResetMultipleForAllPlayers(org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersRequest request, org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1management/events/resetMultipleForAllPlayers");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "eventsResetMultipleForAllRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -39,12 +39,12 @@ public class MaintenanceController {
      */
     public org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormResponse maintenanceControllerCreateMaintenanceJobForm(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormPathParams.class, baseUrl, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobFormRequest.class, baseUrl, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "maintenanceIssueModel", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -98,12 +98,12 @@ public class MaintenanceController {
      */
     public org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobJsonResponse maintenanceControllerCreateMaintenanceJobJson(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobJsonPathParams.class, baseUrl, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobJsonRequest.class, baseUrl, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "maintenanceIssueModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -157,12 +157,12 @@ public class MaintenanceController {
      */
     public org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobRawResponse maintenanceControllerCreateMaintenanceJobRaw(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobRawPathParams.class, baseUrl, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MaintenanceControllerCreateMaintenanceJobRawRequest.class, baseUrl, "/v3/maintenance/{shortName}/maintenance/{branchID}/createmaintenancejob", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

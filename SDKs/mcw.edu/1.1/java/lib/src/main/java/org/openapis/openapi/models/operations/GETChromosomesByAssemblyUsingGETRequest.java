@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETChromosomesByAssemblyUsingGETRequest {
-    
-    public GETChromosomesByAssemblyUsingGETPathParams pathParams;
-    public GETChromosomesByAssemblyUsingGETRequest withPathParams(GETChromosomesByAssemblyUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * mapKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapKey")
+    public Integer mapKey;
+    public GETChromosomesByAssemblyUsingGETRequest withMapKey(Integer mapKey) {
+        this.mapKey = mapKey;
         return this;
     }
     

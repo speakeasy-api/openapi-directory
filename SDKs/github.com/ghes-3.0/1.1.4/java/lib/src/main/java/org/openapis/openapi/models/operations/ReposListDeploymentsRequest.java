@@ -4,20 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListDeploymentsRequest {
-    
-    public ReposListDeploymentsPathParams pathParams;
-    public ReposListDeploymentsRequest withPathParams(ReposListDeploymentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the environment that was deployed to (e.g., `staging` or `production`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public ReposListDeploymentsRequest withEnvironment(String environment) {
+        this.environment = environment;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListDeploymentsRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposListDeploymentsQueryParams queryParams;
-    public ReposListDeploymentsRequest withQueryParams(ReposListDeploymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListDeploymentsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListDeploymentsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the ref. This can be a branch, tag, or SHA.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
+    public String ref;
+    public ReposListDeploymentsRequest withRef(String ref) {
+        this.ref = ref;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListDeploymentsRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * The SHA recorded at creation time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sha")
+    public String sha;
+    public ReposListDeploymentsRequest withSha(String sha) {
+        this.sha = sha;
+        return this;
+    }
+    
+    /**
+     * The name of the task for the deployment (e.g., `deploy` or `deploy:migrations`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=task")
+    public String task;
+    public ReposListDeploymentsRequest withTask(String task) {
+        this.task = task;
         return this;
     }
     

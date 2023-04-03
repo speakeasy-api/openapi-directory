@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindSimilarVideosRequest {
-    
-    public FindSimilarVideosPathParams pathParams;
-    public FindSimilarVideosRequest withPathParams(FindSimilarVideosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of a video for which similar videos should be returned
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FindSimilarVideosRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public FindSimilarVideosQueryParams queryParams;
-    public FindSimilarVideosRequest withQueryParams(FindSimilarVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Language for the keywords and categories in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public FindSimilarVideosRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
         return this;
     }
     
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public FindSimilarVideosRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public FindSimilarVideosSecurity security;
-    public FindSimilarVideosRequest withSecurity(FindSimilarVideosSecurity security) {
-        this.security = security;
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public FindSimilarVideosRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public FindSimilarVideosViewEnum view;
+    public FindSimilarVideosRequest withView(FindSimilarVideosViewEnum view) {
+        this.view = view;
         return this;
     }
     

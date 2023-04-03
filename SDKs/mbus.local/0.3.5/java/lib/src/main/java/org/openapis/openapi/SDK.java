@@ -127,7 +127,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetResponse get(org.openapis.openapi.models.operations.GetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPathParams.class, baseUrl, "/mbus/get/{device}/{baudrate}/{address}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRequest.class, baseUrl, "/mbus/get/{device}/{baudrate}/{address}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -171,7 +171,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetMultiResponse getMulti(org.openapis.openapi.models.operations.GetMultiRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMultiPathParams.class, baseUrl, "/mbus/getMulti/{device}/{baudrate}/{address}/{maxframes}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMultiRequest.class, baseUrl, "/mbus/getMulti/{device}/{baudrate}/{address}/{maxframes}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -378,7 +378,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ScanResponse scan(org.openapis.openapi.models.operations.ScanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScanPathParams.class, baseUrl, "/mbus/scan/{device}/{baudrate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ScanRequest.class, baseUrl, "/mbus/scan/{device}/{baudrate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

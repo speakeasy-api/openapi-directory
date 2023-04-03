@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfsSlatesRequest {
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public DfsSlatesFormatEnum format;
+    public DfsSlatesRequest withFormat(DfsSlatesFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public DfsSlatesPathParams pathParams;
-    public DfsSlatesRequest withPathParams(DfsSlatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The TournamentID of a tournament.  TournamentIDs can be found in the Tournaments API.  Valid entries are &lt;code&gt;58&lt;/code&gt;, &lt;code&gt;61&lt;/code&gt;, etc.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tournamentid")
+    public String tournamentid;
+    public DfsSlatesRequest withTournamentid(String tournamentid) {
+        this.tournamentid = tournamentid;
         return this;
     }
     

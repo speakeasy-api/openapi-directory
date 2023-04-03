@@ -62,7 +62,7 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsChoicesReadResponse secretsChoicesRead(org.openapis.openapi.models.operations.SecretsChoicesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsChoicesReadPathParams.class, baseUrl, "/secrets/_choices/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsChoicesReadRequest.class, baseUrl, "/secrets/_choices/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -151,7 +151,7 @@ public class Secrets {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SecretsSecretRolesCreateResponse secretsSecretRolesCreate(org.openapis.openapi.models.operations.SecretsSecretRolesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretsSecretRolesCreateResponse secretsSecretRolesCreate(org.openapis.openapi.models.shared.SecretRoleInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/secrets/secret-roles/");
         
@@ -191,7 +191,7 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsSecretRolesDeleteResponse secretsSecretRolesDelete(org.openapis.openapi.models.operations.SecretsSecretRolesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretRolesDeletePathParams.class, baseUrl, "/secrets/secret-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretRolesDeleteRequest.class, baseUrl, "/secrets/secret-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -224,7 +224,7 @@ public class Secrets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretsSecretRolesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretsSecretRolesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -257,12 +257,12 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsSecretRolesPartialUpdateResponse secretsSecretRolesPartialUpdate(org.openapis.openapi.models.operations.SecretsSecretRolesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretRolesPartialUpdatePathParams.class, baseUrl, "/secrets/secret-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretRolesPartialUpdateRequest.class, baseUrl, "/secrets/secret-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "secretRoleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -295,7 +295,7 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsSecretRolesReadResponse secretsSecretRolesRead(org.openapis.openapi.models.operations.SecretsSecretRolesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretRolesReadPathParams.class, baseUrl, "/secrets/secret-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretRolesReadRequest.class, baseUrl, "/secrets/secret-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -328,12 +328,12 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsSecretRolesUpdateResponse secretsSecretRolesUpdate(org.openapis.openapi.models.operations.SecretsSecretRolesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretRolesUpdatePathParams.class, baseUrl, "/secrets/secret-roles/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretRolesUpdateRequest.class, baseUrl, "/secrets/secret-roles/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "secretRoleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -364,7 +364,7 @@ public class Secrets {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.SecretsSecretsCreateResponse secretsSecretsCreate(org.openapis.openapi.models.operations.SecretsSecretsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SecretsSecretsCreateResponse secretsSecretsCreate(org.openapis.openapi.models.shared.WritableSecretInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/secrets/secrets/");
         
@@ -404,7 +404,7 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsSecretsDeleteResponse secretsSecretsDelete(org.openapis.openapi.models.operations.SecretsSecretsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretsDeletePathParams.class, baseUrl, "/secrets/secrets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretsDeleteRequest.class, baseUrl, "/secrets/secrets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -437,7 +437,7 @@ public class Secrets {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretsSecretsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecretsSecretsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -470,12 +470,12 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsSecretsPartialUpdateResponse secretsSecretsPartialUpdate(org.openapis.openapi.models.operations.SecretsSecretsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretsPartialUpdatePathParams.class, baseUrl, "/secrets/secrets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretsPartialUpdateRequest.class, baseUrl, "/secrets/secrets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableSecretInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -508,7 +508,7 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsSecretsReadResponse secretsSecretsRead(org.openapis.openapi.models.operations.SecretsSecretsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretsReadPathParams.class, baseUrl, "/secrets/secrets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretsReadRequest.class, baseUrl, "/secrets/secrets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -541,12 +541,12 @@ public class Secrets {
 
     public org.openapis.openapi.models.operations.SecretsSecretsUpdateResponse secretsSecretsUpdate(org.openapis.openapi.models.operations.SecretsSecretsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretsUpdatePathParams.class, baseUrl, "/secrets/secrets/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecretsSecretsUpdateRequest.class, baseUrl, "/secrets/secrets/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableSecretInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

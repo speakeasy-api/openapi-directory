@@ -4,20 +4,51 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQueryExtensionRequest {
-    
-    public GetQueryExtensionPathParams pathParams;
-    public GetQueryExtensionRequest withPathParams(GetQueryExtensionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Double count;
+    public GetQueryExtensionRequest withCount(Double count) {
+        this.count = count;
         return this;
     }
     
+    /**
+     * extension
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=extension")
+    public GetQueryExtensionExtensionEnum extension;
+    public GetQueryExtensionRequest withExtension(GetQueryExtensionExtensionEnum extension) {
+        this.extension = extension;
+        return this;
+    }
     
-    public GetQueryExtensionQueryParams queryParams;
-    public GetQueryExtensionRequest withQueryParams(GetQueryExtensionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inUrlPrefixes")
+    public String inUrlPrefixes;
+    public GetQueryExtensionRequest withInUrlPrefixes(String inUrlPrefixes) {
+        this.inUrlPrefixes = inUrlPrefixes;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetQueryExtensionRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public Double start;
+    public GetQueryExtensionRequest withStart(Double start) {
+        this.start = start;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subdomains")
+    public String subdomains;
+    public GetQueryExtensionRequest withSubdomains(String subdomains) {
+        this.subdomains = subdomains;
         return this;
     }
     

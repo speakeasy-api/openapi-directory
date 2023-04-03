@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateEnvironmentOperationsRoleRequest {
-    
-    public GETAssociateEnvironmentOperationsRoleQueryParams queryParams;
-    public GETAssociateEnvironmentOperationsRoleRequest withQueryParams(GETAssociateEnvironmentOperationsRoleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssociateEnvironmentOperationsRoleActionEnum action;
+    public GETAssociateEnvironmentOperationsRoleRequest withAction(GETAssociateEnvironmentOperationsRoleActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the environment to which to set the operations role.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
+    public String environmentName;
+    public GETAssociateEnvironmentOperationsRoleRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
     
-    public GETAssociateEnvironmentOperationsRoleHeaders headers;
-    public GETAssociateEnvironmentOperationsRoleRequest withHeaders(GETAssociateEnvironmentOperationsRoleHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of an existing IAM role to be used as the environment's operations role.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationsRole")
+    public String operationsRole;
+    public GETAssociateEnvironmentOperationsRoleRequest withOperationsRole(String operationsRole) {
+        this.operationsRole = operationsRole;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssociateEnvironmentOperationsRoleVersionEnum version;
+    public GETAssociateEnvironmentOperationsRoleRequest withVersion(GETAssociateEnvironmentOperationsRoleVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssociateEnvironmentOperationsRoleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssociateEnvironmentOperationsRoleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssociateEnvironmentOperationsRoleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssociateEnvironmentOperationsRoleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssociateEnvironmentOperationsRoleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssociateEnvironmentOperationsRoleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssociateEnvironmentOperationsRoleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

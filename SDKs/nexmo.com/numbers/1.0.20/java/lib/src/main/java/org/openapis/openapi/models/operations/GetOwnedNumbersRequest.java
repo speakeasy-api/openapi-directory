@@ -4,13 +4,84 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOwnedNumbersRequest {
+    /**
+     * The Application that you want to return the numbers for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application_id")
+    public String applicationId;
+    public GetOwnedNumbersRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public GetOwnedNumbersQueryParams queryParams;
-    public GetOwnedNumbersRequest withQueryParams(GetOwnedNumbersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetOwnedNumbersRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * Set this optional field to `true` to restrict your results to numbers
+     * associated with an Application (any Application). Set to `false` to
+     * find all numbers not associated with any Application. Omit the field
+     * to avoid filtering on whether or not the number is assigned to an
+     * Application.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=has_application")
+    public Boolean hasApplication;
+    public GetOwnedNumbersRequest withHasApplication(Boolean hasApplication) {
+        this.hasApplication = hasApplication;
+        return this;
+    }
+    
+    /**
+     * Page index
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=index")
+    public Long index;
+    public GetOwnedNumbersRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * The number pattern you want to search for. Use in conjunction with `search_pattern`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
+    public String pattern;
+    public GetOwnedNumbersRequest withPattern(String pattern) {
+        this.pattern = pattern;
+        return this;
+    }
+    
+    /**
+     * The strategy you want to use for matching:
+     * 
+     * 
+     * * `0` - Search for numbers that start with `pattern` (Note: all numbers are in E.164 format, so the starting pattern includes the country code, such as 1 for USA)
+     * * `1` - Search for numbers that contain `pattern`
+     * * `2` - Search for numbers that end with `pattern`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_pattern")
+    public org.openapis.openapi.models.shared.SearchPatternEnum searchPattern;
+    public GetOwnedNumbersRequest withSearchPattern(org.openapis.openapi.models.shared.SearchPatternEnum searchPattern) {
+        this.searchPattern = searchPattern;
+        return this;
+    }
+    
+    /**
+     * Page size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetOwnedNumbersRequest withSize(Long size) {
+        this.size = size;
         return this;
     }
     

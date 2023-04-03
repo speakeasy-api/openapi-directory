@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubscriptionByIdRequest {
-    
-    public GetSubscriptionByIdPathParams pathParams;
-    public GetSubscriptionByIdRequest withPathParams(GetSubscriptionByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSubscriptionByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest {
+    /**
+     * Your API key for calling this service.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlPathParams pathParams;
-    public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest withPathParams(GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Version of the service to call. The current version is 1
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlVersionNumberEnum versionNumber;
+    public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest withVersionNumber(GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlVersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wmtsVersion")
+    public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlWMTSVersionEnum wmtsVersion;
+    public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest withWmtsVersion(GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlWMTSVersionEnum wmtsVersion) {
+        this.wmtsVersion = wmtsVersion;
         return this;
     }
     

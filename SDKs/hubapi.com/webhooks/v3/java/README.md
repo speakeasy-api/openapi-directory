@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearSecurity;
-import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearPathParams;
 import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearRequest;
 import org.openapis.openapi.models.operations.DeleteWebhooksV3AppIdSettingsClearResponse;
-import org.openapis.openapi.models.shared.SchemeDeveloperHapikey;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,17 +28,12 @@ public class Application {
                 .build();
 
             DeleteWebhooksV3AppIdSettingsClearRequest req = new DeleteWebhooksV3AppIdSettingsClearRequest() {{
-                security = new DeleteWebhooksV3AppIdSettingsClearSecurity() {{
-                    developerHapikey = new SchemeDeveloperHapikey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new DeleteWebhooksV3AppIdSettingsClearPathParams() {{
-                    appId = 548814;
-                }};
-            }};            
+                appId = 548814;
+            }}            
 
-            DeleteWebhooksV3AppIdSettingsClearResponse res = sdk.settings.deleteWebhooksV3AppIdSettingsClear(req);
+            DeleteWebhooksV3AppIdSettingsClearResponse res = sdk.settings.deleteWebhooksV3AppIdSettingsClear(req, new DeleteWebhooksV3AppIdSettingsClearSecurity() {{
+                developerHapikey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### settings

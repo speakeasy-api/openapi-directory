@@ -41,7 +41,7 @@ public class Group {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGroupResponse createGroup(org.openapis.openapi.models.operations.CreateGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGroupResponse createGroup(org.openapis.openapi.models.shared.CreateGroupRequestInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/group");
         
@@ -95,7 +95,7 @@ public class Group {
      */
     public org.openapis.openapi.models.operations.FetchGroupResponse fetchGroup(org.openapis.openapi.models.operations.FetchGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchGroupPathParams.class, baseUrl, "/group/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchGroupRequest.class, baseUrl, "/group/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -148,7 +148,7 @@ public class Group {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

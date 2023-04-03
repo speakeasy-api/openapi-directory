@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureMailboxAutoReplyRequest {
-    
-    public ConfigureMailboxAutoReplyPathParams pathParams;
-    public ConfigureMailboxAutoReplyRequest withPathParams(ConfigureMailboxAutoReplyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConfigureMailboxAutoReplyQueryParams queryParams;
-    public ConfigureMailboxAutoReplyRequest withQueryParams(ConfigureMailboxAutoReplyQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Contains the auto-reply information.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AutoReply request;
-    public ConfigureMailboxAutoReplyRequest withRequest(org.openapis.openapi.models.shared.AutoReply request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AutoReply autoReply;
+    public ConfigureMailboxAutoReplyRequest withAutoReply(org.openapis.openapi.models.shared.AutoReply autoReply) {
+        this.autoReply = autoReply;
+        return this;
+    }
+    
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mailboxName")
+    public String mailboxNamePathParameter;
+    public ConfigureMailboxAutoReplyRequest withMailboxNamePathParameter(String mailboxNamePathParameter) {
+        this.mailboxNamePathParameter = mailboxNamePathParameter;
+        return this;
+    }
+    
+    /**
+     * Mailbox name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mailbox_name")
+    public String mailboxNameQueryParameter;
+    public ConfigureMailboxAutoReplyRequest withMailboxNameQueryParameter(String mailboxNameQueryParameter) {
+        this.mailboxNameQueryParameter = mailboxNameQueryParameter;
         return this;
     }
     

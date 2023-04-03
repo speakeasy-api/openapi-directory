@@ -7,23 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPostAndRelatedDataSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeAPIKey apiKey;
-    public GetPostAndRelatedDataSecurity withApiKey(org.openapis.openapi.models.shared.SchemeAPIKey apiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api_key")
+    public String apiKey;
+    public GetPostAndRelatedDataSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Code oauth2Code;
-    public GetPostAndRelatedDataSecurity withOauth2Code(org.openapis.openapi.models.shared.SchemeOauth2Code oauth2Code) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Code;
+    public GetPostAndRelatedDataSecurity withOauth2Code(String oauth2Code) {
         this.oauth2Code = oauth2Code;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Implicit oauth2Implicit;
-    public GetPostAndRelatedDataSecurity withOauth2Implicit(org.openapis.openapi.models.shared.SchemeOauth2Implicit oauth2Implicit) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Implicit;
+    public GetPostAndRelatedDataSecurity withOauth2Implicit(String oauth2Implicit) {
         this.oauth2Implicit = oauth2Implicit;
         return this;
     }

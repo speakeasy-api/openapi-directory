@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCallRecordingRequest {
-    
-    public DeleteCallRecordingPathParams pathParams;
-    public DeleteCallRecordingRequest withPathParams(DeleteCallRecordingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Recording resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public DeleteCallRecordingRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public DeleteCallRecordingSecurity security;
-    public DeleteCallRecordingRequest withSecurity(DeleteCallRecordingSecurity security) {
-        this.security = security;
+    /**
+     * The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the resources to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public DeleteCallRecordingRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteCallRecordingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Recording resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteCallRecordingRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

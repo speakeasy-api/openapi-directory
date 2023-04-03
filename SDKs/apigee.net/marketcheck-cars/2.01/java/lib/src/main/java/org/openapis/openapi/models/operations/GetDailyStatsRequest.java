@@ -4,13 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDailyStatsRequest {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetDailyStatsRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetDailyStatsQueryParams queryParams;
-    public GetDailyStatsRequest withQueryParams(GetDailyStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Inventory type for which stats are to be searched, default is used
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=car_type")
+    public GetDailyStatsCarTypeEnum carType;
+    public GetDailyStatsRequest withCarType(GetDailyStatsCarTypeEnum carType) {
+        this.carType = carType;
+        return this;
+    }
+    
+    /**
+     * City level stats, pipe seperated like city_state=jacksonville|FL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city_state")
+    public String cityState;
+    public GetDailyStatsRequest withCityState(String cityState) {
+        this.cityState = cityState;
+        return this;
+    }
+    
+    /**
+     * Country for which the stats are to be searched
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public GetDailyStatsCountryEnum country;
+    public GetDailyStatsRequest withCountry(GetDailyStatsCountryEnum country) {
+        this.country = country;
+        return this;
+    }
+    
+    /**
+     * State level stats
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
+    public String state;
+    public GetDailyStatsRequest withState(String state) {
+        this.state = state;
+        return this;
+    }
+    
+    /**
+     * Taxonomy vin for referance to find stats of similar cars
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxonomy_vin")
+    public String taxonomyVin;
+    public GetDailyStatsRequest withTaxonomyVin(String taxonomyVin) {
+        this.taxonomyVin = taxonomyVin;
+        return this;
+    }
+    
+    /**
+     * VIN that will be transformed to taxonomy_vin
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vin")
+    public String vin;
+    public GetDailyStatsRequest withVin(String vin) {
+        this.vin = vin;
+        return this;
+    }
+    
+    /**
+     * Year, Make, Model of the car, Separated by pipe e.g. ymm=2015|ford|f-150
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ymm")
+    public String ymm;
+    public GetDailyStatsRequest withYmm(String ymm) {
+        this.ymm = ymm;
+        return this;
+    }
+    
+    /**
+     * Year, Make, Model, Trim of the car, Separated by pipe e.g. ymmt=2015|ford|f-150|platinum
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ymmt")
+    public String ymmt;
+    public GetDailyStatsRequest withYmmt(String ymmt) {
+        this.ymmt = ymmt;
         return this;
     }
     

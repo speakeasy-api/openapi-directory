@@ -40,7 +40,7 @@ public class DestinationOauth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompleteDestinationOAuthResponse completeDestinationOAuth(org.openapis.openapi.models.operations.CompleteDestinationOAuthRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompleteDestinationOAuthResponse completeDestinationOAuth(org.openapis.openapi.models.shared.CompleteDestinationOAuthRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_oauths/complete_oauth");
         
@@ -99,7 +99,7 @@ public class DestinationOauth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDestinationOAuthConsentResponse getDestinationOAuthConsent(org.openapis.openapi.models.operations.GetDestinationOAuthConsentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDestinationOAuthConsentResponse getDestinationOAuthConsent(org.openapis.openapi.models.shared.DestinationOauthConsentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_oauths/get_consent_url");
         
@@ -158,7 +158,7 @@ public class DestinationOauth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetInstancewideDestinationOauthParamsResponse setInstancewideDestinationOauthParams(org.openapis.openapi.models.operations.SetInstancewideDestinationOauthParamsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetInstancewideDestinationOauthParamsResponse setInstancewideDestinationOauthParams(org.openapis.openapi.models.shared.SetInstancewideDestinationOauthParamsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/destination_oauths/oauth_params/create");
         

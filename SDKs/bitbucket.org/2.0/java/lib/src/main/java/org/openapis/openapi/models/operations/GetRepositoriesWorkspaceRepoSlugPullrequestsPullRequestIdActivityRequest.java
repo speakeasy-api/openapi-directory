@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityRequest withPathParams(GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the pull request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_request_id")
+    public Long pullRequestId;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityRequest withPullRequestId(Long pullRequestId) {
+        this.pullRequestId = pullRequestId;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivitySecurity security;
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityRequest withSecurity(GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivitySecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdActivityRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

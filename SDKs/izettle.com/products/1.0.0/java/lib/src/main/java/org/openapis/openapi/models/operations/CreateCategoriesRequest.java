@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCategoriesRequest {
-    
-    public CreateCategoriesPathParams pathParams;
-    public CreateCategoriesRequest withPathParams(CreateCategoriesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateCategoriesRequest request;
-    public CreateCategoriesRequest withRequest(org.openapis.openapi.models.shared.CreateCategoriesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateCategoriesRequest createCategoriesRequest;
+    public CreateCategoriesRequest withCreateCategoriesRequest(org.openapis.openapi.models.shared.CreateCategoriesRequest createCategoriesRequest) {
+        this.createCategoriesRequest = createCategoriesRequest;
         return this;
     }
     
-    
-    public CreateCategoriesSecurity security;
-    public CreateCategoriesRequest withSecurity(CreateCategoriesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public CreateCategoriesRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

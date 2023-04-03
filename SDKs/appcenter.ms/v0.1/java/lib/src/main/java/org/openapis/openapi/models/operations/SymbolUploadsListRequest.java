@@ -4,27 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolUploadsListRequest {
-    
-    public SymbolUploadsListPathParams pathParams;
-    public SymbolUploadsListRequest withPathParams(SymbolUploadsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public SymbolUploadsListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public SymbolUploadsListQueryParams queryParams;
-    public SymbolUploadsListRequest withQueryParams(SymbolUploadsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public SymbolUploadsListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     
+    /**
+     * Filter results by the current status of a symbol upload: * all: all states in the symbol upload process. Includes created, aborted, committed, processing, indexed and failed states * uploaded: all states after package is uploaded. Includes committed, processing, indexed and failed states * processed: symbol upload processing is completed. Includes indexed and failed states.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public SymbolUploadsListStatusEnum status;
+    public SymbolUploadsListRequest withStatus(SymbolUploadsListStatusEnum status) {
+        this.status = status;
+        return this;
+    }
     
-    public SymbolUploadsListSecurity security;
-    public SymbolUploadsListRequest withSecurity(SymbolUploadsListSecurity security) {
-        this.security = security;
+    /**
+     * The type of symbols
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=symbol_type")
+    public SymbolUploadsListSymbolTypeEnum symbolType;
+    public SymbolUploadsListRequest withSymbolType(SymbolUploadsListSymbolTypeEnum symbolType) {
+        this.symbolType = symbolType;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=top")
+    public Long top;
+    public SymbolUploadsListRequest withTop(Long top) {
+        this.top = top;
         return this;
     }
     

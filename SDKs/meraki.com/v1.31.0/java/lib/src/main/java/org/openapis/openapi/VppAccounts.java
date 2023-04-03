@@ -38,7 +38,7 @@ public class VppAccounts {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSmVppAccountResponse getOrganizationSmVppAccount(org.openapis.openapi.models.operations.GetOrganizationSmVppAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSmVppAccountPathParams.class, baseUrl, "/organizations/{organizationId}/sm/vppAccounts/{vppAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSmVppAccountRequest.class, baseUrl, "/organizations/{organizationId}/sm/vppAccounts/{vppAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,7 +78,7 @@ public class VppAccounts {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSmVppAccountsResponse getOrganizationSmVppAccounts(org.openapis.openapi.models.operations.GetOrganizationSmVppAccountsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSmVppAccountsPathParams.class, baseUrl, "/organizations/{organizationId}/sm/vppAccounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSmVppAccountsRequest.class, baseUrl, "/organizations/{organizationId}/sm/vppAccounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

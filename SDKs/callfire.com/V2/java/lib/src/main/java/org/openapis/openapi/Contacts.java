@@ -35,21 +35,22 @@ public class Contacts {
      * Add contacts to a contact list
      * Adds contacts to a contact list. Available contact sources are: list of the contact entities, list of ids of existing contacts in user's account, list of phone numbers in E.164 format (11-digits)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddContactListItemsResponse addContactListItems(org.openapis.openapi.models.operations.AddContactListItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddContactListItemsResponse addContactListItems(org.openapis.openapi.models.operations.AddContactListItemsRequest request, org.openapis.openapi.models.operations.AddContactListItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddContactListItemsPathParams.class, baseUrl, "/contacts/lists/{id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddContactListItemsRequest.class, baseUrl, "/contacts/lists/{id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addContactListContactsRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,10 +78,11 @@ public class Contacts {
      * Add do not contact (dnc) numbers
      * Add or update a list of Do Not Contact (DNC) contact entries. Can toggle whether the DNCs are enabled for calls/texts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddDoNotContactsResponse addDoNotContacts(org.openapis.openapi.models.operations.AddDoNotContactsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddDoNotContactsResponse addDoNotContacts(org.openapis.openapi.models.shared.AddDoNotContactRequest request, org.openapis.openapi.models.operations.AddDoNotContactsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/contacts/dncs");
         
@@ -91,7 +93,7 @@ public class Contacts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -119,27 +121,28 @@ public class Contacts {
      * Create contact lists
      * Creates a contact list for use with campaigns using 1 of 3 inputs. A List of Contact objects, a list of String E.164 numbers, or a list of CallFire contactIds can be used as the data source for the created contact list. After contact list is added into the CallFire system, contact lists goes through seven system safeguards that check the accuracy and consistency of the data. For example, our system checks that contact number is formatted correctly, is valid, is not duplicated in another contact list, or is not added on a specific DNC list. You can configure to keep/merge or remove contacts which do not complies these rules. If contacts were not added to a contact list after the validation, this means the data needs to be properly formatted and corrected before calling this API
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateContactListResponse createContactList(org.openapis.openapi.models.operations.CreateContactListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateContactListResponse createContactList(org.openapis.openapi.models.operations.CreateContactListRequest request, org.openapis.openapi.models.operations.CreateContactListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/contacts/lists");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createContactListRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateContactListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateContactListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,10 +178,11 @@ public class Contacts {
      * Create contact list from file
      * Creates a contact list to be used with campaigns through uploading a .csv file. Returns the id of created list
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateContactListFromFileResponse createContactListFromFile(org.openapis.openapi.models.operations.CreateContactListFromFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateContactListFromFileResponse createContactListFromFile(org.openapis.openapi.models.operations.CreateContactListFromFileRequestBody request, org.openapis.openapi.models.operations.CreateContactListFromFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/contacts/lists/upload");
         
@@ -192,7 +196,7 @@ public class Contacts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -228,10 +232,11 @@ public class Contacts {
      * Create contacts
      * Creates contacts in CallFire system. Only values from the next list can be used as external system parameter in contact creation: **NATION_BUILDER, SALES_FORCE_CONTACTS, SALES_FORCE_LEADS, SALES_FORCE_REPORTS, ZOHO, MAIL_CHIMP**. See [contacts validation rules](https://www.callfire.com/help/docs/getting-started/managing-contacts/validating-contacts#section1)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateContactsResponse createContacts(org.openapis.openapi.models.operations.CreateContactsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateContactsResponse createContacts(org.openapis.openapi.models.shared.Contact[] request, org.openapis.openapi.models.operations.CreateContactsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/contacts");
         
@@ -242,7 +247,7 @@ public class Contacts {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -278,19 +283,20 @@ public class Contacts {
      * Delete a contact
      * Deletes a contact instance from account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteContactResponse deleteContact(org.openapis.openapi.models.operations.DeleteContactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteContactResponse deleteContact(org.openapis.openapi.models.operations.DeleteContactRequest request, org.openapis.openapi.models.operations.DeleteContactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContactPathParams.class, baseUrl, "/contacts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContactRequest.class, baseUrl, "/contacts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -318,19 +324,20 @@ public class Contacts {
      * Delete a contact list
      * Deletes a contact list, included contacts will not be deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteContactListResponse deleteContactList(org.openapis.openapi.models.operations.DeleteContactListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteContactListResponse deleteContactList(org.openapis.openapi.models.operations.DeleteContactListRequest request, org.openapis.openapi.models.operations.DeleteContactListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContactListPathParams.class, baseUrl, "/contacts/lists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteContactListRequest.class, baseUrl, "/contacts/lists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,19 +365,20 @@ public class Contacts {
      * Delete do not contact (dnc) number. If number contains commas treat as list of numbers
      * Delete a Do Not Contact (DNC) contact entry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDoNotContactResponse deleteDoNotContact(org.openapis.openapi.models.operations.DeleteDoNotContactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDoNotContactResponse deleteDoNotContact(org.openapis.openapi.models.operations.DeleteDoNotContactRequest request, org.openapis.openapi.models.operations.DeleteDoNotContactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDoNotContactPathParams.class, baseUrl, "/contacts/dncs/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDoNotContactRequest.class, baseUrl, "/contacts/dncs/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -398,19 +406,20 @@ public class Contacts {
      * Delete do not contact (dnc) numbers contained in source.
      * Delete Do Not Contact (DNC) contact entries contained in source.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceResponse deleteDoNotContactsBySource(org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceResponse deleteDoNotContactsBySource(org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceRequest request, org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDoNotContactsBySourcePathParams.class, baseUrl, "/contacts/dncs/sources/{source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDoNotContactsBySourceRequest.class, baseUrl, "/contacts/dncs/sources/{source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -438,10 +447,11 @@ public class Contacts {
      * Find contact lists
      * Searches for all contact lists which are available for the current user. Returns a paged list of contact lists
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindContactListsResponse findContactLists(org.openapis.openapi.models.operations.FindContactListsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindContactListsResponse findContactLists(org.openapis.openapi.models.operations.FindContactListsRequest request, org.openapis.openapi.models.operations.FindContactListsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/contacts/lists");
         
@@ -449,14 +459,14 @@ public class Contacts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindContactListsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindContactListsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -492,10 +502,11 @@ public class Contacts {
      * Find contacts
      * Find user's contacts by id, contact list, or on any property name. Returns a paged list of contacts
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindContactsResponse findContacts(org.openapis.openapi.models.operations.FindContactsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindContactsResponse findContacts(org.openapis.openapi.models.operations.FindContactsRequest request, org.openapis.openapi.models.operations.FindContactsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/contacts");
         
@@ -503,14 +514,14 @@ public class Contacts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindContactsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindContactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -546,10 +557,11 @@ public class Contacts {
      * Find do not contact (dnc) items
      * Searches for all Do Not Contact (DNC) objects created by user. These DoNotContact entries only affect calls/texts/campaigns on this account. Returns a paged list of DoNotContact objects
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindDoNotContactsResponse findDoNotContacts(org.openapis.openapi.models.operations.FindDoNotContactsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindDoNotContactsResponse findDoNotContacts(org.openapis.openapi.models.operations.FindDoNotContactsRequest request, org.openapis.openapi.models.operations.FindDoNotContactsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/contacts/dncs");
         
@@ -557,14 +569,14 @@ public class Contacts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindDoNotContactsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindDoNotContactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -600,25 +612,26 @@ public class Contacts {
      * Find a specific contact
      * Returns a Contact instance for a given contact id. Deleted contacts can be still retrieved but will be marked as deleted. Deleted contacts will not be shown in search request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContactResponse getContact(org.openapis.openapi.models.operations.GetContactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContactResponse getContact(org.openapis.openapi.models.operations.GetContactRequest request, org.openapis.openapi.models.operations.GetContactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactPathParams.class, baseUrl, "/contacts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactRequest.class, baseUrl, "/contacts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -654,25 +667,26 @@ public class Contacts {
      * Find a contact's history
      * Searches for all texts and calls attributed to a contact. Returns a list of calls and texts a contact has been involved with
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContactHistoryResponse getContactHistory(org.openapis.openapi.models.operations.GetContactHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContactHistoryResponse getContactHistory(org.openapis.openapi.models.operations.GetContactHistoryRequest request, org.openapis.openapi.models.operations.GetContactHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactHistoryPathParams.class, baseUrl, "/contacts/{id}/history", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactHistoryRequest.class, baseUrl, "/contacts/{id}/history", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -708,25 +722,26 @@ public class Contacts {
      * Find a specific contact list
      * Returns a single ContactList instance for a given contact list id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContactListResponse getContactList(org.openapis.openapi.models.operations.GetContactListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContactListResponse getContactList(org.openapis.openapi.models.operations.GetContactListRequest request, org.openapis.openapi.models.operations.GetContactListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactListPathParams.class, baseUrl, "/contacts/lists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactListRequest.class, baseUrl, "/contacts/lists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -762,25 +777,26 @@ public class Contacts {
      * Find contacts in a contact list
      * Searches for all entries in a contact list with specified id. Returns a paged list of contact entries
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContactListItemsResponse getContactListItems(org.openapis.openapi.models.operations.GetContactListItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContactListItemsResponse getContactListItems(org.openapis.openapi.models.operations.GetContactListItemsRequest request, org.openapis.openapi.models.operations.GetContactListItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactListItemsPathParams.class, baseUrl, "/contacts/lists/{id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContactListItemsRequest.class, baseUrl, "/contacts/lists/{id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactListItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContactListItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -816,19 +832,20 @@ public class Contacts {
      * Get do not contact (dnc)
      * Get Do Not Contact (DNC) object create by user. This DoNotContact entry only affects calls/texts/campaigns on this account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDoNotContactResponse getDoNotContact(org.openapis.openapi.models.operations.GetDoNotContactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDoNotContactResponse getDoNotContact(org.openapis.openapi.models.operations.GetDoNotContactRequest request, org.openapis.openapi.models.operations.GetDoNotContactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDoNotContactPathParams.class, baseUrl, "/contacts/dncs/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDoNotContactRequest.class, baseUrl, "/contacts/dncs/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -864,25 +881,26 @@ public class Contacts {
      * Find universal do not contacts (udnc) associated with toNumber
      * Searches for a UniversalDoNotContact object for a given phone number. Shows whether inbound/outbound actions are allowed for a given number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUniversalDoNotContactsResponse getUniversalDoNotContacts(org.openapis.openapi.models.operations.GetUniversalDoNotContactsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUniversalDoNotContactsResponse getUniversalDoNotContacts(org.openapis.openapi.models.operations.GetUniversalDoNotContactsRequest request, org.openapis.openapi.models.operations.GetUniversalDoNotContactsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUniversalDoNotContactsPathParams.class, baseUrl, "/contacts/dncs/universals/{toNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUniversalDoNotContactsRequest.class, baseUrl, "/contacts/dncs/universals/{toNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUniversalDoNotContactsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUniversalDoNotContactsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -918,19 +936,20 @@ public class Contacts {
      * Delete a contact from a contact list
      * Deletes a single contact from a contact list
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveContactListItemResponse removeContactListItem(org.openapis.openapi.models.operations.RemoveContactListItemRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveContactListItemResponse removeContactListItem(org.openapis.openapi.models.operations.RemoveContactListItemRequest request, org.openapis.openapi.models.operations.RemoveContactListItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveContactListItemPathParams.class, baseUrl, "/contacts/lists/{id}/items/{contactId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveContactListItemRequest.class, baseUrl, "/contacts/lists/{id}/items/{contactId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -958,25 +977,26 @@ public class Contacts {
      * Delete contacts from a contact list
      * Deletes contacts from a contact list. List the contact ids in request to delete multiple contacts with one request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemoveContactListItemsResponse removeContactListItems(org.openapis.openapi.models.operations.RemoveContactListItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemoveContactListItemsResponse removeContactListItems(org.openapis.openapi.models.operations.RemoveContactListItemsRequest request, org.openapis.openapi.models.operations.RemoveContactListItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveContactListItemsPathParams.class, baseUrl, "/contacts/lists/{id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveContactListItemsRequest.class, baseUrl, "/contacts/lists/{id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemoveContactListItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemoveContactListItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1004,21 +1024,22 @@ public class Contacts {
      * Update a contact
      * Updates a single contact instance with id specified. See [contact validation rules](https://www.callfire.com/help/docs/getting-started/managing-contacts/validating-contacts#section1)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateContactResponse updateContact(org.openapis.openapi.models.operations.UpdateContactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateContactResponse updateContact(org.openapis.openapi.models.operations.UpdateContactRequest request, org.openapis.openapi.models.operations.UpdateContactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContactPathParams.class, baseUrl, "/contacts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContactRequest.class, baseUrl, "/contacts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contact", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1046,21 +1067,22 @@ public class Contacts {
      * Update a contact list
      * Updates contact list instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateContactListResponse updateContactList(org.openapis.openapi.models.operations.UpdateContactListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateContactListResponse updateContactList(org.openapis.openapi.models.operations.UpdateContactListRequest request, org.openapis.openapi.models.operations.UpdateContactListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContactListPathParams.class, baseUrl, "/contacts/lists/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateContactListRequest.class, baseUrl, "/contacts/lists/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateContactListRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1088,21 +1110,22 @@ public class Contacts {
      * Update an individual do not contact (dnc) number
      * Update a Do Not Contact (DNC) contact entry. Can toggle whether the DNC is enabled for calls/texts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDoNotContactResponse updateDoNotContact(org.openapis.openapi.models.operations.UpdateDoNotContactRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDoNotContactResponse updateDoNotContact(org.openapis.openapi.models.operations.UpdateDoNotContactRequest request, org.openapis.openapi.models.operations.UpdateDoNotContactSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDoNotContactPathParams.class, baseUrl, "/contacts/dncs/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDoNotContactRequest.class, baseUrl, "/contacts/dncs/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "doNotContactInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

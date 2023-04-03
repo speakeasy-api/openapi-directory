@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReservationbyWarehouseandSkuRequest {
-    
-    public ReservationbyWarehouseandSkuPathParams pathParams;
-    public ReservationbyWarehouseandSkuRequest withPathParams(ReservationbyWarehouseandSkuPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ReservationbyWarehouseandSkuRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ReservationbyWarehouseandSkuRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ReservationbyWarehouseandSkuHeaders headers;
-    public ReservationbyWarehouseandSkuRequest withHeaders(ReservationbyWarehouseandSkuHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public ReservationbyWarehouseandSkuRequest withSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
+    public String warehouseId;
+    public ReservationbyWarehouseandSkuRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

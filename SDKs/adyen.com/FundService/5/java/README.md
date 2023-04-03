@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PostAccountHolderBalanceSecurity;
-import org.openapis.openapi.models.operations.PostAccountHolderBalanceRequest;
 import org.openapis.openapi.models.operations.PostAccountHolderBalanceResponse;
 import org.openapis.openapi.models.shared.AccountHolderBalanceRequest;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -30,18 +28,13 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostAccountHolderBalanceRequest req = new PostAccountHolderBalanceRequest() {{
-                security = new PostAccountHolderBalanceSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                request = new AccountHolderBalanceRequest() {{
-                    accountHolderCode = "corrupti";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.AccountHolderBalanceRequest req = new AccountHolderBalanceRequest() {{
+                accountHolderCode = "corrupti";
+            }}            
 
-            PostAccountHolderBalanceResponse res = sdk.general.postAccountHolderBalance(req);
+            PostAccountHolderBalanceResponse res = sdk.general.postAccountHolderBalance(req, new PostAccountHolderBalanceSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.accountHolderBalanceResponse.isPresent()) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### general

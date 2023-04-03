@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSupportingDocumentRequest {
-    
-    public DeleteSupportingDocumentPathParams pathParams;
-    public DeleteSupportingDocumentRequest withPathParams(DeleteSupportingDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteSupportingDocumentSecurity security;
-    public DeleteSupportingDocumentRequest withSecurity(DeleteSupportingDocumentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSupportingDocumentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string created by Twilio to identify the Supporting Document resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSupportingDocumentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

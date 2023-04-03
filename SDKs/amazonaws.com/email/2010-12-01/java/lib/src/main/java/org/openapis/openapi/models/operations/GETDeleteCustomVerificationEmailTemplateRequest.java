@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteCustomVerificationEmailTemplateRequest {
-    
-    public GETDeleteCustomVerificationEmailTemplateQueryParams queryParams;
-    public GETDeleteCustomVerificationEmailTemplateRequest withQueryParams(GETDeleteCustomVerificationEmailTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteCustomVerificationEmailTemplateActionEnum action;
+    public GETDeleteCustomVerificationEmailTemplateRequest withAction(GETDeleteCustomVerificationEmailTemplateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the custom verification email template that you want to delete.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
+    public String templateName;
+    public GETDeleteCustomVerificationEmailTemplateRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
     
-    public GETDeleteCustomVerificationEmailTemplateHeaders headers;
-    public GETDeleteCustomVerificationEmailTemplateRequest withHeaders(GETDeleteCustomVerificationEmailTemplateHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteCustomVerificationEmailTemplateVersionEnum version;
+    public GETDeleteCustomVerificationEmailTemplateRequest withVersion(GETDeleteCustomVerificationEmailTemplateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteCustomVerificationEmailTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteCustomVerificationEmailTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteCustomVerificationEmailTemplateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteCustomVerificationEmailTemplateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteCustomVerificationEmailTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteCustomVerificationEmailTemplateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteCustomVerificationEmailTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

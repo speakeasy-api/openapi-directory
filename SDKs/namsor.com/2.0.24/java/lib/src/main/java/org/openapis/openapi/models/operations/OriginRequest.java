@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OriginRequest {
-    
-    public OriginPathParams pathParams;
-    public OriginRequest withPathParams(OriginPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
+    public String firstName;
+    public OriginRequest withFirstName(String firstName) {
+        this.firstName = firstName;
         return this;
     }
     
-    
-    public OriginSecurity security;
-    public OriginRequest withSecurity(OriginSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
+    public String lastName;
+    public OriginRequest withLastName(String lastName) {
+        this.lastName = lastName;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetUserAttributesRequest {
-    
-    public SetUserAttributesPathParams pathParams;
-    public SetUserAttributesRequest withPathParams(SetUserAttributesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public SetUserAttributesHeaders headers;
-    public SetUserAttributesRequest withHeaders(SetUserAttributesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserAttributes request;
-    public SetUserAttributesRequest withRequest(org.openapis.openapi.models.shared.UserAttributes request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UserAttributes userAttributes;
+    public SetUserAttributesRequest withUserAttributes(org.openapis.openapi.models.shared.UserAttributes userAttributes) {
+        this.userAttributes = userAttributes;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SetUserAttributesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public SetUserAttributesXSdsDateFormatEnum xSdsDateFormat;
+    public SetUserAttributesRequest withXSdsDateFormat(SetUserAttributesXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public SetUserAttributesRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDevelopersDeveloperIdRequest {
-    
-    public DeleteDevelopersDeveloperIdPathParams pathParams;
-    public DeleteDevelopersDeveloperIdRequest withPathParams(DeleteDevelopersDeveloperIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the developer to be removed
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
+    public String developerId;
+    public DeleteDevelopersDeveloperIdRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
         return this;
     }
     

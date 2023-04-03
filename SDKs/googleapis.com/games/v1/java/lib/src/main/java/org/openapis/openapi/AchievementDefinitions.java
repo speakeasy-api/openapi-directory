@@ -33,10 +33,11 @@ public class AchievementDefinitions {
     /**
      * Lists all the achievement definitions for your application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesAchievementDefinitionsListResponse gamesAchievementDefinitionsList(org.openapis.openapi.models.operations.GamesAchievementDefinitionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesAchievementDefinitionsListResponse gamesAchievementDefinitionsList(org.openapis.openapi.models.operations.GamesAchievementDefinitionsListRequest request, org.openapis.openapi.models.operations.GamesAchievementDefinitionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1/achievements");
         
@@ -44,14 +45,14 @@ public class AchievementDefinitions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementDefinitionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesAchievementDefinitionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

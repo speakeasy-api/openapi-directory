@@ -4,34 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserRequest {
-    
-    public DeleteUserPathParams pathParams;
-    public DeleteUserRequest withPathParams(DeleteUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the User resource to delete. This value can be either the `sid` or the `identity` of the User resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteUserHeaders headers;
-    public DeleteUserRequest withHeaders(DeleteUserHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public DeleteUserSecurity security;
-    public DeleteUserRequest withSecurity(DeleteUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.UserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteUserRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.UserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

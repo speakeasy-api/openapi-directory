@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest {
-    
-    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams pathParams;
-    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withPathParams(EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody requestBody;
+    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withRequestBody(EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody request;
-    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withRequest(EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequestBody request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the self-hosted runner group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
+    public Long runnerGroupId;
+    public EnterpriseAdminSetOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
+        this.runnerGroupId = runnerGroupId;
         return this;
     }
     

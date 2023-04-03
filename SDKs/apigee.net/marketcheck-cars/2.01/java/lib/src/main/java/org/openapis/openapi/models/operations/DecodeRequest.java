@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DecodeRequest {
-    
-    public DecodePathParams pathParams;
-    public DecodeRequest withPathParams(DecodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public DecodeRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public DecodeQueryParams queryParams;
-    public DecodeRequest withQueryParams(DecodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The VIN to identify the car. Must be a valid 17 char VIN
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vin")
+    public String vin;
+    public DecodeRequest withVin(String vin) {
+        this.vin = vin;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2PiecesRequest {
-    
-    public GetApiV2PiecesQueryParams queryParams;
-    public GetApiV2PiecesRequest withQueryParams(GetApiV2PiecesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetApiV2PiecesSecurity security;
-    public GetApiV2PiecesRequest withSecurity(GetApiV2PiecesSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the episode that owns the piece.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=episodeId")
+    public Long episodeId;
+    public GetApiV2PiecesRequest withEpisodeId(Long episodeId) {
+        this.episodeId = episodeId;
         return this;
     }
     

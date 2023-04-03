@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerAddFeedbackJsonRequest {
-    
-    public DiaryControllerAddFeedbackJsonPathParams pathParams;
-    public DiaryControllerAddFeedbackJsonRequest withPathParams(DiaryControllerAddFeedbackJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Feedback submission model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FeedbackSubmissionModel request;
-    public DiaryControllerAddFeedbackJsonRequest withRequest(org.openapis.openapi.models.shared.FeedbackSubmissionModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FeedbackSubmissionModel feedbackSubmissionModel;
+    public DiaryControllerAddFeedbackJsonRequest withFeedbackSubmissionModel(org.openapis.openapi.models.shared.FeedbackSubmissionModel feedbackSubmissionModel) {
+        this.feedbackSubmissionModel = feedbackSubmissionModel;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerAddFeedbackJsonRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

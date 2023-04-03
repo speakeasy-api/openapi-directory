@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostLegalEntitiesIdTermsOfServiceRequest {
-    
-    public PostLegalEntitiesIdTermsOfServicePathParams pathParams;
-    public PostLegalEntitiesIdTermsOfServiceRequest withPathParams(PostLegalEntitiesIdTermsOfServicePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetTermsOfServiceDocumentRequest request;
-    public PostLegalEntitiesIdTermsOfServiceRequest withRequest(org.openapis.openapi.models.shared.GetTermsOfServiceDocumentRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetTermsOfServiceDocumentRequest getTermsOfServiceDocumentRequest;
+    public PostLegalEntitiesIdTermsOfServiceRequest withGetTermsOfServiceDocumentRequest(org.openapis.openapi.models.shared.GetTermsOfServiceDocumentRequest getTermsOfServiceDocumentRequest) {
+        this.getTermsOfServiceDocumentRequest = getTermsOfServiceDocumentRequest;
         return this;
     }
     
-    
-    public PostLegalEntitiesIdTermsOfServiceSecurity security;
-    public PostLegalEntitiesIdTermsOfServiceRequest withSecurity(PostLegalEntitiesIdTermsOfServiceSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the legal entity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostLegalEntitiesIdTermsOfServiceRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

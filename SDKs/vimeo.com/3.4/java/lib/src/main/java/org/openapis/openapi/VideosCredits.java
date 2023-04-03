@@ -39,12 +39,12 @@ public class VideosCredits {
      */
     public org.openapis.openapi.models.operations.AddVideoCreditResponse addVideoCredit(org.openapis.openapi.models.operations.AddVideoCreditRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoCreditPathParams.class, baseUrl, "/videos/{video_id}/credits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoCreditRequest.class, baseUrl, "/videos/{video_id}/credits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -91,12 +91,12 @@ public class VideosCredits {
      */
     public org.openapis.openapi.models.operations.AddVideoCreditAlt1Response addVideoCreditAlt1(org.openapis.openapi.models.operations.AddVideoCreditAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoCreditAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/credits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoCreditAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/credits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -138,19 +138,20 @@ public class VideosCredits {
     /**
      * Delete a credit for a user in a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoCreditResponse deleteVideoCredit(org.openapis.openapi.models.operations.DeleteVideoCreditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoCreditResponse deleteVideoCredit(org.openapis.openapi.models.operations.DeleteVideoCreditRequest request, org.openapis.openapi.models.operations.DeleteVideoCreditSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoCreditPathParams.class, baseUrl, "/videos/{video_id}/credits/{credit_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoCreditRequest.class, baseUrl, "/videos/{video_id}/credits/{credit_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -179,21 +180,22 @@ public class VideosCredits {
     /**
      * Edit a credit for a user in a video
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EditVideoCreditResponse editVideoCredit(org.openapis.openapi.models.operations.EditVideoCreditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EditVideoCreditResponse editVideoCredit(org.openapis.openapi.models.operations.EditVideoCreditRequest request, org.openapis.openapi.models.operations.EditVideoCreditSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVideoCreditPathParams.class, baseUrl, "/videos/{video_id}/credits/{credit_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditVideoCreditRequest.class, baseUrl, "/videos/{video_id}/credits/{credit_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -233,7 +235,7 @@ public class VideosCredits {
      */
     public org.openapis.openapi.models.operations.GetVideoCreditResponse getVideoCredit(org.openapis.openapi.models.operations.GetVideoCreditRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCreditPathParams.class, baseUrl, "/videos/{video_id}/credits/{credit_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCreditRequest.class, baseUrl, "/videos/{video_id}/credits/{credit_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -280,13 +282,13 @@ public class VideosCredits {
      */
     public org.openapis.openapi.models.operations.GetVideoCreditsResponse getVideoCredits(org.openapis.openapi.models.operations.GetVideoCreditsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCreditsPathParams.class, baseUrl, "/videos/{video_id}/credits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCreditsRequest.class, baseUrl, "/videos/{video_id}/credits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoCreditsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoCreditsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -325,13 +327,13 @@ public class VideosCredits {
      */
     public org.openapis.openapi.models.operations.GetVideoCreditsAlt1Response getVideoCreditsAlt1(org.openapis.openapi.models.operations.GetVideoCreditsAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCreditsAlt1PathParams.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/credits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoCreditsAlt1Request.class, baseUrl, "/channels/{channel_id}/videos/{video_id}/credits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoCreditsAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoCreditsAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

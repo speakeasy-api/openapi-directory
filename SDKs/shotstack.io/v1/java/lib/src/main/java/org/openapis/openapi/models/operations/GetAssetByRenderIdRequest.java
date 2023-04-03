@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetByRenderIdRequest {
-    
-    public GetAssetByRenderIdPathParams pathParams;
-    public GetAssetByRenderIdRequest withPathParams(GetAssetByRenderIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetAssetByRenderIdSecurity security;
-    public GetAssetByRenderIdRequest withSecurity(GetAssetByRenderIdSecurity security) {
-        this.security = security;
+    /**
+     * The render id associated with the asset in UUID format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetAssetByRenderIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

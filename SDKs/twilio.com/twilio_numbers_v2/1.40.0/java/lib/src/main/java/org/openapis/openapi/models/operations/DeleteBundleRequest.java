@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBundleRequest {
-    
-    public DeleteBundlePathParams pathParams;
-    public DeleteBundleRequest withPathParams(DeleteBundlePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteBundleSecurity security;
-    public DeleteBundleRequest withSecurity(DeleteBundleSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteBundleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Bundle resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteBundleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

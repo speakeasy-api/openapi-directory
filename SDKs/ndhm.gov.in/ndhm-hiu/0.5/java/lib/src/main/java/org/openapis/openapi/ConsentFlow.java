@@ -90,9 +90,24 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse postV05ConsentRequestsOnInitJson(org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonRequest request) throws Exception {
+        return this.postV05ConsentRequestsOnInitJson(request, null);
+    }
+
+    /**
+     * Response to consent request
+     * Result of consent request creation for a patient. **id** represents the consentrequest id created by CM. The result must contain either **id** or the **error** caused. &lt;br/&gt;
+     *   Reasons for error may be
+     *   * Invalid references (e.g patient id, hiu id), purpose, hiTypes, ranges, persmission
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonResponse postV05ConsentRequestsOnInitJson(org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENT_REQUESTS_ON_INIT_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consent-requests/on-init");
@@ -100,13 +115,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "consentRequestInitResponse", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -156,9 +171,24 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse postV05ConsentRequestsOnInitRaw(org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawRequest request) throws Exception {
+        return this.postV05ConsentRequestsOnInitRaw(request, null);
+    }
+
+    /**
+     * Response to consent request
+     * Result of consent request creation for a patient. **id** represents the consentrequest id created by CM. The result must contain either **id** or the **error** caused. &lt;br/&gt;
+     *   Reasons for error may be
+     *   * Invalid references (e.g patient id, hiu id), purpose, hiTypes, ranges, persmission
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawResponse postV05ConsentRequestsOnInitRaw(org.openapis.openapi.models.operations.PostV05ConsentRequestsOnInitRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENT_REQUESTS_ON_INIT_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consent-requests/on-init");
@@ -166,13 +196,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -220,9 +250,22 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse postV05ConsentRequestsOnStatusJson(org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonRequest request) throws Exception {
+        return this.postV05ConsentRequestsOnStatusJson(request, null);
+    }
+
+    /**
+     * Result of consent request status
+     * Result of consent request done previously. Status of request can be GRANTED,  DENIED, EXPIRED. If the request was GRANTED, then 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonResponse postV05ConsentRequestsOnStatusJson(org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENT_REQUESTS_ON_STATUS_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consent-requests/on-status");
@@ -230,13 +273,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hiuConsentRequestStatus", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -284,9 +327,22 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse postV05ConsentRequestsOnStatusRaw(org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawRequest request) throws Exception {
+        return this.postV05ConsentRequestsOnStatusRaw(request, null);
+    }
+
+    /**
+     * Result of consent request status
+     * Result of consent request done previously. Status of request can be GRANTED,  DENIED, EXPIRED. If the request was GRANTED, then 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawResponse postV05ConsentRequestsOnStatusRaw(org.openapis.openapi.models.operations.PostV05ConsentRequestsOnStatusRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENT_REQUESTS_ON_STATUS_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consent-requests/on-status");
@@ -294,13 +350,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -352,9 +408,26 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse postV05ConsentsHiuNotify(org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyRequest request) throws Exception {
+        return this.postV05ConsentsHiuNotify(request, null);
+    }
+
+    /**
+     * Consent notification
+     * Health information user will get notified about the consent request granted or denied, consent revoked, consent expired. 
+     * 1. For consent request grant, status=GRANTED, consentRequestId=&lt;consent-request-id&gt;, and consentArtefacts is an array of generated consent artefact Ids.
+     * 2. For consent request expiry, status=EXPIRED, consentRequestId=&lt;consent-request-id&gt;
+     * 3. For consent request denied, status=DENIED, consentRequestId=&lt;consent-request-id&gt;
+     * 4. For consent revocation, status=REVOKED, consentArtefacts is an array of revoked consent artefact ids
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyResponse postV05ConsentsHiuNotify(org.openapis.openapi.models.operations.PostV05ConsentsHiuNotifyRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENTS_HIU_NOTIFY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consents/hiu/notify");
@@ -362,13 +435,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hiuConsentNotificationEvent", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -417,9 +490,23 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse postV05ConsentsOnFetchJson(org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonRequest request) throws Exception {
+        return this.postV05ConsentsOnFetchJson(request, null);
+    }
+
+    /**
+     * Result of fetch request for a consent artefact
+     * Must contain either consent or error. Possible reason of errors are 
+     * 1. consentId passed through /fetch is invalid
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonResponse postV05ConsentsOnFetchJson(org.openapis.openapi.models.operations.PostV05ConsentsOnFetchJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENTS_ON_FETCH_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consents/on-fetch");
@@ -427,13 +514,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "consentArtefactResponse", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -482,9 +569,23 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse postV05ConsentsOnFetchRaw(org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawRequest request) throws Exception {
+        return this.postV05ConsentsOnFetchRaw(request, null);
+    }
+
+    /**
+     * Result of fetch request for a consent artefact
+     * Must contain either consent or error. Possible reason of errors are 
+     * 1. consentId passed through /fetch is invalid
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawResponse postV05ConsentsOnFetchRaw(org.openapis.openapi.models.operations.PostV05ConsentsOnFetchRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENTS_ON_FETCH_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consents/on-fetch");
@@ -492,13 +593,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

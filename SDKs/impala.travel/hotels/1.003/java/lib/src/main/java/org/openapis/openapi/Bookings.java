@@ -53,7 +53,7 @@ public class Bookings {
      */
     public org.openapis.openapi.models.operations.CancelBookingResponse cancelBooking(org.openapis.openapi.models.operations.CancelBookingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelBookingPathParams.class, baseUrl, "/bookings/{bookingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelBookingRequest.class, baseUrl, "/bookings/{bookingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -121,7 +121,7 @@ public class Bookings {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBookingResponse createBooking(org.openapis.openapi.models.operations.CreateBookingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBookingResponse createBooking(org.openapis.openapi.models.shared.BookingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/bookings");
         
@@ -196,7 +196,7 @@ public class Bookings {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBookingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBookingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -252,7 +252,7 @@ public class Bookings {
      */
     public org.openapis.openapi.models.operations.RetrieveBookingResponse retrieveBooking(org.openapis.openapi.models.operations.RetrieveBookingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveBookingPathParams.class, baseUrl, "/bookings/{bookingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveBookingRequest.class, baseUrl, "/bookings/{bookingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -326,12 +326,12 @@ public class Bookings {
      */
     public org.openapis.openapi.models.operations.UpdateBookingResponse updateBooking(org.openapis.openapi.models.operations.UpdateBookingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBookingPathParams.class, baseUrl, "/bookings/{bookingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBookingRequest.class, baseUrl, "/bookings/{bookingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateBookingRequest", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -386,12 +386,12 @@ public class Bookings {
      */
     public org.openapis.openapi.models.operations.UpdateBookingContactResponse updateBookingContact(org.openapis.openapi.models.operations.UpdateBookingContactRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBookingContactPathParams.class, baseUrl, "/bookings/{bookingId}/booking-contact", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBookingContactRequest.class, baseUrl, "/bookings/{bookingId}/booking-contact", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateBookingContactRequest", "json");
         req.setBody(serializedRequestBody);
         
         

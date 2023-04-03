@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDriverRequest {
-    
-    public GetDriverPathParams pathParams;
-    public GetDriverRequest withPathParams(GetDriverPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The driver id that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDriverRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Populate group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_group")
+    public Boolean includeGroup;
+    public GetDriverRequest withIncludeGroup(Boolean includeGroup) {
+        this.includeGroup = includeGroup;
+        return this;
+    }
     
-    public GetDriverQueryParams queryParams;
-    public GetDriverRequest withQueryParams(GetDriverQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetDriverRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
+        return this;
+    }
+    
+    /**
+     * Populate tokens
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_tokens")
+    public Boolean includeTokens;
+    public GetDriverRequest withIncludeTokens(Boolean includeTokens) {
+        this.includeTokens = includeTokens;
         return this;
     }
     

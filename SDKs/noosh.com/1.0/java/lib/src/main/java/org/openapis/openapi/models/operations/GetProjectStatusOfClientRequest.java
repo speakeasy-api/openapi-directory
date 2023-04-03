@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectStatusOfClientRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_workgroup_id")
+    public String clientWorkgroupId;
+    public GetProjectStatusOfClientRequest withClientWorkgroupId(String clientWorkgroupId) {
+        this.clientWorkgroupId = clientWorkgroupId;
+        return this;
+    }
     
-    public GetProjectStatusOfClientPathParams pathParams;
-    public GetProjectStatusOfClientRequest withPathParams(GetProjectStatusOfClientPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetProjectStatusOfClientRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

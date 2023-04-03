@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateDRTLogBucketXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateDRTLogBucketHeaders;
 import org.openapis.openapi.models.operations.AssociateDRTLogBucketRequest;
 import org.openapis.openapi.models.operations.AssociateDRTLogBucketResponse;
 import org.openapis.openapi.models.shared.AssociateDRTLogBucketRequest;
@@ -15,27 +14,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateDRTLogBucketRequest req = new AssociateDRTLogBucketRequest() {{
-                headers = new AssociateDRTLogBucketHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSShield_20160616.AssociateDRTLogBucket";
+                associateDRTLogBucketRequest = new AssociateDRTLogBucketRequest() {{
+                    logBucket = "corrupti";
                 }};
-                request = new AssociateDRTLogBucketRequest() {{
-                    logBucket = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "AWSShield_20160616.AssociateDRTLogBucket";
+            }}            
 
             AssociateDRTLogBucketResponse res = sdk.associateDRTLogBucket(req);
 

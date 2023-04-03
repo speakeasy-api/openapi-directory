@@ -46,7 +46,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.CancelDocumentResponse cancelDocument(org.openapis.openapi.models.operations.CancelDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelDocumentPathParams.class, baseUrl, "/documents/{id}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CancelDocumentRequest.class, baseUrl, "/documents/{id}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -116,7 +116,7 @@ public class Document {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDocumentResponse createDocument(org.openapis.openapi.models.operations.CreateDocumentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDocumentResponse createDocument(org.openapis.openapi.models.shared.DocumentInsert request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/documents");
         
@@ -195,7 +195,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.CreateDocumentFromProformaResponse createDocumentFromProforma(org.openapis.openapi.models.operations.CreateDocumentFromProformaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDocumentFromProformaPathParams.class, baseUrl, "/documents/{id}/create-from-proforma", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateDocumentFromProformaRequest.class, baseUrl, "/documents/{id}/create-from-proforma", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -267,7 +267,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.DeletePaymentResponse deletePayment(org.openapis.openapi.models.operations.DeletePaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePaymentPathParams.class, baseUrl, "/documents/{id}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePaymentRequest.class, baseUrl, "/documents/{id}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -329,7 +329,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.DownloadDocumentResponse downloadDocument(org.openapis.openapi.models.operations.DownloadDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadDocumentPathParams.class, baseUrl, "/documents/{id}/download", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadDocumentRequest.class, baseUrl, "/documents/{id}/download", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -410,7 +410,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetDocumentResponse getDocument(org.openapis.openapi.models.operations.GetDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentPathParams.class, baseUrl, "/documents/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentRequest.class, baseUrl, "/documents/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -482,7 +482,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetOnlineSzamlaStatusResponse getOnlineSzamlaStatus(org.openapis.openapi.models.operations.GetOnlineSzamlaStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOnlineSzamlaStatusPathParams.class, baseUrl, "/documents/{id}/online-szamla", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOnlineSzamlaStatusRequest.class, baseUrl, "/documents/{id}/online-szamla", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -554,7 +554,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetPaymentResponse getPayment(org.openapis.openapi.models.operations.GetPaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentPathParams.class, baseUrl, "/documents/{id}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPaymentRequest.class, baseUrl, "/documents/{id}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -626,7 +626,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetPublicUrlResponse getPublicUrl(org.openapis.openapi.models.operations.GetPublicUrlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicUrlPathParams.class, baseUrl, "/documents/{id}/public-url", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPublicUrlRequest.class, baseUrl, "/documents/{id}/public-url", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -704,7 +704,7 @@ public class Document {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDocumentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDocumentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -776,12 +776,12 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.SendDocumentResponse sendDocument(org.openapis.openapi.models.operations.SendDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendDocumentPathParams.class, baseUrl, "/documents/{id}/send", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendDocumentRequest.class, baseUrl, "/documents/{id}/send", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sendDocument", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -850,12 +850,12 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.UpdatePaymentResponse updatePayment(org.openapis.openapi.models.operations.UpdatePaymentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentPathParams.class, baseUrl, "/documents/{id}/payments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePaymentRequest.class, baseUrl, "/documents/{id}/payments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

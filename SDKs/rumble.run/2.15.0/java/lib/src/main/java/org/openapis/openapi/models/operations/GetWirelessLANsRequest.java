@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWirelessLANsRequest {
-    
-    public GetWirelessLANsQueryParams queryParams;
-    public GetWirelessLANsRequest withQueryParams(GetWirelessLANsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetWirelessLANsSecurity security;
-    public GetWirelessLANsRequest withSecurity(GetWirelessLANsSecurity security) {
-        this.security = security;
+    /**
+     * an optional search string for filtering results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetWirelessLANsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

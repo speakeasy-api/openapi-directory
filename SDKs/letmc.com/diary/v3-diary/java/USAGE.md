@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CompanyControllerGetBranchesPathParams;
-import org.openapis.openapi.models.operations.CompanyControllerGetBranchesQueryParams;
 import org.openapis.openapi.models.operations.CompanyControllerGetBranchesRequest;
 import org.openapis.openapi.models.operations.CompanyControllerGetBranchesResponse;
 
@@ -16,14 +14,10 @@ public class Application {
                 .build();
 
             CompanyControllerGetBranchesRequest req = new CompanyControllerGetBranchesRequest() {{
-                pathParams = new CompanyControllerGetBranchesPathParams() {{
-                    shortName = "corrupti";
-                }};
-                queryParams = new CompanyControllerGetBranchesQueryParams() {{
-                    count = 592845;
-                    offset = 715190;
-                }};
-            }};            
+                count = 548814;
+                offset = 592845;
+                shortName = "distinctio";
+            }}            
 
             CompanyControllerGetBranchesResponse res = sdk.companyController.companyControllerGetBranches(req);
 

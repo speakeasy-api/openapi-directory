@@ -5,10 +5,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetRenderSecurity;
-import org.openapis.openapi.models.operations.GetRenderPathParams;
 import org.openapis.openapi.models.operations.GetRenderRequest;
 import org.openapis.openapi.models.operations.GetRenderResponse;
-import org.openapis.openapi.models.shared.SchemeDeveloperKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,17 +15,12 @@ public class Application {
                 .build();
 
             GetRenderRequest req = new GetRenderRequest() {{
-                security = new GetRenderSecurity() {{
-                    developerKey = new SchemeDeveloperKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new GetRenderPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
-            GetRenderResponse res = sdk.edit.getRender(req);
+            GetRenderResponse res = sdk.edit.getRender(req, new GetRenderSecurity() {{
+                developerKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.renderResponse.isPresent()) {
                 // handle response

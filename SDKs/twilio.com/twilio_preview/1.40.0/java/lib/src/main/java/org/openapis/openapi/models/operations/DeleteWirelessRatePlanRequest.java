@@ -4,27 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWirelessRatePlanRequest {
-    
-    public DeleteWirelessRatePlanPathParams pathParams;
-    public DeleteWirelessRatePlanRequest withPathParams(DeleteWirelessRatePlanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteWirelessRatePlanSecurity security;
-    public DeleteWirelessRatePlanRequest withSecurity(DeleteWirelessRatePlanSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteWirelessRatePlanRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteWirelessRatePlanRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

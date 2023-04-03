@@ -37,7 +37,7 @@ public class Backups {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBackupResponse createBackup(org.openapis.openapi.models.operations.CreateBackupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBackupResponse createBackup(org.openapis.openapi.models.operations.CreateBackupRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/backups.json");
         
@@ -79,13 +79,13 @@ public class Backups {
      */
     public org.openapis.openapi.models.operations.DownloadBackupResponse downloadBackup(org.openapis.openapi.models.operations.DownloadBackupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadBackupPathParams.class, baseUrl, "/admin/backups/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DownloadBackupRequest.class, baseUrl, "/admin/backups/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadBackupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DownloadBackupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -154,7 +154,7 @@ public class Backups {
      */
     public org.openapis.openapi.models.operations.SendDownloadBackupEmailResponse sendDownloadBackupEmail(org.openapis.openapi.models.operations.SendDownloadBackupEmailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendDownloadBackupEmailPathParams.class, baseUrl, "/admin/backups/{filename}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SendDownloadBackupEmailRequest.class, baseUrl, "/admin/backups/{filename}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

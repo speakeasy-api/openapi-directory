@@ -44,7 +44,7 @@ public class Warehouses {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateWarehouseResponse createWarehouse(org.openapis.openapi.models.operations.CreateWarehouseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateWarehouseResponse createWarehouse(org.openapis.openapi.models.shared.CreateWarehouseRequestBodyInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/warehouses");
         
@@ -99,7 +99,7 @@ public class Warehouses {
      */
     public org.openapis.openapi.models.operations.DeleteWarehouseResponse deleteWarehouse(org.openapis.openapi.models.operations.DeleteWarehouseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWarehousePathParams.class, baseUrl, "/v1/warehouses/{warehouse_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWarehouseRequest.class, baseUrl, "/v1/warehouses/{warehouse_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -151,7 +151,7 @@ public class Warehouses {
      */
     public org.openapis.openapi.models.operations.GetWarehouseByIdResponse getWarehouseById(org.openapis.openapi.models.operations.GetWarehouseByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWarehouseByIdPathParams.class, baseUrl, "/v1/warehouses/{warehouse_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWarehouseByIdRequest.class, baseUrl, "/v1/warehouses/{warehouse_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -246,12 +246,12 @@ public class Warehouses {
      */
     public org.openapis.openapi.models.operations.UpdateWarehouseResponse updateWarehouse(org.openapis.openapi.models.operations.UpdateWarehouseRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWarehousePathParams.class, baseUrl, "/v1/warehouses/{warehouse_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWarehouseRequest.class, baseUrl, "/v1/warehouses/{warehouse_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateWarehouseRequestBodyInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -303,12 +303,12 @@ public class Warehouses {
      */
     public org.openapis.openapi.models.operations.UpdateWarehouseSettingsResponse updateWarehouseSettings(org.openapis.openapi.models.operations.UpdateWarehouseSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWarehouseSettingsPathParams.class, baseUrl, "/v1/warehouses/{warehouse_id}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWarehouseSettingsRequest.class, baseUrl, "/v1/warehouses/{warehouse_id}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateWarehouseSettingsRequestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

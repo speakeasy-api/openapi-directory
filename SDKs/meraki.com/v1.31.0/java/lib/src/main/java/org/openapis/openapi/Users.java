@@ -39,7 +39,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.DeleteOrganizationUserResponse deleteOrganizationUser(org.openapis.openapi.models.operations.DeleteOrganizationUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationUserPathParams.class, baseUrl, "/organizations/{organizationId}/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteOrganizationUserRequest.class, baseUrl, "/organizations/{organizationId}/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -73,7 +73,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesResponse getNetworkSmUserDeviceProfiles(org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesPathParams.class, baseUrl, "/networks/{networkId}/sm/users/{userId}/deviceProfiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserDeviceProfilesRequest.class, baseUrl, "/networks/{networkId}/sm/users/{userId}/deviceProfiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -113,7 +113,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresResponse getNetworkSmUserSoftwares(org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresPathParams.class, baseUrl, "/networks/{networkId}/sm/users/{userId}/softwares", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresRequest.class, baseUrl, "/networks/{networkId}/sm/users/{userId}/softwares", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -153,13 +153,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmUsersResponse getNetworkSmUsers(org.openapis.openapi.models.operations.GetNetworkSmUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUsersPathParams.class, baseUrl, "/networks/{networkId}/sm/users", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUsersRequest.class, baseUrl, "/networks/{networkId}/sm/users", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkSmUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

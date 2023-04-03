@@ -211,13 +211,26 @@ public class SDK {
     /**
      * Create a new AWS Credential
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCredentialAwsResponse createCredentialAws(org.openapis.openapi.models.operations.CreateCredentialAwsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCredentialAwsResponse createCredentialAws(org.openapis.openapi.models.operations.CreateCredentialAwsCreateCredentialAwsRequest request, org.openapis.openapi.models.operations.CreateCredentialAwsSecurity security) throws Exception {
+        return this.createCredentialAws(request, security, null);
+    }
+
+    /**
+     * Create a new AWS Credential
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateCredentialAwsResponse createCredentialAws(org.openapis.openapi.models.operations.CreateCredentialAwsCreateCredentialAwsRequest request, org.openapis.openapi.models.operations.CreateCredentialAwsSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CREDENTIAL_AWS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Credentials/AWS");
@@ -229,7 +242,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -256,13 +269,26 @@ public class SDK {
     /**
      * Create a new Public Key Credential
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCredentialPublicKeyResponse createCredentialPublicKey(org.openapis.openapi.models.operations.CreateCredentialPublicKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCredentialPublicKeyResponse createCredentialPublicKey(org.openapis.openapi.models.operations.CreateCredentialPublicKeyCreateCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.CreateCredentialPublicKeySecurity security) throws Exception {
+        return this.createCredentialPublicKey(request, security, null);
+    }
+
+    /**
+     * Create a new Public Key Credential
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateCredentialPublicKeyResponse createCredentialPublicKey(org.openapis.openapi.models.operations.CreateCredentialPublicKeyCreateCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.CreateCredentialPublicKeySecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CREDENTIAL_PUBLIC_KEY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Credentials/PublicKeys");
@@ -274,7 +300,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -300,14 +326,23 @@ public class SDK {
 
     /**
      * Create a new secondary Auth Token
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSecondaryAuthTokenResponse createSecondaryAuthToken(org.openapis.openapi.models.operations.CreateSecondaryAuthTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSecondaryAuthTokenResponse createSecondaryAuthToken() throws Exception {
+        return this.createSecondaryAuthToken(null);
+    }
+
+    /**
+     * Create a new secondary Auth Token
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateSecondaryAuthTokenResponse createSecondaryAuthToken(String serverURL) throws Exception {
         String baseUrl = CREATE_SECONDARY_AUTH_TOKEN_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/AuthTokens/Secondary");
@@ -317,8 +352,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -344,23 +378,36 @@ public class SDK {
     /**
      * Delete a Credential from your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCredentialAwsResponse deleteCredentialAws(org.openapis.openapi.models.operations.DeleteCredentialAwsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCredentialAwsResponse deleteCredentialAws(org.openapis.openapi.models.operations.DeleteCredentialAwsRequest request, org.openapis.openapi.models.operations.DeleteCredentialAwsSecurity security) throws Exception {
+        return this.deleteCredentialAws(request, security, null);
+    }
+
+    /**
+     * Delete a Credential from your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteCredentialAwsResponse deleteCredentialAws(org.openapis.openapi.models.operations.DeleteCredentialAwsRequest request, org.openapis.openapi.models.operations.DeleteCredentialAwsSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CREDENTIAL_AWS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCredentialAwsPathParams.class, baseUrl, "/v1/Credentials/AWS/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCredentialAwsRequest.class, baseUrl, "/v1/Credentials/AWS/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -381,23 +428,36 @@ public class SDK {
     /**
      * Delete a Credential from your account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCredentialPublicKeyResponse deleteCredentialPublicKey(org.openapis.openapi.models.operations.DeleteCredentialPublicKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCredentialPublicKeyResponse deleteCredentialPublicKey(org.openapis.openapi.models.operations.DeleteCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.DeleteCredentialPublicKeySecurity security) throws Exception {
+        return this.deleteCredentialPublicKey(request, security, null);
+    }
+
+    /**
+     * Delete a Credential from your account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteCredentialPublicKeyResponse deleteCredentialPublicKey(org.openapis.openapi.models.operations.DeleteCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.DeleteCredentialPublicKeySecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CREDENTIAL_PUBLIC_KEY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCredentialPublicKeyPathParams.class, baseUrl, "/v1/Credentials/PublicKeys/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCredentialPublicKeyRequest.class, baseUrl, "/v1/Credentials/PublicKeys/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -417,14 +477,23 @@ public class SDK {
 
     /**
      * Delete the secondary Auth Token from your account
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSecondaryAuthTokenResponse deleteSecondaryAuthToken(org.openapis.openapi.models.operations.DeleteSecondaryAuthTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSecondaryAuthTokenResponse deleteSecondaryAuthToken() throws Exception {
+        return this.deleteSecondaryAuthToken(null);
+    }
+
+    /**
+     * Delete the secondary Auth Token from your account
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteSecondaryAuthTokenResponse deleteSecondaryAuthToken(String serverURL) throws Exception {
         String baseUrl = DELETE_SECONDARY_AUTH_TOKEN_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/AuthTokens/Secondary");
@@ -434,8 +503,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -455,23 +523,36 @@ public class SDK {
     /**
      * Fetch the AWS credentials specified by the provided Credential Sid
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchCredentialAwsResponse fetchCredentialAws(org.openapis.openapi.models.operations.FetchCredentialAwsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchCredentialAwsResponse fetchCredentialAws(org.openapis.openapi.models.operations.FetchCredentialAwsRequest request, org.openapis.openapi.models.operations.FetchCredentialAwsSecurity security) throws Exception {
+        return this.fetchCredentialAws(request, security, null);
+    }
+
+    /**
+     * Fetch the AWS credentials specified by the provided Credential Sid
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchCredentialAwsResponse fetchCredentialAws(org.openapis.openapi.models.operations.FetchCredentialAwsRequest request, org.openapis.openapi.models.operations.FetchCredentialAwsSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CREDENTIAL_AWS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCredentialAwsPathParams.class, baseUrl, "/v1/Credentials/AWS/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCredentialAwsRequest.class, baseUrl, "/v1/Credentials/AWS/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -498,23 +579,36 @@ public class SDK {
     /**
      * Fetch the public key specified by the provided Credential Sid
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchCredentialPublicKeyResponse fetchCredentialPublicKey(org.openapis.openapi.models.operations.FetchCredentialPublicKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchCredentialPublicKeyResponse fetchCredentialPublicKey(org.openapis.openapi.models.operations.FetchCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.FetchCredentialPublicKeySecurity security) throws Exception {
+        return this.fetchCredentialPublicKey(request, security, null);
+    }
+
+    /**
+     * Fetch the public key specified by the provided Credential Sid
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchCredentialPublicKeyResponse fetchCredentialPublicKey(org.openapis.openapi.models.operations.FetchCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.FetchCredentialPublicKeySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CREDENTIAL_PUBLIC_KEY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCredentialPublicKeyPathParams.class, baseUrl, "/v1/Credentials/PublicKeys/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchCredentialPublicKeyRequest.class, baseUrl, "/v1/Credentials/PublicKeys/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -541,13 +635,26 @@ public class SDK {
     /**
      * Retrieves a collection of AWS Credentials belonging to the account used to make the request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCredentialAwsResponse listCredentialAws(org.openapis.openapi.models.operations.ListCredentialAwsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCredentialAwsResponse listCredentialAws(org.openapis.openapi.models.operations.ListCredentialAwsRequest request, org.openapis.openapi.models.operations.ListCredentialAwsSecurity security) throws Exception {
+        return this.listCredentialAws(request, security, null);
+    }
+
+    /**
+     * Retrieves a collection of AWS Credentials belonging to the account used to make the request
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListCredentialAwsResponse listCredentialAws(org.openapis.openapi.models.operations.ListCredentialAwsRequest request, org.openapis.openapi.models.operations.ListCredentialAwsSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CREDENTIAL_AWS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Credentials/AWS");
@@ -556,14 +663,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCredentialAwsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCredentialAwsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -590,13 +697,26 @@ public class SDK {
     /**
      * Retrieves a collection of Public Key Credentials belonging to the account used to make the request
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCredentialPublicKeyResponse listCredentialPublicKey(org.openapis.openapi.models.operations.ListCredentialPublicKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCredentialPublicKeyResponse listCredentialPublicKey(org.openapis.openapi.models.operations.ListCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.ListCredentialPublicKeySecurity security) throws Exception {
+        return this.listCredentialPublicKey(request, security, null);
+    }
+
+    /**
+     * Retrieves a collection of Public Key Credentials belonging to the account used to make the request
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListCredentialPublicKeyResponse listCredentialPublicKey(org.openapis.openapi.models.operations.ListCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.ListCredentialPublicKeySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CREDENTIAL_PUBLIC_KEY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Credentials/PublicKeys");
@@ -605,14 +725,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCredentialPublicKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCredentialPublicKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -638,14 +758,23 @@ public class SDK {
 
     /**
      * Promote the secondary Auth Token to primary. After promoting the new token, all requests to Twilio using your old primary Auth Token will result in an error.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAuthTokenPromotionResponse updateAuthTokenPromotion(org.openapis.openapi.models.operations.UpdateAuthTokenPromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAuthTokenPromotionResponse updateAuthTokenPromotion() throws Exception {
+        return this.updateAuthTokenPromotion(null);
+    }
+
+    /**
+     * Promote the secondary Auth Token to primary. After promoting the new token, all requests to Twilio using your old primary Auth Token will result in an error.
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateAuthTokenPromotionResponse updateAuthTokenPromotion(String serverURL) throws Exception {
         String baseUrl = UPDATE_AUTH_TOKEN_PROMOTION_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/AuthTokens/Promote");
@@ -655,8 +784,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -682,25 +810,38 @@ public class SDK {
     /**
      * Modify the properties of a given Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCredentialAwsResponse updateCredentialAws(org.openapis.openapi.models.operations.UpdateCredentialAwsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCredentialAwsResponse updateCredentialAws(org.openapis.openapi.models.operations.UpdateCredentialAwsRequest request, org.openapis.openapi.models.operations.UpdateCredentialAwsSecurity security) throws Exception {
+        return this.updateCredentialAws(request, security, null);
+    }
+
+    /**
+     * Modify the properties of a given Account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateCredentialAwsResponse updateCredentialAws(org.openapis.openapi.models.operations.UpdateCredentialAwsRequest request, org.openapis.openapi.models.operations.UpdateCredentialAwsSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CREDENTIAL_AWS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialAwsPathParams.class, baseUrl, "/v1/Credentials/AWS/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialAwsRequest.class, baseUrl, "/v1/Credentials/AWS/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -727,25 +868,38 @@ public class SDK {
     /**
      * Modify the properties of a given Account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCredentialPublicKeyResponse updateCredentialPublicKey(org.openapis.openapi.models.operations.UpdateCredentialPublicKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCredentialPublicKeyResponse updateCredentialPublicKey(org.openapis.openapi.models.operations.UpdateCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.UpdateCredentialPublicKeySecurity security) throws Exception {
+        return this.updateCredentialPublicKey(request, security, null);
+    }
+
+    /**
+     * Modify the properties of a given Account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateCredentialPublicKeyResponse updateCredentialPublicKey(org.openapis.openapi.models.operations.UpdateCredentialPublicKeyRequest request, org.openapis.openapi.models.operations.UpdateCredentialPublicKeySecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CREDENTIAL_PUBLIC_KEY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialPublicKeyPathParams.class, baseUrl, "/v1/Credentials/PublicKeys/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCredentialPublicKeyRequest.class, baseUrl, "/v1/Credentials/PublicKeys/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

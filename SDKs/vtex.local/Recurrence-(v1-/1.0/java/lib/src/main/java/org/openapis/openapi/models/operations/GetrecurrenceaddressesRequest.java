@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetrecurrenceaddressesRequest {
-    
-    public GetrecurrenceaddressesPathParams pathParams;
-    public GetrecurrenceaddressesRequest withPathParams(GetrecurrenceaddressesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetrecurrenceaddressesRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetrecurrenceaddressesRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetrecurrenceaddressesHeaders headers;
-    public GetrecurrenceaddressesRequest withHeaders(GetrecurrenceaddressesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recurrenceId")
+    public String recurrenceId;
+    public GetrecurrenceaddressesRequest withRecurrenceId(String recurrenceId) {
+        this.recurrenceId = recurrenceId;
         return this;
     }
     

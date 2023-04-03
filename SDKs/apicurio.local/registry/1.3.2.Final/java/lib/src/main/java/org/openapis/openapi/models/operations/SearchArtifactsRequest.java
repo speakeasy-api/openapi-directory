@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchArtifactsRequest {
+    /**
+     * The number of artifacts to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public SearchArtifactsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public SearchArtifactsQueryParams queryParams;
-    public SearchArtifactsRequest withQueryParams(SearchArtifactsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of artifacts to skip before starting to collect the result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public SearchArtifactsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort order, ascending or descending.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public SearchArtifactsOrderEnum order;
+    public SearchArtifactsRequest withOrder(SearchArtifactsOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * What fields to search.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=over")
+    public SearchArtifactsOverEnum over;
+    public SearchArtifactsRequest withOver(SearchArtifactsOverEnum over) {
+        this.over = over;
+        return this;
+    }
+    
+    /**
+     * The text to search.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public SearchArtifactsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

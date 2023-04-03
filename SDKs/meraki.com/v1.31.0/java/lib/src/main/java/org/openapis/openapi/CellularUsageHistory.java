@@ -38,7 +38,7 @@ public class CellularUsageHistory {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceCellularUsageHistoryResponse getNetworkSmDeviceCellularUsageHistory(org.openapis.openapi.models.operations.GetNetworkSmDeviceCellularUsageHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceCellularUsageHistoryPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/cellularUsageHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceCellularUsageHistoryRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/cellularUsageHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

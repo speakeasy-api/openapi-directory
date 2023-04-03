@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequest {
-    
-    public PatchSpacesSpaceIdFoldersIdCollectiveDecisionPathParams pathParams;
-    public PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequest withPathParams(PatchSpacesSpaceIdFoldersIdCollectiveDecisionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Collective decision to modify (except name, class and archivaldate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequestBody request;
-    public PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequest withRequest(PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequestBody requestBody;
+    public PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequest withRequestBody(PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdFoldersIdCollectiveDecisionRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

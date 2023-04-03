@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetAccountBalanceQueryParams;
 import org.openapis.openapi.models.operations.GetAccountBalanceRequest;
 import org.openapis.openapi.models.operations.GetAccountBalanceResponse;
 
@@ -28,11 +27,9 @@ public class Application {
                 .build();
 
             GetAccountBalanceRequest req = new GetAccountBalanceRequest() {{
-                queryParams = new GetAccountBalanceQueryParams() {{
-                    apiKey = "abcd1234";
-                    apiSecret = "ABCDEFGH01234abc";
-                }};
-            }};            
+                apiKey = "abcd1234";
+                apiSecret = "ABCDEFGH01234abc";
+            }}            
 
             GetAccountBalanceResponse res = sdk.balance.getAccountBalance(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### balance

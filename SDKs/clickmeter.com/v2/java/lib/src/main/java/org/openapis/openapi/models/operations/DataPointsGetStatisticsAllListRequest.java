@@ -4,13 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsGetStatisticsAllListRequest {
+    /**
+     * Is the datapoint is marked as favourite
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
+    public Boolean favourite;
+    public DataPointsGetStatisticsAllListRequest withFavourite(Boolean favourite) {
+        this.favourite = favourite;
+        return this;
+    }
     
-    public DataPointsGetStatisticsAllListQueryParams queryParams;
-    public DataPointsGetStatisticsAllListRequest withQueryParams(DataPointsGetStatisticsAllListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If using a "custom" timeFrame you can specify the starting day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
+    public String fromDay;
+    public DataPointsGetStatisticsAllListRequest withFromDay(String fromDay) {
+        this.fromDay = fromDay;
+        return this;
+    }
+    
+    /**
+     * The temporal entity you want to group by ("week"/"month"). If unspecified is "day".
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
+    public DataPointsGetStatisticsAllListGroupByEnum groupBy;
+    public DataPointsGetStatisticsAllListRequest withGroupBy(DataPointsGetStatisticsAllListGroupByEnum groupBy) {
+        this.groupBy = groupBy;
+        return this;
+    }
+    
+    /**
+     * Status of datapoint ("deleted"/"active"/"paused"/"spam")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public DataPointsGetStatisticsAllListStatusEnum status;
+    public DataPointsGetStatisticsAllListRequest withStatus(DataPointsGetStatisticsAllListStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of tags you want to filter with.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public DataPointsGetStatisticsAllListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Timeframe of the request. See list at $timeframeList
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
+    public DataPointsGetStatisticsAllListTimeFrameEnum timeFrame;
+    public DataPointsGetStatisticsAllListRequest withTimeFrame(DataPointsGetStatisticsAllListTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+        return this;
+    }
+    
+    /**
+     * If using a "custom" timeFrame you can specify the ending day (YYYYMMDD)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
+    public String toDay;
+    public DataPointsGetStatisticsAllListRequest withToDay(String toDay) {
+        this.toDay = toDay;
+        return this;
+    }
+    
+    /**
+     * Type of datapoint ("tl"/"tp")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public DataPointsGetStatisticsAllListTypeEnum type;
+    public DataPointsGetStatisticsAllListRequest withType(DataPointsGetStatisticsAllListTypeEnum type) {
+        this.type = type;
         return this;
     }
     

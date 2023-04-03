@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeyRevokeNosecretRequest {
+    /**
+     * verification code sent by email
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
+    public String code;
+    public KeyRevokeNosecretRequest withCode(String code) {
+        this.code = code;
+        return this;
+    }
     
-    public KeyRevokeNosecretQueryParams queryParams;
-    public KeyRevokeNosecretRequest withQueryParams(KeyRevokeNosecretQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * primary email associated to Key (ID)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public KeyRevokeNosecretRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * primary phone number, international representation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone")
+    public String phone;
+    public KeyRevokeNosecretRequest withPhone(String phone) {
+        this.phone = phone;
         return this;
     }
     

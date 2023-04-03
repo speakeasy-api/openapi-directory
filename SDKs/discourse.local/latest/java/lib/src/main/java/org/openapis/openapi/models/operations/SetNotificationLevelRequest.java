@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetNotificationLevelRequest {
-    
-    public SetNotificationLevelPathParams pathParams;
-    public SetNotificationLevelRequest withPathParams(SetNotificationLevelPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public SetNotificationLevelRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public SetNotificationLevelHeaders headers;
-    public SetNotificationLevelRequest withHeaders(SetNotificationLevelHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public SetNotificationLevelRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public SetNotificationLevelRequestBody request;
-    public SetNotificationLevelRequest withRequest(SetNotificationLevelRequestBody request) {
-        this.request = request;
+    public SetNotificationLevelRequestBody requestBody;
+    public SetNotificationLevelRequest withRequestBody(SetNotificationLevelRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public SetNotificationLevelRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

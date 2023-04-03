@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDnsDomainNameRecordsRecordIdRequest {
-    
-    public GetDnsDomainNameRecordsRecordIdPathParams pathParams;
-    public GetDnsDomainNameRecordsRecordIdRequest withPathParams(GetDnsDomainNameRecordsRecordIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public GetDnsDomainNameRecordsRecordIdRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * The domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public GetDnsDomainNameRecordsRecordIdRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public GetDnsDomainNameRecordsRecordIdQueryParams queryParams;
-    public GetDnsDomainNameRecordsRecordIdRequest withQueryParams(GetDnsDomainNameRecordsRecordIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recordId")
+    public String recordIdPathParameter;
+    public GetDnsDomainNameRecordsRecordIdRequest withRecordIdPathParameter(String recordIdPathParameter) {
+        this.recordIdPathParameter = recordIdPathParameter;
+        return this;
+    }
+    
+    /**
+     * The id of the record.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=record_id")
+    public String recordIdQueryParameter;
+    public GetDnsDomainNameRecordsRecordIdRequest withRecordIdQueryParameter(String recordIdQueryParameter) {
+        this.recordIdQueryParameter = recordIdQueryParameter;
         return this;
     }
     

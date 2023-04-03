@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarStatusRequest {
-    
-    public WebinarStatusPathParams pathParams;
-    public WebinarStatusRequest withPathParams(WebinarStatusPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public WebinarStatusApplicationJSON request;
-    public WebinarStatusRequest withRequest(WebinarStatusApplicationJSON request) {
-        this.request = request;
+    public WebinarStatusApplicationJSON requestBody;
+    public WebinarStatusRequest withRequestBody(WebinarStatusApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public WebinarStatusSecurity security;
-    public WebinarStatusRequest withSecurity(WebinarStatusSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarStatusRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateGroupRequest {
-    
-    public UpdateGroupPathParams pathParams;
-    public UpdateGroupRequest withPathParams(UpdateGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Group request;
-    public UpdateGroupRequest withRequest(org.openapis.openapi.models.shared.Group request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Group group;
+    public UpdateGroupRequest withGroup(org.openapis.openapi.models.shared.Group group) {
+        this.group = group;
         return this;
     }
     
-    
-    public UpdateGroupSecurity security;
-    public UpdateGroupRequest withSecurity(UpdateGroupSecurity security) {
-        this.security = security;
+    /**
+     * The service group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serviceGroupId")
+    public String serviceGroupId;
+    public UpdateGroupRequest withServiceGroupId(String serviceGroupId) {
+        this.serviceGroupId = serviceGroupId;
         return this;
     }
     

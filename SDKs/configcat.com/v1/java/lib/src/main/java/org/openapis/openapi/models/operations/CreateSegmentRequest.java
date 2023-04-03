@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSegmentRequest {
-    
-    public CreateSegmentPathParams pathParams;
-    public CreateSegmentRequest withPathParams(CreateSegmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateSegmentModel createSegmentModel;
+    public CreateSegmentRequest withCreateSegmentModel(org.openapis.openapi.models.shared.CreateSegmentModel createSegmentModel) {
+        this.createSegmentModel = createSegmentModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateSegmentModel request;
-    public CreateSegmentRequest withRequest(org.openapis.openapi.models.shared.CreateSegmentModel request) {
-        this.request = request;
+    /**
+     * The identifier of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public CreateSegmentRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

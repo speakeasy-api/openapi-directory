@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LockPostRequest {
-    
-    public LockPostPathParams pathParams;
-    public LockPostRequest withPathParams(LockPostPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Key")
+    public String apiKey;
+    public LockPostRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public LockPostHeaders headers;
-    public LockPostRequest withHeaders(LockPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Username")
+    public String apiUsername;
+    public LockPostRequest withApiUsername(String apiUsername) {
+        this.apiUsername = apiUsername;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public LockPostRequestBody request;
-    public LockPostRequest withRequest(LockPostRequestBody request) {
-        this.request = request;
+    public LockPostRequestBody requestBody;
+    public LockPostRequest withRequestBody(LockPostRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public LockPostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

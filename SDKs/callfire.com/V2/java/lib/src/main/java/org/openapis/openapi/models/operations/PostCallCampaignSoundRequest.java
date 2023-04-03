@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCallCampaignSoundRequest {
-    
-    public PostCallCampaignSoundQueryParams queryParams;
-    public PostCallCampaignSoundRequest withQueryParams(PostCallCampaignSoundQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Request object containing the name of a new campaign sound and phone number to call up
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CallCreateSound request;
-    public PostCallCampaignSoundRequest withRequest(org.openapis.openapi.models.shared.CallCreateSound request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CallCreateSound callCreateSound;
+    public PostCallCampaignSoundRequest withCallCreateSound(org.openapis.openapi.models.shared.CallCreateSound callCreateSound) {
+        this.callCreateSound = callCreateSound;
         return this;
     }
     
-    
-    public PostCallCampaignSoundSecurity security;
-    public PostCallCampaignSoundRequest withSecurity(PostCallCampaignSoundSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PostCallCampaignSoundRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     

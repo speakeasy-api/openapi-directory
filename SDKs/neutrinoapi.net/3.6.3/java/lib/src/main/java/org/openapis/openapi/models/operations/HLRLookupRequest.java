@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HLRLookupRequest {
+    /**
+     * ISO 2-letter country code, assume numbers are based in this country. &lt;br&gt;If not set numbers are assumed to be in international format (with or without the leading + sign)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country-code")
+    public String countryCode;
+    public HLRLookupRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public HLRLookupQueryParams queryParams;
-    public HLRLookupRequest withQueryParams(HLRLookupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A phone number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String number;
+    public HLRLookupRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

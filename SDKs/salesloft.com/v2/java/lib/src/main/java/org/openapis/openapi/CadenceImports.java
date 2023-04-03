@@ -39,7 +39,7 @@ public class CadenceImports {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2CadenceImportsJsonResponse postV2CadenceImportsJson(org.openapis.openapi.models.operations.PostV2CadenceImportsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2CadenceImportsJsonResponse postV2CadenceImportsJson(org.openapis.openapi.models.operations.PostV2CadenceImportsJsonRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/cadence_imports.json");
         

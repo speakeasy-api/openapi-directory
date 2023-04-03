@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AccessTokenPutFormRequest;
 import org.openapis.openapi.models.operations.AccessTokenPutFormResponse;
 import org.openapis.openapi.models.shared.AccessTokenToPut;
 
@@ -27,12 +26,10 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AccessTokenPutFormRequest req = new AccessTokenPutFormRequest() {{
-                request = new AccessTokenToPut() {{
-                    cardId = 548814;
-                    userId = 592845;
-                }};
-            }};            
+            org.openapis.openapi.models.shared.AccessTokenToPut req = new AccessTokenToPut() {{
+                cardId = 548814;
+                userId = 592845;
+            }}            
 
             AccessTokenPutFormResponse res = sdk.accessToken.accessTokenPutForm(req);
 
@@ -46,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accessToken

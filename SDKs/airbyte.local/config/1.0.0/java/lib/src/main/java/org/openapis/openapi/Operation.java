@@ -36,7 +36,7 @@ public class Operation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CheckOperationResponse checkOperation(org.openapis.openapi.models.operations.CheckOperationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CheckOperationResponse checkOperation(org.openapis.openapi.models.shared.OperatorConfiguration request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/operations/check");
         
@@ -87,7 +87,7 @@ public class Operation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateOperationResponse createOperation(org.openapis.openapi.models.operations.CreateOperationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateOperationResponse createOperation(org.openapis.openapi.models.shared.OperationCreate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/operations/create");
         
@@ -138,7 +138,7 @@ public class Operation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteOperationResponse deleteOperation(org.openapis.openapi.models.operations.DeleteOperationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteOperationResponse deleteOperation(org.openapis.openapi.models.shared.OperationIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/operations/delete");
         
@@ -191,7 +191,7 @@ public class Operation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetOperationResponse getOperation(org.openapis.openapi.models.operations.GetOperationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetOperationResponse getOperation(org.openapis.openapi.models.shared.OperationIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/operations/get");
         
@@ -251,7 +251,7 @@ public class Operation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListOperationsForConnectionResponse listOperationsForConnection(org.openapis.openapi.models.operations.ListOperationsForConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListOperationsForConnectionResponse listOperationsForConnection(org.openapis.openapi.models.shared.ConnectionIdRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/operations/list");
         
@@ -310,7 +310,7 @@ public class Operation {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateOperationResponse updateOperation(org.openapis.openapi.models.operations.UpdateOperationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateOperationResponse updateOperation(org.openapis.openapi.models.shared.OperationUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/operations/update");
         

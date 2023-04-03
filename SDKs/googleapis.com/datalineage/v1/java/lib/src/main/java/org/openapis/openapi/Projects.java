@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Retrieve information about LineageProcesses associated with specific links. LineageProcesses are transformation pipelines that result in data flowing from **source** to **target** assets. Links between assets represent this operation. If you have specific link names, you can use this method to verify which LineageProcesses contribute to creating those links. See the SearchLinks method for more information on how to retrieve link name. You can retrieve the LineageProcess information in every project where you have the `datalineage.events.get` permission. The project provided in the URL is used for Billing and Quota.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse datalineageProjectsLocationsBatchSearchLinkProcesses(org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse datalineageProjectsLocationsBatchSearchLinkProcesses(org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesPathParams.class, baseUrl, "/v1/{parent}:batchSearchLinkProcesses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest.class, baseUrl, "/v1/{parent}:batchSearchLinkProcesses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelResponse datalineageProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelResponse datalineageProjectsLocationsOperationsCancel(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelPathParams.class, baseUrl, "/v1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelRequest.class, baseUrl, "/v1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListResponse datalineageProjectsLocationsOperationsList(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListResponse datalineageProjectsLocationsOperationsList(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListPathParams.class, baseUrl, "/v1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListRequest.class, baseUrl, "/v1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Creates a new process.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateResponse datalineageProjectsLocationsProcessesCreate(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateResponse datalineageProjectsLocationsProcessesCreate(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreatePathParams.class, baseUrl, "/v1/{parent}/processes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateRequest.class, baseUrl, "/v1/{parent}/processes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogLineageV1Process", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Projects {
     /**
      * List processes in the given project and location. List order is descending by insertion time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListResponse datalineageProjectsLocationsProcessesList(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListResponse datalineageProjectsLocationsProcessesList(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListPathParams.class, baseUrl, "/v1/{parent}/processes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListRequest.class, baseUrl, "/v1/{parent}/processes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Projects {
     /**
      * Creates a new run.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateResponse datalineageProjectsLocationsProcessesRunsCreate(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateResponse datalineageProjectsLocationsProcessesRunsCreate(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreatePathParams.class, baseUrl, "/v1/{parent}/runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateRequest.class, baseUrl, "/v1/{parent}/runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogLineageV1Run", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,27 +319,28 @@ public class Projects {
     /**
      * Creates a new lineage event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateResponse datalineageProjectsLocationsProcessesRunsLineageEventsCreate(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateResponse datalineageProjectsLocationsProcessesRunsLineageEventsCreate(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreatePathParams.class, baseUrl, "/v1/{parent}/lineageEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateRequest.class, baseUrl, "/v1/{parent}/lineageEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogLineageV1LineageEvent", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -360,25 +367,26 @@ public class Projects {
     /**
      * Deletes the lineage event with the specified name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse datalineageProjectsLocationsProcessesRunsLineageEventsDelete(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteResponse datalineageProjectsLocationsProcessesRunsLineageEventsDelete(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,25 +413,26 @@ public class Projects {
     /**
      * Gets details of a specified lineage event.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse datalineageProjectsLocationsProcessesRunsLineageEventsGet(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetResponse datalineageProjectsLocationsProcessesRunsLineageEventsGet(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,25 +459,26 @@ public class Projects {
     /**
      * Lists lineage events in the given project and location. The list order is not defined.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse datalineageProjectsLocationsProcessesRunsLineageEventsList(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListResponse datalineageProjectsLocationsProcessesRunsLineageEventsList(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListPathParams.class, baseUrl, "/v1/{parent}/lineageEvents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListRequest.class, baseUrl, "/v1/{parent}/lineageEvents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsLineageEventsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -495,25 +505,26 @@ public class Projects {
     /**
      * Lists runs in the given project and location. List order is descending by `start_time`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListResponse datalineageProjectsLocationsProcessesRunsList(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListResponse datalineageProjectsLocationsProcessesRunsList(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListPathParams.class, baseUrl, "/v1/{parent}/runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListRequest.class, baseUrl, "/v1/{parent}/runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Updates a run.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchResponse datalineageProjectsLocationsProcessesRunsPatch(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchResponse datalineageProjectsLocationsProcessesRunsPatch(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogLineageV1Run", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsProcessesRunsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Retrieve a list of links connected to a specific asset. Links represent the data flow between **source** (upstream) and **target** (downstream) assets in transformation pipelines. Links are stored in the same project as the Lineage Events that create them. You can retrieve links in every project where you have the `datalineage.events.get` permission. The project provided in the URL is used for Billing and Quota.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksResponse datalineageProjectsLocationsSearchLinks(org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksResponse datalineageProjectsLocationsSearchLinks(org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksRequest request, org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksPathParams.class, baseUrl, "/v1/{parent}:searchLinks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksRequest.class, baseUrl, "/v1/{parent}:searchLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDatacatalogLineageV1SearchLinksRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DatalineageProjectsLocationsSearchLinksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

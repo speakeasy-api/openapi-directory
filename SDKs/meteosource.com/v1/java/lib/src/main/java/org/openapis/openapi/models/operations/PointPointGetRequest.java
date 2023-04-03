@@ -4,20 +4,117 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PointPointGetRequest {
-    
-    public PointPointGetQueryParams queryParams;
-    public PointPointGetRequest withQueryParams(PointPointGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PointPointGetRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
+    /**
+     * The language of text summaries and place names (variable names are never translated). Available languages are:
+     * 
+     *    * ``en``: English
+     *    * ``es``: Spanish
+     *    * ``fr``: French
+     *    * ``de``: German
+     *    * ``pl``: Polish
+     *    * ``pt``: Portuguese
+     *    * ``cs``: Czech
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public PointPointGetLanguageLanguageEnum language;
+    public PointPointGetRequest withLanguage(PointPointGetLanguageLanguageEnum language) {
+        this.language = language;
+        return this;
+    }
     
-    public PointPointGetSecurity security;
-    public PointPointGetRequest withSecurity(PointPointGetSecurity security) {
-        this.security = security;
+    /**
+     * Latitude in format 12N, 12.3N, 12.3, or 13S, 13.2S, -13.4
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public String lat;
+    public PointPointGetRequest withLat(String lat) {
+        this.lat = lat;
+        return this;
+    }
+    
+    /**
+     * Longitude in format 12E, 12.3E, 12.3, or 13W, 13.2W, -13.4
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
+    public String lon;
+    public PointPointGetRequest withLon(String lon) {
+        this.lon = lon;
+        return this;
+    }
+    
+    /**
+     * Identifier of a place. To obtain the `place_id` for the location you want, please use endpoints `/find_places_prefix` (search by prefix) or `/find_places` (search by full name).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=place_id")
+    public String placeId;
+    public PointPointGetRequest withPlaceId(String placeId) {
+        this.placeId = placeId;
+        return this;
+    }
+    
+    /**
+     * Sections to be included in the response. You can specify more section by separating the values with a comma. The available values are:
+     * 
+     * * ``current``: Current weather situation
+     * * ``daily``: Forecasts for each whole day, without the daily parts
+     * * ``daily-parts``: Forecasts for each whole day, morning, afternoon and evening
+     *     * Important: forecast for the morning, afternoon and evening is available only for the first
+     *       7 days in the forecast
+     * * ``hourly``: Forecasts with hourly resolution
+     * * ``minutely``: Precipitation forecast with 1 minute resolution
+     * * ``alerts``: The weather alerts
+     * * ``all``: All sections
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sections")
+    public String sections;
+    public PointPointGetRequest withSections(String sections) {
+        this.sections = sections;
+        return this;
+    }
+    
+    /**
+     * Timezone to be used for the date fields. If not specified, local timezone of the forecast location will be used.
+     * The format is according to the tzinfo database, so values like `Europe/Prague` or `UTC` can be used.
+     * Alternatively you may use the value ``auto`` in which case the local timezone of the location is used.
+     * The full list of valid timezone strings can be found [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timezone")
+    public String timezone;
+    public PointPointGetRequest withTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    
+    /**
+     * Unit system to be used. The available values are:
+     * 
+     * * `auto`: Select the system automatically, based on the forecast location.
+     * * `metric`: Metric (SI) units (`\u00b0C`, `mm/h`, `m/s`, `cm`, `km`, `hPa`).
+     * * `us`: Imperial units (`\u00b0F`, `in/h`, `mph`, `in`, `mi`, `Hg`).
+     * * `uk`: Same as ``metric``, except that visibility is in `miles` and wind speeds are in `mph`.
+     * * `ca`: Same as ``metric``, except that wind speeds are in `km/h` and pressure is in `kPa`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=units")
+    public PointPointGetUnitsUnitsEnum units;
+    public PointPointGetRequest withUnits(PointPointGetUnitsUnitsEnum units) {
+        this.units = units;
         return this;
     }
     

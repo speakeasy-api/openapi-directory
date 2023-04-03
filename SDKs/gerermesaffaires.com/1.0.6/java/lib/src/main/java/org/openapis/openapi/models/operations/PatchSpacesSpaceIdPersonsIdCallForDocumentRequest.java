@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdPersonsIdCallForDocumentRequest {
-    
-    public PatchSpacesSpaceIdPersonsIdCallForDocumentPathParams pathParams;
-    public PatchSpacesSpaceIdPersonsIdCallForDocumentRequest withPathParams(PatchSpacesSpaceIdPersonsIdCallForDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Infos to invite
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ModifyCollect request;
-    public PatchSpacesSpaceIdPersonsIdCallForDocumentRequest withRequest(org.openapis.openapi.models.shared.ModifyCollect request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ModifyCollect modifyCollect;
+    public PatchSpacesSpaceIdPersonsIdCallForDocumentRequest withModifyCollect(org.openapis.openapi.models.shared.ModifyCollect modifyCollect) {
+        this.modifyCollect = modifyCollect;
         return this;
     }
     
+    /**
+     * Id of the person
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesSpaceIdPersonsIdCallForDocumentRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PatchSpacesSpaceIdPersonsIdCallForDocumentSecurity security;
-    public PatchSpacesSpaceIdPersonsIdCallForDocumentRequest withSecurity(PatchSpacesSpaceIdPersonsIdCallForDocumentSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdPersonsIdCallForDocumentRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdMessagesRequest {
-    
-    public GetSpacesSpaceIdFoldersIdMessagesPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdMessagesRequest withPathParams(GetSpacesSpaceIdFoldersIdMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * date of the message
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageDate")
+    public String messageDate;
+    public GetSpacesSpaceIdFoldersIdMessagesRequest withMessageDate(String messageDate) {
+        this.messageDate = messageDate;
         return this;
     }
     
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdMessagesRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdMessagesQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdMessagesRequest withQueryParams(GetSpacesSpaceIdFoldersIdMessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of the message
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Text")
+    public String text;
+    public GetSpacesSpaceIdFoldersIdMessagesRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdMessagesRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdMessagesRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

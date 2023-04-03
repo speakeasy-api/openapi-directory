@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PepMonitorUnregisterRequest {
-    
-    public PepMonitorUnregisterPathParams pathParams;
-    public PepMonitorUnregisterRequest withPathParams(PepMonitorUnregisterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PepMonitorUnregisterSecurity security;
-    public PepMonitorUnregisterRequest withSecurity(PepMonitorUnregisterSecurity security) {
-        this.security = security;
+    /**
+     * The identifier of the Monitor
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PepMonitorUnregisterRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

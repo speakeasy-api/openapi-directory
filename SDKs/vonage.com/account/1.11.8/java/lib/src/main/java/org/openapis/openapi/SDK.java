@@ -123,19 +123,20 @@ public class SDK {
     /**
      * Get account data by ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDResponse accountCtrlGetAccountServicesByAccountID(org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDResponse accountCtrlGetAccountServicesByAccountID(org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDRequest request, org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDPathParams.class, baseUrl, "/api/accounts/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountCtrlGetAccountServicesByAccountIDRequest.class, baseUrl, "/api/accounts/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,19 +165,20 @@ public class SDK {
     /**
      * Get location data by account ID and location ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCtrlGetLocationByIDResponse accountCtrlGetLocationByID(org.openapis.openapi.models.operations.AccountCtrlGetLocationByIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCtrlGetLocationByIDResponse accountCtrlGetLocationByID(org.openapis.openapi.models.operations.AccountCtrlGetLocationByIDRequest request, org.openapis.openapi.models.operations.AccountCtrlGetLocationByIDSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountCtrlGetLocationByIDPathParams.class, baseUrl, "/api/accounts/{account_id}/locations/{location_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountCtrlGetLocationByIDRequest.class, baseUrl, "/api/accounts/{account_id}/locations/{location_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,19 +207,20 @@ public class SDK {
     /**
      * Get account locations data by account ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCtrlGetLocationsByAccountIDResponse accountCtrlGetLocationsByAccountID(org.openapis.openapi.models.operations.AccountCtrlGetLocationsByAccountIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCtrlGetLocationsByAccountIDResponse accountCtrlGetLocationsByAccountID(org.openapis.openapi.models.operations.AccountCtrlGetLocationsByAccountIDRequest request, org.openapis.openapi.models.operations.AccountCtrlGetLocationsByAccountIDSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountCtrlGetLocationsByAccountIDPathParams.class, baseUrl, "/api/accounts/{account_id}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountCtrlGetLocationsByAccountIDRequest.class, baseUrl, "/api/accounts/{account_id}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetClassificationsAddressTypesHeaders;
 import org.openapis.openapi.models.operations.GetClassificationsAddressTypesRequest;
 import org.openapis.openapi.models.operations.GetClassificationsAddressTypesResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             GetClassificationsAddressTypesRequest req = new GetClassificationsAddressTypesRequest() {{
-                headers = new GetClassificationsAddressTypesHeaders() {{
-                    apiKey = "corrupti";
-                }};
-            }};            
+                apiKey = "corrupti";
+            }}            
 
             GetClassificationsAddressTypesResponse res = sdk.addressTypes.getClassificationsAddressTypes(req);
 

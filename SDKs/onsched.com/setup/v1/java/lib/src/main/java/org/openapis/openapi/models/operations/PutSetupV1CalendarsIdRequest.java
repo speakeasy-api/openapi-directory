@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1CalendarsIdRequest {
-    
-    public PutSetupV1CalendarsIdPathParams pathParams;
-    public PutSetupV1CalendarsIdRequest withPathParams(PutSetupV1CalendarsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Input model for the calendar object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ScheduleUpdateModel request;
-    public PutSetupV1CalendarsIdRequest withRequest(org.openapis.openapi.models.shared.ScheduleUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ScheduleUpdateModel scheduleUpdateModel;
+    public PutSetupV1CalendarsIdRequest withScheduleUpdateModel(org.openapis.openapi.models.shared.ScheduleUpdateModel scheduleUpdateModel) {
+        this.scheduleUpdateModel = scheduleUpdateModel;
+        return this;
+    }
+    
+    /**
+     * id of calendar object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1CalendarsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -42,7 +42,7 @@ public class Assistant {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccessibilityResponse accessibility(org.openapis.openapi.models.operations.AccessibilityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccessibilityResponse accessibility(org.openapis.openapi.models.shared.AccessibilityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assistant/a11y_mode");
         
@@ -91,7 +91,7 @@ public class Assistant {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AlarmVolumeResponse alarmVolume(org.openapis.openapi.models.operations.AlarmVolumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AlarmVolumeResponse alarmVolume(org.openapis.openapi.models.shared.AlarmVolumeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assistant/alarms/volume");
         
@@ -138,7 +138,7 @@ public class Assistant {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAlarmsandTimersResponse deleteAlarmsandTimers(org.openapis.openapi.models.operations.DeleteAlarmsandTimersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAlarmsandTimersResponse deleteAlarmsandTimers(org.openapis.openapi.models.shared.DeleteAlarmsandTimersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assistant/alarms/delete");
         
@@ -191,7 +191,7 @@ public class Assistant {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -285,7 +285,7 @@ public class Assistant {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetEqualizerValuesResponse setEqualizerValues(org.openapis.openapi.models.operations.SetEqualizerValuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetEqualizerValuesResponse setEqualizerValues(org.openapis.openapi.models.shared.SetEqualizerValuesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user_eq/set_equalizer");
         

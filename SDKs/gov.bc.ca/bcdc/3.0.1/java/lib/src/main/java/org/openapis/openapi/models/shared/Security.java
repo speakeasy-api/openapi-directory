@@ -7,16 +7,16 @@ package org.openapis.openapi.models.shared;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public SchemeGithubAccessCode githubAccessCode;
-    public Security withGithubAccessCode(SchemeGithubAccessCode githubAccessCode) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String githubAccessCode;
+    public Security withGithubAccessCode(String githubAccessCode) {
         this.githubAccessCode = githubAccessCode;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public SchemeInternalAPIKey internalApiKey;
-    public Security withInternalApiKey(SchemeInternalAPIKey internalApiKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=ckan_api_key")
+    public String internalApiKey;
+    public Security withInternalApiKey(String internalApiKey) {
         this.internalApiKey = internalApiKey;
         return this;
     }

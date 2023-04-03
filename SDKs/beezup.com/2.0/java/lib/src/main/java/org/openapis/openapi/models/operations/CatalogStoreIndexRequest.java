@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogStoreIndexRequest {
-    
-    public CatalogStoreIndexPathParams pathParams;
-    public CatalogStoreIndexRequest withPathParams(CatalogStoreIndexPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogStoreIndexRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EaseeSessionsRequest {
+    /**
+     * Password as used on easy.cloud
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public EaseeSessionsRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
     
-    public EaseeSessionsQueryParams queryParams;
-    public EaseeSessionsRequest withQueryParams(EaseeSessionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Username as used on easy.cloud
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public EaseeSessionsRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

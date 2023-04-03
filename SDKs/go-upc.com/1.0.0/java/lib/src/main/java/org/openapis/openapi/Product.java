@@ -37,7 +37,7 @@ public class Product {
      */
     public org.openapis.openapi.models.operations.GetProductInfoResponse getProductInfo(org.openapis.openapi.models.operations.GetProductInfoRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductInfoPathParams.class, baseUrl, "/code/{code}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductInfoRequest.class, baseUrl, "/code/{code}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationLicenseRequest {
-    
-    public UpdateOrganizationLicensePathParams pathParams;
-    public UpdateOrganizationLicenseRequest withPathParams(UpdateOrganizationLicensePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationLicenseRequestBody requestBody;
+    public UpdateOrganizationLicenseRequest withRequestBody(UpdateOrganizationLicenseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationLicenseRequestBody request;
-    public UpdateOrganizationLicenseRequest withRequest(UpdateOrganizationLicenseRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseId")
+    public String licenseId;
+    public UpdateOrganizationLicenseRequest withLicenseId(String licenseId) {
+        this.licenseId = licenseId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationLicenseRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

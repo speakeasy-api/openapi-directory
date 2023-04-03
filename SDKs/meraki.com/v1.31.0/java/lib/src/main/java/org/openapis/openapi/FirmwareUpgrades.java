@@ -41,12 +41,12 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesRollbackResponse createNetworkFirmwareUpgradesRollback(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesRollbackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesRollbackPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/rollbacks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesRollbackRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/rollbacks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,12 +86,12 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedEventResponse createNetworkFirmwareUpgradesStagedEvent(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedEventRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedEventPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedEventRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -131,12 +131,12 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedGroupResponse createNetworkFirmwareUpgradesStagedGroup(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedGroupPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkFirmwareUpgradesStagedGroupRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -176,7 +176,7 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.DeferNetworkFirmwareUpgradesStagedEventsResponse deferNetworkFirmwareUpgradesStagedEvents(org.openapis.openapi.models.operations.DeferNetworkFirmwareUpgradesStagedEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeferNetworkFirmwareUpgradesStagedEventsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events/defer", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeferNetworkFirmwareUpgradesStagedEventsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events/defer", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -216,7 +216,7 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkFirmwareUpgradesStagedGroupResponse deleteNetworkFirmwareUpgradesStagedGroup(org.openapis.openapi.models.operations.DeleteNetworkFirmwareUpgradesStagedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkFirmwareUpgradesStagedGroupPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkFirmwareUpgradesStagedGroupRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -250,7 +250,7 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesResponse getNetworkFirmwareUpgrades(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -290,7 +290,7 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedEventsResponse getNetworkFirmwareUpgradesStagedEvents(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedEventsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedEventsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -330,7 +330,7 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupResponse getNetworkFirmwareUpgradesStagedGroup(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -370,7 +370,7 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupsResponse getNetworkFirmwareUpgradesStagedGroups(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedGroupsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -410,7 +410,7 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedStagesResponse getNetworkFirmwareUpgradesStagedStages(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedStagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedStagesPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkFirmwareUpgradesStagedStagesRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -450,12 +450,12 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.RollbacksNetworkFirmwareUpgradesStagedEventsResponse rollbacksNetworkFirmwareUpgradesStagedEvents(org.openapis.openapi.models.operations.RollbacksNetworkFirmwareUpgradesStagedEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RollbacksNetworkFirmwareUpgradesStagedEventsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events/rollbacks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RollbacksNetworkFirmwareUpgradesStagedEventsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events/rollbacks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -495,12 +495,12 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesResponse updateNetworkFirmwareUpgrades(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -537,12 +537,12 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedEventsResponse updateNetworkFirmwareUpgradesStagedEvents(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedEventsPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedEventsRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -582,12 +582,12 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedGroupResponse updateNetworkFirmwareUpgradesStagedGroup(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedGroupPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedGroupRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -627,12 +627,12 @@ public class FirmwareUpgrades {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedStagesResponse updateNetworkFirmwareUpgradesStagedStages(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedStagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedStagesPathParams.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/stages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkFirmwareUpgradesStagedStagesRequest.class, baseUrl, "/networks/{networkId}/firmwareUpgrades/staged/stages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

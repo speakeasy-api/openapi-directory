@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateExecutionRequest {
-    
-    public UpdateExecutionPathParams pathParams;
-    public UpdateExecutionRequest withPathParams(UpdateExecutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Flow with the Execution resources to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public UpdateExecutionRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateExecutionUpdateExecutionRequest request;
-    public UpdateExecutionRequest withRequest(UpdateExecutionUpdateExecutionRequest request) {
-        this.request = request;
+    public UpdateExecutionUpdateExecutionRequest requestBody;
+    public UpdateExecutionRequest withRequestBody(UpdateExecutionUpdateExecutionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateExecutionSecurity security;
-    public UpdateExecutionRequest withSecurity(UpdateExecutionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateExecutionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Execution resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateExecutionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

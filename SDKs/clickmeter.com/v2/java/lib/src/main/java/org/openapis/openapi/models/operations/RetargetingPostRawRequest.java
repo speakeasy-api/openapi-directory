@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetargetingPostRawRequest {
-    
-    public RetargetingPostRawPathParams pathParams;
-    public RetargetingPostRawRequest withPathParams(RetargetingPostRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body of the retargeting script
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public RetargetingPostRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public RetargetingPostRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The id of the retargeting script
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RetargetingPostRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

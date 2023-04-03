@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdPayslipsRequest {
-    
-    public GetSpacesSpaceIdFoldersIdPayslipsPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdPayslipsRequest withPathParams(GetSpacesSpaceIdFoldersIdPayslipsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * range date of the documents
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Date")
+    public String date;
+    public GetSpacesSpaceIdFoldersIdPayslipsRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
+    /**
+     * index range of the results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Range")
+    public String range;
+    public GetSpacesSpaceIdFoldersIdPayslipsRequest withRange(String range) {
+        this.range = range;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdPayslipsQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdPayslipsRequest withQueryParams(GetSpacesSpaceIdFoldersIdPayslipsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the folder employee
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdPayslipsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdPayslipsRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

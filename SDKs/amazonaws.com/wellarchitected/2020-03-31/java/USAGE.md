@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateLensesPathParams;
-import org.openapis.openapi.models.operations.AssociateLensesHeaders;
 import org.openapis.openapi.models.operations.AssociateLensesRequestBody;
 import org.openapis.openapi.models.operations.AssociateLensesRequest;
 import org.openapis.openapi.models.operations.AssociateLensesResponse;
@@ -15,32 +13,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateLensesRequest req = new AssociateLensesRequest() {{
-                pathParams = new AssociateLensesPathParams() {{
-                    workloadId = "corrupti";
-                }};
-                headers = new AssociateLensesHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new AssociateLensesRequestBody() {{
+                requestBody = new AssociateLensesRequestBody() {{
                     lensAliases = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                 }};
-            }};            
+                workloadId = "unde";
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             AssociateLensesResponse res = sdk.associateLenses(req);
 

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCollectionsRequest {
-    
-    public GetCollectionsQueryParams queryParams;
-    public GetCollectionsRequest withQueryParams(GetCollectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetCollectionsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetCollectionsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetCollectionsSecurity security;
-    public GetCollectionsRequest withSecurity(GetCollectionsSecurity security) {
-        this.security = security;
+    /**
+     * Set to true to omit collections that you own and return only collections  that are shared with you
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shared")
+    public Boolean shared;
+    public GetCollectionsRequest withShared(Boolean shared) {
+        this.shared = shared;
+        return this;
+    }
+    
+    /**
+     * Sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetCollectionsSortEnum sort;
+    public GetCollectionsRequest withSort(GetCollectionsSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEntitiesRequest {
-    
-    public GetEntitiesQueryParams queryParams;
-    public GetEntitiesRequest withQueryParams(GetEntitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
+    public String xAppToken;
+    public GetEntitiesRequest withXAppToken(String xAppToken) {
+        this.xAppToken = xAppToken;
         return this;
     }
     
+    /**
+     * The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
+     * used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
+    public String appToken;
+    public GetEntitiesRequest withAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
     
-    public GetEntitiesHeaders headers;
-    public GetEntitiesRequest withHeaders(GetEntitiesHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the entity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
+    public String entityId;
+    public GetEntitiesRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    
+    /**
+     * Name of the entity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_name")
+    public String entityName;
+    public GetEntitiesRequest withEntityName(String entityName) {
+        this.entityName = entityName;
+        return this;
+    }
+    
+    /**
+     * Type of the entity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_type")
+    public String entityType;
+    public GetEntitiesRequest withEntityType(String entityType) {
+        this.entityType = entityType;
         return this;
     }
     

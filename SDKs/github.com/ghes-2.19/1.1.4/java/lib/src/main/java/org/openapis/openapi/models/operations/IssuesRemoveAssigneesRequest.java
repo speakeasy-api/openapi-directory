@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesRemoveAssigneesRequest {
-    
-    public IssuesRemoveAssigneesPathParams pathParams;
-    public IssuesRemoveAssigneesRequest withPathParams(IssuesRemoveAssigneesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public IssuesRemoveAssigneesRequestBody requestBody;
+    public IssuesRemoveAssigneesRequest withRequestBody(IssuesRemoveAssigneesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public IssuesRemoveAssigneesRequestBody request;
-    public IssuesRemoveAssigneesRequest withRequest(IssuesRemoveAssigneesRequestBody request) {
-        this.request = request;
+    /**
+     * issue_number parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
+    public Long issueNumber;
+    public IssuesRemoveAssigneesRequest withIssueNumber(Long issueNumber) {
+        this.issueNumber = issueNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssuesRemoveAssigneesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssuesRemoveAssigneesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

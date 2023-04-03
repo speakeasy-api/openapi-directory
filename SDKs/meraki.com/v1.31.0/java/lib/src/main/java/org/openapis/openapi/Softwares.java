@@ -38,7 +38,7 @@ public class Softwares {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmDeviceSoftwaresResponse getNetworkSmDeviceSoftwares(org.openapis.openapi.models.operations.GetNetworkSmDeviceSoftwaresRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceSoftwaresPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/softwares", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmDeviceSoftwaresRequest.class, baseUrl, "/networks/{networkId}/sm/devices/{deviceId}/softwares", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -78,7 +78,7 @@ public class Softwares {
      */
     public org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresResponse getNetworkSmUserSoftwares(org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresPathParams.class, baseUrl, "/networks/{networkId}/sm/users/{userId}/softwares", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSmUserSoftwaresRequest.class, baseUrl, "/networks/{networkId}/sm/users/{userId}/softwares", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

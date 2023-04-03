@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCustomerCardRequest {
-    
-    public CreateCustomerCardPathParams pathParams;
-    public CreateCustomerCardRequest withPathParams(CreateCustomerCardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateCustomerCardRequest request;
-    public CreateCustomerCardRequest withRequest(org.openapis.openapi.models.shared.CreateCustomerCardRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateCustomerCardRequest createCustomerCardRequest;
+    public CreateCustomerCardRequest withCreateCustomerCardRequest(org.openapis.openapi.models.shared.CreateCustomerCardRequest createCustomerCardRequest) {
+        this.createCustomerCardRequest = createCustomerCardRequest;
         return this;
     }
     
-    
-    public CreateCustomerCardSecurity security;
-    public CreateCustomerCardRequest withSecurity(CreateCustomerCardSecurity security) {
-        this.security = security;
+    /**
+     * The Square ID of the customer profile the card is linked to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public String customerId;
+    public CreateCustomerCardRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesDeleteDistributionStoreRequest {
-    
-    public ReleasesDeleteDistributionStorePathParams pathParams;
-    public ReleasesDeleteDistributionStoreRequest withPathParams(ReleasesDeleteDistributionStorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesDeleteDistributionStoreRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesDeleteDistributionStoreRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public ReleasesDeleteDistributionStoreSecurity security;
-    public ReleasesDeleteDistributionStoreRequest withSecurity(ReleasesDeleteDistributionStoreSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesDeleteDistributionStoreRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The id of the distribution store
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_id")
+    public String storeId;
+    public ReleasesDeleteDistributionStoreRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

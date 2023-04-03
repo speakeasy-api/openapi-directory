@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetP60ReportOutputRequest {
-    
-    public GetP60ReportOutputQueryParams queryParams;
-    public GetP60ReportOutputRequest withQueryParams(GetP60ReportOutputQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetP60ReportOutputRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetP60ReportOutputRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetP60ReportOutputHeaders headers;
-    public GetP60ReportOutputRequest withHeaders(GetP60ReportOutputHeaders headers) {
-        this.headers = headers;
+    /**
+     * A comma separated list of the employee codes. E.g. EMP001,EMP002
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployeeCodes")
+    public String employeeCodes;
+    public GetP60ReportOutputRequest withEmployeeCodes(String employeeCodes) {
+        this.employeeCodes = employeeCodes;
+        return this;
+    }
+    
+    /**
+     * The employer unique key. E.g. ER001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployerKey")
+    public String employerKey;
+    public GetP60ReportOutputRequest withEmployerKey(String employerKey) {
+        this.employerKey = employerKey;
+        return this;
+    }
+    
+    /**
+     * The highest element index to return from the report. Used to control paging within large data sets. E.g. 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxIndex")
+    public String maxIndex;
+    public GetP60ReportOutputRequest withMaxIndex(String maxIndex) {
+        this.maxIndex = maxIndex;
+        return this;
+    }
+    
+    /**
+     * The element index to begin the report. Used to control paging within large data sets. E.g. 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartIndex")
+    public String startIndex;
+    public GetP60ReportOutputRequest withStartIndex(String startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * The tax year. E.g. 2017 = 2017/18 year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaxYear")
+    public String taxYear;
+    public GetP60ReportOutputRequest withTaxYear(String taxYear) {
+        this.taxYear = taxYear;
+        return this;
+    }
+    
+    /**
+     * The transform definition unique key. E.g. P45-Pdf
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransformDefinitionKey")
+    public String transformDefinitionKey;
+    public GetP60ReportOutputRequest withTransformDefinitionKey(String transformDefinitionKey) {
+        this.transformDefinitionKey = transformDefinitionKey;
         return this;
     }
     

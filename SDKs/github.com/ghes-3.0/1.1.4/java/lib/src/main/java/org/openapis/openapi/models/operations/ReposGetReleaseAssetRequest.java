@@ -4,13 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetReleaseAssetRequest {
+    /**
+     * asset_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
+    public Long assetId;
+    public ReposGetReleaseAssetRequest withAssetId(Long assetId) {
+        this.assetId = assetId;
+        return this;
+    }
     
-    public ReposGetReleaseAssetPathParams pathParams;
-    public ReposGetReleaseAssetRequest withPathParams(ReposGetReleaseAssetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetReleaseAssetRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetReleaseAssetRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBadWordsRequest {
+    /**
+     * Sets the format of the API response. JSON is the default format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetBadWordsRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetBadWordsQueryParams queryParams;
-    public GetBadWordsRequest withQueryParams(GetBadWordsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your API Key. Each user has a unique API Key that can be used to access the API functions. If you don't have an account yet, please create new account first.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetBadWordsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Set to `yes` to list the bad-words as an Array.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=listBadWords")
+    public String listBadWords;
+    public GetBadWordsRequest withListBadWords(String listBadWords) {
+        this.listBadWords = listBadWords;
+        return this;
+    }
+    
+    /**
+     * Set to `yes` to return only the score of the text and whether it's safe or not.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scoreOnly")
+    public String scoreOnly;
+    public GetBadWordsRequest withScoreOnly(String scoreOnly) {
+        this.scoreOnly = scoreOnly;
+        return this;
+    }
+    
+    /**
+     * The text you want to check.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public GetBadWordsRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

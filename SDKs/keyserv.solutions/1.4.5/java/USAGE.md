@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.KeysApiCurrentPathParams;
 import org.openapis.openapi.models.operations.KeysApiCurrentRequest;
 import org.openapis.openapi.models.operations.KeysApiCurrentResponse;
 
@@ -15,10 +14,8 @@ public class Application {
                 .build();
 
             KeysApiCurrentRequest req = new KeysApiCurrentRequest() {{
-                pathParams = new KeysApiCurrentPathParams() {{
-                    serial = "corrupti";
-                }};
-            }};            
+                serial = "corrupti";
+            }}            
 
             KeysApiCurrentResponse res = sdk.keysApi.keysApiCurrent(req);
 

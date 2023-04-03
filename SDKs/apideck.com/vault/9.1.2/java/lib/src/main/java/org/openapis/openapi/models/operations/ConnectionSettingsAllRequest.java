@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectionSettingsAllRequest {
-    
-    public ConnectionSettingsAllPathParams pathParams;
-    public ConnectionSettingsAllRequest withPathParams(ConnectionSettingsAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Resource Name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
+    public String resource;
+    public ConnectionSettingsAllRequest withResource(String resource) {
+        this.resource = resource;
         return this;
     }
     
-    
-    public ConnectionSettingsAllHeaders headers;
-    public ConnectionSettingsAllRequest withHeaders(ConnectionSettingsAllHeaders headers) {
-        this.headers = headers;
+    /**
+     * Service ID of the resource to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=service_id")
+    public String serviceId;
+    public ConnectionSettingsAllRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
         return this;
     }
     
+    /**
+     * Unified API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=unified_api")
+    public String unifiedApi;
+    public ConnectionSettingsAllRequest withUnifiedApi(String unifiedApi) {
+        this.unifiedApi = unifiedApi;
+        return this;
+    }
     
-    public ConnectionSettingsAllSecurity security;
-    public ConnectionSettingsAllRequest withSecurity(ConnectionSettingsAllSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConnectionSettingsAllRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public ConnectionSettingsAllRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
         return this;
     }
     

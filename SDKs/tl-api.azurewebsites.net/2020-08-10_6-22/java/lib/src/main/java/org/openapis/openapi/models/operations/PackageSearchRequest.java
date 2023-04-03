@@ -4,13 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageSearchRequest {
+    /**
+     * active status active : 1, inactive : 2, all 3, deafult : 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activeStatus")
+    public Integer activeStatus;
+    public PackageSearchRequest withActiveStatus(Integer activeStatus) {
+        this.activeStatus = activeStatus;
+        return this;
+    }
     
-    public PackageSearchQueryParams queryParams;
-    public PackageSearchRequest withQueryParams(PackageSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Packge Category Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categoryId")
+    public Integer categoryId;
+    public PackageSearchRequest withCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    
+    /**
+     * End Price of the price Range
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endPrice")
+    public Double endPrice;
+    public PackageSearchRequest withEndPrice(Double endPrice) {
+        this.endPrice = endPrice;
+        return this;
+    }
+    
+    /**
+     * primary key of TL gym entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gymId")
+    public Integer gymId;
+    public PackageSearchRequest withGymId(Integer gymId) {
+        this.gymId = gymId;
+        return this;
+    }
+    
+    /**
+     * number of recode in result and default is 100. use negative numbers to order by desc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public PackageSearchRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * number of recodes to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public PackageSearchRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * order by column.!-- invalid column will give internal server error
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public PackageSearchRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * 1 : MRM, 2 : Mobile 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestSource")
+    public Integer requestSource;
+    public PackageSearchRequest withRequestSource(Integer requestSource) {
+        this.requestSource = requestSource;
+        return this;
+    }
+    
+    /**
+     * part of package name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchText")
+    public String searchText;
+    public PackageSearchRequest withSearchText(String searchText) {
+        this.searchText = searchText;
+        return this;
+    }
+    
+    /**
+     * Start price of the price Range
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startpPrice")
+    public Double startpPrice;
+    public PackageSearchRequest withStartpPrice(Double startpPrice) {
+        this.startpPrice = startpPrice;
+        return this;
+    }
+    
+    /**
+     * filter package type.!-- default is 'all'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public PackageSearchRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest {
-    
-    public CreateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams pathParams;
-    public CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withPathParams(CreateNetworkApplianceTrafficShapingCustomPerformanceClassPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody requestBody;
+    public CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withRequestBody(CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody request;
-    public CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withRequest(CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkApplianceTrafficShapingCustomPerformanceClassRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest {
-    
-    public EnterpriseAdminGetProvisioningInformationForEnterpriseUserPathParams pathParams;
-    public EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest withPathParams(EnterpriseAdminGetProvisioningInformationForEnterpriseUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the SCIM user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_user_id")
+    public String scimUserId;
+    public EnterpriseAdminGetProvisioningInformationForEnterpriseUserRequest withScimUserId(String scimUserId) {
+        this.scimUserId = scimUserId;
         return this;
     }
     

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConsumersUpdateRequest {
-    
-    public ConsumersUpdatePathParams pathParams;
-    public ConsumersUpdateRequest withPathParams(ConsumersUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ConsumersUpdateHeaders headers;
-    public ConsumersUpdateRequest withHeaders(ConsumersUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateConsumerRequest request;
-    public ConsumersUpdateRequest withRequest(org.openapis.openapi.models.shared.UpdateConsumerRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateConsumerRequest updateConsumerRequest;
+    public ConsumersUpdateRequest withUpdateConsumerRequest(org.openapis.openapi.models.shared.UpdateConsumerRequest updateConsumerRequest) {
+        this.updateConsumerRequest = updateConsumerRequest;
         return this;
     }
     
+    /**
+     * ID of the consumer to return
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=consumer_id")
+    public String consumerId;
+    public ConsumersUpdateRequest withConsumerId(String consumerId) {
+        this.consumerId = consumerId;
+        return this;
+    }
     
-    public ConsumersUpdateSecurity security;
-    public ConsumersUpdateRequest withSecurity(ConsumersUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConsumersUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

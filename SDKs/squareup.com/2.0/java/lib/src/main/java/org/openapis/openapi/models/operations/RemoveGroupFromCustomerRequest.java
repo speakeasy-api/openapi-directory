@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveGroupFromCustomerRequest {
-    
-    public RemoveGroupFromCustomerPathParams pathParams;
-    public RemoveGroupFromCustomerRequest withPathParams(RemoveGroupFromCustomerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the customer to remove from the group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
+    public String customerId;
+    public RemoveGroupFromCustomerRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
         return this;
     }
     
-    
-    public RemoveGroupFromCustomerSecurity security;
-    public RemoveGroupFromCustomerRequest withSecurity(RemoveGroupFromCustomerSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the customer group to remove the customer from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public RemoveGroupFromCustomerRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

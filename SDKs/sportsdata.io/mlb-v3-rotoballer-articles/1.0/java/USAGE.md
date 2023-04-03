@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.RotoballerArticlesFormatEnum;
-import org.openapis.openapi.models.operations.RotoballerArticlesPathParams;
 import org.openapis.openapi.models.operations.RotoballerArticlesRequest;
 import org.openapis.openapi.models.operations.RotoballerArticlesResponse;
 
@@ -14,17 +13,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             RotoballerArticlesRequest req = new RotoballerArticlesRequest() {{
-                pathParams = new RotoballerArticlesPathParams() {{
-                    format = "json";
-                }};
-            }};            
+                format = "json";
+            }}            
 
             RotoballerArticlesResponse res = sdk.rotoballerArticles(req);
 

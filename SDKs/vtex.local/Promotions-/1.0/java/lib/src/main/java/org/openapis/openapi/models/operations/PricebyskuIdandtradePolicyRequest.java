@@ -4,34 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PricebyskuIdandtradePolicyRequest {
-    
-    public PricebyskuIdandtradePolicyPathParams pathParams;
-    public PricebyskuIdandtradePolicyRequest withPathParams(PricebyskuIdandtradePolicyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PricebyskuIdandtradePolicyRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PricebyskuIdandtradePolicyQueryParams queryParams;
-    public PricebyskuIdandtradePolicyRequest withQueryParams(PricebyskuIdandtradePolicyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PricebyskuIdandtradePolicyRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public PricebyskuIdandtradePolicyHeaders headers;
-    public PricebyskuIdandtradePolicyRequest withHeaders(PricebyskuIdandtradePolicyHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
+    public String an;
+    public PricebyskuIdandtradePolicyRequest withAn(String an) {
+        this.an = an;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
+    public String skuId;
+    public PricebyskuIdandtradePolicyRequest withSkuId(String skuId) {
+        this.skuId = skuId;
+        return this;
+    }
     
-    public String serverURL;
-    public PricebyskuIdandtradePolicyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tradePolicy")
+    public String tradePolicy;
+    public PricebyskuIdandtradePolicyRequest withTradePolicy(String tradePolicy) {
+        this.tradePolicy = tradePolicy;
         return this;
     }
     

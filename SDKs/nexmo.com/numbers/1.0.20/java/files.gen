@@ -29,18 +29,13 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/BuyANumberRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BuyANumberResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/CancelANumberRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CancelANumberResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAvailableNumbersFeaturesEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetAvailableNumbersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAvailableNumbersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAvailableNumbersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetOwnedNumbersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOwnedNumbersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOwnedNumbersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateANumberRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateANumberResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Unauthorized.java
 lib/src/main/java/org/openapis/openapi/models/shared/Response420.java
@@ -56,7 +51,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Ownednumber.java
 lib/src/main/java/org/openapis/openapi/models/shared/NumberDetailsUpdateMessagesCallbackTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NumberDetailsUpdateVoiceCallbackTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NumberDetailsUpdate.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPISecret.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

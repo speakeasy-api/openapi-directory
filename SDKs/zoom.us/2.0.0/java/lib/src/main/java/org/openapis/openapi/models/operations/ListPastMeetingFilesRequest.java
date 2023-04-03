@@ -4,20 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPastMeetingFilesRequest {
-    
-    public ListPastMeetingFilesPathParams pathParams;
-    public ListPastMeetingFilesRequest withPathParams(ListPastMeetingFilesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ListPastMeetingFilesSecurity security;
-    public ListPastMeetingFilesRequest withSecurity(ListPastMeetingFilesSecurity security) {
-        this.security = security;
+    /**
+     * The meeting ID in **long** format. The data type of this field is "long"(represented as int64 in JSON).
+     * 
+     * While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public Long meetingId;
+    public ListPastMeetingFilesRequest withMeetingId(Long meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Live {
      */
     public org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveResponse getDeviceCameraAnalyticsLive(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLivePathParams.class, baseUrl, "/devices/{serial}/camera/analytics/live", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCameraAnalyticsLiveRequest.class, baseUrl, "/devices/{serial}/camera/analytics/live", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AzureSubscriptionLinkForAppRequest {
-    
-    public AzureSubscriptionLinkForAppPathParams pathParams;
-    public AzureSubscriptionLinkForAppRequest withPathParams(AzureSubscriptionLinkForAppPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The azure subscription data needed to be link to the app.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AzureSubscriptionLinkForAppRequestBody request;
-    public AzureSubscriptionLinkForAppRequest withRequest(AzureSubscriptionLinkForAppRequestBody request) {
-        this.request = request;
+    public AzureSubscriptionLinkForAppRequestBody requestBody;
+    public AzureSubscriptionLinkForAppRequest withRequestBody(AzureSubscriptionLinkForAppRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AzureSubscriptionLinkForAppRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AzureSubscriptionLinkForAppSecurity security;
-    public AzureSubscriptionLinkForAppRequest withSecurity(AzureSubscriptionLinkForAppSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AzureSubscriptionLinkForAppRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

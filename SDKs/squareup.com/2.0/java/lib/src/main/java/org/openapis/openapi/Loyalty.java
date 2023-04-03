@@ -45,24 +45,25 @@ public class Loyalty {
      * __Note:__ The country of the seller's Square account determines whether tax is included in the purchase amount when accruing points for spend-based and visit-based programs. 
      * For more information, see [Availability of Square Loyalty](https://developer.squareup.com/docs/loyalty-api/overview#loyalty-market-availability).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccumulateLoyaltyPointsResponse accumulateLoyaltyPoints(org.openapis.openapi.models.operations.AccumulateLoyaltyPointsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccumulateLoyaltyPointsResponse accumulateLoyaltyPoints(org.openapis.openapi.models.operations.AccumulateLoyaltyPointsRequest request, org.openapis.openapi.models.operations.AccumulateLoyaltyPointsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccumulateLoyaltyPointsPathParams.class, baseUrl, "/v2/loyalty/accounts/{account_id}/accumulate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccumulateLoyaltyPointsRequest.class, baseUrl, "/v2/loyalty/accounts/{account_id}/accumulate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "accumulateLoyaltyPointsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -94,24 +95,25 @@ public class Loyalty {
      * [AccumulateLoyaltyPoints](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/accumulate-loyalty-points) 
      * to add points when a buyer pays for the purchase.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AdjustLoyaltyPointsResponse adjustLoyaltyPoints(org.openapis.openapi.models.operations.AdjustLoyaltyPointsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AdjustLoyaltyPointsResponse adjustLoyaltyPoints(org.openapis.openapi.models.operations.AdjustLoyaltyPointsRequest request, org.openapis.openapi.models.operations.AdjustLoyaltyPointsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdjustLoyaltyPointsPathParams.class, baseUrl, "/v2/loyalty/accounts/{account_id}/adjust", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AdjustLoyaltyPointsRequest.class, baseUrl, "/v2/loyalty/accounts/{account_id}/adjust", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "adjustLoyaltyPointsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -150,24 +152,25 @@ public class Loyalty {
      * __Note:__ The country of the seller's Square account determines whether tax is included in the purchase amount when accruing points for spend-based and visit-based programs. 
      * For more information, see [Availability of Square Loyalty](https://developer.squareup.com/docs/loyalty-api/overview#loyalty-market-availability).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CalculateLoyaltyPointsResponse calculateLoyaltyPoints(org.openapis.openapi.models.operations.CalculateLoyaltyPointsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CalculateLoyaltyPointsResponse calculateLoyaltyPoints(org.openapis.openapi.models.operations.CalculateLoyaltyPointsRequest request, org.openapis.openapi.models.operations.CalculateLoyaltyPointsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CalculateLoyaltyPointsPathParams.class, baseUrl, "/v2/loyalty/programs/{program_id}/calculate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CalculateLoyaltyPointsRequest.class, baseUrl, "/v2/loyalty/programs/{program_id}/calculate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "calculateLoyaltyPointsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -195,10 +198,11 @@ public class Loyalty {
      * CreateLoyaltyAccount
      * Creates a loyalty account. To create a loyalty account, you must provide the `program_id` and a `mapping` with the `phone_number` of the buyer.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateLoyaltyAccountResponse createLoyaltyAccount(org.openapis.openapi.models.operations.CreateLoyaltyAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateLoyaltyAccountResponse createLoyaltyAccount(org.openapis.openapi.models.shared.CreateLoyaltyAccountRequest request, org.openapis.openapi.models.operations.CreateLoyaltyAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/loyalty/accounts");
         
@@ -212,7 +216,7 @@ public class Loyalty {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -247,10 +251,11 @@ public class Loyalty {
      * After a reward is created, the points are locked and 
      * not available for the buyer to redeem another reward.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateLoyaltyRewardResponse createLoyaltyReward(org.openapis.openapi.models.operations.CreateLoyaltyRewardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateLoyaltyRewardResponse createLoyaltyReward(org.openapis.openapi.models.shared.CreateLoyaltyRewardRequest request, org.openapis.openapi.models.operations.CreateLoyaltyRewardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/loyalty/rewards");
         
@@ -264,7 +269,7 @@ public class Loyalty {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -300,19 +305,20 @@ public class Loyalty {
      * 
      * You cannot delete a reward that has reached the terminal state (REDEEMED).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteLoyaltyRewardResponse deleteLoyaltyReward(org.openapis.openapi.models.operations.DeleteLoyaltyRewardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteLoyaltyRewardResponse deleteLoyaltyReward(org.openapis.openapi.models.operations.DeleteLoyaltyRewardRequest request, org.openapis.openapi.models.operations.DeleteLoyaltyRewardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLoyaltyRewardPathParams.class, baseUrl, "/v2/loyalty/rewards/{reward_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLoyaltyRewardRequest.class, baseUrl, "/v2/loyalty/rewards/{reward_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -343,11 +349,10 @@ public class Loyalty {
      * 
      * 
      * Replaced with [RetrieveLoyaltyProgram](https://developer.squareup.com/reference/square_2021-08-18/loyalty-api/retrieve-loyalty-program) when used with the keyword `main`.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLoyaltyProgramsResponse listLoyaltyPrograms(org.openapis.openapi.models.operations.ListLoyaltyProgramsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListLoyaltyProgramsResponse listLoyaltyPrograms() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/loyalty/programs");
         
@@ -356,8 +361,7 @@ public class Loyalty {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -394,24 +398,25 @@ public class Loyalty {
      * In other words, points used for the reward cannot be returned 
      * to the account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RedeemLoyaltyRewardResponse redeemLoyaltyReward(org.openapis.openapi.models.operations.RedeemLoyaltyRewardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RedeemLoyaltyRewardResponse redeemLoyaltyReward(org.openapis.openapi.models.operations.RedeemLoyaltyRewardRequest request, org.openapis.openapi.models.operations.RedeemLoyaltyRewardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RedeemLoyaltyRewardPathParams.class, baseUrl, "/v2/loyalty/rewards/{reward_id}/redeem", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RedeemLoyaltyRewardRequest.class, baseUrl, "/v2/loyalty/rewards/{reward_id}/redeem", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "redeemLoyaltyRewardRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -439,19 +444,20 @@ public class Loyalty {
      * RetrieveLoyaltyAccount
      * Retrieves a loyalty account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveLoyaltyAccountResponse retrieveLoyaltyAccount(org.openapis.openapi.models.operations.RetrieveLoyaltyAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveLoyaltyAccountResponse retrieveLoyaltyAccount(org.openapis.openapi.models.operations.RetrieveLoyaltyAccountRequest request, org.openapis.openapi.models.operations.RetrieveLoyaltyAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveLoyaltyAccountPathParams.class, baseUrl, "/v2/loyalty/accounts/{account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveLoyaltyAccountRequest.class, baseUrl, "/v2/loyalty/accounts/{account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -481,19 +487,20 @@ public class Loyalty {
      * 
      * Loyalty programs define how buyers can earn points and redeem points for rewards. Square sellers can have only one loyalty program, which is created and managed from the Seller Dashboard. For more information, see [Loyalty Program Overview](https://developer.squareup.com/docs/loyalty/overview).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveLoyaltyProgramResponse retrieveLoyaltyProgram(org.openapis.openapi.models.operations.RetrieveLoyaltyProgramRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveLoyaltyProgramResponse retrieveLoyaltyProgram(org.openapis.openapi.models.operations.RetrieveLoyaltyProgramRequest request, org.openapis.openapi.models.operations.RetrieveLoyaltyProgramSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveLoyaltyProgramPathParams.class, baseUrl, "/v2/loyalty/programs/{program_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveLoyaltyProgramRequest.class, baseUrl, "/v2/loyalty/programs/{program_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -521,19 +528,20 @@ public class Loyalty {
      * RetrieveLoyaltyReward
      * Retrieves a loyalty reward.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetrieveLoyaltyRewardResponse retrieveLoyaltyReward(org.openapis.openapi.models.operations.RetrieveLoyaltyRewardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RetrieveLoyaltyRewardResponse retrieveLoyaltyReward(org.openapis.openapi.models.operations.RetrieveLoyaltyRewardRequest request, org.openapis.openapi.models.operations.RetrieveLoyaltyRewardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveLoyaltyRewardPathParams.class, baseUrl, "/v2/loyalty/rewards/{reward_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetrieveLoyaltyRewardRequest.class, baseUrl, "/v2/loyalty/rewards/{reward_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -565,10 +573,11 @@ public class Loyalty {
      * 
      * Search results are sorted by `created_at` in ascending order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchLoyaltyAccountsResponse searchLoyaltyAccounts(org.openapis.openapi.models.operations.SearchLoyaltyAccountsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchLoyaltyAccountsResponse searchLoyaltyAccounts(org.openapis.openapi.models.shared.SearchLoyaltyAccountsRequest request, org.openapis.openapi.models.operations.SearchLoyaltyAccountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/loyalty/accounts/search");
         
@@ -582,7 +591,7 @@ public class Loyalty {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -617,10 +626,11 @@ public class Loyalty {
      * 
      * Search results are sorted by `created_at` in descending order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchLoyaltyEventsResponse searchLoyaltyEvents(org.openapis.openapi.models.operations.SearchLoyaltyEventsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchLoyaltyEventsResponse searchLoyaltyEvents(org.openapis.openapi.models.shared.SearchLoyaltyEventsRequest request, org.openapis.openapi.models.operations.SearchLoyaltyEventsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/loyalty/events/search");
         
@@ -634,7 +644,7 @@ public class Loyalty {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -669,10 +679,11 @@ public class Loyalty {
      * 
      * Search results are sorted by `updated_at` in descending order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchLoyaltyRewardsResponse searchLoyaltyRewards(org.openapis.openapi.models.operations.SearchLoyaltyRewardsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchLoyaltyRewardsResponse searchLoyaltyRewards(org.openapis.openapi.models.shared.SearchLoyaltyRewardsRequest request, org.openapis.openapi.models.operations.SearchLoyaltyRewardsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/loyalty/rewards/search");
         
@@ -686,7 +697,7 @@ public class Loyalty {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

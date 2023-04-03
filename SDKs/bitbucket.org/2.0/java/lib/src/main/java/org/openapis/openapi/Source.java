@@ -87,25 +87,26 @@ public class Source {
      * In the response you can see that the file was renamed to `README.rst`
      * by the commit made on 2011-05-16, and was previously named `README.txt`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathResponse getRepositoriesWorkspaceRepoSlugFilehistoryCommitPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/filehistory/{commit}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -148,25 +149,26 @@ public class Source {
      * 
      * To create new commits, [POST to this endpoint](#post)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcResponse getRepositoriesWorkspaceRepoSlugSrc(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcResponse getRepositoriesWorkspaceRepoSlugSrc(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -404,25 +406,26 @@ public class Source {
      * See [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering) for more
      * details.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse getRepositoriesWorkspaceRepoSlugSrcCommitPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse getRepositoriesWorkspaceRepoSlugSrcCommitPath(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest request, org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src/{commit}/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugSrcCommitPathRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -578,25 +581,26 @@ public class Source {
      * Note that this API does not support the creation or manipulation of
      * subrepos / submodules.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcResponse postRepositoriesWorkspaceRepoSlugSrc(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcResponse postRepositoriesWorkspaceRepoSlugSrc(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcRequest request, org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcPathParams.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcRequest.class, baseUrl, "/repositories/{workspace}/{repo_slug}/src", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugSrcRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

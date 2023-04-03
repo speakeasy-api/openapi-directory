@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSnippetsWorkspaceEncodedIdRequest {
-    
-    public DeleteSnippetsWorkspaceEncodedIdPathParams pathParams;
-    public DeleteSnippetsWorkspaceEncodedIdRequest withPathParams(DeleteSnippetsWorkspaceEncodedIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The snippet id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
+    public String encodedId;
+    public DeleteSnippetsWorkspaceEncodedIdRequest withEncodedId(String encodedId) {
+        this.encodedId = encodedId;
         return this;
     }
     
-    
-    public DeleteSnippetsWorkspaceEncodedIdSecurity security;
-    public DeleteSnippetsWorkspaceEncodedIdRequest withSecurity(DeleteSnippetsWorkspaceEncodedIdSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteSnippetsWorkspaceEncodedIdRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

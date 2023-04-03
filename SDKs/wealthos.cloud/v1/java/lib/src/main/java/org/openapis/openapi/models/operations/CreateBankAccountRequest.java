@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBankAccountRequest {
-    
-    public CreateBankAccountHeaders headers;
-    public CreateBankAccountRequest withHeaders(CreateBankAccountHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateBankAccountRequestBodyInput request;
-    public CreateBankAccountRequest withRequest(CreateBankAccountRequestBodyInput request) {
-        this.request = request;
+    public CreateBankAccountRequestBodyInput requestBody;
+    public CreateBankAccountRequest withRequestBody(CreateBankAccountRequestBodyInput requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateBankAccountSecurity security;
-    public CreateBankAccountRequest withSecurity(CreateBankAccountSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public CreateBankAccountRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

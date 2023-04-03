@@ -30,10 +30,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/ChromeuxreportRecordsQueryHistoryRecordQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromeuxreportRecordsQueryHistoryRecordRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromeuxreportRecordsQueryHistoryRecordResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ChromeuxreportRecordsQueryRecordQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromeuxreportRecordsQueryRecordRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ChromeuxreportRecordsQueryRecordResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryHistoryResponse.java
@@ -46,9 +44,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/HistoryKeyFormFactorEnum.ja
 lib/src/main/java/org/openapis/openapi/models/shared/HistoryKey.java
 lib/src/main/java/org/openapis/openapi/models/shared/CollectionPeriod.java
 lib/src/main/java/org/openapis/openapi/models/shared/Date.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryHistoryRequestFormFactorEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryHistoryRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/QueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Record.java

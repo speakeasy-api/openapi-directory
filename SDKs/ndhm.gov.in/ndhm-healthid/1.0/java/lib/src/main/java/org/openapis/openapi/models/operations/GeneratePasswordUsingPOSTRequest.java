@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GeneratePasswordUsingPOSTRequest {
-    
-    public GeneratePasswordUsingPOSTHeaders headers;
-    public GeneratePasswordUsingPOSTRequest withHeaders(GeneratePasswordUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public GeneratePasswordUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class GeneratePasswordUsingPOSTRequest {
      * healthFacilityPasswordRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HealthFacilityPasswordRequest request;
-    public GeneratePasswordUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HealthFacilityPasswordRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public GeneratePasswordUsingPOSTSecurity security;
-    public GeneratePasswordUsingPOSTRequest withSecurity(GeneratePasswordUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.HealthFacilityPasswordRequest healthFacilityPasswordRequest;
+    public GeneratePasswordUsingPOSTRequest withHealthFacilityPasswordRequest(org.openapis.openapi.models.shared.HealthFacilityPasswordRequest healthFacilityPasswordRequest) {
+        this.healthFacilityPasswordRequest = healthFacilityPasswordRequest;
         return this;
     }
     

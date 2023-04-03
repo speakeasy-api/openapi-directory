@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPsd2RegistrationsIdPsd2RegistrationRequest {
-    
-    public GetPsd2RegistrationsIdPsd2RegistrationPathParams pathParams;
-    public GetPsd2RegistrationsIdPsd2RegistrationRequest withPathParams(GetPsd2RegistrationsIdPsd2RegistrationPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetPsd2RegistrationsIdPsd2RegistrationRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
-    
-    public GetPsd2RegistrationsIdPsd2RegistrationQueryParams queryParams;
-    public GetPsd2RegistrationsIdPsd2RegistrationRequest withQueryParams(GetPsd2RegistrationsIdPsd2RegistrationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_psd2-registration")
+    public Long idPsd2Registration;
+    public GetPsd2RegistrationsIdPsd2RegistrationRequest withIdPsd2Registration(Long idPsd2Registration) {
+        this.idPsd2Registration = idPsd2Registration;
         return this;
     }
     

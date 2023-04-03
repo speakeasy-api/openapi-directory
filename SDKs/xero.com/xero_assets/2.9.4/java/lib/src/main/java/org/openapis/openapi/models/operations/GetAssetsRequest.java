@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetsRequest {
-    
-    public GetAssetsQueryParams queryParams;
-    public GetAssetsRequest withQueryParams(GetAssetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A string that can be used to filter the list to only return assets containing the text. Checks it against the AssetName, AssetNumber, Description and AssetTypeName fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterBy")
+    public String filterBy;
+    public GetAssetsRequest withFilterBy(String filterBy) {
+        this.filterBy = filterBy;
         return this;
     }
     
-    
-    public GetAssetsHeaders headers;
-    public GetAssetsRequest withHeaders(GetAssetsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Requests can be ordered by AssetType, AssetName, AssetNumber, PurchaseDate and PurchasePrice. If the asset status is DISPOSED it also allows DisposalDate and DisposalPrice.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public GetAssetsOrderByEnum orderBy;
+    public GetAssetsRequest withOrderBy(GetAssetsOrderByEnum orderBy) {
+        this.orderBy = orderBy;
         return this;
     }
     
+    /**
+     * Results are paged. This specifies which page of the results to return. The default page is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetAssetsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetAssetsSecurity security;
-    public GetAssetsRequest withSecurity(GetAssetsSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned per page. By default the number of records returned is 10.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GetAssetsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * ASC or DESC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
+    public GetAssetsSortDirectionEnum sortDirection;
+    public GetAssetsRequest withSortDirection(GetAssetsSortDirectionEnum sortDirection) {
+        this.sortDirection = sortDirection;
+        return this;
+    }
+    
+    /**
+     * Required when retrieving a collection of assets. See Asset Status Codes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public org.openapis.openapi.models.shared.AssetStatusQueryParamEnum status;
+    public GetAssetsRequest withStatus(org.openapis.openapi.models.shared.AssetStatusQueryParamEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public GetAssetsRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Annotates a previously created Assessment to provide additional information on whether the event turned out to be authentic or fraudulent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse recaptchaenterpriseProjectsAssessmentsAnnotate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateResponse recaptchaenterpriseProjectsAssessmentsAnnotate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotatePathParams.class, baseUrl, "/v1/{name}:annotate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest.class, baseUrl, "/v1/{name}:annotate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsAnnotateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates an Assessment of the likelihood an event is legitimate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse recaptchaenterpriseProjectsAssessmentsCreate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateResponse recaptchaenterpriseProjectsAssessmentsCreate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreatePathParams.class, baseUrl, "/v1/{parent}/assessments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateRequest.class, baseUrl, "/v1/{parent}/assessments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecaptchaenterpriseV1AssessmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsAssessmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,27 +131,28 @@ public class Projects {
     /**
      * Creates a new FirewallPolicy, specifying conditions at which reCAPTCHA Enterprise actions can be executed. A project may have a maximum of 1000 policies.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse recaptchaenterpriseProjectsFirewallpoliciesCreate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateResponse recaptchaenterpriseProjectsFirewallpoliciesCreate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreatePathParams.class, baseUrl, "/v1/{parent}/firewallpolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateRequest.class, baseUrl, "/v1/{parent}/firewallpolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecaptchaenterpriseV1FirewallPolicy", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -176,25 +179,26 @@ public class Projects {
     /**
      * Returns the list of all firewall policies that belong to a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse recaptchaenterpriseProjectsFirewallpoliciesList(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListResponse recaptchaenterpriseProjectsFirewallpoliciesList(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListPathParams.class, baseUrl, "/v1/{parent}/firewallpolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListRequest.class, baseUrl, "/v1/{parent}/firewallpolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsFirewallpoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,27 +225,28 @@ public class Projects {
     /**
      * Creates a new reCAPTCHA Enterprise key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateResponse recaptchaenterpriseProjectsKeysCreate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateResponse recaptchaenterpriseProjectsKeysCreate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreatePathParams.class, baseUrl, "/v1/{parent}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateRequest.class, baseUrl, "/v1/{parent}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecaptchaenterpriseV1KeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -268,25 +273,26 @@ public class Projects {
     /**
      * Deletes the specified key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteResponse recaptchaenterpriseProjectsKeysDelete(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteResponse recaptchaenterpriseProjectsKeysDelete(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,25 +319,26 @@ public class Projects {
     /**
      * Get some aggregated metrics for a Key. This data can be used to build dashboards.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse recaptchaenterpriseProjectsKeysGetMetrics(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsResponse recaptchaenterpriseProjectsKeysGetMetrics(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysGetMetricsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Returns the list of all keys that belong to a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListResponse recaptchaenterpriseProjectsKeysList(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListResponse recaptchaenterpriseProjectsKeysList(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListPathParams.class, baseUrl, "/v1/{parent}/keys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListRequest.class, baseUrl, "/v1/{parent}/keys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Migrates an existing key from reCAPTCHA to reCAPTCHA Enterprise. Once a key is migrated, it can be used from either product. SiteVerify requests are billed as CreateAssessment calls. You must be authenticated as one of the current owners of the reCAPTCHA Site Key, and your user must have the reCAPTCHA Enterprise Admin IAM role in the destination project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateResponse recaptchaenterpriseProjectsKeysMigrate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateResponse recaptchaenterpriseProjectsKeysMigrate(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigratePathParams.class, baseUrl, "/v1/{name}:migrate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateRequest.class, baseUrl, "/v1/{name}:migrate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecaptchaenterpriseV1MigrateKeyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysMigrateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,27 +459,28 @@ public class Projects {
     /**
      * Updates the specified key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchResponse recaptchaenterpriseProjectsKeysPatch(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchResponse recaptchaenterpriseProjectsKeysPatch(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecaptchaenterpriseV1KeyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +507,26 @@ public class Projects {
     /**
      * Returns the secret key related to the specified public key. You must use the legacy secret key only in a 3rd party integration with legacy reCAPTCHA.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse recaptchaenterpriseProjectsKeysRetrieveLegacySecretKey(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyResponse recaptchaenterpriseProjectsKeysRetrieveLegacySecretKey(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyPathParams.class, baseUrl, "/v1/{key}:retrieveLegacySecretKey", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest.class, baseUrl, "/v1/{key}:retrieveLegacySecretKey", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsKeysRetrieveLegacySecretKeyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,27 +553,28 @@ public class Projects {
     /**
      * Search group memberships related to a given account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse recaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearch(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchResponse recaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearch(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchPathParams.class, baseUrl, "/v1/{project}/relatedaccountgroupmemberships:search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchRequest.class, baseUrl, "/v1/{project}/relatedaccountgroupmemberships:search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRecaptchaenterpriseV1SearchRelatedAccountGroupMembershipsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupmembershipsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,25 +601,26 @@ public class Projects {
     /**
      * List groups of related accounts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse recaptchaenterpriseProjectsRelatedaccountgroupsList(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListResponse recaptchaenterpriseProjectsRelatedaccountgroupsList(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListPathParams.class, baseUrl, "/v1/{parent}/relatedaccountgroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListRequest.class, baseUrl, "/v1/{parent}/relatedaccountgroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,25 +647,26 @@ public class Projects {
     /**
      * Get memberships in a group of related accounts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse recaptchaenterpriseProjectsRelatedaccountgroupsMembershipsList(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListResponse recaptchaenterpriseProjectsRelatedaccountgroupsMembershipsList(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRequest request, org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListPathParams.class, baseUrl, "/v1/{parent}/memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRequest.class, baseUrl, "/v1/{parent}/memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RecaptchaenterpriseProjectsRelatedaccountgroupsMembershipsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

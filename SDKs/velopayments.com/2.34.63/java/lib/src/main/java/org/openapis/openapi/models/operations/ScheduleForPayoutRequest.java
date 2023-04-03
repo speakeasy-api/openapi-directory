@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScheduleForPayoutRequest {
-    
-    public ScheduleForPayoutPathParams pathParams;
-    public ScheduleForPayoutRequest withPathParams(ScheduleForPayoutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * schedule payout parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SchedulePayoutRequestV3 request;
-    public ScheduleForPayoutRequest withRequest(org.openapis.openapi.models.shared.SchedulePayoutRequestV3 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SchedulePayoutRequestV3 schedulePayoutRequestV3;
+    public ScheduleForPayoutRequest withSchedulePayoutRequestV3(org.openapis.openapi.models.shared.SchedulePayoutRequestV3 schedulePayoutRequestV3) {
+        this.schedulePayoutRequestV3 = schedulePayoutRequestV3;
+        return this;
+    }
+    
+    /**
+     * Id of the payout
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payoutId")
+    public String payoutId;
+    public ScheduleForPayoutRequest withPayoutId(String payoutId) {
+        this.payoutId = payoutId;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Relationships {
      */
     public org.openapis.openapi.models.operations.GetDeviceSensorRelationshipsResponse getDeviceSensorRelationships(org.openapis.openapi.models.operations.GetDeviceSensorRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSensorRelationshipsPathParams.class, baseUrl, "/devices/{serial}/sensor/relationships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceSensorRelationshipsRequest.class, baseUrl, "/devices/{serial}/sensor/relationships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class Relationships {
      */
     public org.openapis.openapi.models.operations.GetNetworkSensorRelationshipsResponse getNetworkSensorRelationships(org.openapis.openapi.models.operations.GetNetworkSensorRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorRelationshipsPathParams.class, baseUrl, "/networks/{networkId}/sensor/relationships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSensorRelationshipsRequest.class, baseUrl, "/networks/{networkId}/sensor/relationships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -119,12 +119,12 @@ public class Relationships {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceSensorRelationshipsResponse updateDeviceSensorRelationships(org.openapis.openapi.models.operations.UpdateDeviceSensorRelationshipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSensorRelationshipsPathParams.class, baseUrl, "/devices/{serial}/sensor/relationships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceSensorRelationshipsRequest.class, baseUrl, "/devices/{serial}/sensor/relationships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

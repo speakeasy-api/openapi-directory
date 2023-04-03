@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsAccountOrdersCustomerOrderIdRequest {
+    /**
+     * Customer Order ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CustomerOrderId")
+    public String customerOrderId;
+    public GetAccountsAccountOrdersCustomerOrderIdRequest withCustomerOrderId(String customerOrderId) {
+        this.customerOrderId = customerOrderId;
+        return this;
+    }
     
-    public GetAccountsAccountOrdersCustomerOrderIdPathParams pathParams;
-    public GetAccountsAccountOrdersCustomerOrderIdRequest withPathParams(GetAccountsAccountOrdersCustomerOrderIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public String account;
+    public GetAccountsAccountOrdersCustomerOrderIdRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

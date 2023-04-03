@@ -38,21 +38,22 @@ public class V1Company {
      * Retrieves a list of companies from the KYC API company index
      * KYC API company index lookup by country and mixed parameters. This function requires a country code then a mixture of name
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse companyAlternativeSearch(org.openapis.openapi.models.operations.CompanyAlternativeSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse companyAlternativeSearch(org.openapis.openapi.models.operations.CompanyAlternativeSearchRequest request, org.openapis.openapi.models.operations.CompanyAlternativeSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyAlternativeSearchPathParams.class, baseUrl, "/api/v1/company/search/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyAlternativeSearchRequest.class, baseUrl, "/api/v1/company/search/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -88,19 +89,20 @@ public class V1Company {
      * Retrieves announcement data
      * Request full announcement data identified by announcement id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyAnnouncementResponse companyAnnouncement(org.openapis.openapi.models.operations.CompanyAnnouncementRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyAnnouncementResponse companyAnnouncement(org.openapis.openapi.models.operations.CompanyAnnouncementRequest request, org.openapis.openapi.models.operations.CompanyAnnouncementSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyAnnouncementPathParams.class, baseUrl, "/api/v1/company/announcement/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyAnnouncementRequest.class, baseUrl, "/api/v1/company/announcement/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -136,10 +138,11 @@ public class V1Company {
      * Retrieves a list of stock exchange listings
      * Lookup stock exchange listings identified by an ISIN (International Securities Identification Number) number. Search is forwarded to a provider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyDeepsearchISINResponse companyDeepsearchISIN(org.openapis.openapi.models.operations.CompanyDeepsearchISINRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyDeepsearchISINResponse companyDeepsearchISIN(org.openapis.openapi.models.operations.CompanyDeepsearchISINRequestBody request, org.openapis.openapi.models.operations.CompanyDeepsearchISINSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/company/deepsearch/isin");
         
@@ -150,7 +153,7 @@ public class V1Company {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -186,25 +189,26 @@ public class V1Company {
      * Retrieves a list of companies
      * Lookup companies identified by a LEI (Legal Entity Identifier) number. Search is forwarded to a provider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyDeepsearchLEIResponse companyDeepsearchLEI(org.openapis.openapi.models.operations.CompanyDeepsearchLEIRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyDeepsearchLEIResponse companyDeepsearchLEI(org.openapis.openapi.models.operations.CompanyDeepsearchLEIRequest request, org.openapis.openapi.models.operations.CompanyDeepsearchLEISecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyDeepsearchLEIPathParams.class, baseUrl, "/api/v1/company/deepsearch/lei/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyDeepsearchLEIRequest.class, baseUrl, "/api/v1/company/deepsearch/lei/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyDeepsearchLEIQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyDeepsearchLEIRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -240,19 +244,20 @@ public class V1Company {
      * Retrieves a list of companies from the official business register
      * Search for companies with a certain name. Search is forwarded to the respective business register of the country.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyDeepsearchNameResponse companyDeepsearchName(org.openapis.openapi.models.operations.CompanyDeepsearchNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyDeepsearchNameResponse companyDeepsearchName(org.openapis.openapi.models.operations.CompanyDeepsearchNameRequest request, org.openapis.openapi.models.operations.CompanyDeepsearchNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyDeepsearchNamePathParams.class, baseUrl, "/api/v1/company/deepsearch/name/{country}/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyDeepsearchNameRequest.class, baseUrl, "/api/v1/company/deepsearch/name/{country}/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -288,19 +293,20 @@ public class V1Company {
      * Retrieves a list of companies from the official business register
      * Search for companies with a certain register number. Search is forwarded to the respective business register of the country.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyDeepsearchNumberResponse companyDeepsearchNumber(org.openapis.openapi.models.operations.CompanyDeepsearchNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyDeepsearchNumberResponse companyDeepsearchNumber(org.openapis.openapi.models.operations.CompanyDeepsearchNumberRequest request, org.openapis.openapi.models.operations.CompanyDeepsearchNumberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyDeepsearchNumberPathParams.class, baseUrl, "/api/v1/company/deepsearch/number/{country}/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyDeepsearchNumberRequest.class, baseUrl, "/api/v1/company/deepsearch/number/{country}/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -336,25 +342,26 @@ public class V1Company {
      * Retrieves company announcements
      * Search announcements filed to the business register from a company identified by an id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyIdAnnouncementsResponse companyIdAnnouncements(org.openapis.openapi.models.operations.CompanyIdAnnouncementsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyIdAnnouncementsResponse companyIdAnnouncements(org.openapis.openapi.models.operations.CompanyIdAnnouncementsRequest request, org.openapis.openapi.models.operations.CompanyIdAnnouncementsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyIdAnnouncementsPathParams.class, baseUrl, "/api/v1/company/{id}/announcements", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyIdAnnouncementsRequest.class, baseUrl, "/api/v1/company/{id}/announcements", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyIdAnnouncementsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyIdAnnouncementsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -390,25 +397,26 @@ public class V1Company {
      * Retrieves company details
      * Get company details by id. The level of details is defined by the dataset parameter
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyIdDatasetResponse companyIdDataset(org.openapis.openapi.models.operations.CompanyIdDatasetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyIdDatasetResponse companyIdDataset(org.openapis.openapi.models.operations.CompanyIdDatasetRequest request, org.openapis.openapi.models.operations.CompanyIdDatasetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyIdDatasetPathParams.class, baseUrl, "/api/v1/company/{id}/{dataset}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyIdDatasetRequest.class, baseUrl, "/api/v1/company/{id}/{dataset}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyIdDatasetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyIdDatasetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -444,25 +452,26 @@ public class V1Company {
      * Retrieves structured data extracted from a company document
      * Request company superdata identified by company id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyIdSuperResponse companyIdSuper(org.openapis.openapi.models.operations.CompanyIdSuperRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyIdSuperResponse companyIdSuper(org.openapis.openapi.models.operations.CompanyIdSuperRequest request, org.openapis.openapi.models.operations.CompanyIdSuperSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyIdSuperPathParams.class, baseUrl, "/api/v1/company/{id}/super/{country}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyIdSuperRequest.class, baseUrl, "/api/v1/company/{id}/super/{country}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyIdSuperQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanyIdSuperRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,11 +506,10 @@ public class V1Company {
     /**
      * Get available ChangeTypes
      * Get current list of available ChangeTypes to subscribe to
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListResponse companyMonitorChangeTypesList(org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListResponse companyMonitorChangeTypesList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/company/monitoring/changeTypes");
         
@@ -510,8 +518,7 @@ public class V1Company {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -546,19 +553,20 @@ public class V1Company {
      * Get monitor status for specific company id
      * Query status of registered monitors for a specific company identified by a company id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyMonitorIdResponse companyMonitorId(org.openapis.openapi.models.operations.CompanyMonitorIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyMonitorIdResponse companyMonitorId(org.openapis.openapi.models.operations.CompanyMonitorIdRequest request, org.openapis.openapi.models.operations.CompanyMonitorIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyMonitorIdPathParams.class, baseUrl, "/api/v1/company/monitoring/list/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyMonitorIdRequest.class, baseUrl, "/api/v1/company/monitoring/list/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -593,11 +601,10 @@ public class V1Company {
     /**
      * Retrieves a list of registered monitors
      * Query list of all registered monitors for logged in user
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyMonitorListResponse companyMonitorList(org.openapis.openapi.models.operations.CompanyMonitorListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyMonitorListResponse companyMonitorList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/company/monitoring/list");
         
@@ -606,8 +613,7 @@ public class V1Company {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -642,21 +648,22 @@ public class V1Company {
      * Register a Company for monitoring
      * Add a company to your perpetual monitoring list and register a callback URL to get monitoring alerts.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyMonitorRegisterResponse companyMonitorRegister(org.openapis.openapi.models.operations.CompanyMonitorRegisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyMonitorRegisterResponse companyMonitorRegister(org.openapis.openapi.models.operations.CompanyMonitorRegisterRequest request, org.openapis.openapi.models.operations.CompanyMonitorRegisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyMonitorRegisterPathParams.class, baseUrl, "/api/v1/company/monitoring/register/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyMonitorRegisterRequest.class, baseUrl, "/api/v1/company/monitoring/register/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -692,19 +699,20 @@ public class V1Company {
      * Deactivates an active notification
      * Deactivate a previously registered company monitor identified by the notifier id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyMonitorUnregisterResponse companyMonitorUnregister(org.openapis.openapi.models.operations.CompanyMonitorUnregisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyMonitorUnregisterResponse companyMonitorUnregister(org.openapis.openapi.models.operations.CompanyMonitorUnregisterRequest request, org.openapis.openapi.models.operations.CompanyMonitorUnregisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyMonitorUnregisterPathParams.class, baseUrl, "/api/v1/company/monitoring/unregister/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyMonitorUnregisterRequest.class, baseUrl, "/api/v1/company/monitoring/unregister/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -734,19 +742,20 @@ public class V1Company {
      * Retrieves a list of registered notifications
      * Query list of registered notifications for a specific company identified by a company id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyNotificationIdResponse companyNotificationId(org.openapis.openapi.models.operations.CompanyNotificationIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyNotificationIdResponse companyNotificationId(org.openapis.openapi.models.operations.CompanyNotificationIdRequest request, org.openapis.openapi.models.operations.CompanyNotificationIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyNotificationIdPathParams.class, baseUrl, "/api/v1/company/notification/list/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyNotificationIdRequest.class, baseUrl, "/api/v1/company/notification/list/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -781,11 +790,10 @@ public class V1Company {
     /**
      * Retrieves a list of registered notifications
      * Query list of registered callback URLs for logged in user
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyNotificationListResponse companyNotificationList(org.openapis.openapi.models.operations.CompanyNotificationListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyNotificationListResponse companyNotificationList() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/company/notification/list");
         
@@ -794,8 +802,7 @@ public class V1Company {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -830,21 +837,22 @@ public class V1Company {
      * Creates a new notification
      * Register a new callback URL to get notifications about companies.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyNotificationRegisterResponse companyNotificationRegister(org.openapis.openapi.models.operations.CompanyNotificationRegisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyNotificationRegisterResponse companyNotificationRegister(org.openapis.openapi.models.operations.CompanyNotificationRegisterRequest request, org.openapis.openapi.models.operations.CompanyNotificationRegisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyNotificationRegisterPathParams.class, baseUrl, "/api/v1/company/notification/register/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyNotificationRegisterRequest.class, baseUrl, "/api/v1/company/notification/register/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -880,19 +888,20 @@ public class V1Company {
      * Unregister a company from Monitoring
      * Deactivate a previously registered company monitor identified by the notifier id
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyNotificationUnregisterResponse companyNotificationUnregister(org.openapis.openapi.models.operations.CompanyNotificationUnregisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanyNotificationUnregisterResponse companyNotificationUnregister(org.openapis.openapi.models.operations.CompanyNotificationUnregisterRequest request, org.openapis.openapi.models.operations.CompanyNotificationUnregisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyNotificationUnregisterPathParams.class, baseUrl, "/api/v1/company/notification/unregister/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanyNotificationUnregisterRequest.class, baseUrl, "/api/v1/company/notification/unregister/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -922,25 +931,26 @@ public class V1Company {
      * Retrieves a list of companies from the KYC API company index
      * KYC API company index lookup for companies with a certain name in a country.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanySearchNameResponse companySearchName(org.openapis.openapi.models.operations.CompanySearchNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanySearchNameResponse companySearchName(org.openapis.openapi.models.operations.CompanySearchNameRequest request, org.openapis.openapi.models.operations.CompanySearchNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanySearchNamePathParams.class, baseUrl, "/api/v1/company/search/name/{country}/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanySearchNameRequest.class, baseUrl, "/api/v1/company/search/name/{country}/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanySearchNameQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanySearchNameRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -976,25 +986,26 @@ public class V1Company {
      * Retrieves a list of companies from the KYC API company index
      * KYC API company index lookup for companies with a certain register number in a country.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanySearchNumberResponse companySearchNumber(org.openapis.openapi.models.operations.CompanySearchNumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CompanySearchNumberResponse companySearchNumber(org.openapis.openapi.models.operations.CompanySearchNumberRequest request, org.openapis.openapi.models.operations.CompanySearchNumberSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanySearchNumberPathParams.class, baseUrl, "/api/v1/company/search/number/{country}/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CompanySearchNumberRequest.class, baseUrl, "/api/v1/company/search/number/{country}/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanySearchNumberQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CompanySearchNumberRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

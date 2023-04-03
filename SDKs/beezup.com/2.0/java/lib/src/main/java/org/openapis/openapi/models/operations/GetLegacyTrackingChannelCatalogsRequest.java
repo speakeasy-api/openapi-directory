@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLegacyTrackingChannelCatalogsRequest {
-    
-    public GetLegacyTrackingChannelCatalogsQueryParams queryParams;
-    public GetLegacyTrackingChannelCatalogsRequest withQueryParams(GetLegacyTrackingChannelCatalogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The store identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
+    public String storeId;
+    public GetLegacyTrackingChannelCatalogsRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

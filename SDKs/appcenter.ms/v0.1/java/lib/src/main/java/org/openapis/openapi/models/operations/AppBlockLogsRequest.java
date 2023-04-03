@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppBlockLogsRequest {
-    
-    public AppBlockLogsPathParams pathParams;
-    public AppBlockLogsRequest withPathParams(AppBlockLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppBlockLogsRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public AppBlockLogsSecurity security;
-    public AppBlockLogsRequest withSecurity(AppBlockLogsSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppBlockLogsRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

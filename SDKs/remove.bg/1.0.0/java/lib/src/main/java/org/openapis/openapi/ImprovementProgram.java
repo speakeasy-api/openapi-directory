@@ -33,7 +33,7 @@ public class ImprovementProgram {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostImproveFormResponse postImproveForm(org.openapis.openapi.models.operations.PostImproveFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostImproveFormResponse postImproveForm(org.openapis.openapi.models.shared.ImprovementProgramJson request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/improve");
         
@@ -76,7 +76,7 @@ public class ImprovementProgram {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostImproveJsonResponse postImproveJson(org.openapis.openapi.models.operations.PostImproveJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostImproveJsonResponse postImproveJson(org.openapis.openapi.models.shared.ImprovementProgramJson request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/improve");
         
@@ -119,7 +119,7 @@ public class ImprovementProgram {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostImproveMultipartResponse postImproveMultipart(org.openapis.openapi.models.operations.PostImproveMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostImproveMultipartResponse postImproveMultipart(org.openapis.openapi.models.shared.ImprovementProgramMultipart request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/improve");
         

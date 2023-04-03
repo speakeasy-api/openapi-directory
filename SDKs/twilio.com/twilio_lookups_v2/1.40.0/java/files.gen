@@ -30,11 +30,8 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/FetchPhoneNumberSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FetchPhoneNumberPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FetchPhoneNumberQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FetchPhoneNumberRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FetchPhoneNumberResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/LookupsV2PhoneNumber.java
 lib/src/main/java/org/openapis/openapi/models/shared/PhoneNumberEnumValidationErrorEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAccountSidAuthToken.java
 USAGE.md

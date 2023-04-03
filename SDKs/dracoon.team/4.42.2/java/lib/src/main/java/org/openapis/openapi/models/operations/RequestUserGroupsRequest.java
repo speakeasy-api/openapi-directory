@@ -4,27 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUserGroupsRequest {
-    
-    public RequestUserGroupsPathParams pathParams;
-    public RequestUserGroupsRequest withPathParams(RequestUserGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUserGroupsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestUserGroupsQueryParams queryParams;
-    public RequestUserGroupsRequest withQueryParams(RequestUserGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestUserGroupsRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestUserGroupsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RequestUserGroupsHeaders headers;
-    public RequestUserGroupsRequest withHeaders(RequestUserGroupsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestUserGroupsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public RequestUserGroupsRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

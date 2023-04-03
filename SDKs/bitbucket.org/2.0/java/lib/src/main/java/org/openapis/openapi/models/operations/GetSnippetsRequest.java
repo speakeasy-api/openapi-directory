@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSnippetsRequest {
-    
-    public GetSnippetsQueryParams queryParams;
-    public GetSnippetsRequest withQueryParams(GetSnippetsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetSnippetsSecurity security;
-    public GetSnippetsRequest withSecurity(GetSnippetsSecurity security) {
-        this.security = security;
+    /**
+     * Filter down the result based on the authenticated user's role (`owner`, `contributor`, or `member`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public GetSnippetsRoleEnum role;
+    public GetSnippetsRequest withRole(GetSnippetsRoleEnum role) {
+        this.role = role;
         return this;
     }
     

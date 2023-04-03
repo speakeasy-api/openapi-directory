@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsUpdateRequest {
-    
-    public GistsUpdatePathParams pathParams;
-    public GistsUpdateRequest withPathParams(GistsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public Object requestBody;
+    public GistsUpdateRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public GistsUpdateRequest withRequest(Object request) {
-        this.request = request;
+    /**
+     * gist_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
+    public String gistId;
+    public GistsUpdateRequest withGistId(String gistId) {
+        this.gistId = gistId;
         return this;
     }
     

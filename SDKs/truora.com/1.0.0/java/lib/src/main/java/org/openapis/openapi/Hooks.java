@@ -68,10 +68,11 @@ public class Hooks {
      * 
      * Keep in mind that the object attribute varies depending on the event_type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateHookResponse createHook(org.openapis.openapi.models.operations.CreateHookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateHookResponse createHook(org.openapis.openapi.models.shared.CreateHookInput request, org.openapis.openapi.models.operations.CreateHookSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hooks");
         
@@ -85,7 +86,7 @@ public class Hooks {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -115,19 +116,20 @@ public class Hooks {
      * Deletes hook
      * Deletes hook configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletHookResponse deletHook(org.openapis.openapi.models.operations.DeletHookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletHookResponse deletHook(org.openapis.openapi.models.operations.DeletHookRequest request, org.openapis.openapi.models.operations.DeletHookSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletHookPathParams.class, baseUrl, "/v1/hooks/{hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletHookRequest.class, baseUrl, "/v1/hooks/{hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -153,11 +155,10 @@ public class Hooks {
     /**
      * Lists all hooks
      * Lists all the configured hooks in your account.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListHookResponse listHook(org.openapis.openapi.models.operations.ListHookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListHookResponse listHook() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/hooks");
         
@@ -166,7 +167,7 @@ public class Hooks {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,24 +195,25 @@ public class Hooks {
      * Updates hook
      * Updates a hook configuration.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateHookResponse updateHook(org.openapis.openapi.models.operations.UpdateHookRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateHookResponse updateHook(org.openapis.openapi.models.operations.UpdateHookRequest request, org.openapis.openapi.models.operations.UpdateHookSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateHookPathParams.class, baseUrl, "/v1/hooks/{hook_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateHookRequest.class, baseUrl, "/v1/hooks/{hook_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createHookInput", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

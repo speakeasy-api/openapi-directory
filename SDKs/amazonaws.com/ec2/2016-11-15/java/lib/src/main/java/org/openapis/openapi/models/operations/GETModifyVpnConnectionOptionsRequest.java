@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpnConnectionOptionsRequest {
-    
-    public GETModifyVpnConnectionOptionsQueryParams queryParams;
-    public GETModifyVpnConnectionOptionsRequest withQueryParams(GETModifyVpnConnectionOptionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyVpnConnectionOptionsActionEnum action;
+    public GETModifyVpnConnectionOptionsRequest withAction(GETModifyVpnConnectionOptionsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyVpnConnectionOptionsRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETModifyVpnConnectionOptionsHeaders headers;
-    public GETModifyVpnConnectionOptionsRequest withHeaders(GETModifyVpnConnectionOptionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The IPv4 CIDR on the customer gateway (on-premises) side of the VPN connection.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;0.0.0.0/0&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalIpv4NetworkCidr")
+    public String localIpv4NetworkCidr;
+    public GETModifyVpnConnectionOptionsRequest withLocalIpv4NetworkCidr(String localIpv4NetworkCidr) {
+        this.localIpv4NetworkCidr = localIpv4NetworkCidr;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The IPv6 CIDR on the customer gateway (on-premises) side of the VPN connection.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;::/0&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalIpv6NetworkCidr")
+    public String localIpv6NetworkCidr;
+    public GETModifyVpnConnectionOptionsRequest withLocalIpv6NetworkCidr(String localIpv6NetworkCidr) {
+        this.localIpv6NetworkCidr = localIpv6NetworkCidr;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The IPv4 CIDR on the Amazon Web Services side of the VPN connection.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;0.0.0.0/0&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoteIpv4NetworkCidr")
+    public String remoteIpv4NetworkCidr;
+    public GETModifyVpnConnectionOptionsRequest withRemoteIpv4NetworkCidr(String remoteIpv4NetworkCidr) {
+        this.remoteIpv4NetworkCidr = remoteIpv4NetworkCidr;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The IPv6 CIDR on the Amazon Web Services side of the VPN connection.&lt;/p&gt; &lt;p&gt;Default: &lt;code&gt;::/0&lt;/code&gt; &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoteIpv6NetworkCidr")
+    public String remoteIpv6NetworkCidr;
+    public GETModifyVpnConnectionOptionsRequest withRemoteIpv6NetworkCidr(String remoteIpv6NetworkCidr) {
+        this.remoteIpv6NetworkCidr = remoteIpv6NetworkCidr;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyVpnConnectionOptionsVersionEnum version;
+    public GETModifyVpnConnectionOptionsRequest withVersion(GETModifyVpnConnectionOptionsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of the Site-to-Site VPN connection. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnConnectionId")
+    public String vpnConnectionId;
+    public GETModifyVpnConnectionOptionsRequest withVpnConnectionId(String vpnConnectionId) {
+        this.vpnConnectionId = vpnConnectionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyVpnConnectionOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyVpnConnectionOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyVpnConnectionOptionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyVpnConnectionOptionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyVpnConnectionOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyVpnConnectionOptionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyVpnConnectionOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

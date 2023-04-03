@@ -40,7 +40,7 @@ public class AlertSettings {
      */
     public org.openapis.openapi.models.operations.GetNetworkAlertSettingsResponse getNetworkAlertSettings(org.openapis.openapi.models.operations.GetNetworkAlertSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAlertSettingsPathParams.class, baseUrl, "/networks/{networkId}/alertSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAlertSettingsRequest.class, baseUrl, "/networks/{networkId}/alertSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class AlertSettings {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkAlertSettingsResponse updateNetworkAlertSettings(org.openapis.openapi.models.operations.UpdateNetworkAlertSettingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAlertSettingsPathParams.class, baseUrl, "/networks/{networkId}/alertSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkAlertSettingsRequest.class, baseUrl, "/networks/{networkId}/alertSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

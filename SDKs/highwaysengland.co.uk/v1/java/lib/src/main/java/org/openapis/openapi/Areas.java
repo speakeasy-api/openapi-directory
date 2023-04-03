@@ -37,7 +37,7 @@ public class Areas {
      */
     public org.openapis.openapi.models.operations.AreasGetResponse areasGet(org.openapis.openapi.models.operations.AreasGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AreasGetPathParams.class, baseUrl, "/v{version}/areas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AreasGetRequest.class, baseUrl, "/v{version}/areas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -77,7 +77,7 @@ public class Areas {
      */
     public org.openapis.openapi.models.operations.GetVVersionAreasAreaIdsResponse getVVersionAreasAreaIds(org.openapis.openapi.models.operations.GetVVersionAreasAreaIdsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVVersionAreasAreaIdsPathParams.class, baseUrl, "/v{version}/areas/{area_Ids}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVVersionAreasAreaIdsRequest.class, baseUrl, "/v{version}/areas/{area_Ids}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

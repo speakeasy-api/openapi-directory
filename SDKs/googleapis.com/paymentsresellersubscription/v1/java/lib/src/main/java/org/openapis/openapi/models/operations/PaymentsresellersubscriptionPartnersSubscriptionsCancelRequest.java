@@ -7,24 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest {
-    
-    public PaymentsresellersubscriptionPartnersSubscriptionsCancelPathParams pathParams;
-    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withPathParams(PaymentsresellersubscriptionPartnersSubscriptionsCancelPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PaymentsresellersubscriptionPartnersSubscriptionsCancelQueryParams queryParams;
-    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withQueryParams(PaymentsresellersubscriptionPartnersSubscriptionsCancelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest request;
-    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest googleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withGoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest(org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest googleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest) {
+        this.googleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest = googleCloudPaymentsResellerSubscriptionV1CancelSubscriptionRequest;
+        return this;
+    }
+    
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the subscription resource to be cancelled. It will have the format of "partners/{partner_id}/subscriptions/{subscription_id}"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public PaymentsresellersubscriptionPartnersSubscriptionsCancelRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

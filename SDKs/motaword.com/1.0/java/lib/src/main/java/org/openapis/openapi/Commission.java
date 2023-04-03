@@ -82,7 +82,7 @@ public class Commission {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCommissionsByFilterResponse getCommissionsByFilter(org.openapis.openapi.models.operations.GetCommissionsByFilterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCommissionsByFilterResponse getCommissionsByFilter(org.openapis.openapi.models.shared.ReportFilter request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/commissions");
         

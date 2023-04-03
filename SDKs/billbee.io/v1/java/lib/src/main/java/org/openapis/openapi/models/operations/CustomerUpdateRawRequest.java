@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerUpdateRawRequest {
-    
-    public CustomerUpdateRawPathParams pathParams;
-    public CustomerUpdateRawRequest withPathParams(CustomerUpdateRawPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/xml")
+    public byte[] requestBody;
+    public CustomerUpdateRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public CustomerUpdateRawRequest withRequest(byte[] request) {
-        this.request = request;
+    /**
+     * The id of the customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerUpdateRawRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

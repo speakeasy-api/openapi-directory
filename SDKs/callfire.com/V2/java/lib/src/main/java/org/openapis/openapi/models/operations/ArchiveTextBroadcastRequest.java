@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArchiveTextBroadcastRequest {
-    
-    public ArchiveTextBroadcastPathParams pathParams;
-    public ArchiveTextBroadcastRequest withPathParams(ArchiveTextBroadcastPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ArchiveTextBroadcastSecurity security;
-    public ArchiveTextBroadcastRequest withSecurity(ArchiveTextBroadcastSecurity security) {
-        this.security = security;
+    /**
+     * An id of a text broadcast to archive
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ArchiveTextBroadcastRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

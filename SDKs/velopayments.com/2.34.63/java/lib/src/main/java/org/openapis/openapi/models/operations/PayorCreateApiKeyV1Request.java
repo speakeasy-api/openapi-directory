@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayorCreateApiKeyV1Request {
-    
-    public PayorCreateApiKeyV1PathParams pathParams;
-    public PayorCreateApiKeyV1Request withPathParams(PayorCreateApiKeyV1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Details of application API key to create
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayorCreateApiKeyRequest request;
-    public PayorCreateApiKeyV1Request withRequest(org.openapis.openapi.models.shared.PayorCreateApiKeyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayorCreateApiKeyRequest payorCreateApiKeyRequest;
+    public PayorCreateApiKeyV1Request withPayorCreateApiKeyRequest(org.openapis.openapi.models.shared.PayorCreateApiKeyRequest payorCreateApiKeyRequest) {
+        this.payorCreateApiKeyRequest = payorCreateApiKeyRequest;
+        return this;
+    }
+    
+    /**
+     * Application ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
+    public String applicationId;
+    public PayorCreateApiKeyV1Request withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    
+    /**
+     * The Payor Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payorId")
+    public String payorId;
+    public PayorCreateApiKeyV1Request withPayorId(String payorId) {
+        this.payorId = payorId;
         return this;
     }
     

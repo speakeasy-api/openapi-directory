@@ -4,27 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPresenceOfChannelRequest {
-    
-    public GetPresenceOfChannelPathParams pathParams;
-    public GetPresenceOfChannelRequest withPathParams(GetPresenceOfChannelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the API you wish to use.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
+    public String xAblyVersion;
+    public GetPresenceOfChannelRequest withXAblyVersion(String xAblyVersion) {
+        this.xAblyVersion = xAblyVersion;
         return this;
     }
     
-    
-    public GetPresenceOfChannelQueryParams queryParams;
-    public GetPresenceOfChannelRequest withQueryParams(GetPresenceOfChannelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The [Channel's ID](https://www.ably.io/documentation/rest/channels).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public String channelId;
+    public GetPresenceOfChannelRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientId")
+    public String clientId;
+    public GetPresenceOfChannelRequest withClientId(String clientId) {
+        this.clientId = clientId;
+        return this;
+    }
     
-    public GetPresenceOfChannelHeaders headers;
-    public GetPresenceOfChannelRequest withHeaders(GetPresenceOfChannelHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectionId")
+    public String connectionId;
+    public GetPresenceOfChannelRequest withConnectionId(String connectionId) {
+        this.connectionId = connectionId;
+        return this;
+    }
+    
+    /**
+     * The response format you would like
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+    public GetPresenceOfChannelRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPresenceOfChannelRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

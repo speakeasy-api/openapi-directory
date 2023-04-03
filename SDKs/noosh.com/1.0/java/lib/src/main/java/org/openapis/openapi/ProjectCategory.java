@@ -38,7 +38,7 @@ public class ProjectCategory {
      */
     public org.openapis.openapi.models.operations.GetProjectCategoryListResponse getProjectCategoryList(org.openapis.openapi.models.operations.GetProjectCategoryListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectCategoryListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projectCategory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectCategoryListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projectCategory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class ProjectCategory {
      */
     public org.openapis.openapi.models.operations.GetProjectCategoryListOfClientResponse getProjectCategoryListOfClient(org.openapis.openapi.models.operations.GetProjectCategoryListOfClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectCategoryListOfClientPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectCategory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProjectCategoryListOfClientRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/clientWorkgroups/{client_workgroup_id}/projectCategory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

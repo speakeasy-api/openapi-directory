@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolProxyPortStopRequest {
+    /**
+     * Agent to manipulate PROXY target
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolProxyPortStopRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolProxyPortStopPathParams pathParams;
-    public ProtocolProxyPortStopRequest withPathParams(ProtocolProxyPortStopPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
+    public Integer port;
+    public ProtocolProxyPortStopRequest withPort(Integer port) {
+        this.port = port;
         return this;
     }
     

@@ -37,7 +37,7 @@ public class Sslp {
      */
     public org.openapis.openapi.models.operations.GETMappedSSLPByPositionUsingGETResponse getMappedSSLPByPositionUsingGET(org.openapis.openapi.models.operations.GETMappedSSLPByPositionUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMappedSSLPByPositionUsingGETPathParams.class, baseUrl, "/sslps/mapped/{chr}/{start}/{stop}/{mapKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMappedSSLPByPositionUsingGETRequest.class, baseUrl, "/sslps/mapped/{chr}/{start}/{stop}/{mapKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

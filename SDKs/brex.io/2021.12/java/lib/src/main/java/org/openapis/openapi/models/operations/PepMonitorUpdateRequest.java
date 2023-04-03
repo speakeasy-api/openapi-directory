@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PepMonitorUpdateRequest {
-    
-    public PepMonitorUpdatePathParams pathParams;
-    public PepMonitorUpdateRequest withPathParams(PepMonitorUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Pass new Webhook as post parameter
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public PepMonitorUpdateRequestBody request;
-    public PepMonitorUpdateRequest withRequest(PepMonitorUpdateRequestBody request) {
-        this.request = request;
+    public PepMonitorUpdateRequestBody requestBody;
+    public PepMonitorUpdateRequest withRequestBody(PepMonitorUpdateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PepMonitorUpdateSecurity security;
-    public PepMonitorUpdateRequest withSecurity(PepMonitorUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The identifier of the Monitor
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PepMonitorUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

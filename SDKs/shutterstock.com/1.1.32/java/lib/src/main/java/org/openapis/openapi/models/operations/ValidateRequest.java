@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateRequest {
-    
-    public ValidateQueryParams queryParams;
-    public ValidateRequest withQueryParams(ValidateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Integer ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public Long id;
+    public ValidateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * List of tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String[] tag;
+    public ValidateRequest withTag(String[] tag) {
+        this.tag = tag;
+        return this;
+    }
     
-    public ValidateHeaders headers;
-    public ValidateRequest withHeaders(ValidateHeaders headers) {
-        this.headers = headers;
+    /**
+     * User agent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=user-agent")
+    public String userAgent;
+    public ValidateRequest withUserAgent(String userAgent) {
+        this.userAgent = userAgent;
         return this;
     }
     

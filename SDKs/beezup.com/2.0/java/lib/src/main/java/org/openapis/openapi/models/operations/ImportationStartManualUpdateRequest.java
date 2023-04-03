@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationStartManualUpdateRequest {
-    
-    public ImportationStartManualUpdatePathParams pathParams;
-    public ImportationStartManualUpdateRequest withPathParams(ImportationStartManualUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.StartManualImportRequest startManualImportRequest;
+    public ImportationStartManualUpdateRequest withStartManualImportRequest(org.openapis.openapi.models.shared.StartManualImportRequest startManualImportRequest) {
+        this.startManualImportRequest = startManualImportRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StartManualImportRequest request;
-    public ImportationStartManualUpdateRequest withRequest(org.openapis.openapi.models.shared.StartManualImportRequest request) {
-        this.request = request;
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationStartManualUpdateRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

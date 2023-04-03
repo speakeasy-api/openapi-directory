@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AnalyzeDocumentXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AnalyzeDocumentHeaders;
 import org.openapis.openapi.models.operations.AnalyzeDocumentRequest;
 import org.openapis.openapi.models.operations.AnalyzeDocumentResponse;
 import org.openapis.openapi.models.shared.AnalyzeDocumentRequest;
@@ -23,86 +22,64 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AnalyzeDocumentRequest req = new AnalyzeDocumentRequest() {{
-                headers = new AnalyzeDocumentHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "Textract.AnalyzeDocument";
-                }};
-                request = new AnalyzeDocumentRequest() {{
+                analyzeDocumentRequest = new AnalyzeDocumentRequest() {{
                     document = new Document() {{
-                        bytes = "illum";
+                        bytes = "corrupti";
                         s3Object = new S3Object() {{
-                            bucket = "vel";
-                            name = "error";
-                            version = "deserunt";
+                            bucket = "provident";
+                            name = "distinctio";
+                            version = "quibusdam";
                         }};
                     }};
                     featureTypes = new org.openapis.openapi.models.shared.FeatureTypeEnum[]{{
-                        add("FORMS"),
-                        add("FORMS"),
+                        add("SIGNATURES"),
+                        add("QUERIES"),
+                        add("SIGNATURES"),
                     }};
                     humanLoopConfig = new HumanLoopConfig() {{
                         dataAttributes = new HumanLoopDataAttributes() {{
                             contentClassifiers = new org.openapis.openapi.models.shared.ContentClassifierEnum[]{{
-                                add("FreeOfPersonallyIdentifiableInformation"),
                                 add("FreeOfAdultContent"),
-                                add("FreeOfPersonallyIdentifiableInformation"),
-                                add("FreeOfPersonallyIdentifiableInformation"),
+                                add("FreeOfAdultContent"),
                             }};
                         }};
-                        flowDefinitionArn = "molestiae";
-                        humanLoopName = "minus";
+                        flowDefinitionArn = "suscipit";
+                        humanLoopName = "iure";
                     }};
                     queriesConfig = new QueriesConfig() {{
                         queries = new org.openapis.openapi.models.shared.Query[]{{
                             add(new Query() {{
-                                alias = "voluptatum";
+                                alias = "debitis";
                                 pages = new String[]{{
-                                    add("excepturi"),
-                                    add("nisi"),
+                                    add("delectus"),
                                 }};
-                                text = "recusandae";
+                                text = "tempora";
                             }}),
                             add(new Query() {{
-                                alias = "temporibus";
+                                alias = "suscipit";
                                 pages = new String[]{{
-                                    add("quis"),
+                                    add("minus"),
+                                    add("placeat"),
                                 }};
-                                text = "veritatis";
-                            }}),
-                            add(new Query() {{
-                                alias = "deserunt";
-                                pages = new String[]{{
-                                    add("ipsam"),
-                                }};
-                                text = "repellendus";
-                            }}),
-                            add(new Query() {{
-                                alias = "sapiente";
-                                pages = new String[]{{
-                                    add("odit"),
-                                    add("at"),
-                                    add("at"),
-                                    add("maiores"),
-                                }};
-                                text = "molestiae";
+                                text = "voluptatum";
                             }}),
                         }};
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "iusto";
+                xAmzContentSha256 = "excepturi";
+                xAmzCredential = "nisi";
+                xAmzDate = "recusandae";
+                xAmzSecurityToken = "temporibus";
+                xAmzSignature = "ab";
+                xAmzSignedHeaders = "quis";
+                xAmzTarget = "Textract.AnalyzeDocument";
+            }}            
 
             AnalyzeDocumentResponse res = sdk.analyzeDocument(req);
 

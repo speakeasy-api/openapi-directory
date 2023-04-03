@@ -33,25 +33,26 @@ public class CombinedAudiences {
     /**
      * Gets a combined audience.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetResponse displayvideoCombinedAudiencesGet(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetResponse displayvideoCombinedAudiencesGet(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetRequest request, org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetPathParams.class, baseUrl, "/v1/combinedAudiences/{combinedAudienceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetRequest.class, baseUrl, "/v1/combinedAudiences/{combinedAudienceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class CombinedAudiences {
     /**
      * Lists combined audiences. The order is defined by the order_by parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListResponse displayvideoCombinedAudiencesList(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListResponse displayvideoCombinedAudiencesList(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListRequest request, org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/combinedAudiences");
         
@@ -89,14 +91,14 @@ public class CombinedAudiences {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoCombinedAudiencesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

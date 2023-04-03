@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GamesAdditionsListRequest {
-    
-    public GamesAdditionsListPathParams pathParams;
-    public GamesAdditionsListRequest withPathParams(GamesAdditionsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=game_pk")
+    public String gamePk;
+    public GamesAdditionsListRequest withGamePk(String gamePk) {
+        this.gamePk = gamePk;
         return this;
     }
     
+    /**
+     * A page number within the paginated result set.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GamesAdditionsListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GamesAdditionsListQueryParams queryParams;
-    public GamesAdditionsListRequest withQueryParams(GamesAdditionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GamesAdditionsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

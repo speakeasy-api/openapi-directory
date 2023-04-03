@@ -7,17 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookingPricingmatrixRequest {
-    
-    public BookingPricingmatrixHeaders headers;
-    public BookingPricingmatrixRequest withHeaders(BookingPricingmatrixHeaders headers) {
-        this.headers = headers;
+    /**
+     * Specifies the language into which the natural-language fields in the response from this service will be translated (see [Accept-Language header](#section/Appendices/Accept-Language-header) for available langage codes)
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public BookingPricingmatrixRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public BookingPricingmatrixRequestBody request;
-    public BookingPricingmatrixRequest withRequest(BookingPricingmatrixRequestBody request) {
-        this.request = request;
+    public BookingPricingmatrixRequestBody requestBody;
+    public BookingPricingmatrixRequest withRequestBody(BookingPricingmatrixRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

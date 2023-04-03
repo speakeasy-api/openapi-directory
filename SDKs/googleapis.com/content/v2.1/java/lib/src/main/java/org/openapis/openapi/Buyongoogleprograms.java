@@ -34,27 +34,28 @@ public class Buyongoogleprograms {
     /**
      * Reactivates the BoG program in your Merchant Center account. Moves the program to the active state when allowed, for example, when paused. This method is only available to selected merchants.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateResponse contentBuyongoogleprogramsActivate(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateResponse contentBuyongoogleprogramsActivate(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateRequest request, org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivatePathParams.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}/activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateRequest.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}/activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsActivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,25 +76,26 @@ public class Buyongoogleprograms {
     /**
      * Retrieves a status of the BoG program for your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetResponse contentBuyongoogleprogramsGet(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetResponse contentBuyongoogleprogramsGet(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetRequest request, org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetPathParams.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetRequest.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,27 +122,28 @@ public class Buyongoogleprograms {
     /**
      * Onboards the BoG program in your Merchant Center account. By using this method, you agree to the [Terms of Service](https://merchants.google.com/mc/termsofservice/transactions/US/latest). Calling this method is only possible if the authenticated account is the same as the merchant id in the request. Calling this method multiple times will only accept Terms of Service if the latest version is not currently signed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardResponse contentBuyongoogleprogramsOnboard(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardResponse contentBuyongoogleprogramsOnboard(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardRequest request, org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardPathParams.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}/onboard", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardRequest.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}/onboard", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "onboardBuyOnGoogleProgramRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsOnboardRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -161,27 +164,28 @@ public class Buyongoogleprograms {
     /**
      * Updates the status of the BoG program for your Merchant Center account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchResponse contentBuyongoogleprogramsPatch(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchResponse contentBuyongoogleprogramsPatch(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchRequest request, org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchPathParams.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchRequest.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "buyOnGoogleProgramStatusInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -208,27 +212,28 @@ public class Buyongoogleprograms {
     /**
      * Pauses the BoG program in your Merchant Center account. This method is only available to selected merchants.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseResponse contentBuyongoogleprogramsPause(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseResponse contentBuyongoogleprogramsPause(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseRequest request, org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPausePathParams.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}/pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseRequest.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}/pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsPauseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -249,27 +254,28 @@ public class Buyongoogleprograms {
     /**
      * Requests review and then activates the BoG program in your Merchant Center account for the first time. Moves the program to the REVIEW_PENDING state. This method is only available to selected merchants.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewResponse contentBuyongoogleprogramsRequestreview(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewResponse contentBuyongoogleprogramsRequestreview(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewRequest request, org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewPathParams.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}/requestreview", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewRequest.class, baseUrl, "/{merchantId}/buyongoogleprograms/{regionCode}/requestreview", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentBuyongoogleprogramsRequestreviewRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendPaymentNotification2Request {
-    
-    public SendPaymentNotification2PathParams pathParams;
-    public SendPaymentNotification2Request withPathParams(SendPaymentNotification2PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SendPaymentNotification2Request withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SendPaymentNotification2Request withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public SendPaymentNotification2Headers headers;
-    public SendPaymentNotification2Request withHeaders(SendPaymentNotification2Headers headers) {
-        this.headers = headers;
+    /**
+     * ID of the order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public SendPaymentNotification2Request withOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    
+    /**
+     * ID of the payment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public SendPaymentNotification2Request withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

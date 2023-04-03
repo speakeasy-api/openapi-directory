@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ClipsSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeBearerHeader bearerHeader;
-    public GetApiV1ClipsSecurity withBearerHeader(org.openapis.openapi.models.shared.SchemeBearerHeader bearerHeader) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String bearerHeader;
+    public GetApiV1ClipsSecurity withBearerHeader(String bearerHeader) {
         this.bearerHeader = bearerHeader;
         return this;
     }

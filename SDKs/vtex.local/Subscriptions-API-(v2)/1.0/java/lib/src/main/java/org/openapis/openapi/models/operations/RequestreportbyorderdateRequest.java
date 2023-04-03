@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestreportbyorderdateRequest {
-    
-    public RequestreportbyorderdateQueryParams queryParams;
-    public RequestreportbyorderdateRequest withQueryParams(RequestreportbyorderdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public RequestreportbyorderdateRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public RequestreportbyorderdateRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public RequestreportbyorderdateHeaders headers;
-    public RequestreportbyorderdateRequest withHeaders(RequestreportbyorderdateHeaders headers) {
-        this.headers = headers;
+    /**
+     * begin date of report interval, use format yyyyMMdd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginDate")
+    public Integer beginDate;
+    public RequestreportbyorderdateRequest withBeginDate(Integer beginDate) {
+        this.beginDate = beginDate;
+        return this;
+    }
+    
+    /**
+     * end date of report interval, use format yyyyMMdd
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public Integer endDate;
+    public RequestreportbyorderdateRequest withEndDate(Integer endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * Email that the report will be sent to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requesterEmail")
+    public String requesterEmail;
+    public RequestreportbyorderdateRequest withRequesterEmail(String requesterEmail) {
+        this.requesterEmail = requesterEmail;
         return this;
     }
     

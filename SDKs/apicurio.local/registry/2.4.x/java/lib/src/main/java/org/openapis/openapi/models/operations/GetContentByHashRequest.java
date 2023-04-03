@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentByHashRequest {
-    
-    public GetContentByHashPathParams pathParams;
-    public GetContentByHashRequest withPathParams(GetContentByHashPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * SHA-256 content hash for a single artifact content.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentHash")
+    public String contentHash;
+    public GetContentByHashRequest withContentHash(String contentHash) {
+        this.contentHash = contentHash;
         return this;
     }
     

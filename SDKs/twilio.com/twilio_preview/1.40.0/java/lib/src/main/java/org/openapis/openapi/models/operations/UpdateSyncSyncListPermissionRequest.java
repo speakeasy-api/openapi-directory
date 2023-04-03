@@ -7,31 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSyncSyncListPermissionRequest {
+    /**
+     * Arbitrary string identifier representing a human user associated with an FPA token, assigned by the developer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Identity")
+    public String identity;
+    public UpdateSyncSyncListPermissionRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
     
-    public UpdateSyncSyncListPermissionPathParams pathParams;
-    public UpdateSyncSyncListPermissionRequest withPathParams(UpdateSyncSyncListPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Identifier of the Sync List. Either a SID or a unique name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ListSid")
+    public String listSid;
+    public UpdateSyncSyncListPermissionRequest withListSid(String listSid) {
+        this.listSid = listSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSyncSyncListPermissionUpdateSyncSyncListPermissionRequest request;
-    public UpdateSyncSyncListPermissionRequest withRequest(UpdateSyncSyncListPermissionUpdateSyncSyncListPermissionRequest request) {
-        this.request = request;
+    public UpdateSyncSyncListPermissionUpdateSyncSyncListPermissionRequest requestBody;
+    public UpdateSyncSyncListPermissionRequest withRequestBody(UpdateSyncSyncListPermissionUpdateSyncSyncListPermissionRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSyncSyncListPermissionSecurity security;
-    public UpdateSyncSyncListPermissionRequest withSecurity(UpdateSyncSyncListPermissionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateSyncSyncListPermissionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Sync Service Instance.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateSyncSyncListPermissionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

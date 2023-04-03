@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationEarlyAccessFeaturesOptInRequest {
-    
-    public UpdateOrganizationEarlyAccessFeaturesOptInPathParams pathParams;
-    public UpdateOrganizationEarlyAccessFeaturesOptInRequest withPathParams(UpdateOrganizationEarlyAccessFeaturesOptInPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationEarlyAccessFeaturesOptInRequestBody requestBody;
+    public UpdateOrganizationEarlyAccessFeaturesOptInRequest withRequestBody(UpdateOrganizationEarlyAccessFeaturesOptInRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationEarlyAccessFeaturesOptInRequestBody request;
-    public UpdateOrganizationEarlyAccessFeaturesOptInRequest withRequest(UpdateOrganizationEarlyAccessFeaturesOptInRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=optInId")
+    public String optInId;
+    public UpdateOrganizationEarlyAccessFeaturesOptInRequest withOptInId(String optInId) {
+        this.optInId = optInId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationEarlyAccessFeaturesOptInRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

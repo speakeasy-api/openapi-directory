@@ -7,24 +7,57 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRuleByIdRequest {
-    
-    public PutRuleByIdPathParams pathParams;
-    public PutRuleByIdRequest withPathParams(PutRuleByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Media type(s) that is/are acceptable for the response. Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PutRuleByIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PutRuleByIdHeaders headers;
-    public PutRuleByIdRequest withHeaders(PutRuleByIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Media type of the body of the request.  Default value for payment provider protocol is application/json
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PutRuleByIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RuleByIdRequest request;
-    public PutRuleByIdRequest withRequest(org.openapis.openapi.models.shared.RuleByIdRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RuleByIdRequest ruleByIdRequest;
+    public PutRuleByIdRequest withRuleByIdRequest(org.openapis.openapi.models.shared.RuleByIdRequest ruleByIdRequest) {
+        this.ruleByIdRequest = ruleByIdRequest;
+        return this;
+    }
+    
+    /**
+     * The AppKey configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
+    public String xPROVIDERAPIAppKey;
+    public PutRuleByIdRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        return this;
+    }
+    
+    /**
+     * The AppToken configured by the merchant (optional configuration)
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
+    public String xPROVIDERAPIAppToken;
+    public PutRuleByIdRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ruleId")
+    public String ruleId;
+    public PutRuleByIdRequest withRuleId(String ruleId) {
+        this.ruleId = ruleId;
         return this;
     }
     

@@ -4,27 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppointmentsDeleteRequest {
-    
-    public AppointmentsDeletePathParams pathParams;
-    public AppointmentsDeleteRequest withPathParams(AppointmentsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public AppointmentsDeleteRequest withDate(String date) {
+        this.date = date;
         return this;
     }
     
-    
-    public AppointmentsDeleteQueryParams queryParams;
-    public AppointmentsDeleteRequest withQueryParams(AppointmentsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_range")
+    public String dateRange;
+    public AppointmentsDeleteRequest withDateRange(String dateRange) {
+        this.dateRange = dateRange;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public AppointmentsDeleteRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public AppointmentsDeleteSecurity security;
-    public AppointmentsDeleteRequest withSecurity(AppointmentsDeleteSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public AppointmentsDeleteRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
+    public Long office;
+    public AppointmentsDeleteRequest withOffice(Long office) {
+        this.office = office;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public AppointmentsDeleteRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public AppointmentsDeleteRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public AppointmentsDeleteRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

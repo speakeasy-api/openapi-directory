@@ -37,23 +37,24 @@ public class Task {
     /**
      * This method creates an upload task or a download task without filter criteria. When using this method, specify the &lt;b&gt; feedType&lt;/b&gt; and the feed file &lt;b&gt; schemaVersion&lt;/b&gt;. The feed type specified sets the task as a download or an upload task.  &lt;p&gt;For details about the upload and download flows, see &lt;a href="/api-docs/sell/static/orders/generating-and-retrieving-order-reports.html"&gt;Working with Order Feeds&lt;/a&gt; in the Selling Integration Guide.&lt;/p&gt;&lt;p&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The scope depends on the feed type. An error message results when an unsupported scope or feed type is specified.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The following list contains this method's authorization scopes and their corresponding feed types:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;https://api.ebay.com/oauth/api_scope/sell.inventory: See &lt;a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Availabl" target="_blank"&gt;LMS FeedTypes&lt;/a&gt;&lt;/li&gt;&lt;li&gt;https://api.ebay.com/oauth/api_scope/sell.fulfillment: LMS_ORDER_ACK (specify for upload tasks). Also see &lt;a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Availabl" target="_blank"&gt;LMS FeedTypes&lt;/a&gt;&lt;/li&gt;&lt;li&gt;https://api.ebay.com/oauth/api_scope/sell.marketing: None*&lt;/li&gt;&lt;li&gt;https://api.ebay.com/oauth/api_scope/commerce.catalog.readonly: None*&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;* Reserved for future release&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTaskResponse createTask(org.openapis.openapi.models.operations.CreateTaskRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTaskResponse createTask(org.openapis.openapi.models.operations.CreateTaskRequest request, org.openapis.openapi.models.operations.CreateTaskSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/task");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createTaskRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -62,7 +63,7 @@ public class Task {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -83,19 +84,20 @@ public class Task {
     /**
      * This method downloads the file previously uploaded using &lt;strong&gt;uploadFile&lt;/strong&gt;. Specify the task_id from the &lt;strong&gt;uploadFile&lt;/strong&gt; call. &lt;p&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; With respect to LMS, this method applies to all feed types except &lt;code&gt;LMS_ORDER_REPORT&lt;/code&gt; and &lt;code&gt;LMS_ACTIVE_INVENTORY_REPORT&lt;/code&gt;. See &lt;a href="/api-docs/sell/static/feed/lms-feeds.html"&gt;LMS API Feeds&lt;/a&gt; in the Selling Integration Guide.&lt;/span&gt;&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetInputFileResponse getInputFile(org.openapis.openapi.models.operations.GetInputFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetInputFileResponse getInputFile(org.openapis.openapi.models.operations.GetInputFileRequest request, org.openapis.openapi.models.operations.GetInputFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInputFilePathParams.class, baseUrl, "/task/{task_id}/download_input_file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetInputFileRequest.class, baseUrl, "/task/{task_id}/download_input_file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,19 +127,20 @@ public class Task {
     /**
      * This method retrieves the generated file that is associated with the specified task ID. The response of this call is a compressed or uncompressed CSV, XML, or JSON file, with the applicable file extension (for example: csv.gz). &lt;p&gt;For details about how this method is used, see &lt;a href="/api-docs/sell/static/orders/generating-and-retrieving-order-reports.html"&gt;Working with Order Feeds&lt;/a&gt; in the Selling Integration Guide. &lt;/p&gt;&lt;p&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The status of the task to retrieve must be in the COMPLETED or COMPLETED_WITH_ERROR state before this method can retrieve the file. You can use the getTask or getTasks method to retrieve the status of the task.&lt;/span&gt;&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetResultFileResponse getResultFile(org.openapis.openapi.models.operations.GetResultFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetResultFileResponse getResultFile(org.openapis.openapi.models.operations.GetResultFileRequest request, org.openapis.openapi.models.operations.GetResultFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResultFilePathParams.class, baseUrl, "/task/{task_id}/download_result_file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResultFileRequest.class, baseUrl, "/task/{task_id}/download_result_file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,19 +170,20 @@ public class Task {
     /**
      * This method retrieves the details and status of the specified task. The input is &lt;strong&gt;task_id&lt;/strong&gt;. &lt;br /&gt;&lt;br /&gt;For details of how this method is used, see &lt;a href="/api-docs/sell/static/orders/generating-and-retrieving-order-reports.html"&gt;Working with Order Feeds&lt;/a&gt; in the Selling Integration Guide. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTaskResponse getTask(org.openapis.openapi.models.operations.GetTaskRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTaskResponse getTask(org.openapis.openapi.models.operations.GetTaskRequest request, org.openapis.openapi.models.operations.GetTaskSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskPathParams.class, baseUrl, "/task/{task_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTaskRequest.class, baseUrl, "/task/{task_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -208,10 +212,11 @@ public class Task {
     /**
      * This method returns the details and status for an array of tasks based on a specified &lt;strong&gt;feed_type&lt;/strong&gt; or &lt;strong&gt;scheduledId&lt;/strong&gt;. Specifying both &lt;strong&gt;feed_type&lt;/strong&gt; and &lt;strong&gt;scheduledId&lt;/strong&gt; results in an error. Since schedules are based on feed types, you can specify a schedule (&lt;strong&gt;schedule_id&lt;/strong&gt;) that returns the needed &lt;strong&gt;feed_type&lt;/strong&gt;.&lt;br /&gt;&lt;br /&gt;If specifying the &lt;strong&gt;feed_type&lt;/strong&gt;, limit which tasks are returned by specifying filters, such as the creation date range or period of time using &lt;strong&gt;look_back_days&lt;/strong&gt;. Also, by specifying the &lt;strong&gt;feed_type&lt;/strong&gt;, both on-demand and scheduled reports are returned.&lt;br /&gt;&lt;br /&gt;If specifying a &lt;strong&gt;scheduledId&lt;/strong&gt;, the schedule template (that the schedule ID is based on) determines which tasks are returned (see &lt;strong&gt;schedule_id&lt;/strong&gt; for additional information). Each &lt;strong&gt;scheduledId&lt;/strong&gt; applies to one &lt;strong&gt;feed_type&lt;/strong&gt;. 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTasksResponse getTasks(org.openapis.openapi.models.operations.GetTasksRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTasksResponse getTasks(org.openapis.openapi.models.operations.GetTasksRequest request, org.openapis.openapi.models.operations.GetTasksSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/task");
         
@@ -219,14 +224,14 @@ public class Task {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTasksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetTasksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -255,21 +260,22 @@ public class Task {
     /**
      * This method associates the specified file with the specified task ID and uploads the input file. After the file has been uploaded, the processing of the file begins. &lt;br /&gt;&lt;br /&gt;Reports often take time to generate and it's common for this method to return an HTTP status of 202, which indicates the report is being generated. Use the &lt;b&gt; getTask&lt;/b&gt; with the task ID or &lt;b&gt; getTasks&lt;/b&gt; to determine the status of a report. &lt;br /&gt;&lt;br /&gt;The status flow is &lt;code&gt;QUEUED&lt;/code&gt; &amp;gt; &lt;code&gt;IN_PROCESS&lt;/code&gt; &amp;gt; &lt;code&gt;COMPLETED&lt;/code&gt; or &lt;code&gt;COMPLETED_WITH_ERROR&lt;/code&gt;. When the status is &lt;code&gt;COMPLETED&lt;/code&gt; or &lt;code&gt;COMPLETED_WITH_ERROR&lt;/code&gt;, this indicates the file has been processed and the order report can be downloaded. If there are errors, they will be indicated in the report file. &lt;br /&gt;&lt;br /&gt;For details of how this method is used in the upload flow, see &lt;a href="/api-docs/sell/static/orders/generating-and-retrieving-order-reports.html"&gt;Working with Order Feeds&lt;/a&gt; in the Selling Integration Guide. &lt;p&gt;&lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; This method applies to all Seller Hub feed types and LMS feed types except &lt;code&gt;LMS_ORDER_REPORT&lt;/code&gt; and &lt;code&gt;LMS_ACTIVE_INVENTORY_REPORT&lt;/code&gt;. See &lt;a href="/api-docs/sell/static/feed/lms-feeds-quick-reference.html#Availabl" target="_blank"&gt;LMS feed types&lt;/a&gt; and &lt;a href="/api-docs/sell/static/feed/fx-feeds-quick-reference.html#availabl" target="_blank"&gt;Seller Hub feed types&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt; &lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You must use a &lt;strong&gt;Content-Type&lt;/strong&gt; header with its value set to "&lt;strong&gt;multipart/form-data&lt;/strong&gt;". See &lt;a href="/api-docs/sell/feed/resources/task/methods/uploadFile#h2-samples"&gt;Samples&lt;/a&gt; for information.&lt;/span&gt;&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UploadFileResponse uploadFile(org.openapis.openapi.models.operations.UploadFileRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UploadFileResponse uploadFile(org.openapis.openapi.models.operations.UploadFileRequest request, org.openapis.openapi.models.operations.UploadFileSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadFilePathParams.class, baseUrl, "/task/{task_id}/upload_file", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UploadFileRequest.class, baseUrl, "/task/{task_id}/upload_file", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "formDataContentDisposition", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

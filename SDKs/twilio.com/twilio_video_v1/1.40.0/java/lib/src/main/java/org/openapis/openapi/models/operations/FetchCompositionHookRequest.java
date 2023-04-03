@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchCompositionHookRequest {
-    
-    public FetchCompositionHookPathParams pathParams;
-    public FetchCompositionHookRequest withPathParams(FetchCompositionHookPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FetchCompositionHookSecurity security;
-    public FetchCompositionHookRequest withSecurity(FetchCompositionHookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchCompositionHookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the CompositionHook resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchCompositionHookRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

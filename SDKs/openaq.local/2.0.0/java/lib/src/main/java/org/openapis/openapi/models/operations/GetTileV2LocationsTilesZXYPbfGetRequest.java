@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTileV2LocationsTilesZXYPbfGetRequest {
-    
-    public GetTileV2LocationsTilesZXYPbfGetPathParams pathParams;
-    public GetTileV2LocationsTilesZXYPbfGetRequest withPathParams(GetTileV2LocationsTilesZXYPbfGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
+    public Boolean isAnalysis;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withIsAnalysis(Boolean isAnalysis) {
+        this.isAnalysis = isAnalysis;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
+    public Boolean isMobile;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withIsMobile(Boolean isMobile) {
+        this.isMobile = isMobile;
+        return this;
+    }
     
-    public GetTileV2LocationsTilesZXYPbfGetQueryParams queryParams;
-    public GetTileV2LocationsTilesZXYPbfGetRequest withQueryParams(GetTileV2LocationsTilesZXYPbfGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastUpdatedFrom")
+    public Object lastUpdatedFrom;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withLastUpdatedFrom(Object lastUpdatedFrom) {
+        this.lastUpdatedFrom = lastUpdatedFrom;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastUpdatedTo")
+    public Object lastUpdatedTo;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withLastUpdatedTo(Object lastUpdatedTo) {
+        this.lastUpdatedTo = lastUpdatedTo;
+        return this;
+    }
+    
+    /**
+     * limit data to location id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public Long[] location;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withLocation(Long[] location) {
+        this.location = location;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
+    public Object parameter;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withParameter(Object parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
+    public Long project;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withProject(Long project) {
+        this.project = project;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=x")
+    public Long x;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withX(Long x) {
+        this.x = x;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=y")
+    public Long y;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withY(Long y) {
+        this.y = y;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
+    public Long z;
+    public GetTileV2LocationsTilesZXYPbfGetRequest withZ(Long z) {
+        this.z = z;
         return this;
     }
     

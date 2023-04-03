@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteClickwrapsIdRequest {
-    
-    public DeleteClickwrapsIdPathParams pathParams;
-    public DeleteClickwrapsIdRequest withPathParams(DeleteClickwrapsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Clickwrap ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteClickwrapsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

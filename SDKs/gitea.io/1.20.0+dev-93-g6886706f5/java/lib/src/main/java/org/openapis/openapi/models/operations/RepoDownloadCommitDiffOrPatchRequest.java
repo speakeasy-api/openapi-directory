@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoDownloadCommitDiffOrPatchRequest {
+    /**
+     * whether the output is diff or patch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=diffType")
+    public RepoDownloadCommitDiffOrPatchDiffTypeEnum diffType;
+    public RepoDownloadCommitDiffOrPatchRequest withDiffType(RepoDownloadCommitDiffOrPatchDiffTypeEnum diffType) {
+        this.diffType = diffType;
+        return this;
+    }
     
-    public RepoDownloadCommitDiffOrPatchPathParams pathParams;
-    public RepoDownloadCommitDiffOrPatchRequest withPathParams(RepoDownloadCommitDiffOrPatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoDownloadCommitDiffOrPatchRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoDownloadCommitDiffOrPatchRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * SHA of the commit to get
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha")
+    public String sha;
+    public RepoDownloadCommitDiffOrPatchRequest withSha(String sha) {
+        this.sha = sha;
         return this;
     }
     

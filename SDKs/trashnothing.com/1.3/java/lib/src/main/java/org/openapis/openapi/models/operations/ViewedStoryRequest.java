@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ViewedStoryRequest {
-    
-    public ViewedStoryPathParams pathParams;
-    public ViewedStoryRequest withPathParams(ViewedStoryPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ViewedStorySecurity security;
-    public ViewedStoryRequest withSecurity(ViewedStorySecurity security) {
-        this.security = security;
+    /**
+     * The ID of the story viewed.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_id")
+    public String storyId;
+    public ViewedStoryRequest withStoryId(String storyId) {
+        this.storyId = storyId;
         return this;
     }
     

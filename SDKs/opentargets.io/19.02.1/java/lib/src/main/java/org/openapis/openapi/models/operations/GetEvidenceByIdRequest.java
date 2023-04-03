@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEvidenceByIdRequest {
-    
-    public GetEvidenceByIdQueryParams queryParams;
-    public GetEvidenceByIdRequest withQueryParams(GetEvidenceByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Internal unique ID of the evidence string to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetEvidenceByIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

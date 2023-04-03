@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInlinePolicyFromPermissionSetRequest {
-    
-    public DeleteInlinePolicyFromPermissionSetHeaders headers;
-    public DeleteInlinePolicyFromPermissionSetRequest withHeaders(DeleteInlinePolicyFromPermissionSetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DeleteInlinePolicyFromPermissionSetRequest deleteInlinePolicyFromPermissionSetRequest;
+    public DeleteInlinePolicyFromPermissionSetRequest withDeleteInlinePolicyFromPermissionSetRequest(org.openapis.openapi.models.shared.DeleteInlinePolicyFromPermissionSetRequest deleteInlinePolicyFromPermissionSetRequest) {
+        this.deleteInlinePolicyFromPermissionSetRequest = deleteInlinePolicyFromPermissionSetRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeleteInlinePolicyFromPermissionSetRequest request;
-    public DeleteInlinePolicyFromPermissionSetRequest withRequest(org.openapis.openapi.models.shared.DeleteInlinePolicyFromPermissionSetRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DeleteInlinePolicyFromPermissionSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DeleteInlinePolicyFromPermissionSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DeleteInlinePolicyFromPermissionSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DeleteInlinePolicyFromPermissionSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DeleteInlinePolicyFromPermissionSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DeleteInlinePolicyFromPermissionSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DeleteInlinePolicyFromPermissionSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DeleteInlinePolicyFromPermissionSetXAmzTargetEnum xAmzTarget;
+    public DeleteInlinePolicyFromPermissionSetRequest withXAmzTarget(DeleteInlinePolicyFromPermissionSetXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

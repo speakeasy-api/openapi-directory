@@ -32,14 +32,11 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetSectionFormatFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSectionFormatSectionEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSectionFormatPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetSectionFormatQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSectionFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSectionFormat200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetSectionFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArticleMultimedia.java
 lib/src/main/java/org/openapis/openapi/models/shared/ArticleRelatedUrls.java
 lib/src/main/java/org/openapis/openapi/models/shared/Article.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeApikey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

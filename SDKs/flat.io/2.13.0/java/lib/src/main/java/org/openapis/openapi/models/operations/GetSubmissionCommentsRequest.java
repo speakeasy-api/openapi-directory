@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubmissionCommentsRequest {
-    
-    public GetSubmissionCommentsPathParams pathParams;
-    public GetSubmissionCommentsRequest withPathParams(GetSubmissionCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the assignment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignment")
+    public String assignment;
+    public GetSubmissionCommentsRequest withAssignment(String assignment) {
+        this.assignment = assignment;
         return this;
     }
     
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public GetSubmissionCommentsRequest withClass(String class_) {
+        this.class_ = class_;
+        return this;
+    }
     
-    public GetSubmissionCommentsSecurity security;
-    public GetSubmissionCommentsRequest withSecurity(GetSubmissionCommentsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the submission
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission")
+    public String submission;
+    public GetSubmissionCommentsRequest withSubmission(String submission) {
+        this.submission = submission;
         return this;
     }
     

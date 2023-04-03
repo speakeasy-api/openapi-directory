@@ -4,20 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVVersionReportsStartDateToEndDateReportTypeRequest {
-    
-    public GetVVersionReportsStartDateToEndDateReportTypePathParams pathParams;
-    public GetVVersionReportsStartDateToEndDateReportTypeRequest withPathParams(GetVVersionReportsStartDateToEndDateReportTypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The end date of the report in the format ddmmyyyy (i.e 31012016)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=end_date")
+    public String endDate;
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * The page offset to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetVVersionReportsStartDateToEndDateReportTypeQueryParams queryParams;
-    public GetVVersionReportsStartDateToEndDateReportTypeRequest withQueryParams(GetVVersionReportsStartDateToEndDateReportTypeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of rows to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Integer pageSize;
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reportSubTypeId")
+    public Integer reportSubTypeId;
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest withReportSubTypeId(Integer reportSubTypeId) {
+        this.reportSubTypeId = reportSubTypeId;
+        return this;
+    }
+    
+    /**
+     * Report Type Id (i.e Daily, Monthly, Annual)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=report_type")
+    public String reportType;
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest withReportType(String reportType) {
+        this.reportType = reportType;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of site Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sites")
+    public String sites;
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest withSites(String sites) {
+        this.sites = sites;
+        return this;
+    }
+    
+    /**
+     * The start date of the report in the format ddmmyyyy (i.e 31012016)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=start_date")
+    public String startDate;
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public GetVVersionReportsStartDateToEndDateReportTypeRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

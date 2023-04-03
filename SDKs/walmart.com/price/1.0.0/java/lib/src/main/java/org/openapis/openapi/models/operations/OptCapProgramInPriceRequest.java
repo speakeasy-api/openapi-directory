@@ -7,20 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptCapProgramInPriceRequest {
-    
-    public OptCapProgramInPriceHeaders headers;
-    public OptCapProgramInPriceRequest withHeaders(OptCapProgramInPriceHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Request fields
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public OptCapProgramInPriceRequestBody request;
-    public OptCapProgramInPriceRequest withRequest(OptCapProgramInPriceRequestBody request) {
-        this.request = request;
+    public OptCapProgramInPriceRequestBody requestBody;
+    public OptCapProgramInPriceRequest withRequestBody(OptCapProgramInPriceRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * A unique ID to track the consumer request by channel. Use the Consumer Channel Type received during onboarding
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_CONSUMER.CHANNEL.TYPE")
+    public String wmConsumerChannelType;
+    public OptCapProgramInPriceRequest withWmConsumerChannelType(String wmConsumerChannelType) {
+        this.wmConsumerChannelType = wmConsumerChannelType;
+        return this;
+    }
+    
+    /**
+     * A unique ID which identifies each API call and used to track and debug issues; use a random generated GUID for this ID
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_QOS.CORRELATION_ID")
+    public String wmQosCorrelationId;
+    public OptCapProgramInPriceRequest withWmQosCorrelationId(String wmQosCorrelationId) {
+        this.wmQosCorrelationId = wmQosCorrelationId;
+        return this;
+    }
+    
+    /**
+     * The access token retrieved in the Token API call
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SEC.ACCESS_TOKEN")
+    public String wmSecAccessToken;
+    public OptCapProgramInPriceRequest withWmSecAccessToken(String wmSecAccessToken) {
+        this.wmSecAccessToken = wmSecAccessToken;
+        return this;
+    }
+    
+    /**
+     * Walmart Service Name
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=WM_SVC.NAME")
+    public String wmSvcName;
+    public OptCapProgramInPriceRequest withWmSvcName(String wmSvcName) {
+        this.wmSvcName = wmSvcName;
         return this;
     }
     

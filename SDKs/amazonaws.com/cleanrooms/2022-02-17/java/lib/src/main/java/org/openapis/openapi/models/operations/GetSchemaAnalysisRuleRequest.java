@@ -4,20 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchemaAnalysisRuleRequest {
-    
-    public GetSchemaAnalysisRulePathParams pathParams;
-    public GetSchemaAnalysisRuleRequest withPathParams(GetSchemaAnalysisRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetSchemaAnalysisRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetSchemaAnalysisRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetSchemaAnalysisRuleHeaders headers;
-    public GetSchemaAnalysisRuleRequest withHeaders(GetSchemaAnalysisRuleHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetSchemaAnalysisRuleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetSchemaAnalysisRuleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetSchemaAnalysisRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetSchemaAnalysisRuleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetSchemaAnalysisRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * A unique identifier for the collaboration that the schema belongs to. Currently accepts a collaboration ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collaborationIdentifier")
+    public String collaborationIdentifier;
+    public GetSchemaAnalysisRuleRequest withCollaborationIdentifier(String collaborationIdentifier) {
+        this.collaborationIdentifier = collaborationIdentifier;
+        return this;
+    }
+    
+    /**
+     * The name of the schema to retrieve the analysis rule for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GetSchemaAnalysisRuleRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The type of the schema analysis rule to retrieve. Schema analysis rules are uniquely identified by a combination of the collaboration, the schema name, and their type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
+    public GetSchemaAnalysisRuleTypeEnum type;
+    public GetSchemaAnalysisRuleRequest withType(GetSchemaAnalysisRuleTypeEnum type) {
+        this.type = type;
         return this;
     }
     

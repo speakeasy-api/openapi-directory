@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWorkspaceSlugActivitiesRequest {
-    
-    public PostWorkspaceSlugActivitiesPathParams pathParams;
-    public PostWorkspaceSlugActivitiesRequest withPathParams(PostWorkspaceSlugActivitiesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ActivityAndIdentity request;
-    public PostWorkspaceSlugActivitiesRequest withRequest(org.openapis.openapi.models.shared.ActivityAndIdentity request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ActivityAndIdentity activityAndIdentity;
+    public PostWorkspaceSlugActivitiesRequest withActivityAndIdentity(org.openapis.openapi.models.shared.ActivityAndIdentity activityAndIdentity) {
+        this.activityAndIdentity = activityAndIdentity;
         return this;
     }
     
-    
-    public PostWorkspaceSlugActivitiesSecurity security;
-    public PostWorkspaceSlugActivitiesRequest withSecurity(PostWorkspaceSlugActivitiesSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public PostWorkspaceSlugActivitiesRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

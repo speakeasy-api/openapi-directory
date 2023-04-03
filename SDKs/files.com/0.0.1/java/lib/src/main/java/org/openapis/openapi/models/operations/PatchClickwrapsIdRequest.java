@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchClickwrapsIdRequest {
-    
-    public PatchClickwrapsIdPathParams pathParams;
-    public PatchClickwrapsIdRequest withPathParams(PatchClickwrapsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchClickwrapsIdRequestBody requestBody;
+    public PatchClickwrapsIdRequest withRequestBody(PatchClickwrapsIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchClickwrapsIdRequestBody request;
-    public PatchClickwrapsIdRequest withRequest(PatchClickwrapsIdRequestBody request) {
-        this.request = request;
+    /**
+     * Clickwrap ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchClickwrapsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

@@ -65,13 +65,13 @@ public class IndividualsRoles {
      */
     public org.openapis.openapi.models.operations.DeleteIndividualsPartyIdRolesRoleIdResponse deleteIndividualsPartyIdRolesRoleId(org.openapis.openapi.models.operations.DeleteIndividualsPartyIdRolesRoleIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteIndividualsPartyIdRolesRoleIdPathParams.class, baseUrl, "/individuals/{partyId}/roles/{roleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteIndividualsPartyIdRolesRoleIdRequest.class, baseUrl, "/individuals/{partyId}/roles/{roleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -121,13 +121,13 @@ public class IndividualsRoles {
      */
     public org.openapis.openapi.models.operations.GetIndividualsPartyIdRolesResponse getIndividualsPartyIdRoles(org.openapis.openapi.models.operations.GetIndividualsPartyIdRolesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIndividualsPartyIdRolesPathParams.class, baseUrl, "/individuals/{partyId}/roles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIndividualsPartyIdRolesRequest.class, baseUrl, "/individuals/{partyId}/roles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -187,13 +187,13 @@ public class IndividualsRoles {
      */
     public org.openapis.openapi.models.operations.GetIndividualsPartyIdRolesRoleIdResponse getIndividualsPartyIdRolesRoleId(org.openapis.openapi.models.operations.GetIndividualsPartyIdRolesRoleIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIndividualsPartyIdRolesRoleIdPathParams.class, baseUrl, "/individuals/{partyId}/roles/{roleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIndividualsPartyIdRolesRoleIdRequest.class, baseUrl, "/individuals/{partyId}/roles/{roleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -251,18 +251,18 @@ public class IndividualsRoles {
      */
     public org.openapis.openapi.models.operations.PostIndividualsPartyIdRolesResponse postIndividualsPartyIdRoles(org.openapis.openapi.models.operations.PostIndividualsPartyIdRolesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostIndividualsPartyIdRolesPathParams.class, baseUrl, "/individuals/{partyId}/roles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostIndividualsPartyIdRolesRequest.class, baseUrl, "/individuals/{partyId}/roles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "partyRoleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -322,18 +322,18 @@ public class IndividualsRoles {
      */
     public org.openapis.openapi.models.operations.PutIndividualsPartyIdRolesRoleIdResponse putIndividualsPartyIdRolesRoleId(org.openapis.openapi.models.operations.PutIndividualsPartyIdRolesRoleIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutIndividualsPartyIdRolesRoleIdPathParams.class, baseUrl, "/individuals/{partyId}/roles/{roleId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutIndividualsPartyIdRolesRoleIdRequest.class, baseUrl, "/individuals/{partyId}/roles/{roleId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "partyRoleInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

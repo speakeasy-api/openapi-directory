@@ -35,19 +35,20 @@ public class Reposts {
     /**
      * Removes a repost on a playlist as the authenticated user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdResponse deleteRepostsPlaylistsPlaylistId(org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdResponse deleteRepostsPlaylistsPlaylistId(org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdRequest request, org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdPathParams.class, baseUrl, "/reposts/playlists/{playlist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepostsPlaylistsPlaylistIdRequest.class, baseUrl, "/reposts/playlists/{playlist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,19 +85,20 @@ public class Reposts {
     /**
      * Removes a repost on a track as the authenticated user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdResponse deleteRepostsTracksTrackId(org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdResponse deleteRepostsTracksTrackId(org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdRequest request, org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdPathParams.class, baseUrl, "/reposts/tracks/{track_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRepostsTracksTrackIdRequest.class, baseUrl, "/reposts/tracks/{track_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -133,19 +135,20 @@ public class Reposts {
     /**
      * Reposts a playlist as the authenticated user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdResponse postRepostsPlaylistsPlaylistId(org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdResponse postRepostsPlaylistsPlaylistId(org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdRequest request, org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdPathParams.class, baseUrl, "/reposts/playlists/{playlist_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepostsPlaylistsPlaylistIdRequest.class, baseUrl, "/reposts/playlists/{playlist_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -182,19 +185,20 @@ public class Reposts {
     /**
      * Reposts a track as the authenticated user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostRepostsTracksTrackIdResponse postRepostsTracksTrackId(org.openapis.openapi.models.operations.PostRepostsTracksTrackIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostRepostsTracksTrackIdResponse postRepostsTracksTrackId(org.openapis.openapi.models.operations.PostRepostsTracksTrackIdRequest request, org.openapis.openapi.models.operations.PostRepostsTracksTrackIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepostsTracksTrackIdPathParams.class, baseUrl, "/reposts/tracks/{track_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRepostsTracksTrackIdRequest.class, baseUrl, "/reposts/tracks/{track_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

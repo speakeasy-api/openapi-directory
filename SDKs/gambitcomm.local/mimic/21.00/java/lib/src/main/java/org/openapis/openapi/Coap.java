@@ -39,7 +39,7 @@ public class Coap {
      */
     public org.openapis.openapi.models.operations.ProtocolCoapGetArgsResponse protocolCoapGetArgs(org.openapis.openapi.models.operations.ProtocolCoapGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Coap {
      */
     public org.openapis.openapi.models.operations.ProtocolCoapGetConfigResponse protocolCoapGetConfig(org.openapis.openapi.models.operations.ProtocolCoapGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Coap {
      */
     public org.openapis.openapi.models.operations.ProtocolCoapGetStatisticsResponse protocolCoapGetStatistics(org.openapis.openapi.models.operations.ProtocolCoapGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Coap {
      */
     public org.openapis.openapi.models.operations.ProtocolCoapGetTraceResponse protocolCoapGetTrace(org.openapis.openapi.models.operations.ProtocolCoapGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Coap {
      */
     public org.openapis.openapi.models.operations.ProtocolCoapSetConfigResponse protocolCoapSetConfig(org.openapis.openapi.models.operations.ProtocolCoapSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -289,7 +289,7 @@ public class Coap {
      */
     public org.openapis.openapi.models.operations.ProtocolCoapSetTraceResponse protocolCoapSetTrace(org.openapis.openapi.models.operations.ProtocolCoapSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolCoapSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/coap/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

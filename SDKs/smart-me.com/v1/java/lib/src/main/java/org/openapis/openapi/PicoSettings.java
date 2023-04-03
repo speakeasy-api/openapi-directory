@@ -37,7 +37,7 @@ public class PicoSettings {
      */
     public org.openapis.openapi.models.operations.PicoSettingsGetResponse picoSettingsGet(org.openapis.openapi.models.operations.PicoSettingsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoSettingsGetPathParams.class, baseUrl, "/api/pico/settings/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoSettingsGetRequest.class, baseUrl, "/api/pico/settings/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

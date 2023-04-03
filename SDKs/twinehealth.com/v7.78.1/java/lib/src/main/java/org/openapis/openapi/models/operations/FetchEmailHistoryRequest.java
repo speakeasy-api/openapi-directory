@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEmailHistoryRequest {
-    
-    public FetchEmailHistoryPathParams pathParams;
-    public FetchEmailHistoryRequest withPathParams(FetchEmailHistoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Email history identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FetchEmailHistoryRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllBankAccountsRequest {
-    
-    public GetAllBankAccountsQueryParams queryParams;
-    public GetAllBankAccountsRequest withQueryParams(GetAllBankAccountsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Valid Investor Id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=investor_id")
+    public String investorId;
+    public GetAllBankAccountsRequest withInvestorId(String investorId) {
+        this.investorId = investorId;
         return this;
     }
     
-    
-    public GetAllBankAccountsHeaders headers;
-    public GetAllBankAccountsRequest withHeaders(GetAllBankAccountsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetAllBankAccountsSecurity security;
-    public GetAllBankAccountsRequest withSecurity(GetAllBankAccountsSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetAllBankAccountsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

@@ -34,10 +34,11 @@ public class Myconfig {
     /**
      * Gets the current settings for the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsResponse booksMyconfigGetUserSettings(org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsResponse booksMyconfigGetUserSettings(org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsRequest request, org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/myconfig/getUserSettings");
         
@@ -45,14 +46,14 @@ public class Myconfig {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,10 +80,11 @@ public class Myconfig {
     /**
      * Release downloaded content access restriction.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessResponse booksMyconfigReleaseDownloadAccess(org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessResponse booksMyconfigReleaseDownloadAccess(org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessRequest request, org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/myconfig/releaseDownloadAccess");
         
@@ -90,14 +92,14 @@ public class Myconfig {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,10 +126,11 @@ public class Myconfig {
     /**
      * Request concurrent and download access restrictions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMyconfigRequestAccessResponse booksMyconfigRequestAccess(org.openapis.openapi.models.operations.BooksMyconfigRequestAccessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMyconfigRequestAccessResponse booksMyconfigRequestAccess(org.openapis.openapi.models.operations.BooksMyconfigRequestAccessRequest request, org.openapis.openapi.models.operations.BooksMyconfigRequestAccessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/myconfig/requestAccess");
         
@@ -135,14 +138,14 @@ public class Myconfig {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigRequestAccessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigRequestAccessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,10 +172,11 @@ public class Myconfig {
     /**
      * Request downloaded content access for specified volumes on the My eBooks shelf.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesResponse booksMyconfigSyncVolumeLicenses(org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesResponse booksMyconfigSyncVolumeLicenses(org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesRequest request, org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/myconfig/syncVolumeLicenses");
         
@@ -180,14 +184,14 @@ public class Myconfig {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,27 +218,28 @@ public class Myconfig {
     /**
      * Sets the settings for the user. If a sub-object is specified, it will overwrite the existing sub-object stored in the server. Unspecified sub-objects will retain the existing value.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsResponse booksMyconfigUpdateUserSettings(org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsResponse booksMyconfigUpdateUserSettings(org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsRequest request, org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/books/v1/myconfig/updateUserSettings");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "usersettings", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

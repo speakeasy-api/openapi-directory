@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutOrdersIdShipRequest {
-    
-    public PutOrdersIdShipPathParams pathParams;
-    public PutOrdersIdShipRequest withPathParams(PutOrdersIdShipPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Shipping Details
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutOrdersIdShipOrderShipV2 request;
-    public PutOrdersIdShipRequest withRequest(PutOrdersIdShipOrderShipV2 request) {
-        this.request = request;
+    public PutOrdersIdShipOrderShipV2 requestBody;
+    public PutOrdersIdShipRequest withRequestBody(PutOrdersIdShipOrderShipV2 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PutOrdersIdShipSecurity security;
-    public PutOrdersIdShipRequest withSecurity(PutOrdersIdShipSecurity security) {
-        this.security = security;
+    /**
+     * The FDC order Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutOrdersIdShipRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

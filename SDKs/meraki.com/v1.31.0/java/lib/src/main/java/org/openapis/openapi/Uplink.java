@@ -43,7 +43,7 @@ public class Uplink {
      */
     public org.openapis.openapi.models.operations.GetNetworkCellularGatewayUplinkResponse getNetworkCellularGatewayUplink(org.openapis.openapi.models.operations.GetNetworkCellularGatewayUplinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayUplinkPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/uplink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkCellularGatewayUplinkRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/uplink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,13 +83,13 @@ public class Uplink {
      */
     public org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesResponse getOrganizationCellularGatewayUplinkStatuses(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesPathParams.class, baseUrl, "/organizations/{organizationId}/cellularGateway/uplink/statuses", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesRequest.class, baseUrl, "/organizations/{organizationId}/cellularGateway/uplink/statuses", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOrganizationCellularGatewayUplinkStatusesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -131,12 +131,12 @@ public class Uplink {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayUplinkResponse updateNetworkCellularGatewayUplink(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayUplinkRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayUplinkPathParams.class, baseUrl, "/networks/{networkId}/cellularGateway/uplink", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkCellularGatewayUplinkRequest.class, baseUrl, "/networks/{networkId}/cellularGateway/uplink", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

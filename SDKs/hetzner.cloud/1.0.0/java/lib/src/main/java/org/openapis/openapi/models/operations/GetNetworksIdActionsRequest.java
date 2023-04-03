@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworksIdActionsRequest {
-    
-    public GetNetworksIdActionsPathParams pathParams;
-    public GetNetworksIdActionsRequest withPathParams(GetNetworksIdActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Network
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetNetworksIdActionsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetNetworksIdActionsSortParameterSortEnum sort;
+    public GetNetworksIdActionsRequest withSort(GetNetworksIdActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetNetworksIdActionsQueryParams queryParams;
-    public GetNetworksIdActionsRequest withQueryParams(GetNetworksIdActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetNetworksIdActionsStatusParameterStatusEnum status;
+    public GetNetworksIdActionsRequest withStatus(GetNetworksIdActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

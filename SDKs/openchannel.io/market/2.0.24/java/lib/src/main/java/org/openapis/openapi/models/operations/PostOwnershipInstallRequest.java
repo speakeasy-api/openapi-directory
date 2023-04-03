@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOwnershipInstallRequest {
+    /**
+     * The id of the App being owned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appId")
+    public String appId;
+    public PostOwnershipInstallRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public PostOwnershipInstallQueryParams queryParams;
-    public PostOwnershipInstallRequest withQueryParams(PostOwnershipInstallQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom JSON object to attach to this ownership record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostOwnershipInstallRequest withCustomData(String customData) {
+        this.customData = customData;
+        return this;
+    }
+    
+    /**
+     * A custom model that will override the app's default model for this install
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public PostOwnershipInstallRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * The id of the model associated with this ownership request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modelId")
+    public String modelId;
+    public PostOwnershipInstallRequest withModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    
+    /**
+     * The id of the User requesting to own the App
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public PostOwnershipInstallRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

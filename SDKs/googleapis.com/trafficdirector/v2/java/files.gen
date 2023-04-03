@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/TrafficdirectorDiscoveryClientStatusSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/TrafficdirectorDiscoveryClientStatusQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrafficdirectorDiscoveryClientStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrafficdirectorDiscoveryClientStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClientStatusResponse.java
@@ -61,6 +60,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/SocketAddressProtocolEnum.j
 lib/src/main/java/org/openapis/openapi/models/shared/SocketAddress.java
 lib/src/main/java/org/openapis/openapi/models/shared/Pipe.java
 lib/src/main/java/org/openapis/openapi/models/shared/Extension.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClientStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/NodeMatcher.java
 lib/src/main/java/org/openapis/openapi/models/shared/StructMatcher.java
@@ -72,8 +72,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListMatcher.java
 lib/src/main/java/org/openapis/openapi/models/shared/DoubleMatcher.java
 lib/src/main/java/org/openapis/openapi/models/shared/DoubleRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/PathSegment.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

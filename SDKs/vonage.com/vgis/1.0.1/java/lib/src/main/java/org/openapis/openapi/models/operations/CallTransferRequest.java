@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CallTransferRequest {
-    
-    public CallTransferPathParams pathParams;
-    public CallTransferRequest withPathParams(CallTransferPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Call transfer parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CallTransfer request;
-    public CallTransferRequest withRequest(org.openapis.openapi.models.shared.CallTransfer request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CallTransfer callTransfer;
+    public CallTransferRequest withCallTransfer(org.openapis.openapi.models.shared.CallTransfer callTransfer) {
+        this.callTransfer = callTransfer;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the call
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CallTransferRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

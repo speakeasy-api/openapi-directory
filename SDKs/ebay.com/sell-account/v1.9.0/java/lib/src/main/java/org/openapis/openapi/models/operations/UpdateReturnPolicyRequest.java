@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateReturnPolicyRequest {
-    
-    public UpdateReturnPolicyPathParams pathParams;
-    public UpdateReturnPolicyRequest withPathParams(UpdateReturnPolicyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Container for a return policy request.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ReturnPolicyRequest request;
-    public UpdateReturnPolicyRequest withRequest(org.openapis.openapi.models.shared.ReturnPolicyRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ReturnPolicyRequest returnPolicyRequest;
+    public UpdateReturnPolicyRequest withReturnPolicyRequest(org.openapis.openapi.models.shared.ReturnPolicyRequest returnPolicyRequest) {
+        this.returnPolicyRequest = returnPolicyRequest;
         return this;
     }
     
-    
-    public UpdateReturnPolicySecurity security;
-    public UpdateReturnPolicyRequest withSecurity(UpdateReturnPolicySecurity security) {
-        this.security = security;
+    /**
+     * This path parameter specifies the ID of the return policy you want to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=return_policy_id")
+    public String returnPolicyId;
+    public UpdateReturnPolicyRequest withReturnPolicyId(String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
         return this;
     }
     

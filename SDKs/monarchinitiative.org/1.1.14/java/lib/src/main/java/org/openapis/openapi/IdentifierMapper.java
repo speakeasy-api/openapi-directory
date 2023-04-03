@@ -40,7 +40,7 @@ public class IdentifierMapper {
      */
     public org.openapis.openapi.models.operations.GetIdentifierMapperResponse getIdentifierMapper(org.openapis.openapi.models.operations.GetIdentifierMapperRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIdentifierMapperPathParams.class, baseUrl, "/identifier/mapper/{source}/{target}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIdentifierMapperRequest.class, baseUrl, "/identifier/mapper/{source}/{target}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

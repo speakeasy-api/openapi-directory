@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetSuggestedFollowsAllRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=in_onboarding")
+    public Boolean inOnboarding;
+    public GetGetSuggestedFollowsAllRequest withInOnboarding(Boolean inOnboarding) {
+        this.inOnboarding = inOnboarding;
+        return this;
+    }
     
-    public GetGetSuggestedFollowsAllQueryParams queryParams;
-    public GetGetSuggestedFollowsAllRequest withQueryParams(GetGetSuggestedFollowsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetGetSuggestedFollowsAllRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetGetSuggestedFollowsAllRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

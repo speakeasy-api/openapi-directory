@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CreateApiQueryParams;
 import org.openapis.openapi.models.operations.CreateApiRequestBodyApi;
 import org.openapis.openapi.models.operations.CreateApiRequestBody;
 import org.openapis.openapi.models.operations.CreateApiRequest;
@@ -17,17 +16,15 @@ public class Application {
                 .build();
 
             CreateApiRequest req = new CreateApiRequest() {{
-                queryParams = new CreateApiQueryParams() {{
-                    workspace = "{{workspaceId}}";
-                }};
-                request = new CreateApiRequestBody() {{
+                requestBody = new CreateApiRequestBody() {{
                     api = new CreateApiRequestBodyApi() {{
                         description = "This is description.";
                         name = "Sync Service API";
                         summary = "This is supposed to be a short summary.";
                     }};
                 }};
-            }};            
+                workspace = "{{workspaceId}}";
+            }}            
 
             CreateApiResponse res = sdk.api.createApi(req);
 

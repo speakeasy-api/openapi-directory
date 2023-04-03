@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListSchemaVersionRequest {
-    
-    public ListSchemaVersionPathParams pathParams;
-    public ListSchemaVersionRequest withPathParams(ListSchemaVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the schema. Each schema can have multiple versions, that share the same id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Id")
+    public String id;
+    public ListSchemaVersionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ListSchemaVersionQueryParams queryParams;
-    public ListSchemaVersionRequest withQueryParams(ListSchemaVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListSchemaVersionRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListSchemaVersionSecurity security;
-    public ListSchemaVersionRequest withSecurity(ListSchemaVersionSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListSchemaVersionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListSchemaVersionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListSchemaVersionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDellSwitchSnmpConfigRequest {
-    
-    public GetDellSwitchSnmpConfigPathParams pathParams;
-    public GetDellSwitchSnmpConfigRequest withPathParams(GetDellSwitchSnmpConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetDellSwitchSnmpConfigSecurity security;
-    public GetDellSwitchSnmpConfigRequest withSecurity(GetDellSwitchSnmpConfigSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetDellSwitchSnmpConfigRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

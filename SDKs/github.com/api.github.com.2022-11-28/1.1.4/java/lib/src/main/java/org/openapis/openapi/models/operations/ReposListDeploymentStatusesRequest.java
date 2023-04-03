@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposListDeploymentStatusesRequest {
-    
-    public ReposListDeploymentStatusesPathParams pathParams;
-    public ReposListDeploymentStatusesRequest withPathParams(ReposListDeploymentStatusesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * deployment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_id")
+    public Long deploymentId;
+    public ReposListDeploymentStatusesRequest withDeploymentId(Long deploymentId) {
+        this.deploymentId = deploymentId;
         return this;
     }
     
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposListDeploymentStatusesRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public ReposListDeploymentStatusesQueryParams queryParams;
-    public ReposListDeploymentStatusesRequest withQueryParams(ReposListDeploymentStatusesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReposListDeploymentStatusesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReposListDeploymentStatusesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposListDeploymentStatusesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

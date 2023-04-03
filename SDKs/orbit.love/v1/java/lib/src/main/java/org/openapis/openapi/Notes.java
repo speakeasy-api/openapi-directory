@@ -31,25 +31,26 @@ public class Notes {
     /**
      * Get the member's notes
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesResponse getWorkspaceSlugMembersMemberSlugNotes(org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesResponse getWorkspaceSlugMembersMemberSlugNotes(org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesRequest request, org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesPathParams.class, baseUrl, "/{workspace_slug}/members/{member_slug}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesRequest.class, baseUrl, "/{workspace_slug}/members/{member_slug}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceSlugMembersMemberSlugNotesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,21 +71,22 @@ public class Notes {
     /**
      * Create a note
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesResponse postWorkspaceSlugMembersMemberSlugNotes(org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesResponse postWorkspaceSlugMembersMemberSlugNotes(org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesRequest request, org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesPathParams.class, baseUrl, "/{workspace_slug}/members/{member_slug}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostWorkspaceSlugMembersMemberSlugNotesRequest.class, baseUrl, "/{workspace_slug}/members/{member_slug}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "note", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -105,21 +107,22 @@ public class Notes {
     /**
      * Update a note
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdResponse putWorkspaceSlugMembersMemberSlugNotesId(org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdResponse putWorkspaceSlugMembersMemberSlugNotesId(org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdRequest request, org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdPathParams.class, baseUrl, "/{workspace_slug}/members/{member_slug}/notes/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutWorkspaceSlugMembersMemberSlugNotesIdRequest.class, baseUrl, "/{workspace_slug}/members/{member_slug}/notes/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "note", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

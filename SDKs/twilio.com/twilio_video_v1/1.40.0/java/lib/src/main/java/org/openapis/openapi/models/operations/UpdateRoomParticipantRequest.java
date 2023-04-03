@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoomParticipantRequest {
-    
-    public UpdateRoomParticipantPathParams pathParams;
-    public UpdateRoomParticipantRequest withPathParams(UpdateRoomParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateRoomParticipantUpdateRoomParticipantRequest request;
-    public UpdateRoomParticipantRequest withRequest(UpdateRoomParticipantUpdateRoomParticipantRequest request) {
-        this.request = request;
+    public UpdateRoomParticipantUpdateRoomParticipantRequest requestBody;
+    public UpdateRoomParticipantRequest withRequestBody(UpdateRoomParticipantUpdateRoomParticipantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRoomParticipantSecurity security;
-    public UpdateRoomParticipantRequest withSecurity(UpdateRoomParticipantSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the room with the participant to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public UpdateRoomParticipantRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateRoomParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the RoomParticipant resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateRoomParticipantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

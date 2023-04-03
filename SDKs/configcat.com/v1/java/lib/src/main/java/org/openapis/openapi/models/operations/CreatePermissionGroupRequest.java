@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePermissionGroupRequest {
-    
-    public CreatePermissionGroupPathParams pathParams;
-    public CreatePermissionGroupRequest withPathParams(CreatePermissionGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreatePermissionGroupRequest createPermissionGroupRequest;
+    public CreatePermissionGroupRequest withCreatePermissionGroupRequest(org.openapis.openapi.models.shared.CreatePermissionGroupRequest createPermissionGroupRequest) {
+        this.createPermissionGroupRequest = createPermissionGroupRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreatePermissionGroupRequest request;
-    public CreatePermissionGroupRequest withRequest(org.openapis.openapi.models.shared.CreatePermissionGroupRequest request) {
-        this.request = request;
+    /**
+     * The identifier of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public CreatePermissionGroupRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

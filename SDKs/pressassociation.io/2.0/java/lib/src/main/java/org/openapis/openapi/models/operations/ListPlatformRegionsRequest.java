@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPlatformRegionsRequest {
-    
-    public ListPlatformRegionsPathParams pathParams;
-    public ListPlatformRegionsRequest withPathParams(ListPlatformRegionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Flag to display Legacy and Provider Ids.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliases")
+    public Boolean aliases;
+    public ListPlatformRegionsRequest withAliases(Boolean aliases) {
+        this.aliases = aliases;
         return this;
     }
     
-    
-    public ListPlatformRegionsQueryParams queryParams;
-    public ListPlatformRegionsRequest withQueryParams(ListPlatformRegionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListPlatformRegionsSecurity security;
-    public ListPlatformRegionsRequest withSecurity(ListPlatformRegionsSecurity security) {
-        this.security = security;
+    /**
+     * The identifier for the selected platform.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platformId")
+    public String platformId;
+    public ListPlatformRegionsRequest withPlatformId(String platformId) {
+        this.platformId = platformId;
         return this;
     }
     

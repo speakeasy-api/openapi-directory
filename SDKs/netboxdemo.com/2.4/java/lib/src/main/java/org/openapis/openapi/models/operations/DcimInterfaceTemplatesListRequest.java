@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimInterfaceTemplatesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devicetype_id")
+    public String devicetypeId;
+    public DcimInterfaceTemplatesListRequest withDevicetypeId(String devicetypeId) {
+        this.devicetypeId = devicetypeId;
+        return this;
+    }
     
-    public DcimInterfaceTemplatesListQueryParams queryParams;
-    public DcimInterfaceTemplatesListRequest withQueryParams(DcimInterfaceTemplatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form_factor")
+    public String formFactor;
+    public DcimInterfaceTemplatesListRequest withFormFactor(String formFactor) {
+        this.formFactor = formFactor;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public DcimInterfaceTemplatesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mgmt_only")
+    public String mgmtOnly;
+    public DcimInterfaceTemplatesListRequest withMgmtOnly(String mgmtOnly) {
+        this.mgmtOnly = mgmtOnly;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DcimInterfaceTemplatesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public DcimInterfaceTemplatesListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

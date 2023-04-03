@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendDownloadBackupEmailRequest {
-    
-    public SendDownloadBackupEmailPathParams pathParams;
-    public SendDownloadBackupEmailRequest withPathParams(SendDownloadBackupEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
+    public String filename;
+    public SendDownloadBackupEmailRequest withFilename(String filename) {
+        this.filename = filename;
         return this;
     }
     

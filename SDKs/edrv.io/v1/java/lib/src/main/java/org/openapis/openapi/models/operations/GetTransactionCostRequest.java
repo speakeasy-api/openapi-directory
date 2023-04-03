@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionCostRequest {
-    
-    public GetTransactionCostPathParams pathParams;
-    public GetTransactionCostRequest withPathParams(GetTransactionCostPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The transaction id that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTransactionCostRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

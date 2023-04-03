@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CurrenciesRateGETRequest {
+    /**
+     * to override content negotiation specify a value of json or xml
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public CurrenciesRateGETFormatEnum format;
+    public CurrenciesRateGETRequest withFormat(CurrenciesRateGETFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public CurrenciesRateGETQueryParams queryParams;
-    public CurrenciesRateGETRequest withQueryParams(CurrenciesRateGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * comma separated list of currency pairs. For example: USD/CAD,USD/EUR,USD/AUD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pairs")
+    public String pairs;
+    public CurrenciesRateGETRequest withPairs(String pairs) {
+        this.pairs = pairs;
         return this;
     }
     

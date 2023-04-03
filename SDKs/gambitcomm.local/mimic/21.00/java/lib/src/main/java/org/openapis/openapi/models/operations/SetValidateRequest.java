@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetValidateRequest {
+    /**
+     * Agent to set the bitmask integer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public SetValidateRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public SetValidatePathParams pathParams;
-    public SetValidateRequest withPathParams(SetValidatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Bitmask integer to set
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=validate")
+    public Integer validate;
+    public SetValidateRequest withValidate(Integer validate) {
+        this.validate = validate;
         return this;
     }
     

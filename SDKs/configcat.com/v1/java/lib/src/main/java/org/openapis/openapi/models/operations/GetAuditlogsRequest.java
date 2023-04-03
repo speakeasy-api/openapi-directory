@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAuditlogsRequest {
-    
-    public GetAuditlogsPathParams pathParams;
-    public GetAuditlogsRequest withPathParams(GetAuditlogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter Audit logs by Audit log type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auditLogType")
+    public GetAuditlogsAuditLogTypeEnum auditLogType;
+    public GetAuditlogsRequest withAuditLogType(GetAuditlogsAuditLogTypeEnum auditLogType) {
+        this.auditLogType = auditLogType;
         return this;
     }
     
+    /**
+     * The identifier of the Config.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configId")
+    public String configId;
+    public GetAuditlogsRequest withConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
     
-    public GetAuditlogsQueryParams queryParams;
-    public GetAuditlogsRequest withQueryParams(GetAuditlogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The identifier of the Environment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environmentId")
+    public String environmentId;
+    public GetAuditlogsRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
+    
+    /**
+     * Filter Audit logs by starting UTC date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromUtcDateTime")
+    public OffsetDateTime fromUtcDateTime;
+    public GetAuditlogsRequest withFromUtcDateTime(OffsetDateTime fromUtcDateTime) {
+        this.fromUtcDateTime = fromUtcDateTime;
+        return this;
+    }
+    
+    /**
+     * The identifier of the Product.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public GetAuditlogsRequest withProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    
+    /**
+     * Filter Audit logs by ending UTC date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toUtcDateTime")
+    public OffsetDateTime toUtcDateTime;
+    public GetAuditlogsRequest withToUtcDateTime(OffsetDateTime toUtcDateTime) {
+        this.toUtcDateTime = toUtcDateTime;
         return this;
     }
     

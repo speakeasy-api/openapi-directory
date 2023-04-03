@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesCreateReleaseUploadRequest {
-    
-    public ReleasesCreateReleaseUploadPathParams pathParams;
-    public ReleasesCreateReleaseUploadRequest withPathParams(ReleasesCreateReleaseUploadPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Optional parameters to create releases with user defined metadata
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReleasesCreateReleaseUploadRequestBody request;
-    public ReleasesCreateReleaseUploadRequest withRequest(ReleasesCreateReleaseUploadRequestBody request) {
-        this.request = request;
+    public ReleasesCreateReleaseUploadRequestBody requestBody;
+    public ReleasesCreateReleaseUploadRequest withRequestBody(ReleasesCreateReleaseUploadRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesCreateReleaseUploadRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ReleasesCreateReleaseUploadSecurity security;
-    public ReleasesCreateReleaseUploadRequest withSecurity(ReleasesCreateReleaseUploadSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesCreateReleaseUploadRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

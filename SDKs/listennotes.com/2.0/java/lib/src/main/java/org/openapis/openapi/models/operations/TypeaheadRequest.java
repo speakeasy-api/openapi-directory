@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TypeaheadRequest {
-    
-    public TypeaheadQueryParams queryParams;
-    public TypeaheadRequest withQueryParams(TypeaheadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public TypeaheadRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
+    /**
+     * Search term, e.g., person, place, topic... You can use double quotes to do verbatim match, e.g., "game of thrones". Otherwise, it's fuzzy search.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public TypeaheadRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
     
-    public TypeaheadHeaders headers;
-    public TypeaheadRequest withHeaders(TypeaheadHeaders headers) {
-        this.headers = headers;
+    /**
+     * Whether or not to exclude podcasts/episodes with explicit language. 1 is yes and 0 is no. It works only when **show_podcasts** is *1*.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe_mode")
+    public TypeaheadSafeModeEnum safeMode;
+    public TypeaheadRequest withSafeMode(TypeaheadSafeModeEnum safeMode) {
+        this.safeMode = safeMode;
+        return this;
+    }
+    
+    /**
+     * Whether or not to autosuggest genres. 1 is yes, 0 is no.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_genres")
+    public TypeaheadShowGenresEnum showGenres;
+    public TypeaheadRequest withShowGenres(TypeaheadShowGenresEnum showGenres) {
+        this.showGenres = showGenres;
+        return this;
+    }
+    
+    /**
+     * Autosuggest podcasts. This only searches podcast title and publisher and returns very limited info of 5 podcasts. 1 is yes, 0 is no. It's a bit slow to autosuggest podcasts, so we turn it off by default. If show_podcasts=1, you can also pass iTunes id (e.g., 474722933) to the q parameter to fetch podcast meta data.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_podcasts")
+    public TypeaheadShowPodcastsEnum showPodcasts;
+    public TypeaheadRequest withShowPodcasts(TypeaheadShowPodcastsEnum showPodcasts) {
+        this.showPodcasts = showPodcasts;
         return this;
     }
     

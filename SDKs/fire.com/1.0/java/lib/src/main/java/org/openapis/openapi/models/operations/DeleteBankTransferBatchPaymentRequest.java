@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBankTransferBatchPaymentRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
+    public String batchUuid;
+    public DeleteBankTransferBatchPaymentRequest withBatchUuid(String batchUuid) {
+        this.batchUuid = batchUuid;
+        return this;
+    }
     
-    public DeleteBankTransferBatchPaymentPathParams pathParams;
-    public DeleteBankTransferBatchPaymentRequest withPathParams(DeleteBankTransferBatchPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
+    public String itemUuid;
+    public DeleteBankTransferBatchPaymentRequest withItemUuid(String itemUuid) {
+        this.itemUuid = itemUuid;
         return this;
     }
     

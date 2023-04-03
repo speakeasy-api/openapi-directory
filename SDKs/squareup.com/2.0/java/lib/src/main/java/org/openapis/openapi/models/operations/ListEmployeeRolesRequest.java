@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEmployeeRolesRequest {
-    
-    public ListEmployeeRolesQueryParams queryParams;
-    public ListEmployeeRolesRequest withQueryParams(ListEmployeeRolesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor to retrieve the next set of results for your
+     * original query to the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
+    public String batchToken;
+    public ListEmployeeRolesRequest withBatchToken(String batchToken) {
+        this.batchToken = batchToken;
         return this;
     }
     
+    /**
+     * The maximum integer number of employee entities to return in a single response. Default 100, maximum 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListEmployeeRolesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListEmployeeRolesSecurity security;
-    public ListEmployeeRolesRequest withSecurity(ListEmployeeRolesSecurity security) {
-        this.security = security;
+    /**
+     * The order in which employees are listed in the response, based on their created_at field.Default value: ASC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public ListEmployeeRolesRequest withOrder(String order) {
+        this.order = order;
         return this;
     }
     

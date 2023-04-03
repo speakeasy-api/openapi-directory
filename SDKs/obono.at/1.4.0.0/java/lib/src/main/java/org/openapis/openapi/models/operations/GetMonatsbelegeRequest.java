@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMonatsbelegeRequest {
-    
-    public GetMonatsbelegePathParams pathParams;
-    public GetMonatsbelegeRequest withPathParams(GetMonatsbelegePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=month")
+    public Long month;
+    public GetMonatsbelegeRequest withMonth(Long month) {
+        this.month = month;
         return this;
     }
     
+    /**
+     * The `_uuid` of the `Registrierkasse`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public GetMonatsbelegeRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
+        return this;
+    }
     
-    public GetMonatsbelegeQueryParams queryParams;
-    public GetMonatsbelegeRequest withQueryParams(GetMonatsbelegeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetMonatsbelegeRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

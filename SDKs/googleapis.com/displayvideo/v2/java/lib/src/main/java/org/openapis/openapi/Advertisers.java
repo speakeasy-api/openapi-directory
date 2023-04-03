@@ -35,27 +35,28 @@ public class Advertisers {
     /**
      * Uploads an asset. Returns the ID of the newly uploaded asset if successful. The asset file size should be no more than 10 MB for images, 200 MB for ZIP files, and 1 GB for videos. Must be used within the [multipart media upload process](/display-video/api/guides/how-tos/upload#multipart). Examples using provided client libraries can be found in our [Creating Creatives guide](/display-video/api/guides/creating-creatives/overview#upload_an_asset).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadResponse displayvideoAdvertisersAssetsUpload(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadResponse displayvideoAdvertisersAssetsUpload(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/assets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/assets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAssetsUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Advertisers {
     /**
      * Audits an advertiser. Returns the counts of used entities per resource type under the advertiser provided. Used entities count towards their respective resource limit. See https://support.google.com/displayvideo/answer/6071450.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditResponse displayvideoAdvertisersAudit(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditResponse displayvideoAdvertisersAudit(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}:audit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditRequest.class, baseUrl, "/v2/advertisers/{advertiserId}:audit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersAuditRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Advertisers {
     /**
      * Creates a new campaign. Returns the newly created campaign if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateResponse displayvideoAdvertisersCampaignsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateResponse displayvideoAdvertisersCampaignsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "campaignInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Advertisers {
     /**
      * Permanently deletes a campaign. A deleted campaign cannot be recovered. The campaign should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteResponse displayvideoAdvertisersCampaignsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteResponse displayvideoAdvertisersCampaignsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Advertisers {
     /**
      * Gets a campaign.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetResponse displayvideoAdvertisersCampaignsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetResponse displayvideoAdvertisersCampaignsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Advertisers {
     /**
      * Lists campaigns in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, campaigns with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListResponse displayvideoAdvertisersCampaignsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListResponse displayvideoAdvertisersCampaignsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,25 +315,26 @@ public class Advertisers {
     /**
      * Lists assigned targeting options of a campaign across targeting types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsResponse displayvideoAdvertisersCampaignsListAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsResponse displayvideoAdvertisersCampaignsListAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}:listAssignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}:listAssignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsListAssignedTargetingOptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -354,27 +361,28 @@ public class Advertisers {
     /**
      * Updates an existing campaign. Returns the updated campaign if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchResponse displayvideoAdvertisersCampaignsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchResponse displayvideoAdvertisersCampaignsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "campaignInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,25 +409,26 @@ public class Advertisers {
     /**
      * Gets a single targeting option assigned to a campaign.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -446,25 +455,26 @@ public class Advertisers {
     /**
      * Lists the targeting options assigned to a campaign for a specified targeting type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/campaigns/{campaignId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCampaignsTargetingTypesAssignedTargetingOptionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -491,27 +501,28 @@ public class Advertisers {
     /**
      * Creates a new channel. Returns the newly created channel if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateResponse displayvideoAdvertisersChannelsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateResponse displayvideoAdvertisersChannelsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "channelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -538,25 +549,26 @@ public class Advertisers {
     /**
      * Lists channels for a partner or advertiser.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListResponse displayvideoAdvertisersChannelsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListResponse displayvideoAdvertisersChannelsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/channels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/channels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -583,27 +595,28 @@ public class Advertisers {
     /**
      * Updates a channel. Returns the updated channel if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchResponse displayvideoAdvertisersChannelsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchResponse displayvideoAdvertisersChannelsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "channelInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -630,27 +643,28 @@ public class Advertisers {
     /**
      * Bulk edits sites under a single channel. The operation will delete the sites provided in BulkEditSitesRequest.deleted_sites and then create the sites provided in BulkEditSitesRequest.created_sites.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse displayvideoAdvertisersChannelsSitesBulkEdit(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditResponse displayvideoAdvertisersChannelsSitesBulkEdit(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:bulkEdit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:bulkEdit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkEditSitesRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesBulkEditRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -677,25 +691,26 @@ public class Advertisers {
     /**
      * Deletes a site from a channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse displayvideoAdvertisersChannelsSitesDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteResponse displayvideoAdvertisersChannelsSitesDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites/{urlOrAppId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites/{urlOrAppId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -722,25 +737,26 @@ public class Advertisers {
     /**
      * Lists sites in a channel.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListResponse displayvideoAdvertisersChannelsSitesList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListResponse displayvideoAdvertisersChannelsSitesList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -767,27 +783,28 @@ public class Advertisers {
     /**
      * Replaces all of the sites under a single channel. The operation will replace the sites under a channel with the sites provided in ReplaceSitesRequest.new_sites.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse displayvideoAdvertisersChannelsSitesReplace(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceResponse displayvideoAdvertisersChannelsSitesReplace(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplacePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:replace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/channels/{channelId}/sites:replace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "replaceSitesRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersChannelsSitesReplaceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -814,27 +831,28 @@ public class Advertisers {
     /**
      * Creates a new advertiser. Returns the newly created advertiser if successful. This method can take up to 180 seconds to complete.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateResponse displayvideoAdvertisersCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateResponse displayvideoAdvertisersCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/advertisers");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "advertiserInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -861,27 +879,28 @@ public class Advertisers {
     /**
      * Creates a new creative. Returns the newly created creative if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateResponse displayvideoAdvertisersCreativesCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateResponse displayvideoAdvertisersCreativesCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "creativeInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -908,25 +927,26 @@ public class Advertisers {
     /**
      * Deletes a creative. Returns error code `NOT_FOUND` if the creative does not exist. The creative should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, before it can be deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteResponse displayvideoAdvertisersCreativesDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteResponse displayvideoAdvertisersCreativesDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -953,25 +973,26 @@ public class Advertisers {
     /**
      * Gets a creative.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetResponse displayvideoAdvertisersCreativesGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetResponse displayvideoAdvertisersCreativesGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -998,25 +1019,26 @@ public class Advertisers {
     /**
      * Lists creatives in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, creatives with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListResponse displayvideoAdvertisersCreativesList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListResponse displayvideoAdvertisersCreativesList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1043,27 +1065,28 @@ public class Advertisers {
     /**
      * Updates an existing creative. Returns the updated creative if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchResponse displayvideoAdvertisersCreativesPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchResponse displayvideoAdvertisersCreativesPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/creatives/{creativeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "creativeInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersCreativesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1090,25 +1113,26 @@ public class Advertisers {
     /**
      * Deletes an advertiser. Deleting an advertiser will delete all of its child resources, for example, campaigns, insertion orders and line items. A deleted advertiser cannot be recovered.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteResponse displayvideoAdvertisersDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteResponse displayvideoAdvertisersDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1135,27 +1159,28 @@ public class Advertisers {
     /**
      * Edits targeting options under a single advertiser. The operation will delete the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAdvertiserAssignedTargetingOptionsRequest.create_requests .
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse displayvideoAdvertisersEditAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse displayvideoAdvertisersEditAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}:editAssignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsRequest.class, baseUrl, "/v2/advertisers/{advertiserId}:editAssignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkEditAdvertiserAssignedTargetingOptionsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersEditAssignedTargetingOptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1182,25 +1207,26 @@ public class Advertisers {
     /**
      * Gets an advertiser.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetResponse displayvideoAdvertisersGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetResponse displayvideoAdvertisersGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1227,27 +1253,28 @@ public class Advertisers {
     /**
      * Creates a new insertion order. Returns the newly created insertion order if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse displayvideoAdvertisersInsertionOrdersCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateResponse displayvideoAdvertisersInsertionOrdersCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "insertionOrderInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1274,25 +1301,26 @@ public class Advertisers {
     /**
      * Deletes an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist. The insertion order should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse displayvideoAdvertisersInsertionOrdersDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteResponse displayvideoAdvertisersInsertionOrdersDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1319,25 +1347,26 @@ public class Advertisers {
     /**
      * Gets an insertion order. Returns error code `NOT_FOUND` if the insertion order does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetResponse displayvideoAdvertisersInsertionOrdersGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetResponse displayvideoAdvertisersInsertionOrdersGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1364,25 +1393,26 @@ public class Advertisers {
     /**
      * Lists insertion orders in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, insertion orders with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListResponse displayvideoAdvertisersInsertionOrdersList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListResponse displayvideoAdvertisersInsertionOrdersList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1409,25 +1439,26 @@ public class Advertisers {
     /**
      * Lists assigned targeting options of an insertion order across targeting types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsResponse displayvideoAdvertisersInsertionOrdersListAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsResponse displayvideoAdvertisersInsertionOrdersListAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}:listAssignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}:listAssignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersListAssignedTargetingOptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1454,27 +1485,28 @@ public class Advertisers {
     /**
      * Updates an existing insertion order. Returns the updated insertion order if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse displayvideoAdvertisersInsertionOrdersPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchResponse displayvideoAdvertisersInsertionOrdersPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "insertionOrderInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1501,27 +1533,28 @@ public class Advertisers {
     /**
      * Assigns a targeting option to an insertion order. Returns the assigned targeting option if successful. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateResponse displayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateResponse displayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignedTargetingOptionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1548,25 +1581,26 @@ public class Advertisers {
     /**
      * Deletes an assigned targeting option from an insertion order. Supported targeting types: * `TARGETING_TYPE_AGE_RANGE` * `TARGETING_TYPE_BROWSER` * `TARGETING_TYPE_CATEGORY` * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DEVICE_MAKE_MODEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_ENVIRONMENT` * `TARGETING_TYPE_GENDER` * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_LANGUAGE` * `TARGETING_TYPE_NEGATIVE_KEYWORD_LIST` * `TARGETING_TYPE_OPERATING_SYSTEM` * `TARGETING_TYPE_PARENTAL_STATUS` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_VIEWABILITY`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteResponse displayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteResponse displayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1593,25 +1627,26 @@ public class Advertisers {
     /**
      * Gets a single targeting option assigned to an insertion order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1638,25 +1673,26 @@ public class Advertisers {
     /**
      * Lists the targeting options assigned to an insertion order.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/insertionOrders/{insertionOrderId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1683,25 +1719,26 @@ public class Advertisers {
     /**
      * Lists invoices posted for an advertiser in a given month. Invoices generated by billing profiles with a "Partner" invoice level are not retrievable through this method.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListResponse displayvideoAdvertisersInvoicesList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListResponse displayvideoAdvertisersInvoicesList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/invoices", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/invoices", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1728,25 +1765,26 @@ public class Advertisers {
     /**
      * Retrieves the invoice currency used by an advertiser in a given month.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse displayvideoAdvertisersInvoicesLookupInvoiceCurrency(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyResponse displayvideoAdvertisersInvoicesLookupInvoiceCurrency(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/invoices:lookupInvoiceCurrency", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/invoices:lookupInvoiceCurrency", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersInvoicesLookupInvoiceCurrencyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1773,27 +1811,28 @@ public class Advertisers {
     /**
      * Bulk edits targeting options under multiple line items. The operation will delete the assigned targeting options provided in BulkEditAssignedTargetingOptionsRequest.delete_requests and then create the assigned targeting options provided in BulkEditAssignedTargetingOptionsRequest.create_requests. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse displayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsResponse displayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems:bulkEditAssignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems:bulkEditAssignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkEditAssignedTargetingOptionsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkEditAssignedTargetingOptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1820,25 +1859,26 @@ public class Advertisers {
     /**
      * Lists assigned targeting options for multiple line items across targeting types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsResponse displayvideoAdvertisersLineItemsBulkListAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsResponse displayvideoAdvertisersLineItemsBulkListAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems:bulkListAssignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems:bulkListAssignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkListAssignedTargetingOptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1865,27 +1905,28 @@ public class Advertisers {
     /**
      * Updates multiple line items. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * UpdateLineItem * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdateResponse displayvideoAdvertisersLineItemsBulkUpdate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdateResponse displayvideoAdvertisersLineItemsBulkUpdate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems:bulkUpdate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems:bulkUpdate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkUpdateLineItemsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsBulkUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1912,27 +1953,28 @@ public class Advertisers {
     /**
      * Creates a new line item. Returns the newly created line item if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateResponse displayvideoAdvertisersLineItemsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateResponse displayvideoAdvertisersLineItemsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "lineItemInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1959,25 +2001,26 @@ public class Advertisers {
     /**
      * Deletes a line item. Returns error code `NOT_FOUND` if the line item does not exist. The line item should be archived first, i.e. set entity_status to `ENTITY_STATUS_ARCHIVED`, to be able to delete it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteResponse displayvideoAdvertisersLineItemsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteResponse displayvideoAdvertisersLineItemsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2004,27 +2047,28 @@ public class Advertisers {
     /**
      * Duplicates a line item. Returns the ID of the created line item if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicateResponse displayvideoAdvertisersLineItemsDuplicate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicateResponse displayvideoAdvertisersLineItemsDuplicate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}:duplicate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}:duplicate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "duplicateLineItemRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsDuplicateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2051,27 +2095,28 @@ public class Advertisers {
     /**
      * Creates a new line item with settings (including targeting) inherited from the insertion order and an `ENTITY_STATUS_DRAFT` entity_status. Returns the newly created line item if successful. There are default values based on the three fields: * The insertion order's insertion_order_type * The insertion order's automation_type * The given line_item_type
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse displayvideoAdvertisersLineItemsGenerateDefault(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultResponse displayvideoAdvertisersLineItemsGenerateDefault(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems:generateDefault", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems:generateDefault", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "generateDefaultLineItemRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGenerateDefaultRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2098,25 +2143,26 @@ public class Advertisers {
     /**
      * Gets a line item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetResponse displayvideoAdvertisersLineItemsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetResponse displayvideoAdvertisersLineItemsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2143,25 +2189,26 @@ public class Advertisers {
     /**
      * Lists line items in an advertiser. The order is defined by the order_by parameter. If a filter by entity_status is not specified, line items with `ENTITY_STATUS_ARCHIVED` will not be included in the results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListResponse displayvideoAdvertisersLineItemsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListResponse displayvideoAdvertisersLineItemsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2188,27 +2235,28 @@ public class Advertisers {
     /**
      * Updates an existing line item. Returns the updated line item if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdateLineItems * CreateLineItemAssignedTargetingOption * DeleteLineItemAssignedTargetingOption
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchResponse displayvideoAdvertisersLineItemsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchResponse displayvideoAdvertisersLineItemsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "lineItemInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2235,27 +2283,28 @@ public class Advertisers {
     /**
      * Assigns a targeting option to a line item. Returns the assigned targeting option if successful. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * DeleteLineItemAssignedTargetingOption
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse displayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateResponse displayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignedTargetingOptionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2282,25 +2331,26 @@ public class Advertisers {
     /**
      * Deletes an assigned targeting option from a line item. Requests to this endpoint cannot be made concurrently with the following requests updating the same line item: * BulkEditAssignedTargetingOptions * BulkUpdate * UpdateLineItem * CreateLineItemAssignedTargetingOption
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse displayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteResponse displayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2327,25 +2377,26 @@ public class Advertisers {
     /**
      * Gets a single targeting option assigned to a line item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2372,25 +2423,26 @@ public class Advertisers {
     /**
      * Lists the targeting options assigned to a line item.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/lineItems/{lineItemId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLineItemsTargetingTypesAssignedTargetingOptionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2417,10 +2469,11 @@ public class Advertisers {
     /**
      * Lists advertisers that are accessible to the current user. The order is defined by the order_by parameter. A single partner_id is required. Cross-partner listing is not supported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersListResponse displayvideoAdvertisersList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersListResponse displayvideoAdvertisersList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/advertisers");
         
@@ -2428,14 +2481,14 @@ public class Advertisers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2462,25 +2515,26 @@ public class Advertisers {
     /**
      * Lists assigned targeting options of an advertiser across targeting types.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsResponse displayvideoAdvertisersListAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsResponse displayvideoAdvertisersListAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}:listAssignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsRequest.class, baseUrl, "/v2/advertisers/{advertiserId}:listAssignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersListAssignedTargetingOptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2507,27 +2561,28 @@ public class Advertisers {
     /**
      * Bulk edits multiple assignments between locations and a single location list. The operation will delete the assigned locations provided in BulkEditAssignedLocationsRequest.deleted_assigned_locations and then create the assigned locations provided in BulkEditAssignedLocationsRequest.created_assigned_locations.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse displayvideoAdvertisersLocationListsAssignedLocationsBulkEdit(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditResponse displayvideoAdvertisersLocationListsAssignedLocationsBulkEdit(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations:bulkEdit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations:bulkEdit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkEditAssignedLocationsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsBulkEditRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2554,27 +2609,28 @@ public class Advertisers {
     /**
      * Creates an assignment between a location and a location list.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse displayvideoAdvertisersLocationListsAssignedLocationsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse displayvideoAdvertisersLocationListsAssignedLocationsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignedLocationInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2601,25 +2657,26 @@ public class Advertisers {
     /**
      * Deletes the assignment between a location and a location list.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse displayvideoAdvertisersLocationListsAssignedLocationsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteResponse displayvideoAdvertisersLocationListsAssignedLocationsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations/{assignedLocationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations/{assignedLocationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2646,25 +2703,26 @@ public class Advertisers {
     /**
      * Lists locations assigned to a location list.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse displayvideoAdvertisersLocationListsAssignedLocationsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListResponse displayvideoAdvertisersLocationListsAssignedLocationsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}/assignedLocations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsAssignedLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2691,27 +2749,28 @@ public class Advertisers {
     /**
      * Creates a new location list. Returns the newly created location list if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateResponse displayvideoAdvertisersLocationListsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateResponse displayvideoAdvertisersLocationListsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "locationListInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2738,25 +2797,26 @@ public class Advertisers {
     /**
      * Lists location lists based on a given advertiser id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListResponse displayvideoAdvertisersLocationListsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListResponse displayvideoAdvertisersLocationListsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2783,27 +2843,28 @@ public class Advertisers {
     /**
      * Updates a location list. Returns the updated location list if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchResponse displayvideoAdvertisersLocationListsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchResponse displayvideoAdvertisersLocationListsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/locationLists/{locationListId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "locationListInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersLocationListsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2830,27 +2891,28 @@ public class Advertisers {
     /**
      * Activates a manual trigger. Each activation of the manual trigger must be at least 5 minutes apart, otherwise an error will be returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateResponse displayvideoAdvertisersManualTriggersActivate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateResponse displayvideoAdvertisersManualTriggersActivate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:activate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:activate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersActivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2877,27 +2939,28 @@ public class Advertisers {
     /**
      * Creates a new manual trigger. Returns the newly created manual trigger if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateResponse displayvideoAdvertisersManualTriggersCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateResponse displayvideoAdvertisersManualTriggersCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manualTriggerInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2924,27 +2987,28 @@ public class Advertisers {
     /**
      * Deactivates a manual trigger.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse displayvideoAdvertisersManualTriggersDeactivate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateResponse displayvideoAdvertisersManualTriggersDeactivate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:deactivate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}:deactivate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersDeactivateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2971,25 +3035,26 @@ public class Advertisers {
     /**
      * Gets a manual trigger.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetResponse displayvideoAdvertisersManualTriggersGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetResponse displayvideoAdvertisersManualTriggersGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3016,25 +3081,26 @@ public class Advertisers {
     /**
      * Lists manual triggers that are accessible to the current user for a given advertiser ID. The order is defined by the order_by parameter. A single advertiser_id is required.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListResponse displayvideoAdvertisersManualTriggersList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListResponse displayvideoAdvertisersManualTriggersList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3061,27 +3127,28 @@ public class Advertisers {
     /**
      * Updates a manual trigger. Returns the updated manual trigger if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchResponse displayvideoAdvertisersManualTriggersPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchResponse displayvideoAdvertisersManualTriggersPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/manualTriggers/{triggerId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manualTriggerInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersManualTriggersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3108,27 +3175,28 @@ public class Advertisers {
     /**
      * Creates a new negative keyword list. Returns the newly created negative keyword list if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse displayvideoAdvertisersNegativeKeywordListsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateResponse displayvideoAdvertisersNegativeKeywordListsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "negativeKeywordListInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3155,25 +3223,26 @@ public class Advertisers {
     /**
      * Lists negative keyword lists based on a given advertiser id.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse displayvideoAdvertisersNegativeKeywordListsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListResponse displayvideoAdvertisersNegativeKeywordListsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3200,27 +3269,28 @@ public class Advertisers {
     /**
      * Bulk edits negative keywords in a single negative keyword list. The operation will delete the negative keywords provided in BulkEditNegativeKeywordsRequest.deleted_negative_keywords and then create the negative keywords provided in BulkEditNegativeKeywordsRequest.created_negative_keywords. This operation is guaranteed to be atomic and will never result in a partial success or partial failure.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse displayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditResponse displayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEdit(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:bulkEdit", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:bulkEdit", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkEditNegativeKeywordsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsBulkEditRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3247,25 +3317,26 @@ public class Advertisers {
     /**
      * Deletes a negative keyword from a negative keyword list.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse displayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteResponse displayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords/{keywordValue}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords/{keywordValue}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3292,25 +3363,26 @@ public class Advertisers {
     /**
      * Lists negative keywords in a negative keyword list.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse displayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListResponse displayvideoAdvertisersNegativeKeywordListsNegativeKeywordsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3337,27 +3409,28 @@ public class Advertisers {
     /**
      * Replaces all negative keywords in a single negative keyword list. The operation will replace the keywords in a negative keyword list with keywords provided in ReplaceNegativeKeywordsRequest.new_negative_keywords.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse displayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceResponse displayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplace(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplacePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:replace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}/negativeKeywords:replace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "replaceNegativeKeywordsRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsNegativeKeywordsReplaceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3384,27 +3457,28 @@ public class Advertisers {
     /**
      * Updates a negative keyword list. Returns the updated negative keyword list if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse displayvideoAdvertisersNegativeKeywordListsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchResponse displayvideoAdvertisersNegativeKeywordListsPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/negativeKeywordLists/{negativeKeywordListId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "negativeKeywordListInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersNegativeKeywordListsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3431,27 +3505,28 @@ public class Advertisers {
     /**
      * Updates an existing advertiser. Returns the updated advertiser if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchResponse displayvideoAdvertisersPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchResponse displayvideoAdvertisersPatch(org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchRequest.class, baseUrl, "/v2/advertisers/{advertiserId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "advertiserInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3478,27 +3553,28 @@ public class Advertisers {
     /**
      * Assigns a targeting option to an advertiser. Returns the assigned targeting option if successful.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse displayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateResponse displayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreate(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreatePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "assignedTargetingOptionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3525,25 +3601,26 @@ public class Advertisers {
     /**
      * Deletes an assigned targeting option from an advertiser.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse displayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteResponse displayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDelete(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeletePathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3570,25 +3647,26 @@ public class Advertisers {
     /**
      * Gets a single targeting option assigned to an advertiser.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3615,25 +3693,26 @@ public class Advertisers {
     /**
      * Lists the targeting options assigned to an advertiser.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3660,25 +3739,26 @@ public class Advertisers {
     /**
      * Gets a YouTube ad group ad.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetResponse displayvideoAdvertisersYoutubeAdGroupAdsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetResponse displayvideoAdvertisersYoutubeAdGroupAdsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroupAds/{youtubeAdGroupAdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroupAds/{youtubeAdGroupAdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3705,25 +3785,26 @@ public class Advertisers {
     /**
      * Lists YouTube ad group ads.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse displayvideoAdvertisersYoutubeAdGroupAdsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListResponse displayvideoAdvertisersYoutubeAdGroupAdsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroupAds", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroupAds", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupAdsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3750,25 +3831,26 @@ public class Advertisers {
     /**
      * Lists assigned targeting options for multiple YouTube ad groups across targeting types. Inherieted assigned targeting options are not included.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse displayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsResponse displayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptions(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups:bulkListAdGroupAssignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups:bulkListAdGroupAssignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsBulkListAdGroupAssignedTargetingOptionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3795,25 +3877,26 @@ public class Advertisers {
     /**
      * Gets a YouTube ad group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetResponse displayvideoAdvertisersYoutubeAdGroupsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetResponse displayvideoAdvertisersYoutubeAdGroupsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3840,25 +3923,26 @@ public class Advertisers {
     /**
      * Lists YouTube ad groups.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListResponse displayvideoAdvertisersYoutubeAdGroupsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListResponse displayvideoAdvertisersYoutubeAdGroupsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3885,25 +3969,26 @@ public class Advertisers {
     /**
      * Gets a single targeting option assigned to a YouTube ad group. Inherited assigned targeting options are not included.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetResponse displayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGet(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}/targetingTypes/{targetingType}/assignedTargetingOptions/{assignedTargetingOptionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3930,25 +4015,26 @@ public class Advertisers {
     /**
      * Lists the targeting options assigned to a YouTube ad group. Inherited assigned targeting options are not included.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListResponse displayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsList(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListRequest request, org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListPathParams.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}/targetingTypes/{targetingType}/assignedTargetingOptions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListRequest.class, baseUrl, "/v2/advertisers/{advertiserId}/youtubeAdGroups/{youtubeAdGroupId}/targetingTypes/{targetingType}/assignedTargetingOptions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DisplayvideoAdvertisersYoutubeAdGroupsTargetingTypesAssignedTargetingOptionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

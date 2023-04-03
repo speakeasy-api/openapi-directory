@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddDocumentRequest {
-    
-    public AddDocumentPathParams pathParams;
-    public AddDocumentRequest withPathParams(AddDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AddOrUpdateDocumentRequest addOrUpdateDocumentRequest;
+    public AddDocumentRequest withAddOrUpdateDocumentRequest(org.openapis.openapi.models.shared.AddOrUpdateDocumentRequest addOrUpdateDocumentRequest) {
+        this.addOrUpdateDocumentRequest = addOrUpdateDocumentRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddOrUpdateDocumentRequest request;
-    public AddDocumentRequest withRequest(org.openapis.openapi.models.shared.AddOrUpdateDocumentRequest request) {
-        this.request = request;
+    /**
+     * Continuous project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public AddDocumentRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

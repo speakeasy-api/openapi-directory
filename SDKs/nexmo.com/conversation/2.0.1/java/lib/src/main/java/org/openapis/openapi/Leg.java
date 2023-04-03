@@ -41,7 +41,7 @@ public class Leg {
      */
     public org.openapis.openapi.models.operations.DeleteLegResponse deleteLeg(org.openapis.openapi.models.operations.DeleteLegRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLegPathParams.class, baseUrl, "/legs/{leg_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLegRequest.class, baseUrl, "/legs/{leg_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

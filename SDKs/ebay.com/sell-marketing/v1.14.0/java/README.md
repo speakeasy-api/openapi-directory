@@ -18,12 +18,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.BulkCreateAdsByInventoryReferenceSecurity;
-import org.openapis.openapi.models.operations.BulkCreateAdsByInventoryReferencePathParams;
 import org.openapis.openapi.models.operations.BulkCreateAdsByInventoryReferenceRequest;
 import org.openapis.openapi.models.operations.BulkCreateAdsByInventoryReferenceResponse;
 import org.openapis.openapi.models.shared.BulkCreateAdsByInventoryReferenceRequest;
 import org.openapis.openapi.models.shared.CreateAdsByInventoryReferenceRequest;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -32,39 +30,34 @@ public class Application {
                 .build();
 
             BulkCreateAdsByInventoryReferenceRequest req = new BulkCreateAdsByInventoryReferenceRequest() {{
-                security = new BulkCreateAdsByInventoryReferenceSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new BulkCreateAdsByInventoryReferencePathParams() {{
-                    campaignId = "corrupti";
-                }};
-                request = new BulkCreateAdsByInventoryReferenceRequest() {{
+                bulkCreateAdsByInventoryReferenceRequest = new BulkCreateAdsByInventoryReferenceRequest() {{
                     requests = new org.openapis.openapi.models.shared.CreateAdsByInventoryReferenceRequest[]{{
                         add(new CreateAdsByInventoryReferenceRequest() {{
-                            adGroupId = "distinctio";
-                            bidPercentage = "quibusdam";
-                            inventoryReferenceId = "unde";
-                            inventoryReferenceType = "nulla";
+                            adGroupId = "provident";
+                            bidPercentage = "distinctio";
+                            inventoryReferenceId = "quibusdam";
+                            inventoryReferenceType = "unde";
                         }}),
                         add(new CreateAdsByInventoryReferenceRequest() {{
-                            adGroupId = "corrupti";
-                            bidPercentage = "illum";
-                            inventoryReferenceId = "vel";
-                            inventoryReferenceType = "error";
+                            adGroupId = "nulla";
+                            bidPercentage = "corrupti";
+                            inventoryReferenceId = "illum";
+                            inventoryReferenceType = "vel";
                         }}),
                         add(new CreateAdsByInventoryReferenceRequest() {{
-                            adGroupId = "deserunt";
-                            bidPercentage = "suscipit";
-                            inventoryReferenceId = "iure";
-                            inventoryReferenceType = "magnam";
+                            adGroupId = "error";
+                            bidPercentage = "deserunt";
+                            inventoryReferenceId = "suscipit";
+                            inventoryReferenceType = "iure";
                         }}),
                     }};
                 }};
-            }};            
+                campaignId = "magnam";
+            }}            
 
-            BulkCreateAdsByInventoryReferenceResponse res = sdk.ad.bulkCreateAdsByInventoryReference(req);
+            BulkCreateAdsByInventoryReferenceResponse res = sdk.ad.bulkCreateAdsByInventoryReference(req, new BulkCreateAdsByInventoryReferenceSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.bulkCreateAdsByInventoryReferenceResponse.isPresent()) {
                 // handle response
@@ -76,7 +69,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### ad

@@ -5,14 +5,10 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListSecurity;
-import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListPathParams;
-import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListQueryParams;
 import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListRequest;
 import org.openapis.openapi.models.operations.LifesciencesProjectsLocationsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -21,36 +17,27 @@ public class Application {
                 .build();
 
             LifesciencesProjectsLocationsListRequest req = new LifesciencesProjectsLocationsListRequest() {{
-                security = new LifesciencesProjectsLocationsListSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new LifesciencesProjectsLocationsListPathParams() {{
-                    name = "corrupti";
-                }};
-                queryParams = new LifesciencesProjectsLocationsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    filter = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    pageSize = 623564;
-                    pageToken = "deserunt";
-                    prettyPrint = false;
-                    quotaUser = "suscipit";
-                    uploadType = "iure";
-                    uploadProtocol = "magnam";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                filter = "nulla";
+                key = "corrupti";
+                name = "illum";
+                oauthToken = "vel";
+                pageSize = 623564;
+                pageToken = "deserunt";
+                prettyPrint = false;
+                quotaUser = "suscipit";
+                uploadType = "iure";
+                uploadProtocol = "magnam";
+            }}            
 
-            LifesciencesProjectsLocationsListResponse res = sdk.projects.lifesciencesProjectsLocationsList(req);
+            LifesciencesProjectsLocationsListResponse res = sdk.projects.lifesciencesProjectsLocationsList(req, new LifesciencesProjectsLocationsListSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.listLocationsResponse.isPresent()) {
                 // handle response

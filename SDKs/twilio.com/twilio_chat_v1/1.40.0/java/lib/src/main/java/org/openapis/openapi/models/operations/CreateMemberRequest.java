@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMemberRequest {
-    
-    public CreateMemberPathParams pathParams;
-    public CreateMemberRequest withPathParams(CreateMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the [Channel](https://www.twilio.com/docs/api/chat/rest/channels) the new member belongs to. Can be the Channel resource's `sid` or `unique_name`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChannelSid")
+    public String channelSid;
+    public CreateMemberRequest withChannelSid(String channelSid) {
+        this.channelSid = channelSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateMemberCreateMemberRequest request;
-    public CreateMemberRequest withRequest(CreateMemberCreateMemberRequest request) {
-        this.request = request;
+    public CreateMemberCreateMemberRequest requestBody;
+    public CreateMemberRequest withRequestBody(CreateMemberCreateMemberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateMemberSecurity security;
-    public CreateMemberRequest withSecurity(CreateMemberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateMemberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to create the resource under.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateMemberRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

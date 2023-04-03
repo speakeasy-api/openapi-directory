@@ -4,20 +4,239 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReplaceRouteRequest {
-    
-    public GETReplaceRouteQueryParams queryParams;
-    public GETReplaceRouteRequest withQueryParams(GETReplaceRouteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETReplaceRouteActionEnum action;
+    public GETReplaceRouteRequest withAction(GETReplaceRouteActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * [IPv4 traffic only] The ID of a carrier gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CarrierGatewayId")
+    public String carrierGatewayId;
+    public GETReplaceRouteRequest withCarrierGatewayId(String carrierGatewayId) {
+        this.carrierGatewayId = carrierGatewayId;
+        return this;
+    }
     
-    public GETReplaceRouteHeaders headers;
-    public GETReplaceRouteRequest withHeaders(GETReplaceRouteHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon Resource Name (ARN) of the core network.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CoreNetworkArn")
+    public String coreNetworkArn;
+    public GETReplaceRouteRequest withCoreNetworkArn(String coreNetworkArn) {
+        this.coreNetworkArn = coreNetworkArn;
+        return this;
+    }
+    
+    /**
+     * The IPv4 CIDR address block used for the destination match. The value that you provide must match the CIDR of an existing route in the table.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
+    public String destinationCidrBlock;
+    public GETReplaceRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
+    
+    /**
+     * The IPv6 CIDR address block used for the destination match. The value that you provide must match the CIDR of an existing route in the table.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationIpv6CidrBlock")
+    public String destinationIpv6CidrBlock;
+    public GETReplaceRouteRequest withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
+        this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
+        return this;
+    }
+    
+    /**
+     * The ID of the prefix list for the route.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
+    public String destinationPrefixListId;
+    public GETReplaceRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
+        this.destinationPrefixListId = destinationPrefixListId;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETReplaceRouteRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * [IPv6 traffic only] The ID of an egress-only internet gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EgressOnlyInternetGatewayId")
+    public String egressOnlyInternetGatewayId;
+    public GETReplaceRouteRequest withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
+        this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
+        return this;
+    }
+    
+    /**
+     * The ID of an internet gateway or virtual private gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GatewayId")
+    public String gatewayId;
+    public GETReplaceRouteRequest withGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    
+    /**
+     * The ID of a NAT instance in your VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETReplaceRouteRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * The ID of the local gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayId")
+    public String localGatewayId;
+    public GETReplaceRouteRequest withLocalGatewayId(String localGatewayId) {
+        this.localGatewayId = localGatewayId;
+        return this;
+    }
+    
+    /**
+     * Specifies whether to reset the local route to its default target (&lt;code&gt;local&lt;/code&gt;).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalTarget")
+    public Boolean localTarget;
+    public GETReplaceRouteRequest withLocalTarget(Boolean localTarget) {
+        this.localTarget = localTarget;
+        return this;
+    }
+    
+    /**
+     * [IPv4 traffic only] The ID of a NAT gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NatGatewayId")
+    public String natGatewayId;
+    public GETReplaceRouteRequest withNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    
+    /**
+     * The ID of a network interface.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
+    public String networkInterfaceId;
+    public GETReplaceRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    
+    /**
+     * The ID of the route table.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RouteTableId")
+    public String routeTableId;
+    public GETReplaceRouteRequest withRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    
+    /**
+     * The ID of a transit gateway.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayId")
+    public String transitGatewayId;
+    public GETReplaceRouteRequest withTransitGatewayId(String transitGatewayId) {
+        this.transitGatewayId = transitGatewayId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETReplaceRouteVersionEnum version;
+    public GETReplaceRouteRequest withVersion(GETReplaceRouteVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * The ID of a VPC endpoint. Supported for Gateway Load Balancer endpoints only.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcEndpointId")
+    public String vpcEndpointId;
+    public GETReplaceRouteRequest withVpcEndpointId(String vpcEndpointId) {
+        this.vpcEndpointId = vpcEndpointId;
+        return this;
+    }
+    
+    /**
+     * The ID of a VPC peering connection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcPeeringConnectionId")
+    public String vpcPeeringConnectionId;
+    public GETReplaceRouteRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
+        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETReplaceRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETReplaceRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETReplaceRouteRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETReplaceRouteRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETReplaceRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETReplaceRouteRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETReplaceRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

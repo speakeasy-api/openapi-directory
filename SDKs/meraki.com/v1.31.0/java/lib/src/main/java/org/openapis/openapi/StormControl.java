@@ -40,7 +40,7 @@ public class StormControl {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchStormControlResponse getNetworkSwitchStormControl(org.openapis.openapi.models.operations.GetNetworkSwitchStormControlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStormControlPathParams.class, baseUrl, "/networks/{networkId}/switch/stormControl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchStormControlRequest.class, baseUrl, "/networks/{networkId}/switch/stormControl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class StormControl {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchStormControlResponse updateNetworkSwitchStormControl(org.openapis.openapi.models.operations.UpdateNetworkSwitchStormControlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStormControlPathParams.class, baseUrl, "/networks/{networkId}/switch/stormControl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchStormControlRequest.class, baseUrl, "/networks/{networkId}/switch/stormControl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

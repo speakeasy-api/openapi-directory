@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsPatchNotesRawRequest {
-    
-    public ConversionsPatchNotesRawPathParams pathParams;
-    public ConversionsPatchNotesRawRequest withPathParams(ConversionsPatchNotesRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Patch requests
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public ConversionsPatchNotesRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ConversionsPatchNotesRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsPatchNotesRawRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     

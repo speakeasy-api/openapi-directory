@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuperfundsRequest {
-    
-    public GetSuperfundsQueryParams queryParams;
-    public GetSuperfundsRequest withQueryParams(GetSuperfundsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only records created or modified since this timestamp will be returned
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public GetSuperfundsRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
         return this;
     }
     
-    
-    public GetSuperfundsHeaders headers;
-    public GetSuperfundsRequest withHeaders(GetSuperfundsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetSuperfundsRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    /**
+     * Order by an any element
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public GetSuperfundsRequest withOrder(String order) {
+        this.order = order;
+        return this;
+    }
     
-    public GetSuperfundsSecurity security;
-    public GetSuperfundsRequest withSecurity(GetSuperfundsSecurity security) {
-        this.security = security;
+    /**
+     * e.g. page=1 \u2013 Up to 100 SuperFunds will be returned in a single API call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetSuperfundsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Filter by an any element
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
+    public String where;
+    public GetSuperfundsRequest withWhere(String where) {
+        this.where = where;
         return this;
     }
     

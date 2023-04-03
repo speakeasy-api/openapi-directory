@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemoveSourceIdentifierFromSubscriptionRequest {
-    
-    public GETRemoveSourceIdentifierFromSubscriptionQueryParams queryParams;
-    public GETRemoveSourceIdentifierFromSubscriptionRequest withQueryParams(GETRemoveSourceIdentifierFromSubscriptionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRemoveSourceIdentifierFromSubscriptionActionEnum action;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withAction(GETRemoveSourceIdentifierFromSubscriptionActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     *  The source identifier to be removed from the subscription, such as the instance identifier for an instance, or the name of a security group. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceIdentifier")
+    public String sourceIdentifier;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withSourceIdentifier(String sourceIdentifier) {
+        this.sourceIdentifier = sourceIdentifier;
+        return this;
+    }
     
-    public GETRemoveSourceIdentifierFromSubscriptionHeaders headers;
-    public GETRemoveSourceIdentifierFromSubscriptionRequest withHeaders(GETRemoveSourceIdentifierFromSubscriptionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the Amazon DocumentDB event notification subscription that you want to remove a source identifier from.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubscriptionName")
+    public String subscriptionName;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withSubscriptionName(String subscriptionName) {
+        this.subscriptionName = subscriptionName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRemoveSourceIdentifierFromSubscriptionVersionEnum version;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withVersion(GETRemoveSourceIdentifierFromSubscriptionVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRemoveSourceIdentifierFromSubscriptionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

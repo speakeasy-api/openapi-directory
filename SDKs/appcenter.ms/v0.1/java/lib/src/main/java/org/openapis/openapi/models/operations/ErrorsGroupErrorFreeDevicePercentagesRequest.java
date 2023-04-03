@@ -4,27 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsGroupErrorFreeDevicePercentagesRequest {
-    
-    public ErrorsGroupErrorFreeDevicePercentagesPathParams pathParams;
-    public ErrorsGroupErrorFreeDevicePercentagesRequest withPathParams(ErrorsGroupErrorFreeDevicePercentagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ErrorsGroupErrorFreeDevicePercentagesRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public ErrorsGroupErrorFreeDevicePercentagesQueryParams queryParams;
-    public ErrorsGroupErrorFreeDevicePercentagesRequest withQueryParams(ErrorsGroupErrorFreeDevicePercentagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Last date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public OffsetDateTime end;
+    public ErrorsGroupErrorFreeDevicePercentagesRequest withEnd(OffsetDateTime end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * The id of the error group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
+    public String errorGroupId;
+    public ErrorsGroupErrorFreeDevicePercentagesRequest withErrorGroupId(String errorGroupId) {
+        this.errorGroupId = errorGroupId;
+        return this;
+    }
     
-    public ErrorsGroupErrorFreeDevicePercentagesSecurity security;
-    public ErrorsGroupErrorFreeDevicePercentagesRequest withSecurity(ErrorsGroupErrorFreeDevicePercentagesSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ErrorsGroupErrorFreeDevicePercentagesRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * Start date time in data in ISO 8601 date time format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public OffsetDateTime start;
+    public ErrorsGroupErrorFreeDevicePercentagesRequest withStart(OffsetDateTime start) {
+        this.start = start;
         return this;
     }
     

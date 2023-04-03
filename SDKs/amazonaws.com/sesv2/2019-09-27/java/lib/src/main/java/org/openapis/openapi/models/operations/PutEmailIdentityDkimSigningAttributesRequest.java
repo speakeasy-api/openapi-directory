@@ -7,24 +7,69 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutEmailIdentityDkimSigningAttributesRequest {
-    
-    public PutEmailIdentityDkimSigningAttributesPathParams pathParams;
-    public PutEmailIdentityDkimSigningAttributesRequest withPathParams(PutEmailIdentityDkimSigningAttributesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutEmailIdentityDkimSigningAttributesHeaders headers;
-    public PutEmailIdentityDkimSigningAttributesRequest withHeaders(PutEmailIdentityDkimSigningAttributesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The email identity.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmailIdentity")
+    public String emailIdentity;
+    public PutEmailIdentityDkimSigningAttributesRequest withEmailIdentity(String emailIdentity) {
+        this.emailIdentity = emailIdentity;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutEmailIdentityDkimSigningAttributesRequestBody request;
-    public PutEmailIdentityDkimSigningAttributesRequest withRequest(PutEmailIdentityDkimSigningAttributesRequestBody request) {
-        this.request = request;
+    public PutEmailIdentityDkimSigningAttributesRequestBody requestBody;
+    public PutEmailIdentityDkimSigningAttributesRequest withRequestBody(PutEmailIdentityDkimSigningAttributesRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public PutEmailIdentityDkimSigningAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public PutEmailIdentityDkimSigningAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public PutEmailIdentityDkimSigningAttributesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public PutEmailIdentityDkimSigningAttributesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public PutEmailIdentityDkimSigningAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public PutEmailIdentityDkimSigningAttributesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public PutEmailIdentityDkimSigningAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

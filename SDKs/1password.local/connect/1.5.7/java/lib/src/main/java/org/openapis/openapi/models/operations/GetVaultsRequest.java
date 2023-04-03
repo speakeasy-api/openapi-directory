@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVaultsRequest {
-    
-    public GetVaultsQueryParams queryParams;
-    public GetVaultsRequest withQueryParams(GetVaultsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetVaultsSecurity security;
-    public GetVaultsRequest withSecurity(GetVaultsSecurity security) {
-        this.security = security;
+    /**
+     * Filter the Vault collection based on Vault name using SCIM eq filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public GetVaultsRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     

@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateShareByIdRequest {
-    
-    public UpdateShareByIdPathParams pathParams;
-    public UpdateShareByIdRequest withPathParams(UpdateShareByIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateShareByIdHeaders headers;
-    public UpdateShareByIdRequest withHeaders(UpdateShareByIdHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateShareByIdUpdateShareRequestBody request;
-    public UpdateShareByIdRequest withRequest(UpdateShareByIdUpdateShareRequestBody request) {
-        this.request = request;
+    public UpdateShareByIdUpdateShareRequestBody requestBody;
+    public UpdateShareByIdRequest withRequestBody(UpdateShareByIdUpdateShareRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Access Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public UpdateShareByIdRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public UpdateShareByIdRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
+        return this;
+    }
+    
+    /**
+     * ID of the share entry
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public UpdateShareByIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

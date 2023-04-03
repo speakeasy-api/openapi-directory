@@ -34,25 +34,26 @@ public class ChangeLogs {
     /**
      * Gets one change log by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingChangeLogsGetResponse dfareportingChangeLogsGet(org.openapis.openapi.models.operations.DfareportingChangeLogsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingChangeLogsGetResponse dfareportingChangeLogsGet(org.openapis.openapi.models.operations.DfareportingChangeLogsGetRequest request, org.openapis.openapi.models.operations.DfareportingChangeLogsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingChangeLogsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/changeLogs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingChangeLogsGetRequest.class, baseUrl, "/userprofiles/{profileId}/changeLogs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingChangeLogsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingChangeLogsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class ChangeLogs {
     /**
      * Retrieves a list of change logs. This method supports paging.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingChangeLogsListResponse dfareportingChangeLogsList(org.openapis.openapi.models.operations.DfareportingChangeLogsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingChangeLogsListResponse dfareportingChangeLogsList(org.openapis.openapi.models.operations.DfareportingChangeLogsListRequest request, org.openapis.openapi.models.operations.DfareportingChangeLogsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingChangeLogsListPathParams.class, baseUrl, "/userprofiles/{profileId}/changeLogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingChangeLogsListRequest.class, baseUrl, "/userprofiles/{profileId}/changeLogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingChangeLogsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingChangeLogsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

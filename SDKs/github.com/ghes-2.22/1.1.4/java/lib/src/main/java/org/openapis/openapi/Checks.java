@@ -52,12 +52,12 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksCreateResponse checksCreate(org.openapis.openapi.models.operations.ChecksCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksCreatePathParams.class, baseUrl, "/repos/{owner}/{repo}/check-runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksCreateRequest.class, baseUrl, "/repos/{owner}/{repo}/check-runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -99,12 +99,12 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksCreateSuiteResponse checksCreateSuite(org.openapis.openapi.models.operations.ChecksCreateSuiteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksCreateSuitePathParams.class, baseUrl, "/repos/{owner}/{repo}/check-suites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksCreateSuiteRequest.class, baseUrl, "/repos/{owner}/{repo}/check-suites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -146,7 +146,7 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksGetResponse checksGet(org.openapis.openapi.models.operations.ChecksGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksGetPathParams.class, baseUrl, "/repos/{owner}/{repo}/check-runs/{check_run_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksGetRequest.class, baseUrl, "/repos/{owner}/{repo}/check-runs/{check_run_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -188,7 +188,7 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksGetSuiteResponse checksGetSuite(org.openapis.openapi.models.operations.ChecksGetSuiteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksGetSuitePathParams.class, baseUrl, "/repos/{owner}/{repo}/check-suites/{check_suite_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksGetSuiteRequest.class, baseUrl, "/repos/{owner}/{repo}/check-suites/{check_suite_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -228,13 +228,13 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksListAnnotationsResponse checksListAnnotations(org.openapis.openapi.models.operations.ChecksListAnnotationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksListAnnotationsPathParams.class, baseUrl, "/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksListAnnotationsRequest.class, baseUrl, "/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChecksListAnnotationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChecksListAnnotationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -278,13 +278,13 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksListForRefResponse checksListForRef(org.openapis.openapi.models.operations.ChecksListForRefRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksListForRefPathParams.class, baseUrl, "/repos/{owner}/{repo}/commits/{ref}/check-runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksListForRefRequest.class, baseUrl, "/repos/{owner}/{repo}/commits/{ref}/check-runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChecksListForRefQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChecksListForRefRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -328,13 +328,13 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksListForSuiteResponse checksListForSuite(org.openapis.openapi.models.operations.ChecksListForSuiteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksListForSuitePathParams.class, baseUrl, "/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksListForSuiteRequest.class, baseUrl, "/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChecksListForSuiteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChecksListForSuiteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -378,13 +378,13 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksListSuitesForRefResponse checksListSuitesForRef(org.openapis.openapi.models.operations.ChecksListSuitesForRefRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksListSuitesForRefPathParams.class, baseUrl, "/repos/{owner}/{repo}/commits/{ref}/check-suites", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksListSuitesForRefRequest.class, baseUrl, "/repos/{owner}/{repo}/commits/{ref}/check-suites", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChecksListSuitesForRefQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ChecksListSuitesForRefRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -428,7 +428,7 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksRerequestSuiteResponse checksRerequestSuite(org.openapis.openapi.models.operations.ChecksRerequestSuiteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksRerequestSuitePathParams.class, baseUrl, "/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksRerequestSuiteRequest.class, baseUrl, "/repos/{owner}/{repo}/check-suites/{check_suite_id}/rerequest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -468,12 +468,12 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksSetSuitesPreferencesResponse checksSetSuitesPreferences(org.openapis.openapi.models.operations.ChecksSetSuitesPreferencesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksSetSuitesPreferencesPathParams.class, baseUrl, "/repos/{owner}/{repo}/check-suites/preferences", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksSetSuitesPreferencesRequest.class, baseUrl, "/repos/{owner}/{repo}/check-suites/preferences", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -515,12 +515,12 @@ public class Checks {
      */
     public org.openapis.openapi.models.operations.ChecksUpdateResponse checksUpdate(org.openapis.openapi.models.operations.ChecksUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksUpdatePathParams.class, baseUrl, "/repos/{owner}/{repo}/check-runs/{check_run_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChecksUpdateRequest.class, baseUrl, "/repos/{owner}/{repo}/check-runs/{check_run_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

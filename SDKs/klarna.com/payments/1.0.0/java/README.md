@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CancelAuthorizationPathParams;
 import org.openapis.openapi.models.operations.CancelAuthorizationRequest;
 import org.openapis.openapi.models.operations.CancelAuthorizationResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             CancelAuthorizationRequest req = new CancelAuthorizationRequest() {{
-                pathParams = new CancelAuthorizationPathParams() {{
-                    authorizationToken = "corrupti";
-                }};
-            }};            
+                authorizationToken = "corrupti";
+            }}            
 
             CancelAuthorizationResponse res = sdk.orders.cancelAuthorization(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### orders

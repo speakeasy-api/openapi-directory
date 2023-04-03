@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteGroupUsingGETRequest {
-    
-    public DeleteGroupUsingGETQueryParams queryParams;
-    public DeleteGroupUsingGETRequest withQueryParams(DeleteGroupUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupID")
+    public String groupID;
+    public DeleteGroupUsingGETRequest withGroupID(String groupID) {
+        this.groupID = groupID;
         return this;
     }
     

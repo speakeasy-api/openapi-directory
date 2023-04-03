@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveReviewRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SaveReviewRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public SaveReviewHeaders headers;
-    public SaveReviewRequest withHeaders(SaveReviewHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SaveReviewRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SaveReviewRequest request;
-    public SaveReviewRequest withRequest(org.openapis.openapi.models.shared.SaveReviewRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SaveReviewRequest saveReviewRequest;
+    public SaveReviewRequest withSaveReviewRequest(org.openapis.openapi.models.shared.SaveReviewRequest saveReviewRequest) {
+        this.saveReviewRequest = saveReviewRequest;
         return this;
     }
     

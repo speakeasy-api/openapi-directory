@@ -7,31 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProductRequest {
-    
-    public CreateProductPathParams pathParams;
-    public CreateProductRequest withPathParams(CreateProductPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreateProductQueryParams queryParams;
-    public CreateProductRequest withQueryParams(CreateProductQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProductCreateRequest request;
-    public CreateProductRequest withRequest(org.openapis.openapi.models.shared.ProductCreateRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ProductCreateRequest productCreateRequest;
+    public CreateProductRequest withProductCreateRequest(org.openapis.openapi.models.shared.ProductCreateRequest productCreateRequest) {
+        this.productCreateRequest = productCreateRequest;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public CreateProductRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
+        return this;
+    }
     
-    public CreateProductSecurity security;
-    public CreateProductRequest withSecurity(CreateProductSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnEntity")
+    public Boolean returnEntity;
+    public CreateProductRequest withReturnEntity(Boolean returnEntity) {
+        this.returnEntity = returnEntity;
         return this;
     }
     

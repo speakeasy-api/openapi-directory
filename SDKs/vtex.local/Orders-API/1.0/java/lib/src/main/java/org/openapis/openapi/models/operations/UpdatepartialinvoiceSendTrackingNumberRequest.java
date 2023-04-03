@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatepartialinvoiceSendTrackingNumberRequest {
-    
-    public UpdatepartialinvoiceSendTrackingNumberPathParams pathParams;
-    public UpdatepartialinvoiceSendTrackingNumberRequest withPathParams(UpdatepartialinvoiceSendTrackingNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpdatepartialinvoiceSendTrackingNumberRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpdatepartialinvoiceSendTrackingNumberHeaders headers;
-    public UpdatepartialinvoiceSendTrackingNumberRequest withHeaders(UpdatepartialinvoiceSendTrackingNumberHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpdatepartialinvoiceSendTrackingNumberRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumberRequest request;
-    public UpdatepartialinvoiceSendTrackingNumberRequest withRequest(org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumberRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumberRequest updatepartialinvoiceSendTrackingNumberRequest;
+    public UpdatepartialinvoiceSendTrackingNumberRequest withUpdatepartialinvoiceSendTrackingNumberRequest(org.openapis.openapi.models.shared.UpdatepartialinvoiceSendTrackingNumberRequest updatepartialinvoiceSendTrackingNumberRequest) {
+        this.updatepartialinvoiceSendTrackingNumberRequest = updatepartialinvoiceSendTrackingNumberRequest;
+        return this;
+    }
+    
+    /**
+     * Number that identifies the invoice.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceNumber")
+    public String invoiceNumber;
+    public UpdatepartialinvoiceSendTrackingNumberRequest withInvoiceNumber(String invoiceNumber) {
+        this.invoiceNumber = invoiceNumber;
+        return this;
+    }
+    
+    /**
+     * Unique code that identifies the order whose invoice is being sent.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public UpdatepartialinvoiceSendTrackingNumberRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

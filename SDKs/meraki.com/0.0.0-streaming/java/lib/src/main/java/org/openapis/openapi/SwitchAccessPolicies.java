@@ -39,7 +39,7 @@ public class SwitchAccessPolicies {
      */
     public org.openapis.openapi.models.operations.GetNetworkAccessPoliciesResponse getNetworkAccessPolicies(org.openapis.openapi.models.operations.GetNetworkAccessPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAccessPoliciesPathParams.class, baseUrl, "/networks/{networkId}/accessPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkAccessPoliciesRequest.class, baseUrl, "/networks/{networkId}/accessPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

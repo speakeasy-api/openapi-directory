@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveautoapproveforaccountRequest {
-    
-    public SaveautoapproveforaccountQueryParams queryParams;
-    public SaveautoapproveforaccountRequest withQueryParams(SaveautoapproveforaccountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SaveautoapproveforaccountRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public SaveautoapproveforaccountHeaders headers;
-    public SaveautoapproveforaccountRequest withHeaders(SaveautoapproveforaccountHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SaveautoapproveforaccountRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SaveautoapproveforaccountRequest request;
-    public SaveautoapproveforaccountRequest withRequest(org.openapis.openapi.models.shared.SaveautoapproveforaccountRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SaveautoapproveforaccountRequest saveautoapproveforaccountRequest;
+    public SaveautoapproveforaccountRequest withSaveautoapproveforaccountRequest(org.openapis.openapi.models.shared.SaveautoapproveforaccountRequest saveautoapproveforaccountRequest) {
+        this.saveautoapproveforaccountRequest = saveautoapproveforaccountRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public SaveautoapproveforaccountRequest withAccountName(String accountName) {
+        this.accountName = accountName;
         return this;
     }
     

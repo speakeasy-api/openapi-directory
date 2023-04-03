@@ -4,27 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileRequest {
-    
-    public GetProfilePathParams pathParams;
-    public GetProfileRequest withPathParams(GetProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * &lt;p&gt; The format of the returned profiling data. The format maps to the &lt;code&gt;Accept&lt;/code&gt; and &lt;code&gt;Content-Type&lt;/code&gt; headers of the HTTP request. You can specify one of the following: or the default . &lt;/p&gt; &lt;pre&gt;&lt;code&gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt; &amp;lt;p&amp;gt; &amp;lt;code&amp;gt;application/json&amp;lt;/code&amp;gt; \u2014 standard JSON format &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; &amp;lt;p&amp;gt; &amp;lt;code&amp;gt;application/x-amzn-ion&amp;lt;/code&amp;gt; \u2014 the Amazon Ion data format. For more information, see &amp;lt;a href=&amp;quot;http://amzn.github.io/ion-docs/&amp;quot;&amp;gt;Amazon Ion&amp;lt;/a&amp;gt;. &amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetProfileRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetProfileQueryParams queryParams;
-    public GetProfileRequest withQueryParams(GetProfileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetProfileRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetProfileRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetProfileHeaders headers;
-    public GetProfileRequest withHeaders(GetProfileHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetProfileRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetProfileRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetProfileRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetProfileRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetProfileRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; The end time of the requested profile. Specify using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC. &lt;/p&gt; &lt;p&gt; If you specify &lt;code&gt;endTime&lt;/code&gt;, then you must also specify &lt;code&gt;period&lt;/code&gt; or &lt;code&gt;startTime&lt;/code&gt;, but not both. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
+    public OffsetDateTime endTime;
+    public GetProfileRequest withEndTime(OffsetDateTime endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     *  The maximum depth of the stacks in the code that is represented in the aggregated profile. For example, if CodeGuru Profiler finds a method &lt;code&gt;A&lt;/code&gt;, which calls method &lt;code&gt;B&lt;/code&gt;, which calls method &lt;code&gt;C&lt;/code&gt;, which calls method &lt;code&gt;D&lt;/code&gt;, then the depth is 4. If the &lt;code&gt;maxDepth&lt;/code&gt; is set to 2, then the aggregated profile contains representations of methods &lt;code&gt;A&lt;/code&gt; and &lt;code&gt;B&lt;/code&gt;. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDepth")
+    public Long maxDepth;
+    public GetProfileRequest withMaxDepth(Long maxDepth) {
+        this.maxDepth = maxDepth;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt; Used with &lt;code&gt;startTime&lt;/code&gt; or &lt;code&gt;endTime&lt;/code&gt; to specify the time range for the returned aggregated profile. Specify using the ISO 8601 format. For example, &lt;code&gt;P1DT1H1M1S&lt;/code&gt;. &lt;/p&gt; &lt;pre&gt;&lt;code&gt; &amp;lt;p&amp;gt; To get the latest aggregated profile, specify only &amp;lt;code&amp;gt;period&amp;lt;/code&amp;gt;. &amp;lt;/p&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public String period;
+    public GetProfileRequest withPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    
+    /**
+     * The name of the profiling group to get.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profilingGroupName")
+    public String profilingGroupName;
+    public GetProfileRequest withProfilingGroupName(String profilingGroupName) {
+        this.profilingGroupName = profilingGroupName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The start time of the profile to get. Specify using the ISO 8601 format. For example, 2020-06-01T13:15:02.001Z represents 1 millisecond past June 1, 2020 1:15:02 PM UTC.&lt;/p&gt; &lt;pre&gt;&lt;code&gt; &amp;lt;p&amp;gt; If you specify &amp;lt;code&amp;gt;startTime&amp;lt;/code&amp;gt;, then you must also specify &amp;lt;code&amp;gt;period&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;endTime&amp;lt;/code&amp;gt;, but not both. &amp;lt;/p&amp;gt; &lt;/code&gt;&lt;/pre&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
+    public OffsetDateTime startTime;
+    public GetProfileRequest withStartTime(OffsetDateTime startTime) {
+        this.startTime = startTime;
         return this;
     }
     

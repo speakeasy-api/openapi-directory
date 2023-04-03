@@ -4,13 +4,297 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchCampaignDonorsRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchCampaignDonorsRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchCampaignDonorsQueryParams queryParams;
-    public SearchCampaignDonorsRequest withQueryParams(SearchCampaignDonorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchCampaignDonorsRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchCampaignDonorsRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchCampaignDonorsRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchCampaignDonorsRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchCampaignDonorsRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchCampaignDonorsRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchCampaignDonorsRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchCampaignDonorsRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchCampaignDonorsRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchCampaignDonorsRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchCampaignDonorsRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchCampaignDonorsRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchCampaignDonorsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Amount
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.amount")
+    public Double searchDbCampaignDonorsAmount;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsAmount(Double searchDbCampaignDonorsAmount) {
+        this.searchDbCampaignDonorsAmount = searchDbCampaignDonorsAmount;
+        return this;
+    }
+    
+    /**
+     * City
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.city")
+    public String searchDbCampaignDonorsCity;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsCity(String searchDbCampaignDonorsCity) {
+        this.searchDbCampaignDonorsCity = searchDbCampaignDonorsCity;
+        return this;
+    }
+    
+    /**
+     * Committee
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.committee")
+    public String searchDbCampaignDonorsCommittee;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsCommittee(String searchDbCampaignDonorsCommittee) {
+        this.searchDbCampaignDonorsCommittee = searchDbCampaignDonorsCommittee;
+        return this;
+    }
+    
+    /**
+     * Date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.date")
+    public String searchDbCampaignDonorsDate;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsDate(String searchDbCampaignDonorsDate) {
+        this.searchDbCampaignDonorsDate = searchDbCampaignDonorsDate;
+        return this;
+    }
+    
+    /**
+     * Donor
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.donor")
+    public String searchDbCampaignDonorsDonor;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsDonor(String searchDbCampaignDonorsDonor) {
+        this.searchDbCampaignDonorsDonor = searchDbCampaignDonorsDonor;
+        return this;
+    }
+    
+    /**
+     * Employer
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.employer")
+    public String searchDbCampaignDonorsEmployer;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsEmployer(String searchDbCampaignDonorsEmployer) {
+        this.searchDbCampaignDonorsEmployer = searchDbCampaignDonorsEmployer;
+        return this;
+    }
+    
+    /**
+     * Gender
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.gender")
+    public String searchDbCampaignDonorsGender;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsGender(String searchDbCampaignDonorsGender) {
+        this.searchDbCampaignDonorsGender = searchDbCampaignDonorsGender;
+        return this;
+    }
+    
+    /**
+     * Location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.location")
+    public String searchDbCampaignDonorsLocation;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsLocation(String searchDbCampaignDonorsLocation) {
+        this.searchDbCampaignDonorsLocation = searchDbCampaignDonorsLocation;
+        return this;
+    }
+    
+    /**
+     * Occupation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.occupation")
+    public String searchDbCampaignDonorsOccupation;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsOccupation(String searchDbCampaignDonorsOccupation) {
+        this.searchDbCampaignDonorsOccupation = searchDbCampaignDonorsOccupation;
+        return this;
+    }
+    
+    /**
+     * Party
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.party")
+    public String searchDbCampaignDonorsParty;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsParty(String searchDbCampaignDonorsParty) {
+        this.searchDbCampaignDonorsParty = searchDbCampaignDonorsParty;
+        return this;
+    }
+    
+    /**
+     * State
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.state")
+    public String searchDbCampaignDonorsState;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsState(String searchDbCampaignDonorsState) {
+        this.searchDbCampaignDonorsState = searchDbCampaignDonorsState;
+        return this;
+    }
+    
+    /**
+     * Zip Code
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_campaign_donors.zip_code")
+    public String searchDbCampaignDonorsZipCode;
+    public SearchCampaignDonorsRequest withSearchDbCampaignDonorsZipCode(String searchDbCampaignDonorsZipCode) {
+        this.searchDbCampaignDonorsZipCode = searchDbCampaignDonorsZipCode;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchCampaignDonorsRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchCampaignDonorsRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchCampaignDonorsRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

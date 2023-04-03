@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForTeamDiscussionInOrgRequest {
-    
-    public ReactionsCreateForTeamDiscussionInOrgPathParams pathParams;
-    public ReactionsCreateForTeamDiscussionInOrgRequest withPathParams(ReactionsCreateForTeamDiscussionInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReactionsCreateForTeamDiscussionInOrgRequestBody requestBody;
+    public ReactionsCreateForTeamDiscussionInOrgRequest withRequestBody(ReactionsCreateForTeamDiscussionInOrgRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReactionsCreateForTeamDiscussionInOrgRequestBody request;
-    public ReactionsCreateForTeamDiscussionInOrgRequest withRequest(ReactionsCreateForTeamDiscussionInOrgRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsCreateForTeamDiscussionInOrgRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ReactionsCreateForTeamDiscussionInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public ReactionsCreateForTeamDiscussionInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

@@ -35,10 +35,11 @@ public class Numbers {
      * Find lease configs
      * Searches for all number lease configs for the user. Returns a paged list of NumberConfig
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindNumberLeaseConfigsResponse findNumberLeaseConfigs(org.openapis.openapi.models.operations.FindNumberLeaseConfigsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindNumberLeaseConfigsResponse findNumberLeaseConfigs(org.openapis.openapi.models.operations.FindNumberLeaseConfigsRequest request, org.openapis.openapi.models.operations.FindNumberLeaseConfigsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/leases/configs");
         
@@ -46,14 +47,14 @@ public class Numbers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumberLeaseConfigsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumberLeaseConfigsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -89,10 +90,11 @@ public class Numbers {
      * Find leases
      * Searches for all numbers leased by account user. This API is useful for finding all numbers currently owned by the user. Returns a paged list of number leases.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindNumberLeasesResponse findNumberLeases(org.openapis.openapi.models.operations.FindNumberLeasesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindNumberLeasesResponse findNumberLeases(org.openapis.openapi.models.operations.FindNumberLeasesRequest request, org.openapis.openapi.models.operations.FindNumberLeasesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/leases");
         
@@ -100,14 +102,14 @@ public class Numbers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumberLeasesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumberLeasesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -143,10 +145,11 @@ public class Numbers {
      * Find number regions
      * Searches for region information. Use this API to obtain detailed region information that can be used to query for more specific phone numbers than a general query.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindNumberRegionsResponse findNumberRegions(org.openapis.openapi.models.operations.FindNumberRegionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindNumberRegionsResponse findNumberRegions(org.openapis.openapi.models.operations.FindNumberRegionsRequest request, org.openapis.openapi.models.operations.FindNumberRegionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/regions");
         
@@ -154,14 +157,14 @@ public class Numbers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumberRegionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumberRegionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,10 +200,11 @@ public class Numbers {
      * Find local numbers
      * Searches for numbers available for purchase in CallFire local numbers catalog . At least one additional parameter is required. User may filter local numbers by their region information. If all numbers with desirable zip code is already busy search will return available numbers with nearest zip code.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindNumbersLocalResponse findNumbersLocal(org.openapis.openapi.models.operations.FindNumbersLocalRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindNumbersLocalResponse findNumbersLocal(org.openapis.openapi.models.operations.FindNumbersLocalRequest request, org.openapis.openapi.models.operations.FindNumbersLocalSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/local");
         
@@ -208,14 +212,14 @@ public class Numbers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumbersLocalQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumbersLocalRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,10 +255,11 @@ public class Numbers {
      * Find tollfree numbers
      * Searches for the toll free numbers which are available for purchase in the CallFire catalog
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindNumbersTollfreeResponse findNumbersTollfree(org.openapis.openapi.models.operations.FindNumbersTollfreeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindNumbersTollfreeResponse findNumbersTollfree(org.openapis.openapi.models.operations.FindNumbersTollfreeRequest request, org.openapis.openapi.models.operations.FindNumbersTollfreeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/numbers/tollfree");
         
@@ -262,14 +267,14 @@ public class Numbers {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumbersTollfreeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FindNumbersTollfreeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -305,25 +310,26 @@ public class Numbers {
      * Find a specific lease
      * Returns a single NumberLease instance for a given number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumberLeaseResponse getNumberLease(org.openapis.openapi.models.operations.GetNumberLeaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumberLeaseResponse getNumberLease(org.openapis.openapi.models.operations.GetNumberLeaseRequest request, org.openapis.openapi.models.operations.GetNumberLeaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNumberLeasePathParams.class, baseUrl, "/numbers/leases/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNumberLeaseRequest.class, baseUrl, "/numbers/leases/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumberLeaseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumberLeaseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -359,25 +365,26 @@ public class Numbers {
      * Find a specific lease config
      * Returns a single NumberConfig instance for a given number lease
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNumberLeaseConfigResponse getNumberLeaseConfig(org.openapis.openapi.models.operations.GetNumberLeaseConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNumberLeaseConfigResponse getNumberLeaseConfig(org.openapis.openapi.models.operations.GetNumberLeaseConfigRequest request, org.openapis.openapi.models.operations.GetNumberLeaseConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNumberLeaseConfigPathParams.class, baseUrl, "/numbers/leases/configs/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNumberLeaseConfigRequest.class, baseUrl, "/numbers/leases/configs/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumberLeaseConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNumberLeaseConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -413,21 +420,22 @@ public class Numbers {
      * Update a lease
      * Updates a number lease instance. Ability to turn on/off autoRenew and toggle call/text features for a particular number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateNumberLeaseResponse updateNumberLease(org.openapis.openapi.models.operations.UpdateNumberLeaseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateNumberLeaseResponse updateNumberLease(org.openapis.openapi.models.operations.UpdateNumberLeaseRequest request, org.openapis.openapi.models.operations.UpdateNumberLeaseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNumberLeasePathParams.class, baseUrl, "/numbers/leases/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNumberLeaseRequest.class, baseUrl, "/numbers/leases/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "numberLeaseInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -455,21 +463,22 @@ public class Numbers {
      * Update a lease config
      * Updates a phone number lease configuration. Use this API endpoint to add an Inbound IVR or Call Tracking feature to a CallFire phone number. Call tracking configuration allows you to track the incoming calls, to analyze and to respond customers using sms or voice replies. For more information see [call tracking page](https://www.callfire.com/products/call-tracking)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateNumberLeaseConfigResponse updateNumberLeaseConfig(org.openapis.openapi.models.operations.UpdateNumberLeaseConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateNumberLeaseConfigResponse updateNumberLeaseConfig(org.openapis.openapi.models.operations.UpdateNumberLeaseConfigRequest request, org.openapis.openapi.models.operations.UpdateNumberLeaseConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNumberLeaseConfigPathParams.class, baseUrl, "/numbers/leases/configs/{number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNumberLeaseConfigRequest.class, baseUrl, "/numbers/leases/configs/{number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "numberConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

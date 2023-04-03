@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsCreateRequest {
-    
-    public DistributionGroupsCreatePathParams pathParams;
-    public DistributionGroupsCreateRequest withPathParams(DistributionGroupsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The attributes to update for the distribution group
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public DistributionGroupsCreateRequestBody request;
-    public DistributionGroupsCreateRequest withRequest(DistributionGroupsCreateRequestBody request) {
-        this.request = request;
+    public DistributionGroupsCreateRequestBody requestBody;
+    public DistributionGroupsCreateRequest withRequestBody(DistributionGroupsCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DistributionGroupsCreateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public DistributionGroupsCreateSecurity security;
-    public DistributionGroupsCreateRequest withSecurity(DistributionGroupsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DistributionGroupsCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

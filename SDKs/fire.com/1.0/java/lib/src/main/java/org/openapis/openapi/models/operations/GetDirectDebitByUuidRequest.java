@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDirectDebitByUuidRequest {
-    
-    public GetDirectDebitByUuidPathParams pathParams;
-    public GetDirectDebitByUuidRequest withPathParams(GetDirectDebitByUuidPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=directDebitUuid")
+    public String directDebitUuid;
+    public GetDirectDebitByUuidRequest withDirectDebitUuid(String directDebitUuid) {
+        this.directDebitUuid = directDebitUuid;
         return this;
     }
     

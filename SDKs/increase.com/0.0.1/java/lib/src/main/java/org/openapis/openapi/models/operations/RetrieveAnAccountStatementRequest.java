@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveAnAccountStatementRequest {
-    
-    public RetrieveAnAccountStatementPathParams pathParams;
-    public RetrieveAnAccountStatementRequest withPathParams(RetrieveAnAccountStatementPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_statement_id")
+    public String accountStatementId;
+    public RetrieveAnAccountStatementRequest withAccountStatementId(String accountStatementId) {
+        this.accountStatementId = accountStatementId;
         return this;
     }
     

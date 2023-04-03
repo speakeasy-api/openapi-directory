@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributorSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeApikey apikey;
-    public GetContributorSecurity withApikey(org.openapis.openapi.models.shared.SchemeApikey apikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=apikey")
+    public String apikey;
+    public GetContributorSecurity withApikey(String apikey) {
         this.apikey = apikey;
         return this;
     }

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InvoiceApiSendToAccountantJsonRequest {
-    
-    public InvoiceApiSendToAccountantJsonHeaders headers;
-    public InvoiceApiSendToAccountantJsonRequest withHeaders(InvoiceApiSendToAccountantJsonHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.SendInvoiceToAccountantApiModel sendInvoiceToAccountantApiModel;
+    public InvoiceApiSendToAccountantJsonRequest withSendInvoiceToAccountantApiModel(org.openapis.openapi.models.shared.SendInvoiceToAccountantApiModel sendInvoiceToAccountantApiModel) {
+        this.sendInvoiceToAccountantApiModel = sendInvoiceToAccountantApiModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SendInvoiceToAccountantApiModel request;
-    public InvoiceApiSendToAccountantJsonRequest withRequest(org.openapis.openapi.models.shared.SendInvoiceToAccountantApiModel request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
+    public String xAuthKey;
+    public InvoiceApiSendToAccountantJsonRequest withXAuthKey(String xAuthKey) {
+        this.xAuthKey = xAuthKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
+    public String xAuthSecret;
+    public InvoiceApiSendToAccountantJsonRequest withXAuthSecret(String xAuthSecret) {
+        this.xAuthSecret = xAuthSecret;
         return this;
     }
     

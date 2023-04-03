@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNumbersBaseRequest {
-    
-    public GetNumbersBaseQueryParams queryParams;
-    public GetNumbersBaseRequest withQueryParams(GetNumbersBaseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Base of the supplied number (Optional base 10 assumed by default)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
+    public Long from;
+    public GetNumbersBaseRequest withFrom(Long from) {
+        this.from = from;
         return this;
     }
     
+    /**
+     * Number to convert to the target base
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public Long number;
+    public GetNumbersBaseRequest withNumber(Long number) {
+        this.number = number;
+        return this;
+    }
     
-    public GetNumbersBaseSecurity security;
-    public GetNumbersBaseRequest withSecurity(GetNumbersBaseSecurity security) {
-        this.security = security;
+    /**
+     * Target base to convert to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
+    public Long to;
+    public GetNumbersBaseRequest withTo(Long to) {
+        this.to = to;
         return this;
     }
     

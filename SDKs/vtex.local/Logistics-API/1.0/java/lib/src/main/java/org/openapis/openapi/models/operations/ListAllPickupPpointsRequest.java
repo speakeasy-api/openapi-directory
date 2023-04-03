@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAllPickupPpointsRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ListAllPickupPpointsRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public ListAllPickupPpointsHeaders headers;
-    public ListAllPickupPpointsRequest withHeaders(ListAllPickupPpointsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ListAllPickupPpointsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

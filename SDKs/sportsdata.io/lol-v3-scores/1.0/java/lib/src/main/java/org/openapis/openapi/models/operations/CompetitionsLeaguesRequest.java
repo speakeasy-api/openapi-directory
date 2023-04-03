@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompetitionsLeaguesRequest {
-    
-    public CompetitionsLeaguesPathParams pathParams;
-    public CompetitionsLeaguesRequest withPathParams(CompetitionsLeaguesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public CompetitionsLeaguesFormatEnum format;
+    public CompetitionsLeaguesRequest withFormat(CompetitionsLeaguesFormatEnum format) {
+        this.format = format;
         return this;
     }
     

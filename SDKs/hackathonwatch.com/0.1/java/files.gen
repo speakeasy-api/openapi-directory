@@ -31,14 +31,11 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GETHackathonsIdFormatPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETHackathonsIdFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETHackathonsIdFormatResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETHackathonsComingFormatQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETHackathonsComingFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETHackathonsComingFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETSwaggerDocFormatResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETSwaggerDocNameFormatPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETSwaggerDocNameFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETSwaggerDocNameFormatResponse.java
 USAGE.md

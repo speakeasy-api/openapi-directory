@@ -7,31 +7,150 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrivePermissionsUpdateRequest {
-    
-    public DrivePermissionsUpdatePathParams pathParams;
-    public DrivePermissionsUpdateRequest withPathParams(DrivePermissionsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DrivePermissionsUpdateQueryParams queryParams;
-    public DrivePermissionsUpdateRequest withQueryParams(DrivePermissionsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PermissionInput request;
-    public DrivePermissionsUpdateRequest withRequest(org.openapis.openapi.models.shared.PermissionInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PermissionInput permissionInput;
+    public DrivePermissionsUpdateRequest withPermissionInput(org.openapis.openapi.models.shared.PermissionInput permissionInput) {
+        this.permissionInput = permissionInput;
         return this;
     }
     
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DrivePermissionsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
     
-    public DrivePermissionsUpdateSecurity security;
-    public DrivePermissionsUpdateRequest withSecurity(DrivePermissionsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DrivePermissionsUpdateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * The ID of the file or shared drive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
+    public String fileId;
+    public DrivePermissionsUpdateRequest withFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DrivePermissionsUpdateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DrivePermissionsUpdateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * The ID of the permission.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionId")
+    public String permissionId;
+    public DrivePermissionsUpdateRequest withPermissionId(String permissionId) {
+        this.permissionId = permissionId;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DrivePermissionsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DrivePermissionsUpdateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Whether to remove the expiration date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeExpiration")
+    public Boolean removeExpiration;
+    public DrivePermissionsUpdateRequest withRemoveExpiration(Boolean removeExpiration) {
+        this.removeExpiration = removeExpiration;
+        return this;
+    }
+    
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
+    public Boolean supportsAllDrives;
+    public DrivePermissionsUpdateRequest withSupportsAllDrives(Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
+    public Boolean supportsTeamDrives;
+    public DrivePermissionsUpdateRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
+        this.supportsTeamDrives = supportsTeamDrives;
+        return this;
+    }
+    
+    /**
+     * Whether to transfer ownership to the specified user and downgrade the current owner to a writer. This parameter is required as an acknowledgement of the side effect. File owners can only transfer ownership of files existing on My Drive. Files existing in a shared drive are owned by the organization that owns that shared drive. Ownership transfers are not supported for files and folders in shared drives. Organizers of a shared drive can move items from that shared drive into their My Drive which transfers the ownership to them.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transferOwnership")
+    public Boolean transferOwnership;
+    public DrivePermissionsUpdateRequest withTransferOwnership(Boolean transferOwnership) {
+        this.transferOwnership = transferOwnership;
+        return this;
+    }
+    
+    /**
+     * Issue the request as a domain administrator; if set to true, then the requester will be granted access if the file ID parameter refers to a shared drive and the requester is an administrator of the domain to which the shared drive belongs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useDomainAdminAccess")
+    public Boolean useDomainAdminAccess;
+    public DrivePermissionsUpdateRequest withUseDomainAdminAccess(Boolean useDomainAdminAccess) {
+        this.useDomainAdminAccess = useDomainAdminAccess;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DrivePermissionsUpdateRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

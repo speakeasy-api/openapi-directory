@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContainersNameOrIdRenameRequest {
-    
-    public PostContainersNameOrIdRenamePathParams pathParams;
-    public PostContainersNameOrIdRenameRequest withPathParams(PostContainersNameOrIdRenamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PostContainersNameOrIdRenameRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
-    
-    public PostContainersNameOrIdRenameQueryParams queryParams;
-    public PostContainersNameOrIdRenameRequest withQueryParams(PostContainersNameOrIdRenameQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PostContainersNameOrIdRenameRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
         return this;
     }
     
+    /**
+     * The new name for the container. The characters in the name can include uppercase letters, lowercase letters, numbers, periods (.), underscores (_), or hyphens (-), but the name must start with a letter.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PostContainersNameOrIdRenameRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public PostContainersNameOrIdRenameHeaders headers;
-    public PostContainersNameOrIdRenameRequest withHeaders(PostContainersNameOrIdRenameHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier or name of the container that you want to rename. Run `cf ic ps -a` or call the `GET /containers/json?all=true` endpoint to review all containers in your space.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name_or_id")
+    public String nameOrId;
+    public PostContainersNameOrIdRenameRequest withNameOrId(String nameOrId) {
+        this.nameOrId = nameOrId;
         return this;
     }
     

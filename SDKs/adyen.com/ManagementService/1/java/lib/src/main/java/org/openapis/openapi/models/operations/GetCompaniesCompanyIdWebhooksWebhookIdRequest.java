@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdWebhooksWebhookIdRequest {
-    
-    public GetCompaniesCompanyIdWebhooksWebhookIdPathParams pathParams;
-    public GetCompaniesCompanyIdWebhooksWebhookIdRequest withPathParams(GetCompaniesCompanyIdWebhooksWebhookIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the [company account](https://docs.adyen.com/account/account-structure#company-account).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdWebhooksWebhookIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdWebhooksWebhookIdSecurity security;
-    public GetCompaniesCompanyIdWebhooksWebhookIdRequest withSecurity(GetCompaniesCompanyIdWebhooksWebhookIdSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the webhook configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhookId")
+    public String webhookId;
+    public GetCompaniesCompanyIdWebhooksWebhookIdRequest withWebhookId(String webhookId) {
+        this.webhookId = webhookId;
         return this;
     }
     

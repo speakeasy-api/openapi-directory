@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMySqlDatabasesRequest {
+    /**
+     * The number of items to skip in the resultset.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Integer skip;
+    public GetMySqlDatabasesRequest withSkip(Integer skip) {
+        this.skip = skip;
+        return this;
+    }
     
-    public GetMySqlDatabasesQueryParams queryParams;
-    public GetMySqlDatabasesRequest withQueryParams(GetMySqlDatabasesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to return in the resultset. The returned count can be equal or less than this number.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
+    public Integer take;
+    public GetMySqlDatabasesRequest withTake(Integer take) {
+        this.take = take;
         return this;
     }
     

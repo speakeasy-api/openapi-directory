@@ -4,27 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugDiffSpecRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withPathParams(GetRepositoriesWorkspaceRepoSlugDiffSpecPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Generate diffs that include binary files, true if omitted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=binary")
+    public Boolean binary;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withBinary(Boolean binary) {
+        this.binary = binary;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugDiffSpecQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Generate diffs with &lt;n&gt; lines of context instead of the usual three.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=context")
+    public Long context;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withContext(Long context) {
+        this.context = context;
         return this;
     }
     
+    /**
+     * Generate diffs that ignore whitespace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ignore_whitespace")
+    public Boolean ignoreWhitespace;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withIgnoreWhitespace(Boolean ignoreWhitespace) {
+        this.ignoreWhitespace = ignoreWhitespace;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withSecurity(GetRepositoriesWorkspaceRepoSlugDiffSpecSecurity security) {
-        this.security = security;
+    /**
+     * This parameter is deprecated and will be removed at the end
+     * of 2022. The 'topic' parameter should be used instead. The
+     * 'merge' and 'topic' parameters cannot be both used at the same
+     * time.
+     * 
+     * If true, the source commit is merged into the
+     * destination commit, and then a diff from the
+     * destination to the merge result is returned. If false,
+     * a simple 'two dot' diff between the source and
+     * destination is returned. True if omitted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merge")
+    public Boolean merge;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withMerge(Boolean merge) {
+        this.merge = merge;
+        return this;
+    }
+    
+    /**
+     * Limit the diff to a particular file (this parameter
+     * can be repeated for multiple paths).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
+    public String path;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Whether to perform rename detection, true if omitted.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=renames")
+    public Boolean renames;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withRenames(Boolean renames) {
+        this.renames = renames;
+        return this;
+    }
+    
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * A commit SHA (e.g. `3a8b42`) or a commit range using double dot
+     * notation (e.g. `3a8b42..9ff173`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spec")
+    public String spec;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    
+    /**
+     * If true, returns 2-way 'three-dot' diff.
+     * This is a diff between the source commit and the merge base
+     * of the source commit and the destination commit.
+     * If false, a simple 'two dot' diff between the source and
+     * destination is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topic")
+    public Boolean topic;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withTopic(Boolean topic) {
+        this.topic = topic;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugDiffSpecRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

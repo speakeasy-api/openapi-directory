@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberGeometryFilterExtRequest {
-    
-    public GetSearchVersionNumberGeometryFilterExtPathParams pathParams;
-    public GetSearchVersionNumberGeometryFilterExtRequest withPathParams(GetSearchVersionNumberGeometryFilterExtPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public org.openapis.openapi.models.shared.ExtEnum ext;
+    public GetSearchVersionNumberGeometryFilterExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
+        this.ext = ext;
         return this;
     }
     
+    /**
+     * List of geometries to filter by. Available types are CIRCLE (with the radius expressed in meters) and POLYGON.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geometryList")
+    public String geometryList;
+    public GetSearchVersionNumberGeometryFilterExtRequest withGeometryList(String geometryList) {
+        this.geometryList = geometryList;
+        return this;
+    }
     
-    public GetSearchVersionNumberGeometryFilterExtQueryParams queryParams;
-    public GetSearchVersionNumberGeometryFilterExtRequest withQueryParams(GetSearchVersionNumberGeometryFilterExtQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of POIs to filter. The only required attribute of a POI is position, everything else is optional and will be echoed back when passed in.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=poiList")
+    public String poiList;
+    public GetSearchVersionNumberGeometryFilterExtRequest withPoiList(String poiList) {
+        this.poiList = poiList;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public GetSearchVersionNumberGeometryFilterExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

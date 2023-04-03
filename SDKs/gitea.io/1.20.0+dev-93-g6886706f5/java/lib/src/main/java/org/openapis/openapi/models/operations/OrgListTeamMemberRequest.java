@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgListTeamMemberRequest {
+    /**
+     * id of the team
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgListTeamMemberRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public OrgListTeamMemberPathParams pathParams;
-    public OrgListTeamMemberRequest withPathParams(OrgListTeamMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * username of the member to list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public OrgListTeamMemberRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

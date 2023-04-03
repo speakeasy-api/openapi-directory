@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestUploadHashesBatchRequest {
-    
-    public TestUploadHashesBatchPathParams pathParams;
-    public TestUploadHashesBatchRequest withPathParams(TestUploadHashesBatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * File hash information
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TestUploadHashesBatchTestCloudFileHash[] request;
-    public TestUploadHashesBatchRequest withRequest(TestUploadHashesBatchTestCloudFileHash[] request) {
-        this.request = request;
+    public TestUploadHashesBatchTestCloudFileHash[] requestBody;
+    public TestUploadHashesBatchRequest withRequestBody(TestUploadHashesBatchTestCloudFileHash[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestUploadHashesBatchRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TestUploadHashesBatchSecurity security;
-    public TestUploadHashesBatchRequest withSecurity(TestUploadHashesBatchSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestUploadHashesBatchRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The ID of the test run
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_run_id")
+    public String testRunId;
+    public TestUploadHashesBatchRequest withTestRunId(String testRunId) {
+        this.testRunId = testRunId;
         return this;
     }
     

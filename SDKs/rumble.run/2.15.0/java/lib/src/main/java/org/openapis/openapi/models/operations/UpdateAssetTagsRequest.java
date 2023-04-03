@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAssetTagsRequest {
-    
-    public UpdateAssetTagsPathParams pathParams;
-    public UpdateAssetTagsRequest withPathParams(UpdateAssetTagsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * tags to apply to the asset
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssetTags request;
-    public UpdateAssetTagsRequest withRequest(org.openapis.openapi.models.shared.AssetTags request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AssetTags assetTags;
+    public UpdateAssetTagsRequest withAssetTags(org.openapis.openapi.models.shared.AssetTags assetTags) {
+        this.assetTags = assetTags;
         return this;
     }
     
-    
-    public UpdateAssetTagsSecurity security;
-    public UpdateAssetTagsRequest withSecurity(UpdateAssetTagsSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the asset to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
+    public String assetId;
+    public UpdateAssetTagsRequest withAssetId(String assetId) {
+        this.assetId = assetId;
         return this;
     }
     

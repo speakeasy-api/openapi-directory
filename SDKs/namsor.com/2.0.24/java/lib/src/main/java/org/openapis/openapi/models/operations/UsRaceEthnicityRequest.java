@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsRaceEthnicityRequest {
-    
-    public UsRaceEthnicityPathParams pathParams;
-    public UsRaceEthnicityRequest withPathParams(UsRaceEthnicityPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
+    public String firstName;
+    public UsRaceEthnicityRequest withFirstName(String firstName) {
+        this.firstName = firstName;
         return this;
     }
     
-    
-    public UsRaceEthnicitySecurity security;
-    public UsRaceEthnicityRequest withSecurity(UsRaceEthnicitySecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
+    public String lastName;
+    public UsRaceEthnicityRequest withLastName(String lastName) {
+        this.lastName = lastName;
         return this;
     }
     

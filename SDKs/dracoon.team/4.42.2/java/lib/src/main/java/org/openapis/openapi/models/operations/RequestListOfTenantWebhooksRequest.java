@@ -4,20 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestListOfTenantWebhooksRequest {
-    
-    public RequestListOfTenantWebhooksQueryParams queryParams;
-    public RequestListOfTenantWebhooksRequest withQueryParams(RequestListOfTenantWebhooksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestListOfTenantWebhooksXSdsDateFormatEnum xSdsDateFormat;
+    public RequestListOfTenantWebhooksRequest withXSdsDateFormat(RequestListOfTenantWebhooksXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
         return this;
     }
     
+    /**
+     * Service Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Service-Token")
+    public String xSdsServiceToken;
+    public RequestListOfTenantWebhooksRequest withXSdsServiceToken(String xSdsServiceToken) {
+        this.xSdsServiceToken = xSdsServiceToken;
+        return this;
+    }
     
-    public RequestListOfTenantWebhooksHeaders headers;
-    public RequestListOfTenantWebhooksRequest withHeaders(RequestListOfTenantWebhooksHeaders headers) {
-        this.headers = headers;
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestListOfTenantWebhooksRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestListOfTenantWebhooksRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestListOfTenantWebhooksRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestListOfTenantWebhooksRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AssociateConfigurationItemsToApplicationXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AssociateConfigurationItemsToApplicationHeaders;
 import org.openapis.openapi.models.operations.AssociateConfigurationItemsToApplicationRequest;
 import org.openapis.openapi.models.operations.AssociateConfigurationItemsToApplicationResponse;
 import org.openapis.openapi.models.shared.AssociateConfigurationItemsToApplicationRequest;
@@ -28,31 +27,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateConfigurationItemsToApplicationRequest req = new AssociateConfigurationItemsToApplicationRequest() {{
-                headers = new AssociateConfigurationItemsToApplicationHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSPoseidonService_V2015_11_01.AssociateConfigurationItemsToApplication";
-                }};
-                request = new AssociateConfigurationItemsToApplicationRequest() {{
-                    applicationConfigurationId = "illum";
+                associateConfigurationItemsToApplicationRequest = new AssociateConfigurationItemsToApplicationRequest() {{
+                    applicationConfigurationId = "corrupti";
                     configurationIds = new String[]{{
-                        add("error"),
-                        add("deserunt"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "nulla";
+                xAmzContentSha256 = "corrupti";
+                xAmzCredential = "illum";
+                xAmzDate = "vel";
+                xAmzSecurityToken = "error";
+                xAmzSignature = "deserunt";
+                xAmzSignedHeaders = "suscipit";
+                xAmzTarget = "AWSPoseidonService_V2015_11_01.AssociateConfigurationItemsToApplication";
+            }}            
 
             AssociateConfigurationItemsToApplicationResponse res = sdk.associateConfigurationItemsToApplication(req);
 
@@ -66,7 +62,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

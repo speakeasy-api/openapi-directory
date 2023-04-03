@@ -33,19 +33,20 @@ public class Images {
      * Retrieve all library item images
      * Retrieves all library items images used by the organization, sorted by updated date
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllImageUrlsResponse getAllImageUrls(org.openapis.openapi.models.operations.GetAllImageUrlsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllImageUrlsResponse getAllImageUrls(org.openapis.openapi.models.operations.GetAllImageUrlsRequest request, org.openapis.openapi.models.operations.GetAllImageUrlsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllImageUrlsPathParams.class, baseUrl, "/organizations/{organizationUuid}/images", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllImageUrlsRequest.class, baseUrl, "/organizations/{organizationUuid}/images", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

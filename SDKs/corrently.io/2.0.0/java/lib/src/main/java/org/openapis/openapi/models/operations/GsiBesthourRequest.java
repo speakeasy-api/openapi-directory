@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GsiBesthourRequest {
+    /**
+     * How many hours in row do you need the device turned on?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hours")
+    public Long hours;
+    public GsiBesthourRequest withHours(Long hours) {
+        this.hours = hours;
+        return this;
+    }
     
-    public GsiBesthourQueryParams queryParams;
-    public GsiBesthourRequest withQueryParams(GsiBesthourQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Any valid Stromkonto account (address).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GsiBesthourRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Number of hours to check (default 24 hours from now).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeframe")
+    public Long timeframe;
+    public GsiBesthourRequest withTimeframe(Long timeframe) {
+        this.timeframe = timeframe;
+        return this;
+    }
+    
+    /**
+     * Zipcode (Postleitzahl) of a city in Germany.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public GsiBesthourRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

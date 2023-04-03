@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest {
+    /**
+     * The identifier of the 'aspect' (content group) to search
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
+    public GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXmlAspectIDEnum aspectId;
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest withAspectId(GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDXmlAspectIDEnum aspectId) {
+        this.aspectId = aspectId;
+        return this;
+    }
     
-    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlPathParams pathParams;
-    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest withPathParams(GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The document identification code for an index or directory
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixDocumentId")
+    public String civixDocumentId;
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest withCivixDocumentId(String civixDocumentId) {
+        this.civixDocumentId = civixDocumentId;
+        return this;
+    }
+    
+    /**
+     * Index identification code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixIndexId")
+    public String civixIndexId;
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest withCivixIndexId(String civixIndexId) {
+        this.civixIndexId = civixIndexId;
         return this;
     }
     

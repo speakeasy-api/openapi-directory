@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAadhaarAccountUsingPOST1Request {
-    
-    public CreateAadhaarAccountUsingPOST1Headers headers;
-    public CreateAadhaarAccountUsingPOST1Request withHeaders(CreateAadhaarAccountUsingPOST1Headers headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public CreateAadhaarAccountUsingPOST1Request withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class CreateAadhaarAccountUsingPOST1Request {
      * accountRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateAccountWithPreVerifiedAadhaar request;
-    public CreateAadhaarAccountUsingPOST1Request withRequest(org.openapis.openapi.models.shared.CreateAccountWithPreVerifiedAadhaar request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateAadhaarAccountUsingPOST1Security security;
-    public CreateAadhaarAccountUsingPOST1Request withSecurity(CreateAadhaarAccountUsingPOST1Security security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.CreateAccountWithPreVerifiedAadhaar createAccountWithPreVerifiedAadhaar;
+    public CreateAadhaarAccountUsingPOST1Request withCreateAccountWithPreVerifiedAadhaar(org.openapis.openapi.models.shared.CreateAccountWithPreVerifiedAadhaar createAccountWithPreVerifiedAadhaar) {
+        this.createAccountWithPreVerifiedAadhaar = createAccountWithPreVerifiedAadhaar;
         return this;
     }
     

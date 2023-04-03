@@ -4,20 +4,100 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetValuesForVariablesRequest {
-    
-    public GetValuesForVariablesQueryParams queryParams;
-    public GetValuesForVariablesRequest withQueryParams(GetValuesForVariablesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
+    public String xAppToken;
+    public GetValuesForVariablesRequest withXAppToken(String xAppToken) {
+        this.xAppToken = xAppToken;
         return this;
     }
     
+    /**
+     * The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
+     * used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
+    public String appToken;
+    public GetValuesForVariablesRequest withAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
     
-    public GetValuesForVariablesHeaders headers;
-    public GetValuesForVariablesRequest withHeaders(GetValuesForVariablesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Whether or not to produce a description of the data.
+     * Set to `true` to produce a description.
+     * Descriptions are not available if no entities are specified.
+     * 
+     * + Default `false`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=describe")
+    public Boolean describe;
+    public GetValuesForVariablesRequest withDescribe(Boolean describe) {
+        this.describe = describe;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of entity IDs.
+     * Defaults to retrieving all entities.
+     * Note that since there is currently no results pagination,
+     * retrieving values for all entities may produce incomplete results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
+    public String entityId;
+    public GetValuesForVariablesRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    
+    /**
+     * Number of steps to forecast.
+     * Must be an integer between 0 and 20.
+     * Forecasts are produced using linear extrapolation
+     * on the data. They are only available when retrieving
+     * data for a single variable across many numerical
+     * constraint options.
+     * 
+     * + Default `0`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forecast")
+    public Double forecast;
+    public GetValuesForVariablesRequest withForecast(Double forecast) {
+        this.forecast = forecast;
+        return this;
+    }
+    
+    /**
+     * If format is set to `google`, the data frame will be formatted
+     * as a [Google Visualizations data table](https://developers.google.com/chart/interactive/docs/reference#datatable-class).
+     * If the format is not provided or invalid, then the frame
+     * will be formatted normally.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetValuesForVariablesFormatEnum format;
+    public GetValuesForVariablesRequest withFormat(GetValuesForVariablesFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Comma separated list of variable IDs.
+     * Defaults to retrieving all variables.
+     * It is also possible to pass in a topic such as
+     * `demographics`, or a dataset such as `demographics.population`,
+     * which would both be equivalent to specifying
+     * `demographics.population.count` and `demographics.population.change`.
+     * Note that only variables in the same dataset are allowed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variable")
+    public String variable;
+    public GetValuesForVariablesRequest withVariable(String variable) {
+        this.variable = variable;
         return this;
     }
     

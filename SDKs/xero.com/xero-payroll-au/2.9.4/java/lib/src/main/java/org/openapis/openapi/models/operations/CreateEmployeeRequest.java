@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEmployeeRequest {
-    
-    public CreateEmployeeHeaders headers;
-    public CreateEmployeeRequest withHeaders(CreateEmployeeHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EmployeeInput[] request;
-    public CreateEmployeeRequest withRequest(org.openapis.openapi.models.shared.EmployeeInput[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.EmployeeInput[] requestBody;
+    public CreateEmployeeRequest withRequestBody(org.openapis.openapi.models.shared.EmployeeInput[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateEmployeeSecurity security;
-    public CreateEmployeeRequest withSecurity(CreateEmployeeSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public CreateEmployeeRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

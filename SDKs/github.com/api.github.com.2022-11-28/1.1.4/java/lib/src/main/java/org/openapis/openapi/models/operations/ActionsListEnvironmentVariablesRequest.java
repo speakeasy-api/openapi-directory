@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListEnvironmentVariablesRequest {
-    
-    public ActionsListEnvironmentVariablesPathParams pathParams;
-    public ActionsListEnvironmentVariablesRequest withPathParams(ActionsListEnvironmentVariablesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the environment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
+    public String environmentName;
+    public ActionsListEnvironmentVariablesRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListEnvironmentVariablesRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ActionsListEnvironmentVariablesQueryParams queryParams;
-    public ActionsListEnvironmentVariablesRequest withQueryParams(ActionsListEnvironmentVariablesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 30).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListEnvironmentVariablesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsListEnvironmentVariablesRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
         return this;
     }
     

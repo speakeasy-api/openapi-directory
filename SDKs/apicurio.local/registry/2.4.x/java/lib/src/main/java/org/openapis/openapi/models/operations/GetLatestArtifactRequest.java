@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLatestArtifactRequest {
-    
-    public GetLatestArtifactPathParams pathParams;
-    public GetLatestArtifactRequest withPathParams(GetLatestArtifactPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The artifact ID.  Can be a string (client-provided) or UUID (server-generated), representing the unique artifact identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
+    public String artifactId;
+    public GetLatestArtifactRequest withArtifactId(String artifactId) {
+        this.artifactId = artifactId;
         return this;
     }
     
+    /**
+     * Allows the user to specify if the content should be dereferenced when being returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dereference")
+    public Boolean dereference;
+    public GetLatestArtifactRequest withDereference(Boolean dereference) {
+        this.dereference = dereference;
+        return this;
+    }
     
-    public GetLatestArtifactQueryParams queryParams;
-    public GetLatestArtifactRequest withQueryParams(GetLatestArtifactQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The artifact group ID.  Must be a string provided by the client, representing the name of the grouping of artifacts.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public GetLatestArtifactRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

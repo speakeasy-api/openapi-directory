@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWarehouseSettingsRequest {
-    
-    public UpdateWarehouseSettingsPathParams pathParams;
-    public UpdateWarehouseSettingsRequest withPathParams(UpdateWarehouseSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateWarehouseSettingsRequestBody updateWarehouseSettingsRequestBody;
+    public UpdateWarehouseSettingsRequest withUpdateWarehouseSettingsRequestBody(org.openapis.openapi.models.shared.UpdateWarehouseSettingsRequestBody updateWarehouseSettingsRequestBody) {
+        this.updateWarehouseSettingsRequestBody = updateWarehouseSettingsRequestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateWarehouseSettingsRequestBody request;
-    public UpdateWarehouseSettingsRequest withRequest(org.openapis.openapi.models.shared.UpdateWarehouseSettingsRequestBody request) {
-        this.request = request;
+    /**
+     * Warehouse ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouse_id")
+    public String warehouseId;
+    public UpdateWarehouseSettingsRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

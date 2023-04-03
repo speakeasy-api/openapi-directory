@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConnectionsRequest {
-    
-    public GetConnectionsQueryParams queryParams;
-    public GetConnectionsRequest withQueryParams(GetConnectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetConnectionsSecurity security;
-    public GetConnectionsRequest withSecurity(GetConnectionsSecurity security) {
-        this.security = security;
+    /**
+     * Filter by authEventId
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authEventId")
+    public String authEventId;
+    public GetConnectionsRequest withAuthEventId(String authEventId) {
+        this.authEventId = authEventId;
         return this;
     }
     

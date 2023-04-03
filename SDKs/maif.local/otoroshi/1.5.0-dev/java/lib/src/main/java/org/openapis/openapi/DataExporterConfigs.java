@@ -38,10 +38,11 @@ public class DataExporterConfigs {
      * Get all data exporter configs
      * Get all data exporter configs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataExporterTemplateResponse dataExporterTemplate(org.openapis.openapi.models.operations.DataExporterTemplateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataExporterTemplateResponse dataExporterTemplate(org.openapis.openapi.models.operations.DataExporterTemplateRequest request, org.openapis.openapi.models.operations.DataExporterTemplateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/data-exporter-configs/_template");
         
@@ -49,14 +50,14 @@ public class DataExporterConfigs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataExporterTemplateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataExporterTemplateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -86,10 +87,11 @@ public class DataExporterConfigs {
      * Create a new data exporter configs
      * Create a new data exporter configs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBulkDataExporterConfigsResponse createBulkDataExporterConfigs(org.openapis.openapi.models.operations.CreateBulkDataExporterConfigsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBulkDataExporterConfigsResponse createBulkDataExporterConfigs(org.openapis.openapi.models.shared.DataExporterConfig request, org.openapis.openapi.models.operations.CreateBulkDataExporterConfigsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/data-exporter-configs/_bulk");
         
@@ -100,7 +102,7 @@ public class DataExporterConfigs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -130,10 +132,11 @@ public class DataExporterConfigs {
      * Create a new data exporter config
      * Create a new data exporter config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDataExporterConfigResponse createDataExporterConfig(org.openapis.openapi.models.operations.CreateDataExporterConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDataExporterConfigResponse createDataExporterConfig(org.openapis.openapi.models.shared.DataExporterConfig request, org.openapis.openapi.models.operations.CreateDataExporterConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/data-exporter-configs");
         
@@ -144,7 +147,7 @@ public class DataExporterConfigs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,19 +177,20 @@ public class DataExporterConfigs {
      * Delete a data exporter config
      * Delete a data exporter config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDataExporterConfigResponse deleteDataExporterConfig(org.openapis.openapi.models.operations.DeleteDataExporterConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDataExporterConfigResponse deleteDataExporterConfig(org.openapis.openapi.models.operations.DeleteDataExporterConfigRequest request, org.openapis.openapi.models.operations.DeleteDataExporterConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDataExporterConfigPathParams.class, baseUrl, "/api/data-exporter-configs/{dataExporterConfigId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDataExporterConfigRequest.class, baseUrl, "/api/data-exporter-configs/{dataExporterConfigId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,10 +220,11 @@ public class DataExporterConfigs {
      * Delete a data exporter config
      * Delete a data exporter config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletebulkDataExporterConfigResponse deletebulkDataExporterConfig(org.openapis.openapi.models.operations.DeletebulkDataExporterConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletebulkDataExporterConfigResponse deletebulkDataExporterConfig(org.openapis.openapi.models.shared.Patch[] request, org.openapis.openapi.models.operations.DeletebulkDataExporterConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/data-exporter-configs/_bulk");
         
@@ -230,7 +235,7 @@ public class DataExporterConfigs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -259,11 +264,10 @@ public class DataExporterConfigs {
     /**
      * Get all data exporter configs
      * Get all data exporter configs
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllDataExportersResponse findAllDataExporters(org.openapis.openapi.models.operations.FindAllDataExportersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindAllDataExportersResponse findAllDataExporters() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/data-exporter-configs");
         
@@ -272,8 +276,7 @@ public class DataExporterConfigs {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -302,19 +305,20 @@ public class DataExporterConfigs {
      * Get a data exporter config
      * Get a data exporter config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindDataExporterConfigByIdResponse findDataExporterConfigById(org.openapis.openapi.models.operations.FindDataExporterConfigByIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FindDataExporterConfigByIdResponse findDataExporterConfigById(org.openapis.openapi.models.operations.FindDataExporterConfigByIdRequest request, org.openapis.openapi.models.operations.FindDataExporterConfigByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindDataExporterConfigByIdPathParams.class, baseUrl, "/api/data-exporter-configs/{dataExporterConfigId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FindDataExporterConfigByIdRequest.class, baseUrl, "/api/data-exporter-configs/{dataExporterConfigId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -344,10 +348,11 @@ public class DataExporterConfigs {
      * Update a data exporter configs with a diff
      * Update a data exporter configs with a diff
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchBulkDataExporterConfigResponse patchBulkDataExporterConfig(org.openapis.openapi.models.operations.PatchBulkDataExporterConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchBulkDataExporterConfigResponse patchBulkDataExporterConfig(org.openapis.openapi.models.shared.Patch[] request, org.openapis.openapi.models.operations.PatchBulkDataExporterConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/data-exporter-configs/_bulk");
         
@@ -358,7 +363,7 @@ public class DataExporterConfigs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -388,21 +393,22 @@ public class DataExporterConfigs {
      * Update a data exporter config with a diff
      * Update a data exporter config with a diff
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchDataExporterConfigResponse patchDataExporterConfig(org.openapis.openapi.models.operations.PatchDataExporterConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchDataExporterConfigResponse patchDataExporterConfig(org.openapis.openapi.models.operations.PatchDataExporterConfigRequest request, org.openapis.openapi.models.operations.PatchDataExporterConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDataExporterConfigPathParams.class, baseUrl, "/api/data-exporter-configs/{dataExporterConfigId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchDataExporterConfigRequest.class, baseUrl, "/api/data-exporter-configs/{dataExporterConfigId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -432,10 +438,11 @@ public class DataExporterConfigs {
      * Update a data exporter configs
      * Update a data exporter configs
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateBulkDataExporterConfigResponse updateBulkDataExporterConfig(org.openapis.openapi.models.operations.UpdateBulkDataExporterConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateBulkDataExporterConfigResponse updateBulkDataExporterConfig(org.openapis.openapi.models.shared.DataExporterConfig request, org.openapis.openapi.models.operations.UpdateBulkDataExporterConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/data-exporter-configs/_bulk");
         
@@ -446,7 +453,7 @@ public class DataExporterConfigs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -476,21 +483,22 @@ public class DataExporterConfigs {
      * Update a data exporter config
      * Update a data exporter config
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDataExporterConfigResponse updateDataExporterConfig(org.openapis.openapi.models.operations.UpdateDataExporterConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDataExporterConfigResponse updateDataExporterConfig(org.openapis.openapi.models.operations.UpdateDataExporterConfigRequest request, org.openapis.openapi.models.operations.UpdateDataExporterConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDataExporterConfigPathParams.class, baseUrl, "/api/data-exporter-configs/{dataExporterConfigId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDataExporterConfigRequest.class, baseUrl, "/api/data-exporter-configs/{dataExporterConfigId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dataExporterConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

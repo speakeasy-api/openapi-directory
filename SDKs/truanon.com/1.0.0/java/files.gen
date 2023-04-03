@@ -29,10 +29,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetProfileQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProfileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProfileResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTokenQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTokenResponse.java
 USAGE.md

@@ -7,24 +7,50 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderInvoicePreviewRequest {
-    
-    public GetOrderInvoicePreviewPathParams pathParams;
-    public GetOrderInvoicePreviewRequest withPathParams(GetOrderInvoicePreviewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Allows the client to indicate wether it accepts a compressed encoding to reduce traffic size
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
+    public String acceptEncoding;
+    public GetOrderInvoicePreviewRequest withAcceptEncoding(String acceptEncoding) {
+        this.acceptEncoding = acceptEncoding;
         return this;
     }
     
+    /**
+     * The Account Identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public GetOrderInvoicePreviewRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public GetOrderInvoicePreviewHeaders headers;
-    public GetOrderInvoicePreviewRequest withHeaders(GetOrderInvoicePreviewHeaders headers) {
-        this.headers = headers;
+    /**
+     * The BeezUP Order UUID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderUUID")
+    public String beezUPOrderUUID;
+    public GetOrderInvoicePreviewRequest withBeezUPOrderUUID(String beezUPOrderUUID) {
+        this.beezUPOrderUUID = beezUPOrderUUID;
+        return this;
+    }
+    
+    /**
+     * The Marketplace Technical Code
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
+    public String marketplaceTechnicalCode;
+    public GetOrderInvoicePreviewRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PreviewOrderInvoiceRequest request;
-    public GetOrderInvoicePreviewRequest withRequest(org.openapis.openapi.models.shared.PreviewOrderInvoiceRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PreviewOrderInvoiceRequest previewOrderInvoiceRequest;
+    public GetOrderInvoicePreviewRequest withPreviewOrderInvoiceRequest(org.openapis.openapi.models.shared.PreviewOrderInvoiceRequest previewOrderInvoiceRequest) {
+        this.previewOrderInvoiceRequest = previewOrderInvoiceRequest;
         return this;
     }
     

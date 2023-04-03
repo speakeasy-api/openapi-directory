@@ -4,20 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTransactionRequest {
-    
-    public GetTransactionPathParams pathParams;
-    public GetTransactionRequest withPathParams(GetTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The transaction id that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTransactionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Populate chargestation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_chargestation")
+    public Boolean includeChargestation;
+    public GetTransactionRequest withIncludeChargestation(Boolean includeChargestation) {
+        this.includeChargestation = includeChargestation;
+        return this;
+    }
     
-    public GetTransactionQueryParams queryParams;
-    public GetTransactionRequest withQueryParams(GetTransactionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Populate connector
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_connector")
+    public Boolean includeConnector;
+    public GetTransactionRequest withIncludeConnector(Boolean includeConnector) {
+        this.includeConnector = includeConnector;
+        return this;
+    }
+    
+    /**
+     * Populate driver
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_driver")
+    public Boolean includeDriver;
+    public GetTransactionRequest withIncludeDriver(Boolean includeDriver) {
+        this.includeDriver = includeDriver;
+        return this;
+    }
+    
+    /**
+     * Populate evse
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_evse")
+    public Boolean includeEvse;
+    public GetTransactionRequest withIncludeEvse(Boolean includeEvse) {
+        this.includeEvse = includeEvse;
+        return this;
+    }
+    
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetTransactionRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
+        return this;
+    }
+    
+    /**
+     * Populate rate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_rate")
+    public Boolean includeRate;
+    public GetTransactionRequest withIncludeRate(Boolean includeRate) {
+        this.includeRate = includeRate;
+        return this;
+    }
+    
+    /**
+     * Populate reservation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_reservation")
+    public Boolean includeReservation;
+    public GetTransactionRequest withIncludeReservation(Boolean includeReservation) {
+        this.includeReservation = includeReservation;
+        return this;
+    }
+    
+    /**
+     * Populate token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_token")
+    public Boolean includeToken;
+    public GetTransactionRequest withIncludeToken(Boolean includeToken) {
+        this.includeToken = includeToken;
         return this;
     }
     

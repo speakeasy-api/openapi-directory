@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddMemberLegacyRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsAddMemberLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
+        return this;
+    }
     
-    public TeamsAddMemberLegacyPathParams pathParams;
-    public TeamsAddMemberLegacyRequest withPathParams(TeamsAddMemberLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public TeamsAddMemberLegacyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

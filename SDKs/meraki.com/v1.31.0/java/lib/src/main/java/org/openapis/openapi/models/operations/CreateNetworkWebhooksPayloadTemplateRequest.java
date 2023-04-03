@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkWebhooksPayloadTemplateRequest {
-    
-    public CreateNetworkWebhooksPayloadTemplatePathParams pathParams;
-    public CreateNetworkWebhooksPayloadTemplateRequest withPathParams(CreateNetworkWebhooksPayloadTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkWebhooksPayloadTemplateRequestBody requestBody;
+    public CreateNetworkWebhooksPayloadTemplateRequest withRequestBody(CreateNetworkWebhooksPayloadTemplateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkWebhooksPayloadTemplateRequestBody request;
-    public CreateNetworkWebhooksPayloadTemplateRequest withRequest(CreateNetworkWebhooksPayloadTemplateRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkWebhooksPayloadTemplateRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

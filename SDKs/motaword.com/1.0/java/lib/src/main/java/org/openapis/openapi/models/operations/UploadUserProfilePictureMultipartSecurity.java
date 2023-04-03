@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadUserProfilePictureMultipartSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeMwoAuth mwoAuth;
-    public UploadUserProfilePictureMultipartSecurity withMwoAuth(org.openapis.openapi.models.shared.SchemeMwoAuth mwoAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String mwoAuth;
+    public UploadUserProfilePictureMultipartSecurity withMwoAuth(String mwoAuth) {
         this.mwoAuth = mwoAuth;
         return this;
     }

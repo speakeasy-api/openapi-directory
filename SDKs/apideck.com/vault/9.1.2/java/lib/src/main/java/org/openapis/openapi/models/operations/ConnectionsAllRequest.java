@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConnectionsAllRequest {
-    
-    public ConnectionsAllQueryParams queryParams;
-    public ConnectionsAllRequest withQueryParams(ConnectionsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Scope results to Unified API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api")
+    public String api;
+    public ConnectionsAllRequest withApi(String api) {
+        this.api = api;
         return this;
     }
     
-    
-    public ConnectionsAllHeaders headers;
-    public ConnectionsAllRequest withHeaders(ConnectionsAllHeaders headers) {
-        this.headers = headers;
+    /**
+     * Scopes results to connections that have been configured or not
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=configured")
+    public Boolean configured;
+    public ConnectionsAllRequest withConfigured(Boolean configured) {
+        this.configured = configured;
         return this;
     }
     
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public ConnectionsAllRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
     
-    public ConnectionsAllSecurity security;
-    public ConnectionsAllRequest withSecurity(ConnectionsAllSecurity security) {
-        this.security = security;
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public ConnectionsAllRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
         return this;
     }
     

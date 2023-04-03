@@ -4,20 +4,100 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestUsersRequest {
-    
-    public RequestUsersQueryParams queryParams;
-    public RequestUsersRequest withQueryParams(RequestUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestUsersRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public RequestUsersXSdsDateFormatEnum xSdsDateFormat;
+    public RequestUsersRequest withXSdsDateFormat(RequestUsersXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
     
-    public RequestUsersHeaders headers;
-    public RequestUsersRequest withHeaders(RequestUsersHeaders headers) {
-        this.headers = headers;
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestUsersRequest withFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Include custom user attributes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_attributes")
+    public Boolean includeAttributes;
+    public RequestUsersRequest withIncludeAttributes(Boolean includeAttributes) {
+        this.includeAttributes = includeAttributes;
+        return this;
+    }
+    
+    /**
+     * Include hasManageableRooms (deprecated)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_manageable_rooms")
+    public Boolean includeManageableRooms;
+    public RequestUsersRequest withIncludeManageableRooms(Boolean includeManageableRooms) {
+        this.includeManageableRooms = includeManageableRooms;
+        return this;
+    }
+    
+    /**
+     * Include roles
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_roles")
+    public Boolean includeRoles;
+    public RequestUsersRequest withIncludeRoles(Boolean includeRoles) {
+        this.includeRoles = includeRoles;
+        return this;
+    }
+    
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestUsersRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestUsersRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public RequestUsersRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

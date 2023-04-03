@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetsSetRequest {
-    
-    public GetSetsSetPathParams pathParams;
-    public GetSetsSetRequest withPathParams(GetSetsSetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * the set ID or the set name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=set")
+    public String set;
+    public GetSetsSetRequest withSet(String set) {
+        this.set = set;
         return this;
     }
     

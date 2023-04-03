@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBusinessGroupsAllRequest {
-    
-    public GetBusinessGroupsAllQueryParams queryParams;
-    public GetBusinessGroupsAllRequest withQueryParams(GetBusinessGroupsAllQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetBusinessGroupsAllSecurity security;
-    public GetBusinessGroupsAllRequest withSecurity(GetBusinessGroupsAllSecurity security) {
-        this.security = security;
+    /**
+     * Name of the group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetBusinessGroupsAllRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

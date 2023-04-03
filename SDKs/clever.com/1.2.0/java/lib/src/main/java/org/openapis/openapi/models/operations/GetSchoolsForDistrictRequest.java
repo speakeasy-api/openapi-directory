@@ -4,20 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchoolsForDistrictRequest {
-    
-    public GetSchoolsForDistrictPathParams pathParams;
-    public GetSchoolsForDistrictRequest withPathParams(GetSchoolsForDistrictPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_before")
+    public String endingBefore;
+    public GetSchoolsForDistrictRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSchoolsForDistrictRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSchoolsForDistrictQueryParams queryParams;
-    public GetSchoolsForDistrictRequest withQueryParams(GetSchoolsForDistrictQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetSchoolsForDistrictRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
+    public String startingAfter;
+    public GetSchoolsForDistrictRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
+    public String where;
+    public GetSchoolsForDistrictRequest withWhere(String where) {
+        this.where = where;
         return this;
     }
     

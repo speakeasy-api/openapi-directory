@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileDeleteFromComputeNodeRequest {
-    
-    public FileDeleteFromComputeNodePathParams pathParams;
-    public FileDeleteFromComputeNodeRequest withPathParams(FileDeleteFromComputeNodePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API Version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public FileDeleteFromComputeNodeRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
-    
-    public FileDeleteFromComputeNodeQueryParams queryParams;
-    public FileDeleteFromComputeNodeRequest withQueryParams(FileDeleteFromComputeNodeQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Caller generated request identity, in the form of a GUID with no decoration such as curly braces e.g. 9C4D50EE-2D56-4CD3-8152-34347DC9F2B0.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
+    public String clientRequestId;
+    public FileDeleteFromComputeNodeRequest withClientRequestId(String clientRequestId) {
+        this.clientRequestId = clientRequestId;
         return this;
     }
     
+    /**
+     * The path to the file that you want to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
+    public String fileName;
+    public FileDeleteFromComputeNodeRequest withFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
     
-    public FileDeleteFromComputeNodeHeaders headers;
-    public FileDeleteFromComputeNodeRequest withHeaders(FileDeleteFromComputeNodeHeaders headers) {
-        this.headers = headers;
+    /**
+     * The id of the compute node from which you want to delete the file.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodeId")
+    public String nodeId;
+    public FileDeleteFromComputeNodeRequest withNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    
+    /**
+     * The time the request was issued. If not specified, this header will be automatically populated with the current system clock time.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
+    public String ocpDate;
+    public FileDeleteFromComputeNodeRequest withOcpDate(String ocpDate) {
+        this.ocpDate = ocpDate;
+        return this;
+    }
+    
+    /**
+     * The id of the pool that contains the compute node.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
+    public String poolId;
+    public FileDeleteFromComputeNodeRequest withPoolId(String poolId) {
+        this.poolId = poolId;
+        return this;
+    }
+    
+    /**
+     * Sets whether to delete children of a directory. If the fileName parameter represents a directory instead of a file, you can set Recursive to true to delete the directory and all of the files and subdirectories in it. If Recursive is false then the directory must be empty or deletion will fail.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
+    public Boolean recursive;
+    public FileDeleteFromComputeNodeRequest withRecursive(Boolean recursive) {
+        this.recursive = recursive;
+        return this;
+    }
+    
+    /**
+     * Specifies if the server should return the client-request-id identifier in the response.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
+    public Boolean returnClientRequestId;
+    public FileDeleteFromComputeNodeRequest withReturnClientRequestId(Boolean returnClientRequestId) {
+        this.returnClientRequestId = returnClientRequestId;
+        return this;
+    }
+    
+    /**
+     * Sets the maximum time that the server can spend processing the request, in seconds. The default is 30 seconds.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Integer timeout;
+    public FileDeleteFromComputeNodeRequest withTimeout(Integer timeout) {
+        this.timeout = timeout;
         return this;
     }
     

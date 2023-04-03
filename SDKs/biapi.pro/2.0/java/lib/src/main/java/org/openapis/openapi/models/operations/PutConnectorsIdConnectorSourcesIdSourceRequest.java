@@ -7,24 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConnectorsIdConnectorSourcesIdSourceRequest {
-    
-    public PutConnectorsIdConnectorSourcesIdSourcePathParams pathParams;
-    public PutConnectorsIdConnectorSourcesIdSourceRequest withPathParams(PutConnectorsIdConnectorSourcesIdSourcePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutConnectorsIdConnectorSourcesIdSourceQueryParams queryParams;
-    public PutConnectorsIdConnectorSourcesIdSourceRequest withQueryParams(PutConnectorsIdConnectorSourcesIdSourceQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PutConnectorsIdConnectorSourcesIdSourceRequestBody request;
-    public PutConnectorsIdConnectorSourcesIdSourceRequest withRequest(PutConnectorsIdConnectorSourcesIdSourceRequestBody request) {
-        this.request = request;
+    public PutConnectorsIdConnectorSourcesIdSourceRequestBody requestBody;
+    public PutConnectorsIdConnectorSourcesIdSourceRequest withRequestBody(PutConnectorsIdConnectorSourcesIdSourceRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public PutConnectorsIdConnectorSourcesIdSourceRequest withExpand(String expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connector")
+    public Long idConnector;
+    public PutConnectorsIdConnectorSourcesIdSourceRequest withIdConnector(Long idConnector) {
+        this.idConnector = idConnector;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_source")
+    public Long idSource;
+    public PutConnectorsIdConnectorSourcesIdSourceRequest withIdSource(Long idSource) {
+        this.idSource = idSource;
         return this;
     }
     

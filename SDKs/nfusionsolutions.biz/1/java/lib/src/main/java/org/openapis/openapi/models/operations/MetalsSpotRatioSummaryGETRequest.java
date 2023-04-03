@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetalsSpotRatioSummaryGETRequest {
+    /**
+     * to override content negotiation specify a value of json or xml
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public MetalsSpotRatioSummaryGETFormatEnum format;
+    public MetalsSpotRatioSummaryGETRequest withFormat(MetalsSpotRatioSummaryGETFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public MetalsSpotRatioSummaryGETQueryParams queryParams;
-    public MetalsSpotRatioSummaryGETRequest withQueryParams(MetalsSpotRatioSummaryGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * comma separated list of metal pairs. For example: gold/silver,gold/platinum,silver/palladium
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pairs")
+    public String pairs;
+    public MetalsSpotRatioSummaryGETRequest withPairs(String pairs) {
+        this.pairs = pairs;
         return this;
     }
     

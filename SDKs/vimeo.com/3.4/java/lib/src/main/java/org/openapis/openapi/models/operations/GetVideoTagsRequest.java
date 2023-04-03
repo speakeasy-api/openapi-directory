@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoTagsRequest {
-    
-    public GetVideoTagsPathParams pathParams;
-    public GetVideoTagsRequest withPathParams(GetVideoTagsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetVideoTagsRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

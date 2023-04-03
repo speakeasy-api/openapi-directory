@@ -4,20 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DescribeMountTargetsRequest {
-    
-    public DescribeMountTargetsQueryParams queryParams;
-    public DescribeMountTargetsRequest withQueryParams(DescribeMountTargetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) The ID of the access point whose mount targets that you want to list. It must be included in your request if a &lt;code&gt;FileSystemId&lt;/code&gt; or &lt;code&gt;MountTargetId&lt;/code&gt; is not included in your request. Accepts either an access point ID or ARN as input.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccessPointId")
+    public String accessPointId;
+    public DescribeMountTargetsRequest withAccessPointId(String accessPointId) {
+        this.accessPointId = accessPointId;
         return this;
     }
     
+    /**
+     * (Optional) ID of the file system whose mount targets you want to list (String). It must be included in your request if an &lt;code&gt;AccessPointId&lt;/code&gt; or &lt;code&gt;MountTargetId&lt;/code&gt; is not included. Accepts either a file system ID or ARN as input.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FileSystemId")
+    public String fileSystemId;
+    public DescribeMountTargetsRequest withFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
     
-    public DescribeMountTargetsHeaders headers;
-    public DescribeMountTargetsRequest withHeaders(DescribeMountTargetsHeaders headers) {
-        this.headers = headers;
+    /**
+     * (Optional) Opaque pagination token returned from a previous &lt;code&gt;DescribeMountTargets&lt;/code&gt; operation (String). If present, it specifies to continue the list from where the previous returning call left off.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public DescribeMountTargetsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * (Optional) Maximum number of mount targets to return in the response. Currently, this number is automatically set to 10, and other values are ignored. The response is paginated at 100 per page if you have more than 100 mount targets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public DescribeMountTargetsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    /**
+     * (Optional) ID of the mount target that you want to have described (String). It must be included in your request if &lt;code&gt;FileSystemId&lt;/code&gt; is not included. Accepts either a mount target ID or ARN as input.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MountTargetId")
+    public String mountTargetId;
+    public DescribeMountTargetsRequest withMountTargetId(String mountTargetId) {
+        this.mountTargetId = mountTargetId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DescribeMountTargetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DescribeMountTargetsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DescribeMountTargetsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DescribeMountTargetsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DescribeMountTargetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DescribeMountTargetsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DescribeMountTargetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

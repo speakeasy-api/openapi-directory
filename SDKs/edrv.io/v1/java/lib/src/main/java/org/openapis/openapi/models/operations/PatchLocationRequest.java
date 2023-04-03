@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchLocationRequest {
-    
-    public PatchLocationPathParams pathParams;
-    public PatchLocationRequest withPathParams(PatchLocationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Include location properties to create here
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchLocationRequestBody request;
-    public PatchLocationRequest withRequest(PatchLocationRequestBody request) {
-        this.request = request;
+    public PatchLocationRequestBody requestBody;
+    public PatchLocationRequest withRequestBody(PatchLocationRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * ID of location that needs to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchLocationRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

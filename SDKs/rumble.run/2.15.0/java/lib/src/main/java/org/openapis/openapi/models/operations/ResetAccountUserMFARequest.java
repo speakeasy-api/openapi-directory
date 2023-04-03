@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetAccountUserMFARequest {
-    
-    public ResetAccountUserMFAPathParams pathParams;
-    public ResetAccountUserMFARequest withPathParams(ResetAccountUserMFAPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ResetAccountUserMFASecurity security;
-    public ResetAccountUserMFARequest withSecurity(ResetAccountUserMFASecurity security) {
-        this.security = security;
+    /**
+     * UUID of the user to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public ResetAccountUserMFARequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

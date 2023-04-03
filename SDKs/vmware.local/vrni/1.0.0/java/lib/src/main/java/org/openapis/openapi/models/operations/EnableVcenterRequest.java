@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnableVcenterRequest {
-    
-    public EnableVcenterPathParams pathParams;
-    public EnableVcenterRequest withPathParams(EnableVcenterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public EnableVcenterSecurity security;
-    public EnableVcenterRequest withSecurity(EnableVcenterSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public EnableVcenterRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

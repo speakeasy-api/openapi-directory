@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetpersonsawayRequest {
-    
-    public SetpersonsawayQueryParams queryParams;
-    public SetpersonsawayRequest withQueryParams(SetpersonsawayQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of the Home you're interested in
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home_id")
+    public String homeId;
+    public SetpersonsawayRequest withHomeId(String homeId) {
+        this.homeId = homeId;
         return this;
     }
     
-    
-    public SetpersonsawaySecurity security;
-    public SetpersonsawayRequest withSecurity(SetpersonsawaySecurity security) {
-        this.security = security;
+    /**
+     * If a person_id is specified, that person will be set as 'Away'. If no person_id is specified, the Home will be set as 'Empty'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=person_id")
+    public String personId;
+    public SetpersonsawayRequest withPersonId(String personId) {
+        this.personId = personId;
         return this;
     }
     

@@ -4,20 +4,116 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindDoNotContactsRequest {
-    
-    public FindDoNotContactsQueryParams queryParams;
-    public FindDoNotContactsRequest withQueryParams(FindDoNotContactsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show only Do-Not-Call numbers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=call")
+    public Boolean call;
+    public FindDoNotContactsRequest withCall(Boolean call) {
+        this.call = call;
         return this;
     }
     
+    /**
+     * A campaign id which was used to send a message to a DNC number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
+    public Long campaignId;
+    public FindDoNotContactsRequest withCampaignId(Long campaignId) {
+        this.campaignId = campaignId;
+        return this;
+    }
     
-    public FindDoNotContactsSecurity security;
-    public FindDoNotContactsRequest withSecurity(FindDoNotContactsSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FindDoNotContactsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * ~
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inboundCall")
+    public Boolean inboundCall;
+    public FindDoNotContactsRequest withInboundCall(Boolean inboundCall) {
+        this.inboundCall = inboundCall;
+        return this;
+    }
+    
+    /**
+     * ~
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inboundText")
+    public Boolean inboundText;
+    public FindDoNotContactsRequest withInboundText(Boolean inboundText) {
+        this.inboundText = inboundText;
+        return this;
+    }
+    
+    /**
+     * To set the maximum number of records to return in a paged list response. The default is 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public FindDoNotContactsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * ~
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
+    public String[] number;
+    public FindDoNotContactsRequest withNumber(String[] number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Offset to the start of a given page. The default is 0. Check [pagination](https://developers.callfire.com/docs.html#pagination) page for more information about pagination in CallFire API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public FindDoNotContactsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Prefix (1-10 digits) of phone numbers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prefix")
+    public String prefix;
+    public FindDoNotContactsRequest withPrefix(String prefix) {
+        this.prefix = prefix;
+        return this;
+    }
+    
+    /**
+     * A DNC source name to search for DNCs
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public FindDoNotContactsRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Show only Do-Not-Text numbers
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public Boolean text;
+    public FindDoNotContactsRequest withText(Boolean text) {
+        this.text = text;
         return this;
     }
     

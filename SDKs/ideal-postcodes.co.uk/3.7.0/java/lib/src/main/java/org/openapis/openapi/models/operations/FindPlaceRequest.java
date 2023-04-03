@@ -4,13 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindPlaceRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=api_key")
+    public String apiKey;
+    public FindPlaceRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public FindPlaceQueryParams queryParams;
-    public FindPlaceRequest withQueryParams(FindPlaceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_country_iso")
+    public String biasCountryIso;
+    public FindPlaceRequest withBiasCountryIso(String biasCountryIso) {
+        this.biasCountryIso = biasCountryIso;
+        return this;
+    }
+    
+    /**
+     * Biases search based on approximate geolocation of IP address.
+     * Set `bias_ip=true` to enable.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_ip")
+    public org.openapis.openapi.models.shared.BiasIpParamEnum biasIp;
+    public FindPlaceRequest withBiasIp(org.openapis.openapi.models.shared.BiasIpParamEnum biasIp) {
+        this.biasIp = biasIp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=bias_lonlat")
+    public String biasLonlat;
+    public FindPlaceRequest withBiasLonlat(String biasLonlat) {
+        this.biasLonlat = biasLonlat;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=country_iso")
+    public String countryIso;
+    public FindPlaceRequest withCountryIso(String countryIso) {
+        this.countryIso = countryIso;
+        return this;
+    }
+    
+    /**
+     * Specifies the place you wish to query. Query can be shortened to `q=`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=query")
+    public String query;
+    public FindPlaceRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

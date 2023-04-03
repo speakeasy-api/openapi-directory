@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetV1ValidationSingleFormatEnum;
-import org.openapis.openapi.models.operations.GetV1ValidationSingleQueryParams;
 import org.openapis.openapi.models.operations.GetV1ValidationSingleRequest;
 import org.openapis.openapi.models.operations.GetV1ValidationSingleResponse;
 
@@ -29,12 +28,10 @@ public class Application {
                 .build();
 
             GetV1ValidationSingleRequest req = new GetV1ValidationSingleRequest() {{
-                queryParams = new GetV1ValidationSingleQueryParams() {{
-                    email = "Larue_Rau85@yahoo.com";
-                    format = "xml";
-                    key = "illum";
-                }};
-            }};            
+                email = "Larue_Rau85@yahoo.com";
+                format = "xml";
+                key = "illum";
+            }}            
 
             GetV1ValidationSingleResponse res = sdk.getV1ValidationSingle(req);
 
@@ -48,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

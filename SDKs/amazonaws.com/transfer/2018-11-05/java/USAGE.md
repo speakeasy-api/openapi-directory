@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateAccessXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateAccessHeaders;
 import org.openapis.openapi.models.operations.CreateAccessRequest;
 import org.openapis.openapi.models.operations.CreateAccessResponse;
 import org.openapis.openapi.models.shared.CreateAccessRequest;
@@ -18,54 +17,50 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAccessRequest req = new CreateAccessRequest() {{
-                headers = new CreateAccessHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "TransferService.CreateAccess";
-                }};
-                request = new CreateAccessRequest() {{
-                    externalId = "illum";
-                    homeDirectory = "vel";
+                createAccessRequest = new CreateAccessRequest() {{
+                    externalId = "corrupti";
+                    homeDirectory = "provident";
                     homeDirectoryMappings = new org.openapis.openapi.models.shared.HomeDirectoryMapEntry[]{{
                         add(new HomeDirectoryMapEntry() {{
-                            entry = "deserunt";
-                            target = "suscipit";
+                            entry = "quibusdam";
+                            target = "unde";
                         }}),
                         add(new HomeDirectoryMapEntry() {{
-                            entry = "iure";
-                            target = "magnam";
+                            entry = "nulla";
+                            target = "corrupti";
                         }}),
                         add(new HomeDirectoryMapEntry() {{
-                            entry = "debitis";
-                            target = "ipsa";
+                            entry = "illum";
+                            target = "vel";
                         }}),
                     }};
                     homeDirectoryType = "LOGICAL";
-                    policy = "tempora";
+                    policy = "deserunt";
                     posixProfile = new PosixProfile() {{
-                        gid = 383441;
+                        gid = 384382;
                         secondaryGids = new Long[]{{
-                            add(791725),
-                            add(812169),
+                            add(297534),
+                            add(891773),
                         }};
-                        uid = 528895;
+                        uid = 56713;
                     }};
-                    role = "iusto";
-                    serverId = "excepturi";
+                    role = "delectus";
+                    serverId = "tempora";
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "molestiae";
+                xAmzCredential = "minus";
+                xAmzDate = "placeat";
+                xAmzSecurityToken = "voluptatum";
+                xAmzSignature = "iusto";
+                xAmzSignedHeaders = "excepturi";
+                xAmzTarget = "TransferService.CreateAccess";
+            }}            
 
             CreateAccessResponse res = sdk.createAccess(req);
 

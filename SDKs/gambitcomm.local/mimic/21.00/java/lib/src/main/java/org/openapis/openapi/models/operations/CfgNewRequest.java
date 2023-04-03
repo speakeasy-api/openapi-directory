@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CfgNewRequest {
+    /**
+     * Agent number to start clearing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstAgentNum")
+    public Integer firstAgentNum;
+    public CfgNewRequest withFirstAgentNum(Integer firstAgentNum) {
+        this.firstAgentNum = firstAgentNum;
+        return this;
+    }
     
-    public CfgNewPathParams pathParams;
-    public CfgNewRequest withPathParams(CfgNewPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent number to end the clearing
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastAgentNum")
+    public Integer lastAgentNum;
+    public CfgNewRequest withLastAgentNum(Integer lastAgentNum) {
+        this.lastAgentNum = lastAgentNum;
         return this;
     }
     

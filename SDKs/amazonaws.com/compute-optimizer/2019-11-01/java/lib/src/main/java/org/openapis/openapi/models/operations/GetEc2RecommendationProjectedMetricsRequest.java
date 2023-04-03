@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEc2RecommendationProjectedMetricsRequest {
-    
-    public GetEc2RecommendationProjectedMetricsHeaders headers;
-    public GetEc2RecommendationProjectedMetricsRequest withHeaders(GetEc2RecommendationProjectedMetricsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.GetEc2RecommendationProjectedMetricsRequest getEc2RecommendationProjectedMetricsRequest;
+    public GetEc2RecommendationProjectedMetricsRequest withGetEc2RecommendationProjectedMetricsRequest(org.openapis.openapi.models.shared.GetEc2RecommendationProjectedMetricsRequest getEc2RecommendationProjectedMetricsRequest) {
+        this.getEc2RecommendationProjectedMetricsRequest = getEc2RecommendationProjectedMetricsRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetEc2RecommendationProjectedMetricsRequest request;
-    public GetEc2RecommendationProjectedMetricsRequest withRequest(org.openapis.openapi.models.shared.GetEc2RecommendationProjectedMetricsRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetEc2RecommendationProjectedMetricsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetEc2RecommendationProjectedMetricsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetEc2RecommendationProjectedMetricsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetEc2RecommendationProjectedMetricsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetEc2RecommendationProjectedMetricsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetEc2RecommendationProjectedMetricsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetEc2RecommendationProjectedMetricsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public GetEc2RecommendationProjectedMetricsXAmzTargetEnum xAmzTarget;
+    public GetEc2RecommendationProjectedMetricsRequest withXAmzTarget(GetEc2RecommendationProjectedMetricsXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

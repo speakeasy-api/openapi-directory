@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateInstitutionAccountsUpdateRequest {
-    
-    public PrivateInstitutionAccountsUpdatePathParams pathParams;
-    public PrivateInstitutionAccountsUpdateRequest withPathParams(PrivateInstitutionAccountsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Account description
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AccountUpdate request;
-    public PrivateInstitutionAccountsUpdateRequest withRequest(org.openapis.openapi.models.shared.AccountUpdate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AccountUpdate accountUpdate;
+    public PrivateInstitutionAccountsUpdateRequest withAccountUpdate(org.openapis.openapi.models.shared.AccountUpdate accountUpdate) {
+        this.accountUpdate = accountUpdate;
         return this;
     }
     
-    
-    public PrivateInstitutionAccountsUpdateSecurity security;
-    public PrivateInstitutionAccountsUpdateRequest withSecurity(PrivateInstitutionAccountsUpdateSecurity security) {
-        this.security = security;
+    /**
+     * Account identifier the user is associated to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public Long accountId;
+    public PrivateInstitutionAccountsUpdateRequest withAccountId(Long accountId) {
+        this.accountId = accountId;
         return this;
     }
     

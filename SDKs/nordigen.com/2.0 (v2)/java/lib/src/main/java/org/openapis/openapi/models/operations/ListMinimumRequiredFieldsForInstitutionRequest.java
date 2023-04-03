@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMinimumRequiredFieldsForInstitutionRequest {
-    
-    public ListMinimumRequiredFieldsForInstitutionPathParams pathParams;
-    public ListMinimumRequiredFieldsForInstitutionRequest withPathParams(ListMinimumRequiredFieldsForInstitutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=institution_id")
+    public String institutionId;
+    public ListMinimumRequiredFieldsForInstitutionRequest withInstitutionId(String institutionId) {
+        this.institutionId = institutionId;
         return this;
     }
     

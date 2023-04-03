@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPaymentRefundsRequest {
-    
-    public ListPaymentRefundsQueryParams queryParams;
-    public ListPaymentRefundsRequest withQueryParams(ListPaymentRefundsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The timestamp for the beginning of the requested reporting period, in RFC 3339 format.
+     * 
+     * Default: The current time minus one year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public ListPaymentRefundsRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this cursor to retrieve the next set of results for the original query.
+     * 
+     * For more information, see [Pagination](https://developer.squareup.com/docs/basics/api101/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListPaymentRefundsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListPaymentRefundsSecurity security;
-    public ListPaymentRefundsRequest withSecurity(ListPaymentRefundsSecurity security) {
-        this.security = security;
+    /**
+     * The timestamp for the end of the requested reporting period, in RFC 3339 format.
+     * 
+     * Default: The current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public ListPaymentRefundsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to be returned in a single page.
+     * 
+     * It is possible to receive fewer results than the specified limit on a given page.
+     * 
+     * If the supplied value is greater than 100, no more than 100 results are returned.
+     * 
+     * Default: 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListPaymentRefundsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Limit results to the location supplied. By default, results are returned
+     * for all locations associated with the seller.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListPaymentRefundsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which results are listed:
+     * - `ASC` - Oldest to newest.
+     * - `DESC` - Newest to oldest (default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public String sortOrder;
+    public ListPaymentRefundsRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * If provided, only refunds with the given source type are returned.
+     * - `CARD` - List refunds only for payments where `CARD` was specified as the payment
+     * source.
+     * 
+     * Default: If omitted, refunds are returned regardless of the source type.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_type")
+    public String sourceType;
+    public ListPaymentRefundsRequest withSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    
+    /**
+     * If provided, only refunds with the given status are returned.
+     * For a list of refund status values, see [PaymentRefund](https://developer.squareup.com/reference/square_2021-08-18/objects/PaymentRefund).
+     * 
+     * Default: If omitted, refunds are returned regardless of their status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ListPaymentRefundsRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

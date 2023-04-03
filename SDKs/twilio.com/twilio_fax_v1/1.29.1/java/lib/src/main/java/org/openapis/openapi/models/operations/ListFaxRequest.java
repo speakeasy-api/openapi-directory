@@ -4,27 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFaxRequest {
-    
-    public ListFaxQueryParams queryParams;
-    public ListFaxRequest withQueryParams(ListFaxQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Retrieve only those faxes with a `date_created` that is later than this value, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedAfter")
+    public OffsetDateTime dateCreatedAfter;
+    public ListFaxRequest withDateCreatedAfter(OffsetDateTime dateCreatedAfter) {
+        this.dateCreatedAfter = dateCreatedAfter;
         return this;
     }
     
-    
-    public ListFaxSecurity security;
-    public ListFaxRequest withSecurity(ListFaxSecurity security) {
-        this.security = security;
+    /**
+     * Retrieve only those faxes with a `date_created` that is before or equal to this value, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedOnOrBefore")
+    public OffsetDateTime dateCreatedOnOrBefore;
+    public ListFaxRequest withDateCreatedOnOrBefore(OffsetDateTime dateCreatedOnOrBefore) {
+        this.dateCreatedOnOrBefore = dateCreatedOnOrBefore;
         return this;
     }
     
+    /**
+     * Retrieve only those faxes sent from this phone number, specified in [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=From")
+    public String from;
+    public ListFaxRequest withFrom(String from) {
+        this.from = from;
+        return this;
+    }
     
-    public String serverURL;
-    public ListFaxRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListFaxRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Retrieve only those faxes sent to this phone number, specified in [E.164](https://www.twilio.com/docs/glossary/what-e164) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=To")
+    public String to;
+    public ListFaxRequest withTo(String to) {
+        this.to = to;
         return this;
     }
     

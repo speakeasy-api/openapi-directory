@@ -47,12 +47,12 @@ public class Configs {
      */
     public org.openapis.openapi.models.operations.CreateConfigResponse createConfig(org.openapis.openapi.models.operations.CreateConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConfigPathParams.class, baseUrl, "/v1/products/{productId}/configs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConfigRequest.class, baseUrl, "/v1/products/{productId}/configs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createConfigRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -100,7 +100,7 @@ public class Configs {
      */
     public org.openapis.openapi.models.operations.DeleteConfigResponse deleteConfig(org.openapis.openapi.models.operations.DeleteConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConfigPathParams.class, baseUrl, "/v1/configs/{configId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConfigRequest.class, baseUrl, "/v1/configs/{configId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -135,7 +135,7 @@ public class Configs {
      */
     public org.openapis.openapi.models.operations.GetConfigResponse getConfig(org.openapis.openapi.models.operations.GetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigPathParams.class, baseUrl, "/v1/configs/{configId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigRequest.class, baseUrl, "/v1/configs/{configId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -184,7 +184,7 @@ public class Configs {
      */
     public org.openapis.openapi.models.operations.GetConfigsResponse getConfigs(org.openapis.openapi.models.operations.GetConfigsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigsPathParams.class, baseUrl, "/v1/products/{productId}/configs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigsRequest.class, baseUrl, "/v1/products/{productId}/configs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -232,12 +232,12 @@ public class Configs {
      */
     public org.openapis.openapi.models.operations.UpdateConfigResponse updateConfig(org.openapis.openapi.models.operations.UpdateConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConfigPathParams.class, baseUrl, "/v1/configs/{configId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConfigRequest.class, baseUrl, "/v1/configs/{configId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateConfigRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

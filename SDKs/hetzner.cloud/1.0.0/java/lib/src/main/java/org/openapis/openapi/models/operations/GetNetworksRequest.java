@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworksRequest {
+    /**
+     * Can be used to filter networks by labels. The response will only contain networks with a matching label selector pattern.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetNetworksRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
     
-    public GetNetworksQueryParams queryParams;
-    public GetNetworksRequest withQueryParams(GetNetworksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter networks by their name. The response will only contain the networks matching the specified name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetNetworksRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

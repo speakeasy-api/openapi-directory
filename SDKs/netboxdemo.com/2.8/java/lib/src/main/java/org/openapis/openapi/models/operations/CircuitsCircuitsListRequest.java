@@ -4,13 +4,467 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CircuitsCircuitsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid")
+    public String cid;
+    public CircuitsCircuitsListRequest withCid(String cid) {
+        this.cid = cid;
+        return this;
+    }
     
-    public CircuitsCircuitsListQueryParams queryParams;
-    public CircuitsCircuitsListRequest withQueryParams(CircuitsCircuitsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__ic")
+    public String cidIc;
+    public CircuitsCircuitsListRequest withCidIc(String cidIc) {
+        this.cidIc = cidIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__ie")
+    public String cidIe;
+    public CircuitsCircuitsListRequest withCidIe(String cidIe) {
+        this.cidIe = cidIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__iew")
+    public String cidIew;
+    public CircuitsCircuitsListRequest withCidIew(String cidIew) {
+        this.cidIew = cidIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__isw")
+    public String cidIsw;
+    public CircuitsCircuitsListRequest withCidIsw(String cidIsw) {
+        this.cidIsw = cidIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__n")
+    public String cidN;
+    public CircuitsCircuitsListRequest withCidN(String cidN) {
+        this.cidN = cidN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__nic")
+    public String cidNic;
+    public CircuitsCircuitsListRequest withCidNic(String cidNic) {
+        this.cidNic = cidNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__nie")
+    public String cidNie;
+    public CircuitsCircuitsListRequest withCidNie(String cidNie) {
+        this.cidNie = cidNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__niew")
+    public String cidNiew;
+    public CircuitsCircuitsListRequest withCidNiew(String cidNiew) {
+        this.cidNiew = cidNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cid__nisw")
+    public String cidNisw;
+    public CircuitsCircuitsListRequest withCidNisw(String cidNisw) {
+        this.cidNisw = cidNisw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commit_rate")
+    public String commitRate;
+    public CircuitsCircuitsListRequest withCommitRate(String commitRate) {
+        this.commitRate = commitRate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commit_rate__gt")
+    public String commitRateGt;
+    public CircuitsCircuitsListRequest withCommitRateGt(String commitRateGt) {
+        this.commitRateGt = commitRateGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commit_rate__gte")
+    public String commitRateGte;
+    public CircuitsCircuitsListRequest withCommitRateGte(String commitRateGte) {
+        this.commitRateGte = commitRateGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commit_rate__lt")
+    public String commitRateLt;
+    public CircuitsCircuitsListRequest withCommitRateLt(String commitRateLt) {
+        this.commitRateLt = commitRateLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commit_rate__lte")
+    public String commitRateLte;
+    public CircuitsCircuitsListRequest withCommitRateLte(String commitRateLte) {
+        this.commitRateLte = commitRateLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=commit_rate__n")
+    public String commitRateN;
+    public CircuitsCircuitsListRequest withCommitRateN(String commitRateN) {
+        this.commitRateN = commitRateN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public String created;
+    public CircuitsCircuitsListRequest withCreated(String created) {
+        this.created = created;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__gte")
+    public String createdGte;
+    public CircuitsCircuitsListRequest withCreatedGte(String createdGte) {
+        this.createdGte = createdGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created__lte")
+    public String createdLte;
+    public CircuitsCircuitsListRequest withCreatedLte(String createdLte) {
+        this.createdLte = createdLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public CircuitsCircuitsListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public CircuitsCircuitsListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public CircuitsCircuitsListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public CircuitsCircuitsListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public CircuitsCircuitsListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public CircuitsCircuitsListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=install_date")
+    public String installDate;
+    public CircuitsCircuitsListRequest withInstallDate(String installDate) {
+        this.installDate = installDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=install_date__gt")
+    public String installDateGt;
+    public CircuitsCircuitsListRequest withInstallDateGt(String installDateGt) {
+        this.installDateGt = installDateGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=install_date__gte")
+    public String installDateGte;
+    public CircuitsCircuitsListRequest withInstallDateGte(String installDateGte) {
+        this.installDateGte = installDateGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=install_date__lt")
+    public String installDateLt;
+    public CircuitsCircuitsListRequest withInstallDateLt(String installDateLt) {
+        this.installDateLt = installDateLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=install_date__lte")
+    public String installDateLte;
+    public CircuitsCircuitsListRequest withInstallDateLte(String installDateLte) {
+        this.installDateLte = installDateLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=install_date__n")
+    public String installDateN;
+    public CircuitsCircuitsListRequest withInstallDateN(String installDateN) {
+        this.installDateN = installDateN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated")
+    public String lastUpdated;
+    public CircuitsCircuitsListRequest withLastUpdated(String lastUpdated) {
+        this.lastUpdated = lastUpdated;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__gte")
+    public String lastUpdatedGte;
+    public CircuitsCircuitsListRequest withLastUpdatedGte(String lastUpdatedGte) {
+        this.lastUpdatedGte = lastUpdatedGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_updated__lte")
+    public String lastUpdatedLte;
+    public CircuitsCircuitsListRequest withLastUpdatedLte(String lastUpdatedLte) {
+        this.lastUpdatedLte = lastUpdatedLte;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public CircuitsCircuitsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public CircuitsCircuitsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider")
+    public String provider;
+    public CircuitsCircuitsListRequest withProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider__n")
+    public String providerN;
+    public CircuitsCircuitsListRequest withProviderN(String providerN) {
+        this.providerN = providerN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider_id")
+    public String providerId;
+    public CircuitsCircuitsListRequest withProviderId(String providerId) {
+        this.providerId = providerId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=provider_id__n")
+    public String providerIdN;
+    public CircuitsCircuitsListRequest withProviderIdN(String providerIdN) {
+        this.providerIdN = providerIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public CircuitsCircuitsListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
+    public String region;
+    public CircuitsCircuitsListRequest withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region__n")
+    public String regionN;
+    public CircuitsCircuitsListRequest withRegionN(String regionN) {
+        this.regionN = regionN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region_id")
+    public String regionId;
+    public CircuitsCircuitsListRequest withRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region_id__n")
+    public String regionIdN;
+    public CircuitsCircuitsListRequest withRegionIdN(String regionIdN) {
+        this.regionIdN = regionIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public CircuitsCircuitsListRequest withSite(String site) {
+        this.site = site;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site__n")
+    public String siteN;
+    public CircuitsCircuitsListRequest withSiteN(String siteN) {
+        this.siteN = siteN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id")
+    public String siteId;
+    public CircuitsCircuitsListRequest withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id__n")
+    public String siteIdN;
+    public CircuitsCircuitsListRequest withSiteIdN(String siteIdN) {
+        this.siteIdN = siteIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public CircuitsCircuitsListRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status__n")
+    public String statusN;
+    public CircuitsCircuitsListRequest withStatusN(String statusN) {
+        this.statusN = statusN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public CircuitsCircuitsListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag__n")
+    public String tagN;
+    public CircuitsCircuitsListRequest withTagN(String tagN) {
+        this.tagN = tagN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant")
+    public String tenant;
+    public CircuitsCircuitsListRequest withTenant(String tenant) {
+        this.tenant = tenant;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant__n")
+    public String tenantN;
+    public CircuitsCircuitsListRequest withTenantN(String tenantN) {
+        this.tenantN = tenantN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_group")
+    public String tenantGroup;
+    public CircuitsCircuitsListRequest withTenantGroup(String tenantGroup) {
+        this.tenantGroup = tenantGroup;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_group__n")
+    public String tenantGroupN;
+    public CircuitsCircuitsListRequest withTenantGroupN(String tenantGroupN) {
+        this.tenantGroupN = tenantGroupN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_group_id")
+    public String tenantGroupId;
+    public CircuitsCircuitsListRequest withTenantGroupId(String tenantGroupId) {
+        this.tenantGroupId = tenantGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_group_id__n")
+    public String tenantGroupIdN;
+    public CircuitsCircuitsListRequest withTenantGroupIdN(String tenantGroupIdN) {
+        this.tenantGroupIdN = tenantGroupIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id")
+    public String tenantId;
+    public CircuitsCircuitsListRequest withTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id__n")
+    public String tenantIdN;
+    public CircuitsCircuitsListRequest withTenantIdN(String tenantIdN) {
+        this.tenantIdN = tenantIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public CircuitsCircuitsListRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type__n")
+    public String typeN;
+    public CircuitsCircuitsListRequest withTypeN(String typeN) {
+        this.typeN = typeN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type_id")
+    public String typeId;
+    public CircuitsCircuitsListRequest withTypeId(String typeId) {
+        this.typeId = typeId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type_id__n")
+    public String typeIdN;
+    public CircuitsCircuitsListRequest withTypeIdN(String typeIdN) {
+        this.typeIdN = typeIdN;
         return this;
     }
     

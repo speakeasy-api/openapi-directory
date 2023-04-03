@@ -33,25 +33,26 @@ public class OperatingSystems {
     /**
      * Gets one operating system by DART ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetResponse dfareportingOperatingSystemsGet(org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetResponse dfareportingOperatingSystemsGet(org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetRequest request, org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetPathParams.class, baseUrl, "/userprofiles/{profileId}/operatingSystems/{dartId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetRequest.class, baseUrl, "/userprofiles/{profileId}/operatingSystems/{dartId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingOperatingSystemsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,25 +79,26 @@ public class OperatingSystems {
     /**
      * Retrieves a list of operating systems.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingOperatingSystemsListResponse dfareportingOperatingSystemsList(org.openapis.openapi.models.operations.DfareportingOperatingSystemsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingOperatingSystemsListResponse dfareportingOperatingSystemsList(org.openapis.openapi.models.operations.DfareportingOperatingSystemsListRequest request, org.openapis.openapi.models.operations.DfareportingOperatingSystemsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingOperatingSystemsListPathParams.class, baseUrl, "/userprofiles/{profileId}/operatingSystems", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingOperatingSystemsListRequest.class, baseUrl, "/userprofiles/{profileId}/operatingSystems", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingOperatingSystemsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingOperatingSystemsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

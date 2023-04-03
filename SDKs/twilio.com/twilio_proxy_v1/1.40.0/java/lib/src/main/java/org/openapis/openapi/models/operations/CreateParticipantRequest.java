@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateParticipantRequest {
-    
-    public CreateParticipantPathParams pathParams;
-    public CreateParticipantRequest withPathParams(CreateParticipantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateParticipantCreateParticipantRequest request;
-    public CreateParticipantRequest withRequest(CreateParticipantCreateParticipantRequest request) {
-        this.request = request;
+    public CreateParticipantCreateParticipantRequest requestBody;
+    public CreateParticipantRequest withRequestBody(CreateParticipantCreateParticipantRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateParticipantSecurity security;
-    public CreateParticipantRequest withSecurity(CreateParticipantSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateParticipantRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public CreateParticipantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SessionSid")
+    public String sessionSid;
+    public CreateParticipantRequest withSessionSid(String sessionSid) {
+        this.sessionSid = sessionSid;
         return this;
     }
     

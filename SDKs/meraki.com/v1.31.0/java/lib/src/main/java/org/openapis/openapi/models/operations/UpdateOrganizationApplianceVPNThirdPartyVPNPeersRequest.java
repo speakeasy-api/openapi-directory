@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest {
-    
-    public UpdateOrganizationApplianceVPNThirdPartyVPNPeersPathParams pathParams;
-    public UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest withPathParams(UpdateOrganizationApplianceVPNThirdPartyVPNPeersPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBody requestBody;
+    public UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest withRequestBody(UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBody request;
-    public UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest withRequest(UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationApplianceVPNThirdPartyVPNPeersRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

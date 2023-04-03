@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnnouncementBannersRemoveAnnouncementBannerForEnterpriseRequest {
-    
-    public AnnouncementBannersRemoveAnnouncementBannerForEnterprisePathParams pathParams;
-    public AnnouncementBannersRemoveAnnouncementBannerForEnterpriseRequest withPathParams(AnnouncementBannersRemoveAnnouncementBannerForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public AnnouncementBannersRemoveAnnouncementBannerForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     

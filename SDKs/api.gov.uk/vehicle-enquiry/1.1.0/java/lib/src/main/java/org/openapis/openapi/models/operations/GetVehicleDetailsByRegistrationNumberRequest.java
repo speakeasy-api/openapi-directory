@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehicleDetailsByRegistrationNumberRequest {
-    
-    public GetVehicleDetailsByRegistrationNumberHeaders headers;
-    public GetVehicleDetailsByRegistrationNumberRequest withHeaders(GetVehicleDetailsByRegistrationNumberHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Registration number of the vehicle to find details for
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.VehicleRequest request;
-    public GetVehicleDetailsByRegistrationNumberRequest withRequest(org.openapis.openapi.models.shared.VehicleRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.VehicleRequest vehicleRequest;
+    public GetVehicleDetailsByRegistrationNumberRequest withVehicleRequest(org.openapis.openapi.models.shared.VehicleRequest vehicleRequest) {
+        this.vehicleRequest = vehicleRequest;
+        return this;
+    }
+    
+    /**
+     * Consumer Correlation ID
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Correlation-Id")
+    public String xCorrelationId;
+    public GetVehicleDetailsByRegistrationNumberRequest withXCorrelationId(String xCorrelationId) {
+        this.xCorrelationId = xCorrelationId;
+        return this;
+    }
+    
+    /**
+     * Client Specific API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetVehicleDetailsByRegistrationNumberRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

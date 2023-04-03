@@ -43,10 +43,11 @@ public class SIPPhone {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSIPPhoneResponse createSIPPhone(org.openapis.openapi.models.operations.CreateSIPPhoneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSIPPhoneResponse createSIPPhone(org.openapis.openapi.models.operations.CreateSIPPhoneApplicationJSON request, org.openapis.openapi.models.operations.CreateSIPPhoneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sip_phones");
         
@@ -57,7 +58,7 @@ public class SIPPhone {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,19 +85,20 @@ public class SIPPhone {
      * &lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSIPPhoneResponse deleteSIPPhone(org.openapis.openapi.models.operations.DeleteSIPPhoneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSIPPhoneResponse deleteSIPPhone(org.openapis.openapi.models.operations.DeleteSIPPhoneRequest request, org.openapis.openapi.models.operations.DeleteSIPPhoneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSIPPhonePathParams.class, baseUrl, "/sip_phones/{phoneId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSIPPhoneRequest.class, baseUrl, "/sip_phones/{phoneId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -136,10 +138,11 @@ public class SIPPhone {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`&lt;br&gt;
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListSipPhonesResponse listSipPhones(org.openapis.openapi.models.operations.ListSipPhonesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSipPhonesResponse listSipPhones(org.openapis.openapi.models.operations.ListSipPhonesRequest request, org.openapis.openapi.models.operations.ListSipPhonesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/sip_phones");
         
@@ -147,14 +150,14 @@ public class SIPPhone {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSipPhonesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSipPhonesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,21 +197,22 @@ public class SIPPhone {
      * &lt;br&gt; 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSIPPhoneResponse updateSIPPhone(org.openapis.openapi.models.operations.UpdateSIPPhoneRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSIPPhoneResponse updateSIPPhone(org.openapis.openapi.models.operations.UpdateSIPPhoneRequest request, org.openapis.openapi.models.operations.UpdateSIPPhoneSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSIPPhonePathParams.class, baseUrl, "/sip_phones/{phoneId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSIPPhoneRequest.class, baseUrl, "/sip_phones/{phoneId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReadCommunityRequest {
-    
-    public GetReadCommunityPathParams pathParams;
-    public GetReadCommunityRequest withPathParams(GetReadCommunityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the SNMP read community string
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetReadCommunityRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

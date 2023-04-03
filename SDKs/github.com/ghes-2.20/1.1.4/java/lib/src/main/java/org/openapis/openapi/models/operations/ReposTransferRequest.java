@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposTransferRequest {
-    
-    public ReposTransferPathParams pathParams;
-    public ReposTransferRequest withPathParams(ReposTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposTransferRequestBody requestBody;
+    public ReposTransferRequest withRequestBody(ReposTransferRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposTransferRequestBody request;
-    public ReposTransferRequest withRequest(ReposTransferRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposTransferRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposTransferRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

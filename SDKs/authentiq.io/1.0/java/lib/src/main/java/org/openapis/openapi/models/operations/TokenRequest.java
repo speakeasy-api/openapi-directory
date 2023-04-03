@@ -7,17 +7,21 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokenRequest {
-    
-    public TokenHeaders headers;
-    public TokenRequest withHeaders(TokenHeaders headers) {
-        this.headers = headers;
+    /**
+     * HTTP Basic authorization header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public TokenRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public TokenRequestBody request;
-    public TokenRequest withRequest(TokenRequestBody request) {
-        this.request = request;
+    public TokenRequestBody requestBody;
+    public TokenRequest withRequestBody(TokenRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/DrvlcSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DrvlcRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/DrvlcRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DrvlcRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/DrvlcRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Drvlc504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Drvlc504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Drvlc504ApplicationJSON.java
@@ -61,7 +60,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/RvcerSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/RvcerRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/RvcerRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/RvcerRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/RvcerRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rvcer504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rvcer504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Rvcer504ApplicationJSON.java
@@ -105,8 +103,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 lib/src/main/java/org/openapis/openapi/models/shared/VehicleRegistrationSchemaCertificateDataVehicleRegistrationInsurance.java
 lib/src/main/java/org/openapis/openapi/models/shared/VehicleRegistrationSchemaCertificateDataVehicleRegistrationVehicle.java
 lib/src/main/java/org/openapis/openapi/models/shared/VehicleRegistrationSchemaCertificateDataVehicleRegistration.java

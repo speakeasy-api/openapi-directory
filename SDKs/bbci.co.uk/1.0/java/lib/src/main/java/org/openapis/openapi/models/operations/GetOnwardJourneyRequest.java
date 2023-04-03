@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOnwardJourneyRequest {
-    
-    public GetOnwardJourneyPathParams pathParams;
-    public GetOnwardJourneyRequest withPathParams(GetOnwardJourneyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether to return all, or available programmes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=availability")
+    public org.openapis.openapi.models.shared.AvailabilityEnum availability;
+    public GetOnwardJourneyRequest withAvailability(org.openapis.openapi.models.shared.AvailabilityEnum availability) {
+        this.availability = availability;
         return this;
     }
     
+    /**
+     * The programme identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pid")
+    public String pid;
+    public GetOnwardJourneyRequest withPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
     
-    public GetOnwardJourneyQueryParams queryParams;
-    public GetOnwardJourneyRequest withQueryParams(GetOnwardJourneyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The rights group to limit results to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rights")
+    public org.openapis.openapi.models.shared.RightsEnum rights;
+    public GetOnwardJourneyRequest withRights(org.openapis.openapi.models.shared.RightsEnum rights) {
+        this.rights = rights;
         return this;
     }
     

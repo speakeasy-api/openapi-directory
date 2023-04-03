@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTransactionRequest {
-    
-    public UpdateTransactionPathParams pathParams;
-    public UpdateTransactionRequest withPathParams(UpdateTransactionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateTransactionRequestBody request;
-    public UpdateTransactionRequest withRequest(UpdateTransactionRequestBody request) {
-        this.request = request;
+    public UpdateTransactionRequestBody requestBody;
+    public UpdateTransactionRequest withRequestBody(UpdateTransactionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateTransactionSecurity security;
-    public UpdateTransactionRequest withSecurity(UpdateTransactionSecurity security) {
-        this.security = security;
+    /**
+     * Unique number (across all Products of a Vendor) that identifies the Transaction
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionNumber")
+    public String transactionNumber;
+    public UpdateTransactionRequest withTransactionNumber(String transactionNumber) {
+        this.transactionNumber = transactionNumber;
         return this;
     }
     

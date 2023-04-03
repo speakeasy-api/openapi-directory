@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsAppIdSettingsCreateSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeDeveloperHapikey developerHapikey;
-    public PostMarketingV3MarketingEventsAppIdSettingsCreateSecurity withDeveloperHapikey(org.openapis.openapi.models.shared.SchemeDeveloperHapikey developerHapikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
+    public String developerHapikey;
+    public PostMarketingV3MarketingEventsAppIdSettingsCreateSecurity withDeveloperHapikey(String developerHapikey) {
         this.developerHapikey = developerHapikey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeHapikey hapikey;
-    public PostMarketingV3MarketingEventsAppIdSettingsCreateSecurity withHapikey(org.openapis.openapi.models.shared.SchemeHapikey hapikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
+    public String hapikey;
+    public PostMarketingV3MarketingEventsAppIdSettingsCreateSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
     }

@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ObjectsGetObjectsByObjectIdsRequest {
-    
-    public ObjectsGetObjectsByObjectIdsPathParams pathParams;
-    public ObjectsGetObjectsByObjectIdsRequest withPathParams(ObjectsGetObjectsByObjectIdsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ObjectsGetObjectsByObjectIdsQueryParams queryParams;
-    public ObjectsGetObjectsByObjectIdsRequest withQueryParams(ObjectsGetObjectsByObjectIdsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Objects filtering parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, java.util.Map<String, Object>> request;
-    public ObjectsGetObjectsByObjectIdsRequest withRequest(java.util.Map<String, java.util.Map<String, Object>> request) {
-        this.request = request;
+    public java.util.Map<String, java.util.Map<String, Object>> requestBody;
+    public ObjectsGetObjectsByObjectIdsRequest withRequestBody(java.util.Map<String, java.util.Map<String, Object>> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public ObjectsGetObjectsByObjectIdsRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public ObjectsGetObjectsByObjectIdsRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

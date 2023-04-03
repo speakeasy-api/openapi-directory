@@ -39,12 +39,12 @@ public class AccessPolicies {
      */
     public org.openapis.openapi.models.operations.CreateNetworkSwitchAccessPolicyResponse createNetworkSwitchAccessPolicy(org.openapis.openapi.models.operations.CreateNetworkSwitchAccessPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchAccessPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkSwitchAccessPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,7 +84,7 @@ public class AccessPolicies {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkSwitchAccessPolicyResponse deleteNetworkSwitchAccessPolicy(org.openapis.openapi.models.operations.DeleteNetworkSwitchAccessPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchAccessPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkSwitchAccessPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -118,7 +118,7 @@ public class AccessPolicies {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchAccessPoliciesResponse getNetworkSwitchAccessPolicies(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPoliciesPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPoliciesRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class AccessPolicies {
      */
     public org.openapis.openapi.models.operations.GetNetworkSwitchAccessPolicyResponse getNetworkSwitchAccessPolicy(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSwitchAccessPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -198,12 +198,12 @@ public class AccessPolicies {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessPolicyResponse updateNetworkSwitchAccessPolicy(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessPolicyPathParams.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSwitchAccessPolicyRequest.class, baseUrl, "/networks/{networkId}/switch/accessPolicies/{accessPolicyNumber}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1AnnouncementsIdDismissRequest {
-    
-    public PostApiV1AnnouncementsIdDismissPathParams pathParams;
-    public PostApiV1AnnouncementsIdDismissRequest withPathParams(PostApiV1AnnouncementsIdDismissPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostApiV1AnnouncementsIdDismissSecurity security;
-    public PostApiV1AnnouncementsIdDismissRequest withSecurity(PostApiV1AnnouncementsIdDismissSecurity security) {
-        this.security = security;
+    /**
+     * Local ID of an announcement in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1AnnouncementsIdDismissRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

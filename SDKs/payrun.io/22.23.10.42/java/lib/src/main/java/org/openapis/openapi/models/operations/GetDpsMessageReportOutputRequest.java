@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDpsMessageReportOutputRequest {
-    
-    public GetDpsMessageReportOutputQueryParams queryParams;
-    public GetDpsMessageReportOutputRequest withQueryParams(GetDpsMessageReportOutputQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetDpsMessageReportOutputRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetDpsMessageReportOutputRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetDpsMessageReportOutputHeaders headers;
-    public GetDpsMessageReportOutputRequest withHeaders(GetDpsMessageReportOutputHeaders headers) {
-        this.headers = headers;
+    /**
+     * The employer unique key. E.g. ER001
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmployerKey")
+    public String employerKey;
+    public GetDpsMessageReportOutputRequest withEmployerKey(String employerKey) {
+        this.employerKey = employerKey;
+        return this;
+    }
+    
+    /**
+     * The lower filter date. E.g 2016-04-06
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FromDate")
+    public LocalDate fromDate;
+    public GetDpsMessageReportOutputRequest withFromDate(LocalDate fromDate) {
+        this.fromDate = fromDate;
+        return this;
+    }
+    
+    /**
+     * The highest element index to return from the report. Used to control paging within large data sets. E.g. 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxIndex")
+    public String maxIndex;
+    public GetDpsMessageReportOutputRequest withMaxIndex(String maxIndex) {
+        this.maxIndex = maxIndex;
+        return this;
+    }
+    
+    /**
+     * The DPS message status as a CSV list. E.g. Retrieved,Processed,Blocked,Ignored
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageStatuses")
+    public String messageStatuses;
+    public GetDpsMessageReportOutputRequest withMessageStatuses(String messageStatuses) {
+        this.messageStatuses = messageStatuses;
+        return this;
+    }
+    
+    /**
+     * The DPS message types as a CSV list. E.g. P6,P9,SL1,SL2
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageTypes")
+    public String messageTypes;
+    public GetDpsMessageReportOutputRequest withMessageTypes(String messageTypes) {
+        this.messageTypes = messageTypes;
+        return this;
+    }
+    
+    /**
+     * The element index to begin the report. Used to control paging within large data sets. E.g. 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartIndex")
+    public String startIndex;
+    public GetDpsMessageReportOutputRequest withStartIndex(String startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * The upper filter date. E.g 2017-04-05
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ToDate")
+    public LocalDate toDate;
+    public GetDpsMessageReportOutputRequest withToDate(LocalDate toDate) {
+        this.toDate = toDate;
         return this;
     }
     

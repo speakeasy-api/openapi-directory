@@ -40,12 +40,12 @@ public class ApplicationDocuments {
      */
     public org.openapis.openapi.models.operations.CreateApplicationDocumentResponse createApplicationDocument(org.openapis.openapi.models.operations.CreateApplicationDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApplicationDocumentPathParams.class, baseUrl, "/api/v1/applications/{application_id}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApplicationDocumentRequest.class, baseUrl, "/api/v1/applications/{application_id}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "applicationDocumentCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,12 +84,12 @@ public class ApplicationDocuments {
      */
     public org.openapis.openapi.models.operations.EditApplicationDocumentResponse editApplicationDocument(org.openapis.openapi.models.operations.EditApplicationDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditApplicationDocumentPathParams.class, baseUrl, "/api/v1/applications/{application_id}/documents/{document_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EditApplicationDocumentRequest.class, baseUrl, "/api/v1/applications/{application_id}/documents/{document_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "applicationDocumentEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -128,7 +128,7 @@ public class ApplicationDocuments {
      */
     public org.openapis.openapi.models.operations.GetApplicationDocumentResponse getApplicationDocument(org.openapis.openapi.models.operations.GetApplicationDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationDocumentPathParams.class, baseUrl, "/api/v1/applications/{application_id}/documents/{document_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationDocumentRequest.class, baseUrl, "/api/v1/applications/{application_id}/documents/{document_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -167,13 +167,13 @@ public class ApplicationDocuments {
      */
     public org.openapis.openapi.models.operations.GetApplicationDocumentsResponse getApplicationDocuments(org.openapis.openapi.models.operations.GetApplicationDocumentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationDocumentsPathParams.class, baseUrl, "/api/v1/applications/{application_id}/documents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApplicationDocumentsRequest.class, baseUrl, "/api/v1/applications/{application_id}/documents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApplicationDocumentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApplicationDocumentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -212,12 +212,12 @@ public class ApplicationDocuments {
      */
     public org.openapis.openapi.models.operations.SubmitApplicationDocumentResponse submitApplicationDocument(org.openapis.openapi.models.operations.SubmitApplicationDocumentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitApplicationDocumentPathParams.class, baseUrl, "/api/v1/applications/{application_id}/documents/{document_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitApplicationDocumentRequest.class, baseUrl, "/api/v1/applications/{application_id}/documents/{document_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "applicationDocumentEditRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

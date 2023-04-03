@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAccountInstitutionReviewCurationIdCommentsRequest {
-    
-    public PostAccountInstitutionReviewCurationIdCommentsPathParams pathParams;
-    public PostAccountInstitutionReviewCurationIdCommentsRequest withPathParams(PostAccountInstitutionReviewCurationIdCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The content/value of the comment.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CurationCommentCreate request;
-    public PostAccountInstitutionReviewCurationIdCommentsRequest withRequest(org.openapis.openapi.models.shared.CurationCommentCreate request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CurationCommentCreate curationCommentCreate;
+    public PostAccountInstitutionReviewCurationIdCommentsRequest withCurationCommentCreate(org.openapis.openapi.models.shared.CurationCommentCreate curationCommentCreate) {
+        this.curationCommentCreate = curationCommentCreate;
         return this;
     }
     
-    
-    public PostAccountInstitutionReviewCurationIdCommentsSecurity security;
-    public PostAccountInstitutionReviewCurationIdCommentsRequest withSecurity(PostAccountInstitutionReviewCurationIdCommentsSecurity security) {
-        this.security = security;
+    /**
+     * ID of the curation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=curation_id")
+    public Long curationId;
+    public PostAccountInstitutionReviewCurationIdCommentsRequest withCurationId(Long curationId) {
+        this.curationId = curationId;
         return this;
     }
     

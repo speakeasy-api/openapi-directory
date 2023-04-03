@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ScreenshotsRequest {
-    
-    public ScreenshotsPathParams pathParams;
-    public ScreenshotsRequest withPathParams(ScreenshotsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ScreenshotsSecurity security;
-    public ScreenshotsRequest withSecurity(ScreenshotsSecurity security) {
-        this.security = security;
+    /**
+     * Test ID that details you want to fetch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_id")
+    public String testId;
+    public ScreenshotsRequest withTestId(String testId) {
+        this.testId = testId;
         return this;
     }
     

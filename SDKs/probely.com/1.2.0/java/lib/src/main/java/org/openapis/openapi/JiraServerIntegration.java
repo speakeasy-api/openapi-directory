@@ -99,7 +99,7 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesResponse getIntegrationsJiraServerProjectsProjectIdIssueTypes(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesPathParams.class, baseUrl, "/integrations/jira-server/projects/{project_id}/issue_types/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesRequest.class, baseUrl, "/integrations/jira-server/projects/{project_id}/issue_types/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -162,7 +162,7 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdPrioritiesResponse getIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdPriorities(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdPrioritiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdPrioritiesPathParams.class, baseUrl, "/integrations/jira-server/projects/{project_id}/issue_types/{issue_type_id}/priorities/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdPrioritiesRequest.class, baseUrl, "/integrations/jira-server/projects/{project_id}/issue_types/{issue_type_id}/priorities/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -217,7 +217,7 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdStatusResponse getIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdStatus(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdStatusPathParams.class, baseUrl, "/integrations/jira-server/projects/{project_id}/issue_types/{issue_type_id}/status/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIntegrationsJiraServerProjectsProjectIdIssueTypesIssueTypeIdStatusRequest.class, baseUrl, "/integrations/jira-server/projects/{project_id}/issue_types/{issue_type_id}/status/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -280,7 +280,7 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdIntegrationsJiraServerResponse getTargetsTargetIdFindingsIdIntegrationsJiraServer(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdIntegrationsJiraServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdFindingsIdIntegrationsJiraServerRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -335,7 +335,7 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsJiraServerResponse getTargetsTargetIdIntegrationsJiraServer(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsJiraServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsJiraServerPathParams.class, baseUrl, "/targets/{target_id}/integrations/jira-server/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTargetsTargetIdIntegrationsJiraServerRequest.class, baseUrl, "/targets/{target_id}/integrations/jira-server/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -390,12 +390,12 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdIntegrationsJiraServerResponse patchTargetsTargetIdFindingsIdIntegrationsJiraServer(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdIntegrationsJiraServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdFindingsIdIntegrationsJiraServerRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jiraFinding", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -458,12 +458,12 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsJiraServerResponse patchTargetsTargetIdIntegrationsJiraServer(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsJiraServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsJiraServerPathParams.class, baseUrl, "/targets/{target_id}/integrations/jira-server/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchTargetsTargetIdIntegrationsJiraServerRequest.class, baseUrl, "/targets/{target_id}/integrations/jira-server/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jiraScope", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -526,12 +526,12 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdIntegrationsJiraServerResponse putTargetsTargetIdFindingsIdIntegrationsJiraServer(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdIntegrationsJiraServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdIntegrationsJiraServerPathParams.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdFindingsIdIntegrationsJiraServerRequest.class, baseUrl, "/targets/{target_id}/findings/{id}/integrations/jira-server/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jiraFinding", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -594,12 +594,12 @@ public class JiraServerIntegration {
      */
     public org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsJiraServerResponse putTargetsTargetIdIntegrationsJiraServer(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsJiraServerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsJiraServerPathParams.class, baseUrl, "/targets/{target_id}/integrations/jira-server/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutTargetsTargetIdIntegrationsJiraServerRequest.class, baseUrl, "/targets/{target_id}/integrations/jira-server/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jiraScope", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

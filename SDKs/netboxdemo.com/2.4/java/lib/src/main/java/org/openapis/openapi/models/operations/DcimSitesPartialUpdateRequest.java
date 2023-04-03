@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimSitesPartialUpdateRequest {
-    
-    public DcimSitesPartialUpdatePathParams pathParams;
-    public DcimSitesPartialUpdateRequest withPathParams(DcimSitesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableSiteInput writableSiteInput;
+    public DcimSitesPartialUpdateRequest withWritableSiteInput(org.openapis.openapi.models.shared.WritableSiteInput writableSiteInput) {
+        this.writableSiteInput = writableSiteInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableSiteInput request;
-    public DcimSitesPartialUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableSiteInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this site.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimSitesPartialUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

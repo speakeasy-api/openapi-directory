@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateTokenUsingPOSTRequest {
-    
-    public ValidateTokenUsingPOSTHeaders headers;
-    public ValidateTokenUsingPOSTRequest withHeaders(ValidateTokenUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ValidateTokenUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class ValidateTokenUsingPOSTRequest {
      * request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ValidateTokenRequest request;
-    public ValidateTokenUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.ValidateTokenRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public ValidateTokenUsingPOSTSecurity security;
-    public ValidateTokenUsingPOSTRequest withSecurity(ValidateTokenUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.ValidateTokenRequest validateTokenRequest;
+    public ValidateTokenUsingPOSTRequest withValidateTokenRequest(org.openapis.openapi.models.shared.ValidateTokenRequest validateTokenRequest) {
+        this.validateTokenRequest = validateTokenRequest;
         return this;
     }
     

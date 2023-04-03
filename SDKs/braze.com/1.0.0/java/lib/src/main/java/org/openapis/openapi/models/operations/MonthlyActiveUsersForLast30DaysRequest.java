@@ -4,13 +4,42 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MonthlyActiveUsersForLast30DaysRequest {
+    /**
+     * (Optional) String
+     * 
+     * App API identifier; if excluded, results for all apps in app group will be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_id")
+    public String appId;
+    public MonthlyActiveUsersForLast30DaysRequest withAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
     
-    public MonthlyActiveUsersForLast30DaysQueryParams queryParams;
-    public MonthlyActiveUsersForLast30DaysRequest withQueryParams(MonthlyActiveUsersForLast30DaysQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Optional) DateTime (ISO 8601 string)
+     * 
+     * Point in time when the data series should end - defaults to time of the request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
+    public String endingAt;
+    public MonthlyActiveUsersForLast30DaysRequest withEndingAt(String endingAt) {
+        this.endingAt = endingAt;
+        return this;
+    }
+    
+    /**
+     * (Required) Integer
+     * 
+     * Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
+    public String length;
+    public MonthlyActiveUsersForLast30DaysRequest withLength(String length) {
+        this.length = length;
         return this;
     }
     

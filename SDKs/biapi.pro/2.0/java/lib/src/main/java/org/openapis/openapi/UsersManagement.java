@@ -42,13 +42,13 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.DeleteUsersIdUserResponse deleteUsersIdUser(org.openapis.openapi.models.operations.DeleteUsersIdUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserPathParams.class, baseUrl, "/users/{id_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserRequest.class, baseUrl, "/users/{id_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteUsersIdUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -87,7 +87,7 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.DeleteUsersIdUserConfigResponse deleteUsersIdUserConfig(org.openapis.openapi.models.operations.DeleteUsersIdUserConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserConfigPathParams.class, baseUrl, "/users/{id_user}/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUsersIdUserConfigRequest.class, baseUrl, "/users/{id_user}/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -125,7 +125,7 @@ public class UsersManagement {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -163,13 +163,13 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserResponse getUsersIdUser(org.openapis.openapi.models.operations.GetUsersIdUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserPathParams.class, baseUrl, "/users/{id_user}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserRequest.class, baseUrl, "/users/{id_user}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -208,7 +208,7 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserConfigResponse getUsersIdUserConfig(org.openapis.openapi.models.operations.GetUsersIdUserConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConfigPathParams.class, baseUrl, "/users/{id_user}/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserConfigRequest.class, baseUrl, "/users/{id_user}/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -246,13 +246,13 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserProfilesResponse getUsersIdUserProfiles(org.openapis.openapi.models.operations.GetUsersIdUserProfilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserProfilesPathParams.class, baseUrl, "/users/{id_user}/profiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserProfilesRequest.class, baseUrl, "/users/{id_user}/profiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserProfilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserProfilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -290,13 +290,13 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainResponse getUsersIdUserProfilesMain(org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainPathParams.class, baseUrl, "/users/{id_user}/profiles/main", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainRequest.class, baseUrl, "/users/{id_user}/profiles/main", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserProfilesMainRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -334,13 +334,13 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileResponse getUsersIdUserProfilesIdProfile(org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfilePathParams.class, baseUrl, "/users/{id_user}/profiles/{id_profile}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileRequest.class, baseUrl, "/users/{id_user}/profiles/{id_profile}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUsersIdUserProfilesIdProfileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -378,7 +378,7 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.PostUsersIdUserConfigResponse postUsersIdUserConfig(org.openapis.openapi.models.operations.PostUsersIdUserConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserConfigPathParams.class, baseUrl, "/users/{id_user}/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserConfigRequest.class, baseUrl, "/users/{id_user}/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -411,12 +411,12 @@ public class UsersManagement {
      */
     public org.openapis.openapi.models.operations.PostUsersIdUserTokenResponse postUsersIdUserToken(org.openapis.openapi.models.operations.PostUsersIdUserTokenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserTokenPathParams.class, baseUrl, "/users/{id_user}/token", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostUsersIdUserTokenRequest.class, baseUrl, "/users/{id_user}/token", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

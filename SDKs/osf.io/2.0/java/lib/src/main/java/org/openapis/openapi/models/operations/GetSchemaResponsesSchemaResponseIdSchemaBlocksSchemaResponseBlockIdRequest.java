@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest {
+    /**
+     * The unique identifier of the Schema Response Block example `61b79f9eadbb5701424a2d5e`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_response_block_id")
+    public String schemaResponseBlockId;
+    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest withSchemaResponseBlockId(String schemaResponseBlockId) {
+        this.schemaResponseBlockId = schemaResponseBlockId;
+        return this;
+    }
     
-    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdPathParams pathParams;
-    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest withPathParams(GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the Registration Schema example `6176c9d45e01f100091d4f94`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_response_id")
+    public String schemaResponseId;
+    public GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdRequest withSchemaResponseId(String schemaResponseId) {
+        this.schemaResponseId = schemaResponseId;
         return this;
     }
     

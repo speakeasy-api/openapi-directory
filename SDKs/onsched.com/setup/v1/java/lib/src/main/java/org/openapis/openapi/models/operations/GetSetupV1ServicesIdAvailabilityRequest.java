@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ServicesIdAvailabilityRequest {
-    
-    public GetSetupV1ServicesIdAvailabilityPathParams pathParams;
-    public GetSetupV1ServicesIdAvailabilityRequest withPathParams(GetSetupV1ServicesIdAvailabilityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of service object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ServicesIdAvailabilityRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

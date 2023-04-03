@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCallRequest {
-    
-    public CreateCallPathParams pathParams;
-    public CreateCallRequest withPathParams(CreateCallPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateCallRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateCallCreateCallRequest request;
-    public CreateCallRequest withRequest(CreateCallCreateCallRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateCallSecurity security;
-    public CreateCallRequest withSecurity(CreateCallSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateCallRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateCallCreateCallRequest requestBody;
+    public CreateCallRequest withRequestBody(CreateCallCreateCallRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

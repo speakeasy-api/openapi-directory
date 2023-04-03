@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new instance in the specified region. Returns a long running operation which contains an instance on completion. While the long running operation is in progress, any call to `GetInstance` returns an instance in state `CREATING`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateResponse remotebuildexecutionProjectsInstancesCreate(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateResponse remotebuildexecutionProjectsInstancesCreate(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateRequest request, org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreatePathParams.class, baseUrl, "/v1alpha/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateRequest.class, baseUrl, "/v1alpha/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Lists instances in a project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListResponse remotebuildexecutionProjectsInstancesList(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListResponse remotebuildexecutionProjectsInstancesList(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListRequest request, org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListPathParams.class, baseUrl, "/v1alpha/{parent}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListRequest.class, baseUrl, "/v1alpha/{parent}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Sends a test notification to the specified instance. Returns a `google.protobuf.Empty` on success.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyResponse remotebuildexecutionProjectsInstancesTestNotify(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyResponse remotebuildexecutionProjectsInstancesTestNotify(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyRequest request, org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyPathParams.class, baseUrl, "/v1alpha/{name}:testNotify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyRequest.class, baseUrl, "/v1alpha/{name}:testNotify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Creates a new worker pool with a specified size and configuration. Returns a long running operation which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `CREATING`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateResponse remotebuildexecutionProjectsInstancesWorkerpoolsCreate(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateResponse remotebuildexecutionProjectsInstancesWorkerpoolsCreate(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateRequest request, org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreatePathParams.class, baseUrl, "/v1alpha/{parent}/workerpools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateRequest.class, baseUrl, "/v1alpha/{parent}/workerpools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleDevtoolsRemotebuildexecutionAdminV1alphaCreateWorkerPoolRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Projects {
     /**
      * Deletes the specified worker pool. Returns a long running operation, which contains a `google.protobuf.Empty` response on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `DELETING`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse remotebuildexecutionProjectsInstancesWorkerpoolsDelete(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse remotebuildexecutionProjectsInstancesWorkerpoolsDelete(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest request, org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeletePathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Lists worker pools in an instance.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListResponse remotebuildexecutionProjectsInstancesWorkerpoolsList(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListResponse remotebuildexecutionProjectsInstancesWorkerpoolsList(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListRequest request, org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListPathParams.class, baseUrl, "/v1alpha/{parent}/workerpools", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListRequest.class, baseUrl, "/v1alpha/{parent}/workerpools", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Updates an existing worker pool with a specified size and/or configuration. Returns a long running operation, which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `UPDATING`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse remotebuildexecutionProjectsInstancesWorkerpoolsPatch(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse remotebuildexecutionProjectsInstancesWorkerpoolsPatch(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest request, org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchPathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleDevtoolsRemotebuildexecutionAdminV1alphaUpdateWorkerPoolRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetResponse remotebuildexecutionProjectsOperationsGet(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetResponse remotebuildexecutionProjectsOperationsGet(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetRequest request, org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetPathParams.class, baseUrl, "/v1alpha/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetRequest.class, baseUrl, "/v1alpha/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

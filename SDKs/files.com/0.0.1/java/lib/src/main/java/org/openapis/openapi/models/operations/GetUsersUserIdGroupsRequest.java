@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdGroupsRequest {
-    
-    public GetUsersUserIdGroupsPathParams pathParams;
-    public GetUsersUserIdGroupsRequest withPathParams(GetUsersUserIdGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetUsersUserIdGroupsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * Group ID.  If provided, will return group_users of this group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public Integer groupId;
+    public GetUsersUserIdGroupsRequest withGroupId(Integer groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public GetUsersUserIdGroupsQueryParams queryParams;
-    public GetUsersUserIdGroupsRequest withQueryParams(GetUsersUserIdGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetUsersUserIdGroupsRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * User ID.  If provided, will return group_users of this user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Integer userId;
+    public GetUsersUserIdGroupsRequest withUserId(Integer userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -29,7 +29,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PostRegressionApiRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRegressionApiResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Result.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResultStandardizedCoefficients.java

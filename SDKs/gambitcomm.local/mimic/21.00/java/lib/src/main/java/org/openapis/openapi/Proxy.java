@@ -39,7 +39,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyGetArgsResponse protocolProxyGetArgs(org.openapis.openapi.models.operations.ProtocolProxyGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyGetConfigResponse protocolProxyGetConfig(org.openapis.openapi.models.operations.ProtocolProxyGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyGetStatisticsResponse protocolProxyGetStatistics(org.openapis.openapi.models.operations.ProtocolProxyGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -206,7 +206,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyGetTraceResponse protocolProxyGetTrace(org.openapis.openapi.models.operations.ProtocolProxyGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -248,7 +248,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyPortAddResponse protocolProxyPortAdd(org.openapis.openapi.models.operations.ProtocolProxyPortAddRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortAddPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/add/{port}/{target}/{targetPort}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortAddRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/add/{port}/{target}/{targetPort}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -289,7 +289,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyPortIsstartedResponse protocolProxyPortIsstarted(org.openapis.openapi.models.operations.ProtocolProxyPortIsstartedRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortIsstartedPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/isStarted/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortIsstartedRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/isStarted/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -329,7 +329,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyPortListResponse protocolProxyPortList(org.openapis.openapi.models.operations.ProtocolProxyPortListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -371,7 +371,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyPortRemoveResponse protocolProxyPortRemove(org.openapis.openapi.models.operations.ProtocolProxyPortRemoveRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortRemovePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/remove/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortRemoveRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/remove/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -412,7 +412,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyPortStartResponse protocolProxyPortStart(org.openapis.openapi.models.operations.ProtocolProxyPortStartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortStartPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/start/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortStartRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/start/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -453,7 +453,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxyPortStopResponse protocolProxyPortStop(org.openapis.openapi.models.operations.ProtocolProxyPortStopRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortStopPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/stop/{port}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxyPortStopRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/port/stop/{port}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -494,7 +494,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxySetConfigResponse protocolProxySetConfig(org.openapis.openapi.models.operations.ProtocolProxySetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxySetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxySetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -535,7 +535,7 @@ public class Proxy {
      */
     public org.openapis.openapi.models.operations.ProtocolProxySetTraceResponse protocolProxySetTrace(org.openapis.openapi.models.operations.ProtocolProxySetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxySetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolProxySetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/proxy/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

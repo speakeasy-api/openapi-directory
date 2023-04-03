@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpinsIdRequest {
-    
-    public GetSpinsIdPathParams pathParams;
-    public GetSpinsIdRequest withPathParams(GetSpinsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Allows to select extra fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String[] expand;
+    public GetSpinsIdRequest withExpand(String[] expand) {
+        this.expand = expand;
         return this;
     }
     
+    /**
+     * Allows to select only needed fields
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String[] fields;
+    public GetSpinsIdRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public GetSpinsIdQueryParams queryParams;
-    public GetSpinsIdRequest withQueryParams(GetSpinsIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetSpinsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

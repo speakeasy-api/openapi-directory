@@ -4,27 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReviewsFormatRequest {
-    
-    public GETReviewsFormatPathParams pathParams;
-    public GETReviewsFormatRequest withPathParams(GETReviewsFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-key")
+    public String apiKey;
+    public GETReviewsFormatRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GETReviewsFormatQueryParams queryParams;
-    public GETReviewsFormatRequest withQueryParams(GETReviewsFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * You\u2019ll need to enter the author\u2019s first and last name, separated by a space. This space will be converted into the characters %20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=author")
+    public String author;
+    public GETReviewsFormatRequest withAuthor(String author) {
+        this.author = author;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public GETReviewsFormatFormatEnum format;
+    public GETReviewsFormatRequest withFormat(GETReviewsFormatFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GETReviewsFormatSecurity security;
-    public GETReviewsFormatRequest withSecurity(GETReviewsFormatSecurity security) {
-        this.security = security;
+    /**
+     * Searching by ISBN is the recommended method. You can enter 10- or 13-digit ISBNs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isbn")
+    public Long isbn;
+    public GETReviewsFormatRequest withIsbn(Long isbn) {
+        this.isbn = isbn;
+        return this;
+    }
+    
+    /**
+     * You\u2019ll need to enter the full title of the book. Spaces in the title will be converted into the characters %20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
+    public String title;
+    public GETReviewsFormatRequest withTitle(String title) {
+        this.title = title;
         return this;
     }
     

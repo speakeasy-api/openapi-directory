@@ -39,7 +39,7 @@ public class CadenceExports {
      */
     public org.openapis.openapi.models.operations.GetV2CadenceExportsIdJsonResponse getV2CadenceExportsIdJson(org.openapis.openapi.models.operations.GetV2CadenceExportsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2CadenceExportsIdJsonPathParams.class, baseUrl, "/v2/cadence_exports/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2CadenceExportsIdJsonRequest.class, baseUrl, "/v2/cadence_exports/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

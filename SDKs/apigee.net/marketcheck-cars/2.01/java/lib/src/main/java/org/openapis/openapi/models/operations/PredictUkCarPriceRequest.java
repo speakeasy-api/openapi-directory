@@ -4,13 +4,206 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictUkCarPriceRequest {
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public PredictUkCarPriceRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public PredictUkCarPriceQueryParams queryParams;
-    public PredictUkCarPriceRequest withQueryParams(PredictUkCarPriceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Base exterior color of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base_exterior_color")
+    public String baseExteriorColor;
+    public PredictUkCarPriceRequest withBaseExteriorColor(String baseExteriorColor) {
+        this.baseExteriorColor = baseExteriorColor;
+        return this;
+    }
+    
+    /**
+     * City mileage of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city_mpg")
+    public Double cityMpg;
+    public PredictUkCarPriceRequest withCityMpg(Double cityMpg) {
+        this.cityMpg = cityMpg;
+        return this;
+    }
+    
+    /**
+     * Combiined mileage of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=combined_mpg")
+    public Double combinedMpg;
+    public PredictUkCarPriceRequest withCombinedMpg(Double combinedMpg) {
+        this.combinedMpg = combinedMpg;
+        return this;
+    }
+    
+    /**
+     * Number of cylinders in the vehicle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cylinders")
+    public Long cylinders;
+    public PredictUkCarPriceRequest withCylinders(Long cylinders) {
+        this.cylinders = cylinders;
+        return this;
+    }
+    
+    /**
+     * Number of doors in the vehicle
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doors")
+    public Long doors;
+    public PredictUkCarPriceRequest withDoors(Long doors) {
+        this.doors = doors;
+        return this;
+    }
+    
+    /**
+     * Drivetrain on the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=drivetrain")
+    public String drivetrain;
+    public PredictUkCarPriceRequest withDrivetrain(String drivetrain) {
+        this.drivetrain = drivetrain;
+        return this;
+    }
+    
+    /**
+     * Engine Size of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=engine_size")
+    public Double engineSize;
+    public PredictUkCarPriceRequest withEngineSize(Double engineSize) {
+        this.engineSize = engineSize;
+        return this;
+    }
+    
+    /**
+     * Fuel type of the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fuel_type")
+    public String fuelType;
+    public PredictUkCarPriceRequest withFuelType(String fuelType) {
+        this.fuelType = fuelType;
+        return this;
+    }
+    
+    /**
+     * Highway mileage
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=highway_mpg")
+    public Double highwayMpg;
+    public PredictUkCarPriceRequest withHighwayMpg(Double highwayMpg) {
+        this.highwayMpg = highwayMpg;
+        return this;
+    }
+    
+    /**
+     * Latitude component of the location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public PredictUkCarPriceRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * Longitude component of the location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public PredictUkCarPriceRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * Car's make
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=make")
+    public String make;
+    public PredictUkCarPriceRequest withMake(String make) {
+        this.make = make;
+        return this;
+    }
+    
+    /**
+     * miles vehicle has driven in total
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=miles")
+    public Long miles;
+    public PredictUkCarPriceRequest withMiles(Long miles) {
+        this.miles = miles;
+        return this;
+    }
+    
+    /**
+     * Car's model
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public PredictUkCarPriceRequest withModel(String model) {
+        this.model = model;
+        return this;
+    }
+    
+    /**
+     * Transmission on the car
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transmission")
+    public PredictUkCarPriceTransmissionEnum transmission;
+    public PredictUkCarPriceRequest withTransmission(PredictUkCarPriceTransmissionEnum transmission) {
+        this.transmission = transmission;
+        return this;
+    }
+    
+    /**
+     * Car's trim
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trim")
+    public String trim;
+    public PredictUkCarPriceRequest withTrim(String trim) {
+        this.trim = trim;
+        return this;
+    }
+    
+    /**
+     * Predict price for a VRM
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vrm")
+    public String vrm;
+    public PredictUkCarPriceRequest withVrm(String vrm) {
+        this.vrm = vrm;
+        return this;
+    }
+    
+    /**
+     * Car manufacturing year
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public PredictUkCarPriceRequest withYear(Long year) {
+        this.year = year;
+        return this;
+    }
+    
+    /**
+     * Location zip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
+    public String zip;
+    public PredictUkCarPriceRequest withZip(String zip) {
+        this.zip = zip;
         return this;
     }
     

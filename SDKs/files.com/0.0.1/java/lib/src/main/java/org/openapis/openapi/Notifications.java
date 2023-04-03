@@ -43,7 +43,7 @@ public class Notifications {
      */
     public org.openapis.openapi.models.operations.DeleteNotificationsIdResponse deleteNotificationsId(org.openapis.openapi.models.operations.DeleteNotificationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNotificationsIdPathParams.class, baseUrl, "/notifications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNotificationsIdRequest.class, baseUrl, "/notifications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Notifications {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNotificationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNotificationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class Notifications {
      */
     public org.openapis.openapi.models.operations.GetNotificationsIdResponse getNotificationsId(org.openapis.openapi.models.operations.GetNotificationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNotificationsIdPathParams.class, baseUrl, "/notifications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNotificationsIdRequest.class, baseUrl, "/notifications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class Notifications {
      */
     public org.openapis.openapi.models.operations.PatchNotificationsIdResponse patchNotificationsId(org.openapis.openapi.models.operations.PatchNotificationsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchNotificationsIdPathParams.class, baseUrl, "/notifications/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchNotificationsIdRequest.class, baseUrl, "/notifications/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -205,7 +205,7 @@ public class Notifications {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostNotificationsResponse postNotifications(org.openapis.openapi.models.operations.PostNotificationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostNotificationsResponse postNotifications(org.openapis.openapi.models.operations.PostNotificationsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/notifications");
         

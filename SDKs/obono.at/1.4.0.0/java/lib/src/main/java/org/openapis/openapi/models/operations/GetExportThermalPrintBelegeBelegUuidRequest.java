@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportThermalPrintBelegeBelegUuidRequest {
-    
-    public GetExportThermalPrintBelegeBelegUuidPathParams pathParams;
-    public GetExportThermalPrintBelegeBelegUuidRequest withPathParams(GetExportThermalPrintBelegeBelegUuidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `_uuid` of a particular `Beleg` to export.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
+    public String belegUuid;
+    public GetExportThermalPrintBelegeBelegUuidRequest withBelegUuid(String belegUuid) {
+        this.belegUuid = belegUuid;
         return this;
     }
     
+    /**
+     * The thermal printer dialect.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dialect")
+    public GetExportThermalPrintBelegeBelegUuidDialectEnum dialect;
+    public GetExportThermalPrintBelegeBelegUuidRequest withDialect(GetExportThermalPrintBelegeBelegUuidDialectEnum dialect) {
+        this.dialect = dialect;
+        return this;
+    }
     
-    public GetExportThermalPrintBelegeBelegUuidQueryParams queryParams;
-    public GetExportThermalPrintBelegeBelegUuidRequest withQueryParams(GetExportThermalPrintBelegeBelegUuidQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The encoding of the binary data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=encoding")
+    public GetExportThermalPrintBelegeBelegUuidEncodingEnum encoding;
+    public GetExportThermalPrintBelegeBelegUuidRequest withEncoding(GetExportThermalPrintBelegeBelegUuidEncodingEnum encoding) {
+        this.encoding = encoding;
+        return this;
+    }
+    
+    /**
+     * Should the RKSV QR code should be rendered?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=qr")
+    public Boolean qr;
+    public GetExportThermalPrintBelegeBelegUuidRequest withQr(Boolean qr) {
+        this.qr = qr;
+        return this;
+    }
+    
+    /**
+     * Number of characters per line.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
+    public Long width;
+    public GetExportThermalPrintBelegeBelegUuidRequest withWidth(Long width) {
+        this.width = width;
         return this;
     }
     

@@ -36,11 +36,10 @@ public class Configuration {
     /**
      * Get the full configuration of Otoroshi
      * Get the full configuration of Otoroshi
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GlobalConfigResponse globalConfig(org.openapis.openapi.models.operations.GlobalConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GlobalConfigResponse globalConfig() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/globalconfig");
         
@@ -49,8 +48,7 @@ public class Configuration {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -79,10 +77,11 @@ public class Configuration {
      * Update the global configuration with a diff
      * Update the global configuration with a diff
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchGlobalConfigResponse patchGlobalConfig(org.openapis.openapi.models.operations.PatchGlobalConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchGlobalConfigResponse patchGlobalConfig(org.openapis.openapi.models.shared.Patch[] request, org.openapis.openapi.models.operations.PatchGlobalConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/globalconfig");
         
@@ -93,7 +92,7 @@ public class Configuration {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,10 +122,11 @@ public class Configuration {
      * Update the global configuration
      * Update the global configuration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutGlobalConfigResponse putGlobalConfig(org.openapis.openapi.models.operations.PutGlobalConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutGlobalConfigResponse putGlobalConfig(org.openapis.openapi.models.shared.GlobalConfig request, org.openapis.openapi.models.operations.PutGlobalConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/globalconfig");
         
@@ -137,7 +137,7 @@ public class Configuration {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

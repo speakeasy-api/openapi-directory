@@ -4,20 +4,103 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListRequest {
-    
-    public ProjectsListQueryParams queryParams;
-    public ProjectsListRequest withQueryParams(ProjectsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique hash used for bypassing the item retrieval limit of 9,000 entities. When using this parameter, please note that the offset parameter will not be available, but the limit parameter will still work as expected.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Cursor")
+    public String xCursor;
+    public ProjectsListRequest withXCursor(String xCursor) {
+        this.xCursor = xCursor;
         return this;
     }
     
+    /**
+     * only return collections from this group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public Long group;
+    public ProjectsListRequest withGroup(Long group) {
+        this.group = group;
+        return this;
+    }
     
-    public ProjectsListHeaders headers;
-    public ProjectsListRequest withHeaders(ProjectsListHeaders headers) {
-        this.headers = headers;
+    /**
+     * only return collections from this institution
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=institution")
+    public Long institution;
+    public ProjectsListRequest withInstitution(Long institution) {
+        this.institution = institution;
+        return this;
+    }
+    
+    /**
+     * Number of results included on a page. Used for pagination with query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ProjectsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start the listing(the offset of the first result). Used for pagination with limit
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ProjectsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The field by which to order. Default varies by endpoint/resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public ProjectsListOrderEnum order;
+    public ProjectsListRequest withOrder(ProjectsListOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
+    public ProjectsListOrderDirectionEnum orderDirection;
+    public ProjectsListRequest withOrderDirection(ProjectsListOrderDirectionEnum orderDirection) {
+        this.orderDirection = orderDirection;
+        return this;
+    }
+    
+    /**
+     * Page number. Used for pagination with page_size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ProjectsListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results included on a page. Used for pagination with page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ProjectsListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Filter by article publishing date. Will only return articles published after the date. date(ISO 8601) YYYY-MM-DD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_since")
+    public String publishedSince;
+    public ProjectsListRequest withPublishedSince(String publishedSince) {
+        this.publishedSince = publishedSince;
         return this;
     }
     

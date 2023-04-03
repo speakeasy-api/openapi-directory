@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFundingByIdV1Request {
-    
-    public GetFundingByIdV1PathParams pathParams;
-    public GetFundingByIdV1Request withPathParams(GetFundingByIdV1PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fundingId")
+    public String fundingId;
+    public GetFundingByIdV1Request withFundingId(String fundingId) {
+        this.fundingId = fundingId;
         return this;
     }
     

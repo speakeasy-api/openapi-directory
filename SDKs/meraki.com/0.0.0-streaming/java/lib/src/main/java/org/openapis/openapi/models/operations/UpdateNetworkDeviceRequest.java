@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkDeviceRequest {
-    
-    public UpdateNetworkDevicePathParams pathParams;
-    public UpdateNetworkDeviceRequest withPathParams(UpdateNetworkDevicePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkDeviceRequestBody requestBody;
+    public UpdateNetworkDeviceRequest withRequestBody(UpdateNetworkDeviceRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkDeviceRequestBody request;
-    public UpdateNetworkDeviceRequest withRequest(UpdateNetworkDeviceRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkDeviceRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateNetworkDeviceRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

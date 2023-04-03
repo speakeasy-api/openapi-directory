@@ -4,20 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PagedPolygonsRequest {
-    
-    public PagedPolygonsQueryParams queryParams;
-    public PagedPolygonsRequest withQueryParams(PagedPolygonsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PagedPolygonsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PagedPolygonsRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public PagedPolygonsHeaders headers;
-    public PagedPolygonsRequest withHeaders(PagedPolygonsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public PagedPolygonsRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public String perPage;
+    public PagedPolygonsRequest withPerPage(String perPage) {
+        this.perPage = perPage;
         return this;
     }
     

@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppleMappingDeleteRequest {
-    
-    public AppleMappingDeletePathParams pathParams;
-    public AppleMappingDeleteRequest withPathParams(AppleMappingDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public AppleMappingDeleteRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public AppleMappingDeleteRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppleMappingDeleteRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppleMappingDeleteSecurity security;
-    public AppleMappingDeleteRequest withSecurity(AppleMappingDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppleMappingDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

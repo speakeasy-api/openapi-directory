@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssociatedRoute53HealthChecksRequest {
-    
-    public ListAssociatedRoute53HealthChecksPathParams pathParams;
-    public ListAssociatedRoute53HealthChecksRequest withPathParams(ListAssociatedRoute53HealthChecksPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number of objects that you want to return with this call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListAssociatedRoute53HealthChecksRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
-    
-    public ListAssociatedRoute53HealthChecksQueryParams queryParams;
-    public ListAssociatedRoute53HealthChecksRequest withQueryParams(ListAssociatedRoute53HealthChecksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The token that identifies which batch of results you want to see.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListAssociatedRoute53HealthChecksRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
+    /**
+     * The Amazon Resource Name (ARN) of the routing control.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoutingControlArn")
+    public String routingControlArn;
+    public ListAssociatedRoute53HealthChecksRequest withRoutingControlArn(String routingControlArn) {
+        this.routingControlArn = routingControlArn;
+        return this;
+    }
     
-    public ListAssociatedRoute53HealthChecksHeaders headers;
-    public ListAssociatedRoute53HealthChecksRequest withHeaders(ListAssociatedRoute53HealthChecksHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListAssociatedRoute53HealthChecksRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListAssociatedRoute53HealthChecksRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListAssociatedRoute53HealthChecksRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListAssociatedRoute53HealthChecksRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListAssociatedRoute53HealthChecksRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListAssociatedRoute53HealthChecksRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListAssociatedRoute53HealthChecksRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

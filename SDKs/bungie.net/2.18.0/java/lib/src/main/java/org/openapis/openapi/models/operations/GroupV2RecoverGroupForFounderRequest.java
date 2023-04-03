@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2RecoverGroupForFounderRequest {
+    /**
+     * Type of group the supplied member founded.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupType")
+    public Integer groupType;
+    public GroupV2RecoverGroupForFounderRequest withGroupType(Integer groupType) {
+        this.groupType = groupType;
+        return this;
+    }
     
-    public GroupV2RecoverGroupForFounderPathParams pathParams;
-    public GroupV2RecoverGroupForFounderRequest withPathParams(GroupV2RecoverGroupForFounderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Membership ID to for which to find founded groups.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
+    public Long membershipId;
+    public GroupV2RecoverGroupForFounderRequest withMembershipId(Long membershipId) {
+        this.membershipId = membershipId;
+        return this;
+    }
+    
+    /**
+     * Membership type of the supplied membership ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public GroupV2RecoverGroupForFounderRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

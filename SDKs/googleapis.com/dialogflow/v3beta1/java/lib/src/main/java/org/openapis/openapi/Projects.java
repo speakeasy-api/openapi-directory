@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Returns the list of Changelogs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListResponse dialogflowProjectsLocationsAgentsChangelogsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListResponse dialogflowProjectsLocationsAgentsChangelogsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListPathParams.class, baseUrl, "/v3beta1/{parent}/changelogs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListRequest.class, baseUrl, "/v3beta1/{parent}/changelogs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,27 +81,28 @@ public class Projects {
     /**
      * Creates an agent in the specified location. Note: You should always train a flow prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateResponse dialogflowProjectsLocationsAgentsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateResponse dialogflowProjectsLocationsAgentsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreatePathParams.class, baseUrl, "/v3beta1/{parent}/agents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateRequest.class, baseUrl, "/v3beta1/{parent}/agents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1Agent", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Fetches a list of continuous test results for a given environment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListResponse dialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListResponse dialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListPathParams.class, baseUrl, "/v3beta1/{parent}/continuousTestResults", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest.class, baseUrl, "/v3beta1/{parent}/continuousTestResults", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsContinuousTestResultsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Creates an Environment in the specified Agent. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: Environment
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateResponse dialogflowProjectsLocationsAgentsEnvironmentsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateResponse dialogflowProjectsLocationsAgentsEnvironmentsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreatePathParams.class, baseUrl, "/v3beta1/{parent}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateRequest.class, baseUrl, "/v3beta1/{parent}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1EnvironmentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Deploys a flow to the specified Environment. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: DeployFlowMetadata - `response`: DeployFlowResponse
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowResponse dialogflowProjectsLocationsAgentsEnvironmentsDeployFlow(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowResponse dialogflowProjectsLocationsAgentsEnvironmentsDeployFlow(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowPathParams.class, baseUrl, "/v3beta1/{environment}:deployFlow", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowRequest.class, baseUrl, "/v3beta1/{environment}:deployFlow", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1DeployFlowRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeployFlowRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Returns the list of all deployments in the specified Environment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListResponse dialogflowProjectsLocationsAgentsEnvironmentsDeploymentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListResponse dialogflowProjectsLocationsAgentsEnvironmentsDeploymentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListPathParams.class, baseUrl, "/v3beta1/{parent}/deployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListRequest.class, baseUrl, "/v3beta1/{parent}/deployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsDeploymentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Creates an Experiment in the specified Environment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateResponse dialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateResponse dialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreatePathParams.class, baseUrl, "/v3beta1/{parent}/experiments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateRequest.class, baseUrl, "/v3beta1/{parent}/experiments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1Experiment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Returns the list of all experiments in the specified Environment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListResponse dialogflowProjectsLocationsAgentsEnvironmentsExperimentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListResponse dialogflowProjectsLocationsAgentsEnvironmentsExperimentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListPathParams.class, baseUrl, "/v3beta1/{parent}/experiments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListRequest.class, baseUrl, "/v3beta1/{parent}/experiments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,27 +411,28 @@ public class Projects {
     /**
      * Starts the specified Experiment. This rpc only changes the state of experiment from PENDING to RUNNING.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartResponse dialogflowProjectsLocationsAgentsEnvironmentsExperimentsStart(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartResponse dialogflowProjectsLocationsAgentsEnvironmentsExperimentsStart(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartPathParams.class, baseUrl, "/v3beta1/{name}:start", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartRequest.class, baseUrl, "/v3beta1/{name}:start", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -450,27 +459,28 @@ public class Projects {
     /**
      * Stops the specified Experiment. This rpc only changes the state of experiment from RUNNING to DONE.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopResponse dialogflowProjectsLocationsAgentsEnvironmentsExperimentsStop(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopResponse dialogflowProjectsLocationsAgentsEnvironmentsExperimentsStop(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopPathParams.class, baseUrl, "/v3beta1/{name}:stop", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopRequest.class, baseUrl, "/v3beta1/{name}:stop", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsExperimentsStopRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -497,25 +507,26 @@ public class Projects {
     /**
      * Returns the list of all environments in the specified Agent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListResponse dialogflowProjectsLocationsAgentsEnvironmentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListResponse dialogflowProjectsLocationsAgentsEnvironmentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListPathParams.class, baseUrl, "/v3beta1/{parent}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListRequest.class, baseUrl, "/v3beta1/{parent}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,25 +553,26 @@ public class Projects {
     /**
      * Looks up the history of the specified Environment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryResponse dialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistory(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryResponse dialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistory(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistorySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryPathParams.class, baseUrl, "/v3beta1/{name}:lookupEnvironmentHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryRequest.class, baseUrl, "/v3beta1/{name}:lookupEnvironmentHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsLookupEnvironmentHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Kicks off a continuous test under the specified Environment. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: RunContinuousTestMetadata - `response`: RunContinuousTestResponse
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestResponse dialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTest(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestResponse dialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTest(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestPathParams.class, baseUrl, "/v3beta1/{environment}:runContinuousTest", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestRequest.class, baseUrl, "/v3beta1/{environment}:runContinuousTest", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsEnvironmentsRunContinuousTestRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Creates a flow in the specified agent. Note: You should always train a flow prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateResponse dialogflowProjectsLocationsAgentsFlowsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateResponse dialogflowProjectsLocationsAgentsFlowsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreatePathParams.class, baseUrl, "/v3beta1/{parent}/flows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateRequest.class, baseUrl, "/v3beta1/{parent}/flows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1FlowInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -681,27 +695,28 @@ public class Projects {
     /**
      * Exports the specified flow to a binary file. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: ExportFlowResponse Note that resources (e.g. intents, entities, webhooks) that the flow references will also be exported.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportResponse dialogflowProjectsLocationsAgentsFlowsExport(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportResponse dialogflowProjectsLocationsAgentsFlowsExport(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportPathParams.class, baseUrl, "/v3beta1/{name}:export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportRequest.class, baseUrl, "/v3beta1/{name}:export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1ExportFlowRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -728,27 +743,28 @@ public class Projects {
     /**
      * Imports the specified flow to the specified agent from a binary file. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: ImportFlowResponse Note: You should always train a flow prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportResponse dialogflowProjectsLocationsAgentsFlowsImport(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportResponse dialogflowProjectsLocationsAgentsFlowsImport(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportPathParams.class, baseUrl, "/v3beta1/{parent}/flows:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportRequest.class, baseUrl, "/v3beta1/{parent}/flows:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1ImportFlowRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -775,25 +791,26 @@ public class Projects {
     /**
      * Returns the list of all flows in the specified agent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListResponse dialogflowProjectsLocationsAgentsFlowsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListResponse dialogflowProjectsLocationsAgentsFlowsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListPathParams.class, baseUrl, "/v3beta1/{parent}/flows", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListRequest.class, baseUrl, "/v3beta1/{parent}/flows", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -820,27 +837,28 @@ public class Projects {
     /**
      * Creates a page in the specified flow.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateResponse dialogflowProjectsLocationsAgentsFlowsPagesCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateResponse dialogflowProjectsLocationsAgentsFlowsPagesCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreatePathParams.class, baseUrl, "/v3beta1/{parent}/pages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateRequest.class, baseUrl, "/v3beta1/{parent}/pages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1PageInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -867,25 +885,26 @@ public class Projects {
     /**
      * Returns the list of all pages in the specified flow.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListResponse dialogflowProjectsLocationsAgentsFlowsPagesList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListResponse dialogflowProjectsLocationsAgentsFlowsPagesList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListPathParams.class, baseUrl, "/v3beta1/{parent}/pages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListRequest.class, baseUrl, "/v3beta1/{parent}/pages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsPagesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -912,27 +931,28 @@ public class Projects {
     /**
      * Trains the specified flow. Note that only the flow in 'draft' environment is trained. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) Note: You should always train a flow prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainResponse dialogflowProjectsLocationsAgentsFlowsTrain(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainResponse dialogflowProjectsLocationsAgentsFlowsTrain(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainPathParams.class, baseUrl, "/v3beta1/{name}:train", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainRequest.class, baseUrl, "/v3beta1/{name}:train", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTrainRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -959,27 +979,28 @@ public class Projects {
     /**
      * Creates an TransitionRouteGroup in the specified flow. Note: You should always train a flow prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateResponse dialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateResponse dialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreatePathParams.class, baseUrl, "/v3beta1/{parent}/transitionRouteGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateRequest.class, baseUrl, "/v3beta1/{parent}/transitionRouteGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1TransitionRouteGroupInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1006,25 +1027,26 @@ public class Projects {
     /**
      * Returns the list of all transition route groups in the specified flow.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse dialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListResponse dialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListPathParams.class, baseUrl, "/v3beta1/{parent}/transitionRouteGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListRequest.class, baseUrl, "/v3beta1/{parent}/transitionRouteGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsTransitionRouteGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1051,27 +1073,28 @@ public class Projects {
     /**
      * Validates the specified flow and creates or updates validation results. Please call this API after the training is completed to get the complete validation results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateResponse dialogflowProjectsLocationsAgentsFlowsValidate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateResponse dialogflowProjectsLocationsAgentsFlowsValidate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidatePathParams.class, baseUrl, "/v3beta1/{name}:validate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateRequest.class, baseUrl, "/v3beta1/{name}:validate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1ValidateFlowRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsValidateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1098,27 +1121,28 @@ public class Projects {
     /**
      * Compares the specified base version with target version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsResponse dialogflowProjectsLocationsAgentsFlowsVersionsCompareVersions(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsResponse dialogflowProjectsLocationsAgentsFlowsVersionsCompareVersions(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsPathParams.class, baseUrl, "/v3beta1/{baseVersion}:compareVersions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsRequest.class, baseUrl, "/v3beta1/{baseVersion}:compareVersions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1CompareVersionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCompareVersionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1145,27 +1169,28 @@ public class Projects {
     /**
      * Creates a Version in the specified Flow. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: CreateVersionOperationMetadata - `response`: Version
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateResponse dialogflowProjectsLocationsAgentsFlowsVersionsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateResponse dialogflowProjectsLocationsAgentsFlowsVersionsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreatePathParams.class, baseUrl, "/v3beta1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateRequest.class, baseUrl, "/v3beta1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1VersionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1192,25 +1217,26 @@ public class Projects {
     /**
      * Returns the list of all versions in the specified Flow.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListResponse dialogflowProjectsLocationsAgentsFlowsVersionsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListResponse dialogflowProjectsLocationsAgentsFlowsVersionsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListPathParams.class, baseUrl, "/v3beta1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListRequest.class, baseUrl, "/v3beta1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1237,27 +1263,28 @@ public class Projects {
     /**
      * Loads resources in the specified version to the draft flow. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadResponse dialogflowProjectsLocationsAgentsFlowsVersionsLoad(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadResponse dialogflowProjectsLocationsAgentsFlowsVersionsLoad(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadPathParams.class, baseUrl, "/v3beta1/{name}:load", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest.class, baseUrl, "/v3beta1/{name}:load", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1LoadVersionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsFlowsVersionsLoadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1284,27 +1311,28 @@ public class Projects {
     /**
      * Creates an intent in the specified agent. Note: You should always train a flow prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateResponse dialogflowProjectsLocationsAgentsIntentsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateResponse dialogflowProjectsLocationsAgentsIntentsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreatePathParams.class, baseUrl, "/v3beta1/{parent}/intents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateRequest.class, baseUrl, "/v3beta1/{parent}/intents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1Intent", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1331,25 +1359,26 @@ public class Projects {
     /**
      * Returns the list of all intents in the specified agent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListResponse dialogflowProjectsLocationsAgentsIntentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListResponse dialogflowProjectsLocationsAgentsIntentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListPathParams.class, baseUrl, "/v3beta1/{parent}/intents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListRequest.class, baseUrl, "/v3beta1/{parent}/intents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsIntentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1376,25 +1405,26 @@ public class Projects {
     /**
      * Returns the list of all agents in the specified location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListResponse dialogflowProjectsLocationsAgentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListResponse dialogflowProjectsLocationsAgentsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListPathParams.class, baseUrl, "/v3beta1/{parent}/agents", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListRequest.class, baseUrl, "/v3beta1/{parent}/agents", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1421,27 +1451,28 @@ public class Projects {
     /**
      * Restores the specified agent from a binary file. Replaces the current agent with a new one. Note that all existing resources in agent (e.g. intents, entity types, flows) will be removed. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: An empty [Struct message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#struct) - `response`: An [Empty message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty) Note: You should always train a flow prior to sending it queries. See the [training documentation](https://cloud.google.com/dialogflow/cx/docs/concept/training).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreResponse dialogflowProjectsLocationsAgentsRestore(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreResponse dialogflowProjectsLocationsAgentsRestore(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestorePathParams.class, baseUrl, "/v3beta1/{name}:restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreRequest.class, baseUrl, "/v3beta1/{name}:restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1RestoreAgentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsRestoreRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1468,27 +1499,28 @@ public class Projects {
     /**
      * Processes a natural language query and returns structured, actionable data as a result. This method is not idempotent, because it may cause session entity types to be updated, which in turn might affect results of future queries. Note: Always use agent versions for production traffic. See [Versions and environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentResponse dialogflowProjectsLocationsAgentsSessionsDetectIntent(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentResponse dialogflowProjectsLocationsAgentsSessionsDetectIntent(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentPathParams.class, baseUrl, "/v3beta1/{session}:detectIntent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentRequest.class, baseUrl, "/v3beta1/{session}:detectIntent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1DetectIntentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsDetectIntentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1515,27 +1547,28 @@ public class Projects {
     /**
      * Creates a session entity type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateResponse dialogflowProjectsLocationsAgentsSessionsEntityTypesCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateResponse dialogflowProjectsLocationsAgentsSessionsEntityTypesCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreatePathParams.class, baseUrl, "/v3beta1/{parent}/entityTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateRequest.class, baseUrl, "/v3beta1/{parent}/entityTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1SessionEntityType", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1562,25 +1595,26 @@ public class Projects {
     /**
      * Returns the list of all session entity types in the specified session.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListResponse dialogflowProjectsLocationsAgentsSessionsEntityTypesList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListResponse dialogflowProjectsLocationsAgentsSessionsEntityTypesList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListPathParams.class, baseUrl, "/v3beta1/{parent}/entityTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListRequest.class, baseUrl, "/v3beta1/{parent}/entityTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsEntityTypesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1607,27 +1641,28 @@ public class Projects {
     /**
      * Fulfills a matched intent returned by MatchIntent. Must be called after MatchIntent, with input from MatchIntentResponse. Otherwise, the behavior is undefined.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentResponse dialogflowProjectsLocationsAgentsSessionsFulfillIntent(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentResponse dialogflowProjectsLocationsAgentsSessionsFulfillIntent(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentPathParams.class, baseUrl, "/v3beta1/{session}:fulfillIntent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentRequest.class, baseUrl, "/v3beta1/{session}:fulfillIntent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1FulfillIntentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsFulfillIntentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1654,27 +1689,28 @@ public class Projects {
     /**
      * Returns preliminary intent match results, doesn't change the session status.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentResponse dialogflowProjectsLocationsAgentsSessionsMatchIntent(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentResponse dialogflowProjectsLocationsAgentsSessionsMatchIntent(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentPathParams.class, baseUrl, "/v3beta1/{session}:matchIntent", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentRequest.class, baseUrl, "/v3beta1/{session}:matchIntent", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1MatchIntentRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsSessionsMatchIntentRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1701,27 +1737,28 @@ public class Projects {
     /**
      * Batch deletes test cases.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteResponse dialogflowProjectsLocationsAgentsTestCasesBatchDelete(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteResponse dialogflowProjectsLocationsAgentsTestCasesBatchDelete(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeletePathParams.class, baseUrl, "/v3beta1/{parent}/testCases:batchDelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest.class, baseUrl, "/v3beta1/{parent}/testCases:batchDelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1BatchDeleteTestCasesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1748,27 +1785,28 @@ public class Projects {
     /**
      * Kicks off a batch run of test cases. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: BatchRunTestCasesMetadata - `response`: BatchRunTestCasesResponse
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunResponse dialogflowProjectsLocationsAgentsTestCasesBatchRun(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunResponse dialogflowProjectsLocationsAgentsTestCasesBatchRun(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunPathParams.class, baseUrl, "/v3beta1/{parent}/testCases:batchRun", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunRequest.class, baseUrl, "/v3beta1/{parent}/testCases:batchRun", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1BatchRunTestCasesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesBatchRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1795,25 +1833,26 @@ public class Projects {
     /**
      * Calculates the test coverage for an agent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse dialogflowProjectsLocationsAgentsTestCasesCalculateCoverage(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageResponse dialogflowProjectsLocationsAgentsTestCasesCalculateCoverage(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoveragePathParams.class, baseUrl, "/v3beta1/{agent}/testCases:calculateCoverage", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageRequest.class, baseUrl, "/v3beta1/{agent}/testCases:calculateCoverage", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCalculateCoverageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1840,27 +1879,28 @@ public class Projects {
     /**
      * Creates a test case for the given agent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateResponse dialogflowProjectsLocationsAgentsTestCasesCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateResponse dialogflowProjectsLocationsAgentsTestCasesCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreatePathParams.class, baseUrl, "/v3beta1/{parent}/testCases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateRequest.class, baseUrl, "/v3beta1/{parent}/testCases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1TestCaseInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1887,27 +1927,28 @@ public class Projects {
     /**
      * Exports the test cases under the agent to a Cloud Storage bucket or a local file. Filter can be applied to export a subset of test cases. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: ExportTestCasesMetadata - `response`: ExportTestCasesResponse
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportResponse dialogflowProjectsLocationsAgentsTestCasesExport(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportResponse dialogflowProjectsLocationsAgentsTestCasesExport(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportPathParams.class, baseUrl, "/v3beta1/{parent}/testCases:export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportRequest.class, baseUrl, "/v3beta1/{parent}/testCases:export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1ExportTestCasesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1934,27 +1975,28 @@ public class Projects {
     /**
      * Imports the test cases from a Cloud Storage bucket or a local file. It always creates new test cases and won't overwrite any existing ones. The provided ID in the imported test case is neglected. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: ImportTestCasesMetadata - `response`: ImportTestCasesResponse
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportResponse dialogflowProjectsLocationsAgentsTestCasesImport(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportResponse dialogflowProjectsLocationsAgentsTestCasesImport(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportPathParams.class, baseUrl, "/v3beta1/{parent}/testCases:import", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportRequest.class, baseUrl, "/v3beta1/{parent}/testCases:import", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1ImportTestCasesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesImportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1981,25 +2023,26 @@ public class Projects {
     /**
      * Fetches a list of test cases for a given agent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListResponse dialogflowProjectsLocationsAgentsTestCasesList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListResponse dialogflowProjectsLocationsAgentsTestCasesList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListPathParams.class, baseUrl, "/v3beta1/{parent}/testCases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListRequest.class, baseUrl, "/v3beta1/{parent}/testCases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2026,25 +2069,26 @@ public class Projects {
     /**
      * Fetches a list of results for a given test case.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListResponse dialogflowProjectsLocationsAgentsTestCasesResultsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListResponse dialogflowProjectsLocationsAgentsTestCasesResultsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListPathParams.class, baseUrl, "/v3beta1/{parent}/results", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListRequest.class, baseUrl, "/v3beta1/{parent}/results", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesResultsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2071,27 +2115,28 @@ public class Projects {
     /**
      * Kicks off a test case run. This method is a [long-running operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation). The returned `Operation` type has the following method-specific fields: - `metadata`: RunTestCaseMetadata - `response`: RunTestCaseResponse
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunResponse dialogflowProjectsLocationsAgentsTestCasesRun(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunResponse dialogflowProjectsLocationsAgentsTestCasesRun(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunPathParams.class, baseUrl, "/v3beta1/{name}:run", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunRequest.class, baseUrl, "/v3beta1/{name}:run", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1RunTestCaseRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsTestCasesRunRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2118,27 +2163,28 @@ public class Projects {
     /**
      * Creates a webhook in the specified agent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateResponse dialogflowProjectsLocationsAgentsWebhooksCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateResponse dialogflowProjectsLocationsAgentsWebhooksCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreatePathParams.class, baseUrl, "/v3beta1/{parent}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateRequest.class, baseUrl, "/v3beta1/{parent}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1Webhook", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2165,25 +2211,26 @@ public class Projects {
     /**
      * Returns the list of all webhooks in the specified agent.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListResponse dialogflowProjectsLocationsAgentsWebhooksList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListResponse dialogflowProjectsLocationsAgentsWebhooksList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListPathParams.class, baseUrl, "/v3beta1/{parent}/webhooks", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListRequest.class, baseUrl, "/v3beta1/{parent}/webhooks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsWebhooksListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2210,25 +2257,26 @@ public class Projects {
     /**
      * Lists information about the supported locations for this service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsListResponse dialogflowProjectsLocationsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsListResponse dialogflowProjectsLocationsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsListPathParams.class, baseUrl, "/v3beta1/{name}/locations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsListRequest.class, baseUrl, "/v3beta1/{name}/locations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2255,27 +2303,28 @@ public class Projects {
     /**
      * Create security settings in the specified location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateResponse dialogflowProjectsLocationsSecuritySettingsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateResponse dialogflowProjectsLocationsSecuritySettingsCreate(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreatePathParams.class, baseUrl, "/v3beta1/{parent}/securitySettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateRequest.class, baseUrl, "/v3beta1/{parent}/securitySettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1SecuritySettings", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2302,25 +2351,26 @@ public class Projects {
     /**
      * Deletes the specified SecuritySettings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteResponse dialogflowProjectsLocationsSecuritySettingsDelete(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteResponse dialogflowProjectsLocationsSecuritySettingsDelete(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeletePathParams.class, baseUrl, "/v3beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteRequest.class, baseUrl, "/v3beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2347,25 +2397,26 @@ public class Projects {
     /**
      * Returns the list of all security settings in the specified location.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListResponse dialogflowProjectsLocationsSecuritySettingsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListResponse dialogflowProjectsLocationsSecuritySettingsList(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListPathParams.class, baseUrl, "/v3beta1/{parent}/securitySettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListRequest.class, baseUrl, "/v3beta1/{parent}/securitySettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2392,27 +2443,28 @@ public class Projects {
     /**
      * Updates the specified SecuritySettings.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchResponse dialogflowProjectsLocationsSecuritySettingsPatch(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchResponse dialogflowProjectsLocationsSecuritySettingsPatch(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchRequest request, org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchPathParams.class, baseUrl, "/v3beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchRequest.class, baseUrl, "/v3beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudDialogflowCxV3beta1SecuritySettings", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsLocationsSecuritySettingsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2439,25 +2491,26 @@ public class Projects {
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelResponse dialogflowProjectsOperationsCancel(org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelResponse dialogflowProjectsOperationsCancel(org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelRequest request, org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelPathParams.class, baseUrl, "/v3beta1/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelRequest.class, baseUrl, "/v3beta1/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsOperationsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2484,25 +2537,26 @@ public class Projects {
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetResponse dialogflowProjectsOperationsGet(org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetResponse dialogflowProjectsOperationsGet(org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetRequest request, org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetPathParams.class, baseUrl, "/v3beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetRequest.class, baseUrl, "/v3beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsOperationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2529,25 +2583,26 @@ public class Projects {
     /**
      * Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DialogflowProjectsOperationsListResponse dialogflowProjectsOperationsList(org.openapis.openapi.models.operations.DialogflowProjectsOperationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DialogflowProjectsOperationsListResponse dialogflowProjectsOperationsList(org.openapis.openapi.models.operations.DialogflowProjectsOperationsListRequest request, org.openapis.openapi.models.operations.DialogflowProjectsOperationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsOperationsListPathParams.class, baseUrl, "/v3beta1/{name}/operations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DialogflowProjectsOperationsListRequest.class, baseUrl, "/v3beta1/{name}/operations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsOperationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DialogflowProjectsOperationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

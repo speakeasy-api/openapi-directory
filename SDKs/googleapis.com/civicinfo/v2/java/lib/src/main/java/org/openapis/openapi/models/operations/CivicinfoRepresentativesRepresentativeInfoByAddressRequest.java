@@ -4,13 +4,156 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CivicinfoRepresentativesRepresentativeInfoByAddressRequest {
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
+        return this;
+    }
     
-    public CivicinfoRepresentativesRepresentativeInfoByAddressQueryParams queryParams;
-    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withQueryParams(CivicinfoRepresentativesRepresentativeInfoByAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
+    
+    /**
+     * The address to look up. May only be specified if the field ocdId is not given in the URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
+    public String address;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Whether to return information about offices and officials. If false, only the top-level district information will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeOffices")
+    public Boolean includeOffices;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withIncludeOffices(Boolean includeOffices) {
+        this.includeOffices = includeOffices;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * A list of office levels to filter by. Only offices that serve at least one of these levels will be returned. Divisions that don't contain a matching office will not be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=levels")
+    public CivicinfoRepresentativesRepresentativeInfoByAddressLevelsEnum[] levels;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withLevels(CivicinfoRepresentativesRepresentativeInfoByAddressLevelsEnum[] levels) {
+        this.levels = levels;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * A list of office roles to filter by. Only offices fulfilling one of these roles will be returned. Divisions that don't contain a matching office will not be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roles")
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRolesEnum[] roles;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withRoles(CivicinfoRepresentativesRepresentativeInfoByAddressRolesEnum[] roles) {
+        this.roles = roles;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public CivicinfoRepresentativesRepresentativeInfoByAddressRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

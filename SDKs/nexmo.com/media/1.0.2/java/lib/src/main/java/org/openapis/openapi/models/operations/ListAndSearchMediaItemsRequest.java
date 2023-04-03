@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAndSearchMediaItemsRequest {
+    /**
+     * Retrieve results created on or before this timestamp.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public ListAndSearchMediaItemsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public ListAndSearchMediaItemsQueryParams queryParams;
-    public ListAndSearchMediaItemsRequest withQueryParams(ListAndSearchMediaItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The order of search results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public ListAndSearchMediaItemsOrderEnum order;
+    public ListAndSearchMediaItemsRequest withOrder(ListAndSearchMediaItemsOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Which page to retrieve in pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_index")
+    public Long pageIndex;
+    public ListAndSearchMediaItemsRequest withPageIndex(Long pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    
+    /**
+     * How many items at most per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListAndSearchMediaItemsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Retrieve results created on or after this timestap.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public String startTime;
+    public ListAndSearchMediaItemsRequest withStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
     

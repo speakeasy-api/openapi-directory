@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindPetsByTagsRequest {
-    
-    public FindPetsByTagsPathParams pathParams;
-    public FindPetsByTagsRequest withPathParams(FindPetsByTagsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Tags to filter by
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
+    public String cardId;
+    public FindPetsByTagsRequest withCardId(String cardId) {
+        this.cardId = cardId;
         return this;
     }
     

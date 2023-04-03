@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImagesRequest {
-    
-    public ImagesPathParams pathParams;
-    public ImagesRequest withPathParams(ImagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
+    public String query;
+    public ImagesRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

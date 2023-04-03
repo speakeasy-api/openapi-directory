@@ -31,7 +31,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PolicytroubleshooterIamTroubleshootSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PolicytroubleshooterIamTroubleshootQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/PolicytroubleshooterIamTroubleshootRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PolicytroubleshooterIamTroubleshootResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyResponseAccessEnum.java
@@ -53,10 +52,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroublesho
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipMembershipEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembershipRelevanceEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroubleshooterV1betaBindingExplanationAnnotatedMembership.java
+lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudPolicytroubleshooterV1betaAccessTuple.java
-lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

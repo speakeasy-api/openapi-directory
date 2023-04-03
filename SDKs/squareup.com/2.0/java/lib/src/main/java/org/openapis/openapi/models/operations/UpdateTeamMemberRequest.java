@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTeamMemberRequest {
-    
-    public UpdateTeamMemberPathParams pathParams;
-    public UpdateTeamMemberRequest withPathParams(UpdateTeamMemberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateTeamMemberRequest request;
-    public UpdateTeamMemberRequest withRequest(org.openapis.openapi.models.shared.UpdateTeamMemberRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateTeamMemberRequest updateTeamMemberRequest;
+    public UpdateTeamMemberRequest withUpdateTeamMemberRequest(org.openapis.openapi.models.shared.UpdateTeamMemberRequest updateTeamMemberRequest) {
+        this.updateTeamMemberRequest = updateTeamMemberRequest;
         return this;
     }
     
-    
-    public UpdateTeamMemberSecurity security;
-    public UpdateTeamMemberRequest withSecurity(UpdateTeamMemberSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the team member to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_member_id")
+    public String teamMemberId;
+    public UpdateTeamMemberRequest withTeamMemberId(String teamMemberId) {
+        this.teamMemberId = teamMemberId;
         return this;
     }
     

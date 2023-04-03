@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAssistantHeaders;
 import org.openapis.openapi.models.operations.CreateAssistantRequestBodyServerSideEncryptionConfiguration;
 import org.openapis.openapi.models.operations.CreateAssistantRequestBodyTypeEnum;
 import org.openapis.openapi.models.operations.CreateAssistantRequestBody;
@@ -16,36 +15,33 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateAssistantRequest req = new CreateAssistantRequest() {{
-                headers = new CreateAssistantHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateAssistantRequestBody() {{
-                    clientToken = "illum";
-                    description = "vel";
-                    name = "error";
+                requestBody = new CreateAssistantRequestBody() {{
+                    clientToken = "corrupti";
+                    description = "provident";
+                    name = "distinctio";
                     serverSideEncryptionConfiguration = new CreateAssistantRequestBodyServerSideEncryptionConfiguration() {{
-                        kmsKeyId = "deserunt";
+                        kmsKeyId = "quibusdam";
                     }};
                     tags = new java.util.HashMap<String, String>() {{
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
+                        put("error", "deserunt");
                     }};
                     type = "AGENT";
                 }};
-            }};            
+                xAmzAlgorithm = "suscipit";
+                xAmzContentSha256 = "iure";
+                xAmzCredential = "magnam";
+                xAmzDate = "debitis";
+                xAmzSecurityToken = "ipsa";
+                xAmzSignature = "delectus";
+                xAmzSignedHeaders = "tempora";
+            }}            
 
             CreateAssistantResponse res = sdk.createAssistant(req);
 

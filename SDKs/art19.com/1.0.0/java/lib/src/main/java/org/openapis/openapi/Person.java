@@ -39,10 +39,11 @@ public class Person {
      * Each Person added will have no additional access or permissions granted as a result of being included in the Credits section.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPeopleResponse getPeople(org.openapis.openapi.models.operations.GetPeopleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPeopleResponse getPeople(org.openapis.openapi.models.operations.GetPeopleRequest request, org.openapis.openapi.models.operations.GetPeopleSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/people");
         
@@ -50,14 +51,14 @@ public class Person {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPeopleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetPeopleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -102,19 +103,20 @@ public class Person {
      * Each Person added will have no additional access or permissions granted as a result of being included in the Credits section.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPeopleIdResponse getPeopleId(org.openapis.openapi.models.operations.GetPeopleIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPeopleIdResponse getPeopleId(org.openapis.openapi.models.operations.GetPeopleIdRequest request, org.openapis.openapi.models.operations.GetPeopleIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPeopleIdPathParams.class, baseUrl, "/people/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPeopleIdRequest.class, baseUrl, "/people/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

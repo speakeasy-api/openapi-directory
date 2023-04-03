@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenRequest {
-    
-    public GetTokenHeaders headers;
-    public GetTokenRequest withHeaders(GetTokenHeaders headers) {
-        this.headers = headers;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetTokenRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetTokenRequest request;
-    public GetTokenRequest withRequest(org.openapis.openapi.models.shared.GetTokenRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetTokenRequest getTokenRequest;
+    public GetTokenRequest withGetTokenRequest(org.openapis.openapi.models.shared.GetTokenRequest getTokenRequest) {
+        this.getTokenRequest = getTokenRequest;
         return this;
     }
     

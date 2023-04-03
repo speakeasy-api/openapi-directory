@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileImageFileRequest {
-    
-    public GetProfileImageFilePathParams pathParams;
-    public GetProfileImageFileRequest withPathParams(GetProfileImageFilePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A default image URL to use when the user has no profile image. Or to use one of the Gravatar default images, you can set default to any one of (404, mm, identicon, monsterid, wavatar, retro, blank). &lt;br /&gt;&lt;br /&gt; To learn how the Gravatar default images options work, see the Default Image section on the page at:&lt;br /&gt; https://en.gravatar.com/site/implement/images/
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=default")
+    public String default_;
+    public GetProfileImageFileRequest withDefault(String default_) {
+        this.default_ = default_;
         return this;
     }
     
-    
-    public GetProfileImageFileQueryParams queryParams;
-    public GetProfileImageFileRequest withQueryParams(GetProfileImageFileQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The user ID of the user to return the profile image of.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public GetProfileImageFileRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -7,31 +7,70 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpsertSellerCommissionsRequest {
-    
-    public UpsertSellerCommissionsPathParams pathParams;
-    public UpsertSellerCommissionsRequest withPathParams(UpsertSellerCommissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpsertSellerCommissionsRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpsertSellerCommissionsQueryParams queryParams;
-    public UpsertSellerCommissionsRequest withQueryParams(UpsertSellerCommissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpsertSellerCommissionsHeaders headers;
-    public UpsertSellerCommissionsRequest withHeaders(UpsertSellerCommissionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpsertSellerCommissionsRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpsertSellerCommissionsRequest request;
-    public UpsertSellerCommissionsRequest withRequest(org.openapis.openapi.models.shared.UpsertSellerCommissionsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpsertSellerCommissionsRequest upsertSellerCommissionsRequest;
+    public UpsertSellerCommissionsRequest withUpsertSellerCommissionsRequest(org.openapis.openapi.models.shared.UpsertSellerCommissionsRequest upsertSellerCommissionsRequest) {
+        this.upsertSellerCommissionsRequest = upsertSellerCommissionsRequest;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account that belongs to the marketplace. All data extracted, and changes added will be posted into this account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public UpsertSellerCommissionsRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * ID of the category in which the comission will be applied.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=categoryId")
+    public String categoryId;
+    public UpsertSellerCommissionsRequest withCategoryId(String categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public UpsertSellerCommissionsRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public UpsertSellerCommissionsRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
     

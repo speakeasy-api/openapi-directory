@@ -4,13 +4,202 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPaymentsAuditV3Request {
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListPaymentsAuditV3Request withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListPaymentsAuditV3QueryParams queryParams;
-    public ListPaymentsAuditV3Request withQueryParams(ListPaymentsAuditV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results to return in a page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public ListPaymentsAuditV3Request withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The UUID of the payee.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payeeId")
+    public String payeeId;
+    public ListPaymentsAuditV3Request withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
+        return this;
+    }
+    
+    /**
+     * The payment amount from range filter. Filters for paymentAmount &gt;= paymentAmountFrom
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentAmountFrom")
+    public Integer paymentAmountFrom;
+    public ListPaymentsAuditV3Request withPaymentAmountFrom(Integer paymentAmountFrom) {
+        this.paymentAmountFrom = paymentAmountFrom;
+        return this;
+    }
+    
+    /**
+     * The payment amount to range filter. Filters for paymentAmount \u21d0 paymentAmountTo
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentAmountTo")
+    public Integer paymentAmountTo;
+    public ListPaymentsAuditV3Request withPaymentAmountTo(Integer paymentAmountTo) {
+        this.paymentAmountTo = paymentAmountTo;
+        return this;
+    }
+    
+    /**
+     * The payment currency filter. Filters based on an exact match on the currency.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentCurrency")
+    public String paymentCurrency;
+    public ListPaymentsAuditV3Request withPaymentCurrency(String paymentCurrency) {
+        this.paymentCurrency = paymentCurrency;
+        return this;
+    }
+    
+    /**
+     * The payment memo filter. This filters via a case insensitive substring match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentMemo")
+    public String paymentMemo;
+    public ListPaymentsAuditV3Request withPaymentMemo(String paymentMemo) {
+        this.paymentMemo = paymentMemo;
+        return this;
+    }
+    
+    /**
+     * The account owner Payor Id. Required for external users.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public ListPaymentsAuditV3Request withPayorId(String payorId) {
+        this.payorId = payorId;
+        return this;
+    }
+    
+    /**
+     * The payor\u2019s name. This filters via a case insensitive substring match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorName")
+    public String payorName;
+    public ListPaymentsAuditV3Request withPayorName(String payorName) {
+        this.payorName = payorName;
+        return this;
+    }
+    
+    /**
+     * The remote id of the payees.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=remoteId")
+    public String remoteId;
+    public ListPaymentsAuditV3Request withRemoteId(String remoteId) {
+        this.remoteId = remoteId;
+        return this;
+    }
+    
+    /**
+     * Optional. If omitted or set to false, any Personal Identifiable Information (PII) values are returned masked.
+     * If set to true, and you have permission, the PII values will be returned as their original unmasked values.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensitive")
+    public Boolean sensitive;
+    public ListPaymentsAuditV3Request withSensitive(Boolean sensitive) {
+        this.sensitive = sensitive;
+        return this;
+    }
+    
+    /**
+     * List of sort fields (e.g. ?sort=submittedDateTime:asc,status:asc). Default is sort by remoteId
+     * The supported sort fields are: sourceAmount, sourceCurrency, paymentAmount, paymentCurrency,
+     * routingNumber, accountNumber, remoteId, submittedDateTime and status
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public ListPaymentsAuditV3Request withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The source account name filter. This filters via a case insensitive substring match.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceAccountName")
+    public String sourceAccountName;
+    public ListPaymentsAuditV3Request withSourceAccountName(String sourceAccountName) {
+        this.sourceAccountName = sourceAccountName;
+        return this;
+    }
+    
+    /**
+     * The source amount from range filter. Filters for sourceAmount &gt;= sourceAmountFrom
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceAmountFrom")
+    public Integer sourceAmountFrom;
+    public ListPaymentsAuditV3Request withSourceAmountFrom(Integer sourceAmountFrom) {
+        this.sourceAmountFrom = sourceAmountFrom;
+        return this;
+    }
+    
+    /**
+     * The source amount to range filter. Filters for sourceAmount \u21d0 sourceAmountTo
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceAmountTo")
+    public Integer sourceAmountTo;
+    public ListPaymentsAuditV3Request withSourceAmountTo(Integer sourceAmountTo) {
+        this.sourceAmountTo = sourceAmountTo;
+        return this;
+    }
+    
+    /**
+     * The source currency filter. Filters based on an exact match on the currency.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceCurrency")
+    public String sourceCurrency;
+    public ListPaymentsAuditV3Request withSourceCurrency(String sourceCurrency) {
+        this.sourceCurrency = sourceCurrency;
+        return this;
+    }
+    
+    /**
+     * Payment Status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ListPaymentsAuditV3StatusEnum status;
+    public ListPaymentsAuditV3Request withStatus(ListPaymentsAuditV3StatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * The submitted date from range filter. Format is yyyy-MM-dd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=submittedDateFrom")
+    public LocalDate submittedDateFrom;
+    public ListPaymentsAuditV3Request withSubmittedDateFrom(LocalDate submittedDateFrom) {
+        this.submittedDateFrom = submittedDateFrom;
+        return this;
+    }
+    
+    /**
+     * The submitted date to range filter. Format is yyyy-MM-dd.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=submittedDateTo")
+    public LocalDate submittedDateTo;
+    public ListPaymentsAuditV3Request withSubmittedDateTo(LocalDate submittedDateTo) {
+        this.submittedDateTo = submittedDateTo;
         return this;
     }
     

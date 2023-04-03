@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateAssetSecurity;
-import org.openapis.openapi.models.operations.CreateAssetHeaders;
 import org.openapis.openapi.models.operations.CreateAssetRequest;
 import org.openapis.openapi.models.operations.CreateAssetResponse;
 import org.openapis.openapi.models.shared.Asset;
@@ -28,7 +27,6 @@ import org.openapis.openapi.models.shared.BookDepreciationSettingDepreciationMet
 import org.openapis.openapi.models.shared.BookDepreciationSetting;
 import org.openapis.openapi.models.shared.BookDepreciationDetail;
 import org.openapis.openapi.models.shared.AssetStatusEnum;
-import org.openapis.openapi.models.shared.SchemeOAuth2;
 
 public class Application {
     public static void main(String[] args) {
@@ -37,16 +35,8 @@ public class Application {
                 .build();
 
             CreateAssetRequest req = new CreateAssetRequest() {{
-                security = new CreateAssetSecurity() {{
-                    oAuth2 = new SchemeOAuth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                headers = new CreateAssetHeaders() {{
-                    xeroTenantId = "corrupti";
-                }};
-                request = new Asset() {{
-                    accountingBookValue = 5928.45;
+                asset = new Asset() {{
+                    accountingBookValue = 5488.14;
                     assetId = "3b5b3a38-5649-495f-87a1-14a4e5918634";
                     assetName = "Awesome Truck 3";
                     assetNumber = "FA-0013";
@@ -80,9 +70,12 @@ public class Application {
                     serialNumber = "ca4c6b39-4f4f-43e8-98da-5e1f350a6694";
                     warrantyExpiryDate = "ca4c6b39-4f4f-43e8-98da-5e1f350a6694";
                 }};
-            }};            
+                xeroTenantId = "provident";
+            }}            
 
-            CreateAssetResponse res = sdk.asset.createAsset(req);
+            CreateAssetResponse res = sdk.asset.createAsset(req, new CreateAssetSecurity() {{
+                oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.asset.isPresent()) {
                 // handle response
@@ -94,7 +87,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### asset

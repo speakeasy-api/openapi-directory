@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETReservedNodeExchangeOfferingsRequest {
-    
-    public GETGETReservedNodeExchangeOfferingsQueryParams queryParams;
-    public GETGETReservedNodeExchangeOfferingsRequest withQueryParams(GETGETReservedNodeExchangeOfferingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETReservedNodeExchangeOfferingsActionEnum action;
+    public GETGETReservedNodeExchangeOfferingsRequest withAction(GETGETReservedNodeExchangeOfferingsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A value that indicates the starting point for the next set of ReservedNodeOfferings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETGETReservedNodeExchangeOfferingsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
     
-    public GETGETReservedNodeExchangeOfferingsHeaders headers;
-    public GETGETReservedNodeExchangeOfferingsRequest withHeaders(GETGETReservedNodeExchangeOfferingsHeaders headers) {
-        this.headers = headers;
+    /**
+     * An integer setting the maximum number of ReservedNodeOfferings to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETGETReservedNodeExchangeOfferingsRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * A string representing the node identifier for the DC1 Reserved Node to be exchanged.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedNodeId")
+    public String reservedNodeId;
+    public GETGETReservedNodeExchangeOfferingsRequest withReservedNodeId(String reservedNodeId) {
+        this.reservedNodeId = reservedNodeId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETReservedNodeExchangeOfferingsVersionEnum version;
+    public GETGETReservedNodeExchangeOfferingsRequest withVersion(GETGETReservedNodeExchangeOfferingsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETReservedNodeExchangeOfferingsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETReservedNodeExchangeOfferingsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETReservedNodeExchangeOfferingsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETReservedNodeExchangeOfferingsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETReservedNodeExchangeOfferingsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETReservedNodeExchangeOfferingsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETReservedNodeExchangeOfferingsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

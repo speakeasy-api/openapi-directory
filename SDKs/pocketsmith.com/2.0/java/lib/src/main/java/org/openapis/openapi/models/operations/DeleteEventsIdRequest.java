@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteEventsIdRequest {
-    
-    public DeleteEventsIdPathParams pathParams;
-    public DeleteEventsIdRequest withPathParams(DeleteEventsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Whether the delete applies only to this event, to all events within the series from this event or to all events within the series.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=behaviour")
+    public DeleteEventsIdBehaviourEnum behaviour;
+    public DeleteEventsIdRequest withBehaviour(DeleteEventsIdBehaviourEnum behaviour) {
+        this.behaviour = behaviour;
         return this;
     }
     
-    
-    public DeleteEventsIdQueryParams queryParams;
-    public DeleteEventsIdRequest withQueryParams(DeleteEventsIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the event.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteEventsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

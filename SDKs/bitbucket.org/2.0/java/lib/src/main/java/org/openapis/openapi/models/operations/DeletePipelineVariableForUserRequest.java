@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePipelineVariableForUserRequest {
+    /**
+     * Either the UUID of the account surrounded by curly-braces, for example `{account UUID}`, OR an Atlassian Account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=selected_user")
+    public String selectedUser;
+    public DeletePipelineVariableForUserRequest withSelectedUser(String selectedUser) {
+        this.selectedUser = selectedUser;
+        return this;
+    }
     
-    public DeletePipelineVariableForUserPathParams pathParams;
-    public DeletePipelineVariableForUserRequest withPathParams(DeletePipelineVariableForUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the variable to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
+    public String variableUuid;
+    public DeletePipelineVariableForUserRequest withVariableUuid(String variableUuid) {
+        this.variableUuid = variableUuid;
         return this;
     }
     

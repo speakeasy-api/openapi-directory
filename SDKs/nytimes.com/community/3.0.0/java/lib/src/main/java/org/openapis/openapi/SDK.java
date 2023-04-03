@@ -123,10 +123,11 @@ public class SDK {
     /**
      * Comments by Date
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETUserContentByDateJsonResponse getUserContentByDateJson(org.openapis.openapi.models.operations.GETUserContentByDateJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETUserContentByDateJsonResponse getUserContentByDateJson(org.openapis.openapi.models.operations.GETUserContentByDateJsonRequest request, org.openapis.openapi.models.operations.GETUserContentByDateJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user-content/by-date.json");
         
@@ -134,14 +135,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETUserContentByDateJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETUserContentByDateJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,11 +168,10 @@ public class SDK {
 
     /**
      * Recent User Comments
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETUserContentRecentJsonResponse getUserContentRecentJson(org.openapis.openapi.models.operations.GETUserContentRecentJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETUserContentRecentJsonResponse getUserContentRecentJson() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user-content/recent.json");
         
@@ -180,8 +180,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -207,10 +206,11 @@ public class SDK {
     /**
      * Comments by URL
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETUserContentUrlJsonResponse getUserContentUrlJson(org.openapis.openapi.models.operations.GETUserContentUrlJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETUserContentUrlJsonResponse getUserContentUrlJson(org.openapis.openapi.models.operations.GETUserContentUrlJsonRequest request, org.openapis.openapi.models.operations.GETUserContentUrlJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user-content/url.json");
         
@@ -218,14 +218,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETUserContentUrlJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETUserContentUrlJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -252,10 +252,11 @@ public class SDK {
     /**
      * Comments by User
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GETUserContentUserJsonResponse getUserContentUserJson(org.openapis.openapi.models.operations.GETUserContentUserJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GETUserContentUserJsonResponse getUserContentUserJson(org.openapis.openapi.models.operations.GETUserContentUserJsonRequest request, org.openapis.openapi.models.operations.GETUserContentUserJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user-content/user.json");
         
@@ -263,14 +264,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETUserContentUserJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GETUserContentUserJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

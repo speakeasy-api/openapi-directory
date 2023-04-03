@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05SubscriptionsHiuOnNotifyRequest {
-    
-    public PostV05SubscriptionsHiuOnNotifyHeaders headers;
-    public PostV05SubscriptionsHiuOnNotifyRequest withHeaders(PostV05SubscriptionsHiuOnNotifyHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05SubscriptionsHiuOnNotifyRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HIUSubscriptionNotificationAcknowledgment request;
-    public PostV05SubscriptionsHiuOnNotifyRequest withRequest(org.openapis.openapi.models.shared.HIUSubscriptionNotificationAcknowledgment request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HIUSubscriptionNotificationAcknowledgment hiuSubscriptionNotificationAcknowledgment;
+    public PostV05SubscriptionsHiuOnNotifyRequest withHIUSubscriptionNotificationAcknowledgment(org.openapis.openapi.models.shared.HIUSubscriptionNotificationAcknowledgment hiuSubscriptionNotificationAcknowledgment) {
+        this.hiuSubscriptionNotificationAcknowledgment = hiuSubscriptionNotificationAcknowledgment;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05SubscriptionsHiuOnNotifyRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

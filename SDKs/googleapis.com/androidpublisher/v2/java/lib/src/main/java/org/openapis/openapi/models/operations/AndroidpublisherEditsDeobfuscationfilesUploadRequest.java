@@ -4,27 +4,113 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsDeobfuscationfilesUploadRequest {
-    
-    public AndroidpublisherEditsDeobfuscationfilesUploadPathParams pathParams;
-    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withPathParams(AndroidpublisherEditsDeobfuscationfilesUploadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public AndroidpublisherEditsDeobfuscationfilesUploadQueryParams queryParams;
-    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withQueryParams(AndroidpublisherEditsDeobfuscationfilesUploadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The version code of the APK whose deobfuscation file is being uploaded.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apkVersionCode")
+    public Long apkVersionCode;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withApkVersionCode(Long apkVersionCode) {
+        this.apkVersionCode = apkVersionCode;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deobfuscationFileType")
+    public AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum deobfuscationFileType;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withDeobfuscationFileType(AndroidpublisherEditsDeobfuscationfilesUploadDeobfuscationFileTypeEnum deobfuscationFileType) {
+        this.deobfuscationFileType = deobfuscationFileType;
+        return this;
+    }
     
-    public AndroidpublisherEditsDeobfuscationfilesUploadSecurity security;
-    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withSecurity(AndroidpublisherEditsDeobfuscationfilesUploadSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier for this edit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
+    public String editId;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withEditId(String editId) {
+        this.editId = editId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Unique identifier of the Android app for which the deobfuscation files are being uploaded; for example, "com.spiffygame".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AndroidpublisherEditsDeobfuscationfilesUploadRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

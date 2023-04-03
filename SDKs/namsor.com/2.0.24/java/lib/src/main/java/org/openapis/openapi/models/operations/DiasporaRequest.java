@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiasporaRequest {
-    
-    public DiasporaPathParams pathParams;
-    public DiasporaRequest withPathParams(DiasporaPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=countryIso2")
+    public String countryIso2;
+    public DiasporaRequest withCountryIso2(String countryIso2) {
+        this.countryIso2 = countryIso2;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstName")
+    public String firstName;
+    public DiasporaRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public DiasporaSecurity security;
-    public DiasporaRequest withSecurity(DiasporaSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lastName")
+    public String lastName;
+    public DiasporaRequest withLastName(String lastName) {
+        this.lastName = lastName;
         return this;
     }
     

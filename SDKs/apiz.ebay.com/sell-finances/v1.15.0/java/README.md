@@ -18,11 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.GetPayoutSecurity;
-import org.openapis.openapi.models.operations.GetPayoutPathParams;
-import org.openapis.openapi.models.operations.GetPayoutHeaders;
 import org.openapis.openapi.models.operations.GetPayoutRequest;
 import org.openapis.openapi.models.operations.GetPayoutResponse;
-import org.openapis.openapi.models.shared.SchemeAPIAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,20 +28,13 @@ public class Application {
                 .build();
 
             GetPayoutRequest req = new GetPayoutRequest() {{
-                security = new GetPayoutSecurity() {{
-                    apiAuth = new SchemeAPIAuth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new GetPayoutPathParams() {{
-                    payoutId = "corrupti";
-                }};
-                headers = new GetPayoutHeaders() {{
-                    xEbayCMarketplaceId = "provident";
-                }};
-            }};            
+                xEbayCMarketplaceId = "corrupti";
+                payoutId = "provident";
+            }}            
 
-            GetPayoutResponse res = sdk.payout.getPayout(req);
+            GetPayoutResponse res = sdk.payout.getPayout(req, new GetPayoutSecurity() {{
+                apiAuth = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.payout.isPresent()) {
                 // handle response
@@ -56,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### payout

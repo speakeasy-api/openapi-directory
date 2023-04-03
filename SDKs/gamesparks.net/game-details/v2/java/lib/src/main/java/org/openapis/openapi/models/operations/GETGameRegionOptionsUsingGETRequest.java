@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGameRegionOptionsUsingGETRequest {
-    
-    public GETGameRegionOptionsUsingGETPathParams pathParams;
-    public GETGameRegionOptionsUsingGETRequest withPathParams(GETGameRegionOptionsUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * gameApiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gameApiKey")
+    public String gameApiKey;
+    public GETGameRegionOptionsUsingGETRequest withGameApiKey(String gameApiKey) {
+        this.gameApiKey = gameApiKey;
         return this;
     }
     

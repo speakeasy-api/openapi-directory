@@ -42,15 +42,15 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.CreateUrlsExportResponse createUrlsExport(org.openapis.openapi.models.operations.CreateUrlsExportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateUrlsExportPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateUrlsExportRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "urlsQuery", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateUrlsExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateUrlsExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,7 +98,7 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetAnalysisSummaryResponse getAnalysisSummary(org.openapis.openapi.models.operations.GetAnalysisSummaryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnalysisSummaryPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnalysisSummaryRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -146,7 +146,7 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetCrawlStatisticsResponse getCrawlStatistics(org.openapis.openapi.models.operations.GetCrawlStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrawlStatisticsPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrawlStatisticsRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -194,13 +194,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyResponse getCrawlStatisticsByFrequency(org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics/time", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics/time", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -248,7 +248,7 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetCrawlStatisticsUrlsResponse getCrawlStatisticsUrls(org.openapis.openapi.models.operations.GetCrawlStatisticsUrlsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrawlStatisticsUrlsPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics/urls/{list_type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCrawlStatisticsUrlsRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/crawl_statistics/urls/{list_type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -296,13 +296,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsResponse getGanalyticsOrphanURLs(org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/ganalytics/orphan_urls/{medium}/{source}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/ganalytics/orphan_urls/{medium}/{source}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -350,7 +350,7 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetLinksPercentilesResponse getLinksPercentiles(org.openapis.openapi.models.operations.GetLinksPercentilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLinksPercentilesPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/links/percentiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLinksPercentilesRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/links/percentiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -398,13 +398,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetLinksTopDomainsResponse getLinksTopDomains(org.openapis.openapi.models.operations.GetLinksTopDomainsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLinksTopDomainsPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/top_domains/domains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLinksTopDomainsRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/top_domains/domains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLinksTopDomainsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLinksTopDomainsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -452,13 +452,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetLinksTopSubdomainsResponse getLinksTopSubdomains(org.openapis.openapi.models.operations.GetLinksTopSubdomainsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLinksTopSubdomainsPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/top_domains/subdomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLinksTopSubdomainsRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/top_domains/subdomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLinksTopSubdomainsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLinksTopSubdomainsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -506,7 +506,7 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetPageRankLostResponse getPageRankLost(org.openapis.openapi.models.operations.GetPageRankLostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPageRankLostPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/pagerank/lost", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPageRankLostRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/pagerank/lost", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -554,7 +554,7 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetSitemapsReportResponse getSitemapsReport(org.openapis.openapi.models.operations.GetSitemapsReportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitemapsReportPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/report", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitemapsReportRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/report", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -602,13 +602,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigResponse getSitemapsSamplesOutOfConfig(org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/samples/out_of_config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/samples/out_of_config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -656,13 +656,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyResponse getSitemapsSamplesSitemapsOnly(org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/samples/sitemap_only", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/features/sitemaps/samples/sitemap_only", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -710,13 +710,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetUrlDetailResponse getUrlDetail(org.openapis.openapi.models.operations.GetUrlDetailRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlDetailPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/{url}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlDetailRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/{url}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlDetailQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlDetailRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -764,15 +764,15 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetUrlsResponse getUrls(org.openapis.openapi.models.operations.GetUrlsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "urlsQuery", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -820,15 +820,15 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetUrlsAggsResponse getUrlsAggs(org.openapis.openapi.models.operations.GetUrlsAggsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsAggsPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/aggs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsAggsRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/aggs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsAggsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsAggsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -876,13 +876,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetUrlsDatamodelResponse getUrlsDatamodel(org.openapis.openapi.models.operations.GetUrlsDatamodelRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsDatamodelPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/datamodel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsDatamodelRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/datamodel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsDatamodelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsDatamodelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -930,7 +930,7 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetUrlsExportStatusResponse getUrlsExportStatus(org.openapis.openapi.models.operations.GetUrlsExportStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsExportStatusPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export/{url_export_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsExportStatusRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export/{url_export_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -978,13 +978,13 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetUrlsExportsResponse getUrlsExports(org.openapis.openapi.models.operations.GetUrlsExportsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsExportsPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsExportsRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsExportsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsExportsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1032,15 +1032,15 @@ public class Analysis {
      */
     public org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersResponse getUrlsSuggestedFilters(org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersPathParams.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/suggested_filters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersRequest.class, baseUrl, "/analyses/{username}/{project_slug}/{analysis_slug}/urls/suggested_filters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "urlsAggsQuery", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

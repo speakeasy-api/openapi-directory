@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.ListRealtimeContactAnalysisSegmentsQueryParams;
-import org.openapis.openapi.models.operations.ListRealtimeContactAnalysisSegmentsHeaders;
 import org.openapis.openapi.models.operations.ListRealtimeContactAnalysisSegmentsRequestBody;
 import org.openapis.openapi.models.operations.ListRealtimeContactAnalysisSegmentsRequest;
 import org.openapis.openapi.models.operations.ListRealtimeContactAnalysisSegmentsResponse;
@@ -15,33 +13,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             ListRealtimeContactAnalysisSegmentsRequest req = new ListRealtimeContactAnalysisSegmentsRequest() {{
-                queryParams = new ListRealtimeContactAnalysisSegmentsQueryParams() {{
-                    maxResults = "corrupti";
-                    nextToken = "provident";
+                maxResults = "corrupti";
+                nextToken = "provident";
+                requestBody = new ListRealtimeContactAnalysisSegmentsRequestBody() {{
+                    contactId = "distinctio";
+                    instanceId = "quibusdam";
+                    maxResults = 602763;
+                    nextToken = "nulla";
                 }};
-                headers = new ListRealtimeContactAnalysisSegmentsHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-                request = new ListRealtimeContactAnalysisSegmentsRequestBody() {{
-                    contactId = "error";
-                    instanceId = "deserunt";
-                    maxResults = 384382;
-                    nextToken = "iure";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "illum";
+                xAmzCredential = "vel";
+                xAmzDate = "error";
+                xAmzSecurityToken = "deserunt";
+                xAmzSignature = "suscipit";
+                xAmzSignedHeaders = "iure";
+            }}            
 
             ListRealtimeContactAnalysisSegmentsResponse res = sdk.listRealtimeContactAnalysisSegments(req);
 

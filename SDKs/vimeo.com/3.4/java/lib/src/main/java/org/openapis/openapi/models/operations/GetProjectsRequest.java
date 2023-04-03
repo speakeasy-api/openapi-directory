@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectsRequest {
-    
-    public GetProjectsPathParams pathParams;
-    public GetProjectsRequest withPathParams(GetProjectsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetProjectsDirectionEnum direction;
+    public GetProjectsRequest withDirection(GetProjectsDirectionEnum direction) {
+        this.direction = direction;
         return this;
     }
     
-    
-    public GetProjectsQueryParams queryParams;
-    public GetProjectsRequest withQueryParams(GetProjectsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetProjectsRequest withPage(Double page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetProjectsRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
     
-    public GetProjectsSecurity security;
-    public GetProjectsRequest withSecurity(GetProjectsSecurity security) {
-        this.security = security;
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetProjectsSortEnum sort;
+    public GetProjectsRequest withSort(GetProjectsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetProjectsRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

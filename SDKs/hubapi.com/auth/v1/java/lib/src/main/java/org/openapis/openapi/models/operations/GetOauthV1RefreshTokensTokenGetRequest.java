@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOauthV1RefreshTokensTokenGetRequest {
-    
-    public GetOauthV1RefreshTokensTokenGetPathParams pathParams;
-    public GetOauthV1RefreshTokensTokenGetRequest withPathParams(GetOauthV1RefreshTokensTokenGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
+    public String token;
+    public GetOauthV1RefreshTokensTokenGetRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

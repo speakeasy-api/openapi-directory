@@ -48,7 +48,7 @@ public class Admin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGlobalRuleResponse createGlobalRule(org.openapis.openapi.models.operations.CreateGlobalRuleRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGlobalRuleResponse createGlobalRule(org.openapis.openapi.models.shared.Rule request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/rules");
         
@@ -100,7 +100,7 @@ public class Admin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateRoleMappingResponse createRoleMapping(org.openapis.openapi.models.operations.CreateRoleMappingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRoleMappingResponse createRoleMapping(org.openapis.openapi.models.shared.RoleMapping request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/admin/roleMappings");
         
@@ -202,7 +202,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.DeleteGlobalRuleResponse deleteGlobalRule(org.openapis.openapi.models.operations.DeleteGlobalRuleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlobalRulePathParams.class, baseUrl, "/admin/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteGlobalRuleRequest.class, baseUrl, "/admin/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -249,7 +249,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.DeleteRoleMappingResponse deleteRoleMapping(org.openapis.openapi.models.operations.DeleteRoleMappingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRoleMappingPathParams.class, baseUrl, "/admin/roleMappings/{principalId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRoleMappingRequest.class, baseUrl, "/admin/roleMappings/{principalId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -296,7 +296,7 @@ public class Admin {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportDataQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExportDataRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -354,7 +354,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.GetConfigPropertyResponse getConfigProperty(org.openapis.openapi.models.operations.GetConfigPropertyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigPropertyPathParams.class, baseUrl, "/admin/config/properties/{propertyName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetConfigPropertyRequest.class, baseUrl, "/admin/config/properties/{propertyName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -408,7 +408,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.GetGlobalRuleConfigResponse getGlobalRuleConfig(org.openapis.openapi.models.operations.GetGlobalRuleConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGlobalRuleConfigPathParams.class, baseUrl, "/admin/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGlobalRuleConfigRequest.class, baseUrl, "/admin/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -455,7 +455,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.GetLogConfigurationResponse getLogConfiguration(org.openapis.openapi.models.operations.GetLogConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLogConfigurationPathParams.class, baseUrl, "/admin/loggers/{logger}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLogConfigurationRequest.class, baseUrl, "/admin/loggers/{logger}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -508,7 +508,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.GetRoleMappingResponse getRoleMapping(org.openapis.openapi.models.operations.GetRoleMappingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoleMappingPathParams.class, baseUrl, "/admin/roleMappings/{principalId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRoleMappingRequest.class, baseUrl, "/admin/roleMappings/{principalId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -560,13 +560,13 @@ public class Admin {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -860,7 +860,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.RemoveLogConfigurationResponse removeLogConfiguration(org.openapis.openapi.models.operations.RemoveLogConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveLogConfigurationPathParams.class, baseUrl, "/admin/loggers/{logger}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveLogConfigurationRequest.class, baseUrl, "/admin/loggers/{logger}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -915,7 +915,7 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.ResetConfigPropertyResponse resetConfigProperty(org.openapis.openapi.models.operations.ResetConfigPropertyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetConfigPropertyPathParams.class, baseUrl, "/admin/config/properties/{propertyName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetConfigPropertyRequest.class, baseUrl, "/admin/config/properties/{propertyName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -956,12 +956,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.SetLogConfigurationResponse setLogConfiguration(org.openapis.openapi.models.operations.SetLogConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetLogConfigurationPathParams.class, baseUrl, "/admin/loggers/{logger}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetLogConfigurationRequest.class, baseUrl, "/admin/loggers/{logger}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "logConfiguration", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1014,12 +1014,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.UpdateConfigPropertyResponse updateConfigProperty(org.openapis.openapi.models.operations.UpdateConfigPropertyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConfigPropertyPathParams.class, baseUrl, "/admin/config/properties/{propertyName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConfigPropertyRequest.class, baseUrl, "/admin/config/properties/{propertyName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateConfigurationProperty", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1067,12 +1067,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.UpdateGlobalRuleConfigResponse updateGlobalRuleConfig(org.openapis.openapi.models.operations.UpdateGlobalRuleConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlobalRuleConfigPathParams.class, baseUrl, "/admin/rules/{rule}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateGlobalRuleConfigRequest.class, baseUrl, "/admin/rules/{rule}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "rule1", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1125,12 +1125,12 @@ public class Admin {
      */
     public org.openapis.openapi.models.operations.UpdateRoleMappingResponse updateRoleMapping(org.openapis.openapi.models.operations.UpdateRoleMappingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRoleMappingPathParams.class, baseUrl, "/admin/roleMappings/{principalId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateRoleMappingRequest.class, baseUrl, "/admin/roleMappings/{principalId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateRole", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

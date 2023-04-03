@@ -40,19 +40,20 @@ public class CDDrive {
      * Delete a file.
      * Delete a file from the customer's private CD Drive.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdResponse deleteApiV2CddriveFilesFileId(org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdResponse deleteApiV2CddriveFilesFileId(org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdRequest request, org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdPathParams.class, baseUrl, "/api/v2/cddrive/files/{file-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2CddriveFilesFileIdRequest.class, baseUrl, "/api/v2/cddrive/files/{file-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -74,25 +75,26 @@ public class CDDrive {
      * UNDER DEVELOPMENT - Delete a folder.
      * Delete a file from the customer's private CD Drive.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdResponse deleteApiV2CddriveFoldersFolderId(org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdResponse deleteApiV2CddriveFoldersFolderId(org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdRequest request, org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdPathParams.class, baseUrl, "/api/v2/cddrive/folders/{folder-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdRequest.class, baseUrl, "/api/v2/cddrive/folders/{folder-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteApiV2CddriveFoldersFolderIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -114,19 +116,20 @@ public class CDDrive {
      * Get file information.
      * Get the information about a file in the customer's private CD Drive.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdResponse getApiV2CddriveFilesFileId(org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdResponse getApiV2CddriveFilesFileId(org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdRequest request, org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdPathParams.class, baseUrl, "/api/v2/cddrive/files/{file-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdRequest.class, baseUrl, "/api/v2/cddrive/files/{file-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,18 +159,19 @@ public class CDDrive {
      * UNDER DEVELOPMENT - Download a file.
      * Download a file from the customer's private CD Drive.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentResponse getApiV2CddriveFilesFileIdContent(org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentResponse getApiV2CddriveFilesFileIdContent(org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentRequest request, org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentPathParams.class, baseUrl, "/api/v2/cddrive/files/{file-id}/content", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2CddriveFilesFileIdContentRequest.class, baseUrl, "/api/v2/cddrive/files/{file-id}/content", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -176,7 +180,7 @@ public class CDDrive {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,19 +213,20 @@ public class CDDrive {
      * UNDER DEVELOPMENT - Get folder information.
      * Get the information about a folder in the customer's private CD Drive.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdResponse getApiV2CddriveFoldersFolderId(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdResponse getApiV2CddriveFoldersFolderId(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdRequest request, org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdPathParams.class, baseUrl, "/api/v2/cddrive/folders/{folder-id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdRequest.class, baseUrl, "/api/v2/cddrive/folders/{folder-id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -251,25 +256,26 @@ public class CDDrive {
      * Get the items in the folder.
      * Get the information about a folder in the customer's private CD Drive.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsResponse getApiV2CddriveFoldersFolderIdItems(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsResponse getApiV2CddriveFoldersFolderIdItems(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsRequest request, org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsPathParams.class, baseUrl, "/api/v2/cddrive/folders/{folder-id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsRequest.class, baseUrl, "/api/v2/cddrive/folders/{folder-id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2CddriveFoldersFolderIdItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -299,20 +305,21 @@ public class CDDrive {
      * Upload a file.
      * Upload a file to the customer's private CD Drive.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentResponse postApiV2CddriveFilesContent(org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentResponse postApiV2CddriveFilesContent(org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentRequest request, org.openapis.openapi.models.operations.PostApiV2CddriveFilesContentSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/cddrive/files/content");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -321,7 +328,7 @@ public class CDDrive {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -351,10 +358,11 @@ public class CDDrive {
      * Create a folder.
      * Create a new folder in the customer's private CD Drive.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV2CddriveFoldersResponse postApiV2CddriveFolders(org.openapis.openapi.models.operations.PostApiV2CddriveFoldersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiV2CddriveFoldersResponse postApiV2CddriveFolders(org.openapis.openapi.models.operations.PostApiV2CddriveFoldersRequestBody request, org.openapis.openapi.models.operations.PostApiV2CddriveFoldersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/cddrive/folders");
         
@@ -365,7 +373,7 @@ public class CDDrive {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -7,34 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebinarUpdateMultipartRequest {
-    
-    public WebinarUpdateMultipartPathParams pathParams;
-    public WebinarUpdateMultipartRequest withPathParams(WebinarUpdateMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebinarUpdateMultipartQueryParams queryParams;
-    public WebinarUpdateMultipartRequest withQueryParams(WebinarUpdateMultipartQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Webinar.
      */
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public WebinarUpdateMultipartFormData3 request;
-    public WebinarUpdateMultipartRequest withRequest(WebinarUpdateMultipartFormData3 request) {
-        this.request = request;
+    public WebinarUpdateMultipartFormData3 requestBody;
+    public WebinarUpdateMultipartRequest withRequestBody(WebinarUpdateMultipartFormData3 requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording}
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurrence_id")
+    public String occurrenceId;
+    public WebinarUpdateMultipartRequest withOccurrenceId(String occurrenceId) {
+        this.occurrenceId = occurrenceId;
+        return this;
+    }
     
-    public WebinarUpdateMultipartSecurity security;
-    public WebinarUpdateMultipartRequest withSecurity(WebinarUpdateMultipartSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID in "**long**" format(represented as int64 data type in JSON). 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public Long webinarId;
+    public WebinarUpdateMultipartRequest withWebinarId(Long webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TenancyTenantsUpdateRequest {
-    
-    public TenancyTenantsUpdatePathParams pathParams;
-    public TenancyTenantsUpdateRequest withPathParams(TenancyTenantsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.WritableTenantInput writableTenantInput;
+    public TenancyTenantsUpdateRequest withWritableTenantInput(org.openapis.openapi.models.shared.WritableTenantInput writableTenantInput) {
+        this.writableTenantInput = writableTenantInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WritableTenantInput request;
-    public TenancyTenantsUpdateRequest withRequest(org.openapis.openapi.models.shared.WritableTenantInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this tenant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public TenancyTenantsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportConfigurationsDeleteRequest {
-    
-    public ExportConfigurationsDeletePathParams pathParams;
-    public ExportConfigurationsDeleteRequest withPathParams(ExportConfigurationsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ExportConfigurationsDeleteRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The id of the export configuration.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=export_configuration_id")
+    public String exportConfigurationId;
+    public ExportConfigurationsDeleteRequest withExportConfigurationId(String exportConfigurationId) {
+        this.exportConfigurationId = exportConfigurationId;
+        return this;
+    }
     
-    public ExportConfigurationsDeleteSecurity security;
-    public ExportConfigurationsDeleteRequest withSecurity(ExportConfigurationsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ExportConfigurationsDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

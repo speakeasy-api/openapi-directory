@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchCoachRequest {
-    
-    public FetchCoachPathParams pathParams;
-    public FetchCoachRequest withPathParams(FetchCoachPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Coach identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public FetchCoachRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

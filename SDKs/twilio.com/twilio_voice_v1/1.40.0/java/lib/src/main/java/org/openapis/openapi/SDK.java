@@ -341,10 +341,14 @@ public class SDK {
 		
 	}
 
-    public org.openapis.openapi.models.operations.CreateByocTrunkResponse createByocTrunk(org.openapis.openapi.models.operations.CreateByocTrunkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateByocTrunkResponse createByocTrunk(org.openapis.openapi.models.operations.CreateByocTrunkCreateByocTrunkRequest request, org.openapis.openapi.models.operations.CreateByocTrunkSecurity security) throws Exception {
+        return this.createByocTrunk(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateByocTrunkResponse createByocTrunk(org.openapis.openapi.models.operations.CreateByocTrunkCreateByocTrunkRequest request, org.openapis.openapi.models.operations.CreateByocTrunkSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_BYOC_TRUNK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ByocTrunks");
@@ -356,7 +360,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -380,10 +384,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateConnectionPolicyResponse createConnectionPolicy(org.openapis.openapi.models.operations.CreateConnectionPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConnectionPolicyResponse createConnectionPolicy(org.openapis.openapi.models.operations.CreateConnectionPolicyCreateConnectionPolicyRequest request, org.openapis.openapi.models.operations.CreateConnectionPolicySecurity security) throws Exception {
+        return this.createConnectionPolicy(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateConnectionPolicyResponse createConnectionPolicy(org.openapis.openapi.models.operations.CreateConnectionPolicyCreateConnectionPolicyRequest request, org.openapis.openapi.models.operations.CreateConnectionPolicySecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CONNECTION_POLICY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ConnectionPolicies");
@@ -395,7 +403,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -419,22 +427,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateConnectionPolicyTargetResponse createConnectionPolicyTarget(org.openapis.openapi.models.operations.CreateConnectionPolicyTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateConnectionPolicyTargetResponse createConnectionPolicyTarget(org.openapis.openapi.models.operations.CreateConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.CreateConnectionPolicyTargetSecurity security) throws Exception {
+        return this.createConnectionPolicyTarget(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateConnectionPolicyTargetResponse createConnectionPolicyTarget(org.openapis.openapi.models.operations.CreateConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.CreateConnectionPolicyTargetSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_CONNECTION_POLICY_TARGET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConnectionPolicyTargetPathParams.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateConnectionPolicyTargetRequest.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -461,13 +473,26 @@ public class SDK {
     /**
      * Create a bulk update request to change voice dialing country permissions of one or more countries identified by the corresponding [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDialingPermissionsCountryBulkUpdateResponse createDialingPermissionsCountryBulkUpdate(org.openapis.openapi.models.operations.CreateDialingPermissionsCountryBulkUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDialingPermissionsCountryBulkUpdateResponse createDialingPermissionsCountryBulkUpdate(org.openapis.openapi.models.operations.CreateDialingPermissionsCountryBulkUpdateCreateDialingPermissionsCountryBulkUpdateRequest request, org.openapis.openapi.models.operations.CreateDialingPermissionsCountryBulkUpdateSecurity security) throws Exception {
+        return this.createDialingPermissionsCountryBulkUpdate(request, security, null);
+    }
+
+    /**
+     * Create a bulk update request to change voice dialing country permissions of one or more countries identified by the corresponding [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateDialingPermissionsCountryBulkUpdateResponse createDialingPermissionsCountryBulkUpdate(org.openapis.openapi.models.operations.CreateDialingPermissionsCountryBulkUpdateCreateDialingPermissionsCountryBulkUpdateRequest request, org.openapis.openapi.models.operations.CreateDialingPermissionsCountryBulkUpdateSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_DIALING_PERMISSIONS_COUNTRY_BULK_UPDATE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/DialingPermissions/BulkCountryUpdates");
@@ -479,7 +504,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -503,10 +528,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateIpRecordResponse createIpRecord(org.openapis.openapi.models.operations.CreateIpRecordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateIpRecordResponse createIpRecord(org.openapis.openapi.models.operations.CreateIpRecordCreateIpRecordRequest request, org.openapis.openapi.models.operations.CreateIpRecordSecurity security) throws Exception {
+        return this.createIpRecord(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateIpRecordResponse createIpRecord(org.openapis.openapi.models.operations.CreateIpRecordCreateIpRecordRequest request, org.openapis.openapi.models.operations.CreateIpRecordSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_IP_RECORD_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/IpRecords");
@@ -518,7 +547,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -542,10 +571,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.CreateSourceIpMappingResponse createSourceIpMapping(org.openapis.openapi.models.operations.CreateSourceIpMappingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSourceIpMappingResponse createSourceIpMapping(org.openapis.openapi.models.operations.CreateSourceIpMappingCreateSourceIpMappingRequest request, org.openapis.openapi.models.operations.CreateSourceIpMappingSecurity security) throws Exception {
+        return this.createSourceIpMapping(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.CreateSourceIpMappingResponse createSourceIpMapping(org.openapis.openapi.models.operations.CreateSourceIpMappingCreateSourceIpMappingRequest request, org.openapis.openapi.models.operations.CreateSourceIpMappingSecurity security, String serverURL) throws Exception {
         String baseUrl = CREATE_SOURCE_IP_MAPPING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SourceIpMappings");
@@ -557,7 +590,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -584,23 +617,36 @@ public class SDK {
     /**
      * Delete an archived call record from Bulk Export. Note: this does not also delete the record from the Voice API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteArchivedCallResponse deleteArchivedCall(org.openapis.openapi.models.operations.DeleteArchivedCallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteArchivedCallResponse deleteArchivedCall(org.openapis.openapi.models.operations.DeleteArchivedCallRequest request, org.openapis.openapi.models.operations.DeleteArchivedCallSecurity security) throws Exception {
+        return this.deleteArchivedCall(request, security, null);
+    }
+
+    /**
+     * Delete an archived call record from Bulk Export. Note: this does not also delete the record from the Voice API.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteArchivedCallResponse deleteArchivedCall(org.openapis.openapi.models.operations.DeleteArchivedCallRequest request, org.openapis.openapi.models.operations.DeleteArchivedCallSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_ARCHIVED_CALL_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArchivedCallPathParams.class, baseUrl, "/v1/Archives/{Date}/Calls/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArchivedCallRequest.class, baseUrl, "/v1/Archives/{Date}/Calls/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -618,20 +664,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteByocTrunkResponse deleteByocTrunk(org.openapis.openapi.models.operations.DeleteByocTrunkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteByocTrunkResponse deleteByocTrunk(org.openapis.openapi.models.operations.DeleteByocTrunkRequest request, org.openapis.openapi.models.operations.DeleteByocTrunkSecurity security) throws Exception {
+        return this.deleteByocTrunk(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteByocTrunkResponse deleteByocTrunk(org.openapis.openapi.models.operations.DeleteByocTrunkRequest request, org.openapis.openapi.models.operations.DeleteByocTrunkSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_BYOC_TRUNK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteByocTrunkPathParams.class, baseUrl, "/v1/ByocTrunks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteByocTrunkRequest.class, baseUrl, "/v1/ByocTrunks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -649,20 +699,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteConnectionPolicyResponse deleteConnectionPolicy(org.openapis.openapi.models.operations.DeleteConnectionPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConnectionPolicyResponse deleteConnectionPolicy(org.openapis.openapi.models.operations.DeleteConnectionPolicyRequest request, org.openapis.openapi.models.operations.DeleteConnectionPolicySecurity security) throws Exception {
+        return this.deleteConnectionPolicy(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteConnectionPolicyResponse deleteConnectionPolicy(org.openapis.openapi.models.operations.DeleteConnectionPolicyRequest request, org.openapis.openapi.models.operations.DeleteConnectionPolicySecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CONNECTION_POLICY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectionPolicyPathParams.class, baseUrl, "/v1/ConnectionPolicies/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectionPolicyRequest.class, baseUrl, "/v1/ConnectionPolicies/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -680,20 +734,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetResponse deleteConnectionPolicyTarget(org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetResponse deleteConnectionPolicyTarget(org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetSecurity security) throws Exception {
+        return this.deleteConnectionPolicyTarget(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetResponse deleteConnectionPolicyTarget(org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_CONNECTION_POLICY_TARGET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetPathParams.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteConnectionPolicyTargetRequest.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -711,20 +769,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteIpRecordResponse deleteIpRecord(org.openapis.openapi.models.operations.DeleteIpRecordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteIpRecordResponse deleteIpRecord(org.openapis.openapi.models.operations.DeleteIpRecordRequest request, org.openapis.openapi.models.operations.DeleteIpRecordSecurity security) throws Exception {
+        return this.deleteIpRecord(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteIpRecordResponse deleteIpRecord(org.openapis.openapi.models.operations.DeleteIpRecordRequest request, org.openapis.openapi.models.operations.DeleteIpRecordSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_IP_RECORD_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteIpRecordPathParams.class, baseUrl, "/v1/IpRecords/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteIpRecordRequest.class, baseUrl, "/v1/IpRecords/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -742,20 +804,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.DeleteSourceIpMappingResponse deleteSourceIpMapping(org.openapis.openapi.models.operations.DeleteSourceIpMappingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSourceIpMappingResponse deleteSourceIpMapping(org.openapis.openapi.models.operations.DeleteSourceIpMappingRequest request, org.openapis.openapi.models.operations.DeleteSourceIpMappingSecurity security) throws Exception {
+        return this.deleteSourceIpMapping(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.DeleteSourceIpMappingResponse deleteSourceIpMapping(org.openapis.openapi.models.operations.DeleteSourceIpMappingRequest request, org.openapis.openapi.models.operations.DeleteSourceIpMappingSecurity security, String serverURL) throws Exception {
         String baseUrl = DELETE_SOURCE_IP_MAPPING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSourceIpMappingPathParams.class, baseUrl, "/v1/SourceIpMappings/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSourceIpMappingRequest.class, baseUrl, "/v1/SourceIpMappings/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -773,20 +839,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchByocTrunkResponse fetchByocTrunk(org.openapis.openapi.models.operations.FetchByocTrunkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchByocTrunkResponse fetchByocTrunk(org.openapis.openapi.models.operations.FetchByocTrunkRequest request, org.openapis.openapi.models.operations.FetchByocTrunkSecurity security) throws Exception {
+        return this.fetchByocTrunk(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchByocTrunkResponse fetchByocTrunk(org.openapis.openapi.models.operations.FetchByocTrunkRequest request, org.openapis.openapi.models.operations.FetchByocTrunkSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_BYOC_TRUNK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchByocTrunkPathParams.class, baseUrl, "/v1/ByocTrunks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchByocTrunkRequest.class, baseUrl, "/v1/ByocTrunks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -810,20 +880,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchConnectionPolicyResponse fetchConnectionPolicy(org.openapis.openapi.models.operations.FetchConnectionPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConnectionPolicyResponse fetchConnectionPolicy(org.openapis.openapi.models.operations.FetchConnectionPolicyRequest request, org.openapis.openapi.models.operations.FetchConnectionPolicySecurity security) throws Exception {
+        return this.fetchConnectionPolicy(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchConnectionPolicyResponse fetchConnectionPolicy(org.openapis.openapi.models.operations.FetchConnectionPolicyRequest request, org.openapis.openapi.models.operations.FetchConnectionPolicySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONNECTION_POLICY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConnectionPolicyPathParams.class, baseUrl, "/v1/ConnectionPolicies/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConnectionPolicyRequest.class, baseUrl, "/v1/ConnectionPolicies/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -847,20 +921,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchConnectionPolicyTargetResponse fetchConnectionPolicyTarget(org.openapis.openapi.models.operations.FetchConnectionPolicyTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchConnectionPolicyTargetResponse fetchConnectionPolicyTarget(org.openapis.openapi.models.operations.FetchConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.FetchConnectionPolicyTargetSecurity security) throws Exception {
+        return this.fetchConnectionPolicyTarget(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchConnectionPolicyTargetResponse fetchConnectionPolicyTarget(org.openapis.openapi.models.operations.FetchConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.FetchConnectionPolicyTargetSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_CONNECTION_POLICY_TARGET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConnectionPolicyTargetPathParams.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchConnectionPolicyTargetRequest.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -887,23 +965,36 @@ public class SDK {
     /**
      * Retrieve voice dialing country permissions identified by the given ISO country code
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchDialingPermissionsCountryResponse fetchDialingPermissionsCountry(org.openapis.openapi.models.operations.FetchDialingPermissionsCountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchDialingPermissionsCountryResponse fetchDialingPermissionsCountry(org.openapis.openapi.models.operations.FetchDialingPermissionsCountryRequest request, org.openapis.openapi.models.operations.FetchDialingPermissionsCountrySecurity security) throws Exception {
+        return this.fetchDialingPermissionsCountry(request, security, null);
+    }
+
+    /**
+     * Retrieve voice dialing country permissions identified by the given ISO country code
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchDialingPermissionsCountryResponse fetchDialingPermissionsCountry(org.openapis.openapi.models.operations.FetchDialingPermissionsCountryRequest request, org.openapis.openapi.models.operations.FetchDialingPermissionsCountrySecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_DIALING_PERMISSIONS_COUNTRY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDialingPermissionsCountryPathParams.class, baseUrl, "/v1/DialingPermissions/Countries/{IsoCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchDialingPermissionsCountryRequest.class, baseUrl, "/v1/DialingPermissions/Countries/{IsoCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -929,14 +1020,23 @@ public class SDK {
 
     /**
      * Retrieve voice dialing permissions inheritance for the sub-account
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchDialingPermissionsSettingsResponse fetchDialingPermissionsSettings(org.openapis.openapi.models.operations.FetchDialingPermissionsSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchDialingPermissionsSettingsResponse fetchDialingPermissionsSettings() throws Exception {
+        return this.fetchDialingPermissionsSettings(null);
+    }
+
+    /**
+     * Retrieve voice dialing permissions inheritance for the sub-account
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.FetchDialingPermissionsSettingsResponse fetchDialingPermissionsSettings(String serverURL) throws Exception {
         String baseUrl = FETCH_DIALING_PERMISSIONS_SETTINGS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Settings");
@@ -946,8 +1046,7 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -970,20 +1069,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchIpRecordResponse fetchIpRecord(org.openapis.openapi.models.operations.FetchIpRecordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchIpRecordResponse fetchIpRecord(org.openapis.openapi.models.operations.FetchIpRecordRequest request, org.openapis.openapi.models.operations.FetchIpRecordSecurity security) throws Exception {
+        return this.fetchIpRecord(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchIpRecordResponse fetchIpRecord(org.openapis.openapi.models.operations.FetchIpRecordRequest request, org.openapis.openapi.models.operations.FetchIpRecordSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_IP_RECORD_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchIpRecordPathParams.class, baseUrl, "/v1/IpRecords/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchIpRecordRequest.class, baseUrl, "/v1/IpRecords/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1007,20 +1110,24 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.FetchSourceIpMappingResponse fetchSourceIpMapping(org.openapis.openapi.models.operations.FetchSourceIpMappingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchSourceIpMappingResponse fetchSourceIpMapping(org.openapis.openapi.models.operations.FetchSourceIpMappingRequest request, org.openapis.openapi.models.operations.FetchSourceIpMappingSecurity security) throws Exception {
+        return this.fetchSourceIpMapping(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.FetchSourceIpMappingResponse fetchSourceIpMapping(org.openapis.openapi.models.operations.FetchSourceIpMappingRequest request, org.openapis.openapi.models.operations.FetchSourceIpMappingSecurity security, String serverURL) throws Exception {
         String baseUrl = FETCH_SOURCE_IP_MAPPING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSourceIpMappingPathParams.class, baseUrl, "/v1/SourceIpMappings/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchSourceIpMappingRequest.class, baseUrl, "/v1/SourceIpMappings/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1044,10 +1151,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListByocTrunkResponse listByocTrunk(org.openapis.openapi.models.operations.ListByocTrunkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListByocTrunkResponse listByocTrunk(org.openapis.openapi.models.operations.ListByocTrunkRequest request, org.openapis.openapi.models.operations.ListByocTrunkSecurity security) throws Exception {
+        return this.listByocTrunk(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListByocTrunkResponse listByocTrunk(org.openapis.openapi.models.operations.ListByocTrunkRequest request, org.openapis.openapi.models.operations.ListByocTrunkSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_BYOC_TRUNK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ByocTrunks");
@@ -1056,14 +1167,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListByocTrunkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListByocTrunkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1087,10 +1198,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListConnectionPolicyResponse listConnectionPolicy(org.openapis.openapi.models.operations.ListConnectionPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConnectionPolicyResponse listConnectionPolicy(org.openapis.openapi.models.operations.ListConnectionPolicyRequest request, org.openapis.openapi.models.operations.ListConnectionPolicySecurity security) throws Exception {
+        return this.listConnectionPolicy(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListConnectionPolicyResponse listConnectionPolicy(org.openapis.openapi.models.operations.ListConnectionPolicyRequest request, org.openapis.openapi.models.operations.ListConnectionPolicySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONNECTION_POLICY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/ConnectionPolicies");
@@ -1099,14 +1214,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConnectionPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConnectionPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1130,26 +1245,30 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListConnectionPolicyTargetResponse listConnectionPolicyTarget(org.openapis.openapi.models.operations.ListConnectionPolicyTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListConnectionPolicyTargetResponse listConnectionPolicyTarget(org.openapis.openapi.models.operations.ListConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.ListConnectionPolicyTargetSecurity security) throws Exception {
+        return this.listConnectionPolicyTarget(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListConnectionPolicyTargetResponse listConnectionPolicyTarget(org.openapis.openapi.models.operations.ListConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.ListConnectionPolicyTargetSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_CONNECTION_POLICY_TARGET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConnectionPolicyTargetPathParams.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListConnectionPolicyTargetRequest.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConnectionPolicyTargetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListConnectionPolicyTargetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1176,13 +1295,26 @@ public class SDK {
     /**
      * Retrieve all voice dialing country permissions for this account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDialingPermissionsCountryResponse listDialingPermissionsCountry(org.openapis.openapi.models.operations.ListDialingPermissionsCountryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDialingPermissionsCountryResponse listDialingPermissionsCountry(org.openapis.openapi.models.operations.ListDialingPermissionsCountryRequest request, org.openapis.openapi.models.operations.ListDialingPermissionsCountrySecurity security) throws Exception {
+        return this.listDialingPermissionsCountry(request, security, null);
+    }
+
+    /**
+     * Retrieve all voice dialing country permissions for this account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListDialingPermissionsCountryResponse listDialingPermissionsCountry(org.openapis.openapi.models.operations.ListDialingPermissionsCountryRequest request, org.openapis.openapi.models.operations.ListDialingPermissionsCountrySecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_DIALING_PERMISSIONS_COUNTRY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/DialingPermissions/Countries");
@@ -1191,14 +1323,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDialingPermissionsCountryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDialingPermissionsCountryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1225,29 +1357,42 @@ public class SDK {
     /**
      * Fetch the high-risk special services prefixes from the country resource corresponding to the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesResponse listDialingPermissionsHrsPrefixes(org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesResponse listDialingPermissionsHrsPrefixes(org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesRequest request, org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesSecurity security) throws Exception {
+        return this.listDialingPermissionsHrsPrefixes(request, security, null);
+    }
+
+    /**
+     * Fetch the high-risk special services prefixes from the country resource corresponding to the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesResponse listDialingPermissionsHrsPrefixes(org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesRequest request, org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_DIALING_PERMISSIONS_HRS_PREFIXES_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesPathParams.class, baseUrl, "/v1/DialingPermissions/Countries/{IsoCode}/HighRiskSpecialPrefixes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesRequest.class, baseUrl, "/v1/DialingPermissions/Countries/{IsoCode}/HighRiskSpecialPrefixes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListDialingPermissionsHrsPrefixesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1271,10 +1416,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListIpRecordResponse listIpRecord(org.openapis.openapi.models.operations.ListIpRecordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListIpRecordResponse listIpRecord(org.openapis.openapi.models.operations.ListIpRecordRequest request, org.openapis.openapi.models.operations.ListIpRecordSecurity security) throws Exception {
+        return this.listIpRecord(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListIpRecordResponse listIpRecord(org.openapis.openapi.models.operations.ListIpRecordRequest request, org.openapis.openapi.models.operations.ListIpRecordSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_IP_RECORD_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/IpRecords");
@@ -1283,14 +1432,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListIpRecordQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListIpRecordRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1314,10 +1463,14 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ListSourceIpMappingResponse listSourceIpMapping(org.openapis.openapi.models.operations.ListSourceIpMappingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListSourceIpMappingResponse listSourceIpMapping(org.openapis.openapi.models.operations.ListSourceIpMappingRequest request, org.openapis.openapi.models.operations.ListSourceIpMappingSecurity security) throws Exception {
+        return this.listSourceIpMapping(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.ListSourceIpMappingResponse listSourceIpMapping(org.openapis.openapi.models.operations.ListSourceIpMappingRequest request, org.openapis.openapi.models.operations.ListSourceIpMappingSecurity security, String serverURL) throws Exception {
         String baseUrl = LIST_SOURCE_IP_MAPPING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/SourceIpMappings");
@@ -1326,14 +1479,14 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceIpMappingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListSourceIpMappingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1357,22 +1510,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateByocTrunkResponse updateByocTrunk(org.openapis.openapi.models.operations.UpdateByocTrunkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateByocTrunkResponse updateByocTrunk(org.openapis.openapi.models.operations.UpdateByocTrunkRequest request, org.openapis.openapi.models.operations.UpdateByocTrunkSecurity security) throws Exception {
+        return this.updateByocTrunk(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateByocTrunkResponse updateByocTrunk(org.openapis.openapi.models.operations.UpdateByocTrunkRequest request, org.openapis.openapi.models.operations.UpdateByocTrunkSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_BYOC_TRUNK_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateByocTrunkPathParams.class, baseUrl, "/v1/ByocTrunks/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateByocTrunkRequest.class, baseUrl, "/v1/ByocTrunks/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1396,22 +1553,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateConnectionPolicyResponse updateConnectionPolicy(org.openapis.openapi.models.operations.UpdateConnectionPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConnectionPolicyResponse updateConnectionPolicy(org.openapis.openapi.models.operations.UpdateConnectionPolicyRequest request, org.openapis.openapi.models.operations.UpdateConnectionPolicySecurity security) throws Exception {
+        return this.updateConnectionPolicy(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateConnectionPolicyResponse updateConnectionPolicy(org.openapis.openapi.models.operations.UpdateConnectionPolicyRequest request, org.openapis.openapi.models.operations.UpdateConnectionPolicySecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONNECTION_POLICY_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConnectionPolicyPathParams.class, baseUrl, "/v1/ConnectionPolicies/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConnectionPolicyRequest.class, baseUrl, "/v1/ConnectionPolicies/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1435,22 +1596,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetResponse updateConnectionPolicyTarget(org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetResponse updateConnectionPolicyTarget(org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetSecurity security) throws Exception {
+        return this.updateConnectionPolicyTarget(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetResponse updateConnectionPolicyTarget(org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetRequest request, org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_CONNECTION_POLICY_TARGET_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetPathParams.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateConnectionPolicyTargetRequest.class, baseUrl, "/v1/ConnectionPolicies/{ConnectionPolicySid}/Targets/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1477,13 +1642,26 @@ public class SDK {
     /**
      * Update voice dialing permissions inheritance for the sub-account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDialingPermissionsSettingsResponse updateDialingPermissionsSettings(org.openapis.openapi.models.operations.UpdateDialingPermissionsSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDialingPermissionsSettingsResponse updateDialingPermissionsSettings(org.openapis.openapi.models.operations.UpdateDialingPermissionsSettingsUpdateDialingPermissionsSettingsRequest request, org.openapis.openapi.models.operations.UpdateDialingPermissionsSettingsSecurity security) throws Exception {
+        return this.updateDialingPermissionsSettings(request, security, null);
+    }
+
+    /**
+     * Update voice dialing permissions inheritance for the sub-account
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateDialingPermissionsSettingsResponse updateDialingPermissionsSettings(org.openapis.openapi.models.operations.UpdateDialingPermissionsSettingsUpdateDialingPermissionsSettingsRequest request, org.openapis.openapi.models.operations.UpdateDialingPermissionsSettingsSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_DIALING_PERMISSIONS_SETTINGS_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/Settings");
@@ -1495,7 +1673,7 @@ public class SDK {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1519,22 +1697,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateIpRecordResponse updateIpRecord(org.openapis.openapi.models.operations.UpdateIpRecordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateIpRecordResponse updateIpRecord(org.openapis.openapi.models.operations.UpdateIpRecordRequest request, org.openapis.openapi.models.operations.UpdateIpRecordSecurity security) throws Exception {
+        return this.updateIpRecord(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateIpRecordResponse updateIpRecord(org.openapis.openapi.models.operations.UpdateIpRecordRequest request, org.openapis.openapi.models.operations.UpdateIpRecordSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_IP_RECORD_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateIpRecordPathParams.class, baseUrl, "/v1/IpRecords/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateIpRecordRequest.class, baseUrl, "/v1/IpRecords/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1558,22 +1740,26 @@ public class SDK {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.UpdateSourceIpMappingResponse updateSourceIpMapping(org.openapis.openapi.models.operations.UpdateSourceIpMappingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSourceIpMappingResponse updateSourceIpMapping(org.openapis.openapi.models.operations.UpdateSourceIpMappingRequest request, org.openapis.openapi.models.operations.UpdateSourceIpMappingSecurity security) throws Exception {
+        return this.updateSourceIpMapping(request, security, null);
+    }
+
+    public org.openapis.openapi.models.operations.UpdateSourceIpMappingResponse updateSourceIpMapping(org.openapis.openapi.models.operations.UpdateSourceIpMappingRequest request, org.openapis.openapi.models.operations.UpdateSourceIpMappingSecurity security, String serverURL) throws Exception {
         String baseUrl = UPDATE_SOURCE_IP_MAPPING_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSourceIpMappingPathParams.class, baseUrl, "/v1/SourceIpMappings/{Sid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSourceIpMappingRequest.class, baseUrl, "/v1/SourceIpMappings/{Sid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

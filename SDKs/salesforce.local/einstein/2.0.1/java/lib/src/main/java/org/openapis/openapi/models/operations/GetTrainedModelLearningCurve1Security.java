@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainedModelLearningCurve1Security {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearerToken bearerToken;
-    public GetTrainedModelLearningCurve1Security withBearerToken(org.openapis.openapi.models.shared.SchemeBearerToken bearerToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerToken;
+    public GetTrainedModelLearningCurve1Security withBearerToken(String bearerToken) {
         this.bearerToken = bearerToken;
         return this;
     }

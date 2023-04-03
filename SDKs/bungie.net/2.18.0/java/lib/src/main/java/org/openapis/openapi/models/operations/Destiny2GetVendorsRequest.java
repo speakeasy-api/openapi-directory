@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetVendorsRequest {
-    
-    public Destiny2GetVendorsPathParams pathParams;
-    public Destiny2GetVendorsRequest withPathParams(Destiny2GetVendorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Destiny Character ID of the character for whom we're getting vendor info.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
+    public Long characterId;
+    public Destiny2GetVendorsRequest withCharacterId(Long characterId) {
+        this.characterId = characterId;
         return this;
     }
     
+    /**
+     * A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
+    public Integer[] components;
+    public Destiny2GetVendorsRequest withComponents(Integer[] components) {
+        this.components = components;
+        return this;
+    }
     
-    public Destiny2GetVendorsQueryParams queryParams;
-    public Destiny2GetVendorsRequest withQueryParams(Destiny2GetVendorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Destiny membership ID of another user. You may be denied.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetVendorsRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
+        return this;
+    }
+    
+    /**
+     * The filter of what vendors and items to return, if any.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public Integer filter;
+    public Destiny2GetVendorsRequest withFilter(Integer filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetVendorsRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
         return this;
     }
     

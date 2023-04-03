@@ -5,15 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenSecurity;
-import org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenPathParams;
-import org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenQueryParams;
 import org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenRequest;
 import org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenResponse;
-import org.openapis.openapi.models.shared.DecodeIntegrityTokenRequest;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.DecodeIntegrityTokenRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,36 +18,27 @@ public class Application {
                 .build();
 
             PlayintegrityDecodeIntegrityTokenRequest req = new PlayintegrityDecodeIntegrityTokenRequest() {{
-                security = new PlayintegrityDecodeIntegrityTokenSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                decodeIntegrityTokenRequest = new DecodeIntegrityTokenRequest() {{
+                    integrityToken = "provident";
                 }};
-                pathParams = new PlayintegrityDecodeIntegrityTokenPathParams() {{
-                    packageName = "corrupti";
-                }};
-                queryParams = new PlayintegrityDecodeIntegrityTokenQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new DecodeIntegrityTokenRequest() {{
-                    integrityToken = "suscipit";
-                }};
-            }};            
+                accessToken = "distinctio";
+                alt = "proto";
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                packageName = "vel";
+                prettyPrint = false;
+                quotaUser = "error";
+                uploadType = "deserunt";
+                uploadProtocol = "suscipit";
+            }}            
 
-            PlayintegrityDecodeIntegrityTokenResponse res = sdk.v1.playintegrityDecodeIntegrityToken(req);
+            PlayintegrityDecodeIntegrityTokenResponse res = sdk.v1.playintegrityDecodeIntegrityToken(req, new PlayintegrityDecodeIntegrityTokenSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.decodeIntegrityTokenResponse.isPresent()) {
                 // handle response

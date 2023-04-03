@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePendingAssignmentsRequest {
-    
-    public ChangePendingAssignmentsHeaders headers;
-    public ChangePendingAssignmentsRequest withHeaders(ChangePendingAssignmentsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PendingAssignmentsRequest pendingAssignmentsRequest;
+    public ChangePendingAssignmentsRequest withPendingAssignmentsRequest(org.openapis.openapi.models.shared.PendingAssignmentsRequest pendingAssignmentsRequest) {
+        this.pendingAssignmentsRequest = pendingAssignmentsRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PendingAssignmentsRequest request;
-    public ChangePendingAssignmentsRequest withRequest(org.openapis.openapi.models.shared.PendingAssignmentsRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ChangePendingAssignmentsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

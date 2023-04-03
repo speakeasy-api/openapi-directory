@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestBuyRecommendationRequest {
-    
-    public RequestBuyRecommendationQueryParams queryParams;
-    public RequestBuyRecommendationRequest withQueryParams(RequestBuyRecommendationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The url of the requested product.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public RequestBuyRecommendationRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

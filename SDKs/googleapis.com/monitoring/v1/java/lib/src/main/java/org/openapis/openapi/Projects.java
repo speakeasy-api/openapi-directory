@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a new custom dashboard. For examples on how you can use this API to create dashboards, see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard). This method requires the monitoring.dashboards.create permission on the specified project. For more information about permissions, see Cloud Identity and Access Management (https://cloud.google.com/iam).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateResponse monitoringProjectsDashboardsCreate(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateResponse monitoringProjectsDashboardsCreate(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateRequest request, org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreatePathParams.class, baseUrl, "/v1/{parent}/dashboards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateRequest.class, baseUrl, "/v1/{parent}/dashboards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dashboard", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes an existing custom dashboard.This method requires the monitoring.dashboards.delete permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteResponse monitoringProjectsDashboardsDelete(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteResponse monitoringProjectsDashboardsDelete(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteRequest request, org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetResponse monitoringProjectsDashboardsGet(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetResponse monitoringProjectsDashboardsGet(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetRequest request, org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class Projects {
     /**
      * Lists the existing dashboards.This method requires the monitoring.dashboards.list permission on the specified project. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListResponse monitoringProjectsDashboardsList(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListResponse monitoringProjectsDashboardsList(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListPathParams.class, baseUrl, "/v1/{parent}/dashboards", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListRequest.class, baseUrl, "/v1/{parent}/dashboards", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class Projects {
     /**
      * Replaces an existing custom dashboard with a new definition.This method requires the monitoring.dashboards.update permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchResponse monitoringProjectsDashboardsPatch(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchResponse monitoringProjectsDashboardsPatch(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchRequest request, org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dashboard", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsDashboardsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Projects {
     /**
      * Lists possible values for a given label name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesResponse monitoringProjectsLocationPrometheusApiV1LabelValues(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesResponse monitoringProjectsLocationPrometheusApiV1LabelValues(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest request, org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesPathParams.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/label/{label}/values", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/label/{label}/values", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Projects {
     /**
      * Lists labels for metrics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsResponse monitoringProjectsLocationPrometheusApiV1Labels(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsResponse monitoringProjectsLocationPrometheusApiV1Labels(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsRequest request, org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsPathParams.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsRequest.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "listLabelsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,25 +363,26 @@ public class Projects {
     /**
      * Lists labels for metrics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListResponse monitoringProjectsLocationPrometheusApiV1LabelsList(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListResponse monitoringProjectsLocationPrometheusApiV1LabelsList(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListPathParams.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/labels", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListRequest.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/labels", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1LabelsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -401,25 +409,26 @@ public class Projects {
     /**
      * Lists metadata for metrics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListResponse monitoringProjectsLocationPrometheusApiV1MetadataList(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListResponse monitoringProjectsLocationPrometheusApiV1MetadataList(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListRequest request, org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListPathParams.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/metadata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListRequest.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/metadata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1MetadataListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -446,27 +455,28 @@ public class Projects {
     /**
      * Evaluate a PromQL query at a single point in time.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryResponse monitoringProjectsLocationPrometheusApiV1Query(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryResponse monitoringProjectsLocationPrometheusApiV1Query(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRequest request, org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QuerySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryPathParams.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/query", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRequest.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/query", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queryInstantRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -493,27 +503,28 @@ public class Projects {
     /**
      * Lists exemplars relevant to a given PromQL query,
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse monitoringProjectsLocationPrometheusApiV1QueryExemplars(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsResponse monitoringProjectsLocationPrometheusApiV1QueryExemplars(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsRequest request, org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsPathParams.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/query_exemplars", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsRequest.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/query_exemplars", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queryExemplarsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryExemplarsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -540,27 +551,28 @@ public class Projects {
     /**
      * Evaluate a PromQL query with start, end time range.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse monitoringProjectsLocationPrometheusApiV1QueryRange(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeResponse monitoringProjectsLocationPrometheusApiV1QueryRange(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeRequest request, org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangePathParams.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/query_range", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeRequest.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/query_range", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queryRangeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1QueryRangeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -587,27 +599,28 @@ public class Projects {
     /**
      * Lists metadata for metrics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesResponse monitoringProjectsLocationPrometheusApiV1Series(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesResponse monitoringProjectsLocationPrometheusApiV1Series(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesRequest request, org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesPathParams.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/series", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesRequest.class, baseUrl, "/v1/{name}/location/{location}/prometheus/api/v1/series", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "querySeriesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringProjectsLocationPrometheusApiV1SeriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerGetRecurringAppointmentsRequest {
-    
-    public DiaryControllerGetRecurringAppointmentsPathParams pathParams;
-    public DiaryControllerGetRecurringAppointmentsRequest withPathParams(DiaryControllerGetRecurringAppointmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The appointment IDs to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentTypesToSearch")
+    public String[] appointmentTypesToSearch;
+    public DiaryControllerGetRecurringAppointmentsRequest withAppointmentTypesToSearch(String[] appointmentTypesToSearch) {
+        this.appointmentTypesToSearch = appointmentTypesToSearch;
         return this;
     }
     
+    /**
+     * The unique ID of the Branch
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branchID")
+    public String branchID;
+    public DiaryControllerGetRecurringAppointmentsRequest withBranchID(String branchID) {
+        this.branchID = branchID;
+        return this;
+    }
     
-    public DiaryControllerGetRecurringAppointmentsQueryParams queryParams;
-    public DiaryControllerGetRecurringAppointmentsRequest withQueryParams(DiaryControllerGetRecurringAppointmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of items to return (up to 1000 per request)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Integer count;
+    public DiaryControllerGetRecurringAppointmentsRequest withCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    
+    /**
+     * The index of the first item to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public DiaryControllerGetRecurringAppointmentsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerGetRecurringAppointmentsRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientRuntimeDisconnectRequest {
-    
-    public ProtocolMqttClientRuntimeDisconnectPathParams pathParams;
-    public ProtocolMqttClientRuntimeDisconnectRequest withPathParams(ProtocolMqttClientRuntimeDisconnectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to set MQTT behavior
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolMqttClientRuntimeDisconnectRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

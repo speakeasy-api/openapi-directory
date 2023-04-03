@@ -18,15 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateSecurity;
-import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreatePathParams;
-import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateQueryParams;
 import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateRequest;
 import org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateResponse;
-import org.openapis.openapi.models.shared.ChannelConnectionInput;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.ChannelConnectionInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,39 +31,30 @@ public class Application {
                 .build();
 
             EventarcProjectsLocationsChannelConnectionsCreateRequest req = new EventarcProjectsLocationsChannelConnectionsCreateRequest() {{
-                security = new EventarcProjectsLocationsChannelConnectionsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                channelConnectionInput = new ChannelConnectionInput() {{
+                    activationToken = "provident";
+                    channel = "distinctio";
+                    name = "quibusdam";
                 }};
-                pathParams = new EventarcProjectsLocationsChannelConnectionsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new EventarcProjectsLocationsChannelConnectionsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    channelConnectionId = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new ChannelConnectionInput() {{
-                    activationToken = "iure";
-                    channel = "magnam";
-                    name = "debitis";
-                }};
-            }};            
+                accessToken = "unde";
+                alt = "proto";
+                callback = "corrupti";
+                channelConnectionId = "illum";
+                fields = "vel";
+                key = "error";
+                oauthToken = "deserunt";
+                parent = "suscipit";
+                prettyPrint = false;
+                quotaUser = "iure";
+                uploadType = "magnam";
+                uploadProtocol = "debitis";
+            }}            
 
-            EventarcProjectsLocationsChannelConnectionsCreateResponse res = sdk.projects.eventarcProjectsLocationsChannelConnectionsCreate(req);
+            EventarcProjectsLocationsChannelConnectionsCreateResponse res = sdk.projects.eventarcProjectsLocationsChannelConnectionsCreate(req, new EventarcProjectsLocationsChannelConnectionsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleLongrunningOperation.isPresent()) {
                 // handle response
@@ -79,7 +66,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

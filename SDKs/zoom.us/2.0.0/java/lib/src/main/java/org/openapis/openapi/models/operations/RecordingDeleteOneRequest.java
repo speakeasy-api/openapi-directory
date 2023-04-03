@@ -4,27 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecordingDeleteOneRequest {
-    
-    public RecordingDeleteOnePathParams pathParams;
-    public RecordingDeleteOneRequest withPathParams(RecordingDeleteOnePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The recording delete actions:&lt;br&gt;`trash` - Move recording to trash.&lt;br&gt;`delete` - Delete recording permanently.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public RecordingDeleteOneActionEnum action;
+    public RecordingDeleteOneRequest withAction(RecordingDeleteOneActionEnum action) {
+        this.action = action;
         return this;
     }
     
-    
-    public RecordingDeleteOneQueryParams queryParams;
-    public RecordingDeleteOneRequest withQueryParams(RecordingDeleteOneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance. 
+     * 
+     * To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance. 
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875=="), you must **double encode** the UUID before making an API request. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingId")
+    public String meetingId;
+    public RecordingDeleteOneRequest withMeetingId(String meetingId) {
+        this.meetingId = meetingId;
         return this;
     }
     
-    
-    public RecordingDeleteOneSecurity security;
-    public RecordingDeleteOneRequest withSecurity(RecordingDeleteOneSecurity security) {
-        this.security = security;
+    /**
+     * The recording ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recordingId")
+    public String recordingId;
+    public RecordingDeleteOneRequest withRecordingId(String recordingId) {
+        this.recordingId = recordingId;
         return this;
     }
     

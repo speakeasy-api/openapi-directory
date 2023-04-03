@@ -4,27 +4,90 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupsRequest {
-    
-    public GetGroupsPathParams pathParams;
-    public GetGroupsRequest withPathParams(GetGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Match")
+    public String ifMatch;
+    public GetGroupsRequest withIfMatch(String ifMatch) {
+        this.ifMatch = ifMatch;
         return this;
     }
     
-    
-    public GetGroupsQueryParams queryParams;
-    public GetGroupsRequest withQueryParams(GetGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetGroupsRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_before")
+    public Long before;
+    public GetGroupsRequest withBefore(Long before) {
+        this.before = before;
+        return this;
+    }
     
-    public GetGroupsHeaders headers;
-    public GetGroupsRequest withHeaders(GetGroupsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_fields")
+    public String[] fields;
+    public GetGroupsRequest withFields(String[] fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_limit")
+    public Long limit;
+    public GetGroupsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_since")
+    public Long since;
+    public GetGroupsRequest withSince(Long since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=_sort")
+    public String[] sort;
+    public GetGroupsRequest withSort(String[] sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_to")
+    public Long to;
+    public GetGroupsRequest withTo(Long to) {
+        this.to = to;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_token")
+    public String token;
+    public GetGroupsRequest withToken(String token) {
+        this.token = token;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket_id")
+    public String bucketId;
+    public GetGroupsRequest withBucketId(String bucketId) {
+        this.bucketId = bucketId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetGroupsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_modified")
+    public Long lastModified;
+    public GetGroupsRequest withLastModified(Long lastModified) {
+        this.lastModified = lastModified;
         return this;
     }
     

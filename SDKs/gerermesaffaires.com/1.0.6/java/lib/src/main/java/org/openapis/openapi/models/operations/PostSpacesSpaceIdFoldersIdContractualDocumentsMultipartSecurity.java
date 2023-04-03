@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeGmaAuth gmaAuth;
-    public PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartSecurity withGmaAuth(org.openapis.openapi.models.shared.SchemeGmaAuth gmaAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String gmaAuth;
+    public PostSpacesSpaceIdFoldersIdContractualDocumentsMultipartSecurity withGmaAuth(String gmaAuth) {
         this.gmaAuth = gmaAuth;
         return this;
     }

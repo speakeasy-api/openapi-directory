@@ -4,13 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetPathwayAsRequest {
+    /**
+     * The file type to convert to, e.g.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fileType")
+    public String fileType;
+    public GetGetPathwayAsRequest withFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
     
-    public GetGetPathwayAsQueryParams queryParams;
-    public GetGetPathwayAsRequest withQueryParams(GetGetPathwayAsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetPathwayAsFormatEnum format;
+    public GetGetPathwayAsRequest withFormat(GetGetPathwayAsFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetGetPathwayAsRequest withPwId(String pwId) {
+        this.pwId = pwId;
+        return this;
+    }
+    
+    /**
+     * The revision number of the pathway (use 0 for most recent)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revision")
+    public Long revision;
+    public GetGetPathwayAsRequest withRevision(Long revision) {
+        this.revision = revision;
         return this;
     }
     

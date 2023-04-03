@@ -35,27 +35,28 @@ public class Services {
     /**
      * Create a Service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringServicesCreateResponse monitoringServicesCreate(org.openapis.openapi.models.operations.MonitoringServicesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringServicesCreateResponse monitoringServicesCreate(org.openapis.openapi.models.operations.MonitoringServicesCreateRequest request, org.openapis.openapi.models.operations.MonitoringServicesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesCreatePathParams.class, baseUrl, "/v3/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesCreateRequest.class, baseUrl, "/v3/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Services {
     /**
      * List Services for this Metrics Scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringServicesListResponse monitoringServicesList(org.openapis.openapi.models.operations.MonitoringServicesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringServicesListResponse monitoringServicesList(org.openapis.openapi.models.operations.MonitoringServicesListRequest request, org.openapis.openapi.models.operations.MonitoringServicesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesListPathParams.class, baseUrl, "/v3/{parent}/services", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesListRequest.class, baseUrl, "/v3/{parent}/services", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Services {
     /**
      * Create a ServiceLevelObjective for the given Service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateResponse monitoringServicesServiceLevelObjectivesCreate(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateResponse monitoringServicesServiceLevelObjectivesCreate(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateRequest request, org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreatePathParams.class, baseUrl, "/v3/{parent}/serviceLevelObjectives", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateRequest.class, baseUrl, "/v3/{parent}/serviceLevelObjectives", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceLevelObjective", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Services {
     /**
      * Delete the given ServiceLevelObjective.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteResponse monitoringServicesServiceLevelObjectivesDelete(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteResponse monitoringServicesServiceLevelObjectivesDelete(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteRequest request, org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeletePathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Services {
     /**
      * Get a ServiceLevelObjective by name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetResponse monitoringServicesServiceLevelObjectivesGet(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetResponse monitoringServicesServiceLevelObjectivesGet(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetRequest request, org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetPathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Services {
     /**
      * List the ServiceLevelObjectives for the given Service.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListResponse monitoringServicesServiceLevelObjectivesList(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListResponse monitoringServicesServiceLevelObjectivesList(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListRequest request, org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListPathParams.class, baseUrl, "/v3/{parent}/serviceLevelObjectives", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListRequest.class, baseUrl, "/v3/{parent}/serviceLevelObjectives", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -309,27 +315,28 @@ public class Services {
     /**
      * Update the given ServiceLevelObjective.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchResponse monitoringServicesServiceLevelObjectivesPatch(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchResponse monitoringServicesServiceLevelObjectivesPatch(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchRequest request, org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchPathParams.class, baseUrl, "/v3/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchRequest.class, baseUrl, "/v3/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "serviceLevelObjective", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MonitoringServicesServiceLevelObjectivesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

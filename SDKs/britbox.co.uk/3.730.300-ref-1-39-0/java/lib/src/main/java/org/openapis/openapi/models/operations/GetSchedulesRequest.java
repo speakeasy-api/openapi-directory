@@ -4,13 +4,157 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSchedulesRequest {
+    /**
+     * The list of channel ids to get schedules for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=channels")
+    public String[] channels;
+    public GetSchedulesRequest withChannels(String[] channels) {
+        this.channels = channels;
+        return this;
+    }
     
-    public GetSchedulesQueryParams queryParams;
-    public GetSchedulesRequest withQueryParams(GetSchedulesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The date to target in ISO format, e.g. `2017-05-23` (converted to UTC - see main description).
+     * 
+     * The base hour requested will belong to this date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public LocalDate date;
+    public GetSchedulesRequest withDate(LocalDate date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * The type of device the content is targeting.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
+    public String device;
+    public GetSchedulesRequest withDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    
+    /**
+     * The number of hours of schedules to load from the base `hour` parameter.
+     * 
+     * This may be negative or positive depending on whether you want to load past or future schedules.
+     * 
+     * Minimum value is -24, maximum is 24. A value of zero is invalid.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
+    public Integer duration;
+    public GetSchedulesRequest withDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    
+    /**
+     * The set of opt in feature flags which cause breaking changes to responses.
+     * 
+     * While Rocket APIs look to avoid breaking changes under the active major version, the formats of responses
+     * may need to evolve over this time.
+     * 
+     * These feature flags allow clients to select which response formats they expect and avoid breaking
+     * clients as these formats evolve under the current major version.
+     * 
+     * ### Flags
+     * 
+     * - `all` - Enable all flags. Useful for testing. _Don't use in production_.
+     * - `idp` - Dynamic item detail pages with schedulable rows.
+     * - `ldp` - Dynamic list detail pages with schedulable rows.
+     * - `hb` - Hubble formatted image urls.
+     * - `rpt` - Updated resume point threshold logic.
+     * - `cas` - "Custom Asset Search", inlcude `customAssets` in search results.
+     * - `lrl` - Do not pre-populate related list if more than `max_list_prefetch` down the page.
+     * - `cd` - Custom Destination support.
+     * 
+     * See the `feature-flags.md` for available flag details.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
+    public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+    public GetSchedulesRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
+        this.ff = ff;
+        return this;
+    }
+    
+    /**
+     * The base hour in the day, defined by the `date` parameter, you wish to load schedules for 
+     * (converted to UTC - see main description).
+     * 
+     * From 0 to 23, where 0 is midnight.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hour")
+    public Integer hour;
+    public GetSchedulesRequest withHour(Integer hour) {
+        this.hour = hour;
+        return this;
+    }
+    
+    /**
+     * Flag indicating whether schedules should intersect or be contained in the
+     * provided interval.
+     * 
+     * If set to `true`, the result will contain all schedules where either
+     * schedule start time or end time touches the provided interval.
+     * 
+     * If set to `false`, only schedules fully contained in the given period
+     * will be returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intersect")
+    public Boolean intersect;
+    public GetSchedulesRequest withIntersect(Boolean intersect) {
+        this.intersect = intersect;
+        return this;
+    }
+    
+    /**
+     * Language code for the preferred language to be returned in the response.
+     * 
+     * Parameter value is case-insensitive and should be
+     *   - a valid 2 letter language code without region such as en, de
+     *   - or with region such as en_us, en_au
+     * 
+     * If undefined then defaults to 'en', unless the server has been configured
+     * with a custom default.
+     * 
+     * See https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetSchedulesRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The list of segments to filter the response by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
+    public String[] segments;
+    public GetSchedulesRequest withSegments(String[] segments) {
+        this.segments = segments;
+        return this;
+    }
+    
+    /**
+     * The active subscription code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
+    public String sub;
+    public GetSchedulesRequest withSub(String sub) {
+        this.sub = sub;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeliveredFilesRequest {
-    
-    public GetDeliveredFilesPathParams pathParams;
-    public GetDeliveredFilesRequest withPathParams(GetDeliveredFilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * job's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
+    public String jobId;
+    public GetDeliveredFilesRequest withJobId(String jobId) {
+        this.jobId = jobId;
         return this;
     }
     

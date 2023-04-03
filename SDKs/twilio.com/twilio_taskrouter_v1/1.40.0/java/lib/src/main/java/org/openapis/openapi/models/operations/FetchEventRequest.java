@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchEventRequest {
-    
-    public FetchEventPathParams pathParams;
-    public FetchEventRequest withPathParams(FetchEventPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Event resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchEventRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchEventSecurity security;
-    public FetchEventRequest withSecurity(FetchEventSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchEventRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the Event to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchEventRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

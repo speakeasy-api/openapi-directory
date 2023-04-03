@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCountryRequest {
+    /**
+     * The Country Code of the country you want to fetch it's data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CountryCode")
+    public String countryCode;
+    public GetCountryRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
+        return this;
+    }
     
-    public GetCountryQueryParams queryParams;
-    public GetCountryRequest withQueryParams(GetCountryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sets the format of the API response. JSON is the default format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public String format;
+    public GetCountryRequest withFormat(String format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * Your API Key. Each user has a unique API Key that can be used to access the API functions. If you don't have an account yet, please create new account first.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetCountryRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Used to inform the API to retrieve the response in your native language.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public String lang;
+    public GetCountryRequest withLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    
+    /**
+     * The modules you want to use of the request. It's a CSV (Comma Separated Values)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=params")
+    public String params;
+    public GetCountryRequest withParams(String params) {
+        this.params = params;
         return this;
     }
     

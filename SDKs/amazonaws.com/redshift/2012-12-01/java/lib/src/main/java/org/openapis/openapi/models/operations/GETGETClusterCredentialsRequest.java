@@ -4,20 +4,129 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETClusterCredentialsRequest {
-    
-    public GETGETClusterCredentialsQueryParams queryParams;
-    public GETGETClusterCredentialsRequest withQueryParams(GETGETClusterCredentialsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETClusterCredentialsActionEnum action;
+    public GETGETClusterCredentialsRequest withAction(GETGETClusterCredentialsActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Create a database user with the name specified for the user named in &lt;code&gt;DbUser&lt;/code&gt; if one does not exist.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoCreate")
+    public Boolean autoCreate;
+    public GETGETClusterCredentialsRequest withAutoCreate(Boolean autoCreate) {
+        this.autoCreate = autoCreate;
+        return this;
+    }
     
-    public GETGETClusterCredentialsHeaders headers;
-    public GETGETClusterCredentialsRequest withHeaders(GETGETClusterCredentialsHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier of the cluster that contains the database for which you are requesting credentials. This parameter is case sensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETGETClusterCredentialsRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;A list of the names of existing database groups that the user named in &lt;code&gt;DbUser&lt;/code&gt; will join for the current session, in addition to any group memberships for an existing user. If not specified, a new user is added only to PUBLIC.&lt;/p&gt; &lt;p&gt;Database group name constraints&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be 1 to 64 alphanumeric characters or hyphens&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must contain only lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must not contain a colon ( : ) or slash ( / ). &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot be a reserved word. A list of reserved words can be found in &lt;a href="http://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html"&gt;Reserved Words&lt;/a&gt; in the Amazon Redshift Database Developer Guide.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbGroups")
+    public String[] dbGroups;
+    public GETGETClusterCredentialsRequest withDbGroups(String[] dbGroups) {
+        this.dbGroups = dbGroups;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of a database that &lt;code&gt;DbUser&lt;/code&gt; is authorized to log on to. If &lt;code&gt;DbName&lt;/code&gt; is not specified, &lt;code&gt;DbUser&lt;/code&gt; can log on to any existing database.&lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be 1 to 64 alphanumeric characters or hyphens&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must not contain a colon ( : ) or slash ( / ). &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot be a reserved word. A list of reserved words can be found in &lt;a href="http://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html"&gt;Reserved Words&lt;/a&gt; in the Amazon Redshift Database Developer Guide.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbName")
+    public String dbName;
+    public GETGETClusterCredentialsRequest withDbName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of a database user. If a user name matching &lt;code&gt;DbUser&lt;/code&gt; exists in the database, the temporary user credentials have the same permissions as the existing user. If &lt;code&gt;DbUser&lt;/code&gt; doesn't exist in the database and &lt;code&gt;Autocreate&lt;/code&gt; is &lt;code&gt;True&lt;/code&gt;, a new user is created using the value for &lt;code&gt;DbUser&lt;/code&gt; with PUBLIC permissions. If a database user matching the value for &lt;code&gt;DbUser&lt;/code&gt; doesn't exist and &lt;code&gt;Autocreate&lt;/code&gt; is &lt;code&gt;False&lt;/code&gt;, then the command succeeds but the connection attempt will fail because the user doesn't exist in the database.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/redshift/latest/dg/r_CREATE_USER.html"&gt;CREATE USER&lt;/a&gt; in the Amazon Redshift Database Developer Guide. &lt;/p&gt; &lt;p&gt;Constraints:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Must be 1 to 64 alphanumeric characters or hyphens. The user name can't be &lt;code&gt;PUBLIC&lt;/code&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must contain uppercase or lowercase letters, numbers, underscore, plus sign, period (dot), at symbol (@), or hyphen.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;First character must be a letter.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Must not contain a colon ( : ) or slash ( / ). &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Cannot be a reserved word. A list of reserved words can be found in &lt;a href="http://docs.aws.amazon.com/redshift/latest/dg/r_pg_keywords.html"&gt;Reserved Words&lt;/a&gt; in the Amazon Redshift Database Developer Guide.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DbUser")
+    public String dbUser;
+    public GETGETClusterCredentialsRequest withDbUser(String dbUser) {
+        this.dbUser = dbUser;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The number of seconds until the returned temporary password expires.&lt;/p&gt; &lt;p&gt;Constraint: minimum 900, maximum 3600.&lt;/p&gt; &lt;p&gt;Default: 900&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DurationSeconds")
+    public Long durationSeconds;
+    public GETGETClusterCredentialsRequest withDurationSeconds(Long durationSeconds) {
+        this.durationSeconds = durationSeconds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETClusterCredentialsVersionEnum version;
+    public GETGETClusterCredentialsRequest withVersion(GETGETClusterCredentialsVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETClusterCredentialsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETClusterCredentialsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETClusterCredentialsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETClusterCredentialsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETClusterCredentialsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETClusterCredentialsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETClusterCredentialsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

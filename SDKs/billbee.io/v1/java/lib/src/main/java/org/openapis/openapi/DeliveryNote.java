@@ -39,13 +39,13 @@ public class DeliveryNote {
      */
     public org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteResponse orderApiCreateDeliveryNote(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNotePathParams.class, baseUrl, "/api/v1/orders/CreateDeliveryNote/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteRequest.class, baseUrl, "/api/v1/orders/CreateDeliveryNote/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

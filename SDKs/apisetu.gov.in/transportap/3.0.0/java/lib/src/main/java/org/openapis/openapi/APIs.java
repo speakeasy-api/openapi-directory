@@ -34,10 +34,11 @@ public class APIs {
      * Driving License
      * API to verify Driving License.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DrvlcResponse drvlc(org.openapis.openapi.models.operations.DrvlcRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DrvlcResponse drvlc(org.openapis.openapi.models.operations.DrvlcRequestBody request, org.openapis.openapi.models.operations.DrvlcSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/drvlc/certificate");
         
@@ -48,7 +49,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -131,10 +132,11 @@ public class APIs {
      * Registration of Vehicles
      * API to verify Registration of Vehicles.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RvcerResponse rvcer(org.openapis.openapi.models.operations.RvcerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RvcerResponse rvcer(org.openapis.openapi.models.operations.RvcerRequestBody request, org.openapis.openapi.models.operations.RvcerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/rvcer/certificate");
         
@@ -145,7 +147,7 @@ public class APIs {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

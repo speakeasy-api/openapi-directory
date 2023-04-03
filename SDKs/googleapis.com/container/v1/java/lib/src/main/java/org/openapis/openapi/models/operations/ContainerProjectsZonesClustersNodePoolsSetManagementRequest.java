@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContainerProjectsZonesClustersNodePoolsSetManagementRequest {
-    
-    public ContainerProjectsZonesClustersNodePoolsSetManagementPathParams pathParams;
-    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withPathParams(ContainerProjectsZonesClustersNodePoolsSetManagementPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ContainerProjectsZonesClustersNodePoolsSetManagementQueryParams queryParams;
-    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withQueryParams(ContainerProjectsZonesClustersNodePoolsSetManagementQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.SetNodePoolManagementRequest request;
-    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withRequest(org.openapis.openapi.models.shared.SetNodePoolManagementRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.SetNodePoolManagementRequest setNodePoolManagementRequest;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withSetNodePoolManagementRequest(org.openapis.openapi.models.shared.SetNodePoolManagementRequest setNodePoolManagementRequest) {
+        this.setNodePoolManagementRequest = setNodePoolManagementRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ContainerProjectsZonesClustersNodePoolsSetManagementSecurity security;
-    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withSecurity(ContainerProjectsZonesClustersNodePoolsSetManagementSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Deprecated. The name of the cluster to update. This field has been deprecated and replaced by the name field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clusterId")
+    public String clusterId;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Deprecated. The name of the node pool to update. This field has been deprecated and replaced by the name field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nodePoolId")
+    public String nodePoolId;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withNodePoolId(String nodePoolId) {
+        this.nodePoolId = nodePoolId;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Deprecated. The Google Developers Console [project ID or project number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field has been deprecated and replaced by the name field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Deprecated. The name of the Google Compute Engine [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides. This field has been deprecated and replaced by the name field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
+    public String zone;
+    public ContainerProjectsZonesClustersNodePoolsSetManagementRequest withZone(String zone) {
+        this.zone = zone;
         return this;
     }
     

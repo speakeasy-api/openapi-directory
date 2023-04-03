@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest {
-    
-    public DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterPathParams pathParams;
-    public DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withPathParams(DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
     
-    public DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterQueryParams queryParams;
-    public DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withQueryParams(DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_transactionscluster")
+    public Long idTransactionscluster;
+    public DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdTransactionscluster(Long idTransactionscluster) {
+        this.idTransactionscluster = idTransactionscluster;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public DeleteUsersIdUserConnectionsIdConnectionTransactionsclustersIdTransactionsclusterRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

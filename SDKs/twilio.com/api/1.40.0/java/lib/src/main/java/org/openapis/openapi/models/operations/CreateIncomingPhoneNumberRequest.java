@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateIncomingPhoneNumberRequest {
-    
-    public CreateIncomingPhoneNumberPathParams pathParams;
-    public CreateIncomingPhoneNumberRequest withPathParams(CreateIncomingPhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateIncomingPhoneNumberRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateIncomingPhoneNumberCreateIncomingPhoneNumberRequest request;
-    public CreateIncomingPhoneNumberRequest withRequest(CreateIncomingPhoneNumberCreateIncomingPhoneNumberRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateIncomingPhoneNumberSecurity security;
-    public CreateIncomingPhoneNumberRequest withSecurity(CreateIncomingPhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateIncomingPhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateIncomingPhoneNumberCreateIncomingPhoneNumberRequest requestBody;
+    public CreateIncomingPhoneNumberRequest withRequestBody(CreateIncomingPhoneNumberCreateIncomingPhoneNumberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

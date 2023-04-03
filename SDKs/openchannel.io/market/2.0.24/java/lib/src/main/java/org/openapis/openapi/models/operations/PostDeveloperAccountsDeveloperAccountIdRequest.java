@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostDeveloperAccountsDeveloperAccountIdRequest {
-    
-    public PostDeveloperAccountsDeveloperAccountIdPathParams pathParams;
-    public PostDeveloperAccountsDeveloperAccountIdRequest withPathParams(PostDeveloperAccountsDeveloperAccountIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A custom JSON object that you can create and attach to this record
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
+    public String customData;
+    public PostDeveloperAccountsDeveloperAccountIdRequest withCustomData(String customData) {
+        this.customData = customData;
         return this;
     }
     
+    /**
+     * The id of the developer account to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerAccountId")
+    public String developerAccountId;
+    public PostDeveloperAccountsDeveloperAccountIdRequest withDeveloperAccountId(String developerAccountId) {
+        this.developerAccountId = developerAccountId;
+        return this;
+    }
     
-    public PostDeveloperAccountsDeveloperAccountIdQueryParams queryParams;
-    public PostDeveloperAccountsDeveloperAccountIdRequest withQueryParams(PostDeveloperAccountsDeveloperAccountIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the developer that this account belongs to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
+    public String developerId;
+    public PostDeveloperAccountsDeveloperAccountIdRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
+    
+    /**
+     * The contact email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public PostDeveloperAccountsDeveloperAccountIdRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * The name for the account
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PostDeveloperAccountsDeveloperAccountIdRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

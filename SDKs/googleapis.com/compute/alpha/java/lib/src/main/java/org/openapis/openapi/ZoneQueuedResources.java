@@ -34,25 +34,26 @@ public class ZoneQueuedResources {
     /**
      * Retrieves an aggregated list of all of the queued resources in a project across all zones.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListResponse computeZoneQueuedResourcesAggregatedList(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListResponse computeZoneQueuedResourcesAggregatedList(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/queuedResources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/queuedResources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class ZoneQueuedResources {
     /**
      * Cancels a QueuedResource. Only a resource in ACCEPTED state may be cancelled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelResponse computeZoneQueuedResourcesCancel(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelResponse computeZoneQueuedResourcesCancel(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelRequest request, org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources/{queuedResource}/cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelRequest.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources/{queuedResource}/cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class ZoneQueuedResources {
     /**
      * Deletes a QueuedResource. For a QueuedResource in ACCEPTED state, call cancel on the resource before deleting, to make sure no VMs have been provisioned and may require cleaning up. For a QueuedResource in PROVISIONING state the request to delete is registered for execution following the provisioning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteResponse computeZoneQueuedResourcesDelete(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteResponse computeZoneQueuedResourcesDelete(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteRequest request, org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeletePathParams.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources/{queuedResource}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteRequest.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources/{queuedResource}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class ZoneQueuedResources {
     /**
      * Returns the specified QueuedResource resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetResponse computeZoneQueuedResourcesGet(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetResponse computeZoneQueuedResourcesGet(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetRequest request, org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources/{queuedResource}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetRequest.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources/{queuedResource}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,27 +218,28 @@ public class ZoneQueuedResources {
     /**
      * Creates a QueuedResource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertResponse computeZoneQueuedResourcesInsert(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertResponse computeZoneQueuedResourcesInsert(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertRequest request, org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertRequest.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "queuedResource", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class ZoneQueuedResources {
     /**
      * Retrieves the list of QueuedResource resources.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListResponse computeZoneQueuedResourcesList(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListResponse computeZoneQueuedResourcesList(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListRequest request, org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListPathParams.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListRequest.class, baseUrl, "/projects/{project}/zones/{zone}/queuedResources", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeZoneQueuedResourcesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -44,12 +44,12 @@ public class Beleg {
      */
     public org.openapis.openapi.models.operations.AddBelegResponse addBeleg(org.openapis.openapi.models.operations.AddBelegRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddBelegPathParams.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/belege/{belegUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddBelegRequest.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/belege/{belegUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "belegdaten", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -86,12 +86,12 @@ public class Beleg {
      */
     public org.openapis.openapi.models.operations.CreateAbschlussResponse createAbschluss(org.openapis.openapi.models.operations.CreateAbschlussRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAbschlussPathParams.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/abschluss", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateAbschlussRequest.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/abschluss", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "abschlussbelegdaten", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -126,7 +126,7 @@ public class Beleg {
      */
     public org.openapis.openapi.models.operations.GetBelegResponse getBeleg(org.openapis.openapi.models.operations.GetBelegRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBelegPathParams.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/belege/{belegUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBelegRequest.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/belege/{belegUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -167,13 +167,13 @@ public class Beleg {
      */
     public org.openapis.openapi.models.operations.GetBelegeResponse getBelege(org.openapis.openapi.models.operations.GetBelegeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBelegePathParams.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/belege", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBelegeRequest.class, baseUrl, "/registrierkassen/{registrierkasseUuid}/belege", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBelegeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetBelegeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -212,7 +212,7 @@ public class Beleg {
      */
     public org.openapis.openapi.models.operations.GetBelegeBelegUuidResponse getBelegeBelegUuid(org.openapis.openapi.models.operations.GetBelegeBelegUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBelegeBelegUuidPathParams.class, baseUrl, "/belege/{belegUuid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBelegeBelegUuidRequest.class, baseUrl, "/belege/{belegUuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

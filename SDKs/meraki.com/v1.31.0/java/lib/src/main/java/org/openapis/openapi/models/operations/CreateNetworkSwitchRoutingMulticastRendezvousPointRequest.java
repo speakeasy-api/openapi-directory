@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateNetworkSwitchRoutingMulticastRendezvousPointRequest {
-    
-    public CreateNetworkSwitchRoutingMulticastRendezvousPointPathParams pathParams;
-    public CreateNetworkSwitchRoutingMulticastRendezvousPointRequest withPathParams(CreateNetworkSwitchRoutingMulticastRendezvousPointPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateNetworkSwitchRoutingMulticastRendezvousPointRequestBody requestBody;
+    public CreateNetworkSwitchRoutingMulticastRendezvousPointRequest withRequestBody(CreateNetworkSwitchRoutingMulticastRendezvousPointRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateNetworkSwitchRoutingMulticastRendezvousPointRequestBody request;
-    public CreateNetworkSwitchRoutingMulticastRendezvousPointRequest withRequest(CreateNetworkSwitchRoutingMulticastRendezvousPointRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public CreateNetworkSwitchRoutingMulticastRendezvousPointRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

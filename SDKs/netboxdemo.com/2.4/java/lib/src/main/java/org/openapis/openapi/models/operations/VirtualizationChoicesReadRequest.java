@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationChoicesReadRequest {
-    
-    public VirtualizationChoicesReadPathParams pathParams;
-    public VirtualizationChoicesReadRequest withPathParams(VirtualizationChoicesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public VirtualizationChoicesReadRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

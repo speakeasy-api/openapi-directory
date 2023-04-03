@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostJmxRepositoryRequest {
-    
-    public PostJmxRepositoryPathParams pathParams;
-    public PostJmxRepositoryRequest withPathParams(PostJmxRepositoryPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action")
+    public String action;
+    public PostJmxRepositoryRequest withAction(String action) {
+        this.action = action;
         return this;
     }
     

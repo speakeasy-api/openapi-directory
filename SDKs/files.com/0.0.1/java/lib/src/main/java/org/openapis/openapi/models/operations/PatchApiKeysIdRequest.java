@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchApiKeysIdRequest {
-    
-    public PatchApiKeysIdPathParams pathParams;
-    public PatchApiKeysIdRequest withPathParams(PatchApiKeysIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public PatchApiKeysIdRequestBody requestBody;
+    public PatchApiKeysIdRequest withRequestBody(PatchApiKeysIdRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public PatchApiKeysIdRequestBody request;
-    public PatchApiKeysIdRequest withRequest(PatchApiKeysIdRequestBody request) {
-        this.request = request;
+    /**
+     * Api Key ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PatchApiKeysIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

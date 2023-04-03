@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyNodesRequest {
-    
-    public CopyNodesPathParams pathParams;
-    public CopyNodesRequest withPathParams(CopyNodesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CopyNodesHeaders headers;
-    public CopyNodesRequest withHeaders(CopyNodesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CopyNodesRequest request;
-    public CopyNodesRequest withRequest(org.openapis.openapi.models.shared.CopyNodesRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CopyNodesRequest copyNodesRequest;
+    public CopyNodesRequest withCopyNodesRequest(org.openapis.openapi.models.shared.CopyNodesRequest copyNodesRequest) {
+        this.copyNodesRequest = copyNodesRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CopyNodesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Date time format (cf. [RFC 3339](https://www.ietf.org/rfc/rfc3339.txt) &amp; [leettime.de](http://leettime.de/))
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Date-Format")
+    public CopyNodesXSdsDateFormatEnum xSdsDateFormat;
+    public CopyNodesRequest withXSdsDateFormat(CopyNodesXSdsDateFormatEnum xSdsDateFormat) {
+        this.xSdsDateFormat = xSdsDateFormat;
+        return this;
+    }
+    
+    /**
+     * Target parent node ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public Long nodeId;
+    public CopyNodesRequest withNodeId(Long nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

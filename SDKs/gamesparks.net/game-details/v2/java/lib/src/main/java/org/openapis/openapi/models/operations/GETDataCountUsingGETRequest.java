@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDataCountUsingGETRequest {
-    
-    public GETDataCountUsingGETPathParams pathParams;
-    public GETDataCountUsingGETRequest withPathParams(GETDataCountUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public GETDataCountUsingGETRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * queryName
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=queryName")
+    public GETDataCountUsingGETQueryNameEnum queryName;
+    public GETDataCountUsingGETRequest withQueryName(GETDataCountUsingGETQueryNameEnum queryName) {
+        this.queryName = queryName;
+        return this;
+    }
     
-    public GETDataCountUsingGETQueryParams queryParams;
-    public GETDataCountUsingGETRequest withQueryParams(GETDataCountUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * stage
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stage")
+    public GETDataCountUsingGETStageEnum stage;
+    public GETDataCountUsingGETRequest withStage(GETDataCountUsingGETStageEnum stage) {
+        this.stage = stage;
         return this;
     }
     

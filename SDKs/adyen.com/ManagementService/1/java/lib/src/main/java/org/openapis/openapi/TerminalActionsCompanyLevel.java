@@ -40,25 +40,26 @@ public class TerminalActionsCompanyLevel {
      * * Management API\u2014Terminal actions read
      * * Management API\u2014Terminal actions read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsResponse getCompaniesCompanyIdAndroidApps(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsResponse getCompaniesCompanyIdAndroidApps(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsPathParams.class, baseUrl, "/companies/{companyId}/androidApps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsRequest.class, baseUrl, "/companies/{companyId}/androidApps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidAppsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -99,25 +100,26 @@ public class TerminalActionsCompanyLevel {
      * * Management API\u2014Terminal actions read
      * * Management API\u2014Terminal actions read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesResponse getCompaniesCompanyIdAndroidCertificates(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesResponse getCompaniesCompanyIdAndroidCertificates(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesPathParams.class, baseUrl, "/companies/{companyId}/androidCertificates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesRequest.class, baseUrl, "/companies/{companyId}/androidCertificates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdAndroidCertificatesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,25 +158,26 @@ public class TerminalActionsCompanyLevel {
      * * Management API\u2014Terminal actions read
      * * Management API\u2014Terminal actions read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsResponse getCompaniesCompanyIdTerminalActions(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsResponse getCompaniesCompanyIdTerminalActions(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsPathParams.class, baseUrl, "/companies/{companyId}/terminalActions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsRequest.class, baseUrl, "/companies/{companyId}/terminalActions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -213,19 +216,20 @@ public class TerminalActionsCompanyLevel {
      * * Management API\u2014Terminal actions read
      * * Management API\u2014Terminal actions read and write
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdResponse getCompaniesCompanyIdTerminalActionsActionId(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdResponse getCompaniesCompanyIdTerminalActionsActionId(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdRequest request, org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdPathParams.class, baseUrl, "/companies/{companyId}/terminalActions/{actionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCompaniesCompanyIdTerminalActionsActionIdRequest.class, baseUrl, "/companies/{companyId}/terminalActions/{actionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdvancedTeamGameStatsRequest {
+    /**
+     * Filter to remove garbage time plays from calculations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeGarbageTime")
+    public Boolean excludeGarbageTime;
+    public GetAdvancedTeamGameStatsRequest withExcludeGarbageTime(Boolean excludeGarbageTime) {
+        this.excludeGarbageTime = excludeGarbageTime;
+        return this;
+    }
     
-    public GetAdvancedTeamGameStatsQueryParams queryParams;
-    public GetAdvancedTeamGameStatsRequest withQueryParams(GetAdvancedTeamGameStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Opponent filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opponent")
+    public String opponent;
+    public GetAdvancedTeamGameStatsRequest withOpponent(String opponent) {
+        this.opponent = opponent;
+        return this;
+    }
+    
+    /**
+     * Season type filter (regular, postseason, or both)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
+    public String seasonType;
+    public GetAdvancedTeamGameStatsRequest withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
+    
+    /**
+     * Team filter (required if no year specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetAdvancedTeamGameStatsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
+    public Long week;
+    public GetAdvancedTeamGameStatsRequest withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    
+    /**
+     * Year filter (required if no team specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetAdvancedTeamGameStatsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

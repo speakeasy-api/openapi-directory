@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAttachmentsIdRequest {
-    
-    public DeleteAttachmentsIdPathParams pathParams;
-    public DeleteAttachmentsIdRequest withPathParams(DeleteAttachmentsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the attachment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DeleteAttachmentsIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRecurringPaymentRequest {
-    
-    public DeleteRecurringPaymentPathParams pathParams;
-    public DeleteRecurringPaymentRequest withPathParams(DeleteRecurringPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=text/plain")
+    public byte[] requestBody;
+    public DeleteRecurringPaymentRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=text/plain")
-    public byte[] request;
-    public DeleteRecurringPaymentRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sub_id")
+    public String subId;
+    public DeleteRecurringPaymentRequest withSubId(String subId) {
+        this.subId = subId;
         return this;
     }
     

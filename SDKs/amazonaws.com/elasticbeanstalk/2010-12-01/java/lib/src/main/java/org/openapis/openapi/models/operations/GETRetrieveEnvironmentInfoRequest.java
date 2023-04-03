@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRetrieveEnvironmentInfoRequest {
-    
-    public GETRetrieveEnvironmentInfoQueryParams queryParams;
-    public GETRetrieveEnvironmentInfoRequest withQueryParams(GETRetrieveEnvironmentInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRetrieveEnvironmentInfoActionEnum action;
+    public GETRetrieveEnvironmentInfoRequest withAction(GETRetrieveEnvironmentInfoActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The ID of the data's environment.&lt;/p&gt; &lt;p&gt;If no such environment is found, returns an &lt;code&gt;InvalidParameterValue&lt;/code&gt; error.&lt;/p&gt; &lt;p&gt;Condition: You must specify either this or an EnvironmentName, or both. If you do not specify either, AWS Elastic Beanstalk returns &lt;code&gt;MissingRequiredParameter&lt;/code&gt; error.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
+    public String environmentId;
+    public GETRetrieveEnvironmentInfoRequest withEnvironmentId(String environmentId) {
+        this.environmentId = environmentId;
+        return this;
+    }
     
-    public GETRetrieveEnvironmentInfoHeaders headers;
-    public GETRetrieveEnvironmentInfoRequest withHeaders(GETRetrieveEnvironmentInfoHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The name of the data's environment.&lt;/p&gt; &lt;p&gt; If no such environment is found, returns an &lt;code&gt;InvalidParameterValue&lt;/code&gt; error. &lt;/p&gt; &lt;p&gt; Condition: You must specify either this or an EnvironmentId, or both. If you do not specify either, AWS Elastic Beanstalk returns &lt;code&gt;MissingRequiredParameter&lt;/code&gt; error. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
+    public String environmentName;
+    public GETRetrieveEnvironmentInfoRequest withEnvironmentName(String environmentName) {
+        this.environmentName = environmentName;
+        return this;
+    }
+    
+    /**
+     * The type of information to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InfoType")
+    public GETRetrieveEnvironmentInfoInfoTypeEnum infoType;
+    public GETRetrieveEnvironmentInfoRequest withInfoType(GETRetrieveEnvironmentInfoInfoTypeEnum infoType) {
+        this.infoType = infoType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRetrieveEnvironmentInfoVersionEnum version;
+    public GETRetrieveEnvironmentInfoRequest withVersion(GETRetrieveEnvironmentInfoVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRetrieveEnvironmentInfoRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRetrieveEnvironmentInfoRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRetrieveEnvironmentInfoRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRetrieveEnvironmentInfoRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRetrieveEnvironmentInfoRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRetrieveEnvironmentInfoRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRetrieveEnvironmentInfoRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

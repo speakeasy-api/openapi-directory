@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateReleaseRequest {
-    
-    public ReposCreateReleasePathParams pathParams;
-    public ReposCreateReleaseRequest withPathParams(ReposCreateReleasePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReposCreateReleaseRequestBody requestBody;
+    public ReposCreateReleaseRequest withRequestBody(ReposCreateReleaseRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReposCreateReleaseRequestBody request;
-    public ReposCreateReleaseRequest withRequest(ReposCreateReleaseRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposCreateReleaseRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposCreateReleaseRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

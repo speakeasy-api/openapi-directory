@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeVpcClassicLinkDnsSupportRequest {
-    
-    public GETDescribeVpcClassicLinkDnsSupportQueryParams queryParams;
-    public GETDescribeVpcClassicLinkDnsSupportRequest withQueryParams(GETDescribeVpcClassicLinkDnsSupportQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeVpcClassicLinkDnsSupportActionEnum action;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withAction(GETDescribeVpcClassicLinkDnsSupportActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The maximum number of items to return for this request. To get the next page of items, make another request with the token returned in the output. For more information, see &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/Query-Requests.html#api-pagination"&gt;Pagination&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
     
-    public GETDescribeVpcClassicLinkDnsSupportHeaders headers;
-    public GETDescribeVpcClassicLinkDnsSupportRequest withHeaders(GETDescribeVpcClassicLinkDnsSupportHeaders headers) {
-        this.headers = headers;
+    /**
+     * The token returned from a previous paginated request. Pagination continues from the end of the items returned by the previous request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeVpcClassicLinkDnsSupportVersionEnum version;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withVersion(GETDescribeVpcClassicLinkDnsSupportVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    /**
+     * One or more VPC IDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcIds")
+    public String[] vpcIds;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withVpcIds(String[] vpcIds) {
+        this.vpcIds = vpcIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeVpcClassicLinkDnsSupportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

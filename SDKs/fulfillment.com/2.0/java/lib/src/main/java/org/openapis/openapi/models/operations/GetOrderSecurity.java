@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeFdcAuth fdcAuth;
-    public GetOrderSecurity withFdcAuth(org.openapis.openapi.models.shared.SchemeFdcAuth fdcAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String fdcAuth;
+    public GetOrderSecurity withFdcAuth(String fdcAuth) {
         this.fdcAuth = fdcAuth;
         return this;
     }

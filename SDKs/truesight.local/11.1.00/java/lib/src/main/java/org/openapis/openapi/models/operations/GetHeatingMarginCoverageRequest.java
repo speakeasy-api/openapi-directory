@@ -4,13 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHeatingMarginCoverageRequest {
+    /**
+     * The ID of the application.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applicationId")
+    public String applicationId;
+    public GetHeatingMarginCoverageRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
     
-    public GetHeatingMarginCoverageQueryParams queryParams;
-    public GetHeatingMarginCoverageRequest withQueryParams(GetHeatingMarginCoverageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * If set to &lt;em&gt;true&lt;/em&gt;, only gets devices whose heating margin information is available.&lt;br&gt;Otherwise, gets any other devices.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=covered")
+    public Boolean covered;
+    public GetHeatingMarginCoverageRequest withCovered(Boolean covered) {
+        this.covered = covered;
+        return this;
+    }
+    
+    /**
+     * The sorting order (case insensitive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetHeatingMarginCoverageDirectionEnum direction;
+    public GetHeatingMarginCoverageRequest withDirection(GetHeatingMarginCoverageDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * The ID of the group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
+    public String groupId;
+    public GetHeatingMarginCoverageRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * The maximum number of entries per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetHeatingMarginCoverageRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The page number to retrieve (first page is 0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetHeatingMarginCoverageRequest withPage(String page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The ID of the service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
+    public String serviceId;
+    public GetHeatingMarginCoverageRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    /**
+     * The column to sort by (case insensitive).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetHeatingMarginCoverageRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

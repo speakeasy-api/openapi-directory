@@ -4,27 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayItemsRequest {
-    
-    public GetPayItemsQueryParams queryParams;
-    public GetPayItemsRequest withQueryParams(GetPayItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only records created or modified since this timestamp will be returned
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-Modified-Since")
+    public String ifModifiedSince;
+    public GetPayItemsRequest withIfModifiedSince(String ifModifiedSince) {
+        this.ifModifiedSince = ifModifiedSince;
         return this;
     }
     
-    
-    public GetPayItemsHeaders headers;
-    public GetPayItemsRequest withHeaders(GetPayItemsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetPayItemsRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    /**
+     * Order by an any element
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public GetPayItemsRequest withOrder(String order) {
+        this.order = order;
+        return this;
+    }
     
-    public GetPayItemsSecurity security;
-    public GetPayItemsRequest withSecurity(GetPayItemsSecurity security) {
-        this.security = security;
+    /**
+     * e.g. page=1 \u2013 Up to 100 objects will be returned in a single API call
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetPayItemsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Filter by an any element
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
+    public String where;
+    public GetPayItemsRequest withWhere(String where) {
+        this.where = where;
         return this;
     }
     

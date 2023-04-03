@@ -96,7 +96,7 @@ public class CustomDevice {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomDevicePostFormResponse customDevicePostForm(org.openapis.openapi.models.operations.CustomDevicePostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomDevicePostFormResponse customDevicePostForm(org.openapis.openapi.models.shared.CustomDeviceToPost request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/CustomDevice");
         
@@ -162,7 +162,7 @@ public class CustomDevice {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomDevicePostJsonResponse customDevicePostJson(org.openapis.openapi.models.operations.CustomDevicePostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomDevicePostJsonResponse customDevicePostJson(org.openapis.openapi.models.shared.CustomDeviceToPost request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/CustomDevice");
         
@@ -228,7 +228,7 @@ public class CustomDevice {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomDevicePostRawResponse customDevicePostRaw(org.openapis.openapi.models.operations.CustomDevicePostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomDevicePostRawResponse customDevicePostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/CustomDevice");
         
@@ -292,7 +292,7 @@ public class CustomDevice {
      */
     public org.openapis.openapi.models.operations.GetApiCustomDeviceIdResponse getApiCustomDeviceId(org.openapis.openapi.models.operations.GetApiCustomDeviceIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiCustomDeviceIdPathParams.class, baseUrl, "/api/CustomDevice/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiCustomDeviceIdRequest.class, baseUrl, "/api/CustomDevice/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

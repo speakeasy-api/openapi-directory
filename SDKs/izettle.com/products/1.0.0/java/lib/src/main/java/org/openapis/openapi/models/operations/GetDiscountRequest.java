@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDiscountRequest {
-    
-    public GetDiscountPathParams pathParams;
-    public GetDiscountRequest withPathParams(GetDiscountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
+    public String ifNoneMatch;
+    public GetDiscountRequest withIfNoneMatch(String ifNoneMatch) {
+        this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
-    
-    public GetDiscountHeaders headers;
-    public GetDiscountRequest withHeaders(GetDiscountHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discountUuid")
+    public String discountUuid;
+    public GetDiscountRequest withDiscountUuid(String discountUuid) {
+        this.discountUuid = discountUuid;
         return this;
     }
     
-    
-    public GetDiscountSecurity security;
-    public GetDiscountRequest withSecurity(GetDiscountSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
+    public String organizationUuid;
+    public GetDiscountRequest withOrganizationUuid(String organizationUuid) {
+        this.organizationUuid = organizationUuid;
         return this;
     }
     

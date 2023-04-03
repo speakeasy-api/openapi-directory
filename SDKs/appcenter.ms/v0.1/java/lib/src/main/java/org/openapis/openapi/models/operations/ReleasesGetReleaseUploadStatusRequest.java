@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetReleaseUploadStatusRequest {
-    
-    public ReleasesGetReleaseUploadStatusPathParams pathParams;
-    public ReleasesGetReleaseUploadStatusRequest withPathParams(ReleasesGetReleaseUploadStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesGetReleaseUploadStatusRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesGetReleaseUploadStatusRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public ReleasesGetReleaseUploadStatusSecurity security;
-    public ReleasesGetReleaseUploadStatusRequest withSecurity(ReleasesGetReleaseUploadStatusSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the release upload
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
+    public String uploadId;
+    public ReleasesGetReleaseUploadStatusRequest withUploadId(String uploadId) {
+        this.uploadId = uploadId;
         return this;
     }
     

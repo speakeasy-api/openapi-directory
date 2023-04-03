@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1ResourcegroupsIdRequest {
-    
-    public PutSetupV1ResourcegroupsIdPathParams pathParams;
-    public PutSetupV1ResourcegroupsIdRequest withPathParams(PutSetupV1ResourcegroupsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Resource Group Update Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ResourceGroupUpdateModel request;
-    public PutSetupV1ResourcegroupsIdRequest withRequest(org.openapis.openapi.models.shared.ResourceGroupUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ResourceGroupUpdateModel resourceGroupUpdateModel;
+    public PutSetupV1ResourcegroupsIdRequest withResourceGroupUpdateModel(org.openapis.openapi.models.shared.ResourceGroupUpdateModel resourceGroupUpdateModel) {
+        this.resourceGroupUpdateModel = resourceGroupUpdateModel;
+        return this;
+    }
+    
+    /**
+     * id of resourcGroup object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1ResourcegroupsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

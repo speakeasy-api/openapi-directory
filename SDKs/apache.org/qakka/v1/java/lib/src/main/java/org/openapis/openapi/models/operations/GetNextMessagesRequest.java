@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNextMessagesRequest {
-    
-    public GetNextMessagesPathParams pathParams;
-    public GetNextMessagesRequest withPathParams(GetNextMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of messages to get
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public String count;
+    public GetNextMessagesRequest withCount(String count) {
+        this.count = count;
         return this;
     }
     
-    
-    public GetNextMessagesQueryParams queryParams;
-    public GetNextMessagesRequest withQueryParams(GetNextMessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Name of Queue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
+    public String queueName;
+    public GetNextMessagesRequest withQueueName(String queueName) {
+        this.queueName = queueName;
         return this;
     }
     

@@ -38,7 +38,7 @@ public class DeactivationReason {
      */
     public org.openapis.openapi.models.operations.GetDeactivationReasonListResponse getDeactivationReasonList(org.openapis.openapi.models.operations.GetDeactivationReasonListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeactivationReasonListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/deactivationReasons", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeactivationReasonListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/deactivationReasons", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

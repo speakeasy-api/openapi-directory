@@ -4,20 +4,115 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCodeReviewsRequest {
-    
-    public ListCodeReviewsQueryParams queryParams;
-    public ListCodeReviewsRequest withQueryParams(ListCodeReviewsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of results that are returned per call. The default is 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
+    public Long maxResults;
+    public ListCodeReviewsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
     
+    /**
+     * If &lt;code&gt;nextToken&lt;/code&gt; is returned, there are more results available. The value of &lt;code&gt;nextToken&lt;/code&gt; is a unique pagination token for each page. Make the call again using the returned token to retrieve the next page. Keep all other arguments unchanged.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public ListCodeReviewsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public ListCodeReviewsHeaders headers;
-    public ListCodeReviewsRequest withHeaders(ListCodeReviewsHeaders headers) {
-        this.headers = headers;
+    /**
+     * List of provider types for filtering that needs to be applied before displaying the result. For example, &lt;code&gt;providerTypes=[GitHub]&lt;/code&gt; lists code reviews from GitHub.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProviderTypes")
+    public org.openapis.openapi.models.shared.ProviderTypeEnum[] providerTypes;
+    public ListCodeReviewsRequest withProviderTypes(org.openapis.openapi.models.shared.ProviderTypeEnum[] providerTypes) {
+        this.providerTypes = providerTypes;
+        return this;
+    }
+    
+    /**
+     * List of repository names for filtering that needs to be applied before displaying the result.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RepositoryNames")
+    public String[] repositoryNames;
+    public ListCodeReviewsRequest withRepositoryNames(String[] repositoryNames) {
+        this.repositoryNames = repositoryNames;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;List of states for filtering that needs to be applied before displaying the result. For example, &lt;code&gt;states=[Pending]&lt;/code&gt; lists code reviews in the Pending state.&lt;/p&gt; &lt;p&gt;The valid code review states are:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Completed&lt;/code&gt;: The code review is complete.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Pending&lt;/code&gt;: The code review started and has not completed or failed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Failed&lt;/code&gt;: The code review failed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;Deleting&lt;/code&gt;: The code review is being deleted.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=States")
+    public org.openapis.openapi.models.shared.JobStateEnum[] states;
+    public ListCodeReviewsRequest withStates(org.openapis.openapi.models.shared.JobStateEnum[] states) {
+        this.states = states;
+        return this;
+    }
+    
+    /**
+     * The type of code reviews to list in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public ListCodeReviewsTypeEnum type;
+    public ListCodeReviewsRequest withType(ListCodeReviewsTypeEnum type) {
+        this.type = type;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListCodeReviewsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListCodeReviewsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListCodeReviewsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListCodeReviewsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListCodeReviewsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListCodeReviewsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListCodeReviewsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -34,27 +34,28 @@ public class Returnpolicyonline {
     /**
      * Creates a new return policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateResponse contentReturnpolicyonlineCreate(org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateResponse contentReturnpolicyonlineCreate(org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateRequest request, org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreatePathParams.class, baseUrl, "/{merchantId}/returnpolicyonline", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateRequest.class, baseUrl, "/{merchantId}/returnpolicyonline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "returnPolicyOnlineInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlineCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,25 +82,26 @@ public class Returnpolicyonline {
     /**
      * Deletes an existing return policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteResponse contentReturnpolicyonlineDelete(org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteResponse contentReturnpolicyonlineDelete(org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteRequest request, org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeletePathParams.class, baseUrl, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteRequest.class, baseUrl, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlineDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -120,25 +122,26 @@ public class Returnpolicyonline {
     /**
      * Gets an existing return policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetResponse contentReturnpolicyonlineGet(org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetResponse contentReturnpolicyonlineGet(org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetRequest request, org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetPathParams.class, baseUrl, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetRequest.class, baseUrl, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlineGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class Returnpolicyonline {
     /**
      * Lists all existing return policies.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnpolicyonlineListResponse contentReturnpolicyonlineList(org.openapis.openapi.models.operations.ContentReturnpolicyonlineListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnpolicyonlineListResponse contentReturnpolicyonlineList(org.openapis.openapi.models.operations.ContentReturnpolicyonlineListRequest request, org.openapis.openapi.models.operations.ContentReturnpolicyonlineListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlineListPathParams.class, baseUrl, "/{merchantId}/returnpolicyonline", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlineListRequest.class, baseUrl, "/{merchantId}/returnpolicyonline", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlineListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlineListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class Returnpolicyonline {
     /**
      * Updates an existing return policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchResponse contentReturnpolicyonlinePatch(org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchResponse contentReturnpolicyonlinePatch(org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchRequest request, org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchPathParams.class, baseUrl, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchRequest.class, baseUrl, "/{merchantId}/returnpolicyonline/{returnPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "returnPolicyOnlineInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentReturnpolicyonlinePatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

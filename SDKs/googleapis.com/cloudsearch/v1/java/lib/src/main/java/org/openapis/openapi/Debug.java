@@ -34,27 +34,28 @@ public class Debug {
     /**
      * Checks whether an item is accessible by specified principal. Principal must be a user; groups and domain values aren't supported. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse cloudsearchDebugDatasourcesItemsCheckAccess(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessResponse cloudsearchDebugDatasourcesItemsCheckAccess(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest request, org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessPathParams.class, baseUrl, "/v1/debug/{name}:checkAccess", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest.class, baseUrl, "/v1/debug/{name}:checkAccess", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "principal", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsCheckAccessRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Debug {
     /**
      * Fetches the item whose viewUrl exactly matches that of the URL provided in the request. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse cloudsearchDebugDatasourcesItemsSearchByViewUrl(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlResponse cloudsearchDebugDatasourcesItemsSearchByViewUrl(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlRequest request, org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlPathParams.class, baseUrl, "/v1/debug/{name}/items:searchByViewUrl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlRequest.class, baseUrl, "/v1/debug/{name}/items:searchByViewUrl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchItemsByViewUrlRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchDebugDatasourcesItemsSearchByViewUrlRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,25 +130,26 @@ public class Debug {
     /**
      * Lists names of items associated with an unmapped identity. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse cloudsearchDebugIdentitysourcesItemsListForunmappedidentity(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityResponse cloudsearchDebugIdentitysourcesItemsListForunmappedidentity(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest request, org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentitySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityPathParams.class, baseUrl, "/v1/debug/{parent}/items:forunmappedidentity", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest.class, baseUrl, "/v1/debug/{parent}/items:forunmappedidentity", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesItemsListForunmappedidentityRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,25 +176,26 @@ public class Debug {
     /**
      * Lists unmapped user identities for an identity source. **Note:** This API requires an admin account to execute.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse cloudsearchDebugIdentitysourcesUnmappedidsList(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListResponse cloudsearchDebugIdentitysourcesUnmappedidsList(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListRequest request, org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListPathParams.class, baseUrl, "/v1/debug/{parent}/unmappedids", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListRequest.class, baseUrl, "/v1/debug/{parent}/unmappedids", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudsearchDebugIdentitysourcesUnmappedidsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

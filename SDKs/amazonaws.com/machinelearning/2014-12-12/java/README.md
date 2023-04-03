@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddTagsXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddTagsHeaders;
 import org.openapis.openapi.models.operations.AddTagsRequest;
 import org.openapis.openapi.models.operations.AddTagsResponse;
 import org.openapis.openapi.models.shared.AddTagsInput;
@@ -30,42 +29,38 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddTagsRequest req = new AddTagsRequest() {{
-                headers = new AddTagsHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonML_20141212.AddTags";
-                }};
-                request = new AddTagsInput() {{
-                    resourceId = "illum";
-                    resourceType = "DataSource";
+                addTagsInput = new AddTagsInput() {{
+                    resourceId = "corrupti";
+                    resourceType = "Evaluation";
                     tags = new org.openapis.openapi.models.shared.Tag[]{{
                         add(new Tag() {{
-                            key = "deserunt";
-                            value = "suscipit";
+                            key = "quibusdam";
+                            value = "unde";
                         }}),
                         add(new Tag() {{
-                            key = "iure";
-                            value = "magnam";
+                            key = "nulla";
+                            value = "corrupti";
                         }}),
                         add(new Tag() {{
-                            key = "debitis";
-                            value = "ipsa";
+                            key = "illum";
+                            value = "vel";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "error";
+                xAmzContentSha256 = "deserunt";
+                xAmzCredential = "suscipit";
+                xAmzDate = "iure";
+                xAmzSecurityToken = "magnam";
+                xAmzSignature = "debitis";
+                xAmzSignedHeaders = "ipsa";
+                xAmzTarget = "AmazonML_20141212.AddTags";
+            }}            
 
             AddTagsResponse res = sdk.addTags(req);
 
@@ -79,7 +74,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

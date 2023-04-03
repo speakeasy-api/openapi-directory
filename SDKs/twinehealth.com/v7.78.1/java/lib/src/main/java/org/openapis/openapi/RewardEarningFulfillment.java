@@ -41,7 +41,7 @@ public class RewardEarningFulfillment {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateRewardEarningFulfillmentResponse createRewardEarningFulfillment(org.openapis.openapi.models.operations.CreateRewardEarningFulfillmentRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateRewardEarningFulfillmentResponse createRewardEarningFulfillment(org.openapis.openapi.models.shared.CreateRewardEarningFulfillmentRequestInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/reward_earning_fulfillment");
         
@@ -95,7 +95,7 @@ public class RewardEarningFulfillment {
      */
     public org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentResponse fetchRewardEarningFulfillment(org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentPathParams.class, baseUrl, "/reward_earning_fulfillment/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentRequest.class, baseUrl, "/reward_earning_fulfillment/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -148,7 +148,7 @@ public class RewardEarningFulfillment {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FetchRewardEarningFulfillmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

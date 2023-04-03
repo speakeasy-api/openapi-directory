@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgInvitationsListPendingRequest {
-    
-    public OrgInvitationsListPendingPathParams pathParams;
-    public OrgInvitationsListPendingRequest withPathParams(OrgInvitationsListPendingPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public OrgInvitationsListPendingSecurity security;
-    public OrgInvitationsListPendingRequest withSecurity(OrgInvitationsListPendingSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public OrgInvitationsListPendingRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackagesRestorePackageForOrgRequest {
-    
-    public PackagesRestorePackageForOrgPathParams pathParams;
-    public PackagesRestorePackageForOrgRequest withPathParams(PackagesRestorePackageForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public PackagesRestorePackageForOrgRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * The name of the package.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_name")
+    public String packageName;
+    public PackagesRestorePackageForOrgRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
     
-    public PackagesRestorePackageForOrgQueryParams queryParams;
-    public PackagesRestorePackageForOrgRequest withQueryParams(PackagesRestorePackageForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=package_type")
+    public org.openapis.openapi.models.shared.PackageTypeEnum packageType;
+    public PackagesRestorePackageForOrgRequest withPackageType(org.openapis.openapi.models.shared.PackageTypeEnum packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+    
+    /**
+     * package token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public PackagesRestorePackageForOrgRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

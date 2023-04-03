@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceCameraQualityAndRetentionSettingsRequest {
-    
-    public UpdateDeviceCameraQualityAndRetentionSettingsPathParams pathParams;
-    public UpdateDeviceCameraQualityAndRetentionSettingsRequest withPathParams(UpdateDeviceCameraQualityAndRetentionSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceCameraQualityAndRetentionSettingsRequestBody requestBody;
+    public UpdateDeviceCameraQualityAndRetentionSettingsRequest withRequestBody(UpdateDeviceCameraQualityAndRetentionSettingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceCameraQualityAndRetentionSettingsRequestBody request;
-    public UpdateDeviceCameraQualityAndRetentionSettingsRequest withRequest(UpdateDeviceCameraQualityAndRetentionSettingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceCameraQualityAndRetentionSettingsRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

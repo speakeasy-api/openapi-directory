@@ -4,13 +4,40 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasExportTemplatesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content_type")
+    public String contentType;
+    public ExtrasExportTemplatesListRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public ExtrasExportTemplatesListQueryParams queryParams;
-    public ExtrasExportTemplatesListRequest withQueryParams(ExtrasExportTemplatesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ExtrasExportTemplatesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public ExtrasExportTemplatesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ExtrasExportTemplatesListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

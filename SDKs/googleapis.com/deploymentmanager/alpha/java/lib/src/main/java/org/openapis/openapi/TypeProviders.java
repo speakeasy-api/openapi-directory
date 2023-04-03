@@ -34,25 +34,26 @@ public class TypeProviders {
     /**
      * Deletes a type provider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteResponse deploymentmanagerTypeProvidersDelete(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteResponse deploymentmanagerTypeProvidersDelete(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteRequest request, org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeletePathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class TypeProviders {
     /**
      * Gets information about a specific type provider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetResponse deploymentmanagerTypeProvidersGet(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetResponse deploymentmanagerTypeProvidersGet(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetRequest request, org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class TypeProviders {
     /**
      * Gets a type info for a type provided by a TypeProvider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeResponse deploymentmanagerTypeProvidersGetType(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeResponse deploymentmanagerTypeProvidersGetType(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeRequest request, org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypePathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types/{type}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types/{type}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,27 +172,28 @@ public class TypeProviders {
     /**
      * Creates a type provider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertResponse deploymentmanagerTypeProvidersInsert(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertResponse deploymentmanagerTypeProvidersInsert(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertRequest request, org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "typeProvider", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,25 +220,26 @@ public class TypeProviders {
     /**
      * Lists all resource type providers for Deployment Manager.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListResponse deploymentmanagerTypeProvidersList(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListResponse deploymentmanagerTypeProvidersList(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListRequest request, org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class TypeProviders {
     /**
      * Lists all the type info for a TypeProvider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesResponse deploymentmanagerTypeProvidersListTypes(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesResponse deploymentmanagerTypeProvidersListTypes(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesRequest request, org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}/types", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class TypeProviders {
     /**
      * Patches a type provider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchResponse deploymentmanagerTypeProvidersPatch(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchResponse deploymentmanagerTypeProvidersPatch(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchRequest request, org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchPathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "typeProvider1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class TypeProviders {
     /**
      * Updates a type provider.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateResponse deploymentmanagerTypeProvidersUpdate(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateResponse deploymentmanagerTypeProvidersUpdate(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateRequest request, org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdatePathParams.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateRequest.class, baseUrl, "/deploymentmanager/alpha/projects/{project}/global/typeProviders/{typeProvider}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "typeProvider1", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

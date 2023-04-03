@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IpamRirsUpdateRequest {
-    
-    public IpamRirsUpdatePathParams pathParams;
-    public IpamRirsUpdateRequest withPathParams(IpamRirsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.RIRInput rirInput;
+    public IpamRirsUpdateRequest withRIRInput(org.openapis.openapi.models.shared.RIRInput rirInput) {
+        this.rirInput = rirInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RIRInput request;
-    public IpamRirsUpdateRequest withRequest(org.openapis.openapi.models.shared.RIRInput request) {
-        this.request = request;
+    /**
+     * A unique integer value identifying this RIR.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IpamRirsUpdateRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

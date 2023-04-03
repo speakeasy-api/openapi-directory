@@ -4,27 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2LocationsLocationIdRefundsRequest {
-    
-    public GetV2LocationsLocationIdRefundsPathParams pathParams;
-    public GetV2LocationsLocationIdRefundsRequest withPathParams(GetV2LocationsLocationIdRefundsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The beginning of the requested reporting period, in RFC 3339 format.
+     * 
+     * See [Date ranges](https://developer.squareup.com/docs/build-basics/working-with-dates) for details on date inclusivity/exclusivity.
+     * 
+     * Default value: The current time minus one year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public GetV2LocationsLocationIdRefundsRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
-    
-    public GetV2LocationsLocationIdRefundsQueryParams queryParams;
-    public GetV2LocationsLocationIdRefundsRequest withQueryParams(GetV2LocationsLocationIdRefundsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this to retrieve the next set of results for your original query.
+     * 
+     * See [Paginating results](https://developer.squareup.com/docs/working-with-apis/pagination) for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetV2LocationsLocationIdRefundsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * The end of the requested reporting period, in RFC 3339 format.
+     * 
+     * See [Date ranges](https://developer.squareup.com/docs/build-basics/working-with-dates) for details on date inclusivity/exclusivity.
+     * 
+     * Default value: The current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public GetV2LocationsLocationIdRefundsRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
     
-    public GetV2LocationsLocationIdRefundsSecurity security;
-    public GetV2LocationsLocationIdRefundsRequest withSecurity(GetV2LocationsLocationIdRefundsSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the location to list refunds for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
+    public String locationId;
+    public GetV2LocationsLocationIdRefundsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which results are listed in the response (`ASC` for
+     * oldest first, `DESC` for newest first).
+     * 
+     * Default value: `DESC`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public String sortOrder;
+    public GetV2LocationsLocationIdRefundsRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
     

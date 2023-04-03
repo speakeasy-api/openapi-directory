@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BranchConfigurationsDeleteRequest {
-    
-    public BranchConfigurationsDeletePathParams pathParams;
-    public BranchConfigurationsDeleteRequest withPathParams(BranchConfigurationsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public BranchConfigurationsDeleteRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public BranchConfigurationsDeleteRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public BranchConfigurationsDeleteRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public BranchConfigurationsDeleteSecurity security;
-    public BranchConfigurationsDeleteRequest withSecurity(BranchConfigurationsDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The branch name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branch")
+    public String branch;
+    public BranchConfigurationsDeleteRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public BranchConfigurationsDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

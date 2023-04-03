@@ -30,10 +30,8 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetOrdersOrderStatusEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetOrdersQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOrdersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOrdersResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetOrdersOrderIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOrdersOrderIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetOrdersOrderIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOfOrders.java

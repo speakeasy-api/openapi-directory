@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationCameraOnboardingStatusesRequest {
-    
-    public UpdateOrganizationCameraOnboardingStatusesPathParams pathParams;
-    public UpdateOrganizationCameraOnboardingStatusesRequest withPathParams(UpdateOrganizationCameraOnboardingStatusesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationCameraOnboardingStatusesRequestBody requestBody;
+    public UpdateOrganizationCameraOnboardingStatusesRequest withRequestBody(UpdateOrganizationCameraOnboardingStatusesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationCameraOnboardingStatusesRequestBody request;
-    public UpdateOrganizationCameraOnboardingStatusesRequest withRequest(UpdateOrganizationCameraOnboardingStatusesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationCameraOnboardingStatusesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

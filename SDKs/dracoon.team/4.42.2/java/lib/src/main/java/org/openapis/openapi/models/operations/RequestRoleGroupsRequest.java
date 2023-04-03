@@ -4,27 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestRoleGroupsRequest {
-    
-    public RequestRoleGroupsPathParams pathParams;
-    public RequestRoleGroupsRequest withPathParams(RequestRoleGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestRoleGroupsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestRoleGroupsQueryParams queryParams;
-    public RequestRoleGroupsRequest withQueryParams(RequestRoleGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public String filter;
+    public RequestRoleGroupsRequest withFilter(String filter) {
+        this.filter = filter;
         return this;
     }
     
+    /**
+     * Range limit.
+     * 
+     * Maximum 500.
+     * 
+     *  For more results please use paging (`offset` + `limit`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public RequestRoleGroupsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public RequestRoleGroupsHeaders headers;
-    public RequestRoleGroupsRequest withHeaders(RequestRoleGroupsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Range offset
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public RequestRoleGroupsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Role ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role_id")
+    public Integer roleId;
+    public RequestRoleGroupsRequest withRoleId(Integer roleId) {
+        this.roleId = roleId;
         return this;
     }
     

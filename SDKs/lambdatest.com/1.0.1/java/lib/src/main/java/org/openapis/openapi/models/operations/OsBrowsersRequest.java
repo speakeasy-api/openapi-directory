@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OsBrowsersRequest {
-    
-    public OsBrowsersQueryParams queryParams;
-    public OsBrowsersRequest withQueryParams(OsBrowsersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public OsBrowsersSecurity security;
-    public OsBrowsersRequest withSecurity(OsBrowsersSecurity security) {
-        this.security = security;
+    /**
+     * Fetch details for a particular OS
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=os")
+    public String os;
+    public OsBrowsersRequest withOs(String os) {
+        this.os = os;
         return this;
     }
     

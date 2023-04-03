@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.PostStoreDetailSecurity;
-import org.openapis.openapi.models.operations.PostStoreDetailRequest;
 import org.openapis.openapi.models.operations.PostStoreDetailResponse;
 import org.openapis.openapi.models.shared.StoreDetailRequestEntityTypeEnum;
 import org.openapis.openapi.models.shared.StoreDetailRequest;
@@ -16,7 +15,6 @@ import org.openapis.openapi.models.shared.Recurring;
 import org.openapis.openapi.models.shared.Card;
 import org.openapis.openapi.models.shared.Address;
 import org.openapis.openapi.models.shared.BankAccount;
-import org.openapis.openapi.models.shared.SchemeAPIKeyAuth;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
 public class Application {
@@ -25,69 +23,64 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostStoreDetailRequest req = new PostStoreDetailRequest() {{
-                security = new PostStoreDetailSecurity() {{
-                    apiKeyAuth = new SchemeAPIKeyAuth() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+            org.openapis.openapi.models.shared.StoreDetailRequest req = new StoreDetailRequest() {{
+                additionalData = new java.util.HashMap<String, String>() {{
+                    put("provident", "distinctio");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
                 }};
-                request = new StoreDetailRequest() {{
-                    additionalData = new java.util.HashMap<String, String>() {{
-                        put("provident", "distinctio");
-                        put("quibusdam", "unde");
-                        put("nulla", "corrupti");
-                    }};
-                    bank = new BankAccount() {{
-                        bankAccountNumber = "illum";
-                        bankCity = "vel";
-                        bankLocationId = "error";
-                        bankName = "deserunt";
-                        bic = "suscipit";
-                        countryCode = "iure";
-                        iban = "magnam";
-                        ownerName = "debitis";
-                        taxId = "ipsa";
-                    }};
-                    billingAddress = new Address() {{
-                        city = "Edinburg";
-                        country = "Holy See (Vatican City State)";
-                        houseNumberOrName = "molestiae";
-                        postalCode = "85453-9803";
-                        stateOrProvince = "veritatis";
-                        street = "0389 Connelly Trace";
-                    }};
-                    card = new Card() {{
-                        cvc = "at";
-                        expiryMonth = "maiores";
-                        expiryYear = "molestiae";
-                        holderName = "quod";
-                        issueNumber = "quod";
-                        number = "esse";
-                        startMonth = "totam";
-                        startYear = "porro";
-                    }};
-                    dateOfBirth = "2022-10-06T15:49:54.663Z";
-                    entityType = "Company";
-                    fraudOffset = 639921;
-                    merchantAccount = "occaecati";
-                    nationality = "fugit";
-                    recurring = new Recurring() {{
-                        contract = "RECURRING";
-                        recurringDetailName = "hic";
-                        tokenService = "MCTOKENSERVICE";
-                    }};
-                    selectedBrand = "totam";
-                    shopperEmail = "beatae";
-                    shopperName = new Name() {{
-                        firstName = "Haskell";
-                        lastName = "Krajcik";
-                    }};
-                    shopperReference = "modi";
-                    socialSecurityNumber = "qui";
+                bank = new BankAccount() {{
+                    bankAccountNumber = "illum";
+                    bankCity = "vel";
+                    bankLocationId = "error";
+                    bankName = "deserunt";
+                    bic = "suscipit";
+                    countryCode = "iure";
+                    iban = "magnam";
+                    ownerName = "debitis";
+                    taxId = "ipsa";
                 }};
-            }};            
+                billingAddress = new Address() {{
+                    city = "Edinburg";
+                    country = "Holy See (Vatican City State)";
+                    houseNumberOrName = "molestiae";
+                    postalCode = "85453-9803";
+                    stateOrProvince = "veritatis";
+                    street = "0389 Connelly Trace";
+                }};
+                card = new Card() {{
+                    cvc = "at";
+                    expiryMonth = "maiores";
+                    expiryYear = "molestiae";
+                    holderName = "quod";
+                    issueNumber = "quod";
+                    number = "esse";
+                    startMonth = "totam";
+                    startYear = "porro";
+                }};
+                dateOfBirth = "2022-10-06T15:49:54.663Z";
+                entityType = "Company";
+                fraudOffset = 639921;
+                merchantAccount = "occaecati";
+                nationality = "fugit";
+                recurring = new Recurring() {{
+                    contract = "RECURRING";
+                    recurringDetailName = "hic";
+                    tokenService = "MCTOKENSERVICE";
+                }};
+                selectedBrand = "totam";
+                shopperEmail = "beatae";
+                shopperName = new Name() {{
+                    firstName = "Haskell";
+                    lastName = "Krajcik";
+                }};
+                shopperReference = "modi";
+                socialSecurityNumber = "qui";
+            }}            
 
-            PostStoreDetailResponse res = sdk.initialization.postStoreDetail(req);
+            PostStoreDetailResponse res = sdk.initialization.postStoreDetail(req, new PostStoreDetailSecurity() {{
+                apiKeyAuth = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.storeDetailResponse.isPresent()) {
                 // handle response

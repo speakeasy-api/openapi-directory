@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InterferenceRequest {
-    
-    public InterferenceQueryParams queryParams;
-    public InterferenceRequest withQueryParams(InterferenceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Interference layer name eg. QRM_map
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public InterferenceRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
-    
-    public InterferenceSecurity security;
-    public InterferenceRequest withSecurity(InterferenceSecurity security) {
-        this.security = security;
+    /**
+     * Network name eg. Overlapping broadcast stations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=network")
+    public String network;
+    public InterferenceRequest withNetwork(String network) {
+        this.network = network;
         return this;
     }
     

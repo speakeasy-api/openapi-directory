@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Constructs a new OAuth brand for the project if one does not exist. The created brand is "internal only", meaning that OAuth clients created under it only accept requests from users who belong to the same Google Workspace organization as the project. The brand is created in an un-reviewed status. NOTE: The "internal only" status can be manually changed in the Google Cloud Console. Requires that a brand does not already exist for the project, and that the specified support email is owned by the caller.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsBrandsCreateResponse iapProjectsBrandsCreate(org.openapis.openapi.models.operations.IapProjectsBrandsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsBrandsCreateResponse iapProjectsBrandsCreate(org.openapis.openapi.models.operations.IapProjectsBrandsCreateRequest request, org.openapis.openapi.models.operations.IapProjectsBrandsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsCreatePathParams.class, baseUrl, "/v1/{parent}/brands", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsCreateRequest.class, baseUrl, "/v1/{parent}/brands", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "brandInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,27 +83,28 @@ public class Projects {
     /**
      * Creates an Identity Aware Proxy (IAP) OAuth client. The client is owned by IAP. Requires that the brand for the project exists and that it is set for internal-only use.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateResponse iapProjectsBrandsIdentityAwareProxyClientsCreate(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateResponse iapProjectsBrandsIdentityAwareProxyClientsCreate(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateRequest request, org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreatePathParams.class, baseUrl, "/v1/{parent}/identityAwareProxyClients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateRequest.class, baseUrl, "/v1/{parent}/identityAwareProxyClients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "identityAwareProxyClientInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,25 +131,26 @@ public class Projects {
     /**
      * Lists the existing clients for the brand.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListResponse iapProjectsBrandsIdentityAwareProxyClientsList(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListResponse iapProjectsBrandsIdentityAwareProxyClientsList(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListRequest request, org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListPathParams.class, baseUrl, "/v1/{parent}/identityAwareProxyClients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListRequest.class, baseUrl, "/v1/{parent}/identityAwareProxyClients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,27 +177,28 @@ public class Projects {
     /**
      * Resets an Identity Aware Proxy (IAP) OAuth client secret. Useful if the secret was compromised. Requires that the client is owned by IAP.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse iapProjectsBrandsIdentityAwareProxyClientsResetSecret(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretResponse iapProjectsBrandsIdentityAwareProxyClientsResetSecret(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretRequest request, org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretPathParams.class, baseUrl, "/v1/{name}:resetSecret", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretRequest.class, baseUrl, "/v1/{name}:resetSecret", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsIdentityAwareProxyClientsResetSecretRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -221,25 +225,26 @@ public class Projects {
     /**
      * Lists the existing brands for the project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsBrandsListResponse iapProjectsBrandsList(org.openapis.openapi.models.operations.IapProjectsBrandsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsBrandsListResponse iapProjectsBrandsList(org.openapis.openapi.models.operations.IapProjectsBrandsListRequest request, org.openapis.openapi.models.operations.IapProjectsBrandsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsListPathParams.class, baseUrl, "/v1/{parent}/brands", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsBrandsListRequest.class, baseUrl, "/v1/{parent}/brands", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsBrandsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,27 +271,28 @@ public class Projects {
     /**
      * Creates a new TunnelDestGroup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateResponse iapProjectsIapTunnelLocationsDestGroupsCreate(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateResponse iapProjectsIapTunnelLocationsDestGroupsCreate(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateRequest request, org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreatePathParams.class, baseUrl, "/v1/{parent}/destGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateRequest.class, baseUrl, "/v1/{parent}/destGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tunnelDestGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -313,25 +319,26 @@ public class Projects {
     /**
      * Deletes a TunnelDestGroup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteResponse iapProjectsIapTunnelLocationsDestGroupsDelete(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteResponse iapProjectsIapTunnelLocationsDestGroupsDelete(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteRequest request, org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,25 +365,26 @@ public class Projects {
     /**
      * Retrieves an existing TunnelDestGroup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetResponse iapProjectsIapTunnelLocationsDestGroupsGet(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetResponse iapProjectsIapTunnelLocationsDestGroupsGet(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetRequest request, org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -403,25 +411,26 @@ public class Projects {
     /**
      * Lists the existing TunnelDestGroups. To group across all locations, use a `-` as the location ID. For example: `/v1/projects/123/iap_tunnel/locations/-/destGroups`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListResponse iapProjectsIapTunnelLocationsDestGroupsList(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListResponse iapProjectsIapTunnelLocationsDestGroupsList(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListRequest request, org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListPathParams.class, baseUrl, "/v1/{parent}/destGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListRequest.class, baseUrl, "/v1/{parent}/destGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,27 +457,28 @@ public class Projects {
     /**
      * Updates a TunnelDestGroup.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchResponse iapProjectsIapTunnelLocationsDestGroupsPatch(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchResponse iapProjectsIapTunnelLocationsDestGroupsPatch(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchRequest request, org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tunnelDestGroup", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.IapProjectsIapTunnelLocationsDestGroupsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

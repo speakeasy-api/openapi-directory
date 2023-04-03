@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConversionsPostRawRequest {
-    
-    public ConversionsPostRawPathParams pathParams;
-    public ConversionsPostRawRequest withPathParams(ConversionsPostRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Updated body of the conversion
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public ConversionsPostRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ConversionsPostRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the conversion
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
+    public Long conversionId;
+    public ConversionsPostRawRequest withConversionId(Long conversionId) {
+        this.conversionId = conversionId;
         return this;
     }
     

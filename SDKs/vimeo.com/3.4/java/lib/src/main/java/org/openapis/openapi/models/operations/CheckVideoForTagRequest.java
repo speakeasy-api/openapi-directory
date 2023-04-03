@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckVideoForTagRequest {
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public CheckVideoForTagRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
+        return this;
+    }
     
-    public CheckVideoForTagPathParams pathParams;
-    public CheckVideoForTagRequest withPathParams(CheckVideoForTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The tag word.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public CheckVideoForTagRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

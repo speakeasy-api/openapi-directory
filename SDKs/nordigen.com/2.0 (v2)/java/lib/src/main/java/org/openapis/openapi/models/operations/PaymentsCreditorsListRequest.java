@@ -4,13 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PaymentsCreditorsListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
+    public String account;
+    public PaymentsCreditorsListRequest withAccount(String account) {
+        this.account = account;
+        return this;
+    }
     
-    public PaymentsCreditorsListQueryParams queryParams;
-    public PaymentsCreditorsListRequest withQueryParams(PaymentsCreditorsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address_country")
+    public String addressCountry;
+    public PaymentsCreditorsListRequest withAddressCountry(String addressCountry) {
+        this.addressCountry = addressCountry;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=agent")
+    public String agent;
+    public PaymentsCreditorsListRequest withAgent(String agent) {
+        this.agent = agent;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public PaymentsCreditorsListRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public PaymentsCreditorsListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public PaymentsCreditorsListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public PaymentsCreditorsListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public PaymentsCreditorsListRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

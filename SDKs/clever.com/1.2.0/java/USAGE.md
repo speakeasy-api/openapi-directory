@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetContactPathParams;
 import org.openapis.openapi.models.operations.GetContactRequest;
 import org.openapis.openapi.models.operations.GetContactResponse;
 
@@ -13,17 +12,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oauth = new SchemeOauth() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oauth = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             GetContactRequest req = new GetContactRequest() {{
-                pathParams = new GetContactPathParams() {{
-                    id = "corrupti";
-                }};
-            }};            
+                id = "corrupti";
+            }}            
 
             GetContactResponse res = sdk.contacts.getContact(req);
 

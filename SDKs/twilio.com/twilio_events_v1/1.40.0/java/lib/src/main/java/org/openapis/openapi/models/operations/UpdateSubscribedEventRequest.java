@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSubscribedEventRequest {
-    
-    public UpdateSubscribedEventPathParams pathParams;
-    public UpdateSubscribedEventRequest withPathParams(UpdateSubscribedEventPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateSubscribedEventUpdateSubscribedEventRequest request;
-    public UpdateSubscribedEventRequest withRequest(UpdateSubscribedEventUpdateSubscribedEventRequest request) {
-        this.request = request;
+    public UpdateSubscribedEventUpdateSubscribedEventRequest requestBody;
+    public UpdateSubscribedEventRequest withRequestBody(UpdateSubscribedEventUpdateSubscribedEventRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSubscribedEventSecurity security;
-    public UpdateSubscribedEventRequest withSecurity(UpdateSubscribedEventSecurity security) {
-        this.security = security;
+    /**
+     * The unique SID identifier of the Subscription.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionSid")
+    public String subscriptionSid;
+    public UpdateSubscribedEventRequest withSubscriptionSid(String subscriptionSid) {
+        this.subscriptionSid = subscriptionSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateSubscribedEventRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Type of event being subscribed to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Type")
+    public String type;
+    public UpdateSubscribedEventRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

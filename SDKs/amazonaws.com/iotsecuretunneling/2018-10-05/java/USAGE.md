@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CloseTunnelXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CloseTunnelHeaders;
 import org.openapis.openapi.models.operations.CloseTunnelRequest;
 import org.openapis.openapi.models.operations.CloseTunnelResponse;
 import org.openapis.openapi.models.shared.CloseTunnelRequest;
@@ -15,28 +14,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CloseTunnelRequest req = new CloseTunnelRequest() {{
-                headers = new CloseTunnelHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "IoTSecuredTunneling.CloseTunnel";
-                }};
-                request = new CloseTunnelRequest() {{
+                closeTunnelRequest = new CloseTunnelRequest() {{
                     delete = false;
-                    tunnelId = "illum";
+                    tunnelId = "corrupti";
                 }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "IoTSecuredTunneling.CloseTunnel";
+            }}            
 
             CloseTunnelResponse res = sdk.closeTunnel(req);
 

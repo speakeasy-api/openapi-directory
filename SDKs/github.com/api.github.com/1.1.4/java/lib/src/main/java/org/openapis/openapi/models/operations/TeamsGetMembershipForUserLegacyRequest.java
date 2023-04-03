@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsGetMembershipForUserLegacyRequest {
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsGetMembershipForUserLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
+        return this;
+    }
     
-    public TeamsGetMembershipForUserLegacyPathParams pathParams;
-    public TeamsGetMembershipForUserLegacyRequest withPathParams(TeamsGetMembershipForUserLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The handle for the GitHub user account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public TeamsGetMembershipForUserLegacyRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

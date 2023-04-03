@@ -4,20 +4,34 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBatchErrorsRequest {
-    
-    public ListBatchErrorsPathParams pathParams;
-    public ListBatchErrorsRequest withPathParams(ListBatchErrorsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Batch ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batch_id")
+    public String batchId;
+    public ListBatchErrorsRequest withBatchId(String batchId) {
+        this.batchId = batchId;
         return this;
     }
     
+    /**
+     * Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListBatchErrorsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListBatchErrorsQueryParams queryParams;
-    public ListBatchErrorsRequest withQueryParams(ListBatchErrorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
+    public Integer pagesize;
+    public ListBatchErrorsRequest withPagesize(Integer pagesize) {
+        this.pagesize = pagesize;
         return this;
     }
     

@@ -222,7 +222,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetIpIpv4Response getIpIpv4(org.openapis.openapi.models.operations.GetIpIpv4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIpIpv4PathParams.class, baseUrl, "/ip/{ipv4}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIpIpv4Request.class, baseUrl, "/ip/{ipv4}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -268,7 +268,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetIpIpv4TxtResponse getIpIpv4Txt(org.openapis.openapi.models.operations.GetIpIpv4TxtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIpIpv4TxtPathParams.class, baseUrl, "/ip/{ipv4}.txt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetIpIpv4TxtRequest.class, baseUrl, "/ip/{ipv4}.txt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -385,7 +385,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetTimezoneAreaResponse getTimezoneArea(org.openapis.openapi.models.operations.GetTimezoneAreaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaPathParams.class, baseUrl, "/timezone/{area}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaRequest.class, baseUrl, "/timezone/{area}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -431,7 +431,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetTimezoneAreaTxtResponse getTimezoneAreaTxt(org.openapis.openapi.models.operations.GetTimezoneAreaTxtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaTxtPathParams.class, baseUrl, "/timezone/{area}.txt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaTxtRequest.class, baseUrl, "/timezone/{area}.txt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -475,7 +475,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetTimezoneAreaLocationResponse getTimezoneAreaLocation(org.openapis.openapi.models.operations.GetTimezoneAreaLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaLocationPathParams.class, baseUrl, "/timezone/{area}/{location}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaLocationRequest.class, baseUrl, "/timezone/{area}/{location}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -521,7 +521,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetTimezoneAreaLocationTxtResponse getTimezoneAreaLocationTxt(org.openapis.openapi.models.operations.GetTimezoneAreaLocationTxtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaLocationTxtPathParams.class, baseUrl, "/timezone/{area}/{location}.txt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaLocationTxtRequest.class, baseUrl, "/timezone/{area}/{location}.txt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -565,7 +565,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionResponse getTimezoneAreaLocationRegion(org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionPathParams.class, baseUrl, "/timezone/{area}/{location}/{region}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionRequest.class, baseUrl, "/timezone/{area}/{location}/{region}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -611,7 +611,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionTxtResponse getTimezoneAreaLocationRegionTxt(org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionTxtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionTxtPathParams.class, baseUrl, "/timezone/{area}/{location}/{region}.txt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTimezoneAreaLocationRegionTxtRequest.class, baseUrl, "/timezone/{area}/{location}/{region}.txt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

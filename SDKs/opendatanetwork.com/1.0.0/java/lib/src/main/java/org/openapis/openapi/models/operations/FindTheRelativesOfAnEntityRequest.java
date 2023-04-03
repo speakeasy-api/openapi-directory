@@ -4,27 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindTheRelativesOfAnEntityRequest {
-    
-    public FindTheRelativesOfAnEntityPathParams pathParams;
-    public FindTheRelativesOfAnEntityRequest withPathParams(FindTheRelativesOfAnEntityPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
+    public String xAppToken;
+    public FindTheRelativesOfAnEntityRequest withXAppToken(String xAppToken) {
+        this.xAppToken = xAppToken;
         return this;
     }
     
-    
-    public FindTheRelativesOfAnEntityQueryParams queryParams;
-    public FindTheRelativesOfAnEntityRequest withQueryParams(FindTheRelativesOfAnEntityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
+     * used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
+    public String appToken;
+    public FindTheRelativesOfAnEntityRequest withAppToken(String appToken) {
+        this.appToken = appToken;
         return this;
     }
     
+    /**
+     * ID of the target entity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
+    public String entityId;
+    public FindTheRelativesOfAnEntityRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
     
-    public FindTheRelativesOfAnEntityHeaders headers;
-    public FindTheRelativesOfAnEntityRequest withHeaders(FindTheRelativesOfAnEntityHeaders headers) {
-        this.headers = headers;
+    /**
+     * Maximum number of entities in each group.
+     * Must be an integer from 1 to 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Double limit;
+    public FindTheRelativesOfAnEntityRequest withLimit(Double limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The type of relation to find.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=relation")
+    public FindTheRelativesOfAnEntityRelationEnum relation;
+    public FindTheRelativesOfAnEntityRequest withRelation(FindTheRelativesOfAnEntityRelationEnum relation) {
+        this.relation = relation;
+        return this;
+    }
+    
+    /**
+     * If this parameter is included, only entities with data for the given
+     * variable will be returned. Note that this may cause the number of
+     * entities returned to be less than the specified `limit`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=variable_id")
+    public String variableId;
+    public FindTheRelativesOfAnEntityRequest withVariableId(String variableId) {
+        this.variableId = variableId;
         return this;
     }
     

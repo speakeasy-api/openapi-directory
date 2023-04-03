@@ -41,13 +41,13 @@ public class SalesInvoices {
      */
     public org.openapis.openapi.models.operations.SalesInvoicesDeleteResponse salesInvoicesDelete(org.openapis.openapi.models.operations.SalesInvoicesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesInvoicesDeletePathParams.class, baseUrl, "/v1/salesInvoices/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesInvoicesDeleteRequest.class, baseUrl, "/v1/salesInvoices/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SalesInvoicesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SalesInvoicesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -120,7 +120,7 @@ public class SalesInvoices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SalesInvoicesPostResponse salesInvoicesPost(org.openapis.openapi.models.operations.SalesInvoicesPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SalesInvoicesPostResponse salesInvoicesPost(org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/salesInvoices");
         
@@ -163,7 +163,7 @@ public class SalesInvoices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceResponse salesInvoicesPostCreateSaleInvoiceWithGeneratingReference(org.openapis.openapi.models.operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SalesInvoicesPostCreateSaleInvoiceWithGeneratingReferenceResponse salesInvoicesPostCreateSaleInvoiceWithGeneratingReference(org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/salesInvoices/createSaleInvoiceWithGeneratingReference");
         
@@ -206,7 +206,7 @@ public class SalesInvoices {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SalesInvoicesProcessBatchResponse salesInvoicesProcessBatch(org.openapis.openapi.models.operations.SalesInvoicesProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SalesInvoicesProcessBatchResponse salesInvoicesProcessBatch(org.openapis.openapi.models.shared.BatchItemSalesInvoiceCreditNoteDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/salesInvoices/batch");
         
@@ -251,12 +251,12 @@ public class SalesInvoices {
      */
     public org.openapis.openapi.models.operations.SalesInvoicesPutResponse salesInvoicesPut(org.openapis.openapi.models.operations.SalesInvoicesPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesInvoicesPutPathParams.class, baseUrl, "/v1/salesInvoices/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SalesInvoicesPutRequest.class, baseUrl, "/v1/salesInvoices/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "salesInvoiceCreditNoteDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -294,7 +294,7 @@ public class SalesInvoices {
      */
     public org.openapis.openapi.models.operations.GetV1SalesInvoicesIdResponse getV1SalesInvoicesId(org.openapis.openapi.models.operations.GetV1SalesInvoicesIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1SalesInvoicesIdPathParams.class, baseUrl, "/v1/salesInvoices/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1SalesInvoicesIdRequest.class, baseUrl, "/v1/salesInvoices/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

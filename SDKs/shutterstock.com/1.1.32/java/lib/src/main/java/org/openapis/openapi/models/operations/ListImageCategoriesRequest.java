@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListImageCategoriesRequest {
-    
-    public ListImageCategoriesQueryParams queryParams;
-    public ListImageCategoriesRequest withQueryParams(ListImageCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ListImageCategoriesSecurity security;
-    public ListImageCategoriesRequest withSecurity(ListImageCategoriesSecurity security) {
-        this.security = security;
+    /**
+     * Language for the keywords and categories in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public ListImageCategoriesRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
         return this;
     }
     

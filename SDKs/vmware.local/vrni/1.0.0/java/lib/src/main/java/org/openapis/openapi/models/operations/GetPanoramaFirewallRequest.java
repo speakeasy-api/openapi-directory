@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPanoramaFirewallRequest {
-    
-    public GetPanoramaFirewallPathParams pathParams;
-    public GetPanoramaFirewallRequest withPathParams(GetPanoramaFirewallPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetPanoramaFirewallSecurity security;
-    public GetPanoramaFirewallRequest withSecurity(GetPanoramaFirewallSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPanoramaFirewallRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

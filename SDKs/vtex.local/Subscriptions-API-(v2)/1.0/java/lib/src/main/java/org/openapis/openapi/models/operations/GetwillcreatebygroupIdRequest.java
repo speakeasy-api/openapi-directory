@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetwillcreatebygroupIdRequest {
-    
-    public GetwillcreatebygroupIdPathParams pathParams;
-    public GetwillcreatebygroupIdRequest withPathParams(GetwillcreatebygroupIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetwillcreatebygroupIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetwillcreatebygroupIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetwillcreatebygroupIdHeaders headers;
-    public GetwillcreatebygroupIdRequest withHeaders(GetwillcreatebygroupIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Group ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public GetwillcreatebygroupIdRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

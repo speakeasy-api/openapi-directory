@@ -4,27 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCtrlGetUsersRequest {
-    
-    public UserCtrlGetUsersPathParams pathParams;
-    public UserCtrlGetUsersRequest withPathParams(UserCtrlGetUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Vonage Business Cloud account ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public String accountId;
+    public UserCtrlGetUsersRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public UserCtrlGetUsersQueryParams queryParams;
-    public UserCtrlGetUsersRequest withQueryParams(UserCtrlGetUsersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter by email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public UserCtrlGetUsersRequest withEmail(String email) {
+        this.email = email;
         return this;
     }
     
+    /**
+     * Filter by first name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=first_name")
+    public String firstName;
+    public UserCtrlGetUsersRequest withFirstName(String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
     
-    public UserCtrlGetUsersSecurity security;
-    public UserCtrlGetUsersRequest withSecurity(UserCtrlGetUsersSecurity security) {
-        this.security = security;
+    /**
+     * Filter by last name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_name")
+    public String lastName;
+    public UserCtrlGetUsersRequest withLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+    
+    /**
+     * Filter by login name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login_name")
+    public String loginName;
+    public UserCtrlGetUsersRequest withLoginName(String loginName) {
+        this.loginName = loginName;
+        return this;
+    }
+    
+    /**
+     * Current page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public UserCtrlGetUsersRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of records per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Double pageSize;
+    public UserCtrlGetUsersRequest withPageSize(Double pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

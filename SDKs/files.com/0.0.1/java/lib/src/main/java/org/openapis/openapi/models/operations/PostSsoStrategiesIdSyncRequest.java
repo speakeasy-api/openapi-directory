@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSsoStrategiesIdSyncRequest {
-    
-    public PostSsoStrategiesIdSyncPathParams pathParams;
-    public PostSsoStrategiesIdSyncRequest withPathParams(PostSsoStrategiesIdSyncPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Sso Strategy ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostSsoStrategiesIdSyncRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

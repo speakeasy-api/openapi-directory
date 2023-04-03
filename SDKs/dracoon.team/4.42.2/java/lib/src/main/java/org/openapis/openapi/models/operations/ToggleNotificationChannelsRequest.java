@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToggleNotificationChannelsRequest {
-    
-    public ToggleNotificationChannelsHeaders headers;
-    public ToggleNotificationChannelsRequest withHeaders(ToggleNotificationChannelsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.NotificationChannelActivationRequest notificationChannelActivationRequest;
+    public ToggleNotificationChannelsRequest withNotificationChannelActivationRequest(org.openapis.openapi.models.shared.NotificationChannelActivationRequest notificationChannelActivationRequest) {
+        this.notificationChannelActivationRequest = notificationChannelActivationRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NotificationChannelActivationRequest request;
-    public ToggleNotificationChannelsRequest withRequest(org.openapis.openapi.models.shared.NotificationChannelActivationRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public ToggleNotificationChannelsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

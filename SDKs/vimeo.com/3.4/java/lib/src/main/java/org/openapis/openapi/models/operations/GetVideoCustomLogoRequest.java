@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoCustomLogoRequest {
+    /**
+     * The ID of the picture.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=thumbnail_id")
+    public Double thumbnailId;
+    public GetVideoCustomLogoRequest withThumbnailId(Double thumbnailId) {
+        this.thumbnailId = thumbnailId;
+        return this;
+    }
     
-    public GetVideoCustomLogoPathParams pathParams;
-    public GetVideoCustomLogoRequest withPathParams(GetVideoCustomLogoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetVideoCustomLogoRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

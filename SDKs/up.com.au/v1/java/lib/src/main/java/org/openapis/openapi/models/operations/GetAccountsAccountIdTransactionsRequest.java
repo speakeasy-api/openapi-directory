@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsAccountIdTransactionsRequest {
-    
-    public GetAccountsAccountIdTransactionsPathParams pathParams;
-    public GetAccountsAccountIdTransactionsRequest withPathParams(GetAccountsAccountIdTransactionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier for the account.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public GetAccountsAccountIdTransactionsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    /**
+     * The category identifier for which to filter transactions.
+     * Both parent and child categories can be filtered through
+     * this parameter. Providing an invalid category identifier
+     * results in a `404` response.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[category]")
+    public String filterCategory;
+    public GetAccountsAccountIdTransactionsRequest withFilterCategory(String filterCategory) {
+        this.filterCategory = filterCategory;
+        return this;
+    }
     
-    public GetAccountsAccountIdTransactionsQueryParams queryParams;
-    public GetAccountsAccountIdTransactionsRequest withQueryParams(GetAccountsAccountIdTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The start date-time from which to return records,
+     * formatted according to rfc-3339. Not to be used for
+     * pagination purposes.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[since]")
+    public OffsetDateTime filterSince;
+    public GetAccountsAccountIdTransactionsRequest withFilterSince(OffsetDateTime filterSince) {
+        this.filterSince = filterSince;
+        return this;
+    }
+    
+    /**
+     * The transaction status for which to return records. This
+     * can be used to filter `HELD` transactions from those
+     * that are `SETTLED`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[status]")
+    public org.openapis.openapi.models.shared.TransactionStatusEnumEnum filterStatus;
+    public GetAccountsAccountIdTransactionsRequest withFilterStatus(org.openapis.openapi.models.shared.TransactionStatusEnumEnum filterStatus) {
+        this.filterStatus = filterStatus;
+        return this;
+    }
+    
+    /**
+     * A transaction tag to filter for which to return records.
+     * If the tag does not exist, zero records are returned and
+     * a success response is given.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[tag]")
+    public String filterTag;
+    public GetAccountsAccountIdTransactionsRequest withFilterTag(String filterTag) {
+        this.filterTag = filterTag;
+        return this;
+    }
+    
+    /**
+     * The end date-time up to which to return records,
+     * formatted according to rfc-3339. Not to be used for
+     * pagination purposes.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[until]")
+    public OffsetDateTime filterUntil;
+    public GetAccountsAccountIdTransactionsRequest withFilterUntil(OffsetDateTime filterUntil) {
+        this.filterUntil = filterUntil;
+        return this;
+    }
+    
+    /**
+     * The number of records to return in each page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public GetAccountsAccountIdTransactionsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

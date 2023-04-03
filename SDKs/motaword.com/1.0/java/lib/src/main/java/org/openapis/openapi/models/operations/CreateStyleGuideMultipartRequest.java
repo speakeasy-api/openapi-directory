@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateStyleGuideMultipartRequest {
-    
-    public CreateStyleGuideMultipartPathParams pathParams;
-    public CreateStyleGuideMultipartRequest withPathParams(CreateStyleGuideMultipartPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
+    public org.openapis.openapi.models.shared.StyleGuideUploadRequest1 styleGuideUploadRequest1;
+    public CreateStyleGuideMultipartRequest withStyleGuideUploadRequest1(org.openapis.openapi.models.shared.StyleGuideUploadRequest1 styleGuideUploadRequest1) {
+        this.styleGuideUploadRequest1 = styleGuideUploadRequest1;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public org.openapis.openapi.models.shared.StyleGuideUploadRequest1 request;
-    public CreateStyleGuideMultipartRequest withRequest(org.openapis.openapi.models.shared.StyleGuideUploadRequest1 request) {
-        this.request = request;
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public Long projectId;
+    public CreateStyleGuideMultipartRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

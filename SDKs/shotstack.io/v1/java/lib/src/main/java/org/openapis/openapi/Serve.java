@@ -35,19 +35,20 @@ public class Serve {
      * 
      * **base URL:** https://api.shotstack.io/serve/{version}
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAssetResponse deleteAsset(org.openapis.openapi.models.operations.DeleteAssetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAssetResponse deleteAsset(org.openapis.openapi.models.operations.DeleteAssetRequest request, org.openapis.openapi.models.operations.DeleteAssetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAssetPathParams.class, baseUrl, "/assets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAssetRequest.class, baseUrl, "/assets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -71,19 +72,20 @@ public class Serve {
      * 
      * **base URL:** https://api.shotstack.io/serve/{version}
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAssetResponse getAsset(org.openapis.openapi.models.operations.GetAssetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAssetResponse getAsset(org.openapis.openapi.models.operations.GetAssetRequest request, org.openapis.openapi.models.operations.GetAssetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssetPathParams.class, baseUrl, "/assets/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssetRequest.class, baseUrl, "/assets/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -113,19 +115,20 @@ public class Serve {
      * 
      * **base URL:** https://api.shotstack.io/serve/{version}
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAssetByRenderIdResponse getAssetByRenderId(org.openapis.openapi.models.operations.GetAssetByRenderIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAssetByRenderIdResponse getAssetByRenderId(org.openapis.openapi.models.operations.GetAssetByRenderIdRequest request, org.openapis.openapi.models.operations.GetAssetByRenderIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssetByRenderIdPathParams.class, baseUrl, "/assets/render/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssetByRenderIdRequest.class, baseUrl, "/assets/render/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

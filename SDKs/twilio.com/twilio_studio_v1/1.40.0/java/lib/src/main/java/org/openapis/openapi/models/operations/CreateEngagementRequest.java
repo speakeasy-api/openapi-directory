@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEngagementRequest {
-    
-    public CreateEngagementPathParams pathParams;
-    public CreateEngagementRequest withPathParams(CreateEngagementPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Flow.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public CreateEngagementRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateEngagementCreateEngagementRequest request;
-    public CreateEngagementRequest withRequest(CreateEngagementCreateEngagementRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateEngagementSecurity security;
-    public CreateEngagementRequest withSecurity(CreateEngagementSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateEngagementRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateEngagementCreateEngagementRequest requestBody;
+    public CreateEngagementRequest withRequestBody(CreateEngagementCreateEngagementRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

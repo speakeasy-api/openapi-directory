@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNodeResourceRequest {
-    
-    public GetNodeResourcePathParams pathParams;
-    public GetNodeResourceRequest withPathParams(GetNodeResourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * CURIE e.g. HP:0000465
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetNodeResourceRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

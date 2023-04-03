@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProspectRequest {
-    
-    public DeleteProspectPathParams pathParams;
-    public DeleteProspectRequest withPathParams(DeleteProspectPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DeleteProspectRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DeleteProspectRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public DeleteProspectHeaders headers;
-    public DeleteProspectRequest withHeaders(DeleteProspectHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the prospect as returned by the Create prospect endpoint's response, in the `id` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=prospectId")
+    public String prospectId;
+    public DeleteProspectRequest withProspectId(String prospectId) {
+        this.prospectId = prospectId;
         return this;
     }
     

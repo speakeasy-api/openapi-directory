@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AllocatePrivateVirtualInterfaceRequest {
-    
-    public AllocatePrivateVirtualInterfaceHeaders headers;
-    public AllocatePrivateVirtualInterfaceRequest withHeaders(AllocatePrivateVirtualInterfaceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AllocatePrivateVirtualInterfaceRequest allocatePrivateVirtualInterfaceRequest;
+    public AllocatePrivateVirtualInterfaceRequest withAllocatePrivateVirtualInterfaceRequest(org.openapis.openapi.models.shared.AllocatePrivateVirtualInterfaceRequest allocatePrivateVirtualInterfaceRequest) {
+        this.allocatePrivateVirtualInterfaceRequest = allocatePrivateVirtualInterfaceRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AllocatePrivateVirtualInterfaceRequest request;
-    public AllocatePrivateVirtualInterfaceRequest withRequest(org.openapis.openapi.models.shared.AllocatePrivateVirtualInterfaceRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public AllocatePrivateVirtualInterfaceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public AllocatePrivateVirtualInterfaceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public AllocatePrivateVirtualInterfaceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public AllocatePrivateVirtualInterfaceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public AllocatePrivateVirtualInterfaceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public AllocatePrivateVirtualInterfaceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public AllocatePrivateVirtualInterfaceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public AllocatePrivateVirtualInterfaceXAmzTargetEnum xAmzTarget;
+    public AllocatePrivateVirtualInterfaceRequest withXAmzTarget(AllocatePrivateVirtualInterfaceXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

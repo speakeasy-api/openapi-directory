@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListVirtualClustersRequest {
-    
-    public ListVirtualClustersQueryParams queryParams;
-    public ListVirtualClustersRequest withQueryParams(ListVirtualClustersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListVirtualClustersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListVirtualClustersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListVirtualClustersHeaders headers;
-    public ListVirtualClustersRequest withHeaders(ListVirtualClustersHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListVirtualClustersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListVirtualClustersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListVirtualClustersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListVirtualClustersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListVirtualClustersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The container provider ID of the virtual cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=containerProviderId")
+    public String containerProviderId;
+    public ListVirtualClustersRequest withContainerProviderId(String containerProviderId) {
+        this.containerProviderId = containerProviderId;
+        return this;
+    }
+    
+    /**
+     * The container provider type of the virtual cluster. Amazon EKS is the only supported type as of now.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=containerProviderType")
+    public ListVirtualClustersContainerProviderTypeEnum containerProviderType;
+    public ListVirtualClustersRequest withContainerProviderType(ListVirtualClustersContainerProviderTypeEnum containerProviderType) {
+        this.containerProviderType = containerProviderType;
+        return this;
+    }
+    
+    /**
+     * The date and time after which the virtual clusters are created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
+    public OffsetDateTime createdAfter;
+    public ListVirtualClustersRequest withCreatedAfter(OffsetDateTime createdAfter) {
+        this.createdAfter = createdAfter;
+        return this;
+    }
+    
+    /**
+     * The date and time before which the virtual clusters are created.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
+    public OffsetDateTime createdBefore;
+    public ListVirtualClustersRequest withCreatedBefore(OffsetDateTime createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
+    
+    /**
+     * The maximum number of virtual clusters that can be listed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListVirtualClustersRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * The token for the next set of virtual clusters to return. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListVirtualClustersRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * The states of the requested virtual clusters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public org.openapis.openapi.models.shared.VirtualClusterStateEnum[] states;
+    public ListVirtualClustersRequest withStates(org.openapis.openapi.models.shared.VirtualClusterStateEnum[] states) {
+        this.states = states;
         return this;
     }
     

@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindKeywordsRequest {
-    
-    public FindKeywordsQueryParams queryParams;
-    public FindKeywordsRequest withQueryParams(FindKeywordsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FindKeywordsSecurity security;
-    public FindKeywordsRequest withSecurity(FindKeywordsSecurity security) {
-        this.security = security;
+    /**
+     * A keyword to search for
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keywords")
+    public String[] keywords;
+    public FindKeywordsRequest withKeywords(String[] keywords) {
+        this.keywords = keywords;
         return this;
     }
     

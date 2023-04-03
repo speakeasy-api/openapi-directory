@@ -4,20 +4,62 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCardsRequest {
-    
-    public ListCardsQueryParams queryParams;
-    public ListCardsRequest withQueryParams(ListCardsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this to retrieve the next set of results for your original query.
+     * 
+     * See [Pagination](https://developer.squareup.com/docs/basics/api101/pagination) for more information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListCardsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * Limit results to cards associated with the customer supplied.
+     * By default, all cards owned by the merchant are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customer_id")
+    public String customerId;
+    public ListCardsRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
+        return this;
+    }
     
-    public ListCardsSecurity security;
-    public ListCardsRequest withSecurity(ListCardsSecurity security) {
-        this.security = security;
+    /**
+     * Includes disabled cards.
+     * By default, all enabled cards owned by the merchant are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_disabled")
+    public Boolean includeDisabled;
+    public ListCardsRequest withIncludeDisabled(Boolean includeDisabled) {
+        this.includeDisabled = includeDisabled;
+        return this;
+    }
+    
+    /**
+     * Limit results to cards associated with the reference_id supplied.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reference_id")
+    public String referenceId;
+    public ListCardsRequest withReferenceId(String referenceId) {
+        this.referenceId = referenceId;
+        return this;
+    }
+    
+    /**
+     * Sorts the returned list by when the card was created with the specified order.
+     * This field defaults to ASC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public String sortOrder;
+    public ListCardsRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAnApiVersionRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiId")
+    public String apiId;
+    public DeleteAnApiVersionRequest withApiId(String apiId) {
+        this.apiId = apiId;
+        return this;
+    }
     
-    public DeleteAnApiVersionPathParams pathParams;
-    public DeleteAnApiVersionRequest withPathParams(DeleteAnApiVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiVersionId")
+    public String apiVersionId;
+    public DeleteAnApiVersionRequest withApiVersionId(String apiVersionId) {
+        this.apiVersionId = apiVersionId;
         return this;
     }
     

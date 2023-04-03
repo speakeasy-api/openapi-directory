@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateGetEntitlementRequest {
+    /**
+     * Entitlement id to lookup
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entitlementId")
+    public String entitlementId;
+    public CertificateGetEntitlementRequest withEntitlementId(String entitlementId) {
+        this.entitlementId = entitlementId;
+        return this;
+    }
     
-    public CertificateGetEntitlementQueryParams queryParams;
-    public CertificateGetEntitlementRequest withQueryParams(CertificateGetEntitlementQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Fetch only the most recent certificate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latest")
+    public Boolean latest;
+    public CertificateGetEntitlementRequest withLatest(Boolean latest) {
+        this.latest = latest;
         return this;
     }
     

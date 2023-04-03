@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTargetsTargetIdIntegrationsRequest {
-    
-    public GetTargetsTargetIdIntegrationsPathParams pathParams;
-    public GetTargetsTargetIdIntegrationsRequest withPathParams(GetTargetsTargetIdIntegrationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Target id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_id")
+    public String targetId;
+    public GetTargetsTargetIdIntegrationsRequest withTargetId(String targetId) {
+        this.targetId = targetId;
         return this;
     }
     

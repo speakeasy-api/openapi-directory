@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QueryPredictionsFormRequest {
-    
-    public QueryPredictionsFormPathParams pathParams;
-    public QueryPredictionsFormRequest withPathParams(QueryPredictionsFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Parameters used to query the predictions. Limited to combining 2 tags.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.PredictionQueryToken request;
-    public QueryPredictionsFormRequest withRequest(org.openapis.openapi.models.shared.PredictionQueryToken request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PredictionQueryToken predictionQueryToken;
+    public QueryPredictionsFormRequest withPredictionQueryToken(org.openapis.openapi.models.shared.PredictionQueryToken predictionQueryToken) {
+        this.predictionQueryToken = predictionQueryToken;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QueryPredictionsFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

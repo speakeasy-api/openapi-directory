@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReadOperationResultRequest {
-    
-    public GetReadOperationResultPathParams pathParams;
-    public GetReadOperationResultRequest withPathParams(GetReadOperationResultPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of read operation returned in the response of the 'Batch Read File' interface.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=operationId")
+    public String operationId;
+    public GetReadOperationResultRequest withOperationId(String operationId) {
+        this.operationId = operationId;
         return this;
     }
     

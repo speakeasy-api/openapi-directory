@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDatasetsRequest {
-    
-    public ListDatasetsQueryParams queryParams;
-    public ListDatasetsRequest withQueryParams(ListDatasetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number of datsets to return. Maximum valid value is 25. If you specify a number greater than 25, the call returns 25 datasets.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public String count;
+    public ListDatasetsRequest withCount(String count) {
+        this.count = count;
         return this;
     }
     
+    /**
+     * If true, returns all global datasets. Global datasets are public datasets that Salesforce provides.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=global")
+    public Boolean global;
+    public ListDatasetsRequest withGlobal(Boolean global) {
+        this.global = global;
+        return this;
+    }
     
-    public ListDatasetsSecurity security;
-    public ListDatasetsRequest withSecurity(ListDatasetsSecurity security) {
-        this.security = security;
+    /**
+     * Index of the dataset from which you want to start paging
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public ListDatasetsRequest withOffset(String offset) {
+        this.offset = offset;
         return this;
     }
     

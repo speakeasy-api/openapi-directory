@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConsumerV1CustomersStatesRequest {
-    
-    public GetConsumerV1CustomersStatesQueryParams queryParams;
-    public GetConsumerV1CustomersStatesRequest withQueryParams(GetConsumerV1CustomersStatesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetConsumerV1CustomersStatesRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     

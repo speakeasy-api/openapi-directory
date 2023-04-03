@@ -51,30 +51,31 @@ public class Oauth {
      * ```
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateTokenResponse createToken(org.openapis.openapi.models.operations.CreateTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateTokenResponse createToken(org.openapis.openapi.models.operations.CreateTokenRequest request, org.openapis.openapi.models.operations.CreateTokenSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth/token");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createTokenRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateTokenQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CreateTokenRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,19 +111,20 @@ public class Oauth {
      * Get the groups for a token
      * Get the list of groups a token can be used to access.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FetchTokenGroupsResponse fetchTokenGroups(org.openapis.openapi.models.operations.FetchTokenGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FetchTokenGroupsResponse fetchTokenGroups(org.openapis.openapi.models.operations.FetchTokenGroupsRequest request, org.openapis.openapi.models.operations.FetchTokenGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchTokenGroupsPathParams.class, baseUrl, "/oauth/token/{id}/groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchTokenGroupsRequest.class, baseUrl, "/oauth/token/{id}/groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -163,7 +165,7 @@ public class Oauth {
      */
     public org.openapis.openapi.models.operations.FetchTokenOrganizationResponse fetchTokenOrganization(org.openapis.openapi.models.operations.FetchTokenOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchTokenOrganizationPathParams.class, baseUrl, "/oauth/token/{id}/organization", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchTokenOrganizationRequest.class, baseUrl, "/oauth/token/{id}/organization", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

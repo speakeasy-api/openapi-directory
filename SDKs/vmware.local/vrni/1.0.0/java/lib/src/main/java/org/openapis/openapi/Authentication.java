@@ -40,7 +40,7 @@ public class Authentication {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateResponse create(org.openapis.openapi.models.operations.CreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateResponse create(org.openapis.openapi.models.shared.UserCredential request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/token");
         
@@ -91,11 +91,10 @@ public class Authentication {
      * Delete an auth token.
      * Deletes the auth token provided in Authorization header.
      * Deleting an expired or invalid token will result in 401 Unauthorized error.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteResponse delete(org.openapis.openapi.models.operations.DeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteResponse delete() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/auth/token");
         
@@ -104,8 +103,7 @@ public class Authentication {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

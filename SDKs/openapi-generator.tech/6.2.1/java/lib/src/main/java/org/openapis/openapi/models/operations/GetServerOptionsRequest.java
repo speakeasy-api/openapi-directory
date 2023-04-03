@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServerOptionsRequest {
-    
-    public GetServerOptionsPathParams pathParams;
-    public GetServerOptionsRequest withPathParams(GetServerOptionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The target language for the server framework
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=framework")
+    public String framework;
+    public GetServerOptionsRequest withFramework(String framework) {
+        this.framework = framework;
         return this;
     }
     

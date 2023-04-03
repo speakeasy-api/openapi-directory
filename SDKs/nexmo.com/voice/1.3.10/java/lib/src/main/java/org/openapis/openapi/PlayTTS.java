@@ -37,21 +37,22 @@ public class PlayTTS {
      * Play text to speech into a call
      * Play text to speech into a call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartTalkResponse startTalk(org.openapis.openapi.models.operations.StartTalkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartTalkResponse startTalk(org.openapis.openapi.models.operations.StartTalkRequest request, org.openapis.openapi.models.operations.StartTalkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartTalkPathParams.class, baseUrl, "/{uuid}/talk", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartTalkRequest.class, baseUrl, "/{uuid}/talk", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "startTalkRequest", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,19 +80,20 @@ public class PlayTTS {
      * Stop text to speech in a call
      * Stop text to speech in a call
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StopTalkResponse stopTalk(org.openapis.openapi.models.operations.StopTalkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StopTalkResponse stopTalk(org.openapis.openapi.models.operations.StopTalkRequest request, org.openapis.openapi.models.operations.StopTalkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopTalkPathParams.class, baseUrl, "/{uuid}/talk", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StopTalkRequest.class, baseUrl, "/{uuid}/talk", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

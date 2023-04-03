@@ -34,25 +34,26 @@ public class NetworkAttachments {
     /**
      * Retrieves the list of all NetworkAttachment resources, regional and global, available to the specified project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListResponse computeNetworkAttachmentsAggregatedList(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListResponse computeNetworkAttachmentsAggregatedList(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListPathParams.class, baseUrl, "/projects/{project}/aggregated/networkAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListRequest.class, baseUrl, "/projects/{project}/aggregated/networkAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class NetworkAttachments {
     /**
      * Deletes the specified NetworkAttachment in the given scope
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteResponse computeNetworkAttachmentsDelete(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteResponse computeNetworkAttachmentsDelete(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{networkAttachment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{networkAttachment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,25 +126,26 @@ public class NetworkAttachments {
     /**
      * Returns the specified NetworkAttachment resource in the given scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetResponse computeNetworkAttachmentsGet(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetResponse computeNetworkAttachmentsGet(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{networkAttachment}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{networkAttachment}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -169,25 +172,26 @@ public class NetworkAttachments {
     /**
      * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyResponse computeNetworkAttachmentsGetIamPolicy(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyResponse computeNetworkAttachmentsGetIamPolicy(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{resource}/getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{resource}/getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,27 +218,28 @@ public class NetworkAttachments {
     /**
      * Creates a NetworkAttachment in the specified project in the given scope using the parameters that are included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertResponse computeNetworkAttachmentsInsert(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertResponse computeNetworkAttachmentsInsert(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "networkAttachment", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -261,25 +266,26 @@ public class NetworkAttachments {
     /**
      * Lists the NetworkAttachments for a project in the given scope.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListResponse computeNetworkAttachmentsList(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListResponse computeNetworkAttachmentsList(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListRequest.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -306,27 +312,28 @@ public class NetworkAttachments {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyResponse computeNetworkAttachmentsSetIamPolicy(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyResponse computeNetworkAttachmentsSetIamPolicy(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyPathParams.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{resource}/setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyRequest.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{resource}/setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "regionSetPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class NetworkAttachments {
     /**
      * Returns permissions that a caller has on the specified resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsResponse computeNetworkAttachmentsTestIamPermissions(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsResponse computeNetworkAttachmentsTestIamPermissions(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsPathParams.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{resource}/testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsRequest.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{resource}/testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

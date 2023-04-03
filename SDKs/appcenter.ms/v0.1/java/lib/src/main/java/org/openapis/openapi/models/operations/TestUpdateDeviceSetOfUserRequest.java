@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestUpdateDeviceSetOfUserRequest {
-    
-    public TestUpdateDeviceSetOfUserPathParams pathParams;
-    public TestUpdateDeviceSetOfUserRequest withPathParams(TestUpdateDeviceSetOfUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public TestUpdateDeviceSetOfUserDeviceSetUpdateInformation request;
-    public TestUpdateDeviceSetOfUserRequest withRequest(TestUpdateDeviceSetOfUserDeviceSetUpdateInformation request) {
-        this.request = request;
+    public TestUpdateDeviceSetOfUserDeviceSetUpdateInformation requestBody;
+    public TestUpdateDeviceSetOfUserRequest withRequestBody(TestUpdateDeviceSetOfUserDeviceSetUpdateInformation requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestUpdateDeviceSetOfUserRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public TestUpdateDeviceSetOfUserSecurity security;
-    public TestUpdateDeviceSetOfUserRequest withSecurity(TestUpdateDeviceSetOfUserSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the device set
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TestUpdateDeviceSetOfUserRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestUpdateDeviceSetOfUserRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

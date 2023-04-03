@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetMemberGroupsRequest {
-    
-    public GroupsGetMemberGroupsPathParams pathParams;
-    public GroupsGetMemberGroupsRequest withPathParams(GroupsGetMemberGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GroupsGetMemberGroupsQueryParams queryParams;
-    public GroupsGetMemberGroupsRequest withQueryParams(GroupsGetMemberGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Group filtering parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, java.util.Map<String, Object>> request;
-    public GroupsGetMemberGroupsRequest withRequest(java.util.Map<String, java.util.Map<String, Object>> request) {
-        this.request = request;
+    public java.util.Map<String, java.util.Map<String, Object>> requestBody;
+    public GroupsGetMemberGroupsRequest withRequestBody(java.util.Map<String, java.util.Map<String, Object>> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public GroupsGetMemberGroupsRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    
+    /**
+     * The object ID of the group for which to get group membership.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public GroupsGetMemberGroupsRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
+    
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public GroupsGetMemberGroupsRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

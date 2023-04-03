@@ -4,20 +4,109 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSignalResourceRequest {
-    
-    public GETSignalResourceQueryParams queryParams;
-    public GETSignalResourceRequest withQueryParams(GETSignalResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSignalResourceActionEnum action;
+    public GETSignalResourceRequest withAction(GETSignalResourceActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The logical ID of the resource that you want to signal. The logical ID is the name of the resource that given in the template.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogicalResourceId")
+    public String logicalResourceId;
+    public GETSignalResourceRequest withLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
     
-    public GETSignalResourceHeaders headers;
-    public GETSignalResourceRequest withHeaders(GETSignalResourceHeaders headers) {
-        this.headers = headers;
+    /**
+     * The stack name or unique stack ID that includes the resource that you want to signal.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
+    public String stackName;
+    public GETSignalResourceRequest withStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    
+    /**
+     * The status of the signal, which is either success or failure. A failure signal causes CloudFormation to immediately fail the stack creation or update.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public GETSignalResourceStatusEnum status;
+    public GETSignalResourceRequest withStatus(GETSignalResourceStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * A unique ID of the signal. When you signal Amazon EC2 instances or Auto Scaling groups, specify the instance ID that you are signaling as the unique ID. If you send multiple signals to a single resource (such as signaling a wait condition), each signal requires a different unique ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UniqueId")
+    public String uniqueId;
+    public GETSignalResourceRequest withUniqueId(String uniqueId) {
+        this.uniqueId = uniqueId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSignalResourceVersionEnum version;
+    public GETSignalResourceRequest withVersion(GETSignalResourceVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSignalResourceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSignalResourceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSignalResourceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSignalResourceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSignalResourceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSignalResourceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSignalResourceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

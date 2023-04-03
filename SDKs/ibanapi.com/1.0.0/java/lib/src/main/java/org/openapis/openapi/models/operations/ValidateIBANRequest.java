@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateIBANRequest {
-    
-    public ValidateIBANQueryParams queryParams;
-    public ValidateIBANRequest withQueryParams(ValidateIBANQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public ValidateIBANSecurity security;
-    public ValidateIBANRequest withSecurity(ValidateIBANSecurity security) {
-        this.security = security;
+    /**
+     * The IBAN
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iban")
+    public String iban;
+    public ValidateIBANRequest withIban(String iban) {
+        this.iban = iban;
         return this;
     }
     

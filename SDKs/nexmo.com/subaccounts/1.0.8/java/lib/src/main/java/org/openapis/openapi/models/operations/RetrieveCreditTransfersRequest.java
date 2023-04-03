@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveCreditTransfersRequest {
-    
-    public RetrieveCreditTransfersPathParams pathParams;
-    public RetrieveCreditTransfersRequest withPathParams(RetrieveCreditTransfersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the primary account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
+    public String apiKey;
+    public RetrieveCreditTransfersRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public RetrieveCreditTransfersQueryParams queryParams;
-    public RetrieveCreditTransfersRequest withQueryParams(RetrieveCreditTransfersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * End of the retrieval period. If absent then all transfers until now is returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public RetrieveCreditTransfersRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * Start of the retrieval period.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public RetrieveCreditTransfersRequest withStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
     
-    public RetrieveCreditTransfersSecurity security;
-    public RetrieveCreditTransfersRequest withSecurity(RetrieveCreditTransfersSecurity security) {
-        this.security = security;
+    /**
+     * Subaccount to filter by. You may send this multiple times to filter on multiple subaccounts
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subaccount")
+    public String subaccount;
+    public RetrieveCreditTransfersRequest withSubaccount(String subaccount) {
+        this.subaccount = subaccount;
         return this;
     }
     

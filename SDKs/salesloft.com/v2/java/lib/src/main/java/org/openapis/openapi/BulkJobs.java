@@ -46,7 +46,7 @@ public class BulkJobs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2BulkJobsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV2BulkJobsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -84,7 +84,7 @@ public class BulkJobs {
      */
     public org.openapis.openapi.models.operations.GetV2BulkJobsIdResponse getV2BulkJobsId(org.openapis.openapi.models.operations.GetV2BulkJobsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2BulkJobsIdPathParams.class, baseUrl, "/v2/bulk_jobs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2BulkJobsIdRequest.class, baseUrl, "/v2/bulk_jobs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -123,7 +123,7 @@ public class BulkJobs {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostV2BulkJobsResponse postV2BulkJobs(org.openapis.openapi.models.operations.PostV2BulkJobsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV2BulkJobsResponse postV2BulkJobs(org.openapis.openapi.models.operations.PostV2BulkJobsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/bulk_jobs");
         
@@ -168,12 +168,12 @@ public class BulkJobs {
      */
     public org.openapis.openapi.models.operations.PutV2BulkJobsIdResponse putV2BulkJobsId(org.openapis.openapi.models.operations.PutV2BulkJobsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2BulkJobsIdPathParams.class, baseUrl, "/v2/bulk_jobs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2BulkJobsIdRequest.class, baseUrl, "/v2/bulk_jobs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         

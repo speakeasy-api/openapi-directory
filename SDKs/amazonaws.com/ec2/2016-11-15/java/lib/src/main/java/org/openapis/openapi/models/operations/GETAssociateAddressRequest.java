@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateAddressRequest {
-    
-    public GETAssociateAddressQueryParams queryParams;
-    public GETAssociateAddressRequest withQueryParams(GETAssociateAddressQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETAssociateAddressActionEnum action;
+    public GETAssociateAddressRequest withAction(GETAssociateAddressActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * [EC2-VPC] The allocation ID. This is required for EC2-VPC.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocationId")
+    public String allocationId;
+    public GETAssociateAddressRequest withAllocationId(String allocationId) {
+        this.allocationId = allocationId;
+        return this;
+    }
     
-    public GETAssociateAddressHeaders headers;
-    public GETAssociateAddressRequest withHeaders(GETAssociateAddressHeaders headers) {
-        this.headers = headers;
+    /**
+     * [EC2-VPC] For a VPC in an EC2-Classic account, specify true to allow an Elastic IP address that is already associated with an instance or network interface to be reassociated with the specified instance or network interface. Otherwise, the operation fails. In a VPC in an EC2-VPC-only account, reassociation is automatic, therefore you can specify false to ensure the operation fails if the Elastic IP address is already associated with another resource.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllowReassociation")
+    public Boolean allowReassociation;
+    public GETAssociateAddressRequest withAllowReassociation(Boolean allowReassociation) {
+        this.allowReassociation = allowReassociation;
+        return this;
+    }
+    
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETAssociateAddressRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    
+    /**
+     * The ID of the instance. The instance must have exactly one attached network interface. For EC2-VPC, you can specify either the instance ID or the network interface ID, but not both. For EC2-Classic, you must specify an instance ID and the instance must be in the running state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETAssociateAddressRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;[EC2-VPC] The ID of the network interface. If the instance has more than one network interface, you must specify a network interface ID.&lt;/p&gt; &lt;p&gt;For EC2-VPC, you can specify either the instance ID or the network interface ID, but not both. &lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
+    public String networkInterfaceId;
+    public GETAssociateAddressRequest withNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    
+    /**
+     * [EC2-VPC] The primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrivateIpAddress")
+    public String privateIpAddress;
+    public GETAssociateAddressRequest withPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    
+    /**
+     * [EC2-Classic] The Elastic IP address to associate with the instance. This is required for EC2-Classic.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicIp")
+    public String publicIp;
+    public GETAssociateAddressRequest withPublicIp(String publicIp) {
+        this.publicIp = publicIp;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETAssociateAddressVersionEnum version;
+    public GETAssociateAddressRequest withVersion(GETAssociateAddressVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETAssociateAddressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETAssociateAddressRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETAssociateAddressRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETAssociateAddressRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETAssociateAddressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETAssociateAddressRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETAssociateAddressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETStartExportTaskRequest {
-    
-    public GETStartExportTaskQueryParams queryParams;
-    public GETStartExportTaskRequest withQueryParams(GETStartExportTaskQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETStartExportTaskActionEnum action;
+    public GETStartExportTaskRequest withAction(GETStartExportTaskActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * &lt;p&gt;The data to be exported from the snapshot or cluster. If this parameter is not provided, all of the data is exported. Valid values are the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;database&lt;/code&gt; - Export all the data from a specified database.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;database.table&lt;/code&gt; &lt;i&gt;table-name&lt;/i&gt; - Export a table of the snapshot or cluster. This format is valid only for RDS for MySQL, RDS for MariaDB, and Aurora MySQL.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;database.schema&lt;/code&gt; &lt;i&gt;schema-name&lt;/i&gt; - Export a database schema of the snapshot or cluster. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;database.schema.table&lt;/code&gt; &lt;i&gt;table-name&lt;/i&gt; - Export a table of the database schema. This format is valid only for RDS for PostgreSQL and Aurora PostgreSQL.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExportOnly")
+    public String[] exportOnly;
+    public GETStartExportTaskRequest withExportOnly(String[] exportOnly) {
+        this.exportOnly = exportOnly;
+        return this;
+    }
     
-    public GETStartExportTaskHeaders headers;
-    public GETStartExportTaskRequest withHeaders(GETStartExportTaskHeaders headers) {
-        this.headers = headers;
+    /**
+     * A unique identifier for the export task. This ID isn't an identifier for the Amazon S3 bucket where the data is to be exported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExportTaskIdentifier")
+    public String exportTaskIdentifier;
+    public GETStartExportTaskRequest withExportTaskIdentifier(String exportTaskIdentifier) {
+        this.exportTaskIdentifier = exportTaskIdentifier;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the IAM role to use for writing to the Amazon S3 bucket when exporting a snapshot or cluster.&lt;/p&gt; &lt;p&gt;In the IAM policy attached to your IAM role, include the following required actions to allow the transfer of files from Amazon RDS or Amazon Aurora to an S3 bucket:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;s3:PutObject*&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;s3:GetObject*&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;s3:ListBucket&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;s3:DeleteObject*&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;s3:GetBucketLocation &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;In the policy, include the resources to identify the S3 bucket and objects in the bucket. The following list of resources shows the Amazon Resource Name (ARN) format for accessing S3:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;arn:aws:s3:::&lt;i&gt;your-s3-bucket&lt;/i&gt; &lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;arn:aws:s3:::&lt;i&gt;your-s3-bucket&lt;/i&gt;/*&lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IamRoleArn")
+    public String iamRoleArn;
+    public GETStartExportTaskRequest withIamRoleArn(String iamRoleArn) {
+        this.iamRoleArn = iamRoleArn;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The ID of the Amazon Web Services KMS key to use to encrypt the data exported to Amazon S3. The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. The caller of this operation must be authorized to run the following operations. These can be set in the Amazon Web Services KMS key policy:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;kms:Encrypt&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;kms:Decrypt&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;kms:GenerateDataKey&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;kms:GenerateDataKeyWithoutPlaintext&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;kms:ReEncryptFrom&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;kms:ReEncryptTo&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;kms:CreateGrant&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;kms:DescribeKey&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;kms:RetireGrant&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=KmsKeyId")
+    public String kmsKeyId;
+    public GETStartExportTaskRequest withKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    
+    /**
+     * The name of the Amazon S3 bucket to export the snapshot or cluster data to.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=S3BucketName")
+    public String s3BucketName;
+    public GETStartExportTaskRequest withS3BucketName(String s3BucketName) {
+        this.s3BucketName = s3BucketName;
+        return this;
+    }
+    
+    /**
+     * The Amazon S3 bucket prefix to use as the file name and path of the exported data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=S3Prefix")
+    public String s3Prefix;
+    public GETStartExportTaskRequest withS3Prefix(String s3Prefix) {
+        this.s3Prefix = s3Prefix;
+        return this;
+    }
+    
+    /**
+     * The Amazon Resource Name (ARN) of the snapshot or cluster to export to Amazon S3.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceArn")
+    public String sourceArn;
+    public GETStartExportTaskRequest withSourceArn(String sourceArn) {
+        this.sourceArn = sourceArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETStartExportTaskVersionEnum version;
+    public GETStartExportTaskRequest withVersion(GETStartExportTaskVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETStartExportTaskRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETStartExportTaskRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETStartExportTaskRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETStartExportTaskRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETStartExportTaskRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETStartExportTaskRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETStartExportTaskRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

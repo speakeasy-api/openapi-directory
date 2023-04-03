@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddClassUserRequest {
-    
-    public AddClassUserPathParams pathParams;
-    public AddClassUserRequest withPathParams(AddClassUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the class
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=class")
+    public String class_;
+    public AddClassUserRequest withClass(String class_) {
+        this.class_ = class_;
         return this;
     }
     
-    
-    public AddClassUserSecurity security;
-    public AddClassUserRequest withSecurity(AddClassUserSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user")
+    public String user;
+    public AddClassUserRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

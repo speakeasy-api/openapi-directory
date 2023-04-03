@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSessionUsingGETRequest {
-    
-    public DeleteSessionUsingGETQueryParams queryParams;
-    public DeleteSessionUsingGETRequest withQueryParams(DeleteSessionUsingGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sessionID")
+    public String sessionID;
+    public DeleteSessionUsingGETRequest withSessionID(String sessionID) {
+        this.sessionID = sessionID;
         return this;
     }
     

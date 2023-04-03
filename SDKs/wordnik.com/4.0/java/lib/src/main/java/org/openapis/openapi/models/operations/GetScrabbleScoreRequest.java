@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScrabbleScoreRequest {
-    
-    public GetScrabbleScorePathParams pathParams;
-    public GetScrabbleScoreRequest withPathParams(GetScrabbleScorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Word to get scrabble score for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public GetScrabbleScoreRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

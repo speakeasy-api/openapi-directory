@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveDownloadShareRequest {
-    
-    public RemoveDownloadSharePathParams pathParams;
-    public RemoveDownloadShareRequest withPathParams(RemoveDownloadSharePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveDownloadShareRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RemoveDownloadShareHeaders headers;
-    public RemoveDownloadShareRequest withHeaders(RemoveDownloadShareHeaders headers) {
-        this.headers = headers;
+    /**
+     * Share ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=share_id")
+    public Long shareId;
+    public RemoveDownloadShareRequest withShareId(Long shareId) {
+        this.shareId = shareId;
         return this;
     }
     

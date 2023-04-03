@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkWebhooksHttpServerRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=httpServerId")
+    public String httpServerId;
+    public DeleteNetworkWebhooksHttpServerRequest withHttpServerId(String httpServerId) {
+        this.httpServerId = httpServerId;
+        return this;
+    }
     
-    public DeleteNetworkWebhooksHttpServerPathParams pathParams;
-    public DeleteNetworkWebhooksHttpServerRequest withPathParams(DeleteNetworkWebhooksHttpServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkWebhooksHttpServerRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

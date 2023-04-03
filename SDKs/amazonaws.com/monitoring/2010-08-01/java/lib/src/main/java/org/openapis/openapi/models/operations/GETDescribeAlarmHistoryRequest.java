@@ -4,20 +4,150 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeAlarmHistoryRequest {
-    
-    public GETDescribeAlarmHistoryQueryParams queryParams;
-    public GETDescribeAlarmHistoryRequest withQueryParams(GETDescribeAlarmHistoryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeAlarmHistoryActionEnum action;
+    public GETDescribeAlarmHistoryRequest withAction(GETDescribeAlarmHistoryActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the alarm.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AlarmName")
+    public String alarmName;
+    public GETDescribeAlarmHistoryRequest withAlarmName(String alarmName) {
+        this.alarmName = alarmName;
+        return this;
+    }
     
-    public GETDescribeAlarmHistoryHeaders headers;
-    public GETDescribeAlarmHistoryRequest withHeaders(GETDescribeAlarmHistoryHeaders headers) {
-        this.headers = headers;
+    /**
+     * Use this parameter to specify whether you want the operation to return metric alarms or composite alarms. If you omit this parameter, only metric alarms are returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AlarmTypes")
+    public org.openapis.openapi.models.shared.AlarmTypeEnum[] alarmTypes;
+    public GETDescribeAlarmHistoryRequest withAlarmTypes(org.openapis.openapi.models.shared.AlarmTypeEnum[] alarmTypes) {
+        this.alarmTypes = alarmTypes;
+        return this;
+    }
+    
+    /**
+     * The ending date to retrieve alarm history.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public GETDescribeAlarmHistoryRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * The type of alarm histories to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HistoryItemType")
+    public GETDescribeAlarmHistoryHistoryItemTypeEnum historyItemType;
+    public GETDescribeAlarmHistoryRequest withHistoryItemType(GETDescribeAlarmHistoryHistoryItemTypeEnum historyItemType) {
+        this.historyItemType = historyItemType;
+        return this;
+    }
+    
+    /**
+     * The maximum number of alarm history records to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeAlarmHistoryRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * The token returned by a previous call to indicate that there is more data available.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GETDescribeAlarmHistoryRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * Specified whether to return the newest or oldest alarm history first. Specify &lt;code&gt;TimestampDescending&lt;/code&gt; to have the newest event history returned first, and specify &lt;code&gt;TimestampAscending&lt;/code&gt; to have the oldest history returned first.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ScanBy")
+    public GETDescribeAlarmHistoryScanByEnum scanBy;
+    public GETDescribeAlarmHistoryRequest withScanBy(GETDescribeAlarmHistoryScanByEnum scanBy) {
+        this.scanBy = scanBy;
+        return this;
+    }
+    
+    /**
+     * The starting date to retrieve alarm history.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public GETDescribeAlarmHistoryRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeAlarmHistoryVersionEnum version;
+    public GETDescribeAlarmHistoryRequest withVersion(GETDescribeAlarmHistoryVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeAlarmHistoryRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeAlarmHistoryRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeAlarmHistoryRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeAlarmHistoryRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeAlarmHistoryRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeAlarmHistoryRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeAlarmHistoryRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

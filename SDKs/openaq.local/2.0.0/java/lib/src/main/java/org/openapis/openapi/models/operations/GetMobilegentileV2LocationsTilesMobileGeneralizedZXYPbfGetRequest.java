@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest {
-    
-    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams pathParams;
-    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withPathParams(GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
+    public Boolean isAnalysis;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withIsAnalysis(Boolean isAnalysis) {
+        this.isAnalysis = isAnalysis;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
+    public Boolean isMobile;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withIsMobile(Boolean isMobile) {
+        this.isMobile = isMobile;
+        return this;
+    }
     
-    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQueryParams queryParams;
-    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withQueryParams(GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastUpdatedFrom")
+    public Object lastUpdatedFrom;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withLastUpdatedFrom(Object lastUpdatedFrom) {
+        this.lastUpdatedFrom = lastUpdatedFrom;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastUpdatedTo")
+    public Object lastUpdatedTo;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withLastUpdatedTo(Object lastUpdatedTo) {
+        this.lastUpdatedTo = lastUpdatedTo;
+        return this;
+    }
+    
+    /**
+     * limit data to location id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
+    public Long[] location;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withLocation(Long[] location) {
+        this.location = location;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
+    public Object parameter;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withParameter(Object parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
+    public Long project;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withProject(Long project) {
+        this.project = project;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=x")
+    public Long x;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withX(Long x) {
+        this.x = x;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=y")
+    public Long y;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withY(Long y) {
+        this.y = y;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
+    public Long z;
+    public GetMobilegentileV2LocationsTilesMobileGeneralizedZXYPbfGetRequest withZ(Long z) {
+        this.z = z;
         return this;
     }
     

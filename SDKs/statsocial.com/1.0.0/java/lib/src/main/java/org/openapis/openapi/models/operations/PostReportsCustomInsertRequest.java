@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportsCustomInsertRequest {
+    /**
+     * List of twitter ids, separated by commas, to be inserted into report. Ids must be enclosed with brackets ie. [177490485] or [177490485,23423434]
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Object[] ids;
+    public PostReportsCustomInsertRequest withIds(Object[] ids) {
+        this.ids = ids;
+        return this;
+    }
     
-    public PostReportsCustomInsertQueryParams queryParams;
-    public PostReportsCustomInsertRequest withQueryParams(PostReportsCustomInsertQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Upload hash to be used for inserting handles
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_hash")
+    public String uploadHash;
+    public PostReportsCustomInsertRequest withUploadHash(String uploadHash) {
+        this.uploadHash = uploadHash;
         return this;
     }
     

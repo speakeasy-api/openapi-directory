@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductsIdImagesImageIdJsonRequest {
-    
-    public DeleteProductsIdImagesImageIdJsonPathParams pathParams;
-    public DeleteProductsIdImagesImageIdJsonRequest withPathParams(DeleteProductsIdImagesImageIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeleteProductsIdImagesImageIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteProductsIdImagesImageIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteProductsIdImagesImageIdJsonQueryParams queryParams;
-    public DeleteProductsIdImagesImageIdJsonRequest withQueryParams(DeleteProductsIdImagesImageIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the Product Image
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=image_id")
+    public Integer imageId;
+    public DeleteProductsIdImagesImageIdJsonRequest withImageId(Integer imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeleteProductsIdImagesImageIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

@@ -4,20 +4,130 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitteeCommitteeIdHistoryCycleRequest {
-    
-    public GetCommitteeCommitteeIdHistoryCyclePathParams pathParams;
-    public GetCommitteeCommitteeIdHistoryCycleRequest withPathParams(GetCommitteeCommitteeIdHistoryCyclePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API key for https://api.data.gov. Get one at https://api.data.gov/signup.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * A unique identifier assigned to each committee or filer registered with the FEC. In general committee id's begin with the letter C which is followed by eight digits.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=committee_id")
+    public String committeeId;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withCommitteeId(String committeeId) {
+        this.committeeId = committeeId;
+        return this;
+    }
     
-    public GetCommitteeCommitteeIdHistoryCycleQueryParams queryParams;
-    public GetCommitteeCommitteeIdHistoryCycleRequest withQueryParams(GetCommitteeCommitteeIdHistoryCycleQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A two year election cycle that the committee was active- (after original registration
+     * date but before expiration date in Form 1s) The cycle begins with
+     * an odd year and is named for its ending, even year.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cycle")
+    public Integer cycle;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withCycle(Integer cycle) {
+        this.cycle = cycle;
+        return this;
+    }
+    
+    /**
+     * The one-letter designation code of the organization:
+     *          - A authorized by a candidate
+     *          - J joint fundraising committee
+     *          - P principal campaign committee of a candidate
+     *          - U unauthorized
+     *          - B lobbyist/registrant PAC
+     *          - D leadership PAC
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=designation")
+    public GetCommitteeCommitteeIdHistoryCycleDesignationEnum[] designation;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withDesignation(GetCommitteeCommitteeIdHistoryCycleDesignationEnum[] designation) {
+        this.designation = designation;
+        return this;
+    }
+    
+    /**
+     * `True` indicates that full election period of a candidate.
+     * `False` indicates that two year election cycle.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
+    public Boolean electionFull;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withElectionFull(Boolean electionFull) {
+        this.electionFull = electionFull;
+        return this;
+    }
+    
+    /**
+     * For paginating through results, starting at page 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results returned per page. Defaults to 20.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Provide a field to sort by. Use `-` for descending order.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Hide null values on sorted column(s).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
+    public Boolean sortHideNull;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withSortHideNull(Boolean sortHideNull) {
+        this.sortHideNull = sortHideNull;
+        return this;
+    }
+    
+    /**
+     * Toggle that filters out all rows having sort column that is non-null
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
+    public Boolean sortNullOnly;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withSortNullOnly(Boolean sortNullOnly) {
+        this.sortNullOnly = sortNullOnly;
+        return this;
+    }
+    
+    /**
+     * Toggle that sorts null values last
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
+    public Boolean sortNullsLast;
+    public GetCommitteeCommitteeIdHistoryCycleRequest withSortNullsLast(Boolean sortNullsLast) {
+        this.sortNullsLast = sortNullsLast;
         return this;
     }
     

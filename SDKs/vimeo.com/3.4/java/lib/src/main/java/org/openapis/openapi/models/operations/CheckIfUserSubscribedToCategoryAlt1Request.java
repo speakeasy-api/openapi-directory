@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfUserSubscribedToCategoryAlt1Request {
-    
-    public CheckIfUserSubscribedToCategoryAlt1PathParams pathParams;
-    public CheckIfUserSubscribedToCategoryAlt1Request withPathParams(CheckIfUserSubscribedToCategoryAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CheckIfUserSubscribedToCategoryAlt1Security security;
-    public CheckIfUserSubscribedToCategoryAlt1Request withSecurity(CheckIfUserSubscribedToCategoryAlt1Security security) {
-        this.security = security;
+    /**
+     * The name of the category.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category")
+    public String category;
+    public CheckIfUserSubscribedToCategoryAlt1Request withCategory(String category) {
+        this.category = category;
         return this;
     }
     

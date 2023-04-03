@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CompleteOpenIdLoginQueryParams;
 import org.openapis.openapi.models.operations.CompleteOpenIdLoginRequest;
 import org.openapis.openapi.models.operations.CompleteOpenIdLoginResponse;
 
@@ -13,19 +12,15 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             CompleteOpenIdLoginRequest req = new CompleteOpenIdLoginRequest() {{
-                queryParams = new CompleteOpenIdLoginQueryParams() {{
-                    code = "corrupti";
-                    idToken = "provident";
-                    state = "distinctio";
-                }};
-            }};            
+                code = "corrupti";
+                idToken = "provident";
+                state = "distinctio";
+            }}            
 
             CompleteOpenIdLoginResponse res = sdk.auth.completeOpenIdLogin(req);
 

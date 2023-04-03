@@ -39,7 +39,7 @@ public class Package {
      */
     public org.openapis.openapi.models.operations.DeletePackageResponse deletePackage(org.openapis.openapi.models.operations.DeletePackageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePackagePathParams.class, baseUrl, "/packages/{owner}/{type}/{name}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePackageRequest.class, baseUrl, "/packages/{owner}/{type}/{name}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -72,7 +72,7 @@ public class Package {
      */
     public org.openapis.openapi.models.operations.GetPackageResponse getPackage(org.openapis.openapi.models.operations.GetPackageRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPackagePathParams.class, baseUrl, "/packages/{owner}/{type}/{name}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPackageRequest.class, baseUrl, "/packages/{owner}/{type}/{name}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -118,7 +118,7 @@ public class Package {
      */
     public org.openapis.openapi.models.operations.ListPackageFilesResponse listPackageFiles(org.openapis.openapi.models.operations.ListPackageFilesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPackageFilesPathParams.class, baseUrl, "/packages/{owner}/{type}/{name}/{version}/files", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPackageFilesRequest.class, baseUrl, "/packages/{owner}/{type}/{name}/{version}/files", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,13 +164,13 @@ public class Package {
      */
     public org.openapis.openapi.models.operations.ListPackagesResponse listPackages(org.openapis.openapi.models.operations.ListPackagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPackagesPathParams.class, baseUrl, "/packages/{owner}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPackagesRequest.class, baseUrl, "/packages/{owner}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPackagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListPackagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

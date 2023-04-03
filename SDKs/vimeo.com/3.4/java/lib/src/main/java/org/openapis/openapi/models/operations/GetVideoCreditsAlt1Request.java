@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoCreditsAlt1Request {
-    
-    public GetVideoCreditsAlt1PathParams pathParams;
-    public GetVideoCreditsAlt1Request withPathParams(GetVideoCreditsAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public GetVideoCreditsAlt1Request withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetVideoCreditsAlt1DirectionEnum direction;
+    public GetVideoCreditsAlt1Request withDirection(GetVideoCreditsAlt1DirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public GetVideoCreditsAlt1QueryParams queryParams;
-    public GetVideoCreditsAlt1Request withQueryParams(GetVideoCreditsAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVideoCreditsAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVideoCreditsAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetVideoCreditsAlt1Request withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVideoCreditsAlt1SortEnum sort;
+    public GetVideoCreditsAlt1Request withSort(GetVideoCreditsAlt1SortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetVideoCreditsAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

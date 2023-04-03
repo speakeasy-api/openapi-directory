@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OfficesAddExamRoomRequest {
-    
-    public OfficesAddExamRoomPathParams pathParams;
-    public OfficesAddExamRoomRequest withPathParams(OfficesAddExamRoomPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public OfficesAddExamRoomRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public OfficesAddExamRoomQueryParams queryParams;
-    public OfficesAddExamRoomRequest withQueryParams(OfficesAddExamRoomQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public OfficesAddExamRoomSecurity security;
-    public OfficesAddExamRoomRequest withSecurity(OfficesAddExamRoomSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public OfficesAddExamRoomRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

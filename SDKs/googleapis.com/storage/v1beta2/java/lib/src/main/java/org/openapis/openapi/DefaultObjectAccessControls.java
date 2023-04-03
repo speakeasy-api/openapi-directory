@@ -34,25 +34,26 @@ public class DefaultObjectAccessControls {
     /**
      * Permanently deletes the default object ACL entry for the specified entity on the specified bucket.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteResponse storageDefaultObjectAccessControlsDelete(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteResponse storageDefaultObjectAccessControlsDelete(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteRequest request, org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeletePathParams.class, baseUrl, "/b/{bucket}/defaultObjectAcl/{entity}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteRequest.class, baseUrl, "/b/{bucket}/defaultObjectAcl/{entity}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,25 +74,26 @@ public class DefaultObjectAccessControls {
     /**
      * Returns the default object ACL entry for the specified entity on the specified bucket.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetResponse storageDefaultObjectAccessControlsGet(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetResponse storageDefaultObjectAccessControlsGet(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetRequest request, org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetPathParams.class, baseUrl, "/b/{bucket}/defaultObjectAcl/{entity}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetRequest.class, baseUrl, "/b/{bucket}/defaultObjectAcl/{entity}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -118,27 +120,28 @@ public class DefaultObjectAccessControls {
     /**
      * Creates a new default object ACL entry on the specified bucket.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertResponse storageDefaultObjectAccessControlsInsert(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertResponse storageDefaultObjectAccessControlsInsert(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertRequest request, org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertPathParams.class, baseUrl, "/b/{bucket}/defaultObjectAcl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertRequest.class, baseUrl, "/b/{bucket}/defaultObjectAcl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "objectAccessControl", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -165,25 +168,26 @@ public class DefaultObjectAccessControls {
     /**
      * Retrieves default object ACL entries on the specified bucket.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListResponse storageDefaultObjectAccessControlsList(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListResponse storageDefaultObjectAccessControlsList(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListRequest request, org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListPathParams.class, baseUrl, "/b/{bucket}/defaultObjectAcl", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListRequest.class, baseUrl, "/b/{bucket}/defaultObjectAcl", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -210,27 +214,28 @@ public class DefaultObjectAccessControls {
     /**
      * Updates a default object ACL entry on the specified bucket. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchResponse storageDefaultObjectAccessControlsPatch(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchResponse storageDefaultObjectAccessControlsPatch(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchRequest request, org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchPathParams.class, baseUrl, "/b/{bucket}/defaultObjectAcl/{entity}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchRequest.class, baseUrl, "/b/{bucket}/defaultObjectAcl/{entity}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "objectAccessControl", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -257,27 +262,28 @@ public class DefaultObjectAccessControls {
     /**
      * Updates a default object ACL entry on the specified bucket.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateResponse storageDefaultObjectAccessControlsUpdate(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateResponse storageDefaultObjectAccessControlsUpdate(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateRequest request, org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdatePathParams.class, baseUrl, "/b/{bucket}/defaultObjectAcl/{entity}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateRequest.class, baseUrl, "/b/{bucket}/defaultObjectAcl/{entity}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "objectAccessControl", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageDefaultObjectAccessControlsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

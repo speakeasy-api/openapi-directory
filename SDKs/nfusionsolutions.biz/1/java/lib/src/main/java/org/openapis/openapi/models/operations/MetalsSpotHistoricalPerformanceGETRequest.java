@@ -4,13 +4,54 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetalsSpotHistoricalPerformanceGETRequest {
+    /**
+     * comma separated list of conversion currencies, defaults to USD
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
+    public String currency;
+    public MetalsSpotHistoricalPerformanceGETRequest withCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
     
-    public MetalsSpotHistoricalPerformanceGETQueryParams queryParams;
-    public MetalsSpotHistoricalPerformanceGETRequest withQueryParams(MetalsSpotHistoricalPerformanceGETQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * to override content negotiation specify a value of json or xml
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public MetalsSpotHistoricalPerformanceGETFormatEnum format;
+    public MetalsSpotHistoricalPerformanceGETRequest withFormat(MetalsSpotHistoricalPerformanceGETFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * comma separated list of metals
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metals")
+    public String metals;
+    public MetalsSpotHistoricalPerformanceGETRequest withMetals(String metals) {
+        this.metals = metals;
+        return this;
+    }
+    
+    /**
+     * unit of meaure, defaults to troy ounces. allowed values are:
+     * mg=milligram
+     * g=gram
+     * kg=kilogram
+     * gr=grain
+     * oz=ounce
+     * toz=troy ounce
+     * ct=carat
+     * dwt=pennyweight
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitofmeasure")
+    public MetalsSpotHistoricalPerformanceGETUnitofmeasureEnum unitofmeasure;
+    public MetalsSpotHistoricalPerformanceGETRequest withUnitofmeasure(MetalsSpotHistoricalPerformanceGETUnitofmeasureEnum unitofmeasure) {
+        this.unitofmeasure = unitofmeasure;
         return this;
     }
     

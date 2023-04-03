@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChannelVideoRequest {
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public GetChannelVideoRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public GetChannelVideoPathParams pathParams;
-    public GetChannelVideoRequest withPathParams(GetChannelVideoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetChannelVideoRequest withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

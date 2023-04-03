@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSegmentRequest {
-    
-    public UpdateSegmentPathParams pathParams;
-    public UpdateSegmentRequest withPathParams(UpdateSegmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.UpdateSegmentModel updateSegmentModel;
+    public UpdateSegmentRequest withUpdateSegmentModel(org.openapis.openapi.models.shared.UpdateSegmentModel updateSegmentModel) {
+        this.updateSegmentModel = updateSegmentModel;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateSegmentModel request;
-    public UpdateSegmentRequest withRequest(org.openapis.openapi.models.shared.UpdateSegmentModel request) {
-        this.request = request;
+    /**
+     * The identifier of the Segment.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=segmentId")
+    public String segmentId;
+    public UpdateSegmentRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
         return this;
     }
     

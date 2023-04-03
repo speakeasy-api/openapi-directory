@@ -34,19 +34,20 @@ public class VideosEmbedPrivacy {
      * Permit a video to be embedded on a domain
      * If domain privacy is enabled for this video, this method permits the video to be embedded on the specified domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVideoPrivacyDomainResponse addVideoPrivacyDomain(org.openapis.openapi.models.operations.AddVideoPrivacyDomainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVideoPrivacyDomainResponse addVideoPrivacyDomain(org.openapis.openapi.models.operations.AddVideoPrivacyDomainRequest request, org.openapis.openapi.models.operations.AddVideoPrivacyDomainSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoPrivacyDomainPathParams.class, baseUrl, "/videos/{video_id}/privacy/domains/{domain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddVideoPrivacyDomainRequest.class, baseUrl, "/videos/{video_id}/privacy/domains/{domain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -75,19 +76,20 @@ public class VideosEmbedPrivacy {
     /**
      * Restrict a video from being embedded on a domain
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVideoPrivacyDomainResponse deleteVideoPrivacyDomain(org.openapis.openapi.models.operations.DeleteVideoPrivacyDomainRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVideoPrivacyDomainResponse deleteVideoPrivacyDomain(org.openapis.openapi.models.operations.DeleteVideoPrivacyDomainRequest request, org.openapis.openapi.models.operations.DeleteVideoPrivacyDomainSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoPrivacyDomainPathParams.class, baseUrl, "/videos/{video_id}/privacy/domains/{domain}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVideoPrivacyDomainRequest.class, baseUrl, "/videos/{video_id}/privacy/domains/{domain}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,13 +123,13 @@ public class VideosEmbedPrivacy {
      */
     public org.openapis.openapi.models.operations.GetVideoPrivacyDomainsResponse getVideoPrivacyDomains(org.openapis.openapi.models.operations.GetVideoPrivacyDomainsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoPrivacyDomainsPathParams.class, baseUrl, "/videos/{video_id}/privacy/domains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVideoPrivacyDomainsRequest.class, baseUrl, "/videos/{video_id}/privacy/domains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoPrivacyDomainsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetVideoPrivacyDomainsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

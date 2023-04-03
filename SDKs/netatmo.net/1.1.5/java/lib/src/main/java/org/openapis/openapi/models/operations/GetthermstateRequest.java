@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetthermstateRequest {
-    
-    public GetthermstateQueryParams queryParams;
-    public GetthermstateRequest withQueryParams(GetthermstateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The relay id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
+    public String deviceId;
+    public GetthermstateRequest withDeviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
     
-    
-    public GetthermstateSecurity security;
-    public GetthermstateRequest withSecurity(GetthermstateSecurity security) {
-        this.security = security;
+    /**
+     * The thermostat id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
+    public String moduleId;
+    public GetthermstateRequest withModuleId(String moduleId) {
+        this.moduleId = moduleId;
         return this;
     }
     

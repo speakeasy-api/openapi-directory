@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFileAssociationsRequest {
-    
-    public GetFileAssociationsPathParams pathParams;
-    public GetFileAssociationsRequest withPathParams(GetFileAssociationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * File id for single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileId")
+    public String fileId;
+    public GetFileAssociationsRequest withFileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
     
-    
-    public GetFileAssociationsHeaders headers;
-    public GetFileAssociationsRequest withHeaders(GetFileAssociationsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetFileAssociationsSecurity security;
-    public GetFileAssociationsRequest withSecurity(GetFileAssociationsSecurity security) {
-        this.security = security;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
+    public String xeroTenantId;
+    public GetFileAssociationsRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     

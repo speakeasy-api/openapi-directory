@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceSwitchWarmSpareRequest {
-    
-    public UpdateDeviceSwitchWarmSparePathParams pathParams;
-    public UpdateDeviceSwitchWarmSpareRequest withPathParams(UpdateDeviceSwitchWarmSparePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceSwitchWarmSpareRequestBody requestBody;
+    public UpdateDeviceSwitchWarmSpareRequest withRequestBody(UpdateDeviceSwitchWarmSpareRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceSwitchWarmSpareRequestBody request;
-    public UpdateDeviceSwitchWarmSpareRequest withRequest(UpdateDeviceSwitchWarmSpareRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceSwitchWarmSpareRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

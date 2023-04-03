@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETFailoverGlobalReplicationGroupRequest {
-    
-    public GETFailoverGlobalReplicationGroupQueryParams queryParams;
-    public GETFailoverGlobalReplicationGroupRequest withQueryParams(GETFailoverGlobalReplicationGroupQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETFailoverGlobalReplicationGroupActionEnum action;
+    public GETFailoverGlobalReplicationGroupRequest withAction(GETFailoverGlobalReplicationGroupActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The name of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GlobalReplicationGroupId")
+    public String globalReplicationGroupId;
+    public GETFailoverGlobalReplicationGroupRequest withGlobalReplicationGroupId(String globalReplicationGroupId) {
+        this.globalReplicationGroupId = globalReplicationGroupId;
+        return this;
+    }
     
-    public GETFailoverGlobalReplicationGroupHeaders headers;
-    public GETFailoverGlobalReplicationGroupRequest withHeaders(GETFailoverGlobalReplicationGroupHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Amazon region of the primary cluster of the Global datastore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrimaryRegion")
+    public String primaryRegion;
+    public GETFailoverGlobalReplicationGroupRequest withPrimaryRegion(String primaryRegion) {
+        this.primaryRegion = primaryRegion;
+        return this;
+    }
+    
+    /**
+     * The name of the primary replication group
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrimaryReplicationGroupId")
+    public String primaryReplicationGroupId;
+    public GETFailoverGlobalReplicationGroupRequest withPrimaryReplicationGroupId(String primaryReplicationGroupId) {
+        this.primaryReplicationGroupId = primaryReplicationGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETFailoverGlobalReplicationGroupVersionEnum version;
+    public GETFailoverGlobalReplicationGroupRequest withVersion(GETFailoverGlobalReplicationGroupVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETFailoverGlobalReplicationGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETFailoverGlobalReplicationGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETFailoverGlobalReplicationGroupRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETFailoverGlobalReplicationGroupRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETFailoverGlobalReplicationGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETFailoverGlobalReplicationGroupRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETFailoverGlobalReplicationGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

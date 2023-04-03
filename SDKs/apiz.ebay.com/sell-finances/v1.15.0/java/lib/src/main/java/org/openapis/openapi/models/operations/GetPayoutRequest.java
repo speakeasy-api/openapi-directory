@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayoutRequest {
-    
-    public GetPayoutPathParams pathParams;
-    public GetPayoutRequest withPathParams(GetPayoutPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This header identifies the seller's eBay marketplace. It is required for all marketplaces outside of the US. See &lt;a href="/api-docs/static/rest-request-components.html#marketpl " target="_blank "&gt;HTTP request headers&lt;/a&gt; for the marketplace ID values.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
+    public String xEbayCMarketplaceId;
+    public GetPayoutRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
-    
-    public GetPayoutHeaders headers;
-    public GetPayoutRequest withHeaders(GetPayoutHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetPayoutSecurity security;
-    public GetPayoutRequest withSecurity(GetPayoutSecurity security) {
-        this.security = security;
+    /**
+     * The unique identfier of the payout is passed in as a path parameter at the end of the call URI. &lt;br&gt;&lt;br&gt;The &lt;b&gt;getPayouts&lt;/b&gt; method can be used to retrieve the unique identifier of a payout, or the user can check Seller Hub to get the payout ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payout_Id")
+    public String payoutId;
+    public GetPayoutRequest withPayoutId(String payoutId) {
+        this.payoutId = payoutId;
         return this;
     }
     

@@ -4,20 +4,73 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationApplianceUplinkStatusesRequest {
-    
-    public GetOrganizationApplianceUplinkStatusesPathParams pathParams;
-    public GetOrganizationApplianceUplinkStatusesRequest withPathParams(GetOrganizationApplianceUplinkStatusesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endingBefore")
+    public String endingBefore;
+    public GetOrganizationApplianceUplinkStatusesRequest withEndingBefore(String endingBefore) {
+        this.endingBefore = endingBefore;
         return this;
     }
     
+    /**
+     * A list of ICCIDs. The returned devices will be filtered to only include these ICCIDs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=iccids")
+    public String[] iccids;
+    public GetOrganizationApplianceUplinkStatusesRequest withIccids(String[] iccids) {
+        this.iccids = iccids;
+        return this;
+    }
     
-    public GetOrganizationApplianceUplinkStatusesQueryParams queryParams;
-    public GetOrganizationApplianceUplinkStatusesRequest withQueryParams(GetOrganizationApplianceUplinkStatusesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A list of network IDs. The returned devices will be filtered to only include these networks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=networkIds")
+    public String[] networkIds;
+    public GetOrganizationApplianceUplinkStatusesRequest withNetworkIds(String[] networkIds) {
+        this.networkIds = networkIds;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationApplianceUplinkStatusesRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    /**
+     * The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=perPage")
+    public Long perPage;
+    public GetOrganizationApplianceUplinkStatusesRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * A list of serial numbers. The returned devices will be filtered to only include these serials.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=serials")
+    public String[] serials;
+    public GetOrganizationApplianceUplinkStatusesRequest withSerials(String[] serials) {
+        this.serials = serials;
+        return this;
+    }
+    
+    /**
+     * A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startingAfter")
+    public String startingAfter;
+    public GetOrganizationApplianceUplinkStatusesRequest withStartingAfter(String startingAfter) {
+        this.startingAfter = startingAfter;
         return this;
     }
     

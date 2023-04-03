@@ -39,12 +39,12 @@ public class Fields {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSmDevicesFieldsResponse updateNetworkSmDevicesFields(org.openapis.openapi.models.operations.UpdateNetworkSmDevicesFieldsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSmDevicesFieldsPathParams.class, baseUrl, "/networks/{networkId}/sm/devices/fields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSmDevicesFieldsRequest.class, baseUrl, "/networks/{networkId}/sm/devices/fields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

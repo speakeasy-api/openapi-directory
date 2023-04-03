@@ -40,13 +40,13 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CustomersDeleteResponse customersDelete(org.openapis.openapi.models.operations.CustomersDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersDeletePathParams.class, baseUrl, "/v1/customers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersDeleteRequest.class, baseUrl, "/v1/customers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomersDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CustomersDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -121,7 +121,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CustomersGetAccountTransResponse customersGetAccountTrans(org.openapis.openapi.models.operations.CustomersGetAccountTransRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersGetAccountTransPathParams.class, baseUrl, "/v1/customers/{itemId}/accountTrans", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersGetAccountTransRequest.class, baseUrl, "/v1/customers/{itemId}/accountTrans", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CustomersGetOpeningBalanceResponse customersGetOpeningBalance(org.openapis.openapi.models.operations.CustomersGetOpeningBalanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersGetOpeningBalancePathParams.class, baseUrl, "/v1/customers/{itemId}/openingBalance", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersGetOpeningBalanceRequest.class, baseUrl, "/v1/customers/{itemId}/openingBalance", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -197,7 +197,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CustomersGetOpeningBalanceListResponse customersGetOpeningBalanceList(org.openapis.openapi.models.operations.CustomersGetOpeningBalanceListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersGetOpeningBalanceListPathParams.class, baseUrl, "/v1/customers/{itemId}/openingBalanceList", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersGetOpeningBalanceListRequest.class, baseUrl, "/v1/customers/{itemId}/openingBalanceList", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -235,7 +235,7 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CustomersGetQuotesResponse customersGetQuotes(org.openapis.openapi.models.operations.CustomersGetQuotesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersGetQuotesPathParams.class, baseUrl, "/v1/customers/{itemId}/quotes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersGetQuotesRequest.class, baseUrl, "/v1/customers/{itemId}/quotes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -271,7 +271,7 @@ public class Customers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomersPostResponse customersPost(org.openapis.openapi.models.operations.CustomersPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomersPostResponse customersPost(org.openapis.openapi.models.shared.CustomerDto request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/customers");
         
@@ -314,7 +314,7 @@ public class Customers {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CustomersProcessBatchResponse customersProcessBatch(org.openapis.openapi.models.operations.CustomersProcessBatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CustomersProcessBatchResponse customersProcessBatch(org.openapis.openapi.models.shared.BatchItemCustomerDto[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/customers/batch");
         
@@ -359,12 +359,12 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.CustomersPutResponse customersPut(org.openapis.openapi.models.operations.CustomersPutRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersPutPathParams.class, baseUrl, "/v1/customers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CustomersPutRequest.class, baseUrl, "/v1/customers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customerDto", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -402,13 +402,13 @@ public class Customers {
      */
     public org.openapis.openapi.models.operations.GetV1CustomersIdResponse getV1CustomersId(org.openapis.openapi.models.operations.GetV1CustomersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1CustomersIdPathParams.class, baseUrl, "/v1/customers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1CustomersIdRequest.class, baseUrl, "/v1/customers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV1CustomersIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetV1CustomersIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

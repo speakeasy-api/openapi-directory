@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBatchesRequest {
+    /**
+     * The status of the batch if internal transfer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchStatus")
+    public GetBatchesBatchStatusEnum batchStatus;
+    public GetBatchesRequest withBatchStatus(GetBatchesBatchStatusEnum batchStatus) {
+        this.batchStatus = batchStatus;
+        return this;
+    }
     
-    public GetBatchesQueryParams queryParams;
-    public GetBatchesRequest withQueryParams(GetBatchesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The type of the batch. Can be one of the 3 listed enums.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchTypes")
+    public GetBatchesBatchTypesEnum batchTypes;
+    public GetBatchesRequest withBatchTypes(GetBatchesBatchTypesEnum batchTypes) {
+        this.batchTypes = batchTypes;
+        return this;
+    }
+    
+    /**
+     * You can order the batches by ascending or descending order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public GetBatchesOrderEnum order;
+    public GetBatchesRequest withOrder(GetBatchesOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * You can order the batches by date. No other options at this time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public GetBatchesOrderByEnum orderBy;
+    public GetBatchesRequest withOrderBy(GetBatchesOrderByEnum orderBy) {
+        this.orderBy = orderBy;
         return this;
     }
     

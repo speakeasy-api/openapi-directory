@@ -40,7 +40,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BanResponse ban(org.openapis.openapi.models.operations.BanRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BanResponse ban(org.openapis.openapi.models.shared.BanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/moderation/ban");
         
@@ -111,7 +111,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ConnectRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -159,7 +159,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateGuestResponse createGuest(org.openapis.openapi.models.operations.CreateGuestRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateGuestResponse createGuest(org.openapis.openapi.models.shared.GuestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/guest");
         
@@ -222,7 +222,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeactivateUsersResponse deactivateUsers(org.openapis.openapi.models.operations.DeactivateUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeactivateUsersResponse deactivateUsers(org.openapis.openapi.models.shared.DeactivateUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/deactivate");
         
@@ -285,7 +285,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUsersResponse deleteUsers(org.openapis.openapi.models.operations.DeleteUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUsersResponse deleteUsers(org.openapis.openapi.models.shared.DeleteUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/delete");
         
@@ -348,7 +348,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExportUserResponse exportUser(org.openapis.openapi.models.operations.ExportUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExportUserResponse exportUser(org.openapis.openapi.models.shared.ExportUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/export/users");
         
@@ -411,7 +411,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FlagResponse flag(org.openapis.openapi.models.operations.FlagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FlagResponse flag(org.openapis.openapi.models.shared.FlagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/moderation/flag");
         
@@ -482,7 +482,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LongPollQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.LongPollRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -530,7 +530,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MuteUserResponse muteUser(org.openapis.openapi.models.operations.MuteUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MuteUserResponse muteUser(org.openapis.openapi.models.shared.MuteUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/moderation/mute");
         
@@ -601,7 +601,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QueryBannedUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QueryBannedUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -665,7 +665,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QueryUsersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.QueryUsersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -721,7 +721,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReactivateUsersResponse reactivateUsers(org.openapis.openapi.models.operations.ReactivateUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReactivateUsersResponse reactivateUsers(org.openapis.openapi.models.shared.ReactivateUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/reactivate");
         
@@ -784,7 +784,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RestoreUsersResponse restoreUsers(org.openapis.openapi.models.operations.RestoreUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.RestoreUsersResponse restoreUsers(org.openapis.openapi.models.shared.RestoreUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/restore");
         
@@ -855,7 +855,7 @@ public class Users {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UnbanQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.UnbanRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -911,7 +911,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnflagResponse unflag(org.openapis.openapi.models.operations.UnflagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnflagResponse unflag(org.openapis.openapi.models.shared.FlagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/moderation/unflag");
         
@@ -974,7 +974,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnmuteUserResponse unmuteUser(org.openapis.openapi.models.operations.UnmuteUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnmuteUserResponse unmuteUser(org.openapis.openapi.models.shared.UnmuteUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/moderation/unmute");
         
@@ -1037,7 +1037,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUsersResponse updateUsers(org.openapis.openapi.models.operations.UpdateUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUsersResponse updateUsers(org.openapis.openapi.models.shared.UpdateUsersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users");
         
@@ -1100,7 +1100,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUsersPartialResponse updateUsersPartial(org.openapis.openapi.models.operations.UpdateUsersPartialRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUsersPartialResponse updateUsersPartial(org.openapis.openapi.models.shared.UpdateUserPartialRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users");
         

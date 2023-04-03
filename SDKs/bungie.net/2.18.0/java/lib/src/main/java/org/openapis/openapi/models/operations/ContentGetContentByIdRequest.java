@@ -4,20 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentGetContentByIdRequest {
-    
-    public ContentGetContentByIdPathParams pathParams;
-    public ContentGetContentByIdRequest withPathParams(ContentGetContentByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=head")
+    public Boolean head;
+    public ContentGetContentByIdRequest withHead(Boolean head) {
+        this.head = head;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ContentGetContentByIdRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public ContentGetContentByIdQueryParams queryParams;
-    public ContentGetContentByIdRequest withQueryParams(ContentGetContentByIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locale")
+    public String locale;
+    public ContentGetContentByIdRequest withLocale(String locale) {
+        this.locale = locale;
         return this;
     }
     

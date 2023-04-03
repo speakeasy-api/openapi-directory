@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMandateRequest {
-    
-    public GetMandatePathParams pathParams;
-    public GetMandateRequest withPathParams(GetMandatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mandateUuid")
+    public String mandateUuid;
+    public GetMandateRequest withMandateUuid(String mandateUuid) {
+        this.mandateUuid = mandateUuid;
         return this;
     }
     

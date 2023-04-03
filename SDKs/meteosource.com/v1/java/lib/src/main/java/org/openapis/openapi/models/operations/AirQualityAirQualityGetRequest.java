@@ -4,20 +4,60 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AirQualityAirQualityGetRequest {
-    
-    public AirQualityAirQualityGetQueryParams queryParams;
-    public AirQualityAirQualityGetRequest withQueryParams(AirQualityAirQualityGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Your unique API key. You can either specify it in this parameter, or set it in `X-API-Key` header.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AirQualityAirQualityGetRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     
+    /**
+     * Latitude in format 12N, 12.3N, 12.3, or 13S, 13.2S, -13.4
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
+    public String lat;
+    public AirQualityAirQualityGetRequest withLat(String lat) {
+        this.lat = lat;
+        return this;
+    }
     
-    public AirQualityAirQualityGetSecurity security;
-    public AirQualityAirQualityGetRequest withSecurity(AirQualityAirQualityGetSecurity security) {
-        this.security = security;
+    /**
+     * Longitude in format 12E, 12.3E, 12.3, or 13W, 13.2W, -13.4
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
+    public String lon;
+    public AirQualityAirQualityGetRequest withLon(String lon) {
+        this.lon = lon;
+        return this;
+    }
+    
+    /**
+     * Identifier of a place. To obtain the `place_id` for the location you want, please use endpoints `/find_places_prefix` (search by prefix) or `/find_places` (search by full name).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=place_id")
+    public String placeId;
+    public AirQualityAirQualityGetRequest withPlaceId(String placeId) {
+        this.placeId = placeId;
+        return this;
+    }
+    
+    /**
+     * Timezone to be used for the date fields. If not specified, local timezone of the forecast location will be used.
+     * The format is according to the tzinfo database, so values like `Europe/Prague` or `UTC` can be used.
+     * Alternatively you may use the value ``auto`` in which case the local timezone of the location is used.
+     * The full list of valid timezone strings can be found [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timezone")
+    public String timezone;
+    public AirQualityAirQualityGetRequest withTimezone(String timezone) {
+        this.timezone = timezone;
         return this;
     }
     

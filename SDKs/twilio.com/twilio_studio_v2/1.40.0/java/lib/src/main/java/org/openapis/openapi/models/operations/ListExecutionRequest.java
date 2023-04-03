@@ -4,34 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListExecutionRequest {
-    
-    public ListExecutionPathParams pathParams;
-    public ListExecutionRequest withPathParams(ListExecutionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only show Execution resources starting on or after this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time, given as `YYYY-MM-DDThh:mm:ss-hh:mm`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedFrom")
+    public OffsetDateTime dateCreatedFrom;
+    public ListExecutionRequest withDateCreatedFrom(OffsetDateTime dateCreatedFrom) {
+        this.dateCreatedFrom = dateCreatedFrom;
         return this;
     }
     
-    
-    public ListExecutionQueryParams queryParams;
-    public ListExecutionRequest withQueryParams(ListExecutionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only show Execution resources starting before this [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time, given as `YYYY-MM-DDThh:mm:ss-hh:mm`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DateCreatedTo")
+    public OffsetDateTime dateCreatedTo;
+    public ListExecutionRequest withDateCreatedTo(OffsetDateTime dateCreatedTo) {
+        this.dateCreatedTo = dateCreatedTo;
         return this;
     }
     
-    
-    public ListExecutionSecurity security;
-    public ListExecutionRequest withSecurity(ListExecutionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Flow with the Execution resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FlowSid")
+    public String flowSid;
+    public ListExecutionRequest withFlowSid(String flowSid) {
+        this.flowSid = flowSid;
         return this;
     }
     
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListExecutionRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public String serverURL;
-    public ListExecutionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListExecutionRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListExecutionRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

@@ -38,13 +38,13 @@ public class BranchController {
      */
     public org.openapis.openapi.models.operations.BranchControllerGetBranchesResponse branchControllerGetBranches(org.openapis.openapi.models.operations.BranchControllerGetBranchesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BranchControllerGetBranchesPathParams.class, baseUrl, "/v2/customer/{shortName}/branch/branches", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BranchControllerGetBranchesRequest.class, baseUrl, "/v2/customer/{shortName}/branch/branches", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BranchControllerGetBranchesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BranchControllerGetBranchesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -98,7 +98,7 @@ public class BranchController {
      */
     public org.openapis.openapi.models.operations.GetV2CustomerShortNameBranchBranchesBranchIDResponse getV2CustomerShortNameBranchBranchesBranchID(org.openapis.openapi.models.operations.GetV2CustomerShortNameBranchBranchesBranchIDRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2CustomerShortNameBranchBranchesBranchIDPathParams.class, baseUrl, "/v2/customer/{shortName}/branch/branches/{branchID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV2CustomerShortNameBranchBranchesBranchIDRequest.class, baseUrl, "/v2/customer/{shortName}/branch/branches/{branchID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

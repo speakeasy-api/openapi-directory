@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPatientManagementRequest {
+    /**
+     * groupId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public GetPatientManagementRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public GetPatientManagementPathParams pathParams;
-    public GetPatientManagementRequest withPathParams(GetPatientManagementPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * identifierId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identifierId")
+    public Long identifierId;
+    public GetPatientManagementRequest withIdentifierId(Long identifierId) {
+        this.identifierId = identifierId;
+        return this;
+    }
+    
+    /**
+     * userId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public GetPatientManagementRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

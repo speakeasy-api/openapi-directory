@@ -6,8 +6,6 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GETAddRoleToDBClusterActionEnum;
 import org.openapis.openapi.models.operations.GETAddRoleToDBClusterVersionEnum;
-import org.openapis.openapi.models.operations.GETAddRoleToDBClusterQueryParams;
-import org.openapis.openapi.models.operations.GETAddRoleToDBClusterHeaders;
 import org.openapis.openapi.models.operations.GETAddRoleToDBClusterRequest;
 import org.openapis.openapi.models.operations.GETAddRoleToDBClusterResponse;
 
@@ -16,30 +14,24 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GETAddRoleToDBClusterRequest req = new GETAddRoleToDBClusterRequest() {{
-                queryParams = new GETAddRoleToDBClusterQueryParams() {{
-                    action = "AddRoleToDBCluster";
-                    dbClusterIdentifier = "corrupti";
-                    featureName = "provident";
-                    roleArn = "distinctio";
-                    version = "2014-10-31";
-                }};
-                headers = new GETAddRoleToDBClusterHeaders() {{
-                    xAmzAlgorithm = "quibusdam";
-                    xAmzContentSha256 = "unde";
-                    xAmzCredential = "nulla";
-                    xAmzDate = "corrupti";
-                    xAmzSecurityToken = "illum";
-                    xAmzSignature = "vel";
-                    xAmzSignedHeaders = "error";
-                }};
-            }};            
+                action = "AddRoleToDBCluster";
+                dbClusterIdentifier = "corrupti";
+                featureName = "provident";
+                roleArn = "distinctio";
+                version = "2014-10-31";
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }}            
 
             GETAddRoleToDBClusterResponse res = sdk.getAddRoleToDBCluster(req);
 

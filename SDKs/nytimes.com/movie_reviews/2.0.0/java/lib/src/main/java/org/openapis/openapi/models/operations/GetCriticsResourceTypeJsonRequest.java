@@ -4,13 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCriticsResourceTypeJsonRequest {
-    
-    public GetCriticsResourceTypeJsonPathParams pathParams;
-    public GetCriticsResourceTypeJsonRequest withPathParams(GetCriticsResourceTypeJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * all | full-time | part-time | [reviewer-name]
+     * 
+     * Specify all to get all Times reviewers, or specify full-time or part-time to get that subset. Specify a reviewer's name to get details about a particular reviewer.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource-type")
+    public String resourceType;
+    public GetCriticsResourceTypeJsonRequest withResourceType(String resourceType) {
+        this.resourceType = resourceType;
         return this;
     }
     

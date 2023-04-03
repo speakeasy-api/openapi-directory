@@ -32,12 +32,9 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetDescriptionResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetQueryQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryExtensionExtensionEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetQueryExtensionPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetQueryExtensionQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryExtensionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetQueryExtensionResponse.java
 USAGE.md

@@ -4,13 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRelationUsagePivotResourceRequest {
+    /**
+     * Object id, e.g. ECO:0000501 (for IEA; Includes inferred by default)
+     *                     or a specific publication or other supporting ibject, e.g. ZFIN:ZDB-PUB-060503-2.
+     *                     
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
+    public String evidence;
+    public GetRelationUsagePivotResourceRequest withEvidence(String evidence) {
+        this.evidence = evidence;
+        return this;
+    }
     
-    public GetRelationUsagePivotResourceQueryParams queryParams;
-    public GetRelationUsagePivotResourceRequest withQueryParams(GetRelationUsagePivotResourceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * SUBJECT TAXON id, e.g. NCBITaxon:9606. Includes inferred by default
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_taxon")
+    public String subjectTaxon;
+    public GetRelationUsagePivotResourceRequest withSubjectTaxon(String subjectTaxon) {
+        this.subjectTaxon = subjectTaxon;
         return this;
     }
     

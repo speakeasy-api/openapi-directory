@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCoursesContentIdMetadataTagsRequest {
-    
-    public PutCoursesContentIdMetadataTagsPathParams pathParams;
-    public PutCoursesContentIdMetadataTagsRequest withPathParams(PutCoursesContentIdMetadataTagsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PutCoursesContentIdMetadataTagsRequestBody requestBody;
+    public PutCoursesContentIdMetadataTagsRequest withRequestBody(PutCoursesContentIdMetadataTagsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PutCoursesContentIdMetadataTagsRequestBody request;
-    public PutCoursesContentIdMetadataTagsRequest withRequest(PutCoursesContentIdMetadataTagsRequestBody request) {
-        this.request = request;
+    /**
+     * The content Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentId")
+    public String contentId;
+    public PutCoursesContentIdMetadataTagsRequest withContentId(String contentId) {
+        this.contentId = contentId;
         return this;
     }
     

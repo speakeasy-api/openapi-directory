@@ -4,13 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAdvancedTeamSeasonStatsRequest {
+    /**
+     * Starting week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endWeek")
+    public Long endWeek;
+    public GetAdvancedTeamSeasonStatsRequest withEndWeek(Long endWeek) {
+        this.endWeek = endWeek;
+        return this;
+    }
     
-    public GetAdvancedTeamSeasonStatsQueryParams queryParams;
-    public GetAdvancedTeamSeasonStatsRequest withQueryParams(GetAdvancedTeamSeasonStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter to remove garbage time plays from calculations
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeGarbageTime")
+    public Boolean excludeGarbageTime;
+    public GetAdvancedTeamSeasonStatsRequest withExcludeGarbageTime(Boolean excludeGarbageTime) {
+        this.excludeGarbageTime = excludeGarbageTime;
+        return this;
+    }
+    
+    /**
+     * Starting week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startWeek")
+    public Long startWeek;
+    public GetAdvancedTeamSeasonStatsRequest withStartWeek(Long startWeek) {
+        this.startWeek = startWeek;
+        return this;
+    }
+    
+    /**
+     * Team filter (required if no year specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetAdvancedTeamSeasonStatsRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Year filter (required if no team specified)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetAdvancedTeamSeasonStatsRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

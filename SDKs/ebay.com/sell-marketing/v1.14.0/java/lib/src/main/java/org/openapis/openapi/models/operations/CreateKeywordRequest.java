@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateKeywordRequest {
-    
-    public CreateKeywordPathParams pathParams;
-    public CreateKeywordRequest withPathParams(CreateKeywordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A type that defines the fields for the request to create a keyword.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateKeywordRequest request;
-    public CreateKeywordRequest withRequest(org.openapis.openapi.models.shared.CreateKeywordRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateKeywordRequest createKeywordRequest;
+    public CreateKeywordRequest withCreateKeywordRequest(org.openapis.openapi.models.shared.CreateKeywordRequest createKeywordRequest) {
+        this.createKeywordRequest = createKeywordRequest;
         return this;
     }
     
-    
-    public CreateKeywordSecurity security;
-    public CreateKeywordRequest withSecurity(CreateKeywordSecurity security) {
-        this.security = security;
+    /**
+     * A unique eBay-assigned ID for an ad campaign that is generated when a campaign is created.&lt;br /&gt;&lt;br /&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note:&lt;/b&gt; You can retrieve the campaign IDs for a specified seller using the &lt;a href="/api-docs/sell/marketing/resources/campaign/methods/getCampaigns"&gt;getCampaigns&lt;/a&gt; method.&lt;/span&gt;
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign_id")
+    public String campaignId;
+    public CreateKeywordRequest withCampaignId(String campaignId) {
+        this.campaignId = campaignId;
         return this;
     }
     

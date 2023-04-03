@@ -4,20 +4,32 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCustomerSegmentsRequest {
-    
-    public ListCustomerSegmentsQueryParams queryParams;
-    public ListCustomerSegmentsRequest withQueryParams(ListCustomerSegmentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor returned by previous calls to `ListCustomerSegments`.
+     * This cursor is used to retrieve the next set of query results.
+     * 
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListCustomerSegmentsRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public ListCustomerSegmentsSecurity security;
-    public ListCustomerSegmentsRequest withSecurity(ListCustomerSegmentsSecurity security) {
-        this.security = security;
+    /**
+     * The maximum number of results to return in a single page. This limit is advisory. The response might contain more or fewer results. 
+     * The limit is ignored if it is less than 1 or greater than 50. The default value is 50.
+     * 
+     * For more information, see [Pagination](https://developer.squareup.com/docs/working-with-apis/pagination).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListCustomerSegmentsRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     

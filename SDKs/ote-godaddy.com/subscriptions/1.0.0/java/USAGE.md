@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CancelPathParams;
-import org.openapis.openapi.models.operations.CancelHeaders;
 import org.openapis.openapi.models.operations.CancelRequest;
 import org.openapis.openapi.models.operations.CancelResponse;
 
@@ -16,13 +14,9 @@ public class Application {
                 .build();
 
             CancelRequest req = new CancelRequest() {{
-                pathParams = new CancelPathParams() {{
-                    subscriptionId = "corrupti";
-                }};
-                headers = new CancelHeaders() {{
-                    xShopperId = "provident";
-                }};
-            }};            
+                xShopperId = "corrupti";
+                subscriptionId = "provident";
+            }}            
 
             CancelResponse res = sdk.v1.cancel(req);
 

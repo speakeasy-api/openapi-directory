@@ -5,17 +5,13 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity;
-import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreatePathParams;
-import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateQueryParams;
 import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest;
 import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest;
 import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet;
 import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpec;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -24,56 +20,52 @@ public class Application {
                 .build();
 
             DatalabelingProjectsAnnotationSpecSetsCreateRequest req = new DatalabelingProjectsAnnotationSpecSetsCreateRequest() {{
-                security = new DatalabelingProjectsAnnotationSpecSetsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new DatalabelingProjectsAnnotationSpecSetsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DatalabelingProjectsAnnotationSpecSetsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest() {{
+                dollarXgafv = "2";
+                googleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest = new GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest() {{
                     annotationSpecSet = new GoogleCloudDatalabelingV1beta1AnnotationSpecSet() {{
                         annotationSpecs = new org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpec[]{{
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "iure";
-                                displayName = "magnam";
-                                index = 891773;
+                                description = "distinctio";
+                                displayName = "quibusdam";
+                                index = 602763;
                             }}),
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "ipsa";
-                                displayName = "delectus";
-                                index = 272656;
+                                description = "nulla";
+                                displayName = "corrupti";
+                                index = 847252;
+                            }}),
+                            add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
+                                description = "vel";
+                                displayName = "error";
+                                index = 645894;
                             }}),
                         }};
                         blockingResources = new String[]{{
-                            add("molestiae"),
-                            add("minus"),
+                            add("iure"),
+                            add("magnam"),
                         }};
-                        description = "placeat";
-                        displayName = "voluptatum";
-                        name = "iusto";
+                        description = "debitis";
+                        displayName = "ipsa";
+                        name = "delectus";
                     }};
                 }};
-            }};            
+                accessToken = "tempora";
+                alt = "media";
+                callback = "molestiae";
+                fields = "minus";
+                key = "placeat";
+                oauthToken = "voluptatum";
+                parent = "iusto";
+                prettyPrint = false;
+                quotaUser = "excepturi";
+                uploadType = "nisi";
+                uploadProtocol = "recusandae";
+            }}            
 
-            DatalabelingProjectsAnnotationSpecSetsCreateResponse res = sdk.projects.datalabelingProjectsAnnotationSpecSetsCreate(req);
+            DatalabelingProjectsAnnotationSpecSetsCreateResponse res = sdk.projects.datalabelingProjectsAnnotationSpecSetsCreate(req, new DatalabelingProjectsAnnotationSpecSetsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.googleCloudDatalabelingV1beta1AnnotationSpecSet.isPresent()) {
                 // handle response

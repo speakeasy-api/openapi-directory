@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetReservedAmountRequest {
+    /**
+     * The id or the sku of the article to query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public ArticleGetReservedAmountRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public ArticleGetReservedAmountQueryParams queryParams;
-    public ArticleGetReservedAmountRequest withQueryParams(ArticleGetReservedAmountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Either the value id or the value sku to specify the meaning of the id parameter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lookupBy")
+    public String lookupBy;
+    public ArticleGetReservedAmountRequest withLookupBy(String lookupBy) {
+        this.lookupBy = lookupBy;
+        return this;
+    }
+    
+    /**
+     * Optional the stock id if the multi stock feature is enabled
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stockId")
+    public Long stockId;
+    public ArticleGetReservedAmountRequest withStockId(Long stockId) {
+        this.stockId = stockId;
         return this;
     }
     

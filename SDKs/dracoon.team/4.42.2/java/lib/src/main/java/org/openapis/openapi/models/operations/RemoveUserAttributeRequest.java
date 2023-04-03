@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveUserAttributeRequest {
-    
-    public RemoveUserAttributePathParams pathParams;
-    public RemoveUserAttributeRequest withPathParams(RemoveUserAttributePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RemoveUserAttributeRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
+    /**
+     * Key
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
+    public String key;
+    public RemoveUserAttributeRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
     
-    public RemoveUserAttributeHeaders headers;
-    public RemoveUserAttributeRequest withHeaders(RemoveUserAttributeHeaders headers) {
-        this.headers = headers;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Long userId;
+    public RemoveUserAttributeRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

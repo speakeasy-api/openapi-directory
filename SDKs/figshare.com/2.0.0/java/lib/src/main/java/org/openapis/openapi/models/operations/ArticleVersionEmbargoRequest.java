@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleVersionEmbargoRequest {
+    /**
+     * Article Unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public ArticleVersionEmbargoRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
+        return this;
+    }
     
-    public ArticleVersionEmbargoPathParams pathParams;
-    public ArticleVersionEmbargoRequest withPathParams(ArticleVersionEmbargoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Version Number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=v_number")
+    public Long vNumber;
+    public ArticleVersionEmbargoRequest withVNumber(Long vNumber) {
+        this.vNumber = vNumber;
         return this;
     }
     

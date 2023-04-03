@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPrimaryIpsIdActionsUnassignRequest {
-    
-    public PostPrimaryIpsIdActionsUnassignPathParams pathParams;
-    public PostPrimaryIpsIdActionsUnassignRequest withPathParams(PostPrimaryIpsIdActionsUnassignPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Primary IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostPrimaryIpsIdActionsUnassignRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

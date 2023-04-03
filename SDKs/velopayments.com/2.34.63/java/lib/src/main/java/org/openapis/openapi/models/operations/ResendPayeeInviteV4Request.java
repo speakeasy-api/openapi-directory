@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResendPayeeInviteV4Request {
-    
-    public ResendPayeeInviteV4PathParams pathParams;
-    public ResendPayeeInviteV4Request withPathParams(ResendPayeeInviteV4PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Provide Payor Id in body of request
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.InvitePayeeRequestV4 request;
-    public ResendPayeeInviteV4Request withRequest(org.openapis.openapi.models.shared.InvitePayeeRequestV4 request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.InvitePayeeRequestV4 invitePayeeRequestV4;
+    public ResendPayeeInviteV4Request withInvitePayeeRequestV4(org.openapis.openapi.models.shared.InvitePayeeRequestV4 invitePayeeRequestV4) {
+        this.invitePayeeRequestV4 = invitePayeeRequestV4;
+        return this;
+    }
+    
+    /**
+     * The UUID of the payee.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payeeId")
+    public String payeeId;
+    public ResendPayeeInviteV4Request withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
         return this;
     }
     

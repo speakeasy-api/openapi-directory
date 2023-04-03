@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DecodeViaNeoVINRequest {
-    
-    public DecodeViaNeoVINPathParams pathParams;
-    public DecodeViaNeoVINRequest withPathParams(DecodeViaNeoVINPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public DecodeViaNeoVINRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * Decode VIN on the fly instead of cached response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force_decode")
+    public Boolean forceDecode;
+    public DecodeViaNeoVINRequest withForceDecode(Boolean forceDecode) {
+        this.forceDecode = forceDecode;
+        return this;
+    }
     
-    public DecodeViaNeoVINQueryParams queryParams;
-    public DecodeViaNeoVINRequest withQueryParams(DecodeViaNeoVINQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Boolean variable to indicate wheather to include generic data as well in response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_generic")
+    public Boolean includeGeneric;
+    public DecodeViaNeoVINRequest withIncludeGeneric(Boolean includeGeneric) {
+        this.includeGeneric = includeGeneric;
+        return this;
+    }
+    
+    /**
+     * The VIN to identify the car. Must be a valid 17 char VIN
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vin")
+    public String vin;
+    public DecodeViaNeoVINRequest withVin(String vin) {
+        this.vin = vin;
         return this;
     }
     

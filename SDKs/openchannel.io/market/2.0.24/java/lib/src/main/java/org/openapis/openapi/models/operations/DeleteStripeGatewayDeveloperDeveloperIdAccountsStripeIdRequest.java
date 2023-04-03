@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest {
+    /**
+     * The id of the developer disconnecting their Stripe account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
+    public String developerId;
+    public DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest withDeveloperId(String developerId) {
+        this.developerId = developerId;
+        return this;
+    }
     
-    public DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams pathParams;
-    public DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest withPathParams(DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the stripe account to disconnect
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stripeId")
+    public String stripeId;
+    public DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest withStripeId(String stripeId) {
+        this.stripeId = stripeId;
         return this;
     }
     

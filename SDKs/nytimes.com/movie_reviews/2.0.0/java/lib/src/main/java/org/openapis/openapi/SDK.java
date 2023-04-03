@@ -137,7 +137,7 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonResponse getCriticsResourceTypeJson(org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonPathParams.class, baseUrl, "/critics/{resource-type}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCriticsResourceTypeJsonRequest.class, baseUrl, "/critics/{resource-type}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -176,7 +176,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetReviewsSearchJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetReviewsSearchJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -209,13 +209,13 @@ public class SDK {
 
     public org.openapis.openapi.models.operations.GetReviewsResourceTypeJsonResponse getReviewsResourceTypeJson(org.openapis.openapi.models.operations.GetReviewsResourceTypeJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReviewsResourceTypeJsonPathParams.class, baseUrl, "/reviews/{resource-type}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetReviewsResourceTypeJsonRequest.class, baseUrl, "/reviews/{resource-type}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetReviewsResourceTypeJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetReviewsResourceTypeJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

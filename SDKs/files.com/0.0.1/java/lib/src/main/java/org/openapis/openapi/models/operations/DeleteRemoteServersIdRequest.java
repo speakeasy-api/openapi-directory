@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRemoteServersIdRequest {
-    
-    public DeleteRemoteServersIdPathParams pathParams;
-    public DeleteRemoteServersIdRequest withPathParams(DeleteRemoteServersIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Remote Server ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteRemoteServersIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

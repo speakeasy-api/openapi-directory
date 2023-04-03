@@ -38,7 +38,7 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.DeleteRealmClientScopesId1ProtocolMappersModelsId2Response deleteRealmClientScopesId1ProtocolMappersModelsId2(org.openapis.openapi.models.operations.DeleteRealmClientScopesId1ProtocolMappersModelsId2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmClientScopesId1ProtocolMappersModelsId2PathParams.class, baseUrl, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmClientScopesId1ProtocolMappersModelsId2Request.class, baseUrl, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -71,7 +71,7 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.DeleteRealmClientsId1ProtocolMappersModelsId2Response deleteRealmClientsId1ProtocolMappersModelsId2(org.openapis.openapi.models.operations.DeleteRealmClientsId1ProtocolMappersModelsId2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmClientsId1ProtocolMappersModelsId2PathParams.class, baseUrl, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmClientsId1ProtocolMappersModelsId2Request.class, baseUrl, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -104,7 +104,7 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.GetRealmClientScopesId1ProtocolMappersModelsId2Response getRealmClientScopesId1ProtocolMappersModelsId2(org.openapis.openapi.models.operations.GetRealmClientScopesId1ProtocolMappersModelsId2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientScopesId1ProtocolMappersModelsId2PathParams.class, baseUrl, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientScopesId1ProtocolMappersModelsId2Request.class, baseUrl, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -143,7 +143,7 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.GetRealmClientScopesIdProtocolMappersModelsResponse getRealmClientScopesIdProtocolMappersModels(org.openapis.openapi.models.operations.GetRealmClientScopesIdProtocolMappersModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientScopesIdProtocolMappersModelsPathParams.class, baseUrl, "/{realm}/client-scopes/{id}/protocol-mappers/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientScopesIdProtocolMappersModelsRequest.class, baseUrl, "/{realm}/client-scopes/{id}/protocol-mappers/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.GetRealmClientScopesIdProtocolMappersProtocolProtocolResponse getRealmClientScopesIdProtocolMappersProtocolProtocol(org.openapis.openapi.models.operations.GetRealmClientScopesIdProtocolMappersProtocolProtocolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientScopesIdProtocolMappersProtocolProtocolPathParams.class, baseUrl, "/{realm}/client-scopes/{id}/protocol-mappers/protocol/{protocol}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientScopesIdProtocolMappersProtocolProtocolRequest.class, baseUrl, "/{realm}/client-scopes/{id}/protocol-mappers/protocol/{protocol}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -221,7 +221,7 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.GetRealmClientsId1ProtocolMappersModelsId2Response getRealmClientsId1ProtocolMappersModelsId2(org.openapis.openapi.models.operations.GetRealmClientsId1ProtocolMappersModelsId2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsId1ProtocolMappersModelsId2PathParams.class, baseUrl, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsId1ProtocolMappersModelsId2Request.class, baseUrl, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -260,7 +260,7 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.GetRealmClientsIdProtocolMappersModelsResponse getRealmClientsIdProtocolMappersModels(org.openapis.openapi.models.operations.GetRealmClientsIdProtocolMappersModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsIdProtocolMappersModelsPathParams.class, baseUrl, "/{realm}/clients/{id}/protocol-mappers/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsIdProtocolMappersModelsRequest.class, baseUrl, "/{realm}/clients/{id}/protocol-mappers/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -299,7 +299,7 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.GetRealmClientsIdProtocolMappersProtocolProtocolResponse getRealmClientsIdProtocolMappersProtocolProtocol(org.openapis.openapi.models.operations.GetRealmClientsIdProtocolMappersProtocolProtocolRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsIdProtocolMappersProtocolProtocolPathParams.class, baseUrl, "/{realm}/clients/{id}/protocol-mappers/protocol/{protocol}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientsIdProtocolMappersProtocolProtocolRequest.class, baseUrl, "/{realm}/clients/{id}/protocol-mappers/protocol/{protocol}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -338,12 +338,12 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.PostRealmClientScopesIdProtocolMappersAddModelsResponse postRealmClientScopesIdProtocolMappersAddModels(org.openapis.openapi.models.operations.PostRealmClientScopesIdProtocolMappersAddModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientScopesIdProtocolMappersAddModelsPathParams.class, baseUrl, "/{realm}/client-scopes/{id}/protocol-mappers/add-models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientScopesIdProtocolMappersAddModelsRequest.class, baseUrl, "/{realm}/client-scopes/{id}/protocol-mappers/add-models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -376,12 +376,12 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.PostRealmClientScopesIdProtocolMappersModelsResponse postRealmClientScopesIdProtocolMappersModels(org.openapis.openapi.models.operations.PostRealmClientScopesIdProtocolMappersModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientScopesIdProtocolMappersModelsPathParams.class, baseUrl, "/{realm}/client-scopes/{id}/protocol-mappers/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientScopesIdProtocolMappersModelsRequest.class, baseUrl, "/{realm}/client-scopes/{id}/protocol-mappers/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "protocolMapperRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -414,12 +414,12 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.PostRealmClientsIdProtocolMappersAddModelsResponse postRealmClientsIdProtocolMappersAddModels(org.openapis.openapi.models.operations.PostRealmClientsIdProtocolMappersAddModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdProtocolMappersAddModelsPathParams.class, baseUrl, "/{realm}/clients/{id}/protocol-mappers/add-models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdProtocolMappersAddModelsRequest.class, baseUrl, "/{realm}/clients/{id}/protocol-mappers/add-models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -452,12 +452,12 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.PostRealmClientsIdProtocolMappersModelsResponse postRealmClientsIdProtocolMappersModels(org.openapis.openapi.models.operations.PostRealmClientsIdProtocolMappersModelsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdProtocolMappersModelsPathParams.class, baseUrl, "/{realm}/clients/{id}/protocol-mappers/models", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientsIdProtocolMappersModelsRequest.class, baseUrl, "/{realm}/clients/{id}/protocol-mappers/models", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "protocolMapperRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -490,12 +490,12 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.PutRealmClientScopesId1ProtocolMappersModelsId2Response putRealmClientScopesId1ProtocolMappersModelsId2(org.openapis.openapi.models.operations.PutRealmClientScopesId1ProtocolMappersModelsId2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmClientScopesId1ProtocolMappersModelsId2PathParams.class, baseUrl, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmClientScopesId1ProtocolMappersModelsId2Request.class, baseUrl, "/{realm}/client-scopes/{id1}/protocol-mappers/models/{id2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "protocolMapperRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -528,12 +528,12 @@ public class ProtocolMappers {
      */
     public org.openapis.openapi.models.operations.PutRealmClientsId1ProtocolMappersModelsId2Response putRealmClientsId1ProtocolMappersModelsId2(org.openapis.openapi.models.operations.PutRealmClientsId1ProtocolMappersModelsId2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmClientsId1ProtocolMappersModelsId2PathParams.class, baseUrl, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmClientsId1ProtocolMappersModelsId2Request.class, baseUrl, "/{realm}/clients/{id1}/protocol-mappers/models/{id2}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "protocolMapperRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

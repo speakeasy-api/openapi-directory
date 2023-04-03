@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCoursesContentIdActivationsRequest {
-    
-    public GetCoursesContentIdActivationsPathParams pathParams;
-    public GetCoursesContentIdActivationsRequest withPathParams(GetCoursesContentIdActivationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The content Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contentId")
+    public String contentId;
+    public GetCoursesContentIdActivationsRequest withContentId(String contentId) {
+        this.contentId = contentId;
         return this;
     }
     

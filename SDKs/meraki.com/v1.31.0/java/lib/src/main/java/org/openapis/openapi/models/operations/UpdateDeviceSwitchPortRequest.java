@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceSwitchPortRequest {
-    
-    public UpdateDeviceSwitchPortPathParams pathParams;
-    public UpdateDeviceSwitchPortRequest withPathParams(UpdateDeviceSwitchPortPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateDeviceSwitchPortRequestBody requestBody;
+    public UpdateDeviceSwitchPortRequest withRequestBody(UpdateDeviceSwitchPortRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateDeviceSwitchPortRequestBody request;
-    public UpdateDeviceSwitchPortRequest withRequest(UpdateDeviceSwitchPortRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portId")
+    public String portId;
+    public UpdateDeviceSwitchPortRequest withPortId(String portId) {
+        this.portId = portId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
+    public String serial;
+    public UpdateDeviceSwitchPortRequest withSerial(String serial) {
+        this.serial = serial;
         return this;
     }
     

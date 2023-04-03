@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesAllRequest {
+    /**
+     * Name of the space
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Name")
+    public String name;
+    public GetSpacesAllRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetSpacesAllQueryParams queryParams;
-    public GetSpacesAllRequest withQueryParams(GetSpacesAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Type of the space
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
+    public GetSpacesAllTypeEnum type;
+    public GetSpacesAllRequest withType(GetSpacesAllTypeEnum type) {
+        this.type = type;
         return this;
     }
     

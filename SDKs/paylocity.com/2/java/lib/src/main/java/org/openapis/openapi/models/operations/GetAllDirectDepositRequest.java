@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllDirectDepositRequest {
-    
-    public GetAllDirectDepositPathParams pathParams;
-    public GetAllDirectDepositRequest withPathParams(GetAllDirectDepositPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetAllDirectDepositRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetAllDirectDepositSecurity security;
-    public GetAllDirectDepositRequest withSecurity(GetAllDirectDepositSecurity security) {
-        this.security = security;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public GetAllDirectDepositRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     

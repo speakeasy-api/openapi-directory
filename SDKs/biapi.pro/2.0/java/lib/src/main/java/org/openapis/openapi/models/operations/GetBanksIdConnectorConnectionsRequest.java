@@ -4,20 +4,80 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBanksIdConnectorConnectionsRequest {
-    
-    public GetBanksIdConnectorConnectionsPathParams pathParams;
-    public GetBanksIdConnectorConnectionsRequest withPathParams(GetBanksIdConnectorConnectionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetBanksIdConnectorConnectionsRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connector")
+    public Long idConnector;
+    public GetBanksIdConnectorConnectionsRequest withIdConnector(Long idConnector) {
+        this.idConnector = idConnector;
+        return this;
+    }
     
-    public GetBanksIdConnectorConnectionsQueryParams queryParams;
-    public GetBanksIdConnectorConnectionsRequest withQueryParams(GetBanksIdConnectorConnectionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * methode of selection use between 'diversity' (default), 'cover' and 'type_select'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=method")
+    public String method;
+    public GetBanksIdConnectorConnectionsRequest withMethod(String method) {
+        this.method = method;
+        return this;
+    }
+    
+    /**
+     * Ensure the connection will not have a sync happening for at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minutes_without_sync")
+    public Long minutesWithoutSync;
+    public GetBanksIdConnectorConnectionsRequest withMinutesWithoutSync(Long minutesWithoutSync) {
+        this.minutesWithoutSync = minutesWithoutSync;
+        return this;
+    }
+    
+    /**
+     * the number of requested connections, if applicable by the method
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=n")
+    public Long n;
+    public GetBanksIdConnectorConnectionsRequest withN(Long n) {
+        this.n = n;
+        return this;
+    }
+    
+    /**
+     * for 'type_select' method. Each connection requires at least N
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=occurences")
+    public Long occurences;
+    public GetBanksIdConnectorConnectionsRequest withOccurences(Long occurences) {
+        this.occurences = occurences;
+        return this;
+    }
+    
+    /**
+     * specify a source name that should have a null state
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public GetBanksIdConnectorConnectionsRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * for 'type_select' method. Specific account type id (weboob_type_id) to select
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public Long type;
+    public GetBanksIdConnectorConnectionsRequest withType(Long type) {
+        this.type = type;
         return this;
     }
     

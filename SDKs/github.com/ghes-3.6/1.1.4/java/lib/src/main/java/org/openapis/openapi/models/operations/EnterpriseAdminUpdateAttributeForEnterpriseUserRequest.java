@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminUpdateAttributeForEnterpriseUserRequest {
-    
-    public EnterpriseAdminUpdateAttributeForEnterpriseUserPathParams pathParams;
-    public EnterpriseAdminUpdateAttributeForEnterpriseUserRequest withPathParams(EnterpriseAdminUpdateAttributeForEnterpriseUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.PatchSchema patchSchema;
+    public EnterpriseAdminUpdateAttributeForEnterpriseUserRequest withPatchSchema(org.openapis.openapi.models.shared.PatchSchema patchSchema) {
+        this.patchSchema = patchSchema;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatchSchema request;
-    public EnterpriseAdminUpdateAttributeForEnterpriseUserRequest withRequest(org.openapis.openapi.models.shared.PatchSchema request) {
-        this.request = request;
+    /**
+     * The unique identifier of the SCIM user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scim_user_id")
+    public String scimUserId;
+    public EnterpriseAdminUpdateAttributeForEnterpriseUserRequest withScimUserId(String scimUserId) {
+        this.scimUserId = scimUserId;
         return this;
     }
     

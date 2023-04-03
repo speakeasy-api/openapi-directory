@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPaymentInitiationScaStatusSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer")
-    public org.openapis.openapi.models.shared.SchemeBearerAuthOAuth bearerAuthOAuth;
-    public GetPaymentInitiationScaStatusSecurity withBearerAuthOAuth(org.openapis.openapi.models.shared.SchemeBearerAuthOAuth bearerAuthOAuth) {
+    @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
+    public String bearerAuthOAuth;
+    public GetPaymentInitiationScaStatusSecurity withBearerAuthOAuth(String bearerAuthOAuth) {
         this.bearerAuthOAuth = bearerAuthOAuth;
         return this;
     }

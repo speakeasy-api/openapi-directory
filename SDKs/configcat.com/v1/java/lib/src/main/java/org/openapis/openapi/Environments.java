@@ -45,12 +45,12 @@ public class Environments {
      */
     public org.openapis.openapi.models.operations.CreateEnvironmentResponse createEnvironment(org.openapis.openapi.models.operations.CreateEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEnvironmentPathParams.class, baseUrl, "/v1/products/{productId}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateEnvironmentRequest.class, baseUrl, "/v1/products/{productId}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createEnvironmentModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -98,7 +98,7 @@ public class Environments {
      */
     public org.openapis.openapi.models.operations.DeleteEnvironmentResponse deleteEnvironment(org.openapis.openapi.models.operations.DeleteEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEnvironmentPathParams.class, baseUrl, "/v1/environments/{environmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteEnvironmentRequest.class, baseUrl, "/v1/environments/{environmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -133,7 +133,7 @@ public class Environments {
      */
     public org.openapis.openapi.models.operations.GetEnvironmentResponse getEnvironment(org.openapis.openapi.models.operations.GetEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentPathParams.class, baseUrl, "/v1/environments/{environmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentRequest.class, baseUrl, "/v1/environments/{environmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -182,7 +182,7 @@ public class Environments {
      */
     public org.openapis.openapi.models.operations.GetEnvironmentsResponse getEnvironments(org.openapis.openapi.models.operations.GetEnvironmentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentsPathParams.class, baseUrl, "/v1/products/{productId}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEnvironmentsRequest.class, baseUrl, "/v1/products/{productId}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -230,12 +230,12 @@ public class Environments {
      */
     public org.openapis.openapi.models.operations.UpdateEnvironmentResponse updateEnvironment(org.openapis.openapi.models.operations.UpdateEnvironmentRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEnvironmentPathParams.class, baseUrl, "/v1/environments/{environmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateEnvironmentRequest.class, baseUrl, "/v1/environments/{environmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateEnvironmentModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartStreamRequest {
-    
-    public StartStreamPathParams pathParams;
-    public StartStreamRequest withPathParams(StartStreamPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * action to perform
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StartStreamRequest request;
-    public StartStreamRequest withRequest(org.openapis.openapi.models.shared.StartStreamRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.StartStreamRequest startStreamRequest;
+    public StartStreamRequest withStartStreamRequest(org.openapis.openapi.models.shared.StartStreamRequest startStreamRequest) {
+        this.startStreamRequest = startStreamRequest;
         return this;
     }
     
-    
-    public StartStreamSecurity security;
-    public StartStreamRequest withSecurity(StartStreamSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the Call Leg
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public StartStreamRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

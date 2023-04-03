@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomerGetCustomerAddressesRequest {
-    
-    public CustomerGetCustomerAddressesPathParams pathParams;
-    public CustomerGetCustomerAddressesRequest withPathParams(CustomerGetCustomerAddressesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public CustomerGetCustomerAddressesRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * The current page to request starting with 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public CustomerGetCustomerAddressesRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public CustomerGetCustomerAddressesQueryParams queryParams;
-    public CustomerGetCustomerAddressesRequest withQueryParams(CustomerGetCustomerAddressesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The pagesize for the result list. Values between 1 and 250 are allowed
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public CustomerGetCustomerAddressesRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

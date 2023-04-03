@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRegistryNamespacesNamespaceRequest {
-    
-    public PutRegistryNamespacesNamespacePathParams pathParams;
-    public PutRegistryNamespacesNamespaceRequest withPathParams(PutRegistryNamespacesNamespacePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of your organization space where you want to create or work with your containers. Run `cf space &lt;space_name&gt; --guid`, where `&lt;space_name&gt;` is the name of your space, to retrieve your space ID.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
+    public String xAuthProjectId;
+    public PutRegistryNamespacesNamespaceRequest withXAuthProjectId(String xAuthProjectId) {
+        this.xAuthProjectId = xAuthProjectId;
         return this;
     }
     
+    /**
+     * The Bluemix JSON web token that you receive when logging into Bluemix. Run `cf oauth-token` to retrieve your access token.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
+    public String xAuthToken;
+    public PutRegistryNamespacesNamespaceRequest withXAuthToken(String xAuthToken) {
+        this.xAuthToken = xAuthToken;
+        return this;
+    }
     
-    public PutRegistryNamespacesNamespaceHeaders headers;
-    public PutRegistryNamespacesNamespaceRequest withHeaders(PutRegistryNamespacesNamespaceHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name for your namespace to create your private Docker images registry in Bluemix. You cannot change the name afterward. The namespace can be 4-30 characters long, must start with at least one letter or number, and can only contain lowercase letters, numbers or underscores (_). You can test the availability of your namespace by calling the `GET /registry/namespaces/&lt;namespace&gt;` endpoint. When a HTTP code `404 Not Found` is returned, the namespace is available in Bluemix. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
+    public String namespace;
+    public PutRegistryNamespacesNamespaceRequest withNamespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
     

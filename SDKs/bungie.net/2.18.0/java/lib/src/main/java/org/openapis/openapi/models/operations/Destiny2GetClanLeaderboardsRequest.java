@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetClanLeaderboardsRequest {
-    
-    public Destiny2GetClanLeaderboardsPathParams pathParams;
-    public Destiny2GetClanLeaderboardsRequest withPathParams(Destiny2GetClanLeaderboardsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Group ID of the clan whose leaderboards you wish to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public Long groupId;
+    public Destiny2GetClanLeaderboardsRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     
+    /**
+     * Maximum number of top players to return. Use a large number to get entire leaderboard.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxtop")
+    public Integer maxtop;
+    public Destiny2GetClanLeaderboardsRequest withMaxtop(Integer maxtop) {
+        this.maxtop = maxtop;
+        return this;
+    }
     
-    public Destiny2GetClanLeaderboardsQueryParams queryParams;
-    public Destiny2GetClanLeaderboardsRequest withQueryParams(Destiny2GetClanLeaderboardsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
+    public String modes;
+    public Destiny2GetClanLeaderboardsRequest withModes(String modes) {
+        this.modes = modes;
+        return this;
+    }
+    
+    /**
+     * ID of stat to return rather than returning all Leaderboard stats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statid")
+    public String statid;
+    public Destiny2GetClanLeaderboardsRequest withStatid(String statid) {
+        this.statid = statid;
         return this;
     }
     

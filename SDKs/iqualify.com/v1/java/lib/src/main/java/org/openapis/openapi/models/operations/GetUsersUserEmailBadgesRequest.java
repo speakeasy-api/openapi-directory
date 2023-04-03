@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserEmailBadgesRequest {
-    
-    public GetUsersUserEmailBadgesPathParams pathParams;
-    public GetUsersUserEmailBadgesRequest withPathParams(GetUsersUserEmailBadgesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public GetUsersUserEmailBadgesRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

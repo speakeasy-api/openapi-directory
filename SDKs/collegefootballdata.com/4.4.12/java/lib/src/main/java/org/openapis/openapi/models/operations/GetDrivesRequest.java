@@ -4,13 +4,106 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDrivesRequest {
+    /**
+     * Division classification filter (fbs/fcs/ii/iii)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification")
+    public String classification;
+    public GetDrivesRequest withClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
     
-    public GetDrivesQueryParams queryParams;
-    public GetDrivesRequest withQueryParams(GetDrivesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Conference filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
+    public String conference;
+    public GetDrivesRequest withConference(String conference) {
+        this.conference = conference;
+        return this;
+    }
+    
+    /**
+     * Defensive team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defense")
+    public String defense;
+    public GetDrivesRequest withDefense(String defense) {
+        this.defense = defense;
+        return this;
+    }
+    
+    /**
+     * Defensive conference filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defenseConference")
+    public String defenseConference;
+    public GetDrivesRequest withDefenseConference(String defenseConference) {
+        this.defenseConference = defenseConference;
+        return this;
+    }
+    
+    /**
+     * Offensive team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offense")
+    public String offense;
+    public GetDrivesRequest withOffense(String offense) {
+        this.offense = offense;
+        return this;
+    }
+    
+    /**
+     * Offensive conference filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offenseConference")
+    public String offenseConference;
+    public GetDrivesRequest withOffenseConference(String offenseConference) {
+        this.offenseConference = offenseConference;
+        return this;
+    }
+    
+    /**
+     * Season type filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
+    public String seasonType;
+    public GetDrivesRequest withSeasonType(String seasonType) {
+        this.seasonType = seasonType;
+        return this;
+    }
+    
+    /**
+     * Team filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
+    public String team;
+    public GetDrivesRequest withTeam(String team) {
+        this.team = team;
+        return this;
+    }
+    
+    /**
+     * Week filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
+    public Long week;
+    public GetDrivesRequest withWeek(Long week) {
+        this.week = week;
+        return this;
+    }
+    
+    /**
+     * Year filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
+    public Long year;
+    public GetDrivesRequest withYear(Long year) {
+        this.year = year;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoriesRequest {
-    
-    public GetCategoriesQueryParams queryParams;
-    public GetCategoriesRequest withQueryParams(GetCategoriesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The language for any applicable localised strings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
+    public org.openapis.openapi.models.shared.LangEnum lang;
+    public GetCategoriesRequest withLang(org.openapis.openapi.models.shared.LangEnum lang) {
+        this.lang = lang;
         return this;
     }
     

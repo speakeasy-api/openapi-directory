@@ -5,15 +5,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.IapProjectsBrandsCreateSecurity;
-import org.openapis.openapi.models.operations.IapProjectsBrandsCreatePathParams;
-import org.openapis.openapi.models.operations.IapProjectsBrandsCreateQueryParams;
 import org.openapis.openapi.models.operations.IapProjectsBrandsCreateRequest;
 import org.openapis.openapi.models.operations.IapProjectsBrandsCreateResponse;
-import org.openapis.openapi.models.shared.BrandInput;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.BrandInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -22,37 +18,28 @@ public class Application {
                 .build();
 
             IapProjectsBrandsCreateRequest req = new IapProjectsBrandsCreateRequest() {{
-                security = new IapProjectsBrandsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                dollarXgafv = "2";
+                brandInput = new BrandInput() {{
+                    applicationTitle = "provident";
+                    supportEmail = "distinctio";
                 }};
-                pathParams = new IapProjectsBrandsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new IapProjectsBrandsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new BrandInput() {{
-                    applicationTitle = "suscipit";
-                    supportEmail = "iure";
-                }};
-            }};            
+                accessToken = "quibusdam";
+                alt = "media";
+                callback = "nulla";
+                fields = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                parent = "error";
+                prettyPrint = false;
+                quotaUser = "deserunt";
+                uploadType = "suscipit";
+                uploadProtocol = "iure";
+            }}            
 
-            IapProjectsBrandsCreateResponse res = sdk.projects.iapProjectsBrandsCreate(req);
+            IapProjectsBrandsCreateResponse res = sdk.projects.iapProjectsBrandsCreate(req, new IapProjectsBrandsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.brand.isPresent()) {
                 // handle response

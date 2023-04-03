@@ -4,27 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetZRLocationSettingsRequest {
-    
-    public GetZRLocationSettingsPathParams pathParams;
-    public GetZRLocationSettingsRequest withPathParams(GetZRLocationSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=locationId")
+    public String locationId;
+    public GetZRLocationSettingsRequest withLocationId(String locationId) {
+        this.locationId = locationId;
         return this;
     }
     
-    
-    public GetZRLocationSettingsQueryParams queryParams;
-    public GetZRLocationSettingsRequest withQueryParams(GetZRLocationSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetZRLocationSettingsSecurity security;
-    public GetZRLocationSettingsRequest withSecurity(GetZRLocationSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The type of setting that you would like to retrieve.&lt;br&gt; `alert`: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt;
+     * `meeting`: Meeting settings of the Zoom Rooms Account.&lt;br&gt;
+     * `signage`: Digital signage settings of the Zoom Rooms Account.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setting_type")
+    public String settingType;
+    public GetZRLocationSettingsRequest withSettingType(String settingType) {
+        this.settingType = settingType;
         return this;
     }
     

@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDocumentBlockRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ListDocumentBlockRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListDocumentBlockQueryParams queryParams;
-    public ListDocumentBlockRequest withQueryParams(ListDocumentBlockQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ListDocumentBlockRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

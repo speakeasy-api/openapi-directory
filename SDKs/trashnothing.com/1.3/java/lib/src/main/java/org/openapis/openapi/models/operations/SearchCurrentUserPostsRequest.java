@@ -4,13 +4,178 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchCurrentUserPostsRequest {
+    /**
+     * Only posts older than this UTC date and time will be returned.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_max")
+    public OffsetDateTime dateMax;
+    public SearchCurrentUserPostsRequest withDateMax(OffsetDateTime dateMax) {
+        this.dateMax = dateMax;
+        return this;
+    }
     
-    public SearchCurrentUserPostsQueryParams queryParams;
-    public SearchCurrentUserPostsRequest withQueryParams(SearchCurrentUserPostsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only posts newer than or equal to this UTC date and time will be returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_min")
+    public OffsetDateTime dateMin;
+    public SearchCurrentUserPostsRequest withDateMin(OffsetDateTime dateMin) {
+        this.dateMin = dateMin;
+        return this;
+    }
+    
+    /**
+     * Client device pixel ratio used to determine thumbnail size (default 1.0).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_pixel_ratio")
+    public Double devicePixelRatio;
+    public SearchCurrentUserPostsRequest withDevicePixelRatio(Double devicePixelRatio) {
+        this.devicePixelRatio = devicePixelRatio;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of the group IDs to retrieve posts from. This parameter is only used if the 'groups' source is passed in the sources parameter and only groups that the current user is a member of or that are open archives groups will be used (the group IDs of other groups will be silently discarded*). &lt;br /&gt;&lt;br /&gt; NOTE: For requests using an api key instead of oauth, this field is required if the 'groups' source is passed. In addition, only posts from groups that have open_archives set to true will be used (the group IDS of other groups will be silently discarded*). &lt;br /&gt;&lt;br/&gt; *To determine which group IDs were used and which were discarded, use the group_ids field in the response.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_ids")
+    public String groupIds;
+    public SearchCurrentUserPostsRequest withGroupIds(String groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+    
+    /**
+     * If set to 1 (the default), posts that are reposts will be included. If set to 0, reposts will be excluded. See the repost_count field of post objects for details about how reposts are identified.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_reposts")
+    public Long includeReposts;
+    public SearchCurrentUserPostsRequest withIncludeReposts(Long includeReposts) {
+        this.includeReposts = includeReposts;
+        return this;
+    }
+    
+    /**
+     * The latitude of a point around which to return posts.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
+    public Double latitude;
+    public SearchCurrentUserPostsRequest withLatitude(Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+    
+    /**
+     * The longitude of a point around which to return posts.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
+    public Double longitude;
+    public SearchCurrentUserPostsRequest withLongitude(Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of the post outcomes to return.  The available post outcomes are: satisfied, withdrawn &lt;br /&gt;&lt;br /&gt; There are also a couple special values that can be passed.  If set to an empty string (the default), only posts that are not satisfied and not withdrawn and not expired are returned. If set to 'all', all posts will be returned no matter what outcome the posts have. If set to 'not-promised', only posts that are not satisfied ant not withdrawn and not expired and not promised are returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outcomes")
+    public String outcomes;
+    public SearchCurrentUserPostsRequest withOutcomes(String outcomes) {
+        this.outcomes = outcomes;
+        return this;
+    }
+    
+    /**
+     * The page of posts to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SearchCurrentUserPostsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of posts to return per page (must be &gt;= 1 and &lt;= 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchCurrentUserPostsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The radius in meters of a circle centered at the point defined by the latitude and longitude parameters. When latitude, longitude and radius are passed, only posts within the circle defined by these parameters will be returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
+    public Double radius;
+    public SearchCurrentUserPostsRequest withRadius(Double radius) {
+        this.radius = radius;
+        return this;
+    }
+    
+    /**
+     * The search query used to find posts.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public SearchCurrentUserPostsRequest withSearch(String search) {
+        this.search = search;
+        return this;
+    }
+    
+    /**
+     * How to sort the posts that are returned.  One of: relevance, date, active, distance &lt;br /&gt;&lt;br /&gt; Relevance sorting will sort the posts that best match the search query first. Date sorting will sort posts from newest to oldest. Active sorting will sort active posts before satisfied, withdrawn and expired posts and then sort by date. Distance sorting will sort the closest posts first.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public SearchCurrentUserPostsRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of the post sources to retrieve posts from. The available sources are: groups, trashnothing, open_archive_groups. The trashnothing source is for public posts that are posted on trash nothing but are not associated with any group. The open_archive_groups source provides a way to easily request posts from groups that have open_archives set to true without having to pass a group_ids parameter.  When passed, it will automatically return posts from open archive groups that are within the area specified by the latitude, longitude and radius parameters (or the current users' location if latitude, longitude and radius aren't passed). &lt;br /&gt;&lt;br /&gt; NOTE: For requests using an api key instead of oauth, passing the trashnothing source or the open_archive_groups source makes the latitude, longitude and radius parameters required.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sources")
+    public String sources;
+    public SearchCurrentUserPostsRequest withSources(String sources) {
+        this.sources = sources;
+        return this;
+    }
+    
+    /**
+     * A comma separated list of the post types to return.  The available post types are: offer, taken, wanted, received, admin
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    public String types;
+    public SearchCurrentUserPostsRequest withTypes(String types) {
+        this.types = types;
+        return this;
+    }
+    
+    /**
+     * If user_state is set, only posts matching the state specified will be returned.  Only one state may be passed and it must be one of the following: viewed, replied, bookmarked &lt;br&gt;&lt;br&gt; NOTE: This option will only work with oauth requests.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_state")
+    public String userState;
+    public SearchCurrentUserPostsRequest withUserState(String userState) {
+        this.userState = userState;
         return this;
     }
     

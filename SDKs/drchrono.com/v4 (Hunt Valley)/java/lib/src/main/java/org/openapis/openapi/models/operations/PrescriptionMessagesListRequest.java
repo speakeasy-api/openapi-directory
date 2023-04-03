@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrescriptionMessagesListRequest {
-    
-    public PrescriptionMessagesListQueryParams queryParams;
-    public PrescriptionMessagesListRequest withQueryParams(PrescriptionMessagesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public PrescriptionMessagesListRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PrescriptionMessagesListRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
+        return this;
+    }
     
-    public PrescriptionMessagesListSecurity security;
-    public PrescriptionMessagesListRequest withSecurity(PrescriptionMessagesListSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public PrescriptionMessagesListRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_message")
+    public Long parentMessage;
+    public PrescriptionMessagesListRequest withParentMessage(Long parentMessage) {
+        this.parentMessage = parentMessage;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public PrescriptionMessagesListRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public PrescriptionMessagesListRequest withSince(String since) {
+        this.since = since;
         return this;
     }
     

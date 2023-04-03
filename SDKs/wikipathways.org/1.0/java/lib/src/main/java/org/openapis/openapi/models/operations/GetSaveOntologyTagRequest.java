@@ -4,13 +4,63 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSaveOntologyTagRequest {
+    /**
+     * The authentication key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=auth")
+    public String auth;
+    public GetSaveOntologyTagRequest withAuth(String auth) {
+        this.auth = auth;
+        return this;
+    }
     
-    public GetSaveOntologyTagQueryParams queryParams;
-    public GetSaveOntologyTagRequest withQueryParams(GetSaveOntologyTagQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetSaveOntologyTagFormatEnum format;
+    public GetSaveOntologyTagRequest withFormat(GetSaveOntologyTagFormatEnum format) {
+        this.format = format;
+        return this;
+    }
+    
+    /**
+     * The pathway identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
+    public String pwId;
+    public GetSaveOntologyTagRequest withPwId(String pwId) {
+        this.pwId = pwId;
+        return this;
+    }
+    
+    /**
+     * The ontology term to apply
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term")
+    public String term;
+    public GetSaveOntologyTagRequest withTerm(String term) {
+        this.term = term;
+        return this;
+    }
+    
+    /**
+     * The identifier of the term in the ontology
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=termId")
+    public String termId;
+    public GetSaveOntologyTagRequest withTermId(String termId) {
+        this.termId = termId;
+        return this;
+    }
+    
+    /**
+     * The username
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public GetSaveOntologyTagRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

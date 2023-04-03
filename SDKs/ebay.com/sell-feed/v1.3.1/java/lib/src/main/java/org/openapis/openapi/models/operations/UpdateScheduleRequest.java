@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateScheduleRequest {
-    
-    public UpdateSchedulePathParams pathParams;
-    public UpdateScheduleRequest withPathParams(UpdateSchedulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * In the request payload: &lt;strong&gt;scheduleName&lt;/strong&gt; is optional; &lt;strong&gt;preferredTriggerHour&lt;/strong&gt;, &lt;strong&gt;preferredTriggerDayOfWeek&lt;/strong&gt;, &lt;strong&gt;preferredTriggerDayOfMonth&lt;/strong&gt;, &lt;strong&gt;scheduleStartDate&lt;/strong&gt;, &lt;strong&gt;scheduleEndDate&lt;/strong&gt;, and &lt;strong&gt;schemaVersion&lt;/strong&gt; are conditional.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateUserScheduleRequest request;
-    public UpdateScheduleRequest withRequest(org.openapis.openapi.models.shared.UpdateUserScheduleRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateUserScheduleRequest updateUserScheduleRequest;
+    public UpdateScheduleRequest withUpdateUserScheduleRequest(org.openapis.openapi.models.shared.UpdateUserScheduleRequest updateUserScheduleRequest) {
+        this.updateUserScheduleRequest = updateUserScheduleRequest;
         return this;
     }
     
-    
-    public UpdateScheduleSecurity security;
-    public UpdateScheduleRequest withSecurity(UpdateScheduleSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the schedule to update. This ID is generated when the schedule was created by the &lt;strong&gt;createSchedule&lt;/strong&gt; method.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_id")
+    public String scheduleId;
+    public UpdateScheduleRequest withScheduleId(String scheduleId) {
+        this.scheduleId = scheduleId;
         return this;
     }
     

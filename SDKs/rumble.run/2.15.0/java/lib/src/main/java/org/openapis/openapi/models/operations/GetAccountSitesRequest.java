@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountSitesRequest {
-    
-    public GetAccountSitesQueryParams queryParams;
-    public GetAccountSitesRequest withQueryParams(GetAccountSitesQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetAccountSitesSecurity security;
-    public GetAccountSitesRequest withSecurity(GetAccountSitesSecurity security) {
-        this.security = security;
+    /**
+     * an optional search string for filtering results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public GetAccountSitesRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

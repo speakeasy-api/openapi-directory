@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthConfirmJsonRequest {
-    
-    public PostV05UsersAuthConfirmJsonHeaders headers;
-    public PostV05UsersAuthConfirmJsonRequest withHeaders(PostV05UsersAuthConfirmJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05UsersAuthConfirmJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PatientAuthConfirmRequest request;
-    public PostV05UsersAuthConfirmJsonRequest withRequest(org.openapis.openapi.models.shared.PatientAuthConfirmRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PatientAuthConfirmRequest patientAuthConfirmRequest;
+    public PostV05UsersAuthConfirmJsonRequest withPatientAuthConfirmRequest(org.openapis.openapi.models.shared.PatientAuthConfirmRequest patientAuthConfirmRequest) {
+        this.patientAuthConfirmRequest = patientAuthConfirmRequest;
         return this;
     }
     

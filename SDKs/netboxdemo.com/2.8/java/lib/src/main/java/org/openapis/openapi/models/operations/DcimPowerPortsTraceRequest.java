@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimPowerPortsTraceRequest {
-    
-    public DcimPowerPortsTracePathParams pathParams;
-    public DcimPowerPortsTraceRequest withPathParams(DcimPowerPortsTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this power port.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimPowerPortsTraceRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

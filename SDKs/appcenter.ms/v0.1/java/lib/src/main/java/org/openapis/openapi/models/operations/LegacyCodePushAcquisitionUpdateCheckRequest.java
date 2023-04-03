@@ -4,20 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LegacyCodePushAcquisitionUpdateCheckRequest {
-    
-    public LegacyCodePushAcquisitionUpdateCheckQueryParams queryParams;
-    public LegacyCodePushAcquisitionUpdateCheckRequest withQueryParams(LegacyCodePushAcquisitionUpdateCheckQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appVersion")
+    public String appVersion;
+    public LegacyCodePushAcquisitionUpdateCheckRequest withAppVersion(String appVersion) {
+        this.appVersion = appVersion;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientUniqueId")
+    public String clientUniqueId;
+    public LegacyCodePushAcquisitionUpdateCheckRequest withClientUniqueId(String clientUniqueId) {
+        this.clientUniqueId = clientUniqueId;
+        return this;
+    }
     
-    public LegacyCodePushAcquisitionUpdateCheckSecurity security;
-    public LegacyCodePushAcquisitionUpdateCheckRequest withSecurity(LegacyCodePushAcquisitionUpdateCheckSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deploymentKey")
+    public String deploymentKey;
+    public LegacyCodePushAcquisitionUpdateCheckRequest withDeploymentKey(String deploymentKey) {
+        this.deploymentKey = deploymentKey;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isCompanion")
+    public String isCompanion;
+    public LegacyCodePushAcquisitionUpdateCheckRequest withIsCompanion(String isCompanion) {
+        this.isCompanion = isCompanion;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
+    public String label;
+    public LegacyCodePushAcquisitionUpdateCheckRequest withLabel(String label) {
+        this.label = label;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageHash")
+    public String packageHash;
+    public LegacyCodePushAcquisitionUpdateCheckRequest withPackageHash(String packageHash) {
+        this.packageHash = packageHash;
         return this;
     }
     

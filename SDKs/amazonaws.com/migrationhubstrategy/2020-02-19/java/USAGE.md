@@ -4,8 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.GetApplicationComponentDetailsPathParams;
-import org.openapis.openapi.models.operations.GetApplicationComponentDetailsHeaders;
 import org.openapis.openapi.models.operations.GetApplicationComponentDetailsRequest;
 import org.openapis.openapi.models.operations.GetApplicationComponentDetailsResponse;
 
@@ -14,26 +12,20 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             GetApplicationComponentDetailsRequest req = new GetApplicationComponentDetailsRequest() {{
-                pathParams = new GetApplicationComponentDetailsPathParams() {{
-                    applicationComponentId = "corrupti";
-                }};
-                headers = new GetApplicationComponentDetailsHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "corrupti";
+                xAmzContentSha256 = "provident";
+                xAmzCredential = "distinctio";
+                xAmzDate = "quibusdam";
+                xAmzSecurityToken = "unde";
+                xAmzSignature = "nulla";
+                xAmzSignedHeaders = "corrupti";
+                applicationComponentId = "illum";
+            }}            
 
             GetApplicationComponentDetailsResponse res = sdk.getApplicationComponentDetails(req);
 

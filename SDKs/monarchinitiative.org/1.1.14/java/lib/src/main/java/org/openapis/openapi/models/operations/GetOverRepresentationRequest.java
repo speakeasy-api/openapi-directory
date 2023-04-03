@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOverRepresentationRequest {
+    /**
+     * Entity ids in background set, e.g. NCBIGene:84570, NCBIGene:3630; used in over-representation tests
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
+    public String[] background;
+    public GetOverRepresentationRequest withBackground(String[] background) {
+        this.background = background;
+        return this;
+    }
     
-    public GetOverRepresentationQueryParams queryParams;
-    public GetOverRepresentationRequest withQueryParams(GetOverRepresentationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Exclude results with p-value greater than this
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_p_value")
+    public String maxPValue;
+    public GetOverRepresentationRequest withMaxPValue(String maxPValue) {
+        this.maxPValue = maxPValue;
+        return this;
+    }
+    
+    /**
+     * E.g. phenotype, function
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_category")
+    public String objectCategory;
+    public GetOverRepresentationRequest withObjectCategory(String objectCategory) {
+        this.objectCategory = objectCategory;
+        return this;
+    }
+    
+    /**
+     * ontology id. Must be obo id. Examples: go, mp, hp, uberon (optional: will be inferred if left blank)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ontology")
+    public String ontology;
+    public GetOverRepresentationRequest withOntology(String ontology) {
+        this.ontology = ontology;
+        return this;
+    }
+    
+    /**
+     * Entity ids to be examined, e.g. NCBIGene:9342, NCBIGene:7227, NCBIGene:8131, NCBIGene:157570, NCBIGene:51164, NCBIGene:6689, NCBIGene:6387
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
+    public String[] subject;
+    public GetOverRepresentationRequest withSubject(String[] subject) {
+        this.subject = subject;
+        return this;
+    }
+    
+    /**
+     * Default: gene. Other types may be used e.g. disease but statistics may not make sense
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_category")
+    public String subjectCategory;
+    public GetOverRepresentationRequest withSubjectCategory(String subjectCategory) {
+        this.subjectCategory = subjectCategory;
+        return this;
+    }
+    
+    /**
+     * must be NCBITaxon CURIE. Example: NCBITaxon:9606
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
+    public String taxon;
+    public GetOverRepresentationRequest withTaxon(String taxon) {
+        this.taxon = taxon;
         return this;
     }
     

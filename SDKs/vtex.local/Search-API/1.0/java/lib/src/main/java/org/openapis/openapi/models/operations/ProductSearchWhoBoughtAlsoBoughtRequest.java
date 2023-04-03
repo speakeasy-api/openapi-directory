@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductSearchWhoBoughtAlsoBoughtRequest {
-    
-    public ProductSearchWhoBoughtAlsoBoughtPathParams pathParams;
-    public ProductSearchWhoBoughtAlsoBoughtRequest withPathParams(ProductSearchWhoBoughtAlsoBoughtPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public ProductSearchWhoBoughtAlsoBoughtRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public ProductSearchWhoBoughtAlsoBoughtHeaders headers;
-    public ProductSearchWhoBoughtAlsoBoughtRequest withHeaders(ProductSearchWhoBoughtAlsoBoughtHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public ProductSearchWhoBoughtAlsoBoughtRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public String serverURL;
-    public ProductSearchWhoBoughtAlsoBoughtRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Product unique identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
+    public String productId;
+    public ProductSearchWhoBoughtAlsoBoughtRequest withProductId(String productId) {
+        this.productId = productId;
         return this;
     }
     

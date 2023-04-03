@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FetchPhoneNumberSecurity;
-import org.openapis.openapi.models.operations.FetchPhoneNumberPathParams;
 import org.openapis.openapi.models.operations.FetchPhoneNumberRequest;
 import org.openapis.openapi.models.operations.FetchPhoneNumberResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,18 +28,13 @@ public class Application {
                 .build();
 
             FetchPhoneNumberRequest req = new FetchPhoneNumberRequest() {{
-                security = new FetchPhoneNumberSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new FetchPhoneNumberPathParams() {{
-                    phoneNumber = "corrupti";
-                }};
-            }};            
+                phoneNumber = "corrupti";
+            }}            
 
-            FetchPhoneNumberResponse res = sdk.fetchPhoneNumber(req);
+            FetchPhoneNumberResponse res = sdk.fetchPhoneNumber(req, new FetchPhoneNumberSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.routesV2PhoneNumber.isPresent()) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubscriptionDefinitionVersionRequest {
-    
-    public GetSubscriptionDefinitionVersionPathParams pathParams;
-    public GetSubscriptionDefinitionVersionRequest withPathParams(GetSubscriptionDefinitionVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GetSubscriptionDefinitionVersionRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
     
-    
-    public GetSubscriptionDefinitionVersionQueryParams queryParams;
-    public GetSubscriptionDefinitionVersionRequest withQueryParams(GetSubscriptionDefinitionVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the subscription definition.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionDefinitionId")
+    public String subscriptionDefinitionId;
+    public GetSubscriptionDefinitionVersionRequest withSubscriptionDefinitionId(String subscriptionDefinitionId) {
+        this.subscriptionDefinitionId = subscriptionDefinitionId;
         return this;
     }
     
+    /**
+     * The ID of the subscription definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListSubscriptionDefinitionVersions'' requests. If the version is the last one that was associated with a subscription definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SubscriptionDefinitionVersionId")
+    public String subscriptionDefinitionVersionId;
+    public GetSubscriptionDefinitionVersionRequest withSubscriptionDefinitionVersionId(String subscriptionDefinitionVersionId) {
+        this.subscriptionDefinitionVersionId = subscriptionDefinitionVersionId;
+        return this;
+    }
     
-    public GetSubscriptionDefinitionVersionHeaders headers;
-    public GetSubscriptionDefinitionVersionRequest withHeaders(GetSubscriptionDefinitionVersionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetSubscriptionDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetSubscriptionDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetSubscriptionDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetSubscriptionDefinitionVersionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetSubscriptionDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetSubscriptionDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetSubscriptionDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

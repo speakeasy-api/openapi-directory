@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestDeleteDeviceSetOfOwnerRequest {
-    
-    public TestDeleteDeviceSetOfOwnerPathParams pathParams;
-    public TestDeleteDeviceSetOfOwnerRequest withPathParams(TestDeleteDeviceSetOfOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestDeleteDeviceSetOfOwnerRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The UUID of the device set
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TestDeleteDeviceSetOfOwnerRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public TestDeleteDeviceSetOfOwnerSecurity security;
-    public TestDeleteDeviceSetOfOwnerRequest withSecurity(TestDeleteDeviceSetOfOwnerSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestDeleteDeviceSetOfOwnerRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

@@ -4,20 +4,37 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRequest {
-    
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesPathParams pathParams;
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRequest withPathParams(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
+    public Long idAccount;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRequest withIdAccount(Long idAccount) {
+        this.idAccount = idAccount;
+        return this;
+    }
     
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesQueryParams queryParams;
-    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRequest withQueryParams(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
+    public Long idConnection;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRequest withIdConnection(Long idConnection) {
+        this.idConnection = idConnection;
+        return this;
+    }
+    
+    /**
+     * Hint: you can use 'me' or 'all'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
+    public String idUser;
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRequest withIdUser(String idUser) {
+        this.idUser = idUser;
         return this;
     }
     

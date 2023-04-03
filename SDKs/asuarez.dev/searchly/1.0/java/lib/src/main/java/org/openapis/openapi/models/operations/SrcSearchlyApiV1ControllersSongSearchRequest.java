@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SrcSearchlyApiV1ControllersSongSearchRequest {
-    
-    public SrcSearchlyApiV1ControllersSongSearchQueryParams queryParams;
-    public SrcSearchlyApiV1ControllersSongSearchRequest withQueryParams(SrcSearchlyApiV1ControllersSongSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SrcSearchlyApiV1ControllersSongSearchRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

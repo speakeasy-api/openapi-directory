@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOneApplicationRequest {
-    
-    public GetOneApplicationPathParams pathParams;
-    public GetOneApplicationRequest withPathParams(GetOneApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the application.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=applicationId")
+    public String applicationId;
+    public GetOneApplicationRequest withApplicationId(String applicationId) {
+        this.applicationId = applicationId;
         return this;
     }
     

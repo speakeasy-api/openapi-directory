@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBatchRequest {
-    
-    public DeleteBatchPathParams pathParams;
-    public DeleteBatchRequest withPathParams(DeleteBatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Batch ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batch_id")
+    public String batchId;
+    public DeleteBatchRequest withBatchId(String batchId) {
+        this.batchId = batchId;
         return this;
     }
     

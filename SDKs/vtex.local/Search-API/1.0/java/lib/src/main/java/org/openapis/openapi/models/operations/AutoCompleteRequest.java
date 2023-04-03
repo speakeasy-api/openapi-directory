@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoCompleteRequest {
-    
-    public AutoCompleteQueryParams queryParams;
-    public AutoCompleteRequest withQueryParams(AutoCompleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AutoCompleteRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AutoCompleteHeaders headers;
-    public AutoCompleteRequest withHeaders(AutoCompleteHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public AutoCompleteRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
-    
-    public String serverURL;
-    public AutoCompleteRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Part of the string that will be searched.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=productNameContains")
+    public String productNameContains;
+    public AutoCompleteRequest withProductNameContains(String productNameContains) {
+        this.productNameContains = productNameContains;
         return this;
     }
     

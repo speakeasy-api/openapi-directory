@@ -36,10 +36,11 @@ public class General {
      * 
      * For more information, refer to [3D Secure 2](https://docs.adyen.com/online-payments/3d-secure/native-3ds2).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGet3dsAvailabilityResponse postGet3dsAvailability(org.openapis.openapi.models.operations.PostGet3dsAvailabilityRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGet3dsAvailabilityResponse postGet3dsAvailability(org.openapis.openapi.models.shared.ThreeDSAvailabilityRequest request, org.openapis.openapi.models.operations.PostGet3dsAvailabilitySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/get3dsAvailability");
         
@@ -50,7 +51,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -92,10 +93,11 @@ public class General {
      * 
      * &gt; Since not all information is known in advance (for example, if the cardholder will successfully authenticate via 3D Secure or if you also plan to provide additional Level 2/3 data), the returned amounts are based on a set of assumption criteria you define in the `assumptions` parameter.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostGetCostEstimateResponse postGetCostEstimate(org.openapis.openapi.models.operations.PostGetCostEstimateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostGetCostEstimateResponse postGetCostEstimate(org.openapis.openapi.models.shared.CostEstimateRequest request, org.openapis.openapi.models.operations.PostGetCostEstimateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/getCostEstimate");
         
@@ -106,7 +108,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

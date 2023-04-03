@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListGiftCardActivitiesRequest {
-    
-    public ListGiftCardActivitiesQueryParams queryParams;
-    public ListGiftCardActivitiesRequest withQueryParams(ListGiftCardActivitiesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The timestamp for the beginning of the reporting period, in RFC 3339 format.
+     * Inclusive. Default: The current time minus one year.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
+    public String beginTime;
+    public ListGiftCardActivitiesRequest withBeginTime(String beginTime) {
+        this.beginTime = beginTime;
         return this;
     }
     
+    /**
+     * A pagination cursor returned by a previous call to this endpoint.
+     * Provide this cursor to retrieve the next set of results for the original query.
+     * If you do not provide the cursor, the call returns the first page of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListGiftCardActivitiesRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
     
-    public ListGiftCardActivitiesSecurity security;
-    public ListGiftCardActivitiesRequest withSecurity(ListGiftCardActivitiesSecurity security) {
-        this.security = security;
+    /**
+     * The timestamp for the end of the reporting period, in RFC 3339 format.
+     * Inclusive. Default: The current time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public ListGiftCardActivitiesRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * If you provide a gift card ID, the endpoint returns activities that belong 
+     * to the specified gift card. Otherwise, the endpoint returns all gift card activities for 
+     * the seller.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gift_card_id")
+    public String giftCardId;
+    public ListGiftCardActivitiesRequest withGiftCardId(String giftCardId) {
+        this.giftCardId = giftCardId;
+        return this;
+    }
+    
+    /**
+     * If you provide a limit value, the endpoint returns the specified number 
+     * of results (or less) per page. A maximum value is 100. The default value is 50.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListGiftCardActivitiesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * If you provide a location ID, the endpoint returns gift card activities for that location. 
+     * Otherwise, the endpoint returns gift card activities for all locations.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    public String locationId;
+    public ListGiftCardActivitiesRequest withLocationId(String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+    
+    /**
+     * The order in which the endpoint returns the activities, based on `created_at`.
+     * - `ASC` - Oldest to newest.
+     * - `DESC` - Newest to oldest (default).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public String sortOrder;
+    public ListGiftCardActivitiesRequest withSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * If you provide a type, the endpoint returns gift card activities of this type. 
+     * Otherwise, the endpoint returns all types of gift card activities.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ListGiftCardActivitiesRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

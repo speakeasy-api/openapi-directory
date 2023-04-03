@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Destiny2GetLeaderboardsRequest {
-    
-    public Destiny2GetLeaderboardsPathParams pathParams;
-    public Destiny2GetLeaderboardsRequest withPathParams(Destiny2GetLeaderboardsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Destiny membershipId of the user to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
+    public Long destinyMembershipId;
+    public Destiny2GetLeaderboardsRequest withDestinyMembershipId(Long destinyMembershipId) {
+        this.destinyMembershipId = destinyMembershipId;
         return this;
     }
     
+    /**
+     * Maximum number of top players to return. Use a large number to get entire leaderboard.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxtop")
+    public Integer maxtop;
+    public Destiny2GetLeaderboardsRequest withMaxtop(Integer maxtop) {
+        this.maxtop = maxtop;
+        return this;
+    }
     
-    public Destiny2GetLeaderboardsQueryParams queryParams;
-    public Destiny2GetLeaderboardsRequest withQueryParams(Destiny2GetLeaderboardsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A valid non-BungieNet membership type.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
+    public Integer membershipType;
+    public Destiny2GetLeaderboardsRequest withMembershipType(Integer membershipType) {
+        this.membershipType = membershipType;
+        return this;
+    }
+    
+    /**
+     * List of game modes for which to get leaderboards. See the documentation for DestinyActivityModeType for valid values, and pass in string representation, comma delimited.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modes")
+    public String modes;
+    public Destiny2GetLeaderboardsRequest withModes(String modes) {
+        this.modes = modes;
+        return this;
+    }
+    
+    /**
+     * ID of stat to return rather than returning all Leaderboard stats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=statid")
+    public String statid;
+    public Destiny2GetLeaderboardsRequest withStatid(String statid) {
+        this.statid = statid;
         return this;
     }
     

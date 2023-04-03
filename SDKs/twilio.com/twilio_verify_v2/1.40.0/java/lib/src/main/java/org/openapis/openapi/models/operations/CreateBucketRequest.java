@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateBucketRequest {
-    
-    public CreateBucketPathParams pathParams;
-    public CreateBucketRequest withPathParams(CreateBucketPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The Twilio-provided string that uniquely identifies the Rate Limit resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RateLimitSid")
+    public String rateLimitSid;
+    public CreateBucketRequest withRateLimitSid(String rateLimitSid) {
+        this.rateLimitSid = rateLimitSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateBucketCreateBucketRequest request;
-    public CreateBucketRequest withRequest(CreateBucketCreateBucketRequest request) {
-        this.request = request;
+    public CreateBucketCreateBucketRequest requestBody;
+    public CreateBucketRequest withRequestBody(CreateBucketCreateBucketRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateBucketSecurity security;
-    public CreateBucketRequest withSecurity(CreateBucketSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateBucketRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateBucketRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GenerateMobileOTPForTxnUsingPOSTSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeAuthorization authorization;
-    public GenerateMobileOTPForTxnUsingPOSTSecurity withAuthorization(org.openapis.openapi.models.shared.SchemeAuthorization authorization) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String authorization;
+    public GenerateMobileOTPForTxnUsingPOSTSecurity withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeXHipID xHipId;
-    public GenerateMobileOTPForTxnUsingPOSTSecurity withXHipId(org.openapis.openapi.models.shared.SchemeXHipID xHipId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-HIP-ID")
+    public String xHipId;
+    public GenerateMobileOTPForTxnUsingPOSTSecurity withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }

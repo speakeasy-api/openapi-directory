@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberAdditionalDataExtRequest {
-    
-    public GetSearchVersionNumberAdditionalDataExtPathParams pathParams;
-    public GetSearchVersionNumberAdditionalDataExtRequest withPathParams(GetSearchVersionNumberAdditionalDataExtPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Expected response format.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
+    public GetSearchVersionNumberAdditionalDataExtExtEnum ext;
+    public GetSearchVersionNumberAdditionalDataExtRequest withExt(GetSearchVersionNumberAdditionalDataExtExtEnum ext) {
+        this.ext = ext;
         return this;
     }
     
+    /**
+     * Comma separated list of geometry UUIDs, previously retrieved from an Search API request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geometries")
+    public String geometries;
+    public GetSearchVersionNumberAdditionalDataExtRequest withGeometries(String geometries) {
+        this.geometries = geometries;
+        return this;
+    }
     
-    public GetSearchVersionNumberAdditionalDataExtQueryParams queryParams;
-    public GetSearchVersionNumberAdditionalDataExtRequest withQueryParams(GetSearchVersionNumberAdditionalDataExtQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Defines the precision of the geometries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geometriesZoom")
+    public GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum geometriesZoom;
+    public GetSearchVersionNumberAdditionalDataExtRequest withGeometriesZoom(GetSearchVersionNumberAdditionalDataExtGeometriesZoomEnum geometriesZoom) {
+        this.geometriesZoom = geometriesZoom;
+        return this;
+    }
+    
+    /**
+     * Service version number. The current value is 2.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
+    public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+    public GetSearchVersionNumberAdditionalDataExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.versionNumber = versionNumber;
         return this;
     }
     

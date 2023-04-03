@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionPackageSearchRequest {
-    
-    public GetActionPackageSearchQueryParams queryParams;
-    public GetActionPackageSearchRequest withQueryParams(GetActionPackageSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A query string
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetActionPackageSearchRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     

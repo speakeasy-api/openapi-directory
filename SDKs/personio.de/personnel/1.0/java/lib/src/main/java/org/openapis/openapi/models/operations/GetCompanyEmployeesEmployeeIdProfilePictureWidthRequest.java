@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest {
+    /**
+     * Numeric `id` of the employee
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employee_id")
+    public Integer employeeId;
+    public GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest withEmployeeId(Integer employeeId) {
+        this.employeeId = employeeId;
+        return this;
+    }
     
-    public GetCompanyEmployeesEmployeeIdProfilePictureWidthPathParams pathParams;
-    public GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest withPathParams(GetCompanyEmployeesEmployeeIdProfilePictureWidthPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Width of the image. Default 75x75
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=width")
+    public Integer width;
+    public GetCompanyEmployeesEmployeeIdProfilePictureWidthRequest withWidth(Integer width) {
+        this.width = width;
         return this;
     }
     

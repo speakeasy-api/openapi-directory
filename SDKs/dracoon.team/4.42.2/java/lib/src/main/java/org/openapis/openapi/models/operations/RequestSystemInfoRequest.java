@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestSystemInfoRequest {
-    
-    public RequestSystemInfoQueryParams queryParams;
-    public RequestSystemInfoRequest withQueryParams(RequestSystemInfoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show only enabled authentication methods
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_enabled")
+    public Boolean isEnabled;
+    public RequestSystemInfoRequest withIsEnabled(Boolean isEnabled) {
+        this.isEnabled = isEnabled;
         return this;
     }
     

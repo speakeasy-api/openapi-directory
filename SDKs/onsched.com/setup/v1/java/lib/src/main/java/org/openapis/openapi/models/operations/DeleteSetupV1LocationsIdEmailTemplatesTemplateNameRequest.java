@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest {
+    /**
+     * id of business location, defaults to primary business location
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public DeleteSetupV1LocationsIdEmailTemplatesTemplateNamePathParams pathParams;
-    public DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest withPathParams(DeleteSetupV1LocationsIdEmailTemplatesTemplateNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Name of the email template
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=templateName")
+    public String templateName;
+    public DeleteSetupV1LocationsIdEmailTemplatesTemplateNameRequest withTemplateName(String templateName) {
+        this.templateName = templateName;
         return this;
     }
     

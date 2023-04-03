@@ -40,7 +40,7 @@ public class Snmp {
      */
     public org.openapis.openapi.models.operations.GetNetworkSnmpResponse getNetworkSnmp(org.openapis.openapi.models.operations.GetNetworkSnmpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSnmpPathParams.class, baseUrl, "/networks/{networkId}/snmp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkSnmpRequest.class, baseUrl, "/networks/{networkId}/snmp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class Snmp {
      */
     public org.openapis.openapi.models.operations.GetOrganizationSnmpResponse getOrganizationSnmp(org.openapis.openapi.models.operations.GetOrganizationSnmpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSnmpPathParams.class, baseUrl, "/organizations/{organizationId}/snmp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationSnmpRequest.class, baseUrl, "/organizations/{organizationId}/snmp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class Snmp {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkSnmpResponse updateNetworkSnmp(org.openapis.openapi.models.operations.UpdateNetworkSnmpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSnmpPathParams.class, baseUrl, "/networks/{networkId}/snmp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkSnmpRequest.class, baseUrl, "/networks/{networkId}/snmp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -162,12 +162,12 @@ public class Snmp {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationSnmpResponse updateOrganizationSnmp(org.openapis.openapi.models.operations.UpdateOrganizationSnmpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSnmpPathParams.class, baseUrl, "/organizations/{organizationId}/snmp", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationSnmpRequest.class, baseUrl, "/organizations/{organizationId}/snmp", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksAllRequest {
-    
-    public WebhooksAllQueryParams queryParams;
-    public WebhooksAllRequest withQueryParams(WebhooksAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Cursor to start from. You can find cursors for next/previous pages in the meta.cursors property of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public WebhooksAllRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
-    
-    public WebhooksAllHeaders headers;
-    public WebhooksAllRequest withHeaders(WebhooksAllHeaders headers) {
-        this.headers = headers;
+    /**
+     * Number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public WebhooksAllRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public WebhooksAllSecurity security;
-    public WebhooksAllRequest withSecurity(WebhooksAllSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public WebhooksAllRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

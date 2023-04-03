@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteItemAssignmentRequest {
-    
-    public DeleteItemAssignmentPathParams pathParams;
-    public DeleteItemAssignmentRequest withPathParams(DeleteItemAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the Bundle resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BundleSid")
+    public String bundleSid;
+    public DeleteItemAssignmentRequest withBundleSid(String bundleSid) {
+        this.bundleSid = bundleSid;
         return this;
     }
     
-    
-    public DeleteItemAssignmentSecurity security;
-    public DeleteItemAssignmentRequest withSecurity(DeleteItemAssignmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteItemAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the Identity resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteItemAssignmentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

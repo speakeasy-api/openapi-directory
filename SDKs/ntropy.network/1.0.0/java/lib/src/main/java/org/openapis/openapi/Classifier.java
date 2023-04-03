@@ -38,7 +38,7 @@ public class Classifier {
      */
     public org.openapis.openapi.models.operations.GetABatchOfBusinessTransactionClassificationResultsResponse getABatchOfBusinessTransactionClassificationResults(org.openapis.openapi.models.operations.GetABatchOfBusinessTransactionClassificationResultsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetABatchOfBusinessTransactionClassificationResultsPathParams.class, baseUrl, "/classifier/business/batch/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetABatchOfBusinessTransactionClassificationResultsRequest.class, baseUrl, "/classifier/business/batch/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,7 +79,7 @@ public class Classifier {
      */
     public org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsResponse getABatchOfConsumerTransactionClassificationResults(org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsPathParams.class, baseUrl, "/classifier/consumer/batch/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsRequest.class, baseUrl, "/classifier/consumer/batch/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

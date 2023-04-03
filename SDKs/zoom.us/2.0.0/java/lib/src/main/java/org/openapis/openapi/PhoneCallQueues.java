@@ -43,21 +43,22 @@ public class PhoneCallQueues {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddMembersToCallQueueResponse addMembersToCallQueue(org.openapis.openapi.models.operations.AddMembersToCallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddMembersToCallQueueResponse addMembersToCallQueue(org.openapis.openapi.models.operations.AddMembersToCallQueueRequest request, org.openapis.openapi.models.operations.AddMembersToCallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddMembersToCallQueuePathParams.class, baseUrl, "/phone/call_queues/{callQueueId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddMembersToCallQueueRequest.class, baseUrl, "/phone/call_queues/{callQueueId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -100,21 +101,22 @@ public class PhoneCallQueues {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AssignPhoneToCallQueueResponse assignPhoneToCallQueue(org.openapis.openapi.models.operations.AssignPhoneToCallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AssignPhoneToCallQueueResponse assignPhoneToCallQueue(org.openapis.openapi.models.operations.AssignPhoneToCallQueueRequest request, org.openapis.openapi.models.operations.AssignPhoneToCallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignPhoneToCallQueuePathParams.class, baseUrl, "/phone/call_queues/{callQueueId}/phone_numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AssignPhoneToCallQueueRequest.class, baseUrl, "/phone/call_queues/{callQueueId}/phone_numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -156,21 +158,22 @@ public class PhoneCallQueues {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangeCallQueueManagerResponse changeCallQueueManager(org.openapis.openapi.models.operations.ChangeCallQueueManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangeCallQueueManagerResponse changeCallQueueManager(org.openapis.openapi.models.operations.ChangeCallQueueManagerRequest request, org.openapis.openapi.models.operations.ChangeCallQueueManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeCallQueueManagerPathParams.class, baseUrl, "/phone/call_queues/{callQueueId}/manager", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangeCallQueueManagerRequest.class, baseUrl, "/phone/call_queues/{callQueueId}/manager", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,10 +217,11 @@ public class PhoneCallQueues {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCallQueueResponse createCallQueue(org.openapis.openapi.models.operations.CreateCallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCallQueueResponse createCallQueue(org.openapis.openapi.models.operations.CreateCallQueueApplicationJSON request, org.openapis.openapi.models.operations.CreateCallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/call_queues");
         
@@ -228,7 +232,7 @@ public class PhoneCallQueues {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -273,19 +277,20 @@ public class PhoneCallQueues {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteACallQueueResponse deleteACallQueue(org.openapis.openapi.models.operations.DeleteACallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteACallQueueResponse deleteACallQueue(org.openapis.openapi.models.operations.DeleteACallQueueRequest request, org.openapis.openapi.models.operations.DeleteACallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteACallQueuePathParams.class, baseUrl, "/phone/call_queues/{callQueueId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteACallQueueRequest.class, baseUrl, "/phone/call_queues/{callQueueId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -328,19 +333,20 @@ public class PhoneCallQueues {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetACallQueueResponse getACallQueue(org.openapis.openapi.models.operations.GetACallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetACallQueueResponse getACallQueue(org.openapis.openapi.models.operations.GetACallQueueRequest request, org.openapis.openapi.models.operations.GetACallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetACallQueuePathParams.class, baseUrl, "/phone/call_queues/{callQueueId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetACallQueueRequest.class, baseUrl, "/phone/call_queues/{callQueueId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -387,13 +393,13 @@ public class PhoneCallQueues {
      */
     public org.openapis.openapi.models.operations.GetCallQueueRecordingsResponse getCallQueueRecordings(org.openapis.openapi.models.operations.GetCallQueueRecordingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallQueueRecordingsPathParams.class, baseUrl, "/phone/call_queues/{callQueueId}/recordings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCallQueueRecordingsRequest.class, baseUrl, "/phone/call_queues/{callQueueId}/recordings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallQueueRecordingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCallQueueRecordingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -442,10 +448,11 @@ public class PhoneCallQueues {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCallQueuesResponse listCallQueues(org.openapis.openapi.models.operations.ListCallQueuesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCallQueuesResponse listCallQueues(org.openapis.openapi.models.operations.ListCallQueuesRequest request, org.openapis.openapi.models.operations.ListCallQueuesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/phone/call_queues");
         
@@ -453,14 +460,14 @@ public class PhoneCallQueues {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCallQueuesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListCallQueuesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -500,19 +507,20 @@ public class PhoneCallQueues {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnAssignPhoneNumCallQueueResponse unAssignPhoneNumCallQueue(org.openapis.openapi.models.operations.UnAssignPhoneNumCallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnAssignPhoneNumCallQueueResponse unAssignPhoneNumCallQueue(org.openapis.openapi.models.operations.UnAssignPhoneNumCallQueueRequest request, org.openapis.openapi.models.operations.UnAssignPhoneNumCallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnAssignPhoneNumCallQueuePathParams.class, baseUrl, "/phone/call_queues/{callQueueId}/phone_numbers/{phoneNumberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnAssignPhoneNumCallQueueRequest.class, baseUrl, "/phone/call_queues/{callQueueId}/phone_numbers/{phoneNumberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -554,19 +562,20 @@ public class PhoneCallQueues {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnassignAPhoneNumCallQueueResponse unassignAPhoneNumCallQueue(org.openapis.openapi.models.operations.UnassignAPhoneNumCallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnassignAPhoneNumCallQueueResponse unassignAPhoneNumCallQueue(org.openapis.openapi.models.operations.UnassignAPhoneNumCallQueueRequest request, org.openapis.openapi.models.operations.UnassignAPhoneNumCallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignAPhoneNumCallQueuePathParams.class, baseUrl, "/phone/call_queues/{callQueueId}/phone_numbers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignAPhoneNumCallQueueRequest.class, baseUrl, "/phone/call_queues/{callQueueId}/phone_numbers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -608,19 +617,20 @@ public class PhoneCallQueues {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnassignAllMembersResponse unassignAllMembers(org.openapis.openapi.models.operations.UnassignAllMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnassignAllMembersResponse unassignAllMembers(org.openapis.openapi.models.operations.UnassignAllMembersRequest request, org.openapis.openapi.models.operations.UnassignAllMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignAllMembersPathParams.class, baseUrl, "/phone/call_queues/{callQueueId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignAllMembersRequest.class, baseUrl, "/phone/call_queues/{callQueueId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -662,19 +672,20 @@ public class PhoneCallQueues {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnassignMemberFromCallQueueResponse unassignMemberFromCallQueue(org.openapis.openapi.models.operations.UnassignMemberFromCallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnassignMemberFromCallQueueResponse unassignMemberFromCallQueue(org.openapis.openapi.models.operations.UnassignMemberFromCallQueueRequest request, org.openapis.openapi.models.operations.UnassignMemberFromCallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignMemberFromCallQueuePathParams.class, baseUrl, "/phone/call_queues/{callQueueId}/members/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnassignMemberFromCallQueueRequest.class, baseUrl, "/phone/call_queues/{callQueueId}/members/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -717,21 +728,22 @@ public class PhoneCallQueues {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCallQueueResponse updateCallQueue(org.openapis.openapi.models.operations.UpdateCallQueueRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCallQueueResponse updateCallQueue(org.openapis.openapi.models.operations.UpdateCallQueueRequest request, org.openapis.openapi.models.operations.UpdateCallQueueSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCallQueuePathParams.class, baseUrl, "/phone/call_queues/{callQueueId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCallQueueRequest.class, baseUrl, "/phone/call_queues/{callQueueId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

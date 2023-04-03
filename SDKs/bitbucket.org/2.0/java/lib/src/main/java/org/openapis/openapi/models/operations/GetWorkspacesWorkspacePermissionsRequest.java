@@ -4,27 +4,29 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspacePermissionsRequest {
-    
-    public GetWorkspacesWorkspacePermissionsPathParams pathParams;
-    public GetWorkspacesWorkspacePermissionsRequest withPathParams(GetWorkspacesWorkspacePermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetWorkspacesWorkspacePermissionsRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
-    
-    public GetWorkspacesWorkspacePermissionsQueryParams queryParams;
-    public GetWorkspacesWorkspacePermissionsRequest withQueryParams(GetWorkspacesWorkspacePermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetWorkspacesWorkspacePermissionsSecurity security;
-    public GetWorkspacesWorkspacePermissionsRequest withSecurity(GetWorkspacesWorkspacePermissionsSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetWorkspacesWorkspacePermissionsRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

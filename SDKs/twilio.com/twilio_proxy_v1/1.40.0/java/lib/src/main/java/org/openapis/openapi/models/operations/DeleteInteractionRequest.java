@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteInteractionRequest {
-    
-    public DeleteInteractionPathParams pathParams;
-    public DeleteInteractionRequest withPathParams(DeleteInteractionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteInteractionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteInteractionSecurity security;
-    public DeleteInteractionRequest withSecurity(DeleteInteractionSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the parent [Session](https://www.twilio.com/docs/proxy/api/session) of the resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SessionSid")
+    public String sessionSid;
+    public DeleteInteractionRequest withSessionSid(String sessionSid) {
+        this.sessionSid = sessionSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public DeleteInteractionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Interaction resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteInteractionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

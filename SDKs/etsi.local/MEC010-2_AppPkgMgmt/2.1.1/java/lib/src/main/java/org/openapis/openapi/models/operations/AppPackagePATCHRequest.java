@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppPackagePATCHRequest {
-    
-    public AppPackagePATCHPathParams pathParams;
-    public AppPackagePATCHRequest withPathParams(AppPackagePATCHPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Operational state to be set
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AppPkgInfoModifications request;
-    public AppPackagePATCHRequest withRequest(org.openapis.openapi.models.shared.AppPkgInfoModifications request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AppPkgInfoModifications appPkgInfoModifications;
+    public AppPackagePATCHRequest withAppPkgInfoModifications(org.openapis.openapi.models.shared.AppPkgInfoModifications appPkgInfoModifications) {
+        this.appPkgInfoModifications = appPkgInfoModifications;
+        return this;
+    }
+    
+    /**
+     * Identifier of an individual application package resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appPkgId")
+    public String appPkgId;
+    public AppPackagePATCHRequest withAppPkgId(String appPkgId) {
+        this.appPkgId = appPkgId;
         return this;
     }
     

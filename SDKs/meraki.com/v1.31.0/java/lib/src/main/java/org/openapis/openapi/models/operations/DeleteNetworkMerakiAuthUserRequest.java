@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkMerakiAuthUserRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merakiAuthUserId")
+    public String merakiAuthUserId;
+    public DeleteNetworkMerakiAuthUserRequest withMerakiAuthUserId(String merakiAuthUserId) {
+        this.merakiAuthUserId = merakiAuthUserId;
+        return this;
+    }
     
-    public DeleteNetworkMerakiAuthUserPathParams pathParams;
-    public DeleteNetworkMerakiAuthUserRequest withPathParams(DeleteNetworkMerakiAuthUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkMerakiAuthUserRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

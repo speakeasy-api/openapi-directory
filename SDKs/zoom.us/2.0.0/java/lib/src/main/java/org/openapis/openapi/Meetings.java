@@ -53,12 +53,12 @@ public class Meetings {
      */
     public org.openapis.openapi.models.operations.CreateBatchPollsResponse createBatchPolls(org.openapis.openapi.models.operations.CreateBatchPollsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateBatchPollsPathParams.class, baseUrl, "/meetings/{meetingId}/batch_polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateBatchPollsRequest.class, baseUrl, "/meetings/{meetingId}/batch_polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -111,7 +111,7 @@ public class Meetings {
      */
     public org.openapis.openapi.models.operations.GetLiveStreamDetailsResponse getLiveStreamDetails(org.openapis.openapi.models.operations.GetLiveStreamDetailsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLiveStreamDetailsPathParams.class, baseUrl, "/meetings/{meetingId}/livestream", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLiveStreamDetailsRequest.class, baseUrl, "/meetings/{meetingId}/livestream", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -166,12 +166,12 @@ public class Meetings {
      */
     public org.openapis.openapi.models.operations.InMeetingRecordingControlResponse inMeetingRecordingControl(org.openapis.openapi.models.operations.InMeetingRecordingControlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InMeetingRecordingControlPathParams.class, baseUrl, "/live_meetings/{meetingId}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InMeetingRecordingControlRequest.class, baseUrl, "/live_meetings/{meetingId}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -220,7 +220,7 @@ public class Meetings {
      */
     public org.openapis.openapi.models.operations.ListMeetingTemplatesResponse listMeetingTemplates(org.openapis.openapi.models.operations.ListMeetingTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMeetingTemplatesPathParams.class, baseUrl, "/users/{userId}/meeting_templates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListMeetingTemplatesRequest.class, baseUrl, "/users/{userId}/meeting_templates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -268,19 +268,20 @@ public class Meetings {
      * * Host user type must be **Pro**.
      * * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPastMeetingPollsResponse listPastMeetingPolls(org.openapis.openapi.models.operations.ListPastMeetingPollsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPastMeetingPollsResponse listPastMeetingPolls(org.openapis.openapi.models.operations.ListPastMeetingPollsRequest request, org.openapis.openapi.models.operations.ListPastMeetingPollsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastMeetingPollsPathParams.class, baseUrl, "/past_meetings/{meetingId}/polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListPastMeetingPollsRequest.class, baseUrl, "/past_meetings/{meetingId}/polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -318,25 +319,26 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingResponse meeting(org.openapis.openapi.models.operations.MeetingRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingResponse meeting(org.openapis.openapi.models.operations.MeetingRequest request, org.openapis.openapi.models.operations.MeetingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPathParams.class, baseUrl, "/meetings/{meetingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRequest.class, baseUrl, "/meetings/{meetingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -385,12 +387,12 @@ public class Meetings {
      */
     public org.openapis.openapi.models.operations.MeetingCreateResponse meetingCreate(org.openapis.openapi.models.operations.MeetingCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingCreatePathParams.class, baseUrl, "/users/{userId}/meetings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingCreateRequest.class, baseUrl, "/users/{userId}/meetings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -439,25 +441,26 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingDeleteResponse meetingDelete(org.openapis.openapi.models.operations.MeetingDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingDeleteResponse meetingDelete(org.openapis.openapi.models.operations.MeetingDeleteRequest request, org.openapis.openapi.models.operations.MeetingDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingDeletePathParams.class, baseUrl, "/meetings/{meetingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingDeleteRequest.class, baseUrl, "/meetings/{meetingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -484,19 +487,20 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingInvitationResponse meetingInvitation(org.openapis.openapi.models.operations.MeetingInvitationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingInvitationResponse meetingInvitation(org.openapis.openapi.models.operations.MeetingInvitationRequest request, org.openapis.openapi.models.operations.MeetingInvitationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingInvitationPathParams.class, baseUrl, "/meetings/{meetingId}/invitation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingInvitationRequest.class, baseUrl, "/meetings/{meetingId}/invitation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,24 +539,25 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingLiveStreamStatusUpdateResponse meetingLiveStreamStatusUpdate(org.openapis.openapi.models.operations.MeetingLiveStreamStatusUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingLiveStreamStatusUpdateResponse meetingLiveStreamStatusUpdate(org.openapis.openapi.models.operations.MeetingLiveStreamStatusUpdateRequest request, org.openapis.openapi.models.operations.MeetingLiveStreamStatusUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingLiveStreamStatusUpdatePathParams.class, baseUrl, "/meetings/{meetingId}/livestream/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingLiveStreamStatusUpdateRequest.class, baseUrl, "/meetings/{meetingId}/livestream/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -581,24 +586,25 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingLiveStreamUpdateResponse meetingLiveStreamUpdate(org.openapis.openapi.models.operations.MeetingLiveStreamUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingLiveStreamUpdateResponse meetingLiveStreamUpdate(org.openapis.openapi.models.operations.MeetingLiveStreamUpdateRequest request, org.openapis.openapi.models.operations.MeetingLiveStreamUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingLiveStreamUpdatePathParams.class, baseUrl, "/meetings/{meetingId}/livestream", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingLiveStreamUpdateRequest.class, baseUrl, "/meetings/{meetingId}/livestream", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -627,24 +633,25 @@ public class Meetings {
      * * Polling feature must be enabled in the host's account.
      * * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingPollCreateResponse meetingPollCreate(org.openapis.openapi.models.operations.MeetingPollCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingPollCreateResponse meetingPollCreate(org.openapis.openapi.models.operations.MeetingPollCreateRequest request, org.openapis.openapi.models.operations.MeetingPollCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollCreatePathParams.class, baseUrl, "/meetings/{meetingId}/polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollCreateRequest.class, baseUrl, "/meetings/{meetingId}/polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -687,19 +694,20 @@ public class Meetings {
      * * Polling feature should be enabled in the host's account.
      * * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingPollDeleteResponse meetingPollDelete(org.openapis.openapi.models.operations.MeetingPollDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingPollDeleteResponse meetingPollDelete(org.openapis.openapi.models.operations.MeetingPollDeleteRequest request, org.openapis.openapi.models.operations.MeetingPollDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollDeletePathParams.class, baseUrl, "/meetings/{meetingId}/polls/{pollId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollDeleteRequest.class, baseUrl, "/meetings/{meetingId}/polls/{pollId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -727,19 +735,20 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingPollGetResponse meetingPollGet(org.openapis.openapi.models.operations.MeetingPollGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingPollGetResponse meetingPollGet(org.openapis.openapi.models.operations.MeetingPollGetRequest request, org.openapis.openapi.models.operations.MeetingPollGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollGetPathParams.class, baseUrl, "/meetings/{meetingId}/polls/{pollId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollGetRequest.class, baseUrl, "/meetings/{meetingId}/polls/{pollId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -779,24 +788,25 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingPollUpdateResponse meetingPollUpdate(org.openapis.openapi.models.operations.MeetingPollUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingPollUpdateResponse meetingPollUpdate(org.openapis.openapi.models.operations.MeetingPollUpdateRequest request, org.openapis.openapi.models.operations.MeetingPollUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollUpdatePathParams.class, baseUrl, "/meetings/{meetingId}/polls/{pollId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollUpdateRequest.class, baseUrl, "/meetings/{meetingId}/polls/{pollId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -824,19 +834,20 @@ public class Meetings {
      * * Host user type must be **Pro** or higher plan.
      * * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingPollsResponse meetingPolls(org.openapis.openapi.models.operations.MeetingPollsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingPollsResponse meetingPolls(org.openapis.openapi.models.operations.MeetingPollsRequest request, org.openapis.openapi.models.operations.MeetingPollsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollsPathParams.class, baseUrl, "/meetings/{meetingId}/polls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingPollsRequest.class, baseUrl, "/meetings/{meetingId}/polls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -877,30 +888,31 @@ public class Meetings {
      * **Scopes:** `meeting:write:admin` `meeting:write`
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingRegistrantCreateResponse meetingRegistrantCreate(org.openapis.openapi.models.operations.MeetingRegistrantCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingRegistrantCreateResponse meetingRegistrantCreate(org.openapis.openapi.models.operations.MeetingRegistrantCreateRequest request, org.openapis.openapi.models.operations.MeetingRegistrantCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantCreatePathParams.class, baseUrl, "/meetings/{meetingId}/registrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantCreateRequest.class, baseUrl, "/meetings/{meetingId}/registrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRegistrantCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRegistrantCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -940,24 +952,25 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingRegistrantQuestionUpdateResponse meetingRegistrantQuestionUpdate(org.openapis.openapi.models.operations.MeetingRegistrantQuestionUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingRegistrantQuestionUpdateResponse meetingRegistrantQuestionUpdate(org.openapis.openapi.models.operations.MeetingRegistrantQuestionUpdateRequest request, org.openapis.openapi.models.operations.MeetingRegistrantQuestionUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantQuestionUpdatePathParams.class, baseUrl, "/meetings/{meetingId}/registrants/questions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantQuestionUpdateRequest.class, baseUrl, "/meetings/{meetingId}/registrants/questions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -981,30 +994,31 @@ public class Meetings {
      * **Scopes:** `meeting:write:admin` `meeting:write`
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingRegistrantStatusResponse meetingRegistrantStatus(org.openapis.openapi.models.operations.MeetingRegistrantStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingRegistrantStatusResponse meetingRegistrantStatus(org.openapis.openapi.models.operations.MeetingRegistrantStatusRequest request, org.openapis.openapi.models.operations.MeetingRegistrantStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantStatusPathParams.class, baseUrl, "/meetings/{meetingId}/registrants/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantStatusRequest.class, baseUrl, "/meetings/{meetingId}/registrants/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRegistrantStatusQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRegistrantStatusRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1029,25 +1043,26 @@ public class Meetings {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingRegistrantsResponse meetingRegistrants(org.openapis.openapi.models.operations.MeetingRegistrantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingRegistrantsResponse meetingRegistrants(org.openapis.openapi.models.operations.MeetingRegistrantsRequest request, org.openapis.openapi.models.operations.MeetingRegistrantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantsPathParams.class, baseUrl, "/meetings/{meetingId}/registrants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantsRequest.class, baseUrl, "/meetings/{meetingId}/registrants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRegistrantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingRegistrantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1088,19 +1103,20 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingRegistrantsQuestionsGetResponse meetingRegistrantsQuestionsGet(org.openapis.openapi.models.operations.MeetingRegistrantsQuestionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingRegistrantsQuestionsGetResponse meetingRegistrantsQuestionsGet(org.openapis.openapi.models.operations.MeetingRegistrantsQuestionsGetRequest request, org.openapis.openapi.models.operations.MeetingRegistrantsQuestionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantsQuestionsGetPathParams.class, baseUrl, "/meetings/{meetingId}/registrants/questions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingRegistrantsQuestionsGetRequest.class, baseUrl, "/meetings/{meetingId}/registrants/questions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1137,24 +1153,25 @@ public class Meetings {
      * **Scopes:** `meeting:write:admin` `meeting:write`
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingStatusResponse meetingStatus(org.openapis.openapi.models.operations.MeetingStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingStatusResponse meetingStatus(org.openapis.openapi.models.operations.MeetingStatusRequest request, org.openapis.openapi.models.operations.MeetingStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingStatusPathParams.class, baseUrl, "/meetings/{meetingId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingStatusRequest.class, baseUrl, "/meetings/{meetingId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1181,30 +1198,31 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingUpdateJsonResponse meetingUpdateJson(org.openapis.openapi.models.operations.MeetingUpdateJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingUpdateJsonResponse meetingUpdateJson(org.openapis.openapi.models.operations.MeetingUpdateJsonRequest request, org.openapis.openapi.models.operations.MeetingUpdateJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingUpdateJsonPathParams.class, baseUrl, "/meetings/{meetingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingUpdateJsonRequest.class, baseUrl, "/meetings/{meetingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingUpdateJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingUpdateJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1231,30 +1249,31 @@ public class Meetings {
      * 
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingUpdateMultipartResponse meetingUpdateMultipart(org.openapis.openapi.models.operations.MeetingUpdateMultipartRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingUpdateMultipartResponse meetingUpdateMultipart(org.openapis.openapi.models.operations.MeetingUpdateMultipartRequest request, org.openapis.openapi.models.operations.MeetingUpdateMultipartSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingUpdateMultipartPathParams.class, baseUrl, "/meetings/{meetingId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingUpdateMultipartRequest.class, baseUrl, "/meetings/{meetingId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingUpdateMultipartQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingUpdateMultipartRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1284,13 +1303,13 @@ public class Meetings {
      */
     public org.openapis.openapi.models.operations.MeetingregistrantdeleteResponse meetingregistrantdelete(org.openapis.openapi.models.operations.MeetingregistrantdeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingregistrantdeletePathParams.class, baseUrl, "/meetings/{meetingId}/registrants/{registrantId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingregistrantdeleteRequest.class, baseUrl, "/meetings/{meetingId}/registrants/{registrantId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingregistrantdeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingregistrantdeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1322,25 +1341,26 @@ public class Meetings {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.MeetingsResponse meetings(org.openapis.openapi.models.operations.MeetingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.MeetingsResponse meetings(org.openapis.openapi.models.operations.MeetingsRequest request, org.openapis.openapi.models.operations.MeetingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingsPathParams.class, baseUrl, "/users/{userId}/meetings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MeetingsRequest.class, baseUrl, "/users/{userId}/meetings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.MeetingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1379,19 +1399,20 @@ public class Meetings {
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * &gt; **Note**: Please double encode your UUID when using this API if the UUID begins with a '/'or contains '//' in it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PastMeetingDetailsResponse pastMeetingDetails(org.openapis.openapi.models.operations.PastMeetingDetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PastMeetingDetailsResponse pastMeetingDetails(org.openapis.openapi.models.operations.PastMeetingDetailsRequest request, org.openapis.openapi.models.operations.PastMeetingDetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PastMeetingDetailsPathParams.class, baseUrl, "/past_meetings/{meetingUUID}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PastMeetingDetailsRequest.class, baseUrl, "/past_meetings/{meetingUUID}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1434,25 +1455,26 @@ public class Meetings {
      * &lt;br&gt; &lt;br&gt;  **Note**: Please double encode your UUID when using this API if the UUID begins with a '/'or contains '//' in it.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PastMeetingParticipantsResponse pastMeetingParticipants(org.openapis.openapi.models.operations.PastMeetingParticipantsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PastMeetingParticipantsResponse pastMeetingParticipants(org.openapis.openapi.models.operations.PastMeetingParticipantsRequest request, org.openapis.openapi.models.operations.PastMeetingParticipantsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PastMeetingParticipantsPathParams.class, baseUrl, "/past_meetings/{meetingUUID}/participants", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PastMeetingParticipantsRequest.class, baseUrl, "/past_meetings/{meetingUUID}/participants", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PastMeetingParticipantsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PastMeetingParticipantsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1490,19 +1512,20 @@ public class Meetings {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PastMeetingsResponse pastMeetings(org.openapis.openapi.models.operations.PastMeetingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PastMeetingsResponse pastMeetings(org.openapis.openapi.models.operations.PastMeetingsRequest request, org.openapis.openapi.models.operations.PastMeetingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PastMeetingsPathParams.class, baseUrl, "/past_meetings/{meetingId}/instances", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PastMeetingsRequest.class, baseUrl, "/past_meetings/{meetingId}/instances", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

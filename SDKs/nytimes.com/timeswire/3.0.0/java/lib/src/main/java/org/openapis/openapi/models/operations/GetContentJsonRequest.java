@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContentJsonRequest {
-    
-    public GetContentJsonQueryParams queryParams;
-    public GetContentJsonRequest withQueryParams(GetContentJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The complete URL of a specific news item, URL-encoded or backslash-escaped
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public GetContentJsonRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkWirelessRfProfilesRequest {
-    
-    public GetNetworkWirelessRfProfilesPathParams pathParams;
-    public GetNetworkWirelessRfProfilesRequest withPathParams(GetNetworkWirelessRfProfilesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTemplateProfiles")
+    public Boolean includeTemplateProfiles;
+    public GetNetworkWirelessRfProfilesRequest withIncludeTemplateProfiles(Boolean includeTemplateProfiles) {
+        this.includeTemplateProfiles = includeTemplateProfiles;
         return this;
     }
     
-    
-    public GetNetworkWirelessRfProfilesQueryParams queryParams;
-    public GetNetworkWirelessRfProfilesRequest withQueryParams(GetNetworkWirelessRfProfilesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkWirelessRfProfilesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

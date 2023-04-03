@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTicketInfoRequest {
-    
-    public GetTicketInfoPathParams pathParams;
-    public GetTicketInfoRequest withPathParams(GetTicketInfoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique abuse ticket identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticketId")
+    public String ticketId;
+    public GetTicketInfoRequest withTicketId(String ticketId) {
+        this.ticketId = ticketId;
         return this;
     }
     

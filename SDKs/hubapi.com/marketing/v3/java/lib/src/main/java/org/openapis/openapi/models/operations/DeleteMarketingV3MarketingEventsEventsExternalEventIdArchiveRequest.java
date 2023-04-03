@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest {
-    
-    public DeleteMarketingV3MarketingEventsEventsExternalEventIdArchivePathParams pathParams;
-    public DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest withPathParams(DeleteMarketingV3MarketingEventsEventsExternalEventIdArchivePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=externalAccountId")
+    public String externalAccountId;
+    public DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest withExternalAccountId(String externalAccountId) {
+        this.externalAccountId = externalAccountId;
         return this;
     }
     
-    
-    public DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveQueryParams queryParams;
-    public DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest withQueryParams(DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveSecurity security;
-    public DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest withSecurity(DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalEventId")
+    public String externalEventId;
+    public DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveRequest withExternalEventId(String externalEventId) {
+        this.externalEventId = externalEventId;
         return this;
     }
     

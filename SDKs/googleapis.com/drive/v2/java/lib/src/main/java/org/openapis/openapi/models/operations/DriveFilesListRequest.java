@@ -4,20 +4,236 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesListRequest {
-    
-    public DriveFilesListQueryParams queryParams;
-    public DriveFilesListRequest withQueryParams(DriveFilesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DriveFilesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
+    /**
+     * Groupings of files to which the query applies. Supported groupings are: 'user' (files created by, opened by, or shared directly with the user), 'drive' (files in the specified shared drive as indicated by the 'driveId'), 'domain' (files shared to the user's domain), and 'allDrives' (A combination of 'user' and 'drive' for all drives where the user is a member). When able, use 'user' or 'drive', instead of 'allDrives', for efficiency.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=corpora")
+    public String corpora;
+    public DriveFilesListRequest withCorpora(String corpora) {
+        this.corpora = corpora;
+        return this;
+    }
     
-    public DriveFilesListSecurity security;
-    public DriveFilesListRequest withSecurity(DriveFilesListSecurity security) {
-        this.security = security;
+    /**
+     * The body of items (files/documents) to which the query applies. Deprecated: use 'corpora' instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=corpus")
+    public DriveFilesListCorpusEnum corpus;
+    public DriveFilesListRequest withCorpus(DriveFilesListCorpusEnum corpus) {
+        this.corpus = corpus;
+        return this;
+    }
+    
+    /**
+     * ID of the shared drive to search.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=driveId")
+    public String driveId;
+    public DriveFilesListRequest withDriveId(String driveId) {
+        this.driveId = driveId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DriveFilesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Whether both My Drive and shared drive items should be included in results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeItemsFromAllDrives")
+    public Boolean includeItemsFromAllDrives;
+    public DriveFilesListRequest withIncludeItemsFromAllDrives(Boolean includeItemsFromAllDrives) {
+        this.includeItemsFromAllDrives = includeItemsFromAllDrives;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of IDs of labels to include in the labelInfo part of the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
+    public String includeLabels;
+    public DriveFilesListRequest withIncludeLabels(String includeLabels) {
+        this.includeLabels = includeLabels;
+        return this;
+    }
+    
+    /**
+     * Specifies which additional view's permissions to include in the response. Only 'published' is supported.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
+    public String includePermissionsForView;
+    public DriveFilesListRequest withIncludePermissionsForView(String includePermissionsForView) {
+        this.includePermissionsForView = includePermissionsForView;
+        return this;
+    }
+    
+    /**
+     * Deprecated use includeItemsFromAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTeamDriveItems")
+    public Boolean includeTeamDriveItems;
+    public DriveFilesListRequest withIncludeTeamDriveItems(Boolean includeTeamDriveItems) {
+        this.includeTeamDriveItems = includeTeamDriveItems;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DriveFilesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The maximum number of files to return per page. Partial or empty result pages are possible even before the end of the files list has been reached.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public DriveFilesListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DriveFilesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of sort keys. Valid keys are 'createdDate', 'folder', 'lastViewedByMeDate', 'modifiedByMeDate', 'modifiedDate', 'quotaBytesUsed', 'recency', 'sharedWithMeDate', 'starred', 'title', and 'title_natural'. Each key sorts ascending by default, but may be reversed with the 'desc' modifier. Example usage: ?orderBy=folder,modifiedDate desc,title. Please note that there is a current limitation for users with approximately one million files in which the requested sort order is ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public DriveFilesListRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Page token for files.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
+    public String pageToken;
+    public DriveFilesListRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DriveFilesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * This parameter is deprecated and has no function.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public DriveFilesListProjectionEnum projection;
+    public DriveFilesListRequest withProjection(DriveFilesListProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * Query string for searching files.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public DriveFilesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DriveFilesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of spaces to query. Supported values are 'drive' and 'appDataFolder'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spaces")
+    public String spaces;
+    public DriveFilesListRequest withSpaces(String spaces) {
+        this.spaces = spaces;
+        return this;
+    }
+    
+    /**
+     * Whether the requesting application supports both My Drives and shared drives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
+    public Boolean supportsAllDrives;
+    public DriveFilesListRequest withSupportsAllDrives(Boolean supportsAllDrives) {
+        this.supportsAllDrives = supportsAllDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use supportsAllDrives instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
+    public Boolean supportsTeamDrives;
+    public DriveFilesListRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
+        this.supportsTeamDrives = supportsTeamDrives;
+        return this;
+    }
+    
+    /**
+     * Deprecated use driveId instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=teamDriveId")
+    public String teamDriveId;
+    public DriveFilesListRequest withTeamDriveId(String teamDriveId) {
+        this.teamDriveId = teamDriveId;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public DriveFilesListRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

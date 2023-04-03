@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListWorkflowRunsForRepoRequest {
-    
-    public ActionsListWorkflowRunsForRepoPathParams pathParams;
-    public ActionsListWorkflowRunsForRepoRequest withPathParams(ActionsListWorkflowRunsForRepoPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns someone's workflow runs. Use the login for the user who created the `push` associated with the check suite or workflow run.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=actor")
+    public String actor;
+    public ActionsListWorkflowRunsForRepoRequest withActor(String actor) {
+        this.actor = actor;
         return this;
     }
     
+    /**
+     * Returns workflow runs associated with a branch. Use the name of the branch of the `push`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branch")
+    public String branch;
+    public ActionsListWorkflowRunsForRepoRequest withBranch(String branch) {
+        this.branch = branch;
+        return this;
+    }
     
-    public ActionsListWorkflowRunsForRepoQueryParams queryParams;
-    public ActionsListWorkflowRunsForRepoRequest withQueryParams(ActionsListWorkflowRunsForRepoQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Returns workflow runs created within the given date-time range. For more information on the syntax, see "[Understanding the search syntax](https://docs.github.com/github-ae@latest/search-github/getting-started-with-searching-on-github/understanding-the-search-syntax#query-for-dates)."
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created")
+    public OffsetDateTime created;
+    public ActionsListWorkflowRunsForRepoRequest withCreated(OffsetDateTime created) {
+        this.created = created;
+        return this;
+    }
+    
+    /**
+     * Returns workflow run triggered by the event you specify. For example, `push`, `pull_request` or `issue`. For more information, see "[Events that trigger workflows](https://docs.github.com/github-ae@latest/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows)."
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
+    public String event;
+    public ActionsListWorkflowRunsForRepoRequest withEvent(String event) {
+        this.event = event;
+        return this;
+    }
+    
+    /**
+     * If `true` pull requests are omitted from the response (empty array).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_pull_requests")
+    public Boolean excludePullRequests;
+    public ActionsListWorkflowRunsForRepoRequest withExcludePullRequests(Boolean excludePullRequests) {
+        this.excludePullRequests = excludePullRequests;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ActionsListWorkflowRunsForRepoRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ActionsListWorkflowRunsForRepoRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ActionsListWorkflowRunsForRepoRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ActionsListWorkflowRunsForRepoRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub can set a status of `waiting` or `requested`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public org.openapis.openapi.models.shared.WorkflowRunStatusEnum status;
+    public ActionsListWorkflowRunsForRepoRequest withStatus(org.openapis.openapi.models.shared.WorkflowRunStatusEnum status) {
+        this.status = status;
         return this;
     }
     

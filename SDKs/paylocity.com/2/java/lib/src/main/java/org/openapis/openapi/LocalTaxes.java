@@ -34,24 +34,25 @@ public class LocalTaxes {
      * Add new local tax
      * Sends new employee local tax information directly to Web Pay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddLocalTaxResponse addLocalTax(org.openapis.openapi.models.operations.AddLocalTaxRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddLocalTaxResponse addLocalTax(org.openapis.openapi.models.operations.AddLocalTaxRequest request, org.openapis.openapi.models.operations.AddLocalTaxSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddLocalTaxPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddLocalTaxRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "localTax", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class LocalTaxes {
      * Delete local tax by tax code
      * Delete local tax by tax code
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeResponse deleteLocalTaxByTaxCode(org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeResponse deleteLocalTaxByTaxCode(org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeRequest request, org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes/{taxCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLocalTaxByTaxCodeRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes/{taxCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,19 +125,20 @@ public class LocalTaxes {
      * Get all local taxes
      * Returns all local taxes for the selected employee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAllLocalTaxesResponse getAllLocalTaxes(org.openapis.openapi.models.operations.GetAllLocalTaxesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAllLocalTaxesResponse getAllLocalTaxes(org.openapis.openapi.models.operations.GetAllLocalTaxesRequest request, org.openapis.openapi.models.operations.GetAllLocalTaxesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllLocalTaxesPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllLocalTaxesRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -173,19 +176,20 @@ public class LocalTaxes {
      * Get local taxes by tax code
      * Returns all local taxes with the provided tax code for the selected employee.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeResponse getLocalTaxByTaxCode(org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeResponse getLocalTaxByTaxCode(org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeRequest request, org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocalTaxByTaxCodePathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes/{taxCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocalTaxByTaxCodeRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/localTaxes/{taxCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

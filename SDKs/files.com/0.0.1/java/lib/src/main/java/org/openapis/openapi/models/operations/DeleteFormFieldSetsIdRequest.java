@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFormFieldSetsIdRequest {
-    
-    public DeleteFormFieldSetsIdPathParams pathParams;
-    public DeleteFormFieldSetsIdRequest withPathParams(DeleteFormFieldSetsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Form Field Set ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteFormFieldSetsIdRequest withId(Integer id) {
+        this.id = id;
         return this;
     }
     

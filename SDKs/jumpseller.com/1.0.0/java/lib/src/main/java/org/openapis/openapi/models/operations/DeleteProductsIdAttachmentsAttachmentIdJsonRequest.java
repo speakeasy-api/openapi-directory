@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductsIdAttachmentsAttachmentIdJsonRequest {
-    
-    public DeleteProductsIdAttachmentsAttachmentIdJsonPathParams pathParams;
-    public DeleteProductsIdAttachmentsAttachmentIdJsonRequest withPathParams(DeleteProductsIdAttachmentsAttachmentIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the Product Attachment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachment_id")
+    public Integer attachmentId;
+    public DeleteProductsIdAttachmentsAttachmentIdJsonRequest withAttachmentId(Integer attachmentId) {
+        this.attachmentId = attachmentId;
         return this;
     }
     
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public DeleteProductsIdAttachmentsAttachmentIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
     
-    public DeleteProductsIdAttachmentsAttachmentIdJsonQueryParams queryParams;
-    public DeleteProductsIdAttachmentsAttachmentIdJsonRequest withQueryParams(DeleteProductsIdAttachmentsAttachmentIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public DeleteProductsIdAttachmentsAttachmentIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public DeleteProductsIdAttachmentsAttachmentIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

@@ -4,34 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchInsightsSegmentsRequest {
-    
-    public FetchInsightsSegmentsPathParams pathParams;
-    public FetchInsightsSegmentsRequest withPathParams(FetchInsightsSegmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * To unique id of the segment
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SegmentId")
+    public String segmentId;
+    public FetchInsightsSegmentsRequest withSegmentId(String segmentId) {
+        this.segmentId = segmentId;
         return this;
     }
     
-    
-    public FetchInsightsSegmentsHeaders headers;
-    public FetchInsightsSegmentsRequest withHeaders(FetchInsightsSegmentsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public FetchInsightsSegmentsSecurity security;
-    public FetchInsightsSegmentsRequest withSecurity(FetchInsightsSegmentsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchInsightsSegmentsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Token HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Token")
+    public String token;
+    public FetchInsightsSegmentsRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

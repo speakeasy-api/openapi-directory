@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishEntitlementsRequest {
-    
-    public PublishEntitlementsHeaders headers;
-    public PublishEntitlementsRequest withHeaders(PublishEntitlementsHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Entitlements information to add to the entity
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Entitlement request;
-    public PublishEntitlementsRequest withRequest(org.openapis.openapi.models.shared.Entitlement request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Entitlement entitlement;
+    public PublishEntitlementsRequest withEntitlement(org.openapis.openapi.models.shared.Entitlement entitlement) {
+        this.entitlement = entitlement;
+        return this;
+    }
+    
+    /**
+     * Unique correlation id to be able to trace the request in our system
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
+    public String tmpsCorrelationId;
+    public PublishEntitlementsRequest withTMPSCorrelationId(String tmpsCorrelationId) {
+        this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
     }
     

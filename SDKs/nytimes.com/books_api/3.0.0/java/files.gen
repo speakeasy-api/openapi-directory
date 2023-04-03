@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsBestSellersHistoryJsonSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsBestSellersHistoryJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsBestSellersHistoryJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsBestSellersHistoryJSON200ApplicationJSONResultsIsbns.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory.java
@@ -39,9 +38,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETListsBestSellersHist
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsBestSellersHistoryJSON200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsBestSellersHistoryJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJsonSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJsonPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJsonSortOrderEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJsonQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJSON200ApplicationJSONResultsBooksIsbns.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJSON200ApplicationJSONResultsBooks.java
@@ -50,9 +47,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJSON200
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsDateListJsonResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormatSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormatFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormatPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormatSortOrderEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormatQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormat200ApplicationJSONResultsBookDetails.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormat200ApplicationJSONResultsIsbns.java
@@ -62,16 +57,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormat200Applic
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsNamesFormatSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsNamesFormatFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsNamesFormatPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsNamesFormatQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsNamesFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsNamesFormat200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsNamesFormat200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsNamesFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormatSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormatFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormatPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormatQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormat200ApplicationJSONResultsListsBooks.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormat200ApplicationJSONResultsLists.java
@@ -80,11 +71,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormat2
 lib/src/main/java/org/openapis/openapi/models/operations/GETListsOverviewFormatResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormatSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormatFormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormatPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormatQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormat200ApplicationJSONResults.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormat200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReviewsFormatResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
 USAGE.md

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListingHeavyEquipmentIdRequest {
-    
-    public GetListingHeavyEquipmentIdPathParams pathParams;
-    public GetListingHeavyEquipmentIdRequest withPathParams(GetListingHeavyEquipmentIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The API Authentication Key. Mandatory with all API calls.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetListingHeavyEquipmentIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
-    
-    public GetListingHeavyEquipmentIdQueryParams queryParams;
-    public GetListingHeavyEquipmentIdRequest withQueryParams(GetListingHeavyEquipmentIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Listing id to get all the listing attributes
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetListingHeavyEquipmentIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

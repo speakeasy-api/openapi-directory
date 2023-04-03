@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetServersRequest {
+    /**
+     * Can be used to filter resources by labels. The response will only contain resources matching the label selector.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
+    public String labelSelector;
+    public GetServersRequest withLabelSelector(String labelSelector) {
+        this.labelSelector = labelSelector;
+        return this;
+    }
     
-    public GetServersQueryParams queryParams;
-    public GetServersRequest withQueryParams(GetServersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used to filter resources by their name. The response will only contain the resources matching the specified name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetServersRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetServersSortEnum sort;
+    public GetServersRequest withSort(GetServersSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Can be used multiple times. The response will only contain Server matching the status
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetServersStatusEnum status;
+    public GetServersRequest withStatus(GetServersStatusEnum status) {
+        this.status = status;
         return this;
     }
     

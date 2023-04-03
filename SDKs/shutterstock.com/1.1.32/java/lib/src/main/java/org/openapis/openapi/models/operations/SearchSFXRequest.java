@@ -4,20 +4,137 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchSFXRequest {
-    
-    public SearchSFXQueryParams queryParams;
-    public SearchSFXRequest withQueryParams(SearchSFXQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Show sound effects added on the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date")
+    public LocalDate addedDate;
+    public SearchSFXRequest withAddedDate(LocalDate addedDate) {
+        this.addedDate = addedDate;
         return this;
     }
     
+    /**
+     * Show sound effects added before the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_end")
+    public LocalDate addedDateEnd;
+    public SearchSFXRequest withAddedDateEnd(LocalDate addedDateEnd) {
+        this.addedDateEnd = addedDateEnd;
+        return this;
+    }
     
-    public SearchSFXSecurity security;
-    public SearchSFXRequest withSecurity(SearchSFXSecurity security) {
-        this.security = security;
+    /**
+     * Show sound effects added on or after the specified date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=added_date_start")
+    public LocalDate addedDateStart;
+    public SearchSFXRequest withAddedDateStart(LocalDate addedDateStart) {
+        this.addedDateStart = addedDateStart;
+        return this;
+    }
+    
+    /**
+     * Show sound effects with the specified duration in seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration")
+    public Long duration;
+    public SearchSFXRequest withDuration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+    
+    /**
+     * Show sound effects with the specified duration or longer in seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_from")
+    public Long durationFrom;
+    public SearchSFXRequest withDurationFrom(Long durationFrom) {
+        this.durationFrom = durationFrom;
+        return this;
+    }
+    
+    /**
+     * Show sound effects with the specified duration or shorter in seconds
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=duration_to")
+    public Long durationTo;
+    public SearchSFXRequest withDurationTo(Long durationTo) {
+        this.durationTo = durationTo;
+        return this;
+    }
+    
+    /**
+     * Set query and result language (uses Accept-Language header if not set)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.LanguageEnum language;
+    public SearchSFXRequest withLanguage(org.openapis.openapi.models.shared.LanguageEnum language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public SearchSFXRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public SearchSFXRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * One or more search terms separated by spaces
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchSFXRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * Enable or disable safe search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe")
+    public Boolean safe;
+    public SearchSFXRequest withSafe(Boolean safe) {
+        this.safe = safe;
+        return this;
+    }
+    
+    /**
+     * Sort by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public SearchSFXSortEnum sort;
+    public SearchSFXRequest withSort(SearchSFXSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Amount of detail to render in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
+    public SearchSFXViewEnum view;
+    public SearchSFXRequest withView(SearchSFXViewEnum view) {
+        this.view = view;
         return this;
     }
     

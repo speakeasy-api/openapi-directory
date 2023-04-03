@@ -40,12 +40,12 @@ public class Claim {
      */
     public org.openapis.openapi.models.operations.VmxNetworkDevicesClaimResponse vmxNetworkDevicesClaim(org.openapis.openapi.models.operations.VmxNetworkDevicesClaimRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VmxNetworkDevicesClaimPathParams.class, baseUrl, "/networks/{networkId}/devices/claim/vmx", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VmxNetworkDevicesClaimRequest.class, baseUrl, "/networks/{networkId}/devices/claim/vmx", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

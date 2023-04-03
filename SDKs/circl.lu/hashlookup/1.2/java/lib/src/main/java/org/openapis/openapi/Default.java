@@ -37,7 +37,7 @@ public class Default {
      */
     public org.openapis.openapi.models.operations.GetChildrenResponse getChildren(org.openapis.openapi.models.operations.GetChildrenRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChildrenPathParams.class, baseUrl, "/children/{sha1}/{count}/{cursor}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetChildrenRequest.class, baseUrl, "/children/{sha1}/{count}/{cursor}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -100,7 +100,7 @@ public class Default {
      */
     public org.openapis.openapi.models.operations.GetLookupMd5Response getLookupMd5(org.openapis.openapi.models.operations.GetLookupMd5Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLookupMd5PathParams.class, baseUrl, "/lookup/md5/{md5}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLookupMd5Request.class, baseUrl, "/lookup/md5/{md5}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -132,7 +132,7 @@ public class Default {
      */
     public org.openapis.openapi.models.operations.GetLookupSha1Response getLookupSha1(org.openapis.openapi.models.operations.GetLookupSha1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLookupSha1PathParams.class, baseUrl, "/lookup/sha1/{sha1}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLookupSha1Request.class, baseUrl, "/lookup/sha1/{sha1}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,7 +164,7 @@ public class Default {
      */
     public org.openapis.openapi.models.operations.GetLookupSha256Response getLookupSha256(org.openapis.openapi.models.operations.GetLookupSha256Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLookupSha256PathParams.class, baseUrl, "/lookup/sha256/{sha256}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLookupSha256Request.class, baseUrl, "/lookup/sha256/{sha256}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -196,7 +196,7 @@ public class Default {
      */
     public org.openapis.openapi.models.operations.GetParentsResponse getParents(org.openapis.openapi.models.operations.GetParentsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetParentsPathParams.class, baseUrl, "/parents/{sha1}/{count}/{cursor}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetParentsRequest.class, baseUrl, "/parents/{sha1}/{count}/{cursor}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -228,7 +228,7 @@ public class Default {
      */
     public org.openapis.openapi.models.operations.GetSessionCreateResponse getSessionCreate(org.openapis.openapi.models.operations.GetSessionCreateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSessionCreatePathParams.class, baseUrl, "/session/create/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSessionCreateRequest.class, baseUrl, "/session/create/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -260,7 +260,7 @@ public class Default {
      */
     public org.openapis.openapi.models.operations.GetSessionMatchesResponse getSessionMatches(org.openapis.openapi.models.operations.GetSessionMatchesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSessionMatchesPathParams.class, baseUrl, "/session/get/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSessionMatchesRequest.class, baseUrl, "/session/get/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

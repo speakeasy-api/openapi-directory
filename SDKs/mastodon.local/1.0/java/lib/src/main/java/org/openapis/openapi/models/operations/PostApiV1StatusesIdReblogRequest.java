@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1StatusesIdReblogRequest {
-    
-    public PostApiV1StatusesIdReblogPathParams pathParams;
-    public PostApiV1StatusesIdReblogRequest withPathParams(PostApiV1StatusesIdReblogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostApiV1StatusesIdReblogRequestBody request;
-    public PostApiV1StatusesIdReblogRequest withRequest(PostApiV1StatusesIdReblogRequestBody request) {
-        this.request = request;
+    public PostApiV1StatusesIdReblogRequestBody requestBody;
+    public PostApiV1StatusesIdReblogRequest withRequestBody(PostApiV1StatusesIdReblogRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostApiV1StatusesIdReblogSecurity security;
-    public PostApiV1StatusesIdReblogRequest withSecurity(PostApiV1StatusesIdReblogSecurity security) {
-        this.security = security;
+    /**
+     * Local ID of a status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostApiV1StatusesIdReblogRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

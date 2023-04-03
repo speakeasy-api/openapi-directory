@@ -38,7 +38,7 @@ public class ChannelCatalogsLegacyTrackingGlobal {
      */
     public org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogResponse getLegacyTrackingChannelCatalog(org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogPathParams.class, baseUrl, "/v2/user/legacyTracking/channelCatalogs/{channelCatalogId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogRequest.class, baseUrl, "/v2/user/legacyTracking/channelCatalogs/{channelCatalogId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -90,7 +90,7 @@ public class ChannelCatalogsLegacyTrackingGlobal {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLegacyTrackingChannelCatalogsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -136,7 +136,7 @@ public class ChannelCatalogsLegacyTrackingGlobal {
      */
     public org.openapis.openapi.models.operations.MigrateLegacyTrackingChannelCatalogResponse migrateLegacyTrackingChannelCatalog(org.openapis.openapi.models.operations.MigrateLegacyTrackingChannelCatalogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrateLegacyTrackingChannelCatalogPathParams.class, baseUrl, "/v2/user/legacyTracking/channelCatalogs/{channelCatalogId}/migrate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.MigrateLegacyTrackingChannelCatalogRequest.class, baseUrl, "/v2/user/legacyTracking/channelCatalogs/{channelCatalogId}/migrate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

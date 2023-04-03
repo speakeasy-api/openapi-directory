@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetRecentChangesRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetRecentChangesFormatEnum format;
+    public GetGetRecentChangesRequest withFormat(GetGetRecentChangesFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetGetRecentChangesQueryParams queryParams;
-    public GetGetRecentChangesRequest withQueryParams(GetGetRecentChangesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Get the changes after this time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public GetGetRecentChangesRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

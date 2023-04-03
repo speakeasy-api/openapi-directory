@@ -39,7 +39,7 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.GetProductTypeListOfWorkgroupResponse getProductTypeListOfWorkgroup(org.openapis.openapi.models.operations.GetProductTypeListOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductTypeListOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/productTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProductTypeListOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/productTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -158,7 +158,7 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.GetSpecResponse getSpec(org.openapis.openapi.models.operations.GetSpecRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecPathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,7 +277,7 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.GetSpecListResponse getSpecList(org.openapis.openapi.models.operations.GetSpecListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecListPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecListRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -396,7 +396,7 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.GetSpecProductTypeListOfWorkgroupResponse getSpecProductTypeListOfWorkgroup(org.openapis.openapi.models.operations.GetSpecProductTypeListOfWorkgroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecProductTypeListOfWorkgroupPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecProductTypeListOfWorkgroupRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -515,7 +515,7 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.GetSpecTypeFieldsResponse getSpecTypeFields(org.openapis.openapi.models.operations.GetSpecTypeFieldsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecTypeFieldsPathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/specTypes/{spec_type_id}/specTypeFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSpecTypeFieldsRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/specTypes/{spec_type_id}/specTypeFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -634,7 +634,7 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdResponse getV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecId(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -753,7 +753,7 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsResponse getV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFields(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/specTypes/{spec_type_id}/specTypeFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetV1WorkgroupsWorkgroupIdSpecTypesSpecTypeIdSpecTypeFieldsRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/specTypes/{spec_type_id}/specTypeFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -872,12 +872,12 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupJsonResponse postSpecProductTypeListOfWorkgroupJson(org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "wgSpecPrdTypeRegPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -993,12 +993,12 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupRawResponse postSpecProductTypeListOfWorkgroupRaw(org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpecProductTypeListOfWorkgroupRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/productTypesOfSpecTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -1114,12 +1114,12 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.PostSpecJsonResponse postSpecJson(org.openapis.openapi.models.operations.PostSpecJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpecJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpecJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "specPersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1235,12 +1235,12 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.PostSpecRawResponse postSpecRaw(org.openapis.openapi.models.operations.PostSpecRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpecRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostSpecRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -1356,12 +1356,12 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.PutSpecJsonResponse putSpecJson(org.openapis.openapi.models.operations.PutSpecJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSpecJsonPathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSpecJsonRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "v1X1SpecUpdatingPO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1477,12 +1477,12 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.PutSpecRawResponse putSpecRaw(org.openapis.openapi.models.operations.PutSpecRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSpecRawPathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSpecRawRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -1598,12 +1598,12 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonResponse putV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJson(org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "specUpdatePersistVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -1719,12 +1719,12 @@ public class Spec {
      */
     public org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawResponse putV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRaw(org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV1WorkgroupsWorkgroupIdProjectsProjectIdSpecsSpecIdRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/specs/{spec_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

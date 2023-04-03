@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsDeleteRequest {
-    
-    public GroupsDeletePathParams pathParams;
-    public GroupsDeleteRequest withPathParams(GroupsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GroupsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

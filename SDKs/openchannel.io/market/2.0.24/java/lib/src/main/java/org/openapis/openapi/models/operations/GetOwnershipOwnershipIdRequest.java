@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOwnershipOwnershipIdRequest {
-    
-    public GetOwnershipOwnershipIdPathParams pathParams;
-    public GetOwnershipOwnershipIdRequest withPathParams(GetOwnershipOwnershipIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id belonging to the ownership record
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
+    public String ownershipId;
+    public GetOwnershipOwnershipIdRequest withOwnershipId(String ownershipId) {
+        this.ownershipId = ownershipId;
         return this;
     }
     

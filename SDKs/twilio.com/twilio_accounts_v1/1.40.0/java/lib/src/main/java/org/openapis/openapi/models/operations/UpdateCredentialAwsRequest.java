@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCredentialAwsRequest {
-    
-    public UpdateCredentialAwsPathParams pathParams;
-    public UpdateCredentialAwsRequest withPathParams(UpdateCredentialAwsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateCredentialAwsUpdateCredentialAwsRequest request;
-    public UpdateCredentialAwsRequest withRequest(UpdateCredentialAwsUpdateCredentialAwsRequest request) {
-        this.request = request;
+    public UpdateCredentialAwsUpdateCredentialAwsRequest requestBody;
+    public UpdateCredentialAwsRequest withRequestBody(UpdateCredentialAwsUpdateCredentialAwsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateCredentialAwsSecurity security;
-    public UpdateCredentialAwsRequest withSecurity(UpdateCredentialAwsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateCredentialAwsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the AWS resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateCredentialAwsRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

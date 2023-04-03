@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCheckoutCustomFieldsIdJsonRequest {
-    
-    public PutCheckoutCustomFieldsIdJsonPathParams pathParams;
-    public PutCheckoutCustomFieldsIdJsonRequest withPathParams(PutCheckoutCustomFieldsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutCheckoutCustomFieldsIdJsonQueryParams queryParams;
-    public PutCheckoutCustomFieldsIdJsonRequest withQueryParams(PutCheckoutCustomFieldsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * CheckoutCustomField parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CheckoutCustomFieldEdit request;
-    public PutCheckoutCustomFieldsIdJsonRequest withRequest(org.openapis.openapi.models.shared.CheckoutCustomFieldEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit;
+    public PutCheckoutCustomFieldsIdJsonRequest withCheckoutCustomFieldEdit(org.openapis.openapi.models.shared.CheckoutCustomFieldEdit checkoutCustomFieldEdit) {
+        this.checkoutCustomFieldEdit = checkoutCustomFieldEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PutCheckoutCustomFieldsIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the CheckoutCustomField
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PutCheckoutCustomFieldsIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PutCheckoutCustomFieldsIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

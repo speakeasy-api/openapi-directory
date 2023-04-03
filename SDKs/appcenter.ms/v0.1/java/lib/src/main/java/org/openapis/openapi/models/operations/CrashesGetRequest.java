@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CrashesGetRequest {
-    
-    public CrashesGetPathParams pathParams;
-    public CrashesGetRequest withPathParams(CrashesGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public CrashesGetRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public CrashesGetQueryParams queryParams;
-    public CrashesGetRequest withQueryParams(CrashesGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of a specific group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_group_id")
+    public String crashGroupId;
+    public CrashesGetRequest withCrashGroupId(String crashGroupId) {
+        this.crashGroupId = crashGroupId;
         return this;
     }
     
+    /**
+     * id of a specific crash
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=crash_id")
+    public String crashId;
+    public CrashesGetRequest withCrashId(String crashId) {
+        this.crashId = crashId;
+        return this;
+    }
     
-    public CrashesGetSecurity security;
-    public CrashesGetRequest withSecurity(CrashesGetSecurity security) {
-        this.security = security;
+    /**
+     * true if the stacktrace should be only the relevant thread / exception. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=grouping_only")
+    public Boolean groupingOnly;
+    public CrashesGetRequest withGroupingOnly(Boolean groupingOnly) {
+        this.groupingOnly = groupingOnly;
+        return this;
+    }
+    
+    /**
+     * true if the crash should include in depth crash details
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_details")
+    public Boolean includeDetails;
+    public CrashesGetRequest withIncludeDetails(Boolean includeDetails) {
+        this.includeDetails = includeDetails;
+        return this;
+    }
+    
+    /**
+     * true if the crash should include the custom log report. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_log")
+    public Boolean includeLog;
+    public CrashesGetRequest withIncludeLog(Boolean includeLog) {
+        this.includeLog = includeLog;
+        return this;
+    }
+    
+    /**
+     * true if the crash should include the raw crash report. Default is false
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_report")
+    public Boolean includeReport;
+    public CrashesGetRequest withIncludeReport(Boolean includeReport) {
+        this.includeReport = includeReport;
+        return this;
+    }
+    
+    /**
+     * true if the crash should include the stacktrace information
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_stacktrace")
+    public Boolean includeStacktrace;
+    public CrashesGetRequest withIncludeStacktrace(Boolean includeStacktrace) {
+        this.includeStacktrace = includeStacktrace;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public CrashesGetRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

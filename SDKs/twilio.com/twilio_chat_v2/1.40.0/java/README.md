@@ -18,14 +18,11 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateChannelSecurity;
-import org.openapis.openapi.models.operations.CreateChannelPathParams;
-import org.openapis.openapi.models.operations.CreateChannelHeaders;
 import org.openapis.openapi.models.operations.CreateChannelCreateChannelRequest;
 import org.openapis.openapi.models.operations.CreateChannelRequest;
 import org.openapis.openapi.models.operations.CreateChannelResponse;
-import org.openapis.openapi.models.shared.ChannelEnumChannelTypeEnum;
 import org.openapis.openapi.models.shared.ChannelEnumWebhookEnabledTypeEnum;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
+import org.openapis.openapi.models.shared.ChannelEnumChannelTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -34,30 +31,23 @@ public class Application {
                 .build();
 
             CreateChannelRequest req = new CreateChannelRequest() {{
-                security = new CreateChannelSecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CreateChannelPathParams() {{
-                    serviceSid = "corrupti";
-                }};
-                headers = new CreateChannelHeaders() {{
-                    xTwilioWebhookEnabled = "false";
-                }};
-                request = new CreateChannelCreateChannelRequest() {{
-                    attributes = "distinctio";
-                    createdBy = "quibusdam";
-                    dateCreated = "2021-04-14T16:47:33.722Z";
-                    dateUpdated = "2021-04-22T12:08:58.275Z";
-                    friendlyName = "vel";
+                requestBody = new CreateChannelCreateChannelRequest() {{
+                    attributes = "corrupti";
+                    createdBy = "provident";
+                    dateCreated = "2021-04-24T16:27:50.833Z";
+                    dateUpdated = "2021-04-14T16:47:33.722Z";
+                    friendlyName = "corrupti";
                     type = "private";
-                    uniqueName = "deserunt";
+                    uniqueName = "vel";
                 }};
-            }};            
+                serviceSid = "error";
+                xTwilioWebhookEnabled = "false";
+            }}            
 
-            CreateChannelResponse res = sdk.createChannel(req);
+            CreateChannelResponse res = sdk.createChannel(req, new CreateChannelSecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.chatV2ServiceChannel.isPresent()) {
                 // handle response
@@ -69,7 +59,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

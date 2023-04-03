@@ -155,7 +155,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DfsSlateOwnershipProjectionsBySlateidResponse dfsSlateOwnershipProjectionsBySlateid(org.openapis.openapi.models.operations.DfsSlateOwnershipProjectionsBySlateidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlateOwnershipProjectionsBySlateidPathParams.class, baseUrl, "/{format}/DfsSlateOwnershipProjectionsBySlateID/{slateId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlateOwnershipProjectionsBySlateidRequest.class, baseUrl, "/{format}/DfsSlateOwnershipProjectionsBySlateID/{slateId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -194,7 +194,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DfsSlatesByDateResponse dfsSlatesByDate(org.openapis.openapi.models.operations.DfsSlatesByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlatesByDatePathParams.class, baseUrl, "/{format}/DfsSlatesByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlatesByDateRequest.class, baseUrl, "/{format}/DfsSlatesByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -233,7 +233,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DfsSlatesByWeekResponse dfsSlatesByWeek(org.openapis.openapi.models.operations.DfsSlatesByWeekRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlatesByWeekPathParams.class, baseUrl, "/{format}/DfsSlatesByWeek/{season}/{week}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfsSlatesByWeekRequest.class, baseUrl, "/{format}/DfsSlatesByWeek/{season}/{week}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -272,7 +272,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse idpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams.class, baseUrl, "/{format}/IdpPlayerGameProjectionStatsByPlayerID/{season}/{week}/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest.class, baseUrl, "/{format}/IdpPlayerGameProjectionStatsByPlayerID/{season}/{week}/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -311,7 +311,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse idpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams.class, baseUrl, "/{format}/IdpPlayerGameProjectionStatsByTeam/{season}/{week}/{team}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest.class, baseUrl, "/{format}/IdpPlayerGameProjectionStatsByTeam/{season}/{week}/{team}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -350,7 +350,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse idpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams.class, baseUrl, "/{format}/IdpPlayerGameProjectionStatsByWeek/{season}/{week}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.IdpProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest.class, baseUrl, "/{format}/IdpPlayerGameProjectionStatsByWeek/{season}/{week}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -390,7 +390,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.InjuredPlayersResponse injuredPlayers(org.openapis.openapi.models.operations.InjuredPlayersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InjuredPlayersPathParams.class, baseUrl, "/{format}/InjuredPlayers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.InjuredPlayersRequest.class, baseUrl, "/{format}/InjuredPlayers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -429,7 +429,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedFantasyDefenseGameStatsWDfsSalariesResponse projectedFantasyDefenseGameStatsWDfsSalaries(org.openapis.openapi.models.operations.ProjectedFantasyDefenseGameStatsWDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedFantasyDefenseGameStatsWDfsSalariesPathParams.class, baseUrl, "/{format}/FantasyDefenseProjectionsByGame/{season}/{week}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedFantasyDefenseGameStatsWDfsSalariesRequest.class, baseUrl, "/{format}/FantasyDefenseProjectionsByGame/{season}/{week}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -468,7 +468,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedFantasyDefenseSeasonStatsWAdpResponse projectedFantasyDefenseSeasonStatsWAdp(org.openapis.openapi.models.operations.ProjectedFantasyDefenseSeasonStatsWAdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedFantasyDefenseSeasonStatsWAdpPathParams.class, baseUrl, "/{format}/FantasyDefenseProjectionsBySeason/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedFantasyDefenseSeasonStatsWAdpRequest.class, baseUrl, "/{format}/FantasyDefenseProjectionsBySeason/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -507,7 +507,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesResponse projectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalaries(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesPathParams.class, baseUrl, "/{format}/PlayerGameProjectionStatsByPlayerID/{season}/{week}/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByPlayerWInjuriesLineupsDfsSalariesRequest.class, baseUrl, "/{format}/PlayerGameProjectionStatsByPlayerID/{season}/{week}/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -546,7 +546,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesResponse projectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalaries(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesPathParams.class, baseUrl, "/{format}/PlayerGameProjectionStatsByTeam/{season}/{week}/{team}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByTeamWInjuriesLineupsDfsSalariesRequest.class, baseUrl, "/{format}/PlayerGameProjectionStatsByTeam/{season}/{week}/{team}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -585,7 +585,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesResponse projectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalaries(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesPathParams.class, baseUrl, "/{format}/PlayerGameProjectionStatsByWeek/{season}/{week}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerGameStatsByWeekWInjuriesLineupsDfsSalariesRequest.class, baseUrl, "/{format}/PlayerGameProjectionStatsByWeek/{season}/{week}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -624,7 +624,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsByPlayerWAdpResponse projectedPlayerSeasonStatsByPlayerWAdp(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsByPlayerWAdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsByPlayerWAdpPathParams.class, baseUrl, "/{format}/PlayerSeasonProjectionStatsByPlayerID/{season}/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsByPlayerWAdpRequest.class, baseUrl, "/{format}/PlayerSeasonProjectionStatsByPlayerID/{season}/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -663,7 +663,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsByTeamWAdpResponse projectedPlayerSeasonStatsByTeamWAdp(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsByTeamWAdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsByTeamWAdpPathParams.class, baseUrl, "/{format}/PlayerSeasonProjectionStatsByTeam/{season}/{team}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsByTeamWAdpRequest.class, baseUrl, "/{format}/PlayerSeasonProjectionStatsByTeam/{season}/{team}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -702,7 +702,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsWAdpResponse projectedPlayerSeasonStatsWAdp(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsWAdpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsWAdpPathParams.class, baseUrl, "/{format}/PlayerSeasonProjectionStats/{season}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProjectedPlayerSeasonStatsWAdpRequest.class, baseUrl, "/{format}/PlayerSeasonProjectionStats/{season}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -742,7 +742,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.UpcomingDfsSlateOwnershipProjectionsResponse upcomingDfsSlateOwnershipProjections(org.openapis.openapi.models.operations.UpcomingDfsSlateOwnershipProjectionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpcomingDfsSlateOwnershipProjectionsPathParams.class, baseUrl, "/{format}/UpcomingDfsSlateOwnershipProjections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpcomingDfsSlateOwnershipProjectionsRequest.class, baseUrl, "/{format}/UpcomingDfsSlateOwnershipProjections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTrustProductEntityAssignmentRequest {
-    
-    public FetchTrustProductEntityAssignmentPathParams pathParams;
-    public FetchTrustProductEntityAssignmentRequest withPathParams(FetchTrustProductEntityAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the Identity resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchTrustProductEntityAssignmentRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchTrustProductEntityAssignmentSecurity security;
-    public FetchTrustProductEntityAssignmentRequest withSecurity(FetchTrustProductEntityAssignmentSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchTrustProductEntityAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string that we created to identify the TrustProduct resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrustProductSid")
+    public String trustProductSid;
+    public FetchTrustProductEntityAssignmentRequest withTrustProductSid(String trustProductSid) {
+        this.trustProductSid = trustProductSid;
         return this;
     }
     

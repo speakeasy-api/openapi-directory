@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetorderFormconfigurationRequest {
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetorderFormconfigurationRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public GetorderFormconfigurationHeaders headers;
-    public GetorderFormconfigurationRequest withHeaders(GetorderFormconfigurationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetorderFormconfigurationRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListVideoParticipantSummaryRequest {
-    
-    public ListVideoParticipantSummaryPathParams pathParams;
-    public ListVideoParticipantSummaryRequest withPathParams(ListVideoParticipantSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListVideoParticipantSummaryRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListVideoParticipantSummaryQueryParams queryParams;
-    public ListVideoParticipantSummaryRequest withQueryParams(ListVideoParticipantSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListVideoParticipantSummaryRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public ListVideoParticipantSummarySecurity security;
-    public ListVideoParticipantSummaryRequest withSecurity(ListVideoParticipantSummarySecurity security) {
-        this.security = security;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListVideoParticipantSummaryRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListVideoParticipantSummaryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Room resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public ListVideoParticipantSummaryRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     

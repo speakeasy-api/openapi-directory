@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UnarchiveConversationRequest {
-    
-    public UnarchiveConversationPathParams pathParams;
-    public UnarchiveConversationRequest withPathParams(UnarchiveConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the conversation to unarchive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public UnarchiveConversationRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
         return this;
     }
     

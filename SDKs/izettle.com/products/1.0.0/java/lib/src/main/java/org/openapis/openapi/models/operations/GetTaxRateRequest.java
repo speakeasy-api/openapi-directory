@@ -4,20 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTaxRateRequest {
-    
-    public GetTaxRatePathParams pathParams;
-    public GetTaxRateRequest withPathParams(GetTaxRatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTaxRateSecurity security;
-    public GetTaxRateRequest withSecurity(GetTaxRateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxRateUuid")
+    public String taxRateUuid;
+    public GetTaxRateRequest withTaxRateUuid(String taxRateUuid) {
+        this.taxRateUuid = taxRateUuid;
         return this;
     }
     

@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListChannelMembersRequest {
-    
-    public ListChannelMembersPathParams pathParams;
-    public ListChannelMembersRequest withPathParams(ListChannelMembersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Channel Id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelId")
+    public String channelId;
+    public ListChannelMembersRequest withChannelId(String channelId) {
+        this.channelId = channelId;
         return this;
     }
     
-    
-    public ListChannelMembersQueryParams queryParams;
-    public ListChannelMembersRequest withQueryParams(ListChannelMembersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ListChannelMembersRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned with a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ListChannelMembersRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public ListChannelMembersSecurity security;
-    public ListChannelMembersRequest withSecurity(ListChannelMembersSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the user who is the owner of this channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public ListChannelMembersRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

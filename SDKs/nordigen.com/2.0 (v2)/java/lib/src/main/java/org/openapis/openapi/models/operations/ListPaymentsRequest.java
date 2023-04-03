@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPaymentsRequest {
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListPaymentsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public ListPaymentsQueryParams queryParams;
-    public ListPaymentsRequest withQueryParams(ListPaymentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListPaymentsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

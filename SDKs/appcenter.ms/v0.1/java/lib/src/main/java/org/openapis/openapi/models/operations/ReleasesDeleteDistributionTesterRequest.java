@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesDeleteDistributionTesterRequest {
-    
-    public ReleasesDeleteDistributionTesterPathParams pathParams;
-    public ReleasesDeleteDistributionTesterRequest withPathParams(ReleasesDeleteDistributionTesterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesDeleteDistributionTesterRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesDeleteDistributionTesterRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public ReleasesDeleteDistributionTesterSecurity security;
-    public ReleasesDeleteDistributionTesterRequest withSecurity(ReleasesDeleteDistributionTesterSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the release
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
+    public Long releaseId;
+    public ReleasesDeleteDistributionTesterRequest withReleaseId(Long releaseId) {
+        this.releaseId = releaseId;
+        return this;
+    }
+    
+    /**
+     * The id of the tester
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tester_id")
+    public String testerId;
+    public ReleasesDeleteDistributionTesterRequest withTesterId(String testerId) {
+        this.testerId = testerId;
         return this;
     }
     

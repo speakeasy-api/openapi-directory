@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGroupsRequest {
+    /**
+     * The comma separated list of group_ids to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_ids")
+    public String groupIds;
+    public GetGroupsRequest withGroupIds(String groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
     
-    public GetGroupsQueryParams queryParams;
-    public GetGroupsRequest withQueryParams(GetGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The integer offset at which to start the page. Possible values are 0 to total_records - 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetGroupsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The max size of each page of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetGroupsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVolumesIdActionsRequest {
-    
-    public GetVolumesIdActionsPathParams pathParams;
-    public GetVolumesIdActionsRequest withPathParams(GetVolumesIdActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Volume
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetVolumesIdActionsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetVolumesIdActionsSortParameterSortEnum sort;
+    public GetVolumesIdActionsRequest withSort(GetVolumesIdActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetVolumesIdActionsQueryParams queryParams;
-    public GetVolumesIdActionsRequest withQueryParams(GetVolumesIdActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetVolumesIdActionsStatusParameterStatusEnum status;
+    public GetVolumesIdActionsRequest withStatus(GetVolumesIdActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

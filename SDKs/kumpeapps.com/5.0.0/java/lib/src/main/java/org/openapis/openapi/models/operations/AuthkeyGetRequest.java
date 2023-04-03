@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthkeyGetRequest {
-    
-    public AuthkeyGetQueryParams queryParams;
-    public AuthkeyGetRequest withQueryParams(AuthkeyGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * YubiKey OTP (if configured for user)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=otp")
+    public String otp;
+    public AuthkeyGetRequest withOtp(String otp) {
+        this.otp = otp;
         return this;
     }
     
+    /**
+     * Authenticated password
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public AuthkeyGetRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
     
-    public AuthkeyGetSecurity security;
-    public AuthkeyGetRequest withSecurity(AuthkeyGetSecurity security) {
-        this.security = security;
+    /**
+     * Authenticated username
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
+    public String username;
+    public AuthkeyGetRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

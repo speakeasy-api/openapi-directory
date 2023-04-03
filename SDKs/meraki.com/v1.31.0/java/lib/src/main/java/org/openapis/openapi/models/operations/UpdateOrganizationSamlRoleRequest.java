@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateOrganizationSamlRoleRequest {
-    
-    public UpdateOrganizationSamlRolePathParams pathParams;
-    public UpdateOrganizationSamlRoleRequest withPathParams(UpdateOrganizationSamlRolePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateOrganizationSamlRoleRequestBody requestBody;
+    public UpdateOrganizationSamlRoleRequest withRequestBody(UpdateOrganizationSamlRoleRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateOrganizationSamlRoleRequestBody request;
-    public UpdateOrganizationSamlRoleRequest withRequest(UpdateOrganizationSamlRoleRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public UpdateOrganizationSamlRoleRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=samlRoleId")
+    public String samlRoleId;
+    public UpdateOrganizationSamlRoleRequest withSamlRoleId(String samlRoleId) {
+        this.samlRoleId = samlRoleId;
         return this;
     }
     

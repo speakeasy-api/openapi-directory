@@ -33,10 +33,11 @@ public class UserRateLimit {
     /**
      * This method retrieves the call limit and utilization data for an application user. The call-limit data is returned for all RESTful APIs and the legacy Trading API that limit calls on a per-user basis.  &lt;br&gt;&lt;br&gt;The response from &lt;b&gt;getUserRateLimits&lt;/b&gt; includes a list of the applicable resources and the "call limit", or quota, that is set for each resource. In addition to quota information, the response also includes the number of remaining calls available before the limit is reached, the time remaining before the quota resets, and the length of the "time window" to which the quota applies.  &lt;br&gt;&lt;br&gt;By default, this method returns utilization data for all RESTful APIs resources and the legacy Trading API calls that limit request access by user. Use the &lt;b&gt;api_name&lt;/b&gt; and &lt;b&gt;api_context&lt;/b&gt; query parameters to filter the response to only the desired APIs.  &lt;br&gt;&lt;br&gt;For more on call limits, see &lt;a href="https://developer.ebay.com/support/app-check " target="_blank"&gt;Compatible Application Check&lt;/a&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserRateLimitsResponse getUserRateLimits(org.openapis.openapi.models.operations.GetUserRateLimitsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserRateLimitsResponse getUserRateLimits(org.openapis.openapi.models.operations.GetUserRateLimitsRequest request, org.openapis.openapi.models.operations.GetUserRateLimitsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user_rate_limit/");
         
@@ -44,14 +45,14 @@ public class UserRateLimit {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserRateLimitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserRateLimitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

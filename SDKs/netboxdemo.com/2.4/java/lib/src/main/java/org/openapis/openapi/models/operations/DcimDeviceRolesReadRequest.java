@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimDeviceRolesReadRequest {
-    
-    public DcimDeviceRolesReadPathParams pathParams;
-    public DcimDeviceRolesReadRequest withPathParams(DcimDeviceRolesReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this device role.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimDeviceRolesReadRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

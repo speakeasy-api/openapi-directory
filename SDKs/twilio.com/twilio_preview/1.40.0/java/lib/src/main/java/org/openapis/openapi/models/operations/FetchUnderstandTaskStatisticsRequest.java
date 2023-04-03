@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchUnderstandTaskStatisticsRequest {
-    
-    public FetchUnderstandTaskStatisticsPathParams pathParams;
-    public FetchUnderstandTaskStatisticsRequest withPathParams(FetchUnderstandTaskStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the parent Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public FetchUnderstandTaskStatisticsRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
-    
-    public FetchUnderstandTaskStatisticsSecurity security;
-    public FetchUnderstandTaskStatisticsRequest withSecurity(FetchUnderstandTaskStatisticsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchUnderstandTaskStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique ID of the Task associated with this Field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskSid")
+    public String taskSid;
+    public FetchUnderstandTaskStatisticsRequest withTaskSid(String taskSid) {
+        this.taskSid = taskSid;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainsGetRequest {
-    
-    public DomainsGetPathParams pathParams;
-    public DomainsGetRequest withPathParams(DomainsGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public DomainsGetRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * name of the domain.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainName;
+    public DomainsGetRequest withDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
     
-    public DomainsGetQueryParams queryParams;
-    public DomainsGetRequest withQueryParams(DomainsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public DomainsGetRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

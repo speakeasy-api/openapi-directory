@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWinProbabilityDataRequest {
-    
-    public GetWinProbabilityDataQueryParams queryParams;
-    public GetWinProbabilityDataRequest withQueryParams(GetWinProbabilityDataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Game id filter
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gameId")
+    public Long gameId;
+    public GetWinProbabilityDataRequest withGameId(Long gameId) {
+        this.gameId = gameId;
         return this;
     }
     

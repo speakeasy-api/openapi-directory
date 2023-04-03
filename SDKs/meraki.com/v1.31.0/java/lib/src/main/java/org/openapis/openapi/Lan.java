@@ -40,7 +40,7 @@ public class Lan {
      */
     public org.openapis.openapi.models.operations.GetDeviceCellularGatewayLanResponse getDeviceCellularGatewayLan(org.openapis.openapi.models.operations.GetDeviceCellularGatewayLanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewayLanPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/lan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceCellularGatewayLanRequest.class, baseUrl, "/devices/{serial}/cellularGateway/lan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Lan {
      */
     public org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayLanResponse updateDeviceCellularGatewayLan(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayLanRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayLanPathParams.class, baseUrl, "/devices/{serial}/cellularGateway/lan", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDeviceCellularGatewayLanRequest.class, baseUrl, "/devices/{serial}/cellularGateway/lan", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

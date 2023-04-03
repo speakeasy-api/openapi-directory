@@ -32,15 +32,12 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgFormRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgForm400WildcardErrors.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgForm400Wildcard.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgFormResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgJson400WildcardErrors.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgJson400Wildcard.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgJsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgMultipartRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgMultipart400WildcardErrors.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgMultipart400Wildcard.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRemovebgMultipartResponse.java
@@ -50,11 +47,8 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetAccount200WildcardDa
 lib/src/main/java/org/openapis/openapi/models/operations/GetAccount200WildcardData.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAccount200Wildcard.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAccountResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostImproveFormRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostImproveFormResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostImproveJsonRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostImproveJsonResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostImproveMultipartRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostImproveMultipartResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/RemoveBgJsonResponseData.java
 lib/src/main/java/org/openapis/openapi/models/shared/RemoveBgJsonResponse.java
@@ -76,6 +70,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ImprovementProgramJsonRespo
 lib/src/main/java/org/openapis/openapi/models/shared/ImprovementProgramJson.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImprovementProgramMultipartImageFile.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImprovementProgramMultipart.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyHeader.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

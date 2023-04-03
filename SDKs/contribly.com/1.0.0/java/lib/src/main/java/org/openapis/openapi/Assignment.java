@@ -45,7 +45,7 @@ public class Assignment {
      */
     public org.openapis.openapi.models.operations.DeleteAssignmentsIdResponse deleteAssignmentsId(org.openapis.openapi.models.operations.DeleteAssignmentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAssignmentsIdPathParams.class, baseUrl, "/assignments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAssignmentsIdRequest.class, baseUrl, "/assignments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -83,7 +83,7 @@ public class Assignment {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssignmentsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAssignmentsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class Assignment {
      */
     public org.openapis.openapi.models.operations.GetAssignmentsIdResponse getAssignmentsId(org.openapis.openapi.models.operations.GetAssignmentsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssignmentsIdPathParams.class, baseUrl, "/assignments/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAssignmentsIdRequest.class, baseUrl, "/assignments/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -161,7 +161,7 @@ public class Assignment {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAssignmentsResponse postAssignments(org.openapis.openapi.models.operations.PostAssignmentsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAssignmentsResponse postAssignments(org.openapis.openapi.models.shared.AssignmentSubmission request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/assignments");
         

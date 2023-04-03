@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateMeshHeaders;
 import org.openapis.openapi.models.operations.CreateMeshRequestBody;
 import org.openapis.openapi.models.operations.CreateMeshRequest;
 import org.openapis.openapi.models.operations.CreateMeshResponse;
@@ -14,27 +13,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateMeshRequest req = new CreateMeshRequest() {{
-                headers = new CreateMeshHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
+                requestBody = new CreateMeshRequestBody() {{
+                    clientToken = "corrupti";
+                    meshName = "provident";
                 }};
-                request = new CreateMeshRequestBody() {{
-                    clientToken = "illum";
-                    meshName = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+            }}            
 
             CreateMeshResponse res = sdk.createMesh(req);
 

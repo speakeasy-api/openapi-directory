@@ -37,7 +37,7 @@ public class Activitypub {
      */
     public org.openapis.openapi.models.operations.ActivitypubPersonResponse activitypubPerson(org.openapis.openapi.models.operations.ActivitypubPersonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivitypubPersonPathParams.class, baseUrl, "/activitypub/user/{username}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivitypubPersonRequest.class, baseUrl, "/activitypub/user/{username}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -81,7 +81,7 @@ public class Activitypub {
      */
     public org.openapis.openapi.models.operations.ActivitypubPersonInboxResponse activitypubPersonInbox(org.openapis.openapi.models.operations.ActivitypubPersonInboxRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivitypubPersonInboxPathParams.class, baseUrl, "/activitypub/user/{username}/inbox", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActivitypubPersonInboxRequest.class, baseUrl, "/activitypub/user/{username}/inbox", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

@@ -7,14 +7,10 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurityOption1;
 import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurityOption2;
 import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListSecurity;
-import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListPathParams;
-import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListQueryParams;
 import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListRequest;
 import org.openapis.openapi.models.operations.DialogflowProjectsLocationsAgentsChangelogsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -23,38 +19,29 @@ public class Application {
                 .build();
 
             DialogflowProjectsLocationsAgentsChangelogsListRequest req = new DialogflowProjectsLocationsAgentsChangelogsListRequest() {{
-                security = new DialogflowProjectsLocationsAgentsChangelogsListSecurity() {{
-                    option1 = new DialogflowProjectsLocationsAgentsChangelogsListSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new DialogflowProjectsLocationsAgentsChangelogsListPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new DialogflowProjectsLocationsAgentsChangelogsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    filter = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    pageSize = 623564;
-                    pageToken = "deserunt";
-                    prettyPrint = false;
-                    quotaUser = "suscipit";
-                    uploadType = "iure";
-                    uploadProtocol = "magnam";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                filter = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                pageSize = 423655;
+                pageToken = "error";
+                parent = "deserunt";
+                prettyPrint = false;
+                quotaUser = "suscipit";
+                uploadType = "iure";
+                uploadProtocol = "magnam";
+            }}            
 
-            DialogflowProjectsLocationsAgentsChangelogsListResponse res = sdk.projects.dialogflowProjectsLocationsAgentsChangelogsList(req);
+            DialogflowProjectsLocationsAgentsChangelogsListResponse res = sdk.projects.dialogflowProjectsLocationsAgentsChangelogsList(req, new DialogflowProjectsLocationsAgentsChangelogsListSecurity() {{
+                option1 = new DialogflowProjectsLocationsAgentsChangelogsListSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.googleCloudDialogflowCxV3beta1ListChangelogsResponse.isPresent()) {
                 // handle response

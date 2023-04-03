@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountUserRequest {
-    
-    public UpdateAccountUserPathParams pathParams;
-    public UpdateAccountUserRequest withPathParams(UpdateAccountUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * user parameters
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UserOptions request;
-    public UpdateAccountUserRequest withRequest(org.openapis.openapi.models.shared.UserOptions request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UserOptions userOptions;
+    public UpdateAccountUserRequest withUserOptions(org.openapis.openapi.models.shared.UserOptions userOptions) {
+        this.userOptions = userOptions;
         return this;
     }
     
-    
-    public UpdateAccountUserSecurity security;
-    public UpdateAccountUserRequest withSecurity(UpdateAccountUserSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the user to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public String userId;
+    public UpdateAccountUserRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -39,7 +39,7 @@ public class Permissions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletePermissionsResponse deletePermissions(org.openapis.openapi.models.operations.DeletePermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletePermissionsResponse deletePermissions(org.openapis.openapi.models.shared.Permission request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/permissions");
         
@@ -77,7 +77,7 @@ public class Permissions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostPermissionsResponse postPermissions(org.openapis.openapi.models.operations.PostPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostPermissionsResponse postPermissions(org.openapis.openapi.models.shared.Permission request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/permissions");
         

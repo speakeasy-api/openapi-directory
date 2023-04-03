@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AgentStoreSetRequest {
-    
-    public AgentStoreSetPathParams pathParams;
-    public AgentStoreSetRequest withPathParams(AgentStoreSetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Value
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public AgentStoreSetRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public AgentStoreSetRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public AgentStoreSetRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * Persistent setting
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=persist")
+    public Integer persist;
+    public AgentStoreSetRequest withPersist(Integer persist) {
+        this.persist = persist;
+        return this;
+    }
+    
+    /**
+     * Variable name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
+    public String var;
+    public AgentStoreSetRequest withVar(String var) {
+        this.var = var;
         return this;
     }
     

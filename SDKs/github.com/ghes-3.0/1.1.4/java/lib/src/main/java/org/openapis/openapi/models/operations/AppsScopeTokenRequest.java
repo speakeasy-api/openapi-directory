@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsScopeTokenRequest {
-    
-    public AppsScopeTokenPathParams pathParams;
-    public AppsScopeTokenRequest withPathParams(AppsScopeTokenPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public AppsScopeTokenRequestBody requestBody;
+    public AppsScopeTokenRequest withRequestBody(AppsScopeTokenRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppsScopeTokenRequestBody request;
-    public AppsScopeTokenRequest withRequest(AppsScopeTokenRequestBody request) {
-        this.request = request;
+    /**
+     * The client ID of your GitHub app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public AppsScopeTokenRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

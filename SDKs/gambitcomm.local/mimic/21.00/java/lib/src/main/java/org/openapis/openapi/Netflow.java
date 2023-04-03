@@ -39,7 +39,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowChangeAttrResponse protocolNetflowChangeAttr(org.openapis.openapi.models.operations.ProtocolNetflowChangeAttrRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowChangeAttrPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/{flowset-uid}/{field-num}/{attr}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowChangeAttrRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/{flowset-uid}/{field-num}/{attr}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -80,7 +80,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowChangeDfsResponse protocolNetflowChangeDfs(org.openapis.openapi.models.operations.ProtocolNetflowChangeDfsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowChangeDfsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/dfs_interval/{interval}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowChangeDfsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/dfs_interval/{interval}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -121,7 +121,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowChangeTfsResponse protocolNetflowChangeTfs(org.openapis.openapi.models.operations.ProtocolNetflowChangeTfsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowChangeTfsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/tfs_interval/{interval}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowChangeTfsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/change/tfs_interval/{interval}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -162,7 +162,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowGetArgsResponse protocolNetflowGetArgs(org.openapis.openapi.models.operations.ProtocolNetflowGetArgsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowGetArgsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/args", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowGetArgsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/args", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -204,7 +204,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowGetConfigResponse protocolNetflowGetConfig(org.openapis.openapi.models.operations.ProtocolNetflowGetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowGetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowGetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -246,7 +246,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowGetStatisticsResponse protocolNetflowGetStatistics(org.openapis.openapi.models.operations.ProtocolNetflowGetStatisticsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowGetStatisticsPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/statistics", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowGetStatisticsRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/statistics", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -329,7 +329,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowGetTraceResponse protocolNetflowGetTrace(org.openapis.openapi.models.operations.ProtocolNetflowGetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowGetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/trace", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowGetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/get/trace", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -371,7 +371,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowHaltResponse protocolNetflowHalt(org.openapis.openapi.models.operations.ProtocolNetflowHaltRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowHaltPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/halt", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowHaltRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/halt", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -412,7 +412,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowListResponse protocolNetflowList(org.openapis.openapi.models.operations.ProtocolNetflowListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowListPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowListRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/flow/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -454,7 +454,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowReloadResponse protocolNetflowReload(org.openapis.openapi.models.operations.ProtocolNetflowReloadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowReloadPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/reload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowReloadRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/reload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -495,7 +495,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowResumeResponse protocolNetflowResume(org.openapis.openapi.models.operations.ProtocolNetflowResumeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowResumePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowResumeRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -536,7 +536,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowSetCollectorResponse protocolNetflowSetCollector(org.openapis.openapi.models.operations.ProtocolNetflowSetCollectorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowSetCollectorPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/collector/{collectorIP}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowSetCollectorRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/collector/{collectorIP}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -577,7 +577,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowSetConfigResponse protocolNetflowSetConfig(org.openapis.openapi.models.operations.ProtocolNetflowSetConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowSetConfigPathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/config/{argument}/{value}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowSetConfigRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/config/{argument}/{value}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -618,7 +618,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowSetFileNameResponse protocolNetflowSetFileName(org.openapis.openapi.models.operations.ProtocolNetflowSetFileNameRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowSetFileNamePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/filename/{fileName}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowSetFileNameRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/filename/{fileName}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -659,7 +659,7 @@ public class Netflow {
      */
     public org.openapis.openapi.models.operations.ProtocolNetflowSetTraceResponse protocolNetflowSetTrace(org.openapis.openapi.models.operations.ProtocolNetflowSetTraceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowSetTracePathParams.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/trace/{enableOrNot}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProtocolNetflowSetTraceRequest.class, baseUrl, "/mimic/agent/{agentNum}/protocol/msg/netflow/set/trace/{enableOrNot}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");

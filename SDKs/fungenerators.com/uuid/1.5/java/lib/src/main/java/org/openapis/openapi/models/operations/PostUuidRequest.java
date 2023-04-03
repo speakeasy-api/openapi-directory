@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUuidRequest {
-    
-    public PostUuidQueryParams queryParams;
-    public PostUuidRequest withQueryParams(PostUuidQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PostUuidSecurity security;
-    public PostUuidRequest withSecurity(PostUuidSecurity security) {
-        this.security = security;
+    /**
+     * UUID String to parse
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uuidstr")
+    public String uuidstr;
+    public PostUuidRequest withUuidstr(String uuidstr) {
+        this.uuidstr = uuidstr;
         return this;
     }
     

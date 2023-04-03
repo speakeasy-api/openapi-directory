@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CustomAppointmentFieldsUpdateRequest {
-    
-    public CustomAppointmentFieldsUpdatePathParams pathParams;
-    public CustomAppointmentFieldsUpdateRequest withPathParams(CustomAppointmentFieldsUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public CustomAppointmentFieldsUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public CustomAppointmentFieldsUpdateQueryParams queryParams;
-    public CustomAppointmentFieldsUpdateRequest withQueryParams(CustomAppointmentFieldsUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CustomAppointmentFieldsUpdateSecurity security;
-    public CustomAppointmentFieldsUpdateRequest withSecurity(CustomAppointmentFieldsUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public CustomAppointmentFieldsUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

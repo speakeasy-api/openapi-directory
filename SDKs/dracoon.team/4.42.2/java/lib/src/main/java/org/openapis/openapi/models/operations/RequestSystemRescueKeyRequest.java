@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestSystemRescueKeyRequest {
-    
-    public RequestSystemRescueKeyPathParams pathParams;
-    public RequestSystemRescueKeyRequest withPathParams(RequestSystemRescueKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestSystemRescueKeyRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestSystemRescueKeyQueryParams queryParams;
-    public RequestSystemRescueKeyRequest withQueryParams(RequestSystemRescueKeyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * File ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
+    public Long fileId;
+    public RequestSystemRescueKeyRequest withFileId(Long fileId) {
+        this.fileId = fileId;
         return this;
     }
     
-    
-    public RequestSystemRescueKeyHeaders headers;
-    public RequestSystemRescueKeyRequest withHeaders(RequestSystemRescueKeyHeaders headers) {
-        this.headers = headers;
+    /**
+     * Version (NEW)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
+    public String version;
+    public RequestSystemRescueKeyRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

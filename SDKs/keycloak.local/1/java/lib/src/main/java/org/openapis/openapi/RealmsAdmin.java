@@ -40,7 +40,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.DeleteRealmResponse deleteRealm(org.openapis.openapi.models.operations.DeleteRealmRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmPathParams.class, baseUrl, "/{realm}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmRequest.class, baseUrl, "/{realm}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -73,7 +73,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.DeleteRealmAdminEventsResponse deleteRealmAdminEvents(org.openapis.openapi.models.operations.DeleteRealmAdminEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAdminEventsPathParams.class, baseUrl, "/{realm}/admin-events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmAdminEventsRequest.class, baseUrl, "/{realm}/admin-events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -100,7 +100,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.DeleteRealmDefaultDefaultClientScopesClientScopeIdResponse deleteRealmDefaultDefaultClientScopesClientScopeId(org.openapis.openapi.models.operations.DeleteRealmDefaultDefaultClientScopesClientScopeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmDefaultDefaultClientScopesClientScopeIdPathParams.class, baseUrl, "/{realm}/default-default-client-scopes/{clientScopeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmDefaultDefaultClientScopesClientScopeIdRequest.class, baseUrl, "/{realm}/default-default-client-scopes/{clientScopeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -127,7 +127,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.DeleteRealmDefaultGroupsGroupIdResponse deleteRealmDefaultGroupsGroupId(org.openapis.openapi.models.operations.DeleteRealmDefaultGroupsGroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmDefaultGroupsGroupIdPathParams.class, baseUrl, "/{realm}/default-groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmDefaultGroupsGroupIdRequest.class, baseUrl, "/{realm}/default-groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -154,7 +154,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.DeleteRealmDefaultOptionalClientScopesClientScopeIdResponse deleteRealmDefaultOptionalClientScopesClientScopeId(org.openapis.openapi.models.operations.DeleteRealmDefaultOptionalClientScopesClientScopeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmDefaultOptionalClientScopesClientScopeIdPathParams.class, baseUrl, "/{realm}/default-optional-client-scopes/{clientScopeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmDefaultOptionalClientScopesClientScopeIdRequest.class, baseUrl, "/{realm}/default-optional-client-scopes/{clientScopeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -187,7 +187,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.DeleteRealmEventsResponse deleteRealmEvents(org.openapis.openapi.models.operations.DeleteRealmEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmEventsPathParams.class, baseUrl, "/{realm}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmEventsRequest.class, baseUrl, "/{realm}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -220,7 +220,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.DeleteRealmSessionsSessionResponse deleteRealmSessionsSession(org.openapis.openapi.models.operations.DeleteRealmSessionsSessionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmSessionsSessionPathParams.class, baseUrl, "/{realm}/sessions/{session}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteRealmSessionsSessionRequest.class, baseUrl, "/{realm}/sessions/{session}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -253,7 +253,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.GetRealmResponse getRealm(org.openapis.openapi.models.operations.GetRealmRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmPathParams.class, baseUrl, "/{realm}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmRequest.class, baseUrl, "/{realm}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -292,13 +292,13 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.GetRealmAdminEventsResponse getRealmAdminEvents(org.openapis.openapi.models.operations.GetRealmAdminEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAdminEventsPathParams.class, baseUrl, "/{realm}/admin-events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmAdminEventsRequest.class, baseUrl, "/{realm}/admin-events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmAdminEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmAdminEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -337,7 +337,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.GetRealmClientSessionStatsResponse getRealmClientSessionStats(org.openapis.openapi.models.operations.GetRealmClientSessionStatsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientSessionStatsPathParams.class, baseUrl, "/{realm}/client-session-stats", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmClientSessionStatsRequest.class, baseUrl, "/{realm}/client-session-stats", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -370,7 +370,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.GetRealmCredentialRegistratorsResponse getRealmCredentialRegistrators(org.openapis.openapi.models.operations.GetRealmCredentialRegistratorsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmCredentialRegistratorsPathParams.class, baseUrl, "/{realm}/credential-registrators", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmCredentialRegistratorsRequest.class, baseUrl, "/{realm}/credential-registrators", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -409,7 +409,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.GetRealmDefaultDefaultClientScopesResponse getRealmDefaultDefaultClientScopes(org.openapis.openapi.models.operations.GetRealmDefaultDefaultClientScopesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmDefaultDefaultClientScopesPathParams.class, baseUrl, "/{realm}/default-default-client-scopes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmDefaultDefaultClientScopesRequest.class, baseUrl, "/{realm}/default-default-client-scopes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -448,7 +448,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.GetRealmDefaultGroupsResponse getRealmDefaultGroups(org.openapis.openapi.models.operations.GetRealmDefaultGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmDefaultGroupsPathParams.class, baseUrl, "/{realm}/default-groups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmDefaultGroupsRequest.class, baseUrl, "/{realm}/default-groups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -487,7 +487,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.GetRealmDefaultOptionalClientScopesResponse getRealmDefaultOptionalClientScopes(org.openapis.openapi.models.operations.GetRealmDefaultOptionalClientScopesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmDefaultOptionalClientScopesPathParams.class, baseUrl, "/{realm}/default-optional-client-scopes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmDefaultOptionalClientScopesRequest.class, baseUrl, "/{realm}/default-optional-client-scopes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -526,13 +526,13 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.GetRealmEventsResponse getRealmEvents(org.openapis.openapi.models.operations.GetRealmEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmEventsPathParams.class, baseUrl, "/{realm}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmEventsRequest.class, baseUrl, "/{realm}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRealmEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -571,7 +571,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.GetRealmEventsConfigResponse getRealmEventsConfig(org.openapis.openapi.models.operations.GetRealmEventsConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmEventsConfigPathParams.class, baseUrl, "/{realm}/events/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmEventsConfigRequest.class, baseUrl, "/{realm}/events/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -604,7 +604,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.GetRealmGroupByPathPathResponse getRealmGroupByPathPath(org.openapis.openapi.models.operations.GetRealmGroupByPathPathRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupByPathPathPathParams.class, baseUrl, "/{realm}/group-by-path/{path}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmGroupByPathPathRequest.class, baseUrl, "/{realm}/group-by-path/{path}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -637,7 +637,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.GetRealmUsersManagementPermissionsResponse getRealmUsersManagementPermissions(org.openapis.openapi.models.operations.GetRealmUsersManagementPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmUsersManagementPermissionsPathParams.class, baseUrl, "/{realm}/users-management-permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetRealmUsersManagementPermissionsRequest.class, baseUrl, "/{realm}/users-management-permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -674,7 +674,7 @@ public class RealmsAdmin {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostResponse post(org.openapis.openapi.models.operations.PostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostResponse post(org.openapis.openapi.models.shared.RealmRepresentation request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/");
         
@@ -714,7 +714,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmClearKeysCacheResponse postRealmClearKeysCache(org.openapis.openapi.models.operations.PostRealmClearKeysCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClearKeysCachePathParams.class, baseUrl, "/{realm}/clear-keys-cache", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClearKeysCacheRequest.class, baseUrl, "/{realm}/clear-keys-cache", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -747,7 +747,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmClearRealmCacheResponse postRealmClearRealmCache(org.openapis.openapi.models.operations.PostRealmClearRealmCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClearRealmCachePathParams.class, baseUrl, "/{realm}/clear-realm-cache", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClearRealmCacheRequest.class, baseUrl, "/{realm}/clear-realm-cache", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -780,7 +780,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmClearUserCacheResponse postRealmClearUserCache(org.openapis.openapi.models.operations.PostRealmClearUserCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClearUserCachePathParams.class, baseUrl, "/{realm}/clear-user-cache", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClearUserCacheRequest.class, baseUrl, "/{realm}/clear-user-cache", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -813,12 +813,12 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmClientDescriptionConverterResponse postRealmClientDescriptionConverter(org.openapis.openapi.models.operations.PostRealmClientDescriptionConverterRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientDescriptionConverterPathParams.class, baseUrl, "/{realm}/client-description-converter", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmClientDescriptionConverterRequest.class, baseUrl, "/{realm}/client-description-converter", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "string");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "string");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -857,7 +857,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmLogoutAllResponse postRealmLogoutAll(org.openapis.openapi.models.operations.PostRealmLogoutAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmLogoutAllPathParams.class, baseUrl, "/{realm}/logout-all", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmLogoutAllRequest.class, baseUrl, "/{realm}/logout-all", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -890,13 +890,13 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmPartialExportResponse postRealmPartialExport(org.openapis.openapi.models.operations.PostRealmPartialExportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmPartialExportPathParams.class, baseUrl, "/{realm}/partial-export", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmPartialExportRequest.class, baseUrl, "/{realm}/partial-export", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRealmPartialExportQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PostRealmPartialExportRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -935,12 +935,12 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmPartialImportResponse postRealmPartialImport(org.openapis.openapi.models.operations.PostRealmPartialImportRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmPartialImportPathParams.class, baseUrl, "/{realm}/partialImport", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmPartialImportRequest.class, baseUrl, "/{realm}/partialImport", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "partialImportRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -973,7 +973,7 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmPushRevocationResponse postRealmPushRevocation(org.openapis.openapi.models.operations.PostRealmPushRevocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmPushRevocationPathParams.class, baseUrl, "/{realm}/push-revocation", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmPushRevocationRequest.class, baseUrl, "/{realm}/push-revocation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1006,12 +1006,12 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PostRealmTestLDAPConnectionResponse postRealmTestLDAPConnection(org.openapis.openapi.models.operations.PostRealmTestLDAPConnectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmTestLDAPConnectionPathParams.class, baseUrl, "/{realm}/testLDAPConnection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmTestLDAPConnectionRequest.class, baseUrl, "/{realm}/testLDAPConnection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testLdapConnectionRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1038,12 +1038,12 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.PostRealmTestSMTPConnectionResponse postRealmTestSMTPConnection(org.openapis.openapi.models.operations.PostRealmTestSMTPConnectionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmTestSMTPConnectionPathParams.class, baseUrl, "/{realm}/testSMTPConnection", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostRealmTestSMTPConnectionRequest.class, baseUrl, "/{realm}/testSMTPConnection", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1076,12 +1076,12 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PutRealmResponse putRealm(org.openapis.openapi.models.operations.PutRealmRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmPathParams.class, baseUrl, "/{realm}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmRequest.class, baseUrl, "/{realm}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "realmRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1108,7 +1108,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.PutRealmDefaultDefaultClientScopesClientScopeIdResponse putRealmDefaultDefaultClientScopesClientScopeId(org.openapis.openapi.models.operations.PutRealmDefaultDefaultClientScopesClientScopeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmDefaultDefaultClientScopesClientScopeIdPathParams.class, baseUrl, "/{realm}/default-default-client-scopes/{clientScopeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmDefaultDefaultClientScopesClientScopeIdRequest.class, baseUrl, "/{realm}/default-default-client-scopes/{clientScopeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1135,7 +1135,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.PutRealmDefaultGroupsGroupIdResponse putRealmDefaultGroupsGroupId(org.openapis.openapi.models.operations.PutRealmDefaultGroupsGroupIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmDefaultGroupsGroupIdPathParams.class, baseUrl, "/{realm}/default-groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmDefaultGroupsGroupIdRequest.class, baseUrl, "/{realm}/default-groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1162,7 +1162,7 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.PutRealmDefaultOptionalClientScopesClientScopeIdResponse putRealmDefaultOptionalClientScopesClientScopeId(org.openapis.openapi.models.operations.PutRealmDefaultOptionalClientScopesClientScopeIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmDefaultOptionalClientScopesClientScopeIdPathParams.class, baseUrl, "/{realm}/default-optional-client-scopes/{clientScopeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmDefaultOptionalClientScopesClientScopeIdRequest.class, baseUrl, "/{realm}/default-optional-client-scopes/{clientScopeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -1195,12 +1195,12 @@ public class RealmsAdmin {
      */
     public org.openapis.openapi.models.operations.PutRealmEventsConfigResponse putRealmEventsConfig(org.openapis.openapi.models.operations.PutRealmEventsConfigRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmEventsConfigPathParams.class, baseUrl, "/{realm}/events/config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmEventsConfigRequest.class, baseUrl, "/{realm}/events/config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "realmEventsConfigRepresentation", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1227,12 +1227,12 @@ public class RealmsAdmin {
 
     public org.openapis.openapi.models.operations.PutRealmUsersManagementPermissionsResponse putRealmUsersManagementPermissions(org.openapis.openapi.models.operations.PutRealmUsersManagementPermissionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmUsersManagementPermissionsPathParams.class, baseUrl, "/{realm}/users-management-permissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutRealmUsersManagementPermissionsRequest.class, baseUrl, "/{realm}/users-management-permissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "managementPermissionReference", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

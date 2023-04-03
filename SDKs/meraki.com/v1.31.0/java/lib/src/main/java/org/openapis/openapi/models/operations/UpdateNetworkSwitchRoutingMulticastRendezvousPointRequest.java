@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest {
-    
-    public UpdateNetworkSwitchRoutingMulticastRendezvousPointPathParams pathParams;
-    public UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest withPathParams(UpdateNetworkSwitchRoutingMulticastRendezvousPointPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchRoutingMulticastRendezvousPointRequestBody requestBody;
+    public UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest withRequestBody(UpdateNetworkSwitchRoutingMulticastRendezvousPointRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchRoutingMulticastRendezvousPointRequestBody request;
-    public UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest withRequest(UpdateNetworkSwitchRoutingMulticastRendezvousPointRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rendezvousPointId")
+    public String rendezvousPointId;
+    public UpdateNetworkSwitchRoutingMulticastRendezvousPointRequest withRendezvousPointId(String rendezvousPointId) {
+        this.rendezvousPointId = rendezvousPointId;
         return this;
     }
     

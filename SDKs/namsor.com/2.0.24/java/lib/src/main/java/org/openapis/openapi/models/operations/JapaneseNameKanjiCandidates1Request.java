@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JapaneseNameKanjiCandidates1Request {
-    
-    public JapaneseNameKanjiCandidates1PathParams pathParams;
-    public JapaneseNameKanjiCandidates1Request withPathParams(JapaneseNameKanjiCandidates1PathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=japaneseGivenNameLatin")
+    public String japaneseGivenNameLatin;
+    public JapaneseNameKanjiCandidates1Request withJapaneseGivenNameLatin(String japaneseGivenNameLatin) {
+        this.japaneseGivenNameLatin = japaneseGivenNameLatin;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=japaneseSurnameLatin")
+    public String japaneseSurnameLatin;
+    public JapaneseNameKanjiCandidates1Request withJapaneseSurnameLatin(String japaneseSurnameLatin) {
+        this.japaneseSurnameLatin = japaneseSurnameLatin;
+        return this;
+    }
     
-    public JapaneseNameKanjiCandidates1Security security;
-    public JapaneseNameKanjiCandidates1Request withSecurity(JapaneseNameKanjiCandidates1Security security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=knownGender")
+    public String knownGender;
+    public JapaneseNameKanjiCandidates1Request withKnownGender(String knownGender) {
+        this.knownGender = knownGender;
         return this;
     }
     

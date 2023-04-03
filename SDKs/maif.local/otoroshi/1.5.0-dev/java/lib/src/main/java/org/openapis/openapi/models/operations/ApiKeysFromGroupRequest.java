@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ApiKeysFromGroupRequest {
-    
-    public ApiKeysFromGroupPathParams pathParams;
-    public ApiKeysFromGroupRequest withPathParams(ApiKeysFromGroupPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ApiKeysFromGroupSecurity security;
-    public ApiKeysFromGroupRequest withSecurity(ApiKeysFromGroupSecurity security) {
-        this.security = security;
+    /**
+     * The api key group id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
+    public String groupId;
+    public ApiKeysFromGroupRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestNodeParentsRequest {
-    
-    public RequestNodeParentsPathParams pathParams;
-    public RequestNodeParentsRequest withPathParams(RequestNodeParentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestNodeParentsRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestNodeParentsHeaders headers;
-    public RequestNodeParentsRequest withHeaders(RequestNodeParentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Node ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
+    public Long nodeId;
+    public RequestNodeParentsRequest withNodeId(Long nodeId) {
+        this.nodeId = nodeId;
         return this;
     }
     

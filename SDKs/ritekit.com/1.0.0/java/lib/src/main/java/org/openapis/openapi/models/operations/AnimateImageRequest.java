@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnimateImageRequest {
+    /**
+     * URL of the company
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public AnimateImageRequest withType(String type) {
+        this.type = type;
+        return this;
+    }
     
-    public AnimateImageQueryParams queryParams;
-    public AnimateImageRequest withQueryParams(AnimateImageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * URL of the company
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public AnimateImageRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

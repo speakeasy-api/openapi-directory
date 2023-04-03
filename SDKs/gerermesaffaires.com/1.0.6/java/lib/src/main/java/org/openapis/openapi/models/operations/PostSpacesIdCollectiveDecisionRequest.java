@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesIdCollectiveDecisionRequest {
-    
-    public PostSpacesIdCollectiveDecisionPathParams pathParams;
-    public PostSpacesIdCollectiveDecisionRequest withPathParams(PostSpacesIdCollectiveDecisionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * CollectiveDecision to add
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesIdCollectiveDecisionRequestBody request;
-    public PostSpacesIdCollectiveDecisionRequest withRequest(PostSpacesIdCollectiveDecisionRequestBody request) {
-        this.request = request;
+    public PostSpacesIdCollectiveDecisionRequestBody requestBody;
+    public PostSpacesIdCollectiveDecisionRequest withRequestBody(PostSpacesIdCollectiveDecisionRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostSpacesIdCollectiveDecisionSecurity security;
-    public PostSpacesIdCollectiveDecisionRequest withSecurity(PostSpacesIdCollectiveDecisionSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesIdCollectiveDecisionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

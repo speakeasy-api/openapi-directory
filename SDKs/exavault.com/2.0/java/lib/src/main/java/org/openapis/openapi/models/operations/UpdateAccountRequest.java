@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountRequest {
-    
-    public UpdateAccountHeaders headers;
-    public UpdateAccountRequest withHeaders(UpdateAccountHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Update Account Settings
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateAccountUpdateAccountRequestBody request;
-    public UpdateAccountRequest withRequest(UpdateAccountUpdateAccountRequestBody request) {
-        this.request = request;
+    public UpdateAccountUpdateAccountRequestBody requestBody;
+    public UpdateAccountRequest withRequestBody(UpdateAccountUpdateAccountRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Access token required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-access-token")
+    public String evAccessToken;
+    public UpdateAccountRequest withEvAccessToken(String evAccessToken) {
+        this.evAccessToken = evAccessToken;
+        return this;
+    }
+    
+    /**
+     * API Key required to make the API call.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=ev-api-key")
+    public String evApiKey;
+    public UpdateAccountRequest withEvApiKey(String evApiKey) {
+        this.evApiKey = evApiKey;
         return this;
     }
     

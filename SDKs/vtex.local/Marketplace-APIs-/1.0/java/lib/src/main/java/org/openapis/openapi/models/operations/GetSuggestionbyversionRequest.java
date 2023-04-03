@@ -4,27 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSuggestionbyversionRequest {
-    
-    public GetSuggestionbyversionPathParams pathParams;
-    public GetSuggestionbyversionRequest withPathParams(GetSuggestionbyversionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetSuggestionbyversionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public GetSuggestionbyversionQueryParams queryParams;
-    public GetSuggestionbyversionRequest withQueryParams(GetSuggestionbyversionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetSuggestionbyversionRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
+    /**
+     * Name of the VTEX account. Used as part of the URL
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public GetSuggestionbyversionRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
     
-    public GetSuggestionbyversionHeaders headers;
-    public GetSuggestionbyversionRequest withHeaders(GetSuggestionbyversionHeaders headers) {
-        this.headers = headers;
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace and informed to the seller before the integration is built.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public GetSuggestionbyversionRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the SKU in the marketplace. This is the ID that the marketplace will use for future references to this SKU, such as price and inventory notifications.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerskuid")
+    public String sellerskuid;
+    public GetSuggestionbyversionRequest withSellerskuid(String sellerskuid) {
+        this.sellerskuid = sellerskuid;
+        return this;
+    }
+    
+    /**
+     * Whenever an SKU Suggestion is updated or changed, a new version of the original one is created. All versions are logged, so you can search for previous our current states of SKU suggestions. This field is the `versionId` associated to the version you choose to search for. You can get this field's value through the [Get SKU Suggestion by ID](https://developers.vtex.com/vtex-rest-api/reference/getsuggestion). through the `latestVersionId` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
+    public String version;
+    public GetSuggestionbyversionRequest withVersion(String version) {
+        this.version = version;
         return this;
     }
     

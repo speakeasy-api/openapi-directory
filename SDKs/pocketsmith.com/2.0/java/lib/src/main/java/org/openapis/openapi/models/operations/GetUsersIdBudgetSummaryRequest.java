@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdBudgetSummaryRequest {
-    
-    public GetUsersIdBudgetSummaryPathParams pathParams;
-    public GetUsersIdBudgetSummaryRequest withPathParams(GetUsersIdBudgetSummaryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The date to stop analysing the budget from. This will be bumped out to make full periods as necessary.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
+    public String endDate;
+    public GetUsersIdBudgetSummaryRequest withEndDate(String endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetUsersIdBudgetSummaryRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetUsersIdBudgetSummaryQueryParams queryParams;
-    public GetUsersIdBudgetSummaryRequest withQueryParams(GetUsersIdBudgetSummaryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The period interval, e.g. if the interval is 2 and the period is weeks, the budget will be analysed fortnightly.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
+    public Long interval;
+    public GetUsersIdBudgetSummaryRequest withInterval(Long interval) {
+        this.interval = interval;
+        return this;
+    }
+    
+    /**
+     * The period to analyse in, one of `weeks`, `months` or `years`. Also supported is `event`, although event period analysis is only possible when the budget events gathered align, so in this case where all categories are analysed together, it's highly unlikely that event period analysis will be possible.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public GetUsersIdBudgetSummaryPeriodEnum period;
+    public GetUsersIdBudgetSummaryRequest withPeriod(GetUsersIdBudgetSummaryPeriodEnum period) {
+        this.period = period;
+        return this;
+    }
+    
+    /**
+     * The date to start analysing the budget from. This will be bumped out to make full periods as necessary.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
+    public String startDate;
+    public GetUsersIdBudgetSummaryRequest withStartDate(String startDate) {
+        this.startDate = startDate;
         return this;
     }
     

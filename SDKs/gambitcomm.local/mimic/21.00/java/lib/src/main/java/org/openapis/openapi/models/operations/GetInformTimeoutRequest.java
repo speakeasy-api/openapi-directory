@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetInformTimeoutRequest {
-    
-    public GetInformTimeoutPathParams pathParams;
-    public GetInformTimeoutRequest withPathParams(GetInformTimeoutPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to return the timeout setting
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public GetInformTimeoutRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

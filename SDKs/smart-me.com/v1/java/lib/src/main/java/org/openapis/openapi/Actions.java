@@ -39,7 +39,7 @@ public class Actions {
      */
     public org.openapis.openapi.models.operations.ActionsGetResponse actionsGet(org.openapis.openapi.models.operations.ActionsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetPathParams.class, baseUrl, "/api/Actions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionsGetRequest.class, baseUrl, "/api/Actions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -92,7 +92,7 @@ public class Actions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ActionsPostFormResponse actionsPostForm(org.openapis.openapi.models.operations.ActionsPostFormRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ActionsPostFormResponse actionsPostForm(org.openapis.openapi.models.shared.ActionToPost request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Actions");
         
@@ -130,7 +130,7 @@ public class Actions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ActionsPostJsonResponse actionsPostJson(org.openapis.openapi.models.operations.ActionsPostJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ActionsPostJsonResponse actionsPostJson(org.openapis.openapi.models.shared.ActionToPost request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Actions");
         
@@ -168,7 +168,7 @@ public class Actions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ActionsPostRawResponse actionsPostRaw(org.openapis.openapi.models.operations.ActionsPostRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ActionsPostRawResponse actionsPostRaw(byte[] request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/Actions");
         

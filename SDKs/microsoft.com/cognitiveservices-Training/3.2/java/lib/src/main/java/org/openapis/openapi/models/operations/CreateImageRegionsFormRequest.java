@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImageRegionsFormRequest {
-    
-    public CreateImageRegionsFormPathParams pathParams;
-    public CreateImageRegionsFormRequest withPathParams(CreateImageRegionsFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Batch of image regions which include a tag and bounding box. Limited to 64.
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ImageRegionCreateBatch request;
-    public CreateImageRegionsFormRequest withRequest(org.openapis.openapi.models.shared.ImageRegionCreateBatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageRegionCreateBatch imageRegionCreateBatch;
+    public CreateImageRegionsFormRequest withImageRegionCreateBatch(org.openapis.openapi.models.shared.ImageRegionCreateBatch imageRegionCreateBatch) {
+        this.imageRegionCreateBatch = imageRegionCreateBatch;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public CreateImageRegionsFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

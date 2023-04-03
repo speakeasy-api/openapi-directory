@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCampagneRequest {
+    /**
+     * date de debut au format YYYY-MM-DD hh:mm
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_deb")
+    public String dateDeb;
+    public GetCampagneRequest withDateDeb(String dateDeb) {
+        this.dateDeb = dateDeb;
+        return this;
+    }
     
-    public GetCampagneQueryParams queryParams;
-    public GetCampagneRequest withQueryParams(GetCampagneQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * date de fin au format YYYY-MM-DD hh:mm
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_fin")
+    public String dateFin;
+    public GetCampagneRequest withDateFin(String dateFin) {
+        this.dateFin = dateFin;
+        return this;
+    }
+    
+    /**
+     * Cl\u00e9 API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyid")
+    public String keyid;
+    public GetCampagneRequest withKeyid(String keyid) {
+        this.keyid = keyid;
+        return this;
+    }
+    
+    /**
+     * Doit valoir "1"
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rapportCampagne")
+    public GetCampagneRapportCampagneEnum rapportCampagne;
+    public GetCampagneRequest withRapportCampagne(GetCampagneRapportCampagneEnum rapportCampagne) {
+        this.rapportCampagne = rapportCampagne;
         return this;
     }
     

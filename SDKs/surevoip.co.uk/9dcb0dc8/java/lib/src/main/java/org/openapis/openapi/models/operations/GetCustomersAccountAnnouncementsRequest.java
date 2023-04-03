@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomersAccountAnnouncementsRequest {
-    
-    public GetCustomersAccountAnnouncementsPathParams pathParams;
-    public GetCustomersAccountAnnouncementsRequest withPathParams(GetCustomersAccountAnnouncementsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account ID of customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public Long account;
+    public GetCustomersAccountAnnouncementsRequest withAccount(Long account) {
+        this.account = account;
         return this;
     }
     

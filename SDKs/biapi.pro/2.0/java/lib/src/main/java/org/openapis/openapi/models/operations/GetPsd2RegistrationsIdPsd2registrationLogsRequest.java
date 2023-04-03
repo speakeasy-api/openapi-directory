@@ -4,20 +4,61 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPsd2RegistrationsIdPsd2registrationLogsRequest {
-    
-    public GetPsd2RegistrationsIdPsd2registrationLogsPathParams pathParams;
-    public GetPsd2RegistrationsIdPsd2registrationLogsRequest withPathParams(GetPsd2RegistrationsIdPsd2registrationLogsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public String expand;
+    public GetPsd2RegistrationsIdPsd2registrationLogsRequest withExpand(String expand) {
+        this.expand = expand;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_psd2registration")
+    public Long idPsd2registration;
+    public GetPsd2RegistrationsIdPsd2registrationLogsRequest withIdPsd2registration(Long idPsd2registration) {
+        this.idPsd2registration = idPsd2registration;
+        return this;
+    }
     
-    public GetPsd2RegistrationsIdPsd2registrationLogsQueryParams queryParams;
-    public GetPsd2RegistrationsIdPsd2registrationLogsRequest withQueryParams(GetPsd2RegistrationsIdPsd2registrationLogsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * limit number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetPsd2RegistrationsIdPsd2registrationLogsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * maximum (inclusive) date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
+    public LocalDate maxDate;
+    public GetPsd2RegistrationsIdPsd2registrationLogsRequest withMaxDate(LocalDate maxDate) {
+        this.maxDate = maxDate;
+        return this;
+    }
+    
+    /**
+     * minimal (inclusive) date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
+    public LocalDate minDate;
+    public GetPsd2RegistrationsIdPsd2registrationLogsRequest withMinDate(LocalDate minDate) {
+        this.minDate = minDate;
+        return this;
+    }
+    
+    /**
+     * offset of first result
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetPsd2RegistrationsIdPsd2registrationLogsRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

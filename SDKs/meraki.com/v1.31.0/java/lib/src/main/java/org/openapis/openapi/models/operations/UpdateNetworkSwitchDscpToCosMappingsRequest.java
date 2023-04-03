@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchDscpToCosMappingsRequest {
-    
-    public UpdateNetworkSwitchDscpToCosMappingsPathParams pathParams;
-    public UpdateNetworkSwitchDscpToCosMappingsRequest withPathParams(UpdateNetworkSwitchDscpToCosMappingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchDscpToCosMappingsRequestBody requestBody;
+    public UpdateNetworkSwitchDscpToCosMappingsRequest withRequestBody(UpdateNetworkSwitchDscpToCosMappingsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchDscpToCosMappingsRequestBody request;
-    public UpdateNetworkSwitchDscpToCosMappingsRequest withRequest(UpdateNetworkSwitchDscpToCosMappingsRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchDscpToCosMappingsRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

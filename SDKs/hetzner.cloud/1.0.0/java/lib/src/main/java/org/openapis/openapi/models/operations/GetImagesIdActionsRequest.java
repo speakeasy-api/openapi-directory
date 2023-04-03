@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagesIdActionsRequest {
-    
-    public GetImagesIdActionsPathParams pathParams;
-    public GetImagesIdActionsRequest withPathParams(GetImagesIdActionsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Image
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetImagesIdActionsRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * Can be used multiple times.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetImagesIdActionsSortParameterSortEnum sort;
+    public GetImagesIdActionsRequest withSort(GetImagesIdActionsSortParameterSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetImagesIdActionsQueryParams queryParams;
-    public GetImagesIdActionsRequest withQueryParams(GetImagesIdActionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Can be used multiple times, the response will contain only Actions with specified statuses
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetImagesIdActionsStatusParameterStatusEnum status;
+    public GetImagesIdActionsRequest withStatus(GetImagesIdActionsStatusParameterStatusEnum status) {
+        this.status = status;
         return this;
     }
     

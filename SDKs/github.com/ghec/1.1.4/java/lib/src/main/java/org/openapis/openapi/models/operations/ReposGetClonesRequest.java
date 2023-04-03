@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetClonesRequest {
-    
-    public ReposGetClonesPathParams pathParams;
-    public ReposGetClonesRequest withPathParams(ReposGetClonesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReposGetClonesRequest withOwner(String owner) {
+        this.owner = owner;
         return this;
     }
     
+    /**
+     * The time frame to display results for.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per")
+    public org.openapis.openapi.models.shared.PerEnum per;
+    public ReposGetClonesRequest withPer(org.openapis.openapi.models.shared.PerEnum per) {
+        this.per = per;
+        return this;
+    }
     
-    public ReposGetClonesQueryParams queryParams;
-    public ReposGetClonesRequest withQueryParams(ReposGetClonesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReposGetClonesRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEasywindRequest {
-    
-    public GetEasywindPathParams pathParams;
-    public GetEasywindRequest withPathParams(GetEasywindPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * currently: 'EW013'|'EW008'
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=easywindId")
+    public String easywindId;
+    public GetEasywindRequest withEasywindId(String easywindId) {
+        this.easywindId = easywindId;
         return this;
     }
     
-    
-    public GetEasywindQueryParams queryParams;
-    public GetEasywindRequest withQueryParams(GetEasywindQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Period of time to get the data latestdata|latesthour|latestday
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
+    public String period;
+    public GetEasywindRequest withPeriod(String period) {
+        this.period = period;
         return this;
     }
     

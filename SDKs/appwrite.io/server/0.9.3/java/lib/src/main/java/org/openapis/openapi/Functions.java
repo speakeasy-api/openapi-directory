@@ -38,10 +38,11 @@ public class Functions {
      * Create Function
      * Create a new function. You can pass a list of [permissions](/docs/permissions) to allow different project users or team with access to execute the function using the client API.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsCreateResponse functionsCreate(org.openapis.openapi.models.operations.FunctionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsCreateResponse functionsCreate(org.openapis.openapi.models.operations.FunctionsCreateRequestBody request, org.openapis.openapi.models.operations.FunctionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/functions");
         
@@ -52,7 +53,7 @@ public class Functions {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,21 +81,22 @@ public class Functions {
      * Create Execution
      * Trigger a function execution. The returned object will return you the current execution status. You can ping the `Get Execution` endpoint to get updates on the current execution status. Once this endpoint is called, your function execution process will start asynchronously.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsCreateExecutionResponse functionsCreateExecution(org.openapis.openapi.models.operations.FunctionsCreateExecutionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsCreateExecutionResponse functionsCreateExecution(org.openapis.openapi.models.operations.FunctionsCreateExecutionRequest request, org.openapis.openapi.models.operations.FunctionsCreateExecutionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsCreateExecutionPathParams.class, baseUrl, "/functions/{functionId}/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsCreateExecutionRequest.class, baseUrl, "/functions/{functionId}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,21 +128,22 @@ public class Functions {
      * 
      * Use the "command" param to set the entry point used to execute your code.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsCreateTagResponse functionsCreateTag(org.openapis.openapi.models.operations.FunctionsCreateTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsCreateTagResponse functionsCreateTag(org.openapis.openapi.models.operations.FunctionsCreateTagRequest request, org.openapis.openapi.models.operations.FunctionsCreateTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsCreateTagPathParams.class, baseUrl, "/functions/{functionId}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsCreateTagRequest.class, baseUrl, "/functions/{functionId}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -168,19 +171,20 @@ public class Functions {
      * Delete Function
      * Delete a function by its unique ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsDeleteResponse functionsDelete(org.openapis.openapi.models.operations.FunctionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsDeleteResponse functionsDelete(org.openapis.openapi.models.operations.FunctionsDeleteRequest request, org.openapis.openapi.models.operations.FunctionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsDeletePathParams.class, baseUrl, "/functions/{functionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsDeleteRequest.class, baseUrl, "/functions/{functionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -202,19 +206,20 @@ public class Functions {
      * Delete Tag
      * Delete a code tag by its unique ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsDeleteTagResponse functionsDeleteTag(org.openapis.openapi.models.operations.FunctionsDeleteTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsDeleteTagResponse functionsDeleteTag(org.openapis.openapi.models.operations.FunctionsDeleteTagRequest request, org.openapis.openapi.models.operations.FunctionsDeleteTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsDeleteTagPathParams.class, baseUrl, "/functions/{functionId}/tags/{tagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsDeleteTagRequest.class, baseUrl, "/functions/{functionId}/tags/{tagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -236,19 +241,20 @@ public class Functions {
      * Get Function
      * Get a function by its unique ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsGetResponse functionsGet(org.openapis.openapi.models.operations.FunctionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsGetResponse functionsGet(org.openapis.openapi.models.operations.FunctionsGetRequest request, org.openapis.openapi.models.operations.FunctionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsGetPathParams.class, baseUrl, "/functions/{functionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsGetRequest.class, baseUrl, "/functions/{functionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -276,19 +282,20 @@ public class Functions {
      * Get Execution
      * Get a function execution log by its unique ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsGetExecutionResponse functionsGetExecution(org.openapis.openapi.models.operations.FunctionsGetExecutionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsGetExecutionResponse functionsGetExecution(org.openapis.openapi.models.operations.FunctionsGetExecutionRequest request, org.openapis.openapi.models.operations.FunctionsGetExecutionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsGetExecutionPathParams.class, baseUrl, "/functions/{functionId}/executions/{executionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsGetExecutionRequest.class, baseUrl, "/functions/{functionId}/executions/{executionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -316,19 +323,20 @@ public class Functions {
      * Get Tag
      * Get a code tag by its unique ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsGetTagResponse functionsGetTag(org.openapis.openapi.models.operations.FunctionsGetTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsGetTagResponse functionsGetTag(org.openapis.openapi.models.operations.FunctionsGetTagRequest request, org.openapis.openapi.models.operations.FunctionsGetTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsGetTagPathParams.class, baseUrl, "/functions/{functionId}/tags/{tagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsGetTagRequest.class, baseUrl, "/functions/{functionId}/tags/{tagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -356,10 +364,11 @@ public class Functions {
      * List Functions
      * Get a list of all the project's functions. You can use the query params to filter your results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsListResponse functionsList(org.openapis.openapi.models.operations.FunctionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsListResponse functionsList(org.openapis.openapi.models.operations.FunctionsListRequest request, org.openapis.openapi.models.operations.FunctionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/functions");
         
@@ -367,14 +376,14 @@ public class Functions {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FunctionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FunctionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,25 +411,26 @@ public class Functions {
      * List Executions
      * Get a list of all the current user function execution logs. You can use the query params to filter your results. On admin mode, this endpoint will return a list of all of the project's executions. [Learn more about different API modes](/docs/admin).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsListExecutionsResponse functionsListExecutions(org.openapis.openapi.models.operations.FunctionsListExecutionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsListExecutionsResponse functionsListExecutions(org.openapis.openapi.models.operations.FunctionsListExecutionsRequest request, org.openapis.openapi.models.operations.FunctionsListExecutionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsListExecutionsPathParams.class, baseUrl, "/functions/{functionId}/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsListExecutionsRequest.class, baseUrl, "/functions/{functionId}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FunctionsListExecutionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FunctionsListExecutionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -448,25 +458,26 @@ public class Functions {
      * List Tags
      * Get a list of all the project's code tags. You can use the query params to filter your results.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsListTagsResponse functionsListTags(org.openapis.openapi.models.operations.FunctionsListTagsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsListTagsResponse functionsListTags(org.openapis.openapi.models.operations.FunctionsListTagsRequest request, org.openapis.openapi.models.operations.FunctionsListTagsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsListTagsPathParams.class, baseUrl, "/functions/{functionId}/tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsListTagsRequest.class, baseUrl, "/functions/{functionId}/tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FunctionsListTagsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.FunctionsListTagsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -494,21 +505,22 @@ public class Functions {
      * Update Function
      * Update function by its unique ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsUpdateResponse functionsUpdate(org.openapis.openapi.models.operations.FunctionsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsUpdateResponse functionsUpdate(org.openapis.openapi.models.operations.FunctionsUpdateRequest request, org.openapis.openapi.models.operations.FunctionsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsUpdatePathParams.class, baseUrl, "/functions/{functionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsUpdateRequest.class, baseUrl, "/functions/{functionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -536,21 +548,22 @@ public class Functions {
      * Update Function Tag
      * Update the function code tag ID using the unique function ID. Use this endpoint to switch the code tag that should be executed by the execution endpoint.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FunctionsUpdateTagResponse functionsUpdateTag(org.openapis.openapi.models.operations.FunctionsUpdateTagRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FunctionsUpdateTagResponse functionsUpdateTag(org.openapis.openapi.models.operations.FunctionsUpdateTagRequest request, org.openapis.openapi.models.operations.FunctionsUpdateTagSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsUpdateTagPathParams.class, baseUrl, "/functions/{functionId}/tag", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FunctionsUpdateTagRequest.class, baseUrl, "/functions/{functionId}/tag", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

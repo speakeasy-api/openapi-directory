@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetreportstatusbyIDRequest {
-    
-    public GetreportstatusbyIDPathParams pathParams;
-    public GetreportstatusbyIDRequest withPathParams(GetreportstatusbyIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetreportstatusbyIDRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetreportstatusbyIDRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetreportstatusbyIDHeaders headers;
-    public GetreportstatusbyIDRequest withHeaders(GetreportstatusbyIDHeaders headers) {
-        this.headers = headers;
+    /**
+     * Report ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
+    public String reportId;
+    public GetreportstatusbyIDRequest withReportId(String reportId) {
+        this.reportId = reportId;
         return this;
     }
     

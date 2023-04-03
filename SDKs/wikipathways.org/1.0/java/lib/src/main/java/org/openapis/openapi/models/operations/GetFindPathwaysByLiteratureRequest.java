@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFindPathwaysByLiteratureRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetFindPathwaysByLiteratureFormatEnum format;
+    public GetFindPathwaysByLiteratureRequest withFormat(GetFindPathwaysByLiteratureFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetFindPathwaysByLiteratureQueryParams queryParams;
-    public GetFindPathwaysByLiteratureRequest withQueryParams(GetFindPathwaysByLiteratureQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The query, can be a pubmed id, author name or title keyword.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetFindPathwaysByLiteratureRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

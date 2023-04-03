@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayorCreateApplicationV1Request {
-    
-    public PayorCreateApplicationV1PathParams pathParams;
-    public PayorCreateApplicationV1Request withPathParams(PayorCreateApplicationV1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Details of application to create
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayorCreateApplicationRequest request;
-    public PayorCreateApplicationV1Request withRequest(org.openapis.openapi.models.shared.PayorCreateApplicationRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayorCreateApplicationRequest payorCreateApplicationRequest;
+    public PayorCreateApplicationV1Request withPayorCreateApplicationRequest(org.openapis.openapi.models.shared.PayorCreateApplicationRequest payorCreateApplicationRequest) {
+        this.payorCreateApplicationRequest = payorCreateApplicationRequest;
+        return this;
+    }
+    
+    /**
+     * The Payor Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payorId")
+    public String payorId;
+    public PayorCreateApplicationV1Request withPayorId(String payorId) {
+        this.payorId = payorId;
         return this;
     }
     

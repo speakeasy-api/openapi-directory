@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest {
-    
-    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordPathParams pathParams;
-    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withPathParams(ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordQueryParams queryParams;
-    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withQueryParams(ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordSecurity security;
-    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withSecurity(ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The domain resource name using the form: `projects/{project_id}/locations/global/domains/{domain_name}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

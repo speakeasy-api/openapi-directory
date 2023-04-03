@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryOutlineSchemaRequest {
-    
-    public StoryOutlineSchemaPathParams pathParams;
-    public StoryOutlineSchemaRequest withPathParams(StoryOutlineSchemaPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The semanitic version of a schema (e.g. '0.3.1')
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schema_version")
+    public String schemaVersion;
+    public StoryOutlineSchemaRequest withSchemaVersion(String schemaVersion) {
+        this.schemaVersion = schemaVersion;
         return this;
     }
     

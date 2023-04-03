@@ -35,19 +35,20 @@ public class Contributors {
      * Get details about a single contributor
      * This endpoint shows information about a single contributor, including contributor type, equipment they use, and other attributes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContributorResponse getContributor(org.openapis.openapi.models.operations.GetContributorRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContributorResponse getContributor(org.openapis.openapi.models.operations.GetContributorRequest request, org.openapis.openapi.models.operations.GetContributorSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributorPathParams.class, baseUrl, "/v2/contributors/{contributor_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributorRequest.class, baseUrl, "/v2/contributors/{contributor_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,25 +78,26 @@ public class Contributors {
      * Get the items in contributors' collections
      * This endpoint lists the IDs of items in a contributor's collection and the date that each was added.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContributorCollectionItemsResponse getContributorCollectionItems(org.openapis.openapi.models.operations.GetContributorCollectionItemsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContributorCollectionItemsResponse getContributorCollectionItems(org.openapis.openapi.models.operations.GetContributorCollectionItemsRequest request, org.openapis.openapi.models.operations.GetContributorCollectionItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributorCollectionItemsPathParams.class, baseUrl, "/v2/contributors/{contributor_id}/collections/{id}/items", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributorCollectionItemsRequest.class, baseUrl, "/v2/contributors/{contributor_id}/collections/{id}/items", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributorCollectionItemsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributorCollectionItemsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -125,19 +127,20 @@ public class Contributors {
      * Get details about contributors' collections
      * This endpoint gets more detailed information about a contributor's collection, including its cover image, timestamps for its creation, and most recent update. To get the items in collections, use GET /v2/contributors/{contributor_id}/collections/{id}/items.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContributorCollectionsResponse getContributorCollections(org.openapis.openapi.models.operations.GetContributorCollectionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContributorCollectionsResponse getContributorCollections(org.openapis.openapi.models.operations.GetContributorCollectionsRequest request, org.openapis.openapi.models.operations.GetContributorCollectionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributorCollectionsPathParams.class, baseUrl, "/v2/contributors/{contributor_id}/collections/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributorCollectionsRequest.class, baseUrl, "/v2/contributors/{contributor_id}/collections/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,25 +170,26 @@ public class Contributors {
      * List contributors' collections
      * This endpoint lists collections based on contributor ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContributorCollectionsListResponse getContributorCollectionsList(org.openapis.openapi.models.operations.GetContributorCollectionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContributorCollectionsListResponse getContributorCollectionsList(org.openapis.openapi.models.operations.GetContributorCollectionsListRequest request, org.openapis.openapi.models.operations.GetContributorCollectionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributorCollectionsListPathParams.class, baseUrl, "/v2/contributors/{contributor_id}/collections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetContributorCollectionsListRequest.class, baseUrl, "/v2/contributors/{contributor_id}/collections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributorCollectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributorCollectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -215,10 +219,11 @@ public class Contributors {
      * Get details about multiple contributors
      * This endpoint lists information about one or more contributors, including contributor type, equipment they use and other attributes.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetContributorListResponse getContributorList(org.openapis.openapi.models.operations.GetContributorListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetContributorListResponse getContributorList(org.openapis.openapi.models.operations.GetContributorListRequest request, org.openapis.openapi.models.operations.GetContributorListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/contributors");
         
@@ -226,14 +231,14 @@ public class Contributors {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributorListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetContributorListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -35,11 +35,10 @@ public class User {
     /**
      * Get User Extensions
      * This endpoint allows you to get list of your extensions including extensions from the watchlist.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserExtensionsResponse getUserExtensions(org.openapis.openapi.models.operations.GetUserExtensionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserExtensionsResponse getUserExtensions() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user-extensions");
         
@@ -48,8 +47,7 @@ public class User {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

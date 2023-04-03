@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostShippingMethodsJsonRequest {
-    
-    public PostShippingMethodsJsonQueryParams queryParams;
-    public PostShippingMethodsJsonRequest withQueryParams(PostShippingMethodsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Shipping Method parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ShippingMethodEdit request;
-    public PostShippingMethodsJsonRequest withRequest(org.openapis.openapi.models.shared.ShippingMethodEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit;
+    public PostShippingMethodsJsonRequest withShippingMethodEdit(org.openapis.openapi.models.shared.ShippingMethodEdit shippingMethodEdit) {
+        this.shippingMethodEdit = shippingMethodEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostShippingMethodsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostShippingMethodsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

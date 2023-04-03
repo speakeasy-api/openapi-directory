@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDataset1Request {
-    
-    public DeleteDataset1PathParams pathParams;
-    public DeleteDataset1Request withPathParams(DeleteDataset1PathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteDataset1Security security;
-    public DeleteDataset1Request withSecurity(DeleteDataset1Security security) {
-        this.security = security;
+    /**
+     * Dataset Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
+    public String datasetId;
+    public DeleteDataset1Request withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
         return this;
     }
     

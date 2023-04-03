@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RotateAccountOrganizationExportTokenRequest {
-    
-    public RotateAccountOrganizationExportTokenPathParams pathParams;
-    public RotateAccountOrganizationExportTokenRequest withPathParams(RotateAccountOrganizationExportTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RotateAccountOrganizationExportTokenSecurity security;
-    public RotateAccountOrganizationExportTokenRequest withSecurity(RotateAccountOrganizationExportTokenSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the organization to retrieve
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
+    public String orgId;
+    public RotateAccountOrganizationExportTokenRequest withOrgId(String orgId) {
+        this.orgId = orgId;
         return this;
     }
     

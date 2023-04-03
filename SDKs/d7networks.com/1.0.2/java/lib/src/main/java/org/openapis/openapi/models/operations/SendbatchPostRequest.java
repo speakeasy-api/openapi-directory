@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendbatchPostRequest {
-    
-    public SendbatchPostHeaders headers;
-    public SendbatchPostRequest withHeaders(SendbatchPostHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SendbatchPostRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
@@ -18,9 +18,16 @@ public class SendbatchPostRequest {
      * Message Body
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.BulkSMSRequest request;
-    public SendbatchPostRequest withRequest(org.openapis.openapi.models.shared.BulkSMSRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.BulkSMSRequest bulkSMSRequest;
+    public SendbatchPostRequest withBulkSMSRequest(org.openapis.openapi.models.shared.BulkSMSRequest bulkSMSRequest) {
+        this.bulkSMSRequest = bulkSMSRequest;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SendbatchPostRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     

@@ -124,13 +124,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TransportationIncentivesLawsAllResponse transportationIncentivesLawsAll(org.openapis.openapi.models.operations.TransportationIncentivesLawsAllRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransportationIncentivesLawsAllPathParams.class, baseUrl, "/v1.{output_format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransportationIncentivesLawsAllRequest.class, baseUrl, "/v1.{output_format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransportationIncentivesLawsAllQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransportationIncentivesLawsAllRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -167,13 +167,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesResponse transportationIncentivesLawsCategories(org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesPathParams.class, baseUrl, "/v1/category-list.{output_format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesRequest.class, baseUrl, "/v1/category-list.{output_format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransportationIncentivesLawsCategoriesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -210,13 +210,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TransportationIncentivesLawsIdResponse transportationIncentivesLawsId(org.openapis.openapi.models.operations.TransportationIncentivesLawsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransportationIncentivesLawsIdPathParams.class, baseUrl, "/v1/{id}.{output_format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransportationIncentivesLawsIdRequest.class, baseUrl, "/v1/{id}.{output_format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransportationIncentivesLawsIdQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransportationIncentivesLawsIdRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -253,13 +253,13 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsResponse transportationIncentivesLawsPocs(org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsPathParams.class, baseUrl, "/v1/pocs.{output_format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsRequest.class, baseUrl, "/v1/pocs.{output_format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TransportationIncentivesLawsPocsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

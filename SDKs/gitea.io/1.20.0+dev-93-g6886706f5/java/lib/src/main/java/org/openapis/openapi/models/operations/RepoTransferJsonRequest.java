@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepoTransferJsonRequest {
-    
-    public RepoTransferJsonPathParams pathParams;
-    public RepoTransferJsonRequest withPathParams(RepoTransferJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Transfer Options
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TransferRepoOption request;
-    public RepoTransferJsonRequest withRequest(org.openapis.openapi.models.shared.TransferRepoOption request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TransferRepoOption transferRepoOption;
+    public RepoTransferJsonRequest withTransferRepoOption(org.openapis.openapi.models.shared.TransferRepoOption transferRepoOption) {
+        this.transferRepoOption = transferRepoOption;
+        return this;
+    }
+    
+    /**
+     * owner of the repo to transfer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RepoTransferJsonRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo to transfer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RepoTransferJsonRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

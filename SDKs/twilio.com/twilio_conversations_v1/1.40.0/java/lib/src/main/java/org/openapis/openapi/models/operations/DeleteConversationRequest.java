@@ -4,34 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteConversationRequest {
-    
-    public DeleteConversationPathParams pathParams;
-    public DeleteConversationRequest withPathParams(DeleteConversationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A 34 character string that uniquely identifies this resource. Can also be the `unique_name` of the Conversation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteConversationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteConversationHeaders headers;
-    public DeleteConversationRequest withHeaders(DeleteConversationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public DeleteConversationSecurity security;
-    public DeleteConversationRequest withSecurity(DeleteConversationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public DeleteConversationRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

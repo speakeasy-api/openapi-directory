@@ -4,20 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdRequest {
-    
-    public GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdPathParams pathParams;
-    public GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdRequest withPathParams(GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
+    public Integer appId;
+    public GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdRequest withAppId(Integer appId) {
+        this.appId = appId;
         return this;
     }
     
-    
-    public GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdSecurity security;
-    public GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdRequest withSecurity(GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
+    public Integer subscriptionId;
+    public GetWebhooksV3AppIdSubscriptionsSubscriptionIdGetByIdRequest withSubscriptionId(Integer subscriptionId) {
+        this.subscriptionId = subscriptionId;
         return this;
     }
     

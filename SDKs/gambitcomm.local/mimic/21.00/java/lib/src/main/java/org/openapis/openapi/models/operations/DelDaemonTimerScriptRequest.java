@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelDaemonTimerScriptRequest {
+    /**
+     * Arguments to the script
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=arg")
+    public String arg;
+    public DelDaemonTimerScriptRequest withArg(String arg) {
+        this.arg = arg;
+        return this;
+    }
     
-    public DelDaemonTimerScriptPathParams pathParams;
-    public DelDaemonTimerScriptRequest withPathParams(DelDaemonTimerScriptPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Interval in msec
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=interval")
+    public Integer interval;
+    public DelDaemonTimerScriptRequest withInterval(Integer interval) {
+        this.interval = interval;
+        return this;
+    }
+    
+    /**
+     * Script name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=script")
+    public String script;
+    public DelDaemonTimerScriptRequest withScript(String script) {
+        this.script = script;
         return this;
     }
     

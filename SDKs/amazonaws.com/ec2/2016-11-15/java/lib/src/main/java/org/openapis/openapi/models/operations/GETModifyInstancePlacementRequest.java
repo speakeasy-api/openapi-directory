@@ -4,20 +4,149 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyInstancePlacementRequest {
-    
-    public GETModifyInstancePlacementQueryParams queryParams;
-    public GETModifyInstancePlacementRequest withQueryParams(GETModifyInstancePlacementQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyInstancePlacementActionEnum action;
+    public GETModifyInstancePlacementRequest withAction(GETModifyInstancePlacementActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The affinity setting for the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Affinity")
+    public GETModifyInstancePlacementAffinityEnum affinity;
+    public GETModifyInstancePlacementRequest withAffinity(GETModifyInstancePlacementAffinityEnum affinity) {
+        this.affinity = affinity;
+        return this;
+    }
     
-    public GETModifyInstancePlacementHeaders headers;
-    public GETModifyInstancePlacementRequest withHeaders(GETModifyInstancePlacementHeaders headers) {
-        this.headers = headers;
+    /**
+     * The Group Id of a placement group. You must specify the Placement Group &lt;b&gt;Group Id&lt;/b&gt; to launch an instance in a shared placement group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupId")
+    public String groupId;
+    public GETModifyInstancePlacementRequest withGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the placement group in which to place the instance. For spread placement groups, the instance must have a tenancy of &lt;code&gt;default&lt;/code&gt;. For cluster and partition placement groups, the instance must have a tenancy of &lt;code&gt;default&lt;/code&gt; or &lt;code&gt;dedicated&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;To remove an instance from a placement group, specify an empty string ("").&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupName")
+    public String groupName;
+    public GETModifyInstancePlacementRequest withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    
+    /**
+     * The ID of the Dedicated Host with which to associate the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostId")
+    public String hostId;
+    public GETModifyInstancePlacementRequest withHostId(String hostId) {
+        this.hostId = hostId;
+        return this;
+    }
+    
+    /**
+     * The ARN of the host resource group in which to place the instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostResourceGroupArn")
+    public String hostResourceGroupArn;
+    public GETModifyInstancePlacementRequest withHostResourceGroupArn(String hostResourceGroupArn) {
+        this.hostResourceGroupArn = hostResourceGroupArn;
+        return this;
+    }
+    
+    /**
+     * The ID of the instance that you are modifying.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
+    public String instanceId;
+    public GETModifyInstancePlacementRequest withInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    
+    /**
+     * The number of the partition in which to place the instance. Valid only if the placement group strategy is set to &lt;code&gt;partition&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PartitionNumber")
+    public Long partitionNumber;
+    public GETModifyInstancePlacementRequest withPartitionNumber(Long partitionNumber) {
+        this.partitionNumber = partitionNumber;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The tenancy for the instance.&lt;/p&gt; &lt;note&gt; &lt;p&gt;For T3 instances, you can't change the tenancy from &lt;code&gt;dedicated&lt;/code&gt; to &lt;code&gt;host&lt;/code&gt;, or from &lt;code&gt;host&lt;/code&gt; to &lt;code&gt;dedicated&lt;/code&gt;. Attempting to make one of these unsupported tenancy changes results in the &lt;code&gt;InvalidTenancy&lt;/code&gt; error code.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Tenancy")
+    public GETModifyInstancePlacementTenancyEnum tenancy;
+    public GETModifyInstancePlacementRequest withTenancy(GETModifyInstancePlacementTenancyEnum tenancy) {
+        this.tenancy = tenancy;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyInstancePlacementVersionEnum version;
+    public GETModifyInstancePlacementRequest withVersion(GETModifyInstancePlacementVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyInstancePlacementRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyInstancePlacementRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyInstancePlacementRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyInstancePlacementRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyInstancePlacementRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyInstancePlacementRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyInstancePlacementRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

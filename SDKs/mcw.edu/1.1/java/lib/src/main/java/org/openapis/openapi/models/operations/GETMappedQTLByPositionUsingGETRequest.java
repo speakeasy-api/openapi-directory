@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMappedQTLByPositionUsingGETRequest {
+    /**
+     * Chromosome
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=chr")
+    public String chr;
+    public GETMappedQTLByPositionUsingGETRequest withChr(String chr) {
+        this.chr = chr;
+        return this;
+    }
     
-    public GETMappedQTLByPositionUsingGETPathParams pathParams;
-    public GETMappedQTLByPositionUsingGETRequest withPathParams(GETMappedQTLByPositionUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A list of assembly map keys can be found using the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mapKey")
+    public Integer mapKey;
+    public GETMappedQTLByPositionUsingGETRequest withMapKey(Integer mapKey) {
+        this.mapKey = mapKey;
+        return this;
+    }
+    
+    /**
+     * Start Position
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=start")
+    public Long start;
+    public GETMappedQTLByPositionUsingGETRequest withStart(Long start) {
+        this.start = start;
+        return this;
+    }
+    
+    /**
+     * Stop Position
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stop")
+    public Long stop;
+    public GETMappedQTLByPositionUsingGETRequest withStop(Long stop) {
+        this.stop = stop;
         return this;
     }
     

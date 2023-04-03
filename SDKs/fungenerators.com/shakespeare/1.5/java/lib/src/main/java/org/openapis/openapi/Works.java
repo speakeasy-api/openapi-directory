@@ -32,11 +32,10 @@ public class Works {
 
     /**
      * Get a random Shakespeare quote.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetShakespeareQuoteResponse getShakespeareQuote(org.openapis.openapi.models.operations.GetShakespeareQuoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetShakespeareQuoteResponse getShakespeareQuote() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/shakespeare/quote");
         
@@ -45,8 +44,7 @@ public class Works {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");

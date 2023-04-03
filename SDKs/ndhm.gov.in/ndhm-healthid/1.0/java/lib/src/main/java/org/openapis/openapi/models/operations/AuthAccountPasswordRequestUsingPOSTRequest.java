@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthAccountPasswordRequestUsingPOSTRequest {
-    
-    public AuthAccountPasswordRequestUsingPOSTHeaders headers;
-    public AuthAccountPasswordRequestUsingPOSTRequest withHeaders(AuthAccountPasswordRequestUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public AuthAccountPasswordRequestUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class AuthAccountPasswordRequestUsingPOSTRequest {
      * authenticationRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthWithPasswordRequest request;
-    public AuthAccountPasswordRequestUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AuthWithPasswordRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AuthAccountPasswordRequestUsingPOSTSecurity security;
-    public AuthAccountPasswordRequestUsingPOSTRequest withSecurity(AuthAccountPasswordRequestUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.AuthWithPasswordRequest authWithPasswordRequest;
+    public AuthAccountPasswordRequestUsingPOSTRequest withAuthWithPasswordRequest(org.openapis.openapi.models.shared.AuthWithPasswordRequest authWithPasswordRequest) {
+        this.authWithPasswordRequest = authWithPasswordRequest;
         return this;
     }
     

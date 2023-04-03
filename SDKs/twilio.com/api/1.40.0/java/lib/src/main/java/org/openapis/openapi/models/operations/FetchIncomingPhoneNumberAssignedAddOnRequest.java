@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchIncomingPhoneNumberAssignedAddOnRequest {
-    
-    public FetchIncomingPhoneNumberAssignedAddOnPathParams pathParams;
-    public FetchIncomingPhoneNumberAssignedAddOnRequest withPathParams(FetchIncomingPhoneNumberAssignedAddOnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public FetchIncomingPhoneNumberAssignedAddOnRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public FetchIncomingPhoneNumberAssignedAddOnSecurity security;
-    public FetchIncomingPhoneNumberAssignedAddOnRequest withSecurity(FetchIncomingPhoneNumberAssignedAddOnSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Phone Number to which the Add-on is assigned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceSid")
+    public String resourceSid;
+    public FetchIncomingPhoneNumberAssignedAddOnRequest withResourceSid(String resourceSid) {
+        this.resourceSid = resourceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchIncomingPhoneNumberAssignedAddOnRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchIncomingPhoneNumberAssignedAddOnRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

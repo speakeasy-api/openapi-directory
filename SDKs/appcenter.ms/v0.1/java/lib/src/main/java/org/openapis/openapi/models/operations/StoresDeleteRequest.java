@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoresDeleteRequest {
-    
-    public StoresDeletePathParams pathParams;
-    public StoresDeleteRequest withPathParams(StoresDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public StoresDeleteRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public StoresDeleteRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public StoresDeleteRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public StoresDeleteSecurity security;
-    public StoresDeleteRequest withSecurity(StoresDeleteSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public StoresDeleteRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
+    
+    /**
+     * The name of the store
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
+    public String storeName;
+    public StoresDeleteRequest withStoreName(String storeName) {
+        this.storeName = storeName;
         return this;
     }
     

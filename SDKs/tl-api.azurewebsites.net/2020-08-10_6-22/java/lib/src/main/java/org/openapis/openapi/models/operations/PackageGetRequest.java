@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageGetRequest {
-    
-    public PackageGetQueryParams queryParams;
-    public PackageGetRequest withQueryParams(PackageGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * primary key of package entity
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageId")
+    public Integer packageId;
+    public PackageGetRequest withPackageId(Integer packageId) {
+        this.packageId = packageId;
         return this;
     }
     

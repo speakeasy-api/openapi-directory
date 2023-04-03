@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV3DiaryShortNameCompanyBranchesBranchIDRequest {
+    /**
+     * The unique ID of the Branch
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
+    public String branchID;
+    public GetV3DiaryShortNameCompanyBranchesBranchIDRequest withBranchID(String branchID) {
+        this.branchID = branchID;
+        return this;
+    }
     
-    public GetV3DiaryShortNameCompanyBranchesBranchIDPathParams pathParams;
-    public GetV3DiaryShortNameCompanyBranchesBranchIDRequest withPathParams(GetV3DiaryShortNameCompanyBranchesBranchIDPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public GetV3DiaryShortNameCompanyBranchesBranchIDRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

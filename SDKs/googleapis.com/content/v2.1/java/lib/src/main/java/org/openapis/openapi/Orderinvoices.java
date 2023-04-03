@@ -34,27 +34,28 @@ public class Orderinvoices {
     /**
      * Creates a charge invoice for a shipment group, and triggers a charge capture for orderinvoice enabled orders.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceResponse contentOrderinvoicesCreatechargeinvoice(org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceResponse contentOrderinvoicesCreatechargeinvoice(org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceRequest request, org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoicePathParams.class, baseUrl, "/{merchantId}/orderinvoices/{orderId}/createChargeInvoice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceRequest.class, baseUrl, "/{merchantId}/orderinvoices/{orderId}/createChargeInvoice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderinvoicesCreateChargeInvoiceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Orderinvoices {
     /**
      * Creates a refund invoice for one or more shipment groups, and triggers a refund for orderinvoice enabled orders. This can only be used for line items that have previously been charged using `createChargeInvoice`. All amounts (except for the summary) are incremental with respect to the previous invoice.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceResponse contentOrderinvoicesCreaterefundinvoice(org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceResponse contentOrderinvoicesCreaterefundinvoice(org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceRequest request, org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoicePathParams.class, baseUrl, "/{merchantId}/orderinvoices/{orderId}/createRefundInvoice", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceRequest.class, baseUrl, "/{merchantId}/orderinvoices/{orderId}/createRefundInvoice", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "orderinvoicesCreateRefundInvoiceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

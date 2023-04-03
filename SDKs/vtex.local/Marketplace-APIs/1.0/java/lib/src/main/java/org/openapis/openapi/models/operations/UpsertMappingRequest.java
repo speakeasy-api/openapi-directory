@@ -7,31 +7,70 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpsertMappingRequest {
-    
-    public UpsertMappingPathParams pathParams;
-    public UpsertMappingRequest withPathParams(UpsertMappingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public UpsertMappingRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public UpsertMappingQueryParams queryParams;
-    public UpsertMappingRequest withQueryParams(UpsertMappingQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public UpsertMappingHeaders headers;
-    public UpsertMappingRequest withHeaders(UpsertMappingHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public UpsertMappingRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpsertMappingRequest[] request;
-    public UpsertMappingRequest withRequest(org.openapis.openapi.models.shared.UpsertMappingRequest[] request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpsertMappingRequest[] requestBody;
+    public UpsertMappingRequest withRequestBody(org.openapis.openapi.models.shared.UpsertMappingRequest[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Name of the VTEX account that belongs to the marketplace. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
+    public String accountName;
+    public UpsertMappingRequest withAccountName(String accountName) {
+        this.accountName = accountName;
+        return this;
+    }
+    
+    /**
+     * Marketplace's account name, the same one inputted on the endpoint's path.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
+    public String an;
+    public UpsertMappingRequest withAn(String an) {
+        this.an = an;
+        return this;
+    }
+    
+    /**
+     * Environment to use. Used as part of the URL.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
+    public String environment;
+    public UpsertMappingRequest withEnvironment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+    
+    /**
+     * A string that identifies the seller in the marketplace. This ID must be created by the marketplace.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
+    public String sellerId;
+    public UpsertMappingRequest withSellerId(String sellerId) {
+        this.sellerId = sellerId;
         return this;
     }
     

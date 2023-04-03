@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.PutAuditEventsQueryParams;
-import org.openapis.openapi.models.operations.PutAuditEventsHeaders;
 import org.openapis.openapi.models.operations.PutAuditEventsRequestBody;
 import org.openapis.openapi.models.operations.PutAuditEventsRequest;
 import org.openapis.openapi.models.operations.PutAuditEventsResponse;
@@ -29,46 +27,40 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             PutAuditEventsRequest req = new PutAuditEventsRequest() {{
-                queryParams = new PutAuditEventsQueryParams() {{
-                    channelArn = "corrupti";
-                    externalId = "provident";
-                }};
-                headers = new PutAuditEventsHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-                request = new PutAuditEventsRequestBody() {{
+                requestBody = new PutAuditEventsRequestBody() {{
                     auditEvents = new org.openapis.openapi.models.shared.AuditEvent[]{{
                         add(new AuditEvent() {{
-                            eventData = "deserunt";
-                            eventDataChecksum = "suscipit";
-                            id = "iure";
+                            eventData = "provident";
+                            eventDataChecksum = "distinctio";
+                            id = "quibusdam";
                         }}),
                         add(new AuditEvent() {{
-                            eventData = "magnam";
-                            eventDataChecksum = "debitis";
-                            id = "ipsa";
+                            eventData = "unde";
+                            eventDataChecksum = "nulla";
+                            id = "corrupti";
                         }}),
                         add(new AuditEvent() {{
-                            eventData = "delectus";
-                            eventDataChecksum = "tempora";
-                            id = "suscipit";
+                            eventData = "illum";
+                            eventDataChecksum = "vel";
+                            id = "error";
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "deserunt";
+                xAmzContentSha256 = "suscipit";
+                xAmzCredential = "iure";
+                xAmzDate = "magnam";
+                xAmzSecurityToken = "debitis";
+                xAmzSignature = "ipsa";
+                xAmzSignedHeaders = "delectus";
+                channelArn = "tempora";
+                externalId = "suscipit";
+            }}            
 
             PutAuditEventsResponse res = sdk.putAuditEvents(req);
 
@@ -82,7 +74,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

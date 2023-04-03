@@ -4,20 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest {
-    
-    public GetSpacesSpaceIdFoldersIdDeliveriesJournalPathParams pathParams;
-    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withPathParams(GetSpacesSpaceIdFoldersIdDeliveriesJournalPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * accounting dates of the document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountingDate")
+    public String accountingDate;
+    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withAccountingDate(String accountingDate) {
+        this.accountingDate = accountingDate;
         return this;
     }
     
+    /**
+     * class of the document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Class")
+    public String class_;
+    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withClass(String class_) {
+        this.class_ = class_;
+        return this;
+    }
     
-    public GetSpacesSpaceIdFoldersIdDeliveriesJournalQueryParams queryParams;
-    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withQueryParams(GetSpacesSpaceIdFoldersIdDeliveriesJournalQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * delivery dates of the document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeliveryDate")
+    public String deliveryDate;
+    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withDeliveryDate(String deliveryDate) {
+        this.deliveryDate = deliveryDate;
+        return this;
+    }
+    
+    /**
+     * numbers of the document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Number")
+    public Long number;
+    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withNumber(Long number) {
+        this.number = number;
+        return this;
+    }
+    
+    /**
+     * Name of the target folder of the document
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetFolderName")
+    public String targetFolderName;
+    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withTargetFolderName(String targetFolderName) {
+        this.targetFolderName = targetFolderName;
+        return this;
+    }
+    
+    /**
+     * Id of the customer folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public GetSpacesSpaceIdFoldersIdDeliveriesJournalRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

@@ -7,24 +7,47 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PUTRevenueByRecognitionStartandEndDatesRequest {
-    
-    public PUTRevenueByRecognitionStartandEndDatesPathParams pathParams;
-    public PUTRevenueByRecognitionStartandEndDatesRequest withPathParams(PUTRevenueByRecognitionStartandEndDatesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PUTRevenueByRecognitionStartandEndDatesHeaders headers;
-    public PUTRevenueByRecognitionStartandEndDatesRequest withHeaders(PUTRevenueByRecognitionStartandEndDatesHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PUTRSTermType request;
-    public PUTRevenueByRecognitionStartandEndDatesRequest withRequest(org.openapis.openapi.models.shared.PUTRSTermType request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PUTRSTermType putrsTermType;
+    public PUTRevenueByRecognitionStartandEndDatesRequest withPUTRSTermType(org.openapis.openapi.models.shared.PUTRSTermType putrsTermType) {
+        this.putrsTermType = putrsTermType;
+        return this;
+    }
+    
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public PUTRevenueByRecognitionStartandEndDatesRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
+        return this;
+    }
+    
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public PUTRevenueByRecognitionStartandEndDatesRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
+        return this;
+    }
+    
+    /**
+     * Revenue schedule number. Specify the revenue schedule whose revenue you want to distribute.
+     *   
+     * The revenue schedule number is always prefixed with "RS", for example, "RS-00000001".
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rs-number")
+    public String rsNumber;
+    public PUTRevenueByRecognitionStartandEndDatesRequest withRsNumber(String rsNumber) {
+        this.rsNumber = rsNumber;
         return this;
     }
     

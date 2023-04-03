@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest {
-    
-    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessPathParams pathParams;
-    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withPathParams(DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessQueryParams queryParams;
-    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withQueryParams(DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1ProcessRequest request;
-    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1ProcessRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1ProcessRequest googleCloudDocumentaiV1ProcessRequest;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withGoogleCloudDocumentaiV1ProcessRequest(org.openapis.openapi.models.shared.GoogleCloudDocumentaiV1ProcessRequest googleCloudDocumentaiV1ProcessRequest) {
+        this.googleCloudDocumentaiV1ProcessRequest = googleCloudDocumentaiV1ProcessRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessSecurity security;
-    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withSecurity(DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Required. The resource name of the Processor or ProcessorVersion to use for processing. If a Processor is specified, the server will use its default version. Format: `projects/{project}/locations/{location}/processors/{processor}`, or `projects/{project}/locations/{location}/processors/{processor}/processorVersions/{processorVersion}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DocumentaiProjectsLocationsProcessorsProcessorVersionsProcessRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

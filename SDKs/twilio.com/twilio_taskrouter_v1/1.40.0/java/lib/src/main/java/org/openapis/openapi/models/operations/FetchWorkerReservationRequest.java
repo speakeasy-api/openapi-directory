@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchWorkerReservationRequest {
-    
-    public FetchWorkerReservationPathParams pathParams;
-    public FetchWorkerReservationRequest withPathParams(FetchWorkerReservationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the WorkerReservation resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchWorkerReservationRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchWorkerReservationSecurity security;
-    public FetchWorkerReservationRequest withSecurity(FetchWorkerReservationSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the reserved Worker resource with the WorkerReservation resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkerSid")
+    public String workerSid;
+    public FetchWorkerReservationRequest withWorkerSid(String workerSid) {
+        this.workerSid = workerSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public FetchWorkerReservationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Workspace with the WorkerReservation resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchWorkerReservationRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

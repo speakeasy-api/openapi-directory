@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksUnsubscribeRequest {
-    
-    public WebhooksUnsubscribePathParams pathParams;
-    public WebhooksUnsubscribeRequest withPathParams(WebhooksUnsubscribePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public WebhooksUnsubscribeRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
-    
-    public WebhooksUnsubscribeSecurity security;
-    public WebhooksUnsubscribeRequest withSecurity(WebhooksUnsubscribeSecurity security) {
-        this.security = security;
+    /**
+     * Account to apply operations to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=url")
+    public String url;
+    public WebhooksUnsubscribeRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

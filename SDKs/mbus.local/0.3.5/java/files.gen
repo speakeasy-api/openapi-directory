@@ -29,17 +29,14 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetMultiPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMultiResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/HatResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/HatOffResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/HatOnResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/MbusApiResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ScanPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ScanRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ScanResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/BaudrateEnum.java

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnnouncementBannersSetAnnouncementBannerForEnterpriseRequest {
-    
-    public AnnouncementBannersSetAnnouncementBannerForEnterprisePathParams pathParams;
-    public AnnouncementBannersSetAnnouncementBannerForEnterpriseRequest withPathParams(AnnouncementBannersSetAnnouncementBannerForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.Announcement announcement;
+    public AnnouncementBannersSetAnnouncementBannerForEnterpriseRequest withAnnouncement(org.openapis.openapi.models.shared.Announcement announcement) {
+        this.announcement = announcement;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Announcement request;
-    public AnnouncementBannersSetAnnouncementBannerForEnterpriseRequest withRequest(org.openapis.openapi.models.shared.Announcement request) {
-        this.request = request;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public AnnouncementBannersSetAnnouncementBannerForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     

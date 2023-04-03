@@ -31,27 +31,28 @@ public class Catalogs {
     /**
      * Creates an Association instance under a given Catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse cloudprivatecatalogproducerCatalogsAssociationsCreate(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateResponse cloudprivatecatalogproducerCatalogsAssociationsCreate(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/associations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest.class, baseUrl, "/v1beta1/{parent}/associations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPrivatecatalogproducerV1beta1CreateAssociationRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -77,25 +78,26 @@ public class Catalogs {
     /**
      * Lists all Association resources under a catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse cloudprivatecatalogproducerCatalogsAssociationsList(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListResponse cloudprivatecatalogproducerCatalogsAssociationsList(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListPathParams.class, baseUrl, "/v1beta1/{parent}/associations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListRequest.class, baseUrl, "/v1beta1/{parent}/associations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsAssociationsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,27 +123,28 @@ public class Catalogs {
     /**
      * Creates a new Catalog resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateResponse cloudprivatecatalogproducerCatalogsCreate(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateResponse cloudprivatecatalogproducerCatalogsCreate(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/catalogs");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPrivatecatalogproducerV1beta1Catalog", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -167,25 +170,26 @@ public class Catalogs {
     /**
      * Gets IAM policy for the specified Catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse cloudprivatecatalogproducerCatalogsGetIamPolicy(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyResponse cloudprivatecatalogproducerCatalogsGetIamPolicy(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,10 +215,11 @@ public class Catalogs {
     /**
      * Lists Catalog resources that the producer has access to, within the - scope of the parent resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListResponse cloudprivatecatalogproducerCatalogsList(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListResponse cloudprivatecatalogproducerCatalogsList(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/catalogs");
         
@@ -222,14 +227,14 @@ public class Catalogs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -255,27 +260,28 @@ public class Catalogs {
     /**
      * Copies a Product under another Catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse cloudprivatecatalogproducerCatalogsProductsCopy(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyResponse cloudprivatecatalogproducerCatalogsProductsCopy(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyPathParams.class, baseUrl, "/v1beta1/{name}:copy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyRequest.class, baseUrl, "/v1beta1/{name}:copy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPrivatecatalogproducerV1beta1CopyProductRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCopyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -301,27 +307,28 @@ public class Catalogs {
     /**
      * Creates a Product instance under a given Catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse cloudprivatecatalogproducerCatalogsProductsCreate(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateResponse cloudprivatecatalogproducerCatalogsProductsCreate(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/products", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateRequest.class, baseUrl, "/v1beta1/{parent}/products", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPrivatecatalogproducerV1beta1Product", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -347,27 +354,28 @@ public class Catalogs {
     /**
      * Creates an Icon instance under a given Product. - If Product only has a default icon, a new Icon - instance is created and associated with the given Product. - If Product already has a non-default icon, the action creates - a new Icon instance, associates the newly created - Icon with the given Product and deletes the old icon.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse cloudprivatecatalogproducerCatalogsProductsIconsUpload(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadResponse cloudprivatecatalogproducerCatalogsProductsIconsUpload(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadPathParams.class, baseUrl, "/v1beta1/{product}/icons:upload", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadRequest.class, baseUrl, "/v1beta1/{product}/icons:upload", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPrivatecatalogproducerV1beta1UploadIconRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsIconsUploadRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -393,25 +401,26 @@ public class Catalogs {
     /**
      * Lists Product resources that the producer has access to, within the - scope of the parent catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListResponse cloudprivatecatalogproducerCatalogsProductsList(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListResponse cloudprivatecatalogproducerCatalogsProductsList(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListPathParams.class, baseUrl, "/v1beta1/{parent}/products", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListRequest.class, baseUrl, "/v1beta1/{parent}/products", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -437,27 +446,28 @@ public class Catalogs {
     /**
      * Creates a Version instance under a given Product.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse cloudprivatecatalogproducerCatalogsProductsVersionsCreate(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateResponse cloudprivatecatalogproducerCatalogsProductsVersionsCreate(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateRequest.class, baseUrl, "/v1beta1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPrivatecatalogproducerV1beta1Version", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -483,25 +493,26 @@ public class Catalogs {
     /**
      * Hard deletes a Version.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse cloudprivatecatalogproducerCatalogsProductsVersionsDelete(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteResponse cloudprivatecatalogproducerCatalogsProductsVersionsDelete(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -527,25 +538,26 @@ public class Catalogs {
     /**
      * Returns the requested Version resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse cloudprivatecatalogproducerCatalogsProductsVersionsGet(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetResponse cloudprivatecatalogproducerCatalogsProductsVersionsGet(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -571,25 +583,26 @@ public class Catalogs {
     /**
      * Lists Version resources that the producer has access to, within the - scope of the parent Product.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse cloudprivatecatalogproducerCatalogsProductsVersionsList(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListResponse cloudprivatecatalogproducerCatalogsProductsVersionsList(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListPathParams.class, baseUrl, "/v1beta1/{parent}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListRequest.class, baseUrl, "/v1beta1/{parent}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -615,27 +628,28 @@ public class Catalogs {
     /**
      * Updates a specific Version resource.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse cloudprivatecatalogproducerCatalogsProductsVersionsPatch(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchResponse cloudprivatecatalogproducerCatalogsProductsVersionsPatch(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchPathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudPrivatecatalogproducerV1beta1Version", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -661,27 +675,28 @@ public class Catalogs {
     /**
      * Sets the IAM policy for the specified Catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse cloudprivatecatalogproducerCatalogsSetIamPolicy(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyResponse cloudprivatecatalogproducerCatalogsSetIamPolicy(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleIamV1SetIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsSetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -707,27 +722,28 @@ public class Catalogs {
     /**
      * Tests the IAM permissions for the specified Catalog.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse cloudprivatecatalogproducerCatalogsTestIamPermissions(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsResponse cloudprivatecatalogproducerCatalogsTestIamPermissions(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsPathParams.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsRequest.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleIamV1TestIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -753,27 +769,28 @@ public class Catalogs {
     /**
      * Undeletes a deleted Catalog and all resources under it.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteResponse cloudprivatecatalogproducerCatalogsUndelete(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteResponse cloudprivatecatalogproducerCatalogsUndelete(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteRequest request, org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeletePathParams.class, baseUrl, "/v1beta1/{name}:undelete", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteRequest.class, baseUrl, "/v1beta1/{name}:undelete", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudprivatecatalogproducerCatalogsUndeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

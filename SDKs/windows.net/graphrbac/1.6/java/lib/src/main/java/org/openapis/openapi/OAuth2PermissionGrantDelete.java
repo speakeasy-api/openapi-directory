@@ -38,13 +38,13 @@ public class OAuth2PermissionGrantDelete {
      */
     public org.openapis.openapi.models.operations.OAuth2PermissionGrantDeleteResponse oAuth2PermissionGrantDelete(org.openapis.openapi.models.operations.OAuth2PermissionGrantDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OAuth2PermissionGrantDeletePathParams.class, baseUrl, "/{tenantID}/oauth2PermissionGrants/{objectId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OAuth2PermissionGrantDeleteRequest.class, baseUrl, "/{tenantID}/oauth2PermissionGrants/{objectId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OAuth2PermissionGrantDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OAuth2PermissionGrantDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -40,7 +40,7 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.StoryIdEventsGetResponse storyIdEventsGet(org.openapis.openapi.models.operations.StoryIdEventsGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdEventsGetPathParams.class, baseUrl, "/{id}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdEventsGetRequest.class, baseUrl, "/{id}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -87,12 +87,12 @@ public class Events {
      */
     public org.openapis.openapi.models.operations.StoryIdEventsPostResponse storyIdEventsPost(org.openapis.openapi.models.operations.StoryIdEventsPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdEventsPostPathParams.class, baseUrl, "/{id}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdEventsPostRequest.class, baseUrl, "/{id}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manageEvent", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRouteOutputFormatRequest {
-    
-    public GetRouteOutputFormatPathParams pathParams;
-    public GetRouteOutputFormatRequest withPathParams(GetRouteOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, route starts and ends on same side of road as start/end point.Default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=correctSide")
+    public Boolean correctSide;
+    public GetRouteOutputFormatRequest withCorrectSide(Boolean correctSide) {
+        this.correctSide = correctSide;
         return this;
     }
     
+    /**
+     * Routing criteria to optimize (e.g., shortest, fastest). Default is shortest.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criteria")
+    public GetRouteOutputFormatCriteriaEnum criteria;
+    public GetRouteOutputFormatRequest withCriteria(GetRouteOutputFormatCriteriaEnum criteria) {
+        this.criteria = criteria;
+        return this;
+    }
     
-    public GetRouteOutputFormatQueryParams queryParams;
-    public GetRouteOutputFormatRequest withQueryParams(GetRouteOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * departure date and time in internet timestamp notation as defined in RFC 3339, section 5.6 (e.g., 2019-02-28T11:36:00-08:00);&lt;br&gt; Ignored if time-dependency modules are disabled
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departure")
+    public OffsetDateTime departure;
+    public GetRouteOutputFormatRequest withDeparture(OffsetDateTime departure) {
+        this.departure = departure;
+        return this;
+    }
+    
+    /**
+     * A comma-separated list of time-related modules to disable (e.g., sc,tf,ev,td).&lt;br&gt; Module names include:&lt;br&gt; sc \u2013 ferry schedules; disabled by default; disabled by default and only suitable for demos&lt;br&gt;tf \u2013 historic traffic congestion; disabled by default and only suitable for demos&lt;br&gt;ev \u2013 road events; disabled by default and only suitable for demos&lt;br&gt;td \u2013 time-dependency; disabling this disables sc, tf, and ev modules&lt;br&gt;tr \u2013 turn restrictions; if td is disabled, time-dependent turn restrictions are ignored&lt;br&gt;tc - turn costs (e.g., left turns take longer than right turns)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disable")
+    public String disable;
+    public GetRouteOutputFormatRequest withDisable(String disable) {
+        this.disable = disable;
+        return this;
+    }
+    
+    /**
+     * distance unit of measure (e.g., km, mi). Default is km.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distanceUnit")
+    public GetRouteOutputFormatDistanceUnitEnum distanceUnit;
+    public GetRouteOutputFormatRequest withDistanceUnit(GetRouteOutputFormatDistanceUnitEnum distanceUnit) {
+        this.distanceUnit = distanceUnit;
+        return this;
+    }
+    
+    /**
+     * Format of representation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetRouteOutputFormatOutputFormatEnum outputFormat;
+    public GetRouteOutputFormatRequest withOutputFormat(GetRouteOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetRouteOutputFormatOutputSrsEnum outputSRS;
+    public GetRouteOutputFormatRequest withOutputSRS(GetRouteOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * A list of any number of route points in start to end order. See &lt;a href=https://github.com/bcgov/ols-router/blob/gh-pages/glossary.md#points target='_blank'&gt;points&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=points")
+    public String points;
+    public GetRouteOutputFormatRequest withPoints(String points) {
+        this.points = points;
+        return this;
+    }
+    
+    /**
+     * If true, route ends at start point. Default is false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roundTrip")
+    public Boolean roundTrip;
+    public GetRouteOutputFormatRequest withRoundTrip(Boolean roundTrip) {
+        this.roundTrip = roundTrip;
+        return this;
+    }
+    
+    /**
+     * Route description (e.g., Shortest route from 1002 Johnson St, Victoria to 1105 Royal Ave,New Westminster)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeDescription")
+    public String routeDescription;
+    public GetRouteOutputFormatRequest withRouteDescription(String routeDescription) {
+        this.routeDescription = routeDescription;
         return this;
     }
     

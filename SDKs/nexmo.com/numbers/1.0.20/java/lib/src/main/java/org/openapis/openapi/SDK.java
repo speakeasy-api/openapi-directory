@@ -144,7 +144,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BuyANumberResponse buyANumber(org.openapis.openapi.models.operations.BuyANumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BuyANumberResponse buyANumber(org.openapis.openapi.models.shared.NumberDetails request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/number/buy");
         
@@ -220,7 +220,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CancelANumberResponse cancelANumber(org.openapis.openapi.models.operations.CancelANumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CancelANumberResponse cancelANumber(org.openapis.openapi.models.shared.NumberDetails request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/number/cancel");
         
@@ -291,7 +291,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAvailableNumbersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAvailableNumbersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -355,7 +355,7 @@ public class SDK {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOwnedNumbersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetOwnedNumbersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -411,7 +411,7 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateANumberResponse updateANumber(org.openapis.openapi.models.operations.UpdateANumberRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateANumberResponse updateANumber(org.openapis.openapi.models.shared.NumberDetailsUpdate request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/number/update");
         

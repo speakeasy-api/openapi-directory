@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllInvestorsRequest {
-    
-    public GetAllInvestorsQueryParams queryParams;
-    public GetAllInvestorsRequest withQueryParams(GetAllInvestorsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_number")
+    public String pageNumber;
+    public GetAllInvestorsRequest withPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
     
-    
-    public GetAllInvestorsHeaders headers;
-    public GetAllInvestorsRequest withHeaders(GetAllInvestorsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Page size for the query. This end-point has paginations capabilities. This value should be a positive integer value. If this is not provided, both page_size and page_number will be defaulted to 1000 and 1. Results are sorted decending order of the created date &amp; time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public String pageSize;
+    public GetAllInvestorsRequest withPageSize(String pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * Sorting order; results are sorted by creation time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetAllInvestorsSortEnum sort;
+    public GetAllInvestorsRequest withSort(GetAllInvestorsSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
     
-    public GetAllInvestorsSecurity security;
-    public GetAllInvestorsRequest withSecurity(GetAllInvestorsSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetAllInvestorsRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

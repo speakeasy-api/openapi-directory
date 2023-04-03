@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteReviewsReviewIdRequest {
-    
-    public DeleteReviewsReviewIdPathParams pathParams;
-    public DeleteReviewsReviewIdRequest withPathParams(DeleteReviewsReviewIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the Review to be updated
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
+    public String reviewId;
+    public DeleteReviewsReviewIdRequest withReviewId(String reviewId) {
+        this.reviewId = reviewId;
         return this;
     }
     
+    /**
+     * The id of the User account that is emoving this review
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userAccountId")
+    public String userAccountId;
+    public DeleteReviewsReviewIdRequest withUserAccountId(String userAccountId) {
+        this.userAccountId = userAccountId;
+        return this;
+    }
     
-    public DeleteReviewsReviewIdQueryParams queryParams;
-    public DeleteReviewsReviewIdRequest withQueryParams(DeleteReviewsReviewIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the User that is removing this review
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
+    public String userId;
+    public DeleteReviewsReviewIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

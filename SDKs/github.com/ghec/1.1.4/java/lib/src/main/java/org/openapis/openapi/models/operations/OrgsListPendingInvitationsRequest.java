@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListPendingInvitationsRequest {
-    
-    public OrgsListPendingInvitationsPathParams pathParams;
-    public OrgsListPendingInvitationsRequest withPathParams(OrgsListPendingInvitationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter invitations by their invitation source.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=invitation_source")
+    public OrgsListPendingInvitationsInvitationSourceEnum invitationSource;
+    public OrgsListPendingInvitationsRequest withInvitationSource(OrgsListPendingInvitationsInvitationSourceEnum invitationSource) {
+        this.invitationSource = invitationSource;
         return this;
     }
     
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public OrgsListPendingInvitationsRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public OrgsListPendingInvitationsQueryParams queryParams;
-    public OrgsListPendingInvitationsRequest withQueryParams(OrgsListPendingInvitationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgsListPendingInvitationsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public OrgsListPendingInvitationsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * Filter invitations by their member role.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public OrgsListPendingInvitationsRoleEnum role;
+    public OrgsListPendingInvitationsRequest withRole(OrgsListPendingInvitationsRoleEnum role) {
+        this.role = role;
         return this;
     }
     

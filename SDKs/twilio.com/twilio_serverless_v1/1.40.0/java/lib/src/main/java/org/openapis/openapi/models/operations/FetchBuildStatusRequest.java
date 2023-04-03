@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchBuildStatusRequest {
-    
-    public FetchBuildStatusPathParams pathParams;
-    public FetchBuildStatusRequest withPathParams(FetchBuildStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Service to fetch the Build resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchBuildStatusRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public FetchBuildStatusSecurity security;
-    public FetchBuildStatusRequest withSecurity(FetchBuildStatusSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchBuildStatusRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Build resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchBuildStatusRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

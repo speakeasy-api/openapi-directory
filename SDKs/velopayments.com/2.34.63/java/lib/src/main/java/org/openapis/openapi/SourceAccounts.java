@@ -45,7 +45,7 @@ public class SourceAccounts {
      */
     public org.openapis.openapi.models.operations.GetSourceAccountV2Response getSourceAccountV2(org.openapis.openapi.models.operations.GetSourceAccountV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSourceAccountV2PathParams.class, baseUrl, "/v2/sourceAccounts/{sourceAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSourceAccountV2Request.class, baseUrl, "/v2/sourceAccounts/{sourceAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -117,7 +117,7 @@ public class SourceAccounts {
      */
     public org.openapis.openapi.models.operations.GetSourceAccountV3Response getSourceAccountV3(org.openapis.openapi.models.operations.GetSourceAccountV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSourceAccountV3PathParams.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSourceAccountV3Request.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -195,7 +195,7 @@ public class SourceAccounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSourceAccountsV2QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSourceAccountsV2Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -273,7 +273,7 @@ public class SourceAccounts {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSourceAccountsV3QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetSourceAccountsV3Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -347,12 +347,12 @@ public class SourceAccounts {
      */
     public org.openapis.openapi.models.operations.SetNotificationsRequestResponse setNotificationsRequest(org.openapis.openapi.models.operations.SetNotificationsRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetNotificationsRequestPathParams.class, baseUrl, "/v1/sourceAccounts/{sourceAccountId}/notifications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetNotificationsRequestRequest.class, baseUrl, "/v1/sourceAccounts/{sourceAccountId}/notifications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNotificationsRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -420,12 +420,12 @@ public class SourceAccounts {
      */
     public org.openapis.openapi.models.operations.SetNotificationsRequestV3Response setNotificationsRequestV3(org.openapis.openapi.models.operations.SetNotificationsRequestV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetNotificationsRequestV3PathParams.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}/notifications", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SetNotificationsRequestV3Request.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}/notifications", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setNotificationsRequest2", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -491,12 +491,12 @@ public class SourceAccounts {
      */
     public org.openapis.openapi.models.operations.TransferFundsV2Response transferFundsV2(org.openapis.openapi.models.operations.TransferFundsV2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransferFundsV2PathParams.class, baseUrl, "/v2/sourceAccounts/{sourceAccountId}/transfers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransferFundsV2Request.class, baseUrl, "/v2/sourceAccounts/{sourceAccountId}/transfers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "transferRequestV2", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -562,12 +562,12 @@ public class SourceAccounts {
      */
     public org.openapis.openapi.models.operations.TransferFundsV3Response transferFundsV3(org.openapis.openapi.models.operations.TransferFundsV3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransferFundsV3PathParams.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}/transfers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TransferFundsV3Request.class, baseUrl, "/v3/sourceAccounts/{sourceAccountId}/transfers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "transferRequestV3", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

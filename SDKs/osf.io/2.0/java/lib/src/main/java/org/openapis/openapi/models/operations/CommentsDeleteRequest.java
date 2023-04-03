@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommentsDeleteRequest {
-    
-    public CommentsDeletePathParams pathParams;
-    public CommentsDeleteRequest withPathParams(CommentsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the comment you wish to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public String commentId;
+    public CommentsDeleteRequest withCommentId(String commentId) {
+        this.commentId = commentId;
         return this;
     }
     

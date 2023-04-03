@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.RetrievePrefixPricingPathParams;
-import org.openapis.openapi.models.operations.RetrievePrefixPricingQueryParams;
 import org.openapis.openapi.models.operations.RetrievePrefixPricingRequest;
 import org.openapis.openapi.models.operations.RetrievePrefixPricingResponse;
 
@@ -29,15 +27,11 @@ public class Application {
                 .build();
 
             RetrievePrefixPricingRequest req = new RetrievePrefixPricingRequest() {{
-                pathParams = new RetrievePrefixPricingPathParams() {{
-                    type = "corrupti";
-                }};
-                queryParams = new RetrievePrefixPricingQueryParams() {{
-                    apiKey = "provident";
-                    apiSecret = "distinctio";
-                    prefix = "quibusdam";
-                }};
-            }};            
+                apiKey = "corrupti";
+                apiSecret = "provident";
+                prefix = "distinctio";
+                type = "quibusdam";
+            }}            
 
             RetrievePrefixPricingResponse res = sdk.pricing.retrievePrefixPricing(req);
 
@@ -51,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### pricing

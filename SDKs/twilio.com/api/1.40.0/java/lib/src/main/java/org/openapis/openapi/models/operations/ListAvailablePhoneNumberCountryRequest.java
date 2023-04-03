@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAvailablePhoneNumberCountryRequest {
-    
-    public ListAvailablePhoneNumberCountryPathParams pathParams;
-    public ListAvailablePhoneNumberCountryRequest withPathParams(ListAvailablePhoneNumberCountryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) requesting the available phone number Country resources.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListAvailablePhoneNumberCountryRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListAvailablePhoneNumberCountryQueryParams queryParams;
-    public ListAvailablePhoneNumberCountryRequest withQueryParams(ListAvailablePhoneNumberCountryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListAvailablePhoneNumberCountryRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListAvailablePhoneNumberCountrySecurity security;
-    public ListAvailablePhoneNumberCountryRequest withSecurity(ListAvailablePhoneNumberCountrySecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListAvailablePhoneNumberCountryRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListAvailablePhoneNumberCountryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListAvailablePhoneNumberCountryRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

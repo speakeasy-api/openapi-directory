@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CreateHomeRegionControlXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CreateHomeRegionControlHeaders;
 import org.openapis.openapi.models.operations.CreateHomeRegionControlRequest;
 import org.openapis.openapi.models.operations.CreateHomeRegionControlResponse;
 import org.openapis.openapi.models.shared.CreateHomeRegionControlRequest;
@@ -30,32 +29,28 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateHomeRegionControlRequest req = new CreateHomeRegionControlRequest() {{
-                headers = new CreateHomeRegionControlHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AWSMigrationHubMultiAccountService.CreateHomeRegionControl";
-                }};
-                request = new CreateHomeRegionControlRequest() {{
+                createHomeRegionControlRequest = new CreateHomeRegionControlRequest() {{
                     dryRun = false;
-                    homeRegion = "illum";
+                    homeRegion = "corrupti";
                     target = new Target() {{
-                        id = "vel";
+                        id = "provident";
                         type = "ACCOUNT";
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "distinctio";
+                xAmzContentSha256 = "quibusdam";
+                xAmzCredential = "unde";
+                xAmzDate = "nulla";
+                xAmzSecurityToken = "corrupti";
+                xAmzSignature = "illum";
+                xAmzSignedHeaders = "vel";
+                xAmzTarget = "AWSMigrationHubMultiAccountService.CreateHomeRegionControl";
+            }}            
 
             CreateHomeRegionControlResponse res = sdk.createHomeRegionControl(req);
 
@@ -69,7 +64,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

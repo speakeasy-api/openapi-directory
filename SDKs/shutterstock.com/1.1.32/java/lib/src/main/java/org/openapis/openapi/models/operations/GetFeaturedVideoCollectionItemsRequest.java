@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeaturedVideoCollectionItemsRequest {
-    
-    public GetFeaturedVideoCollectionItemsPathParams pathParams;
-    public GetFeaturedVideoCollectionItemsRequest withPathParams(GetFeaturedVideoCollectionItemsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFeaturedVideoCollectionItemsRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public GetFeaturedVideoCollectionItemsQueryParams queryParams;
-    public GetFeaturedVideoCollectionItemsRequest withQueryParams(GetFeaturedVideoCollectionItemsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetFeaturedVideoCollectionItemsRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public GetFeaturedVideoCollectionItemsSecurity security;
-    public GetFeaturedVideoCollectionItemsRequest withSecurity(GetFeaturedVideoCollectionItemsSecurity security) {
-        this.security = security;
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetFeaturedVideoCollectionItemsRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

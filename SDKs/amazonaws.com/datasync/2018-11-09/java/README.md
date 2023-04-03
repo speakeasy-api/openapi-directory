@@ -18,7 +18,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.CancelTaskExecutionXAmzTargetEnum;
-import org.openapis.openapi.models.operations.CancelTaskExecutionHeaders;
 import org.openapis.openapi.models.operations.CancelTaskExecutionRequest;
 import org.openapis.openapi.models.operations.CancelTaskExecutionResponse;
 import org.openapis.openapi.models.shared.CancelTaskExecutionRequest;
@@ -28,27 +27,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CancelTaskExecutionRequest req = new CancelTaskExecutionRequest() {{
-                headers = new CancelTaskExecutionHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "FmrsService.CancelTaskExecution";
+                cancelTaskExecutionRequest = new CancelTaskExecutionRequest() {{
+                    taskExecutionArn = "corrupti";
                 }};
-                request = new CancelTaskExecutionRequest() {{
-                    taskExecutionArn = "illum";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                xAmzTarget = "FmrsService.CancelTaskExecution";
+            }}            
 
             CancelTaskExecutionResponse res = sdk.cancelTaskExecution(req);
 
@@ -62,7 +57,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

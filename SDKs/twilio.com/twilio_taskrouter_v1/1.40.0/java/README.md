@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CreateActivitySecurity;
-import org.openapis.openapi.models.operations.CreateActivityPathParams;
 import org.openapis.openapi.models.operations.CreateActivityCreateActivityRequest;
 import org.openapis.openapi.models.operations.CreateActivityRequest;
 import org.openapis.openapi.models.operations.CreateActivityResponse;
-import org.openapis.openapi.models.shared.SchemeAccountSidAuthToken;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,22 +29,17 @@ public class Application {
                 .build();
 
             CreateActivityRequest req = new CreateActivityRequest() {{
-                security = new CreateActivitySecurity() {{
-                    accountSidAuthToken = new SchemeAccountSidAuthToken() {{
-                        password = "YOUR_PASSWORD_HERE";
-                        username = "YOUR_USERNAME_HERE";
-                    }};
-                }};
-                pathParams = new CreateActivityPathParams() {{
-                    workspaceSid = "corrupti";
-                }};
-                request = new CreateActivityCreateActivityRequest() {{
+                requestBody = new CreateActivityCreateActivityRequest() {{
                     available = false;
-                    friendlyName = "provident";
+                    friendlyName = "corrupti";
                 }};
-            }};            
+                workspaceSid = "provident";
+            }}            
 
-            CreateActivityResponse res = sdk.createActivity(req);
+            CreateActivityResponse res = sdk.createActivity(req, new CreateActivitySecurity() {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
             if (res.taskrouterV1WorkspaceActivity.isPresent()) {
                 // handle response
@@ -58,7 +51,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

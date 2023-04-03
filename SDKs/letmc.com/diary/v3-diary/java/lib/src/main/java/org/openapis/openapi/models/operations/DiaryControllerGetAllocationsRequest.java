@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerGetAllocationsRequest {
-    
-    public DiaryControllerGetAllocationsPathParams pathParams;
-    public DiaryControllerGetAllocationsRequest withPathParams(DiaryControllerGetAllocationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique appointment type identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointmentType")
+    public String appointmentType;
+    public DiaryControllerGetAllocationsRequest withAppointmentType(String appointmentType) {
+        this.appointmentType = appointmentType;
         return this;
     }
     
+    /**
+     * Branch ID to check appointments (required if no property submitted)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=branchID")
+    public String branchID;
+    public DiaryControllerGetAllocationsRequest withBranchID(String branchID) {
+        this.branchID = branchID;
+        return this;
+    }
     
-    public DiaryControllerGetAllocationsQueryParams queryParams;
-    public DiaryControllerGetAllocationsRequest withQueryParams(DiaryControllerGetAllocationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Sales or Lettings property?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
+    public Boolean lettings;
+    public DiaryControllerGetAllocationsRequest withLettings(Boolean lettings) {
+        this.lettings = lettings;
+        return this;
+    }
+    
+    /**
+     * The date to search from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=preferredDate")
+    public OffsetDateTime preferredDate;
+    public DiaryControllerGetAllocationsRequest withPreferredDate(OffsetDateTime preferredDate) {
+        this.preferredDate = preferredDate;
+        return this;
+    }
+    
+    /**
+     * The unique property identifier (Sales or Lettings) determines branch and property type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyIdentifier")
+    public String propertyIdentifier;
+    public DiaryControllerGetAllocationsRequest withPropertyIdentifier(String propertyIdentifier) {
+        this.propertyIdentifier = propertyIdentifier;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerGetAllocationsRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

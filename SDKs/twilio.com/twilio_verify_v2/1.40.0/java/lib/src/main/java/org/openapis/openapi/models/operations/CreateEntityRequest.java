@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateEntityRequest {
-    
-    public CreateEntityPathParams pathParams;
-    public CreateEntityRequest withPathParams(CreateEntityPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateEntityCreateEntityRequest request;
-    public CreateEntityRequest withRequest(CreateEntityCreateEntityRequest request) {
-        this.request = request;
+    public CreateEntityCreateEntityRequest requestBody;
+    public CreateEntityRequest withRequestBody(CreateEntityCreateEntityRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateEntitySecurity security;
-    public CreateEntityRequest withSecurity(CreateEntitySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateEntityRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique SID identifier of the Service.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public CreateEntityRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

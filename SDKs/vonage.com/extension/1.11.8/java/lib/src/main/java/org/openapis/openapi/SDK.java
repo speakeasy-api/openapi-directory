@@ -123,19 +123,20 @@ public class SDK {
     /**
      * Get extension data by account ID and extension number
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDResponse extensionCtrlGetAccountExtensionByID(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDResponse extensionCtrlGetAccountExtensionByID(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDRequest request, org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDPathParams.class, baseUrl, "/api/accounts/{account_id}/extensions/{extension_number}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionByIDRequest.class, baseUrl, "/api/accounts/{account_id}/extensions/{extension_number}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -170,25 +171,26 @@ public class SDK {
     /**
      * Get account extensions data by account ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsResponse extensionCtrlGetAccountExtensions(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsResponse extensionCtrlGetAccountExtensions(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsRequest request, org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsPathParams.class, baseUrl, "/api/accounts/{account_id}/extensions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsRequest.class, baseUrl, "/api/accounts/{account_id}/extensions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtensionCtrlGetAccountExtensionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

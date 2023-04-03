@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05ConsentsOnFetchJsonRequest {
-    
-    public PostV05ConsentsOnFetchJsonHeaders headers;
-    public PostV05ConsentsOnFetchJsonRequest withHeaders(PostV05ConsentsOnFetchJsonHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05ConsentsOnFetchJsonRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConsentArtefactResponse request;
-    public PostV05ConsentsOnFetchJsonRequest withRequest(org.openapis.openapi.models.shared.ConsentArtefactResponse request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConsentArtefactResponse consentArtefactResponse;
+    public PostV05ConsentsOnFetchJsonRequest withConsentArtefactResponse(org.openapis.openapi.models.shared.ConsentArtefactResponse consentArtefactResponse) {
+        this.consentArtefactResponse = consentArtefactResponse;
+        return this;
+    }
+    
+    /**
+     * Identifier of the health information user to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
+    public String xHiuId;
+    public PostV05ConsentsOnFetchJsonRequest withXHiuId(String xHiuId) {
+        this.xHiuId = xHiuId;
         return this;
     }
     

@@ -7,28 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostTracksTrackIdCommentsRequest {
-    
-    public PostTracksTrackIdCommentsPathParams pathParams;
-    public PostTracksTrackIdCommentsRequest withPathParams(PostTracksTrackIdCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Body of a comment
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostTracksTrackIdCommentsRequestBody request;
-    public PostTracksTrackIdCommentsRequest withRequest(PostTracksTrackIdCommentsRequestBody request) {
-        this.request = request;
+    public PostTracksTrackIdCommentsRequestBody requestBody;
+    public PostTracksTrackIdCommentsRequest withRequestBody(PostTracksTrackIdCommentsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public PostTracksTrackIdCommentsSecurity security;
-    public PostTracksTrackIdCommentsRequest withSecurity(PostTracksTrackIdCommentsSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud Track id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
+    public Long trackId;
+    public PostTracksTrackIdCommentsRequest withTrackId(Long trackId) {
+        this.trackId = trackId;
         return this;
     }
     

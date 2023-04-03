@@ -7,24 +7,99 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UploadArchiveRequest {
-    
-    public UploadArchivePathParams pathParams;
-    public UploadArchiveRequest withPathParams(UploadArchivePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UploadArchiveHeaders headers;
-    public UploadArchiveRequest withHeaders(UploadArchiveHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UploadArchiveRequestBody request;
-    public UploadArchiveRequest withRequest(UploadArchiveRequestBody request) {
-        this.request = request;
+    public UploadArchiveRequestBody requestBody;
+    public UploadArchiveRequest withRequestBody(UploadArchiveRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UploadArchiveRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UploadArchiveRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UploadArchiveRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UploadArchiveRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UploadArchiveRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UploadArchiveRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UploadArchiveRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The &lt;code&gt;AccountId&lt;/code&gt; value is the AWS account ID of the account that owns the vault. You can either specify an AWS account ID or optionally a single '&lt;code&gt;-&lt;/code&gt;' (hyphen), in which case Amazon S3 Glacier uses the AWS account ID associated with the credentials used to sign the request. If you use an account ID, do not include any hyphens ('-') in the ID. 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public UploadArchiveRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    
+    /**
+     * The name of the vault.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultName")
+    public String vaultName;
+    public UploadArchiveRequest withVaultName(String vaultName) {
+        this.vaultName = vaultName;
+        return this;
+    }
+    
+    /**
+     * The optional description of the archive you are uploading.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-archive-description")
+    public String xAmzArchiveDescription;
+    public UploadArchiveRequest withXAmzArchiveDescription(String xAmzArchiveDescription) {
+        this.xAmzArchiveDescription = xAmzArchiveDescription;
+        return this;
+    }
+    
+    /**
+     * The SHA256 tree hash of the data being uploaded.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-sha256-tree-hash")
+    public String xAmzSha256TreeHash;
+    public UploadArchiveRequest withXAmzSha256TreeHash(String xAmzSha256TreeHash) {
+        this.xAmzSha256TreeHash = xAmzSha256TreeHash;
         return this;
     }
     

@@ -32,19 +32,20 @@ public class WhatsApp {
     /**
      * Retrieve a Whatsapp account
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetWAAccountResponse getWAAccount(org.openapis.openapi.models.operations.GetWAAccountRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetWAAccountResponse getWAAccount(org.openapis.openapi.models.operations.GetWAAccountRequest request, org.openapis.openapi.models.operations.GetWAAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWAAccountPathParams.class, baseUrl, "/whatsapp/{external_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWAAccountRequest.class, baseUrl, "/whatsapp/{external_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

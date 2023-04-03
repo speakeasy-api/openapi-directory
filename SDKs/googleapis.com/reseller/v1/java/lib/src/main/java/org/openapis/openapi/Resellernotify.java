@@ -33,10 +33,11 @@ public class Resellernotify {
     /**
      * Returns all the details of the watch corresponding to the reseller.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsResponse resellerResellernotifyGetwatchdetails(org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsResponse resellerResellernotifyGetwatchdetails(org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsRequest request, org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/apps/reseller/v1/resellernotify/getwatchdetails");
         
@@ -44,14 +45,14 @@ public class Resellernotify {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResellerResellernotifyGetwatchdetailsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Resellernotify {
     /**
      * Registers a Reseller for receiving notifications.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResellerResellernotifyRegisterResponse resellerResellernotifyRegister(org.openapis.openapi.models.operations.ResellerResellernotifyRegisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResellerResellernotifyRegisterResponse resellerResellernotifyRegister(org.openapis.openapi.models.operations.ResellerResellernotifyRegisterRequest request, org.openapis.openapi.models.operations.ResellerResellernotifyRegisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/apps/reseller/v1/resellernotify/register");
         
@@ -89,14 +91,14 @@ public class Resellernotify {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResellerResellernotifyRegisterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResellerResellernotifyRegisterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,10 +125,11 @@ public class Resellernotify {
     /**
      * Unregisters a Reseller for receiving notifications.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterResponse resellerResellernotifyUnregister(org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterResponse resellerResellernotifyUnregister(org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterRequest request, org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/apps/reseller/v1/resellernotify/unregister");
         
@@ -134,14 +137,14 @@ public class Resellernotify {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ResellerResellernotifyUnregisterRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

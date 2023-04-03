@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationGetProductsReportRequest {
-    
-    public ImportationGetProductsReportPathParams pathParams;
-    public ImportationGetProductsReportRequest withPathParams(ImportationGetProductsReportPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The execution identifier of you catalog importation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ImportationGetProductsReportRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GetImportationProductsReportRequest request;
-    public ImportationGetProductsReportRequest withRequest(org.openapis.openapi.models.shared.GetImportationProductsReportRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GetImportationProductsReportRequest getImportationProductsReportRequest;
+    public ImportationGetProductsReportRequest withGetImportationProductsReportRequest(org.openapis.openapi.models.shared.GetImportationProductsReportRequest getImportationProductsReportRequest) {
+        this.getImportationProductsReportRequest = getImportationProductsReportRequest;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationGetProductsReportRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

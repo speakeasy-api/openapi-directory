@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetweatherzipcodeQueryParams;
 import org.openapis.openapi.models.operations.GetweatherzipcodeRequest;
 import org.openapis.openapi.models.operations.GetweatherzipcodeResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             GetweatherzipcodeRequest req = new GetweatherzipcodeRequest() {{
-                queryParams = new GetweatherzipcodeQueryParams() {{
-                    license = "corrupti";
-                    zip = "provident";
-                }};
-            }};            
+                license = "corrupti";
+                zip = "provident";
+            }}            
 
             GetweatherzipcodeResponse res = sdk.weatherByZipCode.getweatherzipcode(req);
 

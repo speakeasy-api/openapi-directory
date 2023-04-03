@@ -4,27 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatabaseListDocumentsRequest {
-    
-    public DatabaseListDocumentsPathParams pathParams;
-    public DatabaseListDocumentsRequest withPathParams(DatabaseListDocumentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Collection unique ID. You can create a new collection with validation rules using the Database service [server integration](/docs/server/database#createCollection).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
+    public String collectionId;
+    public DatabaseListDocumentsRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
         return this;
     }
     
-    
-    public DatabaseListDocumentsQueryParams queryParams;
-    public DatabaseListDocumentsRequest withQueryParams(DatabaseListDocumentsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Array of filter strings. Each filter is constructed from a key name, comparison operator (=, !=, &gt;, &lt;, &lt;=, &gt;=) and a value. You can also use a dot (.) separator in attribute names to filter by child document attributes. Examples: 'name=John Doe' or 'category.$id&gt;=5bed2d152c362'.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
+    public String[] filters;
+    public DatabaseListDocumentsRequest withFilters(String[] filters) {
+        this.filters = filters;
         return this;
     }
     
+    /**
+     * Maximum number of documents to return in response.  Use this value to manage pagination. By default will return maximum 25 results. Maximum of 100 results allowed per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public DatabaseListDocumentsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public DatabaseListDocumentsSecurity security;
-    public DatabaseListDocumentsRequest withSecurity(DatabaseListDocumentsSecurity security) {
-        this.security = security;
+    /**
+     * Offset value. The default value is 0. Use this param to manage pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public DatabaseListDocumentsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Order field type casting. Possible values are int, string, date, time or datetime. The database will attempt to cast the order field to the value you pass here. The default value is a string.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderCast")
+    public String orderCast;
+    public DatabaseListDocumentsRequest withOrderCast(String orderCast) {
+        this.orderCast = orderCast;
+        return this;
+    }
+    
+    /**
+     * Document field that results will be sorted by.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderField")
+    public String orderField;
+    public DatabaseListDocumentsRequest withOrderField(String orderField) {
+        this.orderField = orderField;
+        return this;
+    }
+    
+    /**
+     * Order direction. Possible values are DESC for descending order, or ASC for ascending order.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
+    public String orderType;
+    public DatabaseListDocumentsRequest withOrderType(String orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+    
+    /**
+     * Search query. Enter any free text search. The database will try to find a match against all document attributes and children. Max length: 256 chars.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public DatabaseListDocumentsRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

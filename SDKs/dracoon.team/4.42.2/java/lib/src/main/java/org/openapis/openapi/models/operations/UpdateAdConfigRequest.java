@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAdConfigRequest {
-    
-    public UpdateAdConfigPathParams pathParams;
-    public UpdateAdConfigRequest withPathParams(UpdateAdConfigPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateAdConfigHeaders headers;
-    public UpdateAdConfigRequest withHeaders(UpdateAdConfigHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateActiveDirectoryConfigRequest request;
-    public UpdateAdConfigRequest withRequest(org.openapis.openapi.models.shared.UpdateActiveDirectoryConfigRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateActiveDirectoryConfigRequest updateActiveDirectoryConfigRequest;
+    public UpdateAdConfigRequest withUpdateActiveDirectoryConfigRequest(org.openapis.openapi.models.shared.UpdateActiveDirectoryConfigRequest updateActiveDirectoryConfigRequest) {
+        this.updateActiveDirectoryConfigRequest = updateActiveDirectoryConfigRequest;
+        return this;
+    }
+    
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public UpdateAdConfigRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
+        return this;
+    }
+    
+    /**
+     * Active Directory ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ad_id")
+    public Integer adId;
+    public UpdateAdConfigRequest withAdId(Integer adId) {
+        this.adId = adId;
         return this;
     }
     

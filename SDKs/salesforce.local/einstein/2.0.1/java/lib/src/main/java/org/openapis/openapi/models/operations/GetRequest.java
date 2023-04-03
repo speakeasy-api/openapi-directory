@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequest {
-    
-    public GetPathParams pathParams;
-    public GetRequest withPathParams(GetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetSecurity security;
-    public GetRequest withSecurity(GetSecurity security) {
-        this.security = security;
+    /**
+     * Deletion Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

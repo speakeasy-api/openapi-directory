@@ -7,31 +7,89 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddLayerVersionPermissionRequest {
-    
-    public AddLayerVersionPermissionPathParams pathParams;
-    public AddLayerVersionPermissionRequest withPathParams(AddLayerVersionPermissionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AddLayerVersionPermissionQueryParams queryParams;
-    public AddLayerVersionPermissionRequest withQueryParams(AddLayerVersionPermissionQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AddLayerVersionPermissionHeaders headers;
-    public AddLayerVersionPermissionRequest withHeaders(AddLayerVersionPermissionHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name or Amazon Resource Name (ARN) of the layer.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LayerName")
+    public String layerName;
+    public AddLayerVersionPermissionRequest withLayerName(String layerName) {
+        this.layerName = layerName;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AddLayerVersionPermissionRequestBody request;
-    public AddLayerVersionPermissionRequest withRequest(AddLayerVersionPermissionRequestBody request) {
-        this.request = request;
+    public AddLayerVersionPermissionRequestBody requestBody;
+    public AddLayerVersionPermissionRequest withRequestBody(AddLayerVersionPermissionRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Only update the policy if the revision ID matches the ID specified. Use this option to avoid modifying a policy that has changed since you last read it.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RevisionId")
+    public String revisionId;
+    public AddLayerVersionPermissionRequest withRevisionId(String revisionId) {
+        this.revisionId = revisionId;
+        return this;
+    }
+    
+    /**
+     * The version number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=VersionNumber")
+    public Long versionNumber;
+    public AddLayerVersionPermissionRequest withVersionNumber(Long versionNumber) {
+        this.versionNumber = versionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public AddLayerVersionPermissionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public AddLayerVersionPermissionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public AddLayerVersionPermissionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public AddLayerVersionPermissionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public AddLayerVersionPermissionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public AddLayerVersionPermissionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public AddLayerVersionPermissionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

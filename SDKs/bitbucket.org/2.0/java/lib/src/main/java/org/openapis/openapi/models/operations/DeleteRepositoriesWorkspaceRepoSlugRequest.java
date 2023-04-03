@@ -4,27 +4,44 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoriesWorkspaceRepoSlugRequest {
-    
-    public DeleteRepositoriesWorkspaceRepoSlugPathParams pathParams;
-    public DeleteRepositoriesWorkspaceRepoSlugRequest withPathParams(DeleteRepositoriesWorkspaceRepoSlugPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If a repository has been moved to a new location, use this parameter to
+     * show users a friendly message in the Bitbucket UI that the repository
+     * has moved to a new location. However, a GET to this endpoint will still
+     * return a 404.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_to")
+    public String redirectTo;
+    public DeleteRepositoriesWorkspaceRepoSlugRequest withRedirectTo(String redirectTo) {
+        this.redirectTo = redirectTo;
         return this;
     }
     
-    
-    public DeleteRepositoriesWorkspaceRepoSlugQueryParams queryParams;
-    public DeleteRepositoriesWorkspaceRepoSlugRequest withQueryParams(DeleteRepositoriesWorkspaceRepoSlugQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoriesWorkspaceRepoSlugRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
         return this;
     }
     
-    
-    public DeleteRepositoriesWorkspaceRepoSlugSecurity security;
-    public DeleteRepositoriesWorkspaceRepoSlugRequest withSecurity(DeleteRepositoriesWorkspaceRepoSlugSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoriesWorkspaceRepoSlugRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVideoPrivacyUsersAlt1Request {
-    
-    public GetVideoPrivacyUsersAlt1PathParams pathParams;
-    public GetVideoPrivacyUsersAlt1Request withPathParams(GetVideoPrivacyUsersAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public GetVideoPrivacyUsersAlt1Request withChannelId(Double channelId) {
+        this.channelId = channelId;
         return this;
     }
     
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetVideoPrivacyUsersAlt1Request withPage(Double page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetVideoPrivacyUsersAlt1QueryParams queryParams;
-    public GetVideoPrivacyUsersAlt1Request withQueryParams(GetVideoPrivacyUsersAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetVideoPrivacyUsersAlt1Request withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The ID of the video.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=video_id")
+    public Double videoId;
+    public GetVideoPrivacyUsersAlt1Request withVideoId(Double videoId) {
+        this.videoId = videoId;
         return this;
     }
     

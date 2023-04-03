@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCompositionRequest {
-    
-    public DeleteCompositionPathParams pathParams;
-    public DeleteCompositionRequest withPathParams(DeleteCompositionPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteCompositionSecurity security;
-    public DeleteCompositionRequest withSecurity(DeleteCompositionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteCompositionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Composition resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteCompositionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

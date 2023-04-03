@@ -41,7 +41,7 @@ public class Organization {
      */
     public org.openapis.openapi.models.operations.FetchOrganizationResponse fetchOrganization(org.openapis.openapi.models.operations.FetchOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchOrganizationPathParams.class, baseUrl, "/organization/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FetchOrganizationRequest.class, baseUrl, "/organization/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

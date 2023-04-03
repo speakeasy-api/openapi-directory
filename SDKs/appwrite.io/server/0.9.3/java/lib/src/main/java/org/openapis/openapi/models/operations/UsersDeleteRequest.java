@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersDeleteRequest {
-    
-    public UsersDeletePathParams pathParams;
-    public UsersDeleteRequest withPathParams(UsersDeletePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UsersDeleteSecurity security;
-    public UsersDeleteRequest withSecurity(UsersDeleteSecurity security) {
-        this.security = security;
+    /**
+     * User unique ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UsersDeleteRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

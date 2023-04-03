@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelPaymentRequest {
-    
-    public CancelPaymentPathParams pathParams;
-    public CancelPaymentRequest withPathParams(CancelPaymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CancelPaymentSecurity security;
-    public CancelPaymentRequest withSecurity(CancelPaymentSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the payment to cancel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payment_id")
+    public String paymentId;
+    public CancelPaymentRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

@@ -7,17 +7,66 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DetachCustomerManagedPolicyReferenceFromPermissionSetRequest {
-    
-    public DetachCustomerManagedPolicyReferenceFromPermissionSetHeaders headers;
-    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withHeaders(DetachCustomerManagedPolicyReferenceFromPermissionSetHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.DetachCustomerManagedPolicyReferenceFromPermissionSetRequest detachCustomerManagedPolicyReferenceFromPermissionSetRequest;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withDetachCustomerManagedPolicyReferenceFromPermissionSetRequest(org.openapis.openapi.models.shared.DetachCustomerManagedPolicyReferenceFromPermissionSetRequest detachCustomerManagedPolicyReferenceFromPermissionSetRequest) {
+        this.detachCustomerManagedPolicyReferenceFromPermissionSetRequest = detachCustomerManagedPolicyReferenceFromPermissionSetRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DetachCustomerManagedPolicyReferenceFromPermissionSetRequest request;
-    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withRequest(org.openapis.openapi.models.shared.DetachCustomerManagedPolicyReferenceFromPermissionSetRequest request) {
-        this.request = request;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetXAmzTargetEnum xAmzTarget;
+    public DetachCustomerManagedPolicyReferenceFromPermissionSetRequest withXAmzTarget(DetachCustomerManagedPolicyReferenceFromPermissionSetXAmzTargetEnum xAmzTarget) {
+        this.xAmzTarget = xAmzTarget;
         return this;
     }
     

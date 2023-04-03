@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFeedConnectionRequest {
-    
-    public GetFeedConnectionPathParams pathParams;
-    public GetFeedConnectionRequest withPathParams(GetFeedConnectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Xero identifier for Tenant
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
+    public String xeroTenantId;
+    public GetFeedConnectionRequest withXeroTenantId(String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
         return this;
     }
     
-    
-    public GetFeedConnectionHeaders headers;
-    public GetFeedConnectionRequest withHeaders(GetFeedConnectionHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetFeedConnectionSecurity security;
-    public GetFeedConnectionRequest withSecurity(GetFeedConnectionSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier for retrieving single object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetFeedConnectionRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

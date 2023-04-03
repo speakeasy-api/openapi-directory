@@ -34,27 +34,28 @@ public class Groups {
     /**
      * Creates a `Group`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsCreateResponse cloudidentityGroupsCreate(org.openapis.openapi.models.operations.CloudidentityGroupsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsCreateResponse cloudidentityGroupsCreate(org.openapis.openapi.models.operations.CloudidentityGroupsCreateRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/groups");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "groupInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,10 +82,11 @@ public class Groups {
     /**
      * Lists the `Group` resources under a customer or namespace.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsListResponse cloudidentityGroupsList(org.openapis.openapi.models.operations.CloudidentityGroupsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsListResponse cloudidentityGroupsList(org.openapis.openapi.models.operations.CloudidentityGroupsListRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/groups");
         
@@ -92,14 +94,14 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,10 +128,11 @@ public class Groups {
     /**
      * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Group` by its `EntityKey`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsLookupResponse cloudidentityGroupsLookup(org.openapis.openapi.models.operations.CloudidentityGroupsLookupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsLookupResponse cloudidentityGroupsLookup(org.openapis.openapi.models.operations.CloudidentityGroupsLookupRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsLookupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/groups:lookup");
         
@@ -137,14 +140,14 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsLookupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsLookupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Groups {
     /**
      * Check a potential member for membership in a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. A member has membership to a group as long as there is a single viewable transitive membership between the group and the member. The actor must have view permissions to at least one transitive membership between the member and group.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse cloudidentityGroupsMembershipsCheckTransitiveMembership(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipResponse cloudidentityGroupsMembershipsCheckTransitiveMembership(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipPathParams.class, baseUrl, "/v1beta1/{parent}/memberships:checkTransitiveMembership", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipRequest.class, baseUrl, "/v1beta1/{parent}/memberships:checkTransitiveMembership", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCheckTransitiveMembershipRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class Groups {
     /**
      * Creates a `Membership`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateResponse cloudidentityGroupsMembershipsCreate(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateResponse cloudidentityGroupsMembershipsCreate(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateRequest.class, baseUrl, "/v1beta1/{parent}/memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "membershipInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class Groups {
     /**
      * Get a membership graph of just a member or both a member and a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. Given a member, the response will contain all membership paths from the member. Given both a group and a member, the response will contain all membership paths between the group and the member.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphResponse cloudidentityGroupsMembershipsGetMembershipGraph(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphResponse cloudidentityGroupsMembershipsGetMembershipGraph(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphPathParams.class, baseUrl, "/v1beta1/{parent}/memberships:getMembershipGraph", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphRequest.class, baseUrl, "/v1beta1/{parent}/memberships:getMembershipGraph", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsGetMembershipGraphRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class Groups {
     /**
      * Looks up the [resource name](https://cloud.google.com/apis/design/resource_names) of a `Membership` by its `EntityKey`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupResponse cloudidentityGroupsMembershipsLookup(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupResponse cloudidentityGroupsMembershipsLookup(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupPathParams.class, baseUrl, "/v1beta1/{parent}/memberships:lookup", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupRequest.class, baseUrl, "/v1beta1/{parent}/memberships:lookup", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsLookupRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,27 +360,28 @@ public class Groups {
     /**
      * Modifies the `MembershipRole`s of a `Membership`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesResponse cloudidentityGroupsMembershipsModifyMembershipRoles(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesResponse cloudidentityGroupsMembershipsModifyMembershipRoles(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesPathParams.class, baseUrl, "/v1beta1/{name}:modifyMembershipRoles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesRequest.class, baseUrl, "/v1beta1/{name}:modifyMembershipRoles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "modifyMembershipRolesRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsModifyMembershipRolesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,13 +413,13 @@ public class Groups {
      */
     public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsResponse cloudidentityGroupsMembershipsSearchDirectGroups(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsPathParams.class, baseUrl, "/v1beta1/{parent}/memberships:searchDirectGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsRequest.class, baseUrl, "/v1beta1/{parent}/memberships:searchDirectGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchDirectGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -444,25 +452,26 @@ public class Groups {
     /**
      * Search transitive groups of a member. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. A transitive group is any group that has a direct or indirect membership to the member. Actor must have view permissions all transitive groups.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse cloudidentityGroupsMembershipsSearchTransitiveGroups(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsResponse cloudidentityGroupsMembershipsSearchTransitiveGroups(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsPathParams.class, baseUrl, "/v1beta1/{parent}/memberships:searchTransitiveGroups", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest.class, baseUrl, "/v1beta1/{parent}/memberships:searchTransitiveGroups", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -489,25 +498,26 @@ public class Groups {
     /**
      * Search transitive memberships of a group. **Note:** This feature is only available to Google Workspace Enterprise Standard, Enterprise Plus, and Enterprise for Education; and Cloud Identity Premium accounts. A transitive membership is any direct or indirect membership of a group. Actor must have view permissions to all transitive memberships.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse cloudidentityGroupsMembershipsSearchTransitiveMemberships(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsResponse cloudidentityGroupsMembershipsSearchTransitiveMemberships(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsPathParams.class, baseUrl, "/v1beta1/{parent}/memberships:searchTransitiveMemberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsRequest.class, baseUrl, "/v1beta1/{parent}/memberships:searchTransitiveMemberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsMembershipsSearchTransitiveMembershipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -534,10 +544,11 @@ public class Groups {
     /**
      * Searches for `Group` resources matching a specified query.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CloudidentityGroupsSearchResponse cloudidentityGroupsSearch(org.openapis.openapi.models.operations.CloudidentityGroupsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CloudidentityGroupsSearchResponse cloudidentityGroupsSearch(org.openapis.openapi.models.operations.CloudidentityGroupsSearchRequest request, org.openapis.openapi.models.operations.CloudidentityGroupsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1beta1/groups:search");
         
@@ -545,14 +556,14 @@ public class Groups {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.CloudidentityGroupsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

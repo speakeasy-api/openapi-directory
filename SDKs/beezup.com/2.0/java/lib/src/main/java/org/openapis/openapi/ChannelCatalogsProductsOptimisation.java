@@ -41,7 +41,7 @@ public class ChannelCatalogsProductsOptimisation {
      */
     public org.openapis.openapi.models.operations.DisableChannelCatalogProductResponse disableChannelCatalogProduct(org.openapis.openapi.models.operations.DisableChannelCatalogProductRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableChannelCatalogProductPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableChannelCatalogProductRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -85,7 +85,7 @@ public class ChannelCatalogsProductsOptimisation {
      */
     public org.openapis.openapi.models.operations.ReenableChannelCatalogProductResponse reenableChannelCatalogProduct(org.openapis.openapi.models.operations.ReenableChannelCatalogProductRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReenableChannelCatalogProductPathParams.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/reenable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReenableChannelCatalogProductRequest.class, baseUrl, "/v2/user/channelCatalogs/{channelCatalogId}/products/{productId}/reenable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

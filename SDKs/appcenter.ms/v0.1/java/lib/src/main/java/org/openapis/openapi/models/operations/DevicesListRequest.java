@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DevicesListRequest {
-    
-    public DevicesListPathParams pathParams;
-    public DevicesListRequest withPathParams(DevicesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public DevicesListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public DevicesListQueryParams queryParams;
-    public DevicesListRequest withQueryParams(DevicesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the distribution group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DevicesListRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public DevicesListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public DevicesListSecurity security;
-    public DevicesListRequest withSecurity(DevicesListSecurity security) {
-        this.security = security;
+    /**
+     * when provided, gets the provisioning state of the devices owned by users of this distribution group when compared to the provided release.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=release_id")
+    public Double releaseId;
+    public DevicesListRequest withReleaseId(Double releaseId) {
+        this.releaseId = releaseId;
         return this;
     }
     

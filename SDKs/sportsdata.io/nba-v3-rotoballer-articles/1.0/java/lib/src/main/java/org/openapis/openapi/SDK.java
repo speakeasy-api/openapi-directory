@@ -138,7 +138,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RotoballerArticlesResponse rotoballerArticles(org.openapis.openapi.models.operations.RotoballerArticlesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RotoballerArticlesPathParams.class, baseUrl, "/{format}/RotoBallerArticles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RotoballerArticlesRequest.class, baseUrl, "/{format}/RotoBallerArticles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -177,7 +177,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RotoballerArticlesByDateResponse rotoballerArticlesByDate(org.openapis.openapi.models.operations.RotoballerArticlesByDateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RotoballerArticlesByDatePathParams.class, baseUrl, "/{format}/RotoBallerArticlesByDate/{date}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RotoballerArticlesByDateRequest.class, baseUrl, "/{format}/RotoBallerArticlesByDate/{date}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -216,7 +216,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.RotoballerArticlesByPlayerResponse rotoballerArticlesByPlayer(org.openapis.openapi.models.operations.RotoballerArticlesByPlayerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RotoballerArticlesByPlayerPathParams.class, baseUrl, "/{format}/RotoBallerArticlesByPlayerID/{playerid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RotoballerArticlesByPlayerRequest.class, baseUrl, "/{format}/RotoBallerArticlesByPlayerID/{playerid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetCurationTagsByNameRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    public GetGetCurationTagsByNameFormatEnum format;
+    public GetGetCurationTagsByNameRequest withFormat(GetGetCurationTagsByNameFormatEnum format) {
+        this.format = format;
+        return this;
+    }
     
-    public GetGetCurationTagsByNameQueryParams queryParams;
-    public GetGetCurationTagsByNameRequest withQueryParams(GetGetCurationTagsByNameQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tag name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagName")
+    public String tagName;
+    public GetGetCurationTagsByNameRequest withTagName(String tagName) {
+        this.tagName = tagName;
         return this;
     }
     

@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemoveClientIDFromOpenIDConnectProviderRequest {
-    
-    public GETRemoveClientIDFromOpenIDConnectProviderQueryParams queryParams;
-    public GETRemoveClientIDFromOpenIDConnectProviderRequest withQueryParams(GETRemoveClientIDFromOpenIDConnectProviderQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETRemoveClientIDFromOpenIDConnectProviderActionEnum action;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withAction(GETRemoveClientIDFromOpenIDConnectProviderActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The client ID (also known as audience) to remove from the IAM OIDC provider resource. For more information about client IDs, see &lt;a&gt;CreateOpenIDConnectProvider&lt;/a&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientID")
+    public String clientID;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withClientID(String clientID) {
+        this.clientID = clientID;
+        return this;
+    }
     
-    public GETRemoveClientIDFromOpenIDConnectProviderHeaders headers;
-    public GETRemoveClientIDFromOpenIDConnectProviderRequest withHeaders(GETRemoveClientIDFromOpenIDConnectProviderHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the IAM OIDC provider resource to remove the client ID from. You can get a list of OIDC provider ARNs by using the &lt;a&gt;ListOpenIDConnectProviders&lt;/a&gt; operation.&lt;/p&gt; &lt;p&gt;For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;Amazon Web Services General Reference&lt;/i&gt;.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OpenIDConnectProviderArn")
+    public String openIDConnectProviderArn;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETRemoveClientIDFromOpenIDConnectProviderVersionEnum version;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withVersion(GETRemoveClientIDFromOpenIDConnectProviderVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETRemoveClientIDFromOpenIDConnectProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

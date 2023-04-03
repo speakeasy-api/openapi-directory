@@ -42,20 +42,21 @@ public class SigningBasketsServiceSBS {
      * The resource identifications of these transactions are contained in the payload of this access method
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateSigningBasketResponse createSigningBasket(org.openapis.openapi.models.operations.CreateSigningBasketRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateSigningBasketResponse createSigningBasket(org.openapis.openapi.models.operations.CreateSigningBasketRequest request, org.openapis.openapi.models.operations.CreateSigningBasketSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/signing-baskets");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "signingBasket", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -64,7 +65,7 @@ public class SigningBasketsServiceSBS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -199,18 +200,19 @@ public class SigningBasketsServiceSBS {
      * Nevertheless, single transactions might be cancelled on an individual basis on the XS2A interface.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteSigningBasketResponse deleteSigningBasket(org.openapis.openapi.models.operations.DeleteSigningBasketRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteSigningBasketResponse deleteSigningBasket(org.openapis.openapi.models.operations.DeleteSigningBasketRequest request, org.openapis.openapi.models.operations.DeleteSigningBasketSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSigningBasketPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSigningBasketRequest.class, baseUrl, "/v1/signing-baskets/{basketId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -219,7 +221,7 @@ public class SigningBasketsServiceSBS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -339,18 +341,19 @@ public class SigningBasketsServiceSBS {
      * Returns the content of an signing basket object
      * Returns the content of a signing basket object.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSigningBasketResponse getSigningBasket(org.openapis.openapi.models.operations.GetSigningBasketRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSigningBasketResponse getSigningBasket(org.openapis.openapi.models.operations.GetSigningBasketRequest request, org.openapis.openapi.models.operations.GetSigningBasketSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketRequest.class, baseUrl, "/v1/signing-baskets/{basketId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -359,7 +362,7 @@ public class SigningBasketsServiceSBS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -492,18 +495,19 @@ public class SigningBasketsServiceSBS {
      * This function returns an array of hyperlinks to all generated authorisation sub-resources.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse getSigningBasketAuthorisation(org.openapis.openapi.models.operations.GetSigningBasketAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSigningBasketAuthorisationResponse getSigningBasketAuthorisation(org.openapis.openapi.models.operations.GetSigningBasketAuthorisationRequest request, org.openapis.openapi.models.operations.GetSigningBasketAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketAuthorisationPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketAuthorisationRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -512,7 +516,7 @@ public class SigningBasketsServiceSBS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -643,18 +647,19 @@ public class SigningBasketsServiceSBS {
      * This method returns the SCA status of a signing basket's authorisation sub-resource.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse getSigningBasketScaStatus(org.openapis.openapi.models.operations.GetSigningBasketScaStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSigningBasketScaStatusResponse getSigningBasketScaStatus(org.openapis.openapi.models.operations.GetSigningBasketScaStatusRequest request, org.openapis.openapi.models.operations.GetSigningBasketScaStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketScaStatusPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketScaStatusRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -663,7 +668,7 @@ public class SigningBasketsServiceSBS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -794,18 +799,19 @@ public class SigningBasketsServiceSBS {
      * Returns the status of a signing basket object.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSigningBasketStatusResponse getSigningBasketStatus(org.openapis.openapi.models.operations.GetSigningBasketStatusRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSigningBasketStatusResponse getSigningBasketStatus(org.openapis.openapi.models.operations.GetSigningBasketStatusRequest request, org.openapis.openapi.models.operations.GetSigningBasketStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketStatusPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/status", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSigningBasketStatusRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/status", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -814,7 +820,7 @@ public class SigningBasketsServiceSBS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -977,20 +983,21 @@ public class SigningBasketsServiceSBS {
      *   * The signing basket needs to be authorised yet.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse startSigningBasketAuthorisation(org.openapis.openapi.models.operations.StartSigningBasketAuthorisationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StartSigningBasketAuthorisationResponse startSigningBasketAuthorisation(org.openapis.openapi.models.operations.StartSigningBasketAuthorisationRequest request, org.openapis.openapi.models.operations.StartSigningBasketAuthorisationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartSigningBasketAuthorisationPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StartSigningBasketAuthorisationRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -999,7 +1006,7 @@ public class SigningBasketsServiceSBS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1167,20 +1174,21 @@ public class SigningBasketsServiceSBS {
      *     Maybe in a later version the access path will change.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse updateSigningBasketPsuData(org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataResponse updateSigningBasketPsuData(org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataRequest request, org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataPathParams.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSigningBasketPsuDataRequest.class, baseUrl, "/v1/signing-baskets/{basketId}/authorisations/{authorisationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1189,7 +1197,7 @@ public class SigningBasketsServiceSBS {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

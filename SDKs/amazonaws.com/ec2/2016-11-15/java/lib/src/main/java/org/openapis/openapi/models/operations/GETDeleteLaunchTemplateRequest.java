@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteLaunchTemplateRequest {
-    
-    public GETDeleteLaunchTemplateQueryParams queryParams;
-    public GETDeleteLaunchTemplateRequest withQueryParams(GETDeleteLaunchTemplateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDeleteLaunchTemplateActionEnum action;
+    public GETDeleteLaunchTemplateRequest withAction(GETDeleteLaunchTemplateActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETDeleteLaunchTemplateRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETDeleteLaunchTemplateHeaders headers;
-    public GETDeleteLaunchTemplateRequest withHeaders(GETDeleteLaunchTemplateHeaders headers) {
-        this.headers = headers;
+    /**
+     * &lt;p&gt;The ID of the launch template.&lt;/p&gt; &lt;p&gt;You must specify either the &lt;code&gt;LaunchTemplateId&lt;/code&gt; or the &lt;code&gt;LaunchTemplateName&lt;/code&gt;, but not both.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplateId")
+    public String launchTemplateId;
+    public GETDeleteLaunchTemplateRequest withLaunchTemplateId(String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The name of the launch template.&lt;/p&gt; &lt;p&gt;You must specify either the &lt;code&gt;LaunchTemplateName&lt;/code&gt; or the &lt;code&gt;LaunchTemplateId&lt;/code&gt;, but not both.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LaunchTemplateName")
+    public String launchTemplateName;
+    public GETDeleteLaunchTemplateRequest withLaunchTemplateName(String launchTemplateName) {
+        this.launchTemplateName = launchTemplateName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDeleteLaunchTemplateVersionEnum version;
+    public GETDeleteLaunchTemplateRequest withVersion(GETDeleteLaunchTemplateVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDeleteLaunchTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDeleteLaunchTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDeleteLaunchTemplateRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDeleteLaunchTemplateRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDeleteLaunchTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDeleteLaunchTemplateRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDeleteLaunchTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListChecksRequest {
-    
-    public ListChecksQueryParams queryParams;
-    public ListChecksRequest withQueryParams(ListChecksQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Report id checks to be returned
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_id")
+    public String reportId;
+    public ListChecksRequest withReportId(String reportId) {
+        this.reportId = reportId;
         return this;
     }
     
-    
-    public ListChecksSecurity security;
-    public ListChecksRequest withSecurity(ListChecksSecurity security) {
-        this.security = security;
+    /**
+     * Start key value for the pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_key")
+    public String startKey;
+    public ListChecksRequest withStartKey(String startKey) {
+        this.startKey = startKey;
         return this;
     }
     

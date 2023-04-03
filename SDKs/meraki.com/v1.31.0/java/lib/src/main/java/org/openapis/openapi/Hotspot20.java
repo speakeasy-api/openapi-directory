@@ -40,7 +40,7 @@ public class Hotspot20 {
      */
     public org.openapis.openapi.models.operations.GetNetworkWirelessSsidHotspot20Response getNetworkWirelessSsidHotspot20(org.openapis.openapi.models.operations.GetNetworkWirelessSsidHotspot20Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidHotspot20PathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkWirelessSsidHotspot20Request.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,12 +80,12 @@ public class Hotspot20 {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidHotspot20Response updateNetworkWirelessSsidHotspot20(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidHotspot20Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidHotspot20PathParams.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkWirelessSsidHotspot20Request.class, baseUrl, "/networks/{networkId}/wireless/ssids/{number}/hotspot20", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

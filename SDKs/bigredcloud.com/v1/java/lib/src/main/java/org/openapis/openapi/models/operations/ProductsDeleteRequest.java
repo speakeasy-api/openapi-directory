@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductsDeleteRequest {
-    
-    public ProductsDeletePathParams pathParams;
-    public ProductsDeleteRequest withPathParams(ProductsDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Product to remove.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public ProductsDeleteRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
-    
-    public ProductsDeleteQueryParams queryParams;
-    public ProductsDeleteRequest withQueryParams(ProductsDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Timestamp of Product to remove. Should be encoded in Base64.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public ProductsDeleteRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
         return this;
     }
     

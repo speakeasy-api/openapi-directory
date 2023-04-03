@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePermissionGroupRequest {
-    
-    public DeletePermissionGroupPathParams pathParams;
-    public DeletePermissionGroupRequest withPathParams(DeletePermissionGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The identifier of the Permission Group.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionGroupId")
+    public Long permissionGroupId;
+    public DeletePermissionGroupRequest withPermissionGroupId(Long permissionGroupId) {
+        this.permissionGroupId = permissionGroupId;
         return this;
     }
     

@@ -34,25 +34,26 @@ public class RegionNotificationEndpoints {
     /**
      * Deletes the specified NotificationEndpoint in the given region
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteResponse computeRegionNotificationEndpointsDelete(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteResponse computeRegionNotificationEndpointsDelete(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteRequest request, org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeletePathParams.class, baseUrl, "/projects/{project}/regions/{region}/notificationEndpoints/{notificationEndpoint}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteRequest.class, baseUrl, "/projects/{project}/regions/{region}/notificationEndpoints/{notificationEndpoint}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,25 +80,26 @@ public class RegionNotificationEndpoints {
     /**
      * Returns the specified NotificationEndpoint resource in the given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetResponse computeRegionNotificationEndpointsGet(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetResponse computeRegionNotificationEndpointsGet(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetRequest request, org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetPathParams.class, baseUrl, "/projects/{project}/regions/{region}/notificationEndpoints/{notificationEndpoint}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetRequest.class, baseUrl, "/projects/{project}/regions/{region}/notificationEndpoints/{notificationEndpoint}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,27 +126,28 @@ public class RegionNotificationEndpoints {
     /**
      * Create a NotificationEndpoint in the specified project in the given region using the parameters that are included in the request.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertResponse computeRegionNotificationEndpointsInsert(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertResponse computeRegionNotificationEndpointsInsert(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertRequest request, org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertPathParams.class, baseUrl, "/projects/{project}/regions/{region}/notificationEndpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertRequest.class, baseUrl, "/projects/{project}/regions/{region}/notificationEndpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "notificationEndpoint", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class RegionNotificationEndpoints {
     /**
      * Lists the NotificationEndpoints for a project in the given region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListResponse computeRegionNotificationEndpointsList(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListResponse computeRegionNotificationEndpointsList(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListRequest request, org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListPathParams.class, baseUrl, "/projects/{project}/regions/{region}/notificationEndpoints", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListRequest.class, baseUrl, "/projects/{project}/regions/{region}/notificationEndpoints", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeRegionNotificationEndpointsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

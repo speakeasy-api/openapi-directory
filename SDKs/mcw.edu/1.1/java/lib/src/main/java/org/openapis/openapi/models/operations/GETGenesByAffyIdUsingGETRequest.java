@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenesByAffyIdUsingGETRequest {
+    /**
+     * Affymetrix ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=affyId")
+    public String affyId;
+    public GETGenesByAffyIdUsingGETRequest withAffyId(String affyId) {
+        this.affyId = affyId;
+        return this;
+    }
     
-    public GETGenesByAffyIdUsingGETPathParams pathParams;
-    public GETGenesByAffyIdUsingGETRequest withPathParams(GETGenesByAffyIdUsingGETPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A list of RGD species type keys can be found in the lookup service
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=speciesTypeKey")
+    public Integer speciesTypeKey;
+    public GETGenesByAffyIdUsingGETRequest withSpeciesTypeKey(Integer speciesTypeKey) {
+        this.speciesTypeKey = speciesTypeKey;
         return this;
     }
     

@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePresenceStatusRequest {
-    
-    public UpdatePresenceStatusPathParams pathParams;
-    public UpdatePresenceStatusRequest withPathParams(UpdatePresenceStatusPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdatePresenceStatusApplicationJSON requestBody;
+    public UpdatePresenceStatusRequest withRequestBody(UpdatePresenceStatusApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdatePresenceStatusApplicationJSON request;
-    public UpdatePresenceStatusRequest withRequest(UpdatePresenceStatusApplicationJSON request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UpdatePresenceStatusRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

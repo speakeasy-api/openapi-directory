@@ -4,13 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsRemoveSelectedRepoFromOrgVariableRequest {
+    /**
+     * The name of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public ActionsRemoveSelectedRepoFromOrgVariableRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public ActionsRemoveSelectedRepoFromOrgVariablePathParams pathParams;
-    public ActionsRemoveSelectedRepoFromOrgVariableRequest withPathParams(ActionsRemoveSelectedRepoFromOrgVariablePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsRemoveSelectedRepoFromOrgVariableRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public ActionsRemoveSelectedRepoFromOrgVariableRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
         return this;
     }
     

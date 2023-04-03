@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveACardDisputeRequest {
-    
-    public RetrieveACardDisputePathParams pathParams;
-    public RetrieveACardDisputeRequest withPathParams(RetrieveACardDisputePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_dispute_id")
+    public String cardDisputeId;
+    public RetrieveACardDisputeRequest withCardDisputeId(String cardDisputeId) {
+        this.cardDisputeId = cardDisputeId;
         return this;
     }
     

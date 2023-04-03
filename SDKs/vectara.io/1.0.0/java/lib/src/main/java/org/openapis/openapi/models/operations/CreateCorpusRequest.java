@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCorpusRequest {
-    
-    public CreateCorpusHeaders headers;
-    public CreateCorpusRequest withHeaders(CreateCorpusHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AdminCreateCorpusRequest adminCreateCorpusRequest;
+    public CreateCorpusRequest withAdminCreateCorpusRequest(org.openapis.openapi.models.shared.AdminCreateCorpusRequest adminCreateCorpusRequest) {
+        this.adminCreateCorpusRequest = adminCreateCorpusRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AdminCreateCorpusRequest request;
-    public CreateCorpusRequest withRequest(org.openapis.openapi.models.shared.AdminCreateCorpusRequest request) {
-        this.request = request;
+    /**
+     * The Customer ID to use for the request.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=customer-id")
+    public Long customerId;
+    public CreateCorpusRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

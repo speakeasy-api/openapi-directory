@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TripsTripDetailsRequest {
-    
-    public TripsTripDetailsQueryParams queryParams;
-    public TripsTripDetailsRequest withQueryParams(TripsTripDetailsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackToken")
+    public String trackToken;
+    public TripsTripDetailsRequest withTrackToken(String trackToken) {
+        this.trackToken = trackToken;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitignoreGetTemplateRequest {
-    
-    public GitignoreGetTemplatePathParams pathParams;
-    public GitignoreGetTemplateRequest withPathParams(GitignoreGetTemplatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public GitignoreGetTemplateRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

@@ -42,12 +42,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.ChangePasswordResponse changePassword(org.openapis.openapi.models.operations.ChangePasswordRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangePasswordPathParams.class, baseUrl, "/users/{userId}/password", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ChangePasswordRequest.class, baseUrl, "/users/{userId}/password", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         
@@ -117,7 +117,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetById6Response getById6(org.openapis.openapi.models.operations.GetById6Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById6PathParams.class, baseUrl, "/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetById6Request.class, baseUrl, "/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -157,7 +157,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetCustomField1Response getCustomField1(org.openapis.openapi.models.operations.GetCustomField1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomField1PathParams.class, baseUrl, "/users/{userId}/customFields/{customFieldKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomField1Request.class, baseUrl, "/users/{userId}/customFields/{customFieldKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -197,7 +197,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetCustomFields4Response getCustomFields4(org.openapis.openapi.models.operations.GetCustomFields4Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields4PathParams.class, baseUrl, "/users/{userId}/customFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCustomFields4Request.class, baseUrl, "/users/{userId}/customFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -315,12 +315,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UpdateCustomField1Response updateCustomField1(org.openapis.openapi.models.operations.UpdateCustomField1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomField1PathParams.class, baseUrl, "/users/{userId}/customFields/{customFieldKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomField1Request.class, baseUrl, "/users/{userId}/customFields/{customFieldKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "customFieldDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -360,12 +360,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.UpdateCustomFields2Response updateCustomFields2(org.openapis.openapi.models.operations.UpdateCustomFields2Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomFields2PathParams.class, baseUrl, "/users/{userId}/customFields", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCustomFields2Request.class, baseUrl, "/users/{userId}/customFields", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -405,12 +405,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.Update3Response update3(org.openapis.openapi.models.operations.Update3Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Update3PathParams.class, baseUrl, "/users/{userId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.Update3Request.class, baseUrl, "/users/{userId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "userDTO", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

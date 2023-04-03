@@ -31,10 +31,11 @@ public class Create {
      * Create a point-to-multipoint heatmap
      * An area coverage assumes the same receiver height at all locations out to fixed radius (maximum 300km). Due to it's exhaustive processing it is the slowest of all the API calls. Speed can be improved significantly by adjusting the resolution 'res' parameter. A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AreaResponse area(org.openapis.openapi.models.operations.AreaRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AreaResponse area(org.openapis.openapi.models.operations.AreaRequestBody request, org.openapis.openapi.models.operations.AreaSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/area");
         
@@ -48,7 +49,7 @@ public class Create {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,10 +71,11 @@ public class Create {
      * Point-to-point path profile analysis (Tx to Rx)
      * A path profile is a single link from A to B. It is much faster than an area calculation and can be used out to 300km. A basic request needs transmitter, receiver, antenna and output objects defined as a minimum. Model and environment options will enhance accuracy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PathResponse path(org.openapis.openapi.models.operations.PathRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PathResponse path(org.openapis.openapi.models.operations.PathRequestBody request, org.openapis.openapi.models.operations.PathSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/path");
         
@@ -87,7 +89,7 @@ public class Create {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -109,10 +111,11 @@ public class Create {
      * Point-to-multipoint path profile analysis (Many Tx, one Rx)
      * The points function tests many transmitters and one receiver and is designed for route analysis. A minimal request needs a transmitters array of (latitude,longitude,altitude) locations, antenna, receiver and output objects defined as a minimum. Model and environment options will enhance accuracy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PointsResponse points(org.openapis.openapi.models.operations.PointsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PointsResponse points(org.openapis.openapi.models.operations.PointsRequestBody request, org.openapis.openapi.models.operations.PointsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/points");
         
@@ -126,7 +129,7 @@ public class Create {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

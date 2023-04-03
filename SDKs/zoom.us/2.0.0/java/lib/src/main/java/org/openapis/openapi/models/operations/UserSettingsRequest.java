@@ -4,27 +4,53 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserSettingsRequest {
-    
-    public UserSettingsPathParams pathParams;
-    public UserSettingsRequest withPathParams(UserSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Provide the name of the field by which you would like to filter the response. For example, if you provide "host_video" as the value of this field, you will get a response similar to the following:&lt;br&gt;
+     * {
+     *     "schedule_meeting": {
+     *         "host_video": false
+     *     }
+     * }
+     * &lt;br&gt;You can provide multiple values by separating them with commas(example: "host_video,participant_video\u201d).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=custom_query_fields")
+    public String customQueryFields;
+    public UserSettingsRequest withCustomQueryFields(String customQueryFields) {
+        this.customQueryFields = customQueryFields;
         return this;
     }
     
-    
-    public UserSettingsQueryParams queryParams;
-    public UserSettingsRequest withQueryParams(UserSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * `0` - Facebook.&lt;br&gt;`1` - Google.&lt;br&gt;`99` - API.&lt;br&gt;`100` - Zoom.&lt;br&gt;`101` - SSO.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login_type")
+    public UserSettingsLoginTypeEnum loginType;
+    public UserSettingsRequest withLoginType(UserSettingsLoginTypeEnum loginType) {
+        this.loginType = loginType;
         return this;
     }
     
+    /**
+     * `meeting_authentication`: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the user's account.&lt;br&gt;`recording_authentication`: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the user's account.&lt;br&gt;
+     * `meeting_security`: Use this query parameter to view meeting security settings applied on the user's account.&lt;br&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=option")
+    public UserSettingsOptionEnum option;
+    public UserSettingsRequest withOption(UserSettingsOptionEnum option) {
+        this.option = option;
+        return this;
+    }
     
-    public UserSettingsSecurity security;
-    public UserSettingsRequest withSecurity(UserSettingsSecurity security) {
-        this.security = security;
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserSettingsRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

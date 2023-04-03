@@ -36,7 +36,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETEnsemblGeneMappingUsingGETResponse getEnsemblGeneMappingUsingGET(org.openapis.openapi.models.operations.GETEnsemblGeneMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETEnsemblGeneMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/EnsemblGene/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETEnsemblGeneMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/EnsemblGene/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -73,7 +73,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEnsemblGeneMappingUsingPOSTResponse getEnsemblGeneMappingUsingPOST(org.openapis.openapi.models.operations.GetEnsemblGeneMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEnsemblGeneMappingUsingPOSTResponse getEnsemblGeneMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/EnsemblGene");
         
@@ -116,7 +116,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETEnsemblProteinMappingUsingGETResponse getEnsemblProteinMappingUsingGET(org.openapis.openapi.models.operations.GETEnsemblProteinMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETEnsemblProteinMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/EnsemblProtein/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETEnsemblProteinMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/EnsemblProtein/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -153,7 +153,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEnsemblProteinMappingUsingPOSTResponse getEnsemblProteinMappingUsingPOST(org.openapis.openapi.models.operations.GetEnsemblProteinMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEnsemblProteinMappingUsingPOSTResponse getEnsemblProteinMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/EnsemblProtein");
         
@@ -196,7 +196,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETEnsemblTranscriptMappingUsingGETResponse getEnsemblTranscriptMappingUsingGET(org.openapis.openapi.models.operations.GETEnsemblTranscriptMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETEnsemblTranscriptMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/EnsemblTranscript/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETEnsemblTranscriptMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/EnsemblTranscript/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -233,7 +233,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEnsemblTranscriptMappingUsingPOSTResponse getEnsemblTranscriptMappingUsingPOST(org.openapis.openapi.models.operations.GetEnsemblTranscriptMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEnsemblTranscriptMappingUsingPOSTResponse getEnsemblTranscriptMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/EnsemblTranscript");
         
@@ -276,7 +276,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETGTEXMappingUsingGETResponse getGTEXMappingUsingGET(org.openapis.openapi.models.operations.GETGTEXMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGTEXMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/GTEx/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGTEXMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/GTEx/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -313,7 +313,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetGTEXMappingUsingPOSTResponse getGTEXMappingUsingPOST(org.openapis.openapi.models.operations.GetGTEXMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetGTEXMappingUsingPOSTResponse getGTEXMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/GTEx");
         
@@ -356,7 +356,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETGenBankNucleotideMappingUsingGETResponse getGenBankNucleotideMappingUsingGET(org.openapis.openapi.models.operations.GETGenBankNucleotideMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenBankNucleotideMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/GenBankNucleotide/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenBankNucleotideMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/GenBankNucleotide/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -393,7 +393,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetGenBankNucleotideMappingUsingPOSTResponse getGenBankNucleotideMappingUsingPOST(org.openapis.openapi.models.operations.GetGenBankNucleotideMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetGenBankNucleotideMappingUsingPOSTResponse getGenBankNucleotideMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/GenBankNucleotide");
         
@@ -436,7 +436,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETGenBankProteinMappingUsingGETResponse getGenBankProteinMappingUsingGET(org.openapis.openapi.models.operations.GETGenBankProteinMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenBankProteinMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/GenBankProtein/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETGenBankProteinMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/GenBankProtein/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -473,7 +473,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetGenBankProteinMappingUsingPOSTResponse getGenBankProteinMappingUsingPOST(org.openapis.openapi.models.operations.GetGenBankProteinMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetGenBankProteinMappingUsingPOSTResponse getGenBankProteinMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/GenBankProtein");
         
@@ -554,7 +554,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETHGNCMappingUsingGETResponse getHGNCMappingUsingGET(org.openapis.openapi.models.operations.GETHGNCMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETHGNCMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/HGNC/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETHGNCMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/HGNC/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -591,7 +591,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHGNCMappingUsingPOSTResponse getHGNCMappingUsingPOST(org.openapis.openapi.models.operations.GetHGNCMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHGNCMappingUsingPOSTResponse getHGNCMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/HGNC");
         
@@ -634,7 +634,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETMGIMappingUsingGETResponse getMGIMappingUsingGET(org.openapis.openapi.models.operations.GETMGIMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMGIMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/MGI/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMGIMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/MGI/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -671,7 +671,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetMGIMappingUsingPOSTResponse getMGIMappingUsingPOST(org.openapis.openapi.models.operations.GetMGIMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetMGIMappingUsingPOSTResponse getMGIMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/MGI");
         
@@ -714,7 +714,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETMapsUsingGETResponse getMapsUsingGET(org.openapis.openapi.models.operations.GETMapsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMapsUsingGETPathParams.class, baseUrl, "/lookup/maps/{speciesTypeKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMapsUsingGETRequest.class, baseUrl, "/lookup/maps/{speciesTypeKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -753,7 +753,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETMapsUsingGET1Response getMapsUsingGET1(org.openapis.openapi.models.operations.GETMapsUsingGET1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMapsUsingGET1PathParams.class, baseUrl, "/lookup/standardUnit/{accId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETMapsUsingGET1Request.class, baseUrl, "/lookup/standardUnit/{accId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -792,7 +792,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETNCBIGeneMappingUsingGETResponse getNCBIGeneMappingUsingGET(org.openapis.openapi.models.operations.GETNCBIGeneMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETNCBIGeneMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/NCBIGene/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETNCBIGeneMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/NCBIGene/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -829,7 +829,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNCBIGeneMappingUsingPOSTResponse getNCBIGeneMappingUsingPOST(org.openapis.openapi.models.operations.GetNCBIGeneMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNCBIGeneMappingUsingPOSTResponse getNCBIGeneMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/NCBIGene");
         
@@ -910,7 +910,7 @@ public class Lookup {
      */
     public org.openapis.openapi.models.operations.GETUniProtMappingUsingGETResponse getUniProtMappingUsingGET(org.openapis.openapi.models.operations.GETUniProtMappingUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETUniProtMappingUsingGETPathParams.class, baseUrl, "/lookup/id/map/UniProt/{rgdId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETUniProtMappingUsingGETRequest.class, baseUrl, "/lookup/id/map/UniProt/{rgdId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -947,7 +947,7 @@ public class Lookup {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUniProtMappingUsingPOSTResponse getUniProtMappingUsingPOST(org.openapis.openapi.models.operations.GetUniProtMappingUsingPOSTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUniProtMappingUsingPOSTResponse getUniProtMappingUsingPOST(org.openapis.openapi.models.shared.RGDIDListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/lookup/id/map/UniProt");
         

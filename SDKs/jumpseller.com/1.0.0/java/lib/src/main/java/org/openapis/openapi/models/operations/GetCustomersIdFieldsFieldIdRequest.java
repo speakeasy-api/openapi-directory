@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomersIdFieldsFieldIdRequest {
-    
-    public GetCustomersIdFieldsFieldIdPathParams pathParams;
-    public GetCustomersIdFieldsFieldIdRequest withPathParams(GetCustomersIdFieldsFieldIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetCustomersIdFieldsFieldIdRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the Customer Additional Field
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field_id")
+    public Integer fieldId;
+    public GetCustomersIdFieldsFieldIdRequest withFieldId(Integer fieldId) {
+        this.fieldId = fieldId;
+        return this;
+    }
     
-    public GetCustomersIdFieldsFieldIdQueryParams queryParams;
-    public GetCustomersIdFieldsFieldIdRequest withQueryParams(GetCustomersIdFieldsFieldIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Id of the Customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetCustomersIdFieldsFieldIdRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetCustomersIdFieldsFieldIdRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

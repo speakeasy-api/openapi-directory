@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppApiTokensNewRequest {
-    
-    public AppApiTokensNewPathParams pathParams;
-    public AppApiTokensNewRequest withPathParams(AppApiTokensNewPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Description of the token
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public AppApiTokensNewRequestBody request;
-    public AppApiTokensNewRequest withRequest(AppApiTokensNewRequestBody request) {
-        this.request = request;
+    public AppApiTokensNewRequestBody requestBody;
+    public AppApiTokensNewRequest withRequestBody(AppApiTokensNewRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppApiTokensNewRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppApiTokensNewSecurity security;
-    public AppApiTokensNewRequest withSecurity(AppApiTokensNewSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppApiTokensNewRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

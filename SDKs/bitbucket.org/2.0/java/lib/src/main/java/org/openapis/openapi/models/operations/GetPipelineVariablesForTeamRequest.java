@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPipelineVariablesForTeamRequest {
-    
-    public GetPipelineVariablesForTeamPathParams pathParams;
-    public GetPipelineVariablesForTeamRequest withPathParams(GetPipelineVariablesForTeamPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public GetPipelineVariablesForTeamRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

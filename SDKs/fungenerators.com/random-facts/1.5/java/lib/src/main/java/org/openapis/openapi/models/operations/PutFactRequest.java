@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutFactRequest {
-    
-    public PutFactQueryParams queryParams;
-    public PutFactRequest withQueryParams(PutFactQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Category of the fact
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public String category;
+    public PutFactRequest withCategory(String category) {
+        this.category = category;
         return this;
     }
     
+    /**
+     * Fact Text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fact")
+    public String fact;
+    public PutFactRequest withFact(String fact) {
+        this.fact = fact;
+        return this;
+    }
     
-    public PutFactSecurity security;
-    public PutFactRequest withSecurity(PutFactSecurity security) {
-        this.security = security;
+    /**
+     * Sub Category of the fact
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subcategory")
+    public String subcategory;
+    public PutFactRequest withSubcategory(String subcategory) {
+        this.subcategory = subcategory;
+        return this;
+    }
+    
+    /**
+     * Tags
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
+    public String tags;
+    public PutFactRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

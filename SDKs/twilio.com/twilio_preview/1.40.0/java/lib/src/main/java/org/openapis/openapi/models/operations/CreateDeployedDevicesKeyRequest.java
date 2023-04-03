@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDeployedDevicesKeyRequest {
-    
-    public CreateDeployedDevicesKeyPathParams pathParams;
-    public CreateDeployedDevicesKeyRequest withPathParams(CreateDeployedDevicesKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FleetSid")
+    public String fleetSid;
+    public CreateDeployedDevicesKeyRequest withFleetSid(String fleetSid) {
+        this.fleetSid = fleetSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateDeployedDevicesKeyCreateDeployedDevicesKeyRequest request;
-    public CreateDeployedDevicesKeyRequest withRequest(CreateDeployedDevicesKeyCreateDeployedDevicesKeyRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateDeployedDevicesKeySecurity security;
-    public CreateDeployedDevicesKeyRequest withSecurity(CreateDeployedDevicesKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateDeployedDevicesKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateDeployedDevicesKeyCreateDeployedDevicesKeyRequest requestBody;
+    public CreateDeployedDevicesKeyRequest withRequestBody(CreateDeployedDevicesKeyCreateDeployedDevicesKeyRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

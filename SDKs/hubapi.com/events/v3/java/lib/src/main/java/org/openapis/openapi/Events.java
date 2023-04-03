@@ -33,10 +33,11 @@ public class Events {
     /**
      * Returns a collection of events matching a query.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEventsV3EventsGetPageResponse getEventsV3EventsGetPage(org.openapis.openapi.models.operations.GetEventsV3EventsGetPageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEventsV3EventsGetPageResponse getEventsV3EventsGetPage(org.openapis.openapi.models.operations.GetEventsV3EventsGetPageRequest request, org.openapis.openapi.models.operations.GetEventsV3EventsGetPageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/events/v3/events");
         
@@ -44,14 +45,14 @@ public class Events {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEventsV3EventsGetPageQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetEventsV3EventsGetPageRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

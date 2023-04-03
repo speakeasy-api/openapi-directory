@@ -4,13 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleGetAddonsRequest {
+    /**
+     * Comma separated gymIds deafult "-1" for all gyms
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gymIds")
+    public String gymIds;
+    public ArticleGetAddonsRequest withGymIds(String gymIds) {
+        this.gymIds = gymIds;
+        return this;
+    }
     
-    public ArticleGetAddonsQueryParams queryParams;
-    public ArticleGetAddonsRequest withQueryParams(ArticleGetAddonsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ArticleGetAddonsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public ArticleGetAddonsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Search text - will be search by the name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchText")
+    public String searchText;
+    public ArticleGetAddonsRequest withSearchText(String searchText) {
+        this.searchText = searchText;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ArticleGetAddonsRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

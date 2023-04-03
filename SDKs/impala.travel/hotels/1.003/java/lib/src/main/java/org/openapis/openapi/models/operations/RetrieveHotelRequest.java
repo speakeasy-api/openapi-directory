@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveHotelRequest {
-    
-    public RetrieveHotelPathParams pathParams;
-    public RetrieveHotelRequest withPathParams(RetrieveHotelPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The departure day of the desired stay range in ISO 8601 format (`YYYY-MM-DD`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
+    public String end;
+    public RetrieveHotelRequest withEnd(String end) {
+        this.end = end;
         return this;
     }
     
+    /**
+     * The unique identifier of this hotel on the Impala platform.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hotelId")
+    public String hotelId;
+    public RetrieveHotelRequest withHotelId(String hotelId) {
+        this.hotelId = hotelId;
+        return this;
+    }
     
-    public RetrieveHotelQueryParams queryParams;
-    public RetrieveHotelRequest withQueryParams(RetrieveHotelQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The arrival day of the desired stay range in ISO 8601 format (`YYYY-MM-DD`).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
+    public String start;
+    public RetrieveHotelRequest withStart(String start) {
+        this.start = start;
         return this;
     }
     

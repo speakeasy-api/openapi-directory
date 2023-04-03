@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetargetingPostJsonRequest {
-    
-    public RetargetingPostJsonPathParams pathParams;
-    public RetargetingPostJsonRequest withPathParams(RetargetingPostJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The body of the retargeting script
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript request;
-    public RetargetingPostJsonRequest withRequest(org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript;
+    public RetargetingPostJsonRequest withApiCoreDtoRetargetingRetargetingScript(org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript) {
+        this.apiCoreDtoRetargetingRetargetingScript = apiCoreDtoRetargetingRetargetingScript;
+        return this;
+    }
+    
+    /**
+     * The id of the retargeting script
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public RetargetingPostJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

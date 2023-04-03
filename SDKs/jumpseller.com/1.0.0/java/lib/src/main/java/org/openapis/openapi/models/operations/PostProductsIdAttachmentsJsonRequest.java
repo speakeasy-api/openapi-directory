@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsIdAttachmentsJsonRequest {
-    
-    public PostProductsIdAttachmentsJsonPathParams pathParams;
-    public PostProductsIdAttachmentsJsonRequest withPathParams(PostProductsIdAttachmentsJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostProductsIdAttachmentsJsonQueryParams queryParams;
-    public PostProductsIdAttachmentsJsonRequest withQueryParams(PostProductsIdAttachmentsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Product Attachment parameters.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AttachmentEdit request;
-    public PostProductsIdAttachmentsJsonRequest withRequest(org.openapis.openapi.models.shared.AttachmentEdit request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AttachmentEdit attachmentEdit;
+    public PostProductsIdAttachmentsJsonRequest withAttachmentEdit(org.openapis.openapi.models.shared.AttachmentEdit attachmentEdit) {
+        this.attachmentEdit = attachmentEdit;
+        return this;
+    }
+    
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public PostProductsIdAttachmentsJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+        return this;
+    }
+    
+    /**
+     * Id of the Product
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public PostProductsIdAttachmentsJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public PostProductsIdAttachmentsJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

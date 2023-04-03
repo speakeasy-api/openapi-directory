@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassifyImageUrlWithNoStoreRawRequest {
-    
-    public ClassifyImageUrlWithNoStoreRawPathParams pathParams;
-    public ClassifyImageUrlWithNoStoreRawRequest withPathParams(ClassifyImageUrlWithNoStoreRawPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public ClassifyImageUrlWithNoStoreRawQueryParams queryParams;
-    public ClassifyImageUrlWithNoStoreRawRequest withQueryParams(ClassifyImageUrlWithNoStoreRawQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated.
      */
     @SpeakeasyMetadata("request:mediaType=text/xml")
-    public byte[] request;
-    public ClassifyImageUrlWithNoStoreRawRequest withRequest(byte[] request) {
-        this.request = request;
+    public byte[] requestBody;
+    public ClassifyImageUrlWithNoStoreRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public ClassifyImageUrlWithNoStoreRawRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public ClassifyImageUrlWithNoStoreRawRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Specifies the name of the model to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=publishedName")
+    public String publishedName;
+    public ClassifyImageUrlWithNoStoreRawRequest withPublishedName(String publishedName) {
+        this.publishedName = publishedName;
         return this;
     }
     

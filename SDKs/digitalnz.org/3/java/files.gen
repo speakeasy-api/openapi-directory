@@ -30,7 +30,6 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatAndCategoryEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatAndHasLargeThumbnailUrlEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatAndHasLatLngEnum.java
@@ -38,19 +37,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatAndUsag
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatDirectionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatFacetsEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatSortEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormat200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsFormatResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdFormatPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdFormatQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdFormatHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdFormatResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdMoreLikeThisFormatPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdMoreLikeThisFormatQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdMoreLikeThisFormatHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdMoreLikeThisFormatRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdMoreLikeThisFormat200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordsRecordIdMoreLikeThisFormatResponse.java
@@ -60,6 +51,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RecordLocations.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecordUsageEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Record.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormatEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

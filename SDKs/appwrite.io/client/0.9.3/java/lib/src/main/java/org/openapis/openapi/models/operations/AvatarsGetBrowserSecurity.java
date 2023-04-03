@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetBrowserSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeJwt jwt;
-    public AvatarsGetBrowserSecurity withJwt(org.openapis.openapi.models.shared.SchemeJwt jwt) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-JWT")
+    public String jwt;
+    public AvatarsGetBrowserSecurity withJwt(String jwt) {
         this.jwt = jwt;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeProject project;
-    public AvatarsGetBrowserSecurity withProject(org.openapis.openapi.models.shared.SchemeProject project) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Appwrite-Project")
+    public String project;
+    public AvatarsGetBrowserSecurity withProject(String project) {
         this.project = project;
         return this;
     }

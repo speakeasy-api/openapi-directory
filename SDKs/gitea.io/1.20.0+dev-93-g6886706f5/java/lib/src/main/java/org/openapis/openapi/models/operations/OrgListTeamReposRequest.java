@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgListTeamReposRequest {
-    
-    public OrgListTeamReposPathParams pathParams;
-    public OrgListTeamReposRequest withPathParams(OrgListTeamReposPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of the team
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public OrgListTeamReposRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     
+    /**
+     * page size of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public OrgListTeamReposRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public OrgListTeamReposQueryParams queryParams;
-    public OrgListTeamReposRequest withQueryParams(OrgListTeamReposQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * page number of results to return (1-based)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public OrgListTeamReposRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     

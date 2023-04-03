@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostIndividualsPartyIdElectronicAddressesRequest {
-    
-    public PostIndividualsPartyIdElectronicAddressesPathParams pathParams;
-    public PostIndividualsPartyIdElectronicAddressesRequest withPathParams(PostIndividualsPartyIdElectronicAddressesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PostIndividualsPartyIdElectronicAddressesHeaders headers;
-    public PostIndividualsPartyIdElectronicAddressesRequest withHeaders(PostIndividualsPartyIdElectronicAddressesHeaders headers) {
-        this.headers = headers;
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PostIndividualsPartyIdElectronicAddressesRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
@@ -25,9 +21,19 @@ public class PostIndividualsPartyIdElectronicAddressesRequest {
      * Electronic Address resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ElectronicAddressInput request;
-    public PostIndividualsPartyIdElectronicAddressesRequest withRequest(org.openapis.openapi.models.shared.ElectronicAddressInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput;
+    public PostIndividualsPartyIdElectronicAddressesRequest withElectronicAddressInput(org.openapis.openapi.models.shared.ElectronicAddressInput electronicAddressInput) {
+        this.electronicAddressInput = electronicAddressInput;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PostIndividualsPartyIdElectronicAddressesRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

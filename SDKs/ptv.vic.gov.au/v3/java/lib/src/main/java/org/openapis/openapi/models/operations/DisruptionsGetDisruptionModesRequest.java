@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisruptionsGetDisruptionModesRequest {
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public DisruptionsGetDisruptionModesRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public DisruptionsGetDisruptionModesQueryParams queryParams;
-    public DisruptionsGetDisruptionModesRequest withQueryParams(DisruptionsGetDisruptionModesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public DisruptionsGetDisruptionModesRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DisruptionsGetDisruptionModesRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WellsTagsListRequest {
+    /**
+     * Which field to use when ordering the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering")
+    public String ordering;
+    public WellsTagsListRequest withOrdering(String ordering) {
+        this.ordering = ordering;
+        return this;
+    }
     
-    public WellsTagsListQueryParams queryParams;
-    public WellsTagsListRequest withQueryParams(WellsTagsListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A search term.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
+    public String search;
+    public WellsTagsListRequest withSearch(String search) {
+        this.search = search;
         return this;
     }
     

@@ -40,7 +40,7 @@ public class Intrusion {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceSecurityIntrusionResponse getNetworkApplianceSecurityIntrusion(org.openapis.openapi.models.operations.GetNetworkApplianceSecurityIntrusionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceSecurityIntrusionPathParams.class, baseUrl, "/networks/{networkId}/appliance/security/intrusion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceSecurityIntrusionRequest.class, baseUrl, "/networks/{networkId}/appliance/security/intrusion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class Intrusion {
      */
     public org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityIntrusionResponse getOrganizationApplianceSecurityIntrusion(org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityIntrusionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityIntrusionPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/security/intrusion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetOrganizationApplianceSecurityIntrusionRequest.class, baseUrl, "/organizations/{organizationId}/appliance/security/intrusion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -120,12 +120,12 @@ public class Intrusion {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceSecurityIntrusionResponse updateNetworkApplianceSecurityIntrusion(org.openapis.openapi.models.operations.UpdateNetworkApplianceSecurityIntrusionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceSecurityIntrusionPathParams.class, baseUrl, "/networks/{networkId}/appliance/security/intrusion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceSecurityIntrusionRequest.class, baseUrl, "/networks/{networkId}/appliance/security/intrusion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -162,12 +162,12 @@ public class Intrusion {
      */
     public org.openapis.openapi.models.operations.UpdateOrganizationApplianceSecurityIntrusionResponse updateOrganizationApplianceSecurityIntrusion(org.openapis.openapi.models.operations.UpdateOrganizationApplianceSecurityIntrusionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceSecurityIntrusionPathParams.class, baseUrl, "/organizations/{organizationId}/appliance/security/intrusion", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateOrganizationApplianceSecurityIntrusionRequest.class, baseUrl, "/organizations/{organizationId}/appliance/security/intrusion", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkWirelessSsidBonjourForwardingRequest {
-    
-    public UpdateNetworkWirelessSsidBonjourForwardingPathParams pathParams;
-    public UpdateNetworkWirelessSsidBonjourForwardingRequest withPathParams(UpdateNetworkWirelessSsidBonjourForwardingPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkWirelessSsidBonjourForwardingRequestBody requestBody;
+    public UpdateNetworkWirelessSsidBonjourForwardingRequest withRequestBody(UpdateNetworkWirelessSsidBonjourForwardingRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkWirelessSsidBonjourForwardingRequestBody request;
-    public UpdateNetworkWirelessSsidBonjourForwardingRequest withRequest(UpdateNetworkWirelessSsidBonjourForwardingRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkWirelessSsidBonjourForwardingRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
+    public String number;
+    public UpdateNetworkWirelessSsidBonjourForwardingRequest withNumber(String number) {
+        this.number = number;
         return this;
     }
     

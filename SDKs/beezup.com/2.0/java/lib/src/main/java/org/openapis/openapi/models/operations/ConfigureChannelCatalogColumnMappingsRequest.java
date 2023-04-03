@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureChannelCatalogColumnMappingsRequest {
-    
-    public ConfigureChannelCatalogColumnMappingsPathParams pathParams;
-    public ConfigureChannelCatalogColumnMappingsRequest withPathParams(ConfigureChannelCatalogColumnMappingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ChannelCatalogColumnMapping[] requestBody;
+    public ConfigureChannelCatalogColumnMappingsRequest withRequestBody(org.openapis.openapi.models.shared.ChannelCatalogColumnMapping[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChannelCatalogColumnMapping[] request;
-    public ConfigureChannelCatalogColumnMappingsRequest withRequest(org.openapis.openapi.models.shared.ChannelCatalogColumnMapping[] request) {
-        this.request = request;
+    /**
+     * The channel catalog identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
+    public String channelCatalogId;
+    public ConfigureChannelCatalogColumnMappingsRequest withChannelCatalogId(String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
         return this;
     }
     

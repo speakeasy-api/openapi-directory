@@ -30,13 +30,8 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
-lib/src/main/java/org/openapis/openapi/models/operations/CompilePathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompileLatexCompilerEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/CompileQueryParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/CompileHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompileRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CompileResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAdvSecurityToken.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeXRapidAPIKey.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

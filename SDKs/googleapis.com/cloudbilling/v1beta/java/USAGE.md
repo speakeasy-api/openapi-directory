@@ -8,10 +8,9 @@ import org.openapis.openapi.models.operations.CloudbillingBillingAccountsEstimat
 import org.openapis.openapi.models.operations.CloudbillingBillingAccountsEstimateCostScenarioSecurityOption2;
 import org.openapis.openapi.models.operations.CloudbillingBillingAccountsEstimateCostScenarioSecurityOption3;
 import org.openapis.openapi.models.operations.CloudbillingBillingAccountsEstimateCostScenarioSecurity;
-import org.openapis.openapi.models.operations.CloudbillingBillingAccountsEstimateCostScenarioPathParams;
-import org.openapis.openapi.models.operations.CloudbillingBillingAccountsEstimateCostScenarioQueryParams;
 import org.openapis.openapi.models.operations.CloudbillingBillingAccountsEstimateCostScenarioRequest;
 import org.openapis.openapi.models.operations.CloudbillingBillingAccountsEstimateCostScenarioResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.EstimateCostScenarioForBillingAccountRequest;
 import org.openapis.openapi.models.shared.CostScenario;
 import org.openapis.openapi.models.shared.Workload;
@@ -57,10 +56,7 @@ import org.openapis.openapi.models.shared.ScenarioConfig;
 import org.openapis.openapi.models.shared.Commitment;
 import org.openapis.openapi.models.shared.VmResourceBasedCudPlanEnum;
 import org.openapis.openapi.models.shared.VmResourceBasedCud;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -69,66 +65,55 @@ public class Application {
                 .build();
 
             CloudbillingBillingAccountsEstimateCostScenarioRequest req = new CloudbillingBillingAccountsEstimateCostScenarioRequest() {{
-                security = new CloudbillingBillingAccountsEstimateCostScenarioSecurity() {{
-                    option1 = new CloudbillingBillingAccountsEstimateCostScenarioSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new CloudbillingBillingAccountsEstimateCostScenarioPathParams() {{
-                    billingAccount = "corrupti";
-                }};
-                queryParams = new CloudbillingBillingAccountsEstimateCostScenarioQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new EstimateCostScenarioForBillingAccountRequest() {{
+                dollarXgafv = "2";
+                estimateCostScenarioForBillingAccountRequest = new EstimateCostScenarioForBillingAccountRequest() {{
                     costScenario = new CostScenario() {{
                         commitments = new org.openapis.openapi.models.shared.Commitment[]{{
                             add(new Commitment() {{
-                                name = "iure";
+                                name = "distinctio";
                                 vmResourceBasedCud = new VmResourceBasedCud() {{
                                     guestAccelerator = new GuestAccelerator() {{
-                                        acceleratorCount = "magnam";
-                                        acceleratorType = "debitis";
+                                        acceleratorCount = "quibusdam";
+                                        acceleratorType = "unde";
                                     }};
-                                    machineSeries = "ipsa";
-                                    memorySizeGb = 9636.63;
-                                    plan = "COMMITMENT_PLAN_UNSPECIFIED";
-                                    region = "suscipit";
-                                    virtualCpuCount = "molestiae";
+                                    machineSeries = "nulla";
+                                    memorySizeGb = 5448.83;
+                                    plan = "THIRTY_SIX_MONTH";
+                                    region = "vel";
+                                    virtualCpuCount = "error";
                                 }};
                             }}),
                             add(new Commitment() {{
-                                name = "minus";
+                                name = "deserunt";
                                 vmResourceBasedCud = new VmResourceBasedCud() {{
                                     guestAccelerator = new GuestAccelerator() {{
-                                        acceleratorCount = "placeat";
-                                        acceleratorType = "voluptatum";
+                                        acceleratorCount = "suscipit";
+                                        acceleratorType = "iure";
                                     }};
-                                    machineSeries = "iusto";
-                                    memorySizeGb = 5680.45;
+                                    machineSeries = "magnam";
+                                    memorySizeGb = 8917.73;
+                                    plan = "COMMITMENT_PLAN_UNSPECIFIED";
+                                    region = "delectus";
+                                    virtualCpuCount = "tempora";
+                                }};
+                            }}),
+                            add(new Commitment() {{
+                                name = "suscipit";
+                                vmResourceBasedCud = new VmResourceBasedCud() {{
+                                    guestAccelerator = new GuestAccelerator() {{
+                                        acceleratorCount = "molestiae";
+                                        acceleratorType = "minus";
+                                    }};
+                                    machineSeries = "placeat";
+                                    memorySizeGb = 5288.95;
                                     plan = "TWELVE_MONTH";
-                                    region = "recusandae";
-                                    virtualCpuCount = "temporibus";
+                                    region = "excepturi";
+                                    virtualCpuCount = "nisi";
                                 }};
                             }}),
                         }};
                         scenarioConfig = new ScenarioConfig() {{
-                            estimateDuration = "ab";
+                            estimateDuration = "recusandae";
                         }};
                         workloads = new org.openapis.openapi.models.shared.Workload[]{{
                             add(new Workload() {{
@@ -136,53 +121,59 @@ public class Application {
                                     cacheEgressDestination = "CACHE_EGRESS_DESTINATION_UNSPECIFIED";
                                     cacheEgressRate = new Usage() {{
                                         usageRateTimeline = new UsageRateTimeline() {{
-                                            unit = "deserunt";
+                                            unit = "quis";
                                             usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
                                                 add(new UsageRateTimelineEntry() {{
                                                     effectiveTime = new EstimationTimePoint() {{
-                                                        estimationTimeFrameOffset = "ipsam";
+                                                        estimationTimeFrameOffset = "deserunt";
                                                     }};
-                                                    usageRate = 8326.2;
+                                                    usageRate = 202.18;
                                                 }}),
                                             }};
                                         }};
                                     }};
                                 }};
                                 cloudCdnWorkload = new CloudCdnWorkload() {{
-                                    cacheFillOriginService = "CACHE_FILL_ORIGIN_SERVICE_BACKEND_SERVICE";
+                                    cacheFillOriginService = "CACHE_FILL_ORIGIN_SERVICE_GOOGLE_CLOUD_STORAGE_BUCKET";
                                     cacheFillRate = new Usage() {{
                                         usageRateTimeline = new UsageRateTimeline() {{
-                                            unit = "quo";
+                                            unit = "repellendus";
                                             usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "quo";
+                                                    }};
+                                                    usageRate = 1403.5;
+                                                }}),
                                                 add(new UsageRateTimelineEntry() {{
                                                     effectiveTime = new EstimationTimePoint() {{
                                                         estimationTimeFrameOffset = "at";
                                                     }};
                                                     usageRate = 8700.88;
                                                 }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "maiores";
+                                                    }};
+                                                    usageRate = 4736.08;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "quod";
+                                                    }};
+                                                    usageRate = 8009.11;
+                                                }}),
                                             }};
                                         }};
                                     }};
                                     cacheFillRegions = new CacheFillRegions() {{
-                                        destinationRegion = "CACHE_FILL_DESTINATION_REGION_OTHERS";
-                                        sourceRegion = "CACHE_FILL_SOURCE_REGION_EUROPE";
+                                        destinationRegion = "CACHE_FILL_DESTINATION_REGION_NORTH_AMERICA";
+                                        sourceRegion = "CACHE_FILL_SOURCE_REGION_NORTH_AMERICA";
                                     }};
                                     cacheLookUpRate = new Usage() {{
                                         usageRateTimeline = new UsageRateTimeline() {{
-                                            unit = "quod";
+                                            unit = "porro";
                                             usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
-                                                add(new UsageRateTimelineEntry() {{
-                                                    effectiveTime = new EstimationTimePoint() {{
-                                                        estimationTimeFrameOffset = "esse";
-                                                    }};
-                                                    usageRate = 5204.78;
-                                                }}),
-                                                add(new UsageRateTimelineEntry() {{
-                                                    effectiveTime = new EstimationTimePoint() {{
-                                                        estimationTimeFrameOffset = "porro";
-                                                    }};
-                                                    usageRate = 6788.8;
-                                                }}),
                                                 add(new UsageRateTimelineEntry() {{
                                                     effectiveTime = new EstimationTimePoint() {{
                                                         estimationTimeFrameOffset = "dicta";
@@ -195,6 +186,12 @@ public class Application {
                                                     }};
                                                     usageRate = 5820.2;
                                                 }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "fugit";
+                                                    }};
+                                                    usageRate = 5373.73;
+                                                }}),
                                             }};
                                         }};
                                     }};
@@ -202,14 +199,8 @@ public class Application {
                                 cloudInterconnectEgressWorkload = new CloudInterconnectEgressWorkload() {{
                                     egressRate = new Usage() {{
                                         usageRateTimeline = new UsageRateTimeline() {{
-                                            unit = "fugit";
+                                            unit = "hic";
                                             usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
-                                                add(new UsageRateTimelineEntry() {{
-                                                    effectiveTime = new EstimationTimePoint() {{
-                                                        estimationTimeFrameOffset = "hic";
-                                                    }};
-                                                    usageRate = 7586.16;
-                                                }}),
                                                 add(new UsageRateTimelineEntry() {{
                                                     effectiveTime = new EstimationTimePoint() {{
                                                         estimationTimeFrameOffset = "totam";
@@ -222,30 +213,36 @@ public class Application {
                                                     }};
                                                     usageRate = 4736;
                                                 }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "modi";
+                                                    }};
+                                                    usageRate = 1863.32;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "impedit";
+                                                    }};
+                                                    usageRate = 7369.18;
+                                                }}),
                                             }};
                                         }};
                                     }};
-                                    interconnectConnectionLocation = "INTERCONNECT_CONNECTION_LOCATION_ASIA";
+                                    interconnectConnectionLocation = "INTERCONNECT_CONNECTION_LOCATION_EUROPE";
                                 }};
                                 cloudInterconnectWorkload = new CloudInterconnectWorkload() {{
                                     interconnectAttachments = new org.openapis.openapi.models.shared.VlanAttachment[]{{
                                         add(new VlanAttachment() {{
-                                            bandwidth = "BANDWIDTH_BPS_10G";
+                                            bandwidth = "BANDWIDTH_BPS_1G";
                                             vlanCount = new Usage() {{
                                                 usageRateTimeline = new UsageRateTimeline() {{
-                                                    unit = "cum";
+                                                    unit = "aspernatur";
                                                     usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
                                                         add(new UsageRateTimelineEntry() {{
                                                             effectiveTime = new EstimationTimePoint() {{
-                                                                estimationTimeFrameOffset = "ipsum";
+                                                                estimationTimeFrameOffset = "ad";
                                                             }};
-                                                            usageRate = 5684.34;
-                                                        }}),
-                                                        add(new UsageRateTimelineEntry() {{
-                                                            effectiveTime = new EstimationTimePoint() {{
-                                                                estimationTimeFrameOffset = "aspernatur";
-                                                            }};
-                                                            usageRate = 187.89;
+                                                            usageRate = 6176.36;
                                                         }}),
                                                     }};
                                                 }};
@@ -256,14 +253,8 @@ public class Application {
                                     linkType = "LINK_TYPE_ETHERNET_10G_LR";
                                     provisionedLinkCount = new Usage() {{
                                         usageRateTimeline = new UsageRateTimeline() {{
-                                            unit = "sed";
+                                            unit = "dolor";
                                             usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
-                                                add(new UsageRateTimelineEntry() {{
-                                                    effectiveTime = new EstimationTimePoint() {{
-                                                        estimationTimeFrameOffset = "dolor";
-                                                    }};
-                                                    usageRate = 6169.34;
-                                                }}),
                                                 add(new UsageRateTimelineEntry() {{
                                                     effectiveTime = new EstimationTimePoint() {{
                                                         estimationTimeFrameOffset = "laboriosam";
@@ -276,22 +267,22 @@ public class Application {
                                                     }};
                                                     usageRate = 6818.2;
                                                 }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "in";
+                                                    }};
+                                                    usageRate = 3595.08;
+                                                }}),
                                             }};
                                         }};
                                     }};
                                 }};
                                 cloudStorageEgressWorkload = new CloudStorageEgressWorkload() {{
-                                    destinationContinent = "DESTINATION_CONTINENT_AUTRALIA";
+                                    destinationContinent = "DESTINATION_CONTINENT_EUROPE";
                                     egressRate = new Usage() {{
                                         usageRateTimeline = new UsageRateTimeline() {{
-                                            unit = "corporis";
+                                            unit = "iure";
                                             usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
-                                                add(new UsageRateTimelineEntry() {{
-                                                    effectiveTime = new EstimationTimePoint() {{
-                                                        estimationTimeFrameOffset = "iure";
-                                                    }};
-                                                    usageRate = 9023.49;
-                                                }}),
                                                 add(new UsageRateTimelineEntry() {{
                                                     effectiveTime = new EstimationTimePoint() {{
                                                         estimationTimeFrameOffset = "quidem";
@@ -304,28 +295,28 @@ public class Application {
                                                     }};
                                                     usageRate = 9698.1;
                                                 }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "est";
+                                                    }};
+                                                    usageRate = 6531.4;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "laborum";
+                                                    }};
+                                                    usageRate = 1709.09;
+                                                }}),
                                             }};
                                         }};
                                     }};
-                                    sourceContinent = "SOURCE_CONTINENT_NORTH_AMERICA";
+                                    sourceContinent = "SOURCE_CONTINENT_ASIA_PACIFIC";
                                 }};
                                 cloudStorageWorkload = new CloudStorageWorkload() {{
                                     dataRetrieval = new Usage() {{
                                         usageRateTimeline = new UsageRateTimeline() {{
-                                            unit = "mollitia";
+                                            unit = "corporis";
                                             usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
-                                                add(new UsageRateTimelineEntry() {{
-                                                    effectiveTime = new EstimationTimePoint() {{
-                                                        estimationTimeFrameOffset = "dolores";
-                                                    }};
-                                                    usageRate = 2103.82;
-                                                }}),
-                                                add(new UsageRateTimelineEntry() {{
-                                                    effectiveTime = new EstimationTimePoint() {{
-                                                        estimationTimeFrameOffset = "corporis";
-                                                    }};
-                                                    usageRate = 1289.26;
-                                                }}),
                                                 add(new UsageRateTimelineEntry() {{
                                                     effectiveTime = new EstimationTimePoint() {{
                                                         estimationTimeFrameOffset = "nobis";
@@ -1095,12 +1086,1227 @@ public class Application {
                                     }};
                                 }};
                             }}),
+                            add(new Workload() {{
+                                cloudCdnEgressWorkload = new CloudCdnEgressWorkload() {{
+                                    cacheEgressDestination = "CACHE_EGRESS_DESTINATION_ASIA_PACIFIC";
+                                    cacheEgressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "vero";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "hic";
+                                                    }};
+                                                    usageRate = 9280.82;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "omnis";
+                                                    }};
+                                                    usageRate = 7044.15;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                                cloudCdnWorkload = new CloudCdnWorkload() {{
+                                    cacheFillOriginService = "CACHE_FILL_ORIGIN_SERVICE_GOOGLE_CLOUD_STORAGE_BUCKET";
+                                    cacheFillRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "voluptatem";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "consequuntur";
+                                                    }};
+                                                    usageRate = 5000.26;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "error";
+                                                    }};
+                                                    usageRate = 503.7;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "occaecati";
+                                                    }};
+                                                    usageRate = 6990.98;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "adipisci";
+                                                    }};
+                                                    usageRate = 9923.97;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    cacheFillRegions = new CacheFillRegions() {{
+                                        destinationRegion = "CACHE_FILL_DESTINATION_REGION_OTHERS";
+                                        sourceRegion = "CACHE_FILL_REGION_ASIA_PACIFIC";
+                                    }};
+                                    cacheLookUpRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "iste";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "deleniti";
+                                                    }};
+                                                    usageRate = 8642.82;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "provident";
+                                                    }};
+                                                    usageRate = 7508.44;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "libero";
+                                                    }};
+                                                    usageRate = 9644.9;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                                cloudInterconnectEgressWorkload = new CloudInterconnectEgressWorkload() {{
+                                    egressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "quaerat";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "aliquid";
+                                                    }};
+                                                    usageRate = 2123.9;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "dolorem";
+                                                    }};
+                                                    usageRate = 2224.43;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "qui";
+                                                    }};
+                                                    usageRate = 2187.49;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    interconnectConnectionLocation = "INTERCONNECT_CONNECTION_LOCATION_AUSTRALIA";
+                                }};
+                                cloudInterconnectWorkload = new CloudInterconnectWorkload() {{
+                                    interconnectAttachments = new org.openapis.openapi.models.shared.VlanAttachment[]{{
+                                        add(new VlanAttachment() {{
+                                            bandwidth = "BANDWIDTH_BPS_5G";
+                                            vlanCount = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "voluptate";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "reiciendis";
+                                                            }};
+                                                            usageRate = 2274.14;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "dolorum";
+                                                            }};
+                                                            usageRate = 2543.56;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new VlanAttachment() {{
+                                            bandwidth = "BANDWIDTH_BPS_50M";
+                                            vlanCount = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "ipsa";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "iure";
+                                                            }};
+                                                            usageRate = 4878.38;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new VlanAttachment() {{
+                                            bandwidth = "BANDWIDTH_BPS_300M";
+                                            vlanCount = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "accusamus";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "voluptatibus";
+                                                            }};
+                                                            usageRate = 3777.52;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "natus";
+                                                            }};
+                                                            usageRate = 1796.03;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "atque";
+                                                            }};
+                                                            usageRate = 246.78;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                        }}),
+                                    }};
+                                    interconnectType = "INTERCONNECT_TYPE_PARTNER";
+                                    linkType = "LINK_TYPE_UNSPECIFIED";
+                                    provisionedLinkCount = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "soluta";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "iusto";
+                                                    }};
+                                                    usageRate = 4536.97;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "dolorum";
+                                                    }};
+                                                    usageRate = 5365.79;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "omnis";
+                                                    }};
+                                                    usageRate = 8966.72;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                                cloudStorageEgressWorkload = new CloudStorageEgressWorkload() {{
+                                    destinationContinent = "DESTINATION_CONTINENT_NORTH_AMERICA";
+                                    egressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "asperiores";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "ipsum";
+                                                    }};
+                                                    usageRate = 4560.15;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "id";
+                                                    }};
+                                                    usageRate = 9064.18;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    sourceContinent = "SOURCE_CONTINENT_ASIA_PACIFIC";
+                                }};
+                                cloudStorageWorkload = new CloudStorageWorkload() {{
+                                    dataRetrieval = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "aspernatur";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "amet";
+                                                    }};
+                                                    usageRate = 7583.79;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    dataStored = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "accusamus";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "saepe";
+                                                    }};
+                                                    usageRate = 3834.64;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "deserunt";
+                                                    }};
+                                                    usageRate = 5883.17;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    dualRegion = new DualRegional() {{
+                                        name = "minima";
+                                    }};
+                                    multiRegion = new MultiRegional() {{
+                                        name = "repellendus";
+                                    }};
+                                    operationA = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "totam";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "alias";
+                                                    }};
+                                                    usageRate = 8726.51;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "quaerat";
+                                                    }};
+                                                    usageRate = 2735.42;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "vel";
+                                                    }};
+                                                    usageRate = 7980.47;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    operationB = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "officiis";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "dolorum";
+                                                    }};
+                                                    usageRate = 9527.92;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    region = new Regional() {{
+                                        name = "esse";
+                                    }};
+                                    storageClass = "harum";
+                                }};
+                                computeVmWorkload = new ComputeVmWorkload() {{
+                                    enableConfidentialCompute = false;
+                                    guestAccelerator = new GuestAccelerator() {{
+                                        acceleratorCount = "iusto";
+                                        acceleratorType = "ipsum";
+                                    }};
+                                    instancesRunning = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "quisquam";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "amet";
+                                                    }};
+                                                    usageRate = 7308.56;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "accusamus";
+                                                    }};
+                                                    usageRate = 2539.41;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "enim";
+                                                    }};
+                                                    usageRate = 2133.12;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "sapiente";
+                                                    }};
+                                                    usageRate = 5182.01;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    licenses = new String[]{{
+                                        add("sit"),
+                                        add("expedita"),
+                                    }};
+                                    machineType = new MachineType() {{
+                                        customMachineType = new CustomMachineType() {{
+                                            machineSeries = "neque";
+                                            memorySizeGb = 1536.94;
+                                            virtualCpuCount = "vel";
+                                        }};
+                                        predefinedMachineType = new PredefinedMachineType() {{
+                                            machineType = "libero";
+                                        }};
+                                    }};
+                                    persistentDisks = new org.openapis.openapi.models.shared.PersistentDisk[]{{
+                                        add(new PersistentDisk() {{
+                                            diskSize = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "deserunt";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "ipsum";
+                                                            }};
+                                                            usageRate = 2776.28;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "qui";
+                                                            }};
+                                                            usageRate = 5867.84;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                            diskType = "maxime";
+                                            provisionedIops = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "pariatur";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "dicta";
+                                                            }};
+                                                            usageRate = 6748.48;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "totam";
+                                                            }};
+                                                            usageRate = 2768.94;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "aspernatur";
+                                                            }};
+                                                            usageRate = 1749.09;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                            scope = "SCOPE_REGIONAL";
+                                        }}),
+                                        add(new PersistentDisk() {{
+                                            diskSize = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "facilis";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "quam";
+                                                            }};
+                                                            usageRate = 5654.21;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "temporibus";
+                                                            }};
+                                                            usageRate = 1832.8;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                            diskType = "neque";
+                                            provisionedIops = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "fugit";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "odio";
+                                                            }};
+                                                            usageRate = 1248.33;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                            scope = "SCOPE_ZONAL";
+                                        }}),
+                                    }};
+                                    preemptible = false;
+                                    region = "nam";
+                                }};
+                                name = "hic";
+                                premiumTierEgressWorkload = new PremiumTierEgressWorkload() {{
+                                    destinationContinent = "DESTINATION_CONTINENT_UNSPECIFIED";
+                                    egressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "cumque";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "nobis";
+                                                    }};
+                                                    usageRate = 925.96;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "saepe";
+                                                    }};
+                                                    usageRate = 2174.5;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "veritatis";
+                                                    }};
+                                                    usageRate = 7492.55;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    sourceRegion = "quos";
+                                }};
+                                standardTierEgressWorkload = new StandardTierEgressWorkload() {{
+                                    egressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "tempore";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "aperiam";
+                                                    }};
+                                                    usageRate = 9619.37;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "dolorem";
+                                                    }};
+                                                    usageRate = 2921.47;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "labore";
+                                                    }};
+                                                    usageRate = 2408.29;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    sourceRegion = "dolorum";
+                                }};
+                                vmToVmEgressWorkload = new VmToVmEgressWorkload() {{
+                                    interRegionEgress = new InterRegionEgress() {{
+                                        destinationRegion = "architecto";
+                                        egressRate = new Usage() {{
+                                            usageRateTimeline = new UsageRateTimeline() {{
+                                                unit = "quae";
+                                                usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "quas";
+                                                        }};
+                                                        usageRate = 9295.3;
+                                                    }}),
+                                                }};
+                                            }};
+                                        }};
+                                        sourceRegion = "consequatur";
+                                    }};
+                                    intraRegionEgress = new IntraRegionEgress() {{
+                                        egressRate = new Usage() {{
+                                            usageRateTimeline = new UsageRateTimeline() {{
+                                                unit = "est";
+                                                usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "porro";
+                                                        }};
+                                                        usageRate = 9843.3;
+                                                    }}),
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "ut";
+                                                        }};
+                                                        usageRate = 7034.95;
+                                                    }}),
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "cupiditate";
+                                                        }};
+                                                        usageRate = 1816.31;
+                                                    }}),
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "quae";
+                                                        }};
+                                                        usageRate = 5123.93;
+                                                    }}),
+                                                }};
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                            }}),
+                            add(new Workload() {{
+                                cloudCdnEgressWorkload = new CloudCdnEgressWorkload() {{
+                                    cacheEgressDestination = "CACHE_EGRESS_DESTINATION_EUROPE";
+                                    cacheEgressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "occaecati";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "quisquam";
+                                                    }};
+                                                    usageRate = 8765.06;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "omnis";
+                                                    }};
+                                                    usageRate = 3381.59;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "ipsum";
+                                                    }};
+                                                    usageRate = 9615.71;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "voluptate";
+                                                    }};
+                                                    usageRate = 2317.01;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                                cloudCdnWorkload = new CloudCdnWorkload() {{
+                                    cacheFillOriginService = "CACHE_FILL_ORIGIN_SERVICE_BACKEND_SERVICE";
+                                    cacheFillRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "tenetur";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "hic";
+                                                    }};
+                                                    usageRate = 7155.61;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "quod";
+                                                    }};
+                                                    usageRate = 4861.6;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    cacheFillRegions = new CacheFillRegions() {{
+                                        destinationRegion = "CACHE_FILL_DESTINATION_REGION_SOUTH_AMERICA";
+                                        sourceRegion = "CACHE_FILL_SOURCE_REGION_OCEANIA";
+                                    }};
+                                    cacheLookUpRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "vero";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "dolore";
+                                                    }};
+                                                    usageRate = 8445.5;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "illum";
+                                                    }};
+                                                    usageRate = 1943.42;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                                cloudInterconnectEgressWorkload = new CloudInterconnectEgressWorkload() {{
+                                    egressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "natus";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "aut";
+                                                    }};
+                                                    usageRate = 9742.59;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "exercitationem";
+                                                    }};
+                                                    usageRate = 8623.1;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "fugit";
+                                                    }};
+                                                    usageRate = 7804.27;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "maiores";
+                                                    }};
+                                                    usageRate = 9850.33;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    interconnectConnectionLocation = "INTERCONNECT_CONNECTION_LOCATION_EUROPE";
+                                }};
+                                cloudInterconnectWorkload = new CloudInterconnectWorkload() {{
+                                    interconnectAttachments = new org.openapis.openapi.models.shared.VlanAttachment[]{{
+                                        add(new VlanAttachment() {{
+                                            bandwidth = "BANDWIDTH_BPS_500M";
+                                            vlanCount = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "alias";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "tempora";
+                                                            }};
+                                                            usageRate = 3685.84;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "ea";
+                                                            }};
+                                                            usageRate = 1369;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "vel";
+                                                            }};
+                                                            usageRate = 8221.18;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new VlanAttachment() {{
+                                            bandwidth = "BANDWIDTH_BPS_200M";
+                                            vlanCount = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "ratione";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "laudantium";
+                                                            }};
+                                                            usageRate = 1206.57;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "dolor";
+                                                            }};
+                                                            usageRate = 9807;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new VlanAttachment() {{
+                                            bandwidth = "BANDWIDTH_BPS_50M";
+                                            vlanCount = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "ex";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "excepturi";
+                                                            }};
+                                                            usageRate = 9729.2;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "nostrum";
+                                                            }};
+                                                            usageRate = 9608.35;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "quisquam";
+                                                            }};
+                                                            usageRate = 9065.56;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "ea";
+                                                            }};
+                                                            usageRate = 7740.48;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                        }}),
+                                        add(new VlanAttachment() {{
+                                            bandwidth = "BANDWIDTH_BPS_300M";
+                                            vlanCount = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "veniam";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "inventore";
+                                                            }};
+                                                            usageRate = 3018.31;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "ea";
+                                                            }};
+                                                            usageRate = 7752.2;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                        }}),
+                                    }};
+                                    interconnectType = "INTERCONNECT_TYPE_UNSPECIFIED";
+                                    linkType = "LINK_TYPE_ETHERNET_100G_LR";
+                                    provisionedLinkCount = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "aspernatur";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "eaque";
+                                                    }};
+                                                    usageRate = 9528.71;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "libero";
+                                                    }};
+                                                    usageRate = 139.48;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                                cloudStorageEgressWorkload = new CloudStorageEgressWorkload() {{
+                                    destinationContinent = "DESTINATION_CONTINENT_UNSPECIFIED";
+                                    egressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "deleniti";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "aliquam";
+                                                    }};
+                                                    usageRate = 1469.46;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "accusamus";
+                                                    }};
+                                                    usageRate = 795.22;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "non";
+                                                    }};
+                                                    usageRate = 896.03;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "dolorum";
+                                                    }};
+                                                    usageRate = 6720.48;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    sourceContinent = "SOURCE_CONTINENT_NORTH_AMERICA";
+                                }};
+                                cloudStorageWorkload = new CloudStorageWorkload() {{
+                                    dataRetrieval = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "velit";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "autem";
+                                                    }};
+                                                    usageRate = 7521.35;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "quas";
+                                                    }};
+                                                    usageRate = 8296.03;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    dataStored = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "nulla";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "libero";
+                                                    }};
+                                                    usageRate = 965.49;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "tempora";
+                                                    }};
+                                                    usageRate = 2561.39;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    dualRegion = new DualRegional() {{
+                                        name = "explicabo";
+                                    }};
+                                    multiRegion = new MultiRegional() {{
+                                        name = "provident";
+                                    }};
+                                    operationA = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "ipsa";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "magnam";
+                                                    }};
+                                                    usageRate = 4879.35;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "eius";
+                                                    }};
+                                                    usageRate = 4585.15;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    operationB = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "esse";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "fuga";
+                                                    }};
+                                                    usageRate = 4420.15;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "quidem";
+                                                    }};
+                                                    usageRate = 8526.35;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "ut";
+                                                    }};
+                                                    usageRate = 4334.39;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    region = new Regional() {{
+                                        name = "suscipit";
+                                    }};
+                                    storageClass = "assumenda";
+                                }};
+                                computeVmWorkload = new ComputeVmWorkload() {{
+                                    enableConfidentialCompute = false;
+                                    guestAccelerator = new GuestAccelerator() {{
+                                        acceleratorCount = "eos";
+                                        acceleratorType = "praesentium";
+                                    }};
+                                    instancesRunning = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "quisquam";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "ipsa";
+                                                    }};
+                                                    usageRate = 6600.4;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    licenses = new String[]{{
+                                        add("neque"),
+                                        add("quo"),
+                                        add("illum"),
+                                    }};
+                                    machineType = new MachineType() {{
+                                        customMachineType = new CustomMachineType() {{
+                                            machineSeries = "quo";
+                                            memorySizeGb = 6813.59;
+                                            virtualCpuCount = "eius";
+                                        }};
+                                        predefinedMachineType = new PredefinedMachineType() {{
+                                            machineType = "eos";
+                                        }};
+                                    }};
+                                    persistentDisks = new org.openapis.openapi.models.shared.PersistentDisk[]{{
+                                        add(new PersistentDisk() {{
+                                            diskSize = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "ab";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "consequatur";
+                                                            }};
+                                                            usageRate = 2728.22;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "debitis";
+                                                            }};
+                                                            usageRate = 3708.53;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "aspernatur";
+                                                            }};
+                                                            usageRate = 1970.54;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                            diskType = "quo";
+                                            provisionedIops = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "esse";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "aperiam";
+                                                            }};
+                                                            usageRate = 7151.79;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "quod";
+                                                            }};
+                                                            usageRate = 4908.19;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "inventore";
+                                                            }};
+                                                            usageRate = 4694.98;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "totam";
+                                                            }};
+                                                            usageRate = 8827.1;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                            scope = "SCOPE_UNSPECIFIED";
+                                        }}),
+                                        add(new PersistentDisk() {{
+                                            diskSize = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "odio";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "commodi";
+                                                            }};
+                                                            usageRate = 9594.34;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "dolores";
+                                                            }};
+                                                            usageRate = 6455.7;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "molestiae";
+                                                            }};
+                                                            usageRate = 353.62;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                            diskType = "porro";
+                                            provisionedIops = new Usage() {{
+                                                usageRateTimeline = new UsageRateTimeline() {{
+                                                    unit = "eum";
+                                                    usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "praesentium";
+                                                            }};
+                                                            usageRate = 1598.67;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "deleniti";
+                                                            }};
+                                                            usageRate = 1438.29;
+                                                        }}),
+                                                        add(new UsageRateTimelineEntry() {{
+                                                            effectiveTime = new EstimationTimePoint() {{
+                                                                estimationTimeFrameOffset = "fuga";
+                                                            }};
+                                                            usageRate = 6494.63;
+                                                        }}),
+                                                    }};
+                                                }};
+                                            }};
+                                            scope = "SCOPE_UNSPECIFIED";
+                                        }}),
+                                    }};
+                                    preemptible = false;
+                                    region = "atque";
+                                }};
+                                name = "explicabo";
+                                premiumTierEgressWorkload = new PremiumTierEgressWorkload() {{
+                                    destinationContinent = "DESTINATION_CONTINENT_AUTRALIA";
+                                    egressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "nisi";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "sapiente";
+                                                    }};
+                                                    usageRate = 1598.7;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    sourceRegion = "ratione";
+                                }};
+                                standardTierEgressWorkload = new StandardTierEgressWorkload() {{
+                                    egressRate = new Usage() {{
+                                        usageRateTimeline = new UsageRateTimeline() {{
+                                            unit = "explicabo";
+                                            usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "occaecati";
+                                                    }};
+                                                    usageRate = 5438.06;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "et";
+                                                    }};
+                                                    usageRate = 4569.11;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "eveniet";
+                                                    }};
+                                                    usageRate = 8820.42;
+                                                }}),
+                                                add(new UsageRateTimelineEntry() {{
+                                                    effectiveTime = new EstimationTimePoint() {{
+                                                        estimationTimeFrameOffset = "veritatis";
+                                                    }};
+                                                    usageRate = 4586.04;
+                                                }}),
+                                            }};
+                                        }};
+                                    }};
+                                    sourceRegion = "quod";
+                                }};
+                                vmToVmEgressWorkload = new VmToVmEgressWorkload() {{
+                                    interRegionEgress = new InterRegionEgress() {{
+                                        destinationRegion = "nam";
+                                        egressRate = new Usage() {{
+                                            usageRateTimeline = new UsageRateTimeline() {{
+                                                unit = "vero";
+                                                usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "quasi";
+                                                        }};
+                                                        usageRate = 9040.45;
+                                                    }}),
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "vel";
+                                                        }};
+                                                        usageRate = 6900.25;
+                                                    }}),
+                                                }};
+                                            }};
+                                        }};
+                                        sourceRegion = "molestiae";
+                                    }};
+                                    intraRegionEgress = new IntraRegionEgress() {{
+                                        egressRate = new Usage() {{
+                                            usageRateTimeline = new UsageRateTimeline() {{
+                                                unit = "rerum";
+                                                usageRateTimelineEntries = new org.openapis.openapi.models.shared.UsageRateTimelineEntry[]{{
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "minima";
+                                                        }};
+                                                        usageRate = 7162.44;
+                                                    }}),
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "eligendi";
+                                                        }};
+                                                        usageRate = 270.69;
+                                                    }}),
+                                                    add(new UsageRateTimelineEntry() {{
+                                                        effectiveTime = new EstimationTimePoint() {{
+                                                            estimationTimeFrameOffset = "culpa";
+                                                        }};
+                                                        usageRate = 7313.98;
+                                                    }}),
+                                                }};
+                                            }};
+                                        }};
+                                    }};
+                                }};
+                            }}),
                         }};
                     }};
                 }};
-            }};            
+                accessToken = "adipisci";
+                alt = "proto";
+                billingAccount = "consequuntur";
+                callback = "consequatur";
+                fields = "minus";
+                key = "quaerat";
+                oauthToken = "sapiente";
+                prettyPrint = false;
+                quotaUser = "consectetur";
+                uploadType = "esse";
+                uploadProtocol = "blanditiis";
+            }}            
 
-            CloudbillingBillingAccountsEstimateCostScenarioResponse res = sdk.billingAccounts.cloudbillingBillingAccountsEstimateCostScenario(req);
+            CloudbillingBillingAccountsEstimateCostScenarioResponse res = sdk.billingAccounts.cloudbillingBillingAccountsEstimateCostScenario(req, new CloudbillingBillingAccountsEstimateCostScenarioSecurity() {{
+                option1 = new CloudbillingBillingAccountsEstimateCostScenarioSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.estimateCostScenarioForBillingAccountResponse.isPresent()) {
                 // handle response

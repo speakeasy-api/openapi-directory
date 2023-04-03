@@ -43,7 +43,7 @@ public class As2Partners {
      */
     public org.openapis.openapi.models.operations.DeleteAs2PartnersIdResponse deleteAs2PartnersId(org.openapis.openapi.models.operations.DeleteAs2PartnersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAs2PartnersIdPathParams.class, baseUrl, "/as2_partners/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAs2PartnersIdRequest.class, baseUrl, "/as2_partners/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class As2Partners {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAs2PartnersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetAs2PartnersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -123,7 +123,7 @@ public class As2Partners {
      */
     public org.openapis.openapi.models.operations.GetAs2PartnersIdResponse getAs2PartnersId(org.openapis.openapi.models.operations.GetAs2PartnersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAs2PartnersIdPathParams.class, baseUrl, "/as2_partners/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAs2PartnersIdRequest.class, baseUrl, "/as2_partners/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -164,12 +164,12 @@ public class As2Partners {
      */
     public org.openapis.openapi.models.operations.PatchAs2PartnersIdResponse patchAs2PartnersId(org.openapis.openapi.models.operations.PatchAs2PartnersIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAs2PartnersIdPathParams.class, baseUrl, "/as2_partners/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchAs2PartnersIdRequest.class, baseUrl, "/as2_partners/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -205,7 +205,7 @@ public class As2Partners {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostAs2PartnersResponse postAs2Partners(org.openapis.openapi.models.operations.PostAs2PartnersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostAs2PartnersResponse postAs2Partners(org.openapis.openapi.models.operations.PostAs2PartnersRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/as2_partners");
         

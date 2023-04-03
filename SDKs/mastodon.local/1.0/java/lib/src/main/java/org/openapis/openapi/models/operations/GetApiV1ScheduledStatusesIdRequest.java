@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1ScheduledStatusesIdRequest {
-    
-    public GetApiV1ScheduledStatusesIdPathParams pathParams;
-    public GetApiV1ScheduledStatusesIdRequest withPathParams(GetApiV1ScheduledStatusesIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1ScheduledStatusesIdSecurity security;
-    public GetApiV1ScheduledStatusesIdRequest withSecurity(GetApiV1ScheduledStatusesIdSecurity security) {
-        this.security = security;
+    /**
+     * ID of the scheduled status in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1ScheduledStatusesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InitiateAuthUsingPOSTRequest {
-    
-    public InitiateAuthUsingPOSTHeaders headers;
-    public InitiateAuthUsingPOSTRequest withHeaders(InitiateAuthUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public InitiateAuthUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,9 @@ public class InitiateAuthUsingPOSTRequest {
      * authRequest
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AuthInitRequest request;
-    public InitiateAuthUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.AuthInitRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public InitiateAuthUsingPOSTSecurity security;
-    public InitiateAuthUsingPOSTRequest withSecurity(InitiateAuthUsingPOSTSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.AuthInitRequest authInitRequest;
+    public InitiateAuthUsingPOSTRequest withAuthInitRequest(org.openapis.openapi.models.shared.AuthInitRequest authInitRequest) {
+        this.authInitRequest = authInitRequest;
         return this;
     }
     

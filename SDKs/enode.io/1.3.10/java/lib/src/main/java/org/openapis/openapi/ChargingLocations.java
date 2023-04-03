@@ -37,19 +37,20 @@ public class ChargingLocations {
      * Delete Charging Location
      * Delete a Charging Location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidResponse deleteCharginglocationsCharginglocationid(org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidResponse deleteCharginglocationsCharginglocationid(org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidRequest request, org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidPathParams.class, baseUrl, "/charging-locations/{chargingLocationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCharginglocationsCharginglocationidRequest.class, baseUrl, "/charging-locations/{chargingLocationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -70,11 +71,10 @@ public class ChargingLocations {
     /**
      * List Charging Locations
      * Returns a list of Charging Locations registered to the User
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCharginglocationsResponse getCharginglocations(org.openapis.openapi.models.operations.GetCharginglocationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCharginglocationsResponse getCharginglocations() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/charging-locations");
         
@@ -83,8 +83,7 @@ public class ChargingLocations {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -110,19 +109,20 @@ public class ChargingLocations {
     /**
      * Get Charging Location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidResponse getCharginglocationsCharginglocationid(org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidResponse getCharginglocationsCharginglocationid(org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidRequest request, org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidPathParams.class, baseUrl, "/charging-locations/{chargingLocationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCharginglocationsCharginglocationidRequest.class, baseUrl, "/charging-locations/{chargingLocationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -149,10 +149,11 @@ public class ChargingLocations {
     /**
      * Create Charging Location
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostCharginglocationsResponse postCharginglocations(org.openapis.openapi.models.operations.PostCharginglocationsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostCharginglocationsResponse postCharginglocations(org.openapis.openapi.models.operations.PostCharginglocationsRequestBodyInput request, org.openapis.openapi.models.operations.PostCharginglocationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/charging-locations");
         
@@ -163,7 +164,7 @@ public class ChargingLocations {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -191,21 +192,22 @@ public class ChargingLocations {
      * Update Charging Location
      * Updates a charging location with new configuration
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidResponse putCharginglocationsCharginglocationid(org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidResponse putCharginglocationsCharginglocationid(org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidRequest request, org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidPathParams.class, baseUrl, "/charging-locations/{chargingLocationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCharginglocationsCharginglocationidRequest.class, baseUrl, "/charging-locations/{chargingLocationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "onechargingLocationsPostRequestBodyContentApplication1jsonSchemaInput", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

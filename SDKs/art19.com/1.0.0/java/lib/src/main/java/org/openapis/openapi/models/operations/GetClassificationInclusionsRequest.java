@@ -4,20 +4,111 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClassificationInclusionsRequest {
-    
-    public GetClassificationInclusionsQueryParams queryParams;
-    public GetClassificationInclusionsRequest withQueryParams(GetClassificationInclusionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Limit the result to classification inclusions linked to a classification with this ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification_id")
+    public String classificationId;
+    public GetClassificationInclusionsRequest withClassificationId(String classificationId) {
+        this.classificationId = classificationId;
         return this;
     }
     
+    /**
+     * The type of classification that the classification inclusions are linked to.
+     * Depending on the permissions of your credential, only a subset of these types are usable.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classification_type")
+    public GetClassificationInclusionsClassificationTypeEnum classificationType;
+    public GetClassificationInclusionsRequest withClassificationType(GetClassificationInclusionsClassificationTypeEnum classificationType) {
+        this.classificationType = classificationType;
+        return this;
+    }
     
-    public GetClassificationInclusionsSecurity security;
-    public GetClassificationInclusionsRequest withSecurity(GetClassificationInclusionsSecurity security) {
-        this.security = security;
+    /**
+     * Limit the result to classification inclusions linked to a resource with this ID.
+     * You will have to use this filter together with either `classified_type` or `classification_type`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classified_id")
+    public String classifiedId;
+    public GetClassificationInclusionsRequest withClassifiedId(String classifiedId) {
+        this.classifiedId = classifiedId;
+        return this;
+    }
+    
+    /**
+     * Limit the result to classification inclusions linked to this type of entity.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classified_type")
+    public GetClassificationInclusionsClassifiedTypeEnum classifiedType;
+    public GetClassificationInclusionsRequest withClassifiedType(GetClassificationInclusionsClassifiedTypeEnum classifiedType) {
+        this.classifiedType = classifiedType;
+        return this;
+    }
+    
+    /**
+     * The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
+     * The brackets *MUST* be percent-encoded, per the requirements in
+     * [RFC 3986 \u00a7 3.4](https://tools.ietf.org/html/rfc3986#section-3.4).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
+    public String[] ids;
+    public GetClassificationInclusionsRequest withIds(String[] ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    /**
+     * Select which page number to receive results for. Pages are numbered starting at 1.
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
+    public Long pageNumber;
+    public GetClassificationInclusionsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    
+    /**
+     * Indicate how many records to return per page. The maximum is 100.
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public GetClassificationInclusionsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Limit the result to classification inclusions linked to a classification containing
+     * the parameter value disregarding case.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetClassificationInclusionsRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Specify how to sort the result. Please refer to either the top section or the
+     * [JSON:API specification](https://jsonapi.org/format/#fetching-sorting) on how sorting works in general.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public GetClassificationInclusionsSortEnum[] sort;
+    public GetClassificationInclusionsRequest withSort(GetClassificationInclusionsSortEnum[] sort) {
+        this.sort = sort;
         return this;
     }
     

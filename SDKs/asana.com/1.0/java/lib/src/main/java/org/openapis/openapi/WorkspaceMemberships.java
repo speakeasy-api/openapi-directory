@@ -42,13 +42,13 @@ public class WorkspaceMemberships {
      */
     public org.openapis.openapi.models.operations.GetWorkspaceMembershipResponse getWorkspaceMembership(org.openapis.openapi.models.operations.GetWorkspaceMembershipRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceMembershipPathParams.class, baseUrl, "/workspace_memberships/{workspace_membership_gid}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceMembershipRequest.class, baseUrl, "/workspace_memberships/{workspace_membership_gid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceMembershipQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceMembershipRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -96,13 +96,13 @@ public class WorkspaceMemberships {
      */
     public org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserResponse getWorkspaceMembershipsForUser(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserPathParams.class, baseUrl, "/users/{user_gid}/workspace_memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserRequest.class, baseUrl, "/users/{user_gid}/workspace_memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -150,13 +150,13 @@ public class WorkspaceMemberships {
      */
     public org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceResponse getWorkspaceMembershipsForWorkspace(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspacePathParams.class, baseUrl, "/workspaces/{workspace_gid}/workspace_memberships", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceRequest.class, baseUrl, "/workspaces/{workspace_gid}/workspace_memberships", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWorkspaceMembershipsForWorkspaceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

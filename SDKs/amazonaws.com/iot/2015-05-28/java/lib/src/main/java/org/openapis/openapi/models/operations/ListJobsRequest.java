@@ -4,20 +4,125 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListJobsRequest {
-    
-    public ListJobsQueryParams queryParams;
-    public ListJobsRequest withQueryParams(ListJobsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListJobsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListJobsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public ListJobsHeaders headers;
-    public ListJobsRequest withHeaders(ListJobsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListJobsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListJobsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListJobsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListJobsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListJobsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The maximum number of results to return per request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public ListJobsRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The namespace used to indicate that a job is a customer-managed job.&lt;/p&gt; &lt;p&gt;When you specify a value for this parameter, Amazon Web Services IoT Core sends jobs notifications to MQTT topics that contain the value in the following format.&lt;/p&gt; &lt;p&gt; &lt;code&gt;$aws/things/&lt;i&gt;THING_NAME&lt;/i&gt;/jobs/&lt;i&gt;JOB_ID&lt;/i&gt;/notify-namespace-&lt;i&gt;NAMESPACE_ID&lt;/i&gt;/&lt;/code&gt; &lt;/p&gt; &lt;note&gt; &lt;p&gt;The &lt;code&gt;namespaceId&lt;/code&gt; feature is in public preview.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=namespaceId")
+    public String namespaceId;
+    public ListJobsRequest withNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
+        return this;
+    }
+    
+    /**
+     * The token to retrieve the next set of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
+    public String nextToken;
+    public ListJobsRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    
+    /**
+     * An optional filter that lets you search for jobs that have the specified status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public ListJobsStatusEnum status;
+    public ListJobsRequest withStatus(ListJobsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;Specifies whether the job will continue to run (CONTINUOUS), or will be complete after all those things specified as targets have completed the job (SNAPSHOT). If continuous, the job may also be run on a thing when a change is detected in a target. For example, a job will run on a thing when the thing is added to a target group, even after the job was completed by all things originally in the group. &lt;/p&gt; &lt;note&gt; &lt;p&gt;We recommend that you use continuous jobs instead of snapshot jobs for dynamic thing group targets. By using continuous jobs, devices that join the group receive the job execution even after the job has been created.&lt;/p&gt; &lt;/note&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=targetSelection")
+    public ListJobsTargetSelectionEnum targetSelection;
+    public ListJobsRequest withTargetSelection(ListJobsTargetSelectionEnum targetSelection) {
+        this.targetSelection = targetSelection;
+        return this;
+    }
+    
+    /**
+     * A filter that limits the returned jobs to those for the specified group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thingGroupId")
+    public String thingGroupId;
+    public ListJobsRequest withThingGroupId(String thingGroupId) {
+        this.thingGroupId = thingGroupId;
+        return this;
+    }
+    
+    /**
+     * A filter that limits the returned jobs to those for the specified group.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thingGroupName")
+    public String thingGroupName;
+    public ListJobsRequest withThingGroupName(String thingGroupName) {
+        this.thingGroupName = thingGroupName;
         return this;
     }
     

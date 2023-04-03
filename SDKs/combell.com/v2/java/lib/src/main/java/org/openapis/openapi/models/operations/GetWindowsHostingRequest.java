@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWindowsHostingRequest {
-    
-    public GetWindowsHostingPathParams pathParams;
-    public GetWindowsHostingRequest withPathParams(GetWindowsHostingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public GetWindowsHostingRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
-    
-    public GetWindowsHostingQueryParams queryParams;
-    public GetWindowsHostingRequest withQueryParams(GetWindowsHostingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The Windows hosting domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public GetWindowsHostingRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     

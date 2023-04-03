@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomersAccountAnnouncementsAnnouncementIdRequest {
+    /**
+     * Account ID of customer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
+    public Long account;
+    public GetCustomersAccountAnnouncementsAnnouncementIdRequest withAccount(Long account) {
+        this.account = account;
+        return this;
+    }
     
-    public GetCustomersAccountAnnouncementsAnnouncementIdPathParams pathParams;
-    public GetCustomersAccountAnnouncementsAnnouncementIdRequest withPathParams(GetCustomersAccountAnnouncementsAnnouncementIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Announcement ID of audio file
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=announcement_id")
+    public String announcementId;
+    public GetCustomersAccountAnnouncementsAnnouncementIdRequest withAnnouncementId(String announcementId) {
+        this.announcementId = announcementId;
         return this;
     }
     

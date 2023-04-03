@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderNumbersRequest {
-    
-    public OrderNumbersQueryParams queryParams;
-    public OrderNumbersRequest withQueryParams(OrderNumbersQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Request object contains a list of numbers to buy, you can filter the numbers by their region information: city, state, zipcode, etc
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.NumberPurchaseRequest request;
-    public OrderNumbersRequest withRequest(org.openapis.openapi.models.shared.NumberPurchaseRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.NumberPurchaseRequest numberPurchaseRequest;
+    public OrderNumbersRequest withNumberPurchaseRequest(org.openapis.openapi.models.shared.NumberPurchaseRequest numberPurchaseRequest) {
+        this.numberPurchaseRequest = numberPurchaseRequest;
         return this;
     }
     
-    
-    public OrderNumbersSecurity security;
-    public OrderNumbersRequest withSecurity(OrderNumbersSecurity security) {
-        this.security = security;
+    /**
+     * Limit fields received in response. E.g. fields: id, name or fields items (id, name), see more at [partial response](https://developers.callfire.com/docs.html#partial-response) page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public OrderNumbersRequest withFields(String fields) {
+        this.fields = fields;
         return this;
     }
     

@@ -42,13 +42,13 @@ public class UserMediaLists {
      */
     public org.openapis.openapi.models.operations.GetResourcesUserMediaListsIdJsonResponse getResourcesUserMediaListsIdJson(org.openapis.openapi.models.operations.GetResourcesUserMediaListsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesUserMediaListsIdJsonPathParams.class, baseUrl, "/resources/userMediaLists/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetResourcesUserMediaListsIdJsonRequest.class, baseUrl, "/resources/userMediaLists/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesUserMediaListsIdJsonQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetResourcesUserMediaListsIdJsonRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBelegRequest {
+    /**
+     * The `_uuid` of the `Beleg` to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=belegUuid")
+    public String belegUuid;
+    public GetBelegRequest withBelegUuid(String belegUuid) {
+        this.belegUuid = belegUuid;
+        return this;
+    }
     
-    public GetBelegPathParams pathParams;
-    public GetBelegRequest withPathParams(GetBelegPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The `_uuid` of the `Registrierkasse` that contains the requested `Beleg`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
+    public String registrierkasseUuid;
+    public GetBelegRequest withRegistrierkasseUuid(String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     

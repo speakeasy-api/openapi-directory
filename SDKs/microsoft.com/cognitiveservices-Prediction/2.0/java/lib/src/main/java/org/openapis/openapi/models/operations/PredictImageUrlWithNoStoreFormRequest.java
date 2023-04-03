@@ -7,34 +7,51 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageUrlWithNoStoreFormRequest {
-    
-    public PredictImageUrlWithNoStoreFormPathParams pathParams;
-    public PredictImageUrlWithNoStoreFormRequest withPathParams(PredictImageUrlWithNoStoreFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PredictImageUrlWithNoStoreFormQueryParams queryParams;
-    public PredictImageUrlWithNoStoreFormRequest withQueryParams(PredictImageUrlWithNoStoreFormQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PredictImageUrlWithNoStoreFormHeaders headers;
-    public PredictImageUrlWithNoStoreFormRequest withHeaders(PredictImageUrlWithNoStoreFormHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be evaluated
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public PredictImageUrlWithNoStoreFormRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public PredictImageUrlWithNoStoreFormRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
+    public String predictionKey;
+    public PredictImageUrlWithNoStoreFormRequest withPredictionKey(String predictionKey) {
+        this.predictionKey = predictionKey;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the name of application using the endpoint
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
+    public String application;
+    public PredictImageUrlWithNoStoreFormRequest withApplication(String application) {
+        this.application = application;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the id of a particular iteration to evaluate against.
+     *             The default iteration for the project will be used when not specified
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public PredictImageUrlWithNoStoreFormRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public PredictImageUrlWithNoStoreFormRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

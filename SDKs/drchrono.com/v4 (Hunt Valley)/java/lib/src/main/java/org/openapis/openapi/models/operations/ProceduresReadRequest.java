@@ -4,27 +4,55 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProceduresReadRequest {
-    
-    public ProceduresReadPathParams pathParams;
-    public ProceduresReadRequest withPathParams(ProceduresReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
+    public Long appointment;
+    public ProceduresReadRequest withAppointment(Long appointment) {
+        this.appointment = appointment;
         return this;
     }
     
-    
-    public ProceduresReadQueryParams queryParams;
-    public ProceduresReadRequest withQueryParams(ProceduresReadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public ProceduresReadRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ProceduresReadRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public ProceduresReadSecurity security;
-    public ProceduresReadRequest withSecurity(ProceduresReadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date")
+    public String muDate;
+    public ProceduresReadRequest withMuDate(String muDate) {
+        this.muDate = muDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mu_date_range")
+    public String muDateRange;
+    public ProceduresReadRequest withMuDateRange(String muDateRange) {
+        this.muDateRange = muDateRange;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
+    public Long patient;
+    public ProceduresReadRequest withPatient(Long patient) {
+        this.patient = patient;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_date")
+    public String serviceDate;
+    public ProceduresReadRequest withServiceDate(String serviceDate) {
+        this.serviceDate = serviceDate;
         return this;
     }
     

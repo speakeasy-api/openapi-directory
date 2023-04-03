@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelTerminalCheckoutRequest {
-    
-    public CancelTerminalCheckoutPathParams pathParams;
-    public CancelTerminalCheckoutRequest withPathParams(CancelTerminalCheckoutPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CancelTerminalCheckoutSecurity security;
-    public CancelTerminalCheckoutRequest withSecurity(CancelTerminalCheckoutSecurity security) {
-        this.security = security;
+    /**
+     * The unique ID for the desired `TerminalCheckout`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=checkout_id")
+    public String checkoutId;
+    public CancelTerminalCheckoutRequest withCheckoutId(String checkoutId) {
+        this.checkoutId = checkoutId;
         return this;
     }
     

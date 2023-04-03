@@ -20,19 +20,15 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption1;
 import org.openapis.openapi.models.operations.FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption2;
 import org.openapis.openapi.models.operations.FirestoreProjectsDatabasesDocumentsBatchGetSecurity;
-import org.openapis.openapi.models.operations.FirestoreProjectsDatabasesDocumentsBatchGetPathParams;
-import org.openapis.openapi.models.operations.FirestoreProjectsDatabasesDocumentsBatchGetQueryParams;
 import org.openapis.openapi.models.operations.FirestoreProjectsDatabasesDocumentsBatchGetRequest;
 import org.openapis.openapi.models.operations.FirestoreProjectsDatabasesDocumentsBatchGetResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchGetDocumentsRequest;
 import org.openapis.openapi.models.shared.TransactionOptions;
 import org.openapis.openapi.models.shared.ReadWrite;
 import org.openapis.openapi.models.shared.ReadOnly;
 import org.openapis.openapi.models.shared.DocumentMask;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -41,59 +37,51 @@ public class Application {
                 .build();
 
             FirestoreProjectsDatabasesDocumentsBatchGetRequest req = new FirestoreProjectsDatabasesDocumentsBatchGetRequest() {{
-                security = new FirestoreProjectsDatabasesDocumentsBatchGetSecurity() {{
-                    option1 = new FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new FirestoreProjectsDatabasesDocumentsBatchGetPathParams() {{
-                    database = "corrupti";
-                }};
-                queryParams = new FirestoreProjectsDatabasesDocumentsBatchGetQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    uploadType = "error";
-                    uploadProtocol = "deserunt";
-                }};
-                request = new BatchGetDocumentsRequest() {{
+                dollarXgafv = "2";
+                batchGetDocumentsRequest = new BatchGetDocumentsRequest() {{
                     documents = new String[]{{
-                        add("iure"),
-                        add("magnam"),
+                        add("distinctio"),
+                        add("quibusdam"),
+                        add("unde"),
                     }};
                     mask = new DocumentMask() {{
                         fieldPaths = new String[]{{
-                            add("ipsa"),
-                            add("delectus"),
-                            add("tempora"),
-                            add("suscipit"),
+                            add("corrupti"),
+                            add("illum"),
+                            add("vel"),
+                            add("error"),
                         }};
                     }};
                     newTransaction = new TransactionOptions() {{
                         readOnly = new ReadOnly() {{
-                            readTime = "molestiae";
+                            readTime = "deserunt";
                         }};
                         readWrite = new ReadWrite() {{
-                            retryTransaction = "minus";
+                            retryTransaction = "suscipit";
                         }};
                     }};
-                    readTime = "placeat";
-                    transaction = "voluptatum";
+                    readTime = "iure";
+                    transaction = "magnam";
                 }};
-            }};            
+                accessToken = "debitis";
+                alt = "json";
+                callback = "delectus";
+                database = "tempora";
+                fields = "suscipit";
+                key = "molestiae";
+                oauthToken = "minus";
+                prettyPrint = false;
+                quotaUser = "placeat";
+                uploadType = "voluptatum";
+                uploadProtocol = "iusto";
+            }}            
 
-            FirestoreProjectsDatabasesDocumentsBatchGetResponse res = sdk.projects.firestoreProjectsDatabasesDocumentsBatchGet(req);
+            FirestoreProjectsDatabasesDocumentsBatchGetResponse res = sdk.projects.firestoreProjectsDatabasesDocumentsBatchGet(req, new FirestoreProjectsDatabasesDocumentsBatchGetSecurity() {{
+                option1 = new FirestoreProjectsDatabasesDocumentsBatchGetSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.batchGetDocumentsResponse.isPresent()) {
                 // handle response
@@ -105,7 +93,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesTagsIdMediaFormatRequest {
-    
-    public GetResourcesTagsIdMediaFormatPathParams pathParams;
-    public GetResourcesTagsIdMediaFormatRequest withPathParams(GetResourcesTagsIdMediaFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public String format;
+    public GetResourcesTagsIdMediaFormatRequest withFormat(String format) {
+        this.format = format;
         return this;
     }
     
+    /**
+     * The id of the tag to look up
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesTagsIdMediaFormatRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetResourcesTagsIdMediaFormatQueryParams queryParams;
-    public GetResourcesTagsIdMediaFormatRequest withQueryParams(GetResourcesTagsIdMediaFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of records to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
+    public Integer max;
+    public GetResourcesTagsIdMediaFormatRequest withMax(Integer max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Return records starting at the offset index.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
+    public Integer offset;
+    public GetResourcesTagsIdMediaFormatRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * The name of the property to which sorting will be applied
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public String sort;
+    public GetResourcesTagsIdMediaFormatRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

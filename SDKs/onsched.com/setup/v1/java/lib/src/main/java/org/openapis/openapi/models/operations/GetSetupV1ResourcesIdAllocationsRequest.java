@@ -4,20 +4,57 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1ResourcesIdAllocationsRequest {
-    
-    public GetSetupV1ResourcesIdAllocationsPathParams pathParams;
-    public GetSetupV1ResourcesIdAllocationsRequest withPathParams(GetSetupV1ResourcesIdAllocationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * yyyy-mm-dd, filter on/before endDate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public OffsetDateTime endDate;
+    public GetSetupV1ResourcesIdAllocationsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
+    /**
+     * id of resource to list allocations for
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetSetupV1ResourcesIdAllocationsRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetSetupV1ResourcesIdAllocationsQueryParams queryParams;
-    public GetSetupV1ResourcesIdAllocationsRequest withQueryParams(GetSetupV1ResourcesIdAllocationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page limit default 20, max 100
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetSetupV1ResourcesIdAllocationsRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Starting row of page, default 0
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetSetupV1ResourcesIdAllocationsRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * yyyy-mm-dd, filter allocations on/after startDate
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public OffsetDateTime startDate;
+    public GetSetupV1ResourcesIdAllocationsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
         return this;
     }
     

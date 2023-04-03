@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuppliersGetOpeningBalanceRequest {
-    
-    public SuppliersGetOpeningBalancePathParams pathParams;
-    public SuppliersGetOpeningBalanceRequest withPathParams(SuppliersGetOpeningBalancePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Supplier to return opening balances.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public SuppliersGetOpeningBalanceRequest withItemId(Long itemId) {
+        this.itemId = itemId;
         return this;
     }
     

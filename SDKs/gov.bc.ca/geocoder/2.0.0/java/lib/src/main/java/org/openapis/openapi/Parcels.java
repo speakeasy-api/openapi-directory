@@ -35,7 +35,7 @@ public class Parcels {
      */
     public org.openapis.openapi.models.operations.GetParcelsPidsSiteIDOutputFormatResponse getParcelsPidsSiteIDOutputFormat(org.openapis.openapi.models.operations.GetParcelsPidsSiteIDOutputFormatRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetParcelsPidsSiteIDOutputFormatPathParams.class, baseUrl, "/parcels/pids/{siteID}.{outputFormat}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetParcelsPidsSiteIDOutputFormatRequest.class, baseUrl, "/parcels/pids/{siteID}.{outputFormat}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

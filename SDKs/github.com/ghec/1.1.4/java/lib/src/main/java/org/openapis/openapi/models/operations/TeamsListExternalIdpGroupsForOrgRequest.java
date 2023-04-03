@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListExternalIdpGroupsForOrgRequest {
-    
-    public TeamsListExternalIdpGroupsForOrgPathParams pathParams;
-    public TeamsListExternalIdpGroupsForOrgRequest withPathParams(TeamsListExternalIdpGroupsForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Limits the list to groups containing the text in the group name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=display_name")
+    public String displayName;
+    public TeamsListExternalIdpGroupsForOrgRequest withDisplayName(String displayName) {
+        this.displayName = displayName;
         return this;
     }
     
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsListExternalIdpGroupsForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public TeamsListExternalIdpGroupsForOrgQueryParams queryParams;
-    public TeamsListExternalIdpGroupsForOrgRequest withQueryParams(TeamsListExternalIdpGroupsForOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page token
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public TeamsListExternalIdpGroupsForOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public TeamsListExternalIdpGroupsForOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

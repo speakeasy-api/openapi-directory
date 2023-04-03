@@ -39,13 +39,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.DeleteCisInstructionResponse deleteCisInstruction(org.openapis.openapi.models.operations.DeleteCisInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -88,13 +88,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.DeleteCisInstructionTagResponse deleteCisInstructionTag(org.openapis.openapi.models.operations.DeleteCisInstructionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisInstructionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisInstructionTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -137,13 +137,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.DeleteCisLineResponse deleteCisLine(org.openapis.openapi.models.operations.DeleteCisLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLinePathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -186,13 +186,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.DeleteCisLineTagResponse deleteCisLineTag(org.openapis.openapi.models.operations.DeleteCisLineTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -235,13 +235,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.DeleteCisLineTypeResponse deleteCisLineType(org.openapis.openapi.models.operations.DeleteCisLineTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTypePathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTypeRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -284,13 +284,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.DeleteCisLineTypeTagResponse deleteCisLineTypeTag(org.openapis.openapi.models.operations.DeleteCisLineTypeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTypeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisLineTypeTagRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -333,13 +333,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.DeleteCisTransactionResponse deleteCisTransaction(org.openapis.openapi.models.operations.DeleteCisTransactionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisTransactionPathParams.class, baseUrl, "/Employer/{EmployerId}/CisTransaction/{CisTransactionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCisTransactionRequest.class, baseUrl, "/Employer/{EmployerId}/CisTransaction/{CisTransactionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -382,13 +382,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.DeleteSubContractorTagResponse deleteSubContractorTag(org.openapis.openapi.models.operations.DeleteSubContractorTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteSubContractorTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -431,13 +431,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetAllCisInstructionTagsResponse getAllCisInstructionTags(org.openapis.openapi.models.operations.GetAllCisInstructionTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisInstructionTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisInstructionTagsRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -486,13 +486,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetAllCisLineTagsResponse getAllCisLineTags(org.openapis.openapi.models.operations.GetAllCisLineTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisLineTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisLineTagsRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -541,13 +541,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetAllCisLineTypeTagsResponse getAllCisLineTypeTags(org.openapis.openapi.models.operations.GetAllCisLineTypeTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisLineTypeTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllCisLineTypeTagsRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -596,13 +596,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetAllSubContractorTagsResponse getAllSubContractorTags(org.openapis.openapi.models.operations.GetAllSubContractorTagsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllSubContractorTagsPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractors/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllSubContractorTagsRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractors/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -651,13 +651,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisInstructionFromSubContractorResponse getCisInstructionFromSubContractor(org.openapis.openapi.models.operations.GetCisInstructionFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisInstructionFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisInstructionFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -706,13 +706,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisInstructionsFromSubContractorResponse getCisInstructionsFromSubContractor(org.openapis.openapi.models.operations.GetCisInstructionsFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisInstructionsFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisInstructionsFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -761,13 +761,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisInstructionsWithTagResponse getCisInstructionsWithTag(org.openapis.openapi.models.operations.GetCisInstructionsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisInstructionsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisInstructionsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -816,13 +816,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisLineFromSubContractorResponse getCisLineFromSubContractor(org.openapis.openapi.models.operations.GetCisLineFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -871,13 +871,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisLineTypeFromEmployerResponse getCisLineTypeFromEmployer(org.openapis.openapi.models.operations.GetCisLineTypeFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineTypeFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineTypeFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -926,13 +926,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisLineTypesFromEmployerResponse getCisLineTypesFromEmployer(org.openapis.openapi.models.operations.GetCisLineTypesFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineTypesFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineTypesFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -981,13 +981,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisLineTypesWithTagResponse getCisLineTypesWithTag(org.openapis.openapi.models.operations.GetCisLineTypesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineTypesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLineTypesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1036,13 +1036,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisLinesFromSubContractorResponse getCisLinesFromSubContractor(org.openapis.openapi.models.operations.GetCisLinesFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLinesFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLinesFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1091,13 +1091,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisLinesWithTagResponse getCisLinesWithTag(org.openapis.openapi.models.operations.GetCisLinesWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLinesWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisLinesWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLines/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1146,13 +1146,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisTransactionFromEmployerResponse getCisTransactionFromEmployer(org.openapis.openapi.models.operations.GetCisTransactionFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisTransactionFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/CisTransaction/{CisTransactionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisTransactionFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/CisTransaction/{CisTransactionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1201,13 +1201,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetCisTransactionsFromEmployerResponse getCisTransactionsFromEmployer(org.openapis.openapi.models.operations.GetCisTransactionsFromEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisTransactionsFromEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/CisTransactions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCisTransactionsFromEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/CisTransactions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1256,13 +1256,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetSubContractorsWithTagResponse getSubContractorsWithTag(org.openapis.openapi.models.operations.GetSubContractorsWithTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorsWithTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractors/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSubContractorsWithTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractors/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1311,13 +1311,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagFromCisInstructionResponse getTagFromCisInstruction(org.openapis.openapi.models.operations.GetTagFromCisInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1366,13 +1366,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagFromCisLineResponse getTagFromCisLine(org.openapis.openapi.models.operations.GetTagFromCisLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisLinePathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisLineRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1421,13 +1421,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagFromCisLineTypeResponse getTagFromCisLineType(org.openapis.openapi.models.operations.GetTagFromCisLineTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisLineTypePathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromCisLineTypeRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1476,13 +1476,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagFromSubContractorResponse getTagFromSubContractor(org.openapis.openapi.models.operations.GetTagFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1531,13 +1531,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagFromSubContractorRevisionResponse getTagFromSubContractorRevision(org.openapis.openapi.models.operations.GetTagFromSubContractorRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromSubContractorRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagFromSubContractorRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1586,13 +1586,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagsFromCisInstructionResponse getTagsFromCisInstruction(org.openapis.openapi.models.operations.GetTagsFromCisInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1641,13 +1641,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagsFromCisLineResponse getTagsFromCisLine(org.openapis.openapi.models.operations.GetTagsFromCisLineRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisLinePathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisLineRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1696,13 +1696,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagsFromCisLineTypeResponse getTagsFromCisLineType(org.openapis.openapi.models.operations.GetTagsFromCisLineTypeRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisLineTypePathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromCisLineTypeRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1751,13 +1751,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagsFromSubContractorResponse getTagsFromSubContractor(org.openapis.openapi.models.operations.GetTagsFromSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1806,13 +1806,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.GetTagsFromSubContractorRevisionResponse getTagsFromSubContractorRevision(org.openapis.openapi.models.operations.GetTagsFromSubContractorRevisionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromSubContractorRevisionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags/{EffectiveDate}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTagsFromSubContractorRevisionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tags/{EffectiveDate}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1861,13 +1861,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PatchCisInstructionResponse patchCisInstruction(org.openapis.openapi.models.operations.PatchCisInstructionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCisInstructionPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchCisInstructionRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1916,18 +1916,18 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PostCisInstructionIntoSubContractorResponse postCisInstructionIntoSubContractor(org.openapis.openapi.models.operations.PostCisInstructionIntoSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCisInstructionIntoSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCisInstructionIntoSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstructions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cisInstruction", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -1976,18 +1976,18 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PostCisLineTypeIntoEmployerResponse postCisLineTypeIntoEmployer(org.openapis.openapi.models.operations.PostCisLineTypeIntoEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCisLineTypeIntoEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostCisLineTypeIntoEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cisLineType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2036,18 +2036,18 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PutCisInstructionIntoSubContractorResponse putCisInstructionIntoSubContractor(org.openapis.openapi.models.operations.PutCisInstructionIntoSubContractorRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisInstructionIntoSubContractorPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisInstructionIntoSubContractorRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cisInstruction", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2096,13 +2096,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PutCisInstructionTagResponse putCisInstructionTag(org.openapis.openapi.models.operations.PutCisInstructionTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisInstructionTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisInstructionTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisInstruction/{CisInstructionId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2151,13 +2151,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PutCisLineTagResponse putCisLineTag(org.openapis.openapi.models.operations.PutCisLineTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/CisLine/{CisLineId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2206,18 +2206,18 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PutCisLineTypeIntoEmployerResponse putCisLineTypeIntoEmployer(org.openapis.openapi.models.operations.PutCisLineTypeIntoEmployerRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTypeIntoEmployerPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTypeIntoEmployerRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "cisLineType", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2266,13 +2266,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PutCisLineTypeTagResponse putCisLineTypeTag(org.openapis.openapi.models.operations.PutCisLineTypeTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTypeTagPathParams.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutCisLineTypeTagRequest.class, baseUrl, "/Employer/{EmployerId}/CisLineType/{CisLineTypeId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -2321,13 +2321,13 @@ public class Cis {
      */
     public org.openapis.openapi.models.operations.PutSubContractorTagResponse putSubContractorTag(org.openapis.openapi.models.operations.PutSubContractorTagRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSubContractorTagPathParams.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutSubContractorTagRequest.class, baseUrl, "/Employer/{EmployerId}/SubContractor/{SubContractorId}/Tag/{TagId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

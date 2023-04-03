@@ -33,10 +33,11 @@ public class ThreatLists {
     /**
      * Gets the most recent threat list diffs. These diffs should be applied to a local database of hashes to keep it up-to-date. If the local database is empty or excessively out-of-date, a complete snapshot of the database will be returned. This Method only updates a single ThreatList at a time. To update multiple ThreatList databases, this method needs to be called once for each list.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.WebriskThreatListsComputeDiffResponse webriskThreatListsComputeDiff(org.openapis.openapi.models.operations.WebriskThreatListsComputeDiffRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.WebriskThreatListsComputeDiffResponse webriskThreatListsComputeDiff(org.openapis.openapi.models.operations.WebriskThreatListsComputeDiffRequest request, org.openapis.openapi.models.operations.WebriskThreatListsComputeDiffSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/threatLists:computeDiff");
         
@@ -44,14 +45,14 @@ public class ThreatLists {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebriskThreatListsComputeDiffQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.WebriskThreatListsComputeDiffRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

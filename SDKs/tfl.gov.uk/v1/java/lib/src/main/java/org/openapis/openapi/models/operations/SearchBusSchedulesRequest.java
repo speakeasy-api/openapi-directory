@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchBusSchedulesRequest {
-    
-    public SearchBusSchedulesQueryParams queryParams;
-    public SearchBusSchedulesRequest withQueryParams(SearchBusSchedulesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The search query
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public SearchBusSchedulesRequest withQuery(String query) {
+        this.query = query;
         return this;
     }
     

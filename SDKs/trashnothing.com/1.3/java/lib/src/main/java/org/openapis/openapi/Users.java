@@ -43,7 +43,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ChangeEmailResponse changeEmail(org.openapis.openapi.models.operations.ChangeEmailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ChangeEmailResponse changeEmail(org.openapis.openapi.models.operations.ChangeEmailRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/me/email");
         
@@ -81,7 +81,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateAlertResponse createAlert(org.openapis.openapi.models.operations.CreateAlertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateAlertResponse createAlert(org.openapis.openapi.models.operations.CreateAlertRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/me/alerts");
         
@@ -129,7 +129,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.DeleteAlertResponse deleteAlert(org.openapis.openapi.models.operations.DeleteAlertRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlertPathParams.class, baseUrl, "/users/me/alerts/{alert_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAlertRequest.class, baseUrl, "/users/me/alerts/{alert_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -246,7 +246,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCurrentUserGroupsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCurrentUserGroupsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -295,7 +295,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCurrentUserPostsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetCurrentUserPostsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -377,13 +377,13 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetProfileImageFileResponse getProfileImageFile(org.openapis.openapi.models.operations.GetProfileImageFileRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProfileImageFilePathParams.class, baseUrl, "/users/{user_id}/profile-image", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetProfileImageFileRequest.class, baseUrl, "/users/{user_id}/profile-image", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileImageFileQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetProfileImageFileRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -454,7 +454,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetUserResponse getUser(org.openapis.openapi.models.operations.GetUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPathParams.class, baseUrl, "/users/{user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserRequest.class, baseUrl, "/users/{user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -497,7 +497,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.GetUserAndRelatedDataResponse getUserAndRelatedData(org.openapis.openapi.models.operations.GetUserAndRelatedDataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserAndRelatedDataPathParams.class, baseUrl, "/users/{user_id}/display", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserAndRelatedDataRequest.class, baseUrl, "/users/{user_id}/display", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -544,7 +544,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserGroupNoticesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserGroupNoticesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -582,25 +582,26 @@ public class Users {
      * NOTE: In order to make it easier to see all a users&amp;#39; posts, the current users&amp;#39; location preferences are not applied when listing or searching posts from a single user.  If location based filtering of the posts is needed, the latitude, longitude and radius parameters may be used.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserPostsResponse getUserPosts(org.openapis.openapi.models.operations.GetUserPostsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUserPostsResponse getUserPosts(org.openapis.openapi.models.operations.GetUserPostsRequest request, org.openapis.openapi.models.operations.GetUserPostsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPostsPathParams.class, baseUrl, "/users/{user_id}/posts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserPostsRequest.class, baseUrl, "/users/{user_id}/posts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserPostsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserPostsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -636,7 +637,7 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.RemoveUserFeedbackResponse removeUserFeedback(org.openapis.openapi.models.operations.RemoveUserFeedbackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveUserFeedbackPathParams.class, baseUrl, "/users/{user_id}/feedback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RemoveUserFeedbackRequest.class, baseUrl, "/users/{user_id}/feedback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -675,7 +676,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ReportUserResponse reportUser(org.openapis.openapi.models.operations.ReportUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ReportUserResponse reportUser(org.openapis.openapi.models.operations.ReportUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/report");
         
@@ -744,7 +745,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SavePostLocationResponse savePostLocation(org.openapis.openapi.models.operations.SavePostLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SavePostLocationResponse savePostLocation(org.openapis.openapi.models.operations.SavePostLocationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/me/post-locations");
         
@@ -798,7 +799,7 @@ public class Users {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchCurrentUserPostsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchCurrentUserPostsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -836,25 +837,26 @@ public class Users {
      * Searching posts takes the same arguments as listing posts except for the addition of the search and sort_by parameters.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchUserPostsResponse searchUserPosts(org.openapis.openapi.models.operations.SearchUserPostsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchUserPostsResponse searchUserPosts(org.openapis.openapi.models.operations.SearchUserPostsRequest request, org.openapis.openapi.models.operations.SearchUserPostsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SearchUserPostsPathParams.class, baseUrl, "/users/{user_id}/posts/search", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SearchUserPostsRequest.class, baseUrl, "/users/{user_id}/posts/search", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchUserPostsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SearchUserPostsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -962,7 +964,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SetProfileImageResponse setProfileImage(org.openapis.openapi.models.operations.SetProfileImageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SetProfileImageResponse setProfileImage(org.openapis.openapi.models.operations.SetProfileImageRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/me/profile-image");
         
@@ -1009,12 +1011,12 @@ public class Users {
      */
     public org.openapis.openapi.models.operations.SubmitUserFeedbackResponse submitUserFeedback(org.openapis.openapi.models.operations.SubmitUserFeedbackRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitUserFeedbackPathParams.class, baseUrl, "/users/{user_id}/feedback", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitUserFeedbackRequest.class, baseUrl, "/users/{user_id}/feedback", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1055,7 +1057,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCurrentUserResponse updateCurrentUser(org.openapis.openapi.models.operations.UpdateCurrentUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCurrentUserResponse updateCurrentUser(org.openapis.openapi.models.operations.UpdateCurrentUserRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/me");
         
@@ -1100,7 +1102,7 @@ public class Users {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateLocationResponse updateLocation(org.openapis.openapi.models.operations.UpdateLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateLocationResponse updateLocation(org.openapis.openapi.models.operations.UpdateLocationRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users/me/location");
         

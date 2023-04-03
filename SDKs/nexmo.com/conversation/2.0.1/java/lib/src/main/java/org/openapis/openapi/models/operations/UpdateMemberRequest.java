@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMemberRequest {
-    
-    public UpdateMemberPathParams pathParams;
-    public UpdateMemberRequest withPathParams(UpdateMemberPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateMemberRequestBody requestBody;
+    public UpdateMemberRequest withRequestBody(UpdateMemberRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateMemberRequestBody request;
-    public UpdateMemberRequest withRequest(UpdateMemberRequestBody request) {
-        this.request = request;
+    /**
+     * Conversation ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversation_id")
+    public String conversationId;
+    public UpdateMemberRequest withConversationId(String conversationId) {
+        this.conversationId = conversationId;
+        return this;
+    }
+    
+    /**
+     * Member ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=member_id")
+    public String memberId;
+    public UpdateMemberRequest withMemberId(String memberId) {
+        this.memberId = memberId;
         return this;
     }
     

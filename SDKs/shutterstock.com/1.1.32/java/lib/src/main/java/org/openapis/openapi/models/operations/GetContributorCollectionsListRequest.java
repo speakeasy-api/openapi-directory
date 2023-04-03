@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContributorCollectionsListRequest {
-    
-    public GetContributorCollectionsListPathParams pathParams;
-    public GetContributorCollectionsListRequest withPathParams(GetContributorCollectionsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Contributor ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contributor_id")
+    public String contributorId;
+    public GetContributorCollectionsListRequest withContributorId(String contributorId) {
+        this.contributorId = contributorId;
         return this;
     }
     
-    
-    public GetContributorCollectionsListQueryParams queryParams;
-    public GetContributorCollectionsListRequest withQueryParams(GetContributorCollectionsListQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetContributorCollectionsListSecurity security;
-    public GetContributorCollectionsListRequest withSecurity(GetContributorCollectionsListSecurity security) {
-        this.security = security;
+    /**
+     * Sort order
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetContributorCollectionsListSortEnum sort;
+    public GetContributorCollectionsListRequest withSort(GetContributorCollectionsListSortEnum sort) {
+        this.sort = sort;
         return this;
     }
     

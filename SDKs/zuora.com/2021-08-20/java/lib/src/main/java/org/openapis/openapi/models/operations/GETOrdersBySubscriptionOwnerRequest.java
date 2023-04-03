@@ -4,27 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETOrdersBySubscriptionOwnerRequest {
-    
-    public GETOrdersBySubscriptionOwnerPathParams pathParams;
-    public GETOrdersBySubscriptionOwnerRequest withPathParams(GETOrdersBySubscriptionOwnerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETOrdersBySubscriptionOwnerRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
-    
-    public GETOrdersBySubscriptionOwnerQueryParams queryParams;
-    public GETOrdersBySubscriptionOwnerRequest withQueryParams(GETOrdersBySubscriptionOwnerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETOrdersBySubscriptionOwnerRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
+    /**
+     * The subscription owner account number.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountNumber")
+    public String accountNumber;
+    public GETOrdersBySubscriptionOwnerRequest withAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+        return this;
+    }
     
-    public GETOrdersBySubscriptionOwnerHeaders headers;
-    public GETOrdersBySubscriptionOwnerRequest withHeaders(GETOrdersBySubscriptionOwnerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The date type to filter on.
+     * This field value can be 'orderDate' or 'updatedDate'. Default is orderDate.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateFilterOption")
+    public String dateFilterOption;
+    public GETOrdersBySubscriptionOwnerRequest withDateFilterOption(String dateFilterOption) {
+        this.dateFilterOption = dateFilterOption;
+        return this;
+    }
+    
+    /**
+     * The result will only contain the orders with the date of 'dateFilterOption' earlier than or equal to this date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
+    public LocalDate endDate;
+    public GETOrdersBySubscriptionOwnerRequest withEndDate(LocalDate endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    
+    /**
+     * The page number of the orders retrieved. The default is 1.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GETOrdersBySubscriptionOwnerRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETOrdersBySubscriptionOwnerRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The result will only contain the orders with the date of 'dateFilterOption' later than or equal to this date.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
+    public LocalDate startDate;
+    public GETOrdersBySubscriptionOwnerRequest withStartDate(LocalDate startDate) {
+        this.startDate = startDate;
         return this;
     }
     

@@ -39,12 +39,12 @@ public class Deprecated {
      */
     public org.openapis.openapi.models.operations.BulkCreateTransactionsResponse bulkCreateTransactions(org.openapis.openapi.models.operations.BulkCreateTransactionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BulkCreateTransactionsPathParams.class, baseUrl, "/budgets/{budget_id}/transactions/bulk", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BulkCreateTransactionsRequest.class, baseUrl, "/budgets/{budget_id}/transactions/bulk", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bulkTransactions", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

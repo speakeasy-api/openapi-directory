@@ -32,15 +32,12 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionsSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionsIdSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionsIdPathParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionsIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostTransfersSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostTransfersRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostTransfersResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransactionSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransactionCategoryEnum.java
@@ -92,7 +89,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/RestServiceError.java
 lib/src/main/java/org/openapis/openapi/models/shared/JSONObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/JSONPath.java
 lib/src/main/java/org/openapis/openapi/models/shared/InvalidField.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferCategoryEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferDirectionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TransferPriorityEnum.java

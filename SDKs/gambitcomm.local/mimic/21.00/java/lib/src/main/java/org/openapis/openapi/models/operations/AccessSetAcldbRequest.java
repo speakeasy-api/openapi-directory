@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessSetAcldbRequest {
-    
-    public AccessSetAcldbPathParams pathParams;
-    public AccessSetAcldbRequest withPathParams(AccessSetAcldbPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Database name to use
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=databaseName")
+    public String databaseName;
+    public AccessSetAcldbRequest withDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
         return this;
     }
     

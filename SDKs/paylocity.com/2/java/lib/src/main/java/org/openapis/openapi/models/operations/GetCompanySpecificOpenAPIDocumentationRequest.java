@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompanySpecificOpenAPIDocumentationRequest {
-    
-    public GetCompanySpecificOpenAPIDocumentationPathParams pathParams;
-    public GetCompanySpecificOpenAPIDocumentationRequest withPathParams(GetCompanySpecificOpenAPIDocumentationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Bearer + JWT
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetCompanySpecificOpenAPIDocumentationRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
-    
-    public GetCompanySpecificOpenAPIDocumentationHeaders headers;
-    public GetCompanySpecificOpenAPIDocumentationRequest withHeaders(GetCompanySpecificOpenAPIDocumentationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetCompanySpecificOpenAPIDocumentationSecurity security;
-    public GetCompanySpecificOpenAPIDocumentationRequest withSecurity(GetCompanySpecificOpenAPIDocumentationSecurity security) {
-        this.security = security;
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompanySpecificOpenAPIDocumentationRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsListOwnersRequest {
-    
-    public GroupsListOwnersPathParams pathParams;
-    public GroupsListOwnersRequest withPathParams(GroupsListOwnersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Client API version.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
+    public String apiVersion;
+    public GroupsListOwnersRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The object ID of the group for which to get owners.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=objectId")
+    public String objectId;
+    public GroupsListOwnersRequest withObjectId(String objectId) {
+        this.objectId = objectId;
+        return this;
+    }
     
-    public GroupsListOwnersQueryParams queryParams;
-    public GroupsListOwnersRequest withQueryParams(GroupsListOwnersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The tenant ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tenantID")
+    public String tenantID;
+    public GroupsListOwnersRequest withTenantID(String tenantID) {
+        this.tenantID = tenantID;
         return this;
     }
     

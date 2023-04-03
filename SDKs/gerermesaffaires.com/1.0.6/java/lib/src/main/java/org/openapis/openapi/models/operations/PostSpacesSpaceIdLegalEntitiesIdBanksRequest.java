@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdLegalEntitiesIdBanksRequest {
-    
-    public PostSpacesSpaceIdLegalEntitiesIdBanksPathParams pathParams;
-    public PostSpacesSpaceIdLegalEntitiesIdBanksRequest withPathParams(PostSpacesSpaceIdLegalEntitiesIdBanksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Bank to add (except name, class and archivaldate)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostSpacesSpaceIdLegalEntitiesIdBanksRequestBody request;
-    public PostSpacesSpaceIdLegalEntitiesIdBanksRequest withRequest(PostSpacesSpaceIdLegalEntitiesIdBanksRequestBody request) {
-        this.request = request;
+    public PostSpacesSpaceIdLegalEntitiesIdBanksRequestBody requestBody;
+    public PostSpacesSpaceIdLegalEntitiesIdBanksRequest withRequestBody(PostSpacesSpaceIdLegalEntitiesIdBanksRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the bank or memberId
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdLegalEntitiesIdBanksRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdLegalEntitiesIdBanksSecurity security;
-    public PostSpacesSpaceIdLegalEntitiesIdBanksRequest withSecurity(PostSpacesSpaceIdLegalEntitiesIdBanksSecurity security) {
-        this.security = security;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdLegalEntitiesIdBanksRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

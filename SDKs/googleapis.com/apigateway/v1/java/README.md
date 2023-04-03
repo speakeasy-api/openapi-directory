@@ -18,18 +18,14 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreateSecurity;
-import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreatePathParams;
-import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreateQueryParams;
 import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreateRequest;
 import org.openapis.openapi.models.operations.ApigatewayProjectsLocationsApisConfigsCreateResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ApigatewayApiConfigInput;
 import org.openapis.openapi.models.shared.ApigatewayApiConfigOpenApiDocument;
 import org.openapis.openapi.models.shared.ApigatewayApiConfigFile;
 import org.openapis.openapi.models.shared.ApigatewayApiConfigGrpcServiceDefinition;
-import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -38,57 +34,57 @@ public class Application {
                 .build();
 
             ApigatewayProjectsLocationsApisConfigsCreateRequest req = new ApigatewayProjectsLocationsApisConfigsCreateRequest() {{
-                security = new ApigatewayProjectsLocationsApisConfigsCreateSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                    oauth2c = new SchemeOauth2c() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new ApigatewayProjectsLocationsApisConfigsCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new ApigatewayProjectsLocationsApisConfigsCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    apiConfigId = "unde";
-                    callback = "nulla";
-                    fields = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    prettyPrint = false;
-                    quotaUser = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new ApigatewayApiConfigInput() {{
-                    displayName = "iure";
-                    gatewayServiceAccount = "magnam";
+                dollarXgafv = "2";
+                apigatewayApiConfigInput = new ApigatewayApiConfigInput() {{
+                    displayName = "provident";
+                    gatewayServiceAccount = "distinctio";
                     grpcServices = new org.openapis.openapi.models.shared.ApigatewayApiConfigGrpcServiceDefinition[]{{
                         add(new ApigatewayApiConfigGrpcServiceDefinition() {{
                             fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "ipsa";
-                                path = "delectus";
+                                contents = "unde";
+                                path = "nulla";
                             }};
                             source = new org.openapis.openapi.models.shared.ApigatewayApiConfigFile[]{{
                                 add(new ApigatewayApiConfigFile() {{
-                                    contents = "suscipit";
-                                    path = "molestiae";
+                                    contents = "illum";
+                                    path = "vel";
                                 }}),
                                 add(new ApigatewayApiConfigFile() {{
-                                    contents = "minus";
-                                    path = "placeat";
+                                    contents = "error";
+                                    path = "deserunt";
+                                }}),
+                                add(new ApigatewayApiConfigFile() {{
+                                    contents = "suscipit";
+                                    path = "iure";
                                 }}),
                             }};
                         }}),
                         add(new ApigatewayApiConfigGrpcServiceDefinition() {{
                             fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "voluptatum";
-                                path = "iusto";
+                                contents = "magnam";
+                                path = "debitis";
                             }};
                             source = new org.openapis.openapi.models.shared.ApigatewayApiConfigFile[]{{
+                                add(new ApigatewayApiConfigFile() {{
+                                    contents = "delectus";
+                                    path = "tempora";
+                                }}),
+                            }};
+                        }}),
+                        add(new ApigatewayApiConfigGrpcServiceDefinition() {{
+                            fileDescriptorSet = new ApigatewayApiConfigFile() {{
+                                contents = "suscipit";
+                                path = "molestiae";
+                            }};
+                            source = new org.openapis.openapi.models.shared.ApigatewayApiConfigFile[]{{
+                                add(new ApigatewayApiConfigFile() {{
+                                    contents = "placeat";
+                                    path = "voluptatum";
+                                }}),
+                                add(new ApigatewayApiConfigFile() {{
+                                    contents = "iusto";
+                                    path = "excepturi";
+                                }}),
                                 add(new ApigatewayApiConfigFile() {{
                                     contents = "nisi";
                                     path = "recusandae";
@@ -97,18 +93,18 @@ public class Application {
                                     contents = "temporibus";
                                     path = "ab";
                                 }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "quis";
-                                    path = "veritatis";
-                                }}),
                             }};
                         }}),
                         add(new ApigatewayApiConfigGrpcServiceDefinition() {{
                             fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "deserunt";
-                                path = "perferendis";
+                                contents = "quis";
+                                path = "veritatis";
                             }};
                             source = new org.openapis.openapi.models.shared.ApigatewayApiConfigFile[]{{
+                                add(new ApigatewayApiConfigFile() {{
+                                    contents = "perferendis";
+                                    path = "ipsam";
+                                }}),
                                 add(new ApigatewayApiConfigFile() {{
                                     contents = "repellendus";
                                     path = "sapiente";
@@ -119,74 +115,72 @@ public class Application {
                                 }}),
                             }};
                         }}),
-                        add(new ApigatewayApiConfigGrpcServiceDefinition() {{
-                            fileDescriptorSet = new ApigatewayApiConfigFile() {{
-                                contents = "at";
-                                path = "at";
-                            }};
-                            source = new org.openapis.openapi.models.shared.ApigatewayApiConfigFile[]{{
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "molestiae";
-                                    path = "quod";
-                                }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "quod";
-                                    path = "esse";
-                                }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "totam";
-                                    path = "porro";
-                                }}),
-                                add(new ApigatewayApiConfigFile() {{
-                                    contents = "dolorum";
-                                    path = "dicta";
-                                }}),
-                            }};
-                        }}),
                     }};
                     labels = new java.util.HashMap<String, String>() {{
-                        put("officia", "occaecati");
-                        put("fugit", "deleniti");
-                        put("hic", "optio");
+                        put("at", "maiores");
+                        put("molestiae", "quod");
+                        put("quod", "esse");
+                        put("totam", "porro");
                     }};
                     managedServiceConfigs = new org.openapis.openapi.models.shared.ApigatewayApiConfigFile[]{{
                         add(new ApigatewayApiConfigFile() {{
-                            contents = "beatae";
-                            path = "commodi";
+                            contents = "dicta";
+                            path = "nam";
                         }}),
                         add(new ApigatewayApiConfigFile() {{
-                            contents = "molestiae";
-                            path = "modi";
+                            contents = "officia";
+                            path = "occaecati";
                         }}),
                         add(new ApigatewayApiConfigFile() {{
-                            contents = "qui";
-                            path = "impedit";
+                            contents = "fugit";
+                            path = "deleniti";
                         }}),
                     }};
                     openapiDocuments = new org.openapis.openapi.models.shared.ApigatewayApiConfigOpenApiDocument[]{{
                         add(new ApigatewayApiConfigOpenApiDocument() {{
                             document = new ApigatewayApiConfigFile() {{
-                                contents = "esse";
-                                path = "ipsum";
+                                contents = "optio";
+                                path = "totam";
                             }};
                         }}),
                         add(new ApigatewayApiConfigOpenApiDocument() {{
                             document = new ApigatewayApiConfigFile() {{
-                                contents = "excepturi";
-                                path = "aspernatur";
+                                contents = "beatae";
+                                path = "commodi";
                             }};
                         }}),
                         add(new ApigatewayApiConfigOpenApiDocument() {{
                             document = new ApigatewayApiConfigFile() {{
-                                contents = "perferendis";
-                                path = "ad";
+                                contents = "molestiae";
+                                path = "modi";
+                            }};
+                        }}),
+                        add(new ApigatewayApiConfigOpenApiDocument() {{
+                            document = new ApigatewayApiConfigFile() {{
+                                contents = "qui";
+                                path = "impedit";
                             }};
                         }}),
                     }};
                 }};
-            }};            
+                accessToken = "cum";
+                alt = "media";
+                apiConfigId = "ipsum";
+                callback = "excepturi";
+                fields = "aspernatur";
+                key = "perferendis";
+                oauthToken = "ad";
+                parent = "natus";
+                prettyPrint = false;
+                quotaUser = "sed";
+                uploadType = "iste";
+                uploadProtocol = "dolor";
+            }}            
 
-            ApigatewayProjectsLocationsApisConfigsCreateResponse res = sdk.projects.apigatewayProjectsLocationsApisConfigsCreate(req);
+            ApigatewayProjectsLocationsApisConfigsCreateResponse res = sdk.projects.apigatewayProjectsLocationsApisConfigsCreate(req, new ApigatewayProjectsLocationsApisConfigsCreateSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.apigatewayOperation.isPresent()) {
                 // handle response
@@ -198,7 +192,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

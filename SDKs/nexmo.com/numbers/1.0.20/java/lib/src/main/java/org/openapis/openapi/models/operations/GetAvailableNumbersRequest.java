@@ -4,13 +4,82 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAvailableNumbersRequest {
+    /**
+     * The two character country code to filter on (in ISO 3166-1 alpha-2 format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
+    public String country;
+    public GetAvailableNumbersRequest withCountry(String country) {
+        this.country = country;
+        return this;
+    }
     
-    public GetAvailableNumbersQueryParams queryParams;
-    public GetAvailableNumbersRequest withQueryParams(GetAvailableNumbersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Available features are `SMS`, `VOICE` and `MMS`. To look for numbers that support multiple features, use a comma-separated value: `SMS,MMS,VOICE`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=features")
+    public GetAvailableNumbersFeaturesEnum features;
+    public GetAvailableNumbersRequest withFeatures(GetAvailableNumbersFeaturesEnum features) {
+        this.features = features;
+        return this;
+    }
+    
+    /**
+     * Page index
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=index")
+    public Long index;
+    public GetAvailableNumbersRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * The number pattern you want to search for. Use in conjunction with `search_pattern`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pattern")
+    public String pattern;
+    public GetAvailableNumbersRequest withPattern(String pattern) {
+        this.pattern = pattern;
+        return this;
+    }
+    
+    /**
+     * The strategy you want to use for matching:
+     * 
+     * 
+     * * `0` - Search for numbers that start with `pattern` (Note: all numbers are in E.164 format, so the starting pattern includes the country code, such as 1 for USA)
+     * * `1` - Search for numbers that contain `pattern`
+     * * `2` - Search for numbers that end with `pattern`
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_pattern")
+    public org.openapis.openapi.models.shared.SearchPatternEnum searchPattern;
+    public GetAvailableNumbersRequest withSearchPattern(org.openapis.openapi.models.shared.SearchPatternEnum searchPattern) {
+        this.searchPattern = searchPattern;
+        return this;
+    }
+    
+    /**
+     * Page size
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public GetAvailableNumbersRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Set this parameter to filter the type of number, such as mobile or landline
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public org.openapis.openapi.models.shared.TypeEnum type;
+    public GetAvailableNumbersRequest withType(org.openapis.openapi.models.shared.TypeEnum type) {
+        this.type = type;
         return this;
     }
     

@@ -7,21 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SubmitAnswersRequest {
-    
-    public SubmitAnswersPathParams pathParams;
-    public SubmitAnswersRequest withPathParams(SubmitAnswersPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A JSON object mapping each question from the group membership.questionnaire.questions field to an answer (eg. {"Where do you live?": "New York City"} ). All questions are required so no null or empty string answers are allowed.
      * 
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, String> request;
-    public SubmitAnswersRequest withRequest(java.util.Map<String, String> request) {
-        this.request = request;
+    public java.util.Map<String, String> requestBody;
+    public SubmitAnswersRequest withRequestBody(java.util.Map<String, String> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The group ID of the group that the user is submitting answers for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public String groupId;
+    public SubmitAnswersRequest withGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
     

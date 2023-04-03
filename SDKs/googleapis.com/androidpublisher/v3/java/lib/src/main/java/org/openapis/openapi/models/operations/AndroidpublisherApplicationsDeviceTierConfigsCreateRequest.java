@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherApplicationsDeviceTierConfigsCreateRequest {
-    
-    public AndroidpublisherApplicationsDeviceTierConfigsCreatePathParams pathParams;
-    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withPathParams(AndroidpublisherApplicationsDeviceTierConfigsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AndroidpublisherApplicationsDeviceTierConfigsCreateQueryParams queryParams;
-    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withQueryParams(AndroidpublisherApplicationsDeviceTierConfigsCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.DeviceTierConfigInput request;
-    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withRequest(org.openapis.openapi.models.shared.DeviceTierConfigInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DeviceTierConfigInput deviceTierConfigInput;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withDeviceTierConfigInput(org.openapis.openapi.models.shared.DeviceTierConfigInput deviceTierConfigInput) {
+        this.deviceTierConfigInput = deviceTierConfigInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity security;
-    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withSecurity(AndroidpublisherApplicationsDeviceTierConfigsCreateSecurity security) {
-        this.security = security;
+    /**
+     * Whether the service should accept device IDs that are unknown to Play's device catalog.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowUnknownDevices")
+    public Boolean allowUnknownDevices;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withAllowUnknownDevices(Boolean allowUnknownDevices) {
+        this.allowUnknownDevices = allowUnknownDevices;
+        return this;
+    }
+    
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Package name of the app.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AndroidpublisherApplicationsDeviceTierConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

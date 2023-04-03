@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetProfileAttributesRequest {
-    
-    public SetProfileAttributesHeaders headers;
-    public SetProfileAttributesRequest withHeaders(SetProfileAttributesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ProfileAttributesRequest profileAttributesRequest;
+    public SetProfileAttributesRequest withProfileAttributesRequest(org.openapis.openapi.models.shared.ProfileAttributesRequest profileAttributesRequest) {
+        this.profileAttributesRequest = profileAttributesRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ProfileAttributesRequest request;
-    public SetProfileAttributesRequest withRequest(org.openapis.openapi.models.shared.ProfileAttributesRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public SetProfileAttributesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

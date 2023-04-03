@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTerminalRefundRequest {
-    
-    public GetTerminalRefundPathParams pathParams;
-    public GetTerminalRefundRequest withPathParams(GetTerminalRefundPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTerminalRefundSecurity security;
-    public GetTerminalRefundRequest withSecurity(GetTerminalRefundSecurity security) {
-        this.security = security;
+    /**
+     * The unique ID for the desired `TerminalRefund`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=terminal_refund_id")
+    public String terminalRefundId;
+    public GetTerminalRefundRequest withTerminalRefundId(String terminalRefundId) {
+        this.terminalRefundId = terminalRefundId;
         return this;
     }
     

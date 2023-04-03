@@ -42,7 +42,7 @@ public class Locations {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddLocationResponse addLocation(org.openapis.openapi.models.operations.AddLocationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddLocationResponse addLocation(org.openapis.openapi.models.shared.LocationInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locations");
         
@@ -88,7 +88,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.DeleteLocationResponse deleteLocation(org.openapis.openapi.models.operations.DeleteLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLocationPathParams.class, baseUrl, "/locations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteLocationRequest.class, baseUrl, "/locations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -127,7 +127,7 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.GetLocationByIdResponse getLocationById(org.openapis.openapi.models.operations.GetLocationByIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocationByIdPathParams.class, baseUrl, "/locations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetLocationByIdRequest.class, baseUrl, "/locations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -172,7 +172,7 @@ public class Locations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLocationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetLocationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -211,12 +211,12 @@ public class Locations {
      */
     public org.openapis.openapi.models.operations.UpdateLocationResponse updateLocation(org.openapis.openapi.models.operations.UpdateLocationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLocationPathParams.class, baseUrl, "/locations/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateLocationRequest.class, baseUrl, "/locations/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "locationInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

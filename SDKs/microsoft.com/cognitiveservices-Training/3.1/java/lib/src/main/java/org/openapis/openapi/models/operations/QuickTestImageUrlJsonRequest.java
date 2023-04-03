@@ -7,34 +7,54 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuickTestImageUrlJsonRequest {
-    
-    public QuickTestImageUrlJsonPathParams pathParams;
-    public QuickTestImageUrlJsonRequest withPathParams(QuickTestImageUrlJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public QuickTestImageUrlJsonQueryParams queryParams;
-    public QuickTestImageUrlJsonRequest withQueryParams(QuickTestImageUrlJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public QuickTestImageUrlJsonHeaders headers;
-    public QuickTestImageUrlJsonRequest withHeaders(QuickTestImageUrlJsonHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * An ImageUrl that contains the url of the image to be evaluated.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public QuickTestImageUrlJsonRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public QuickTestImageUrlJsonRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public QuickTestImageUrlJsonRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies the id of a particular iteration to evaluate against.
+     *             The default iteration for the project will be used when not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public QuickTestImageUrlJsonRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
+        return this;
+    }
+    
+    /**
+     * The project to evaluate against.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public QuickTestImageUrlJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    /**
+     * Optional. Specifies whether or not to store the result of this prediction. The default is true, to store.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=store")
+    public Boolean store;
+    public QuickTestImageUrlJsonRequest withStore(Boolean store) {
+        this.store = store;
         return this;
     }
     

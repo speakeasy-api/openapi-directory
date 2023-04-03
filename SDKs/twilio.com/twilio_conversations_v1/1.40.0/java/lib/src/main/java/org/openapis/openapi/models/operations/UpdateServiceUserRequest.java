@@ -7,38 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateServiceUserRequest {
-    
-    public UpdateServiceUserPathParams pathParams;
-    public UpdateServiceUserRequest withPathParams(UpdateServiceUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateServiceUserHeaders headers;
-    public UpdateServiceUserRequest withHeaders(UpdateServiceUserHeaders headers) {
-        this.headers = headers;
+    /**
+     * The SID of the [Conversation Service](https://www.twilio.com/docs/conversations/api/service-resource) the User resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ChatServiceSid")
+    public String chatServiceSid;
+    public UpdateServiceUserRequest withChatServiceSid(String chatServiceSid) {
+        this.chatServiceSid = chatServiceSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateServiceUserUpdateServiceUserRequest request;
-    public UpdateServiceUserRequest withRequest(UpdateServiceUserUpdateServiceUserRequest request) {
-        this.request = request;
+    public UpdateServiceUserUpdateServiceUserRequest requestBody;
+    public UpdateServiceUserRequest withRequestBody(UpdateServiceUserUpdateServiceUserRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateServiceUserSecurity security;
-    public UpdateServiceUserRequest withSecurity(UpdateServiceUserSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the User resource to update. This value can be either the `sid` or the `identity` of the User resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateServiceUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateServiceUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ServiceUserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public UpdateServiceUserRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ServiceUserEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

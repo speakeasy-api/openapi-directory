@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CinemaSheduleShowtimeSearchallReadRequest {
-    
-    public CinemaSheduleShowtimeSearchallReadPathParams pathParams;
-    public CinemaSheduleShowtimeSearchallReadRequest withPathParams(CinemaSheduleShowtimeSearchallReadPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=param")
+    public String param;
+    public CinemaSheduleShowtimeSearchallReadRequest withParam(String param) {
+        this.param = param;
         return this;
     }
     

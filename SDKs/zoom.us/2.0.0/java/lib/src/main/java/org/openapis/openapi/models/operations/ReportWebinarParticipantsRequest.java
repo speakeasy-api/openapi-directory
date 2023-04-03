@@ -4,27 +4,50 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReportWebinarParticipantsRequest {
-    
-    public ReportWebinarParticipantsPathParams pathParams;
-    public ReportWebinarParticipantsRequest withPathParams(ReportWebinarParticipantsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Enter 'registrant_id' as the value for this field if you would like to see the registrant ID attribute included in the response of this API call. A registrant ID is a unique identifier of a [webinar registrant](https://marketplace.zoom.us/docs/api-reference/zoom-api/webinars/webinarregistrants).&lt;br&gt;
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_fields")
+    public ReportWebinarParticipantsIncludeFieldsEnum includeFields;
+    public ReportWebinarParticipantsRequest withIncludeFields(ReportWebinarParticipantsIncludeFieldsEnum includeFields) {
+        this.includeFields = includeFields;
         return this;
     }
     
-    
-    public ReportWebinarParticipantsQueryParams queryParams;
-    public ReportWebinarParticipantsRequest withQueryParams(ReportWebinarParticipantsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public ReportWebinarParticipantsRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
         return this;
     }
     
+    /**
+     * The number of records returned within a single API call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public ReportWebinarParticipantsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public ReportWebinarParticipantsSecurity security;
-    public ReportWebinarParticipantsRequest withSecurity(ReportWebinarParticipantsSecurity security) {
-        this.security = security;
+    /**
+     * The webinar ID or the webinar UUID.  If a webinar ID is provided in the request instead of a UUID, the response will be for the latest webinar instance.
+     * 
+     * If a UUID starts with "/" or contains "//" (example: "/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webinarId")
+    public String webinarId;
+    public ReportWebinarParticipantsRequest withWebinarId(String webinarId) {
+        this.webinarId = webinarId;
         return this;
     }
     

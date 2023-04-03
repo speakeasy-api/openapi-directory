@@ -4,13 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopyPadUsingPOSTRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destinationID")
+    public String destinationID;
+    public CopyPadUsingPOSTRequest withDestinationID(String destinationID) {
+        this.destinationID = destinationID;
+        return this;
+    }
     
-    public CopyPadUsingPOSTQueryParams queryParams;
-    public CopyPadUsingPOSTRequest withQueryParams(CopyPadUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=force")
+    public String force;
+    public CopyPadUsingPOSTRequest withForce(String force) {
+        this.force = force;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceID")
+    public String sourceID;
+    public CopyPadUsingPOSTRequest withSourceID(String sourceID) {
+        this.sourceID = sourceID;
         return this;
     }
     

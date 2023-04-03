@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetById5Request {
-    
-    public GetById5PathParams pathParams;
-    public GetById5Request withPathParams(GetById5PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * list of adittional fields which should be embedded in the response (ie. persons)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public String embed;
+    public GetById5Request withEmbed(String embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetById5QueryParams queryParams;
-    public GetById5Request withQueryParams(GetById5QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * provider's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=providerId")
+    public Long providerId;
+    public GetById5Request withProviderId(Long providerId) {
+        this.providerId = providerId;
         return this;
     }
     

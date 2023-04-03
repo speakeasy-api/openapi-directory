@@ -4,20 +4,86 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChecksListForSuiteRequest {
-    
-    public ChecksListForSuitePathParams pathParams;
-    public ChecksListForSuiteRequest withPathParams(ChecksListForSuitePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns check runs with the specified `name`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=check_name")
+    public String checkName;
+    public ChecksListForSuiteRequest withCheckName(String checkName) {
+        this.checkName = checkName;
         return this;
     }
     
+    /**
+     * The unique identifier of the check suite.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=check_suite_id")
+    public Long checkSuiteId;
+    public ChecksListForSuiteRequest withCheckSuiteId(Long checkSuiteId) {
+        this.checkSuiteId = checkSuiteId;
+        return this;
+    }
     
-    public ChecksListForSuiteQueryParams queryParams;
-    public ChecksListForSuiteRequest withQueryParams(ChecksListForSuiteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filters check runs by their `completed_at` timestamp. `latest` returns the most recent check runs.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public ChecksListForSuiteFilterEnum filter;
+    public ChecksListForSuiteRequest withFilter(ChecksListForSuiteFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * The account owner of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ChecksListForSuiteRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ChecksListForSuiteRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ChecksListForSuiteRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The name of the repository. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ChecksListForSuiteRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * Returns check runs with the specified `status`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public org.openapis.openapi.models.shared.StatusEnum status;
+    public ChecksListForSuiteRequest withStatus(org.openapis.openapi.models.shared.StatusEnum status) {
+        this.status = status;
         return this;
     }
     

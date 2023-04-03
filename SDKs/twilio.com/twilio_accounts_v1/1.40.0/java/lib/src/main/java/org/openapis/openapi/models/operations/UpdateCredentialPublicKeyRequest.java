@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCredentialPublicKeyRequest {
-    
-    public UpdateCredentialPublicKeyPathParams pathParams;
-    public UpdateCredentialPublicKeyRequest withPathParams(UpdateCredentialPublicKeyPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateCredentialPublicKeyUpdateCredentialPublicKeyRequest request;
-    public UpdateCredentialPublicKeyRequest withRequest(UpdateCredentialPublicKeyUpdateCredentialPublicKeyRequest request) {
-        this.request = request;
+    public UpdateCredentialPublicKeyUpdateCredentialPublicKeyRequest requestBody;
+    public UpdateCredentialPublicKeyRequest withRequestBody(UpdateCredentialPublicKeyUpdateCredentialPublicKeyRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateCredentialPublicKeySecurity security;
-    public UpdateCredentialPublicKeyRequest withSecurity(UpdateCredentialPublicKeySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateCredentialPublicKeyRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the PublicKey resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateCredentialPublicKeyRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

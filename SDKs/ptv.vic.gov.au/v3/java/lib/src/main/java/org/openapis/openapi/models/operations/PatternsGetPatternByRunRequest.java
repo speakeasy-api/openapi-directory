@@ -4,20 +4,107 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatternsGetPatternByRunRequest {
-    
-    public PatternsGetPatternByRunPathParams pathParams;
-    public PatternsGetPatternByRunRequest withPathParams(PatternsGetPatternByRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Filter by the date and time of the request (ISO 8601 UTC format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
+    public OffsetDateTime dateUtc;
+    public PatternsGetPatternByRunRequest withDateUtc(OffsetDateTime dateUtc) {
+        this.dateUtc = dateUtc;
         return this;
     }
     
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public PatternsGetPatternByRunRequest withDevid(String devid) {
+        this.devid = devid;
+        return this;
+    }
     
-    public PatternsGetPatternByRunQueryParams queryParams;
-    public PatternsGetPatternByRunRequest withQueryParams(PatternsGetPatternByRunQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * List of objects to be returned in full (i.e. expanded) - options include: All, Stop, Route, Run, Direction, Disruption, VehiclePosition, VehicleDescriptor and None. Default is Disruption. Run must be expanded to receive VehiclePosition and VehicleDescriptor information.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    public PatternsGetPatternByRunExpandEnum[] expand;
+    public PatternsGetPatternByRunRequest withExpand(PatternsGetPatternByRunExpandEnum[] expand) {
+        this.expand = expand;
+        return this;
+    }
+    
+    /**
+     * Indicates if geopath data will be returned (default = false)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_geopath")
+    public Boolean includeGeopath;
+    public PatternsGetPatternByRunRequest withIncludeGeopath(Boolean includeGeopath) {
+        this.includeGeopath = includeGeopath;
+        return this;
+    }
+    
+    /**
+     * Include any skipped stops in a stopping pattern. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_skipped_stops")
+    public Boolean includeSkippedStops;
+    public PatternsGetPatternByRunRequest withIncludeSkippedStops(Boolean includeSkippedStops) {
+        this.includeSkippedStops = includeSkippedStops;
+        return this;
+    }
+    
+    /**
+     * Number identifying transport mode; values returned via RouteTypes API
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
+    public PatternsGetPatternByRunRouteTypeEnum routeType;
+    public PatternsGetPatternByRunRequest withRouteType(PatternsGetPatternByRunRouteTypeEnum routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    
+    /**
+     * The run_ref is the identifier of a run as returned by the departures/* and runs/* endpoints. WARNING, run_id is deprecated. Use run_ref instead.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_ref")
+    public String runRef;
+    public PatternsGetPatternByRunRequest withRunRef(String runRef) {
+        this.runRef = runRef;
+        return this;
+    }
+    
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public PatternsGetPatternByRunRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Filter by stop_id; values returned by Stops API
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stop_id")
+    public Integer stopId;
+    public PatternsGetPatternByRunRequest withStopId(Integer stopId) {
+        this.stopId = stopId;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public PatternsGetPatternByRunRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSpacesIdTriggersNameRequest {
-    
-    public DeleteSpacesIdTriggersNamePathParams pathParams;
-    public DeleteSpacesIdTriggersNameRequest withPathParams(DeleteSpacesIdTriggersNamePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteSpacesIdTriggersNameRequest withId(String id) {
+        this.id = id;
         return this;
     }
     
-    
-    public DeleteSpacesIdTriggersNameSecurity security;
-    public DeleteSpacesIdTriggersNameRequest withSecurity(DeleteSpacesIdTriggersNameSecurity security) {
-        this.security = security;
+    /**
+     * trigger name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public DeleteSpacesIdTriggersNameRequest withName(String name) {
+        this.name = name;
         return this;
     }
     

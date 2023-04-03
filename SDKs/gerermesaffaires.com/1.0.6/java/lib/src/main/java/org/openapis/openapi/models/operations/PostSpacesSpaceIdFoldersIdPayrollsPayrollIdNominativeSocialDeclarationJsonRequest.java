@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest {
-    
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonPathParams pathParams;
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest withPathParams(PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Document to add (either DocumentId either (File,Name,Content64Encoded,Title) is mandatory)
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public Object request;
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest withRequest(Object request) {
-        this.request = request;
+    public Object requestBody;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest withRequestBody(Object requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Id of the folder social
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonSecurity security;
-    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest withSecurity(PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonSecurity security) {
-        this.security = security;
+    /**
+     * Id of the payroll
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payrollId")
+    public String payrollId;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest withPayrollId(String payrollId) {
+        this.payrollId = payrollId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PostSpacesSpaceIdFoldersIdPayrollsPayrollIdNominativeSocialDeclarationJsonRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

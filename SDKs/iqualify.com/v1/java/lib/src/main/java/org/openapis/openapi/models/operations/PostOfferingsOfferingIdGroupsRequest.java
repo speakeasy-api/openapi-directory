@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdGroupsRequest {
-    
-    public PostOfferingsOfferingIdGroupsPathParams pathParams;
-    public PostOfferingsOfferingIdGroupsRequest withPathParams(PostOfferingsOfferingIdGroupsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.AssessmentGroupRequired assessmentGroupRequired;
+    public PostOfferingsOfferingIdGroupsRequest withAssessmentGroupRequired(org.openapis.openapi.models.shared.AssessmentGroupRequired assessmentGroupRequired) {
+        this.assessmentGroupRequired = assessmentGroupRequired;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssessmentGroupRequired request;
-    public PostOfferingsOfferingIdGroupsRequest withRequest(org.openapis.openapi.models.shared.AssessmentGroupRequired request) {
-        this.request = request;
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PostOfferingsOfferingIdGroupsRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
         return this;
     }
     

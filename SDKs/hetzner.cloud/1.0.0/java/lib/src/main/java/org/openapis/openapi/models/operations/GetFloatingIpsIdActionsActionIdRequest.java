@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFloatingIpsIdActionsActionIdRequest {
+    /**
+     * ID of the Action
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action_id")
+    public Long actionId;
+    public GetFloatingIpsIdActionsActionIdRequest withActionId(Long actionId) {
+        this.actionId = actionId;
+        return this;
+    }
     
-    public GetFloatingIpsIdActionsActionIdPathParams pathParams;
-    public GetFloatingIpsIdActionsActionIdRequest withPathParams(GetFloatingIpsIdActionsActionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the Floating IP
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetFloatingIpsIdActionsActionIdRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

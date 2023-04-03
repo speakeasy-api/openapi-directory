@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersListEmailsForAuthenticatedRequest {
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public UsersListEmailsForAuthenticatedRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public UsersListEmailsForAuthenticatedQueryParams queryParams;
-    public UsersListEmailsForAuthenticatedRequest withQueryParams(UsersListEmailsForAuthenticatedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public UsersListEmailsForAuthenticatedRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

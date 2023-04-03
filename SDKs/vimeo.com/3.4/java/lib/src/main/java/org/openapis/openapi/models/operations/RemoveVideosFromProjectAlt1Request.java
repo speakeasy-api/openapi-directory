@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveVideosFromProjectAlt1Request {
-    
-    public RemoveVideosFromProjectAlt1PathParams pathParams;
-    public RemoveVideosFromProjectAlt1Request withPathParams(RemoveVideosFromProjectAlt1PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the project.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Double projectId;
+    public RemoveVideosFromProjectAlt1Request withProjectId(Double projectId) {
+        this.projectId = projectId;
         return this;
     }
     
-    
-    public RemoveVideosFromProjectAlt1QueryParams queryParams;
-    public RemoveVideosFromProjectAlt1Request withQueryParams(RemoveVideosFromProjectAlt1QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Whether to delete the videos when removing them from the project.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=should_delete_clips")
+    public Boolean shouldDeleteClips;
+    public RemoveVideosFromProjectAlt1Request withShouldDeleteClips(Boolean shouldDeleteClips) {
+        this.shouldDeleteClips = shouldDeleteClips;
         return this;
     }
     
-    
-    public RemoveVideosFromProjectAlt1Security security;
-    public RemoveVideosFromProjectAlt1Request withSecurity(RemoveVideosFromProjectAlt1Security security) {
-        this.security = security;
+    /**
+     * A comma-separated list of the video URIs to remove.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uris")
+    public String uris;
+    public RemoveVideosFromProjectAlt1Request withUris(String uris) {
+        this.uris = uris;
         return this;
     }
     

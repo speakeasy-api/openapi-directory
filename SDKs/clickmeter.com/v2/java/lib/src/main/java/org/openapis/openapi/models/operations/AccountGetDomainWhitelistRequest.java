@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountGetDomainWhitelistRequest {
+    /**
+     * Limit results to this number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public AccountGetDomainWhitelistRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
     
-    public AccountGetDomainWhitelistQueryParams queryParams;
-    public AccountGetDomainWhitelistRequest withQueryParams(AccountGetDomainWhitelistQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Offset where to start from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public AccountGetDomainWhitelistRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

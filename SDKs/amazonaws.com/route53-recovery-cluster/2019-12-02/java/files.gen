@@ -30,20 +30,15 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetRoutingControlStateXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/GetRoutingControlStateHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRoutingControlStateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRoutingControlStateResponse.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingControlsQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingControlsXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingControlsHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingControlsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListRoutingControlsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateRoutingControlStateXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateRoutingControlStateHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateRoutingControlStateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateRoutingControlStateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateRoutingControlStatesXAmzTargetEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/UpdateRoutingControlStatesHeaders.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateRoutingControlStatesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateRoutingControlStatesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetRoutingControlStateResponse.java
@@ -55,6 +50,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListRoutingControlsRequest.
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRoutingControlStateRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRoutingControlStatesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateRoutingControlStateEntry.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeHmac.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

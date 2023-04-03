@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1WebhookSubscriptionsIdRequest {
-    
-    public GetApiV1WebhookSubscriptionsIdPathParams pathParams;
-    public GetApiV1WebhookSubscriptionsIdRequest withPathParams(GetApiV1WebhookSubscriptionsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1WebhookSubscriptionsIdSecurity security;
-    public GetApiV1WebhookSubscriptionsIdRequest withSecurity(GetApiV1WebhookSubscriptionsIdSecurity security) {
-        this.security = security;
+    /**
+     * The id of the webhook subscription to be retrieved
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1WebhookSubscriptionsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

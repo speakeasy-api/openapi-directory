@@ -37,10 +37,11 @@ public class Programs {
     /**
      * Optimized free-text search for programs using various filters.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2ProgramsSearchResponse getApiV2ProgramsSearch(org.openapis.openapi.models.operations.GetApiV2ProgramsSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2ProgramsSearchResponse getApiV2ProgramsSearch(org.openapis.openapi.models.operations.GetApiV2ProgramsSearchRequest request, org.openapis.openapi.models.operations.GetApiV2ProgramsSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v2/programs/search");
         
@@ -48,14 +49,14 @@ public class Programs {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2ProgramsSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV2ProgramsSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -84,19 +85,20 @@ public class Programs {
     /**
      * Returns the program matching the given ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV2ProgramsIdResponse getApiV2ProgramsId(org.openapis.openapi.models.operations.GetApiV2ProgramsIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetApiV2ProgramsIdResponse getApiV2ProgramsId(org.openapis.openapi.models.operations.GetApiV2ProgramsIdRequest request, org.openapis.openapi.models.operations.GetApiV2ProgramsIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2ProgramsIdPathParams.class, baseUrl, "/api/v2/programs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV2ProgramsIdRequest.class, baseUrl, "/api/v2/programs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

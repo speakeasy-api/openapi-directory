@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateConversationRequest {
-    
-    public CreateConversationHeaders headers;
-    public CreateConversationRequest withHeaders(CreateConversationHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateConversationCreateConversationRequest request;
-    public CreateConversationRequest withRequest(CreateConversationCreateConversationRequest request) {
-        this.request = request;
+    public CreateConversationCreateConversationRequest requestBody;
+    public CreateConversationRequest withRequestBody(CreateConversationCreateConversationRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreateConversationSecurity security;
-    public CreateConversationRequest withSecurity(CreateConversationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateConversationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The X-Twilio-Webhook-Enabled HTTP request header
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Twilio-Webhook-Enabled")
+    public org.openapis.openapi.models.shared.ConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled;
+    public CreateConversationRequest withXTwilioWebhookEnabled(org.openapis.openapi.models.shared.ConversationEnumWebhookEnabledTypeEnum xTwilioWebhookEnabled) {
+        this.xTwilioWebhookEnabled = xTwilioWebhookEnabled;
         return this;
     }
     

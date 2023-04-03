@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PayOrderRequest {
-    
-    public PayOrderPathParams pathParams;
-    public PayOrderRequest withPathParams(PayOrderPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PayOrderRequest request;
-    public PayOrderRequest withRequest(org.openapis.openapi.models.shared.PayOrderRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PayOrderRequest payOrderRequest;
+    public PayOrderRequest withPayOrderRequest(org.openapis.openapi.models.shared.PayOrderRequest payOrderRequest) {
+        this.payOrderRequest = payOrderRequest;
         return this;
     }
     
-    
-    public PayOrderSecurity security;
-    public PayOrderRequest withSecurity(PayOrderSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the order being paid.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
+    public String orderId;
+    public PayOrderRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

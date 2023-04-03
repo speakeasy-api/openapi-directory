@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteSessionRequest {
-    
-    public DeleteSessionPathParams pathParams;
-    public DeleteSessionRequest withPathParams(DeleteSessionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the parent [Service](https://www.twilio.com/docs/proxy/api/service) of the resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public DeleteSessionRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public DeleteSessionSecurity security;
-    public DeleteSessionRequest withSecurity(DeleteSessionSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteSessionRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Session resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteSessionRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

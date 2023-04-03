@@ -7,20 +7,53 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyzeImageRequest {
-    
-    public AnalyzeImageQueryParams queryParams;
-    public AnalyzeImageRequest withQueryParams(AnalyzeImageQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * A JSON document with a URL pointing to the image that is to be analyzed.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ImageUrl request;
-    public AnalyzeImageRequest withRequest(org.openapis.openapi.models.shared.ImageUrl request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+    public AnalyzeImageRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    /**
+     * Turn off specified domain models when generating the description.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=descriptionExclude")
+    public org.openapis.openapi.models.shared.DescriptionExcludeEnum[] descriptionExclude;
+    public AnalyzeImageRequest withDescriptionExclude(org.openapis.openapi.models.shared.DescriptionExcludeEnum[] descriptionExclude) {
+        this.descriptionExclude = descriptionExclude;
+        return this;
+    }
+    
+    /**
+     * A string indicating which domain-specific details to return. Multiple values should be comma-separated. Valid visual feature types include: Celebrities - identifies celebrities if detected in the image, Landmarks - identifies notable landmarks in the image.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=details")
+    public AnalyzeImageDetailsEnum[] details;
+    public AnalyzeImageRequest withDetails(AnalyzeImageDetailsEnum[] details) {
+        this.details = details;
+        return this;
+    }
+    
+    /**
+     * The desired language for output generation. If this parameter is not specified, the default value is &amp;quot;en&amp;quot;.Supported languages:en - English, Default. es - Spanish, ja - Japanese, pt - Portuguese, zh - Simplified Chinese.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
+    public org.openapis.openapi.models.shared.ServiceLanguageEnum language;
+    public AnalyzeImageRequest withLanguage(org.openapis.openapi.models.shared.ServiceLanguageEnum language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * A string indicating what visual feature types to return. Multiple values should be comma-separated. Valid visual feature types include: Categories - categorizes image content according to a taxonomy defined in documentation. Tags - tags the image with a detailed list of words related to the image content. Description - describes the image content with a complete English sentence. Faces - detects if faces are present. If present, generate coordinates, gender and age. ImageType - detects if image is clipart or a line drawing. Color - determines the accent color, dominant color, and whether an image is black&amp;white. Adult - detects if the image is pornographic in nature (depicts nudity or a sex act), or is gory (depicts extreme violence or blood). Sexually suggestive content (aka racy content) is also detected. Objects - detects various objects within an image, including the approximate location. The Objects argument is only available in English. Brands - detects various brands within an image, including the approximate location. The Brands argument is only available in English.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=visualFeatures")
+    public org.openapis.openapi.models.shared.VisualFeaturesEnum[] visualFeatures;
+    public AnalyzeImageRequest withVisualFeatures(org.openapis.openapi.models.shared.VisualFeaturesEnum[] visualFeatures) {
+        this.visualFeatures = visualFeatures;
         return this;
     }
     

@@ -4,20 +4,17 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UntrashScoreRequest {
-    
-    public UntrashScorePathParams pathParams;
-    public UntrashScoreRequest withPathParams(UntrashScorePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UntrashScoreSecurity security;
-    public UntrashScoreRequest withSecurity(UntrashScoreSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the score document. This can be a Flat Score unique identifier (i.e. `ScoreDetails.id`) or, if the score is also a Google Drive file, the Drive file unique identifier prefixed with `drive-` (e.g. `drive-0B000000000`).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
+    public String score;
+    public UntrashScoreRequest withScore(String score) {
+        this.score = score;
         return this;
     }
     

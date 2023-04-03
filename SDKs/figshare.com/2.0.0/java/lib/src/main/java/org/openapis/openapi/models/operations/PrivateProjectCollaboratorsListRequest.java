@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateProjectCollaboratorsListRequest {
-    
-    public PrivateProjectCollaboratorsListPathParams pathParams;
-    public PrivateProjectCollaboratorsListRequest withPathParams(PrivateProjectCollaboratorsListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PrivateProjectCollaboratorsListSecurity security;
-    public PrivateProjectCollaboratorsListRequest withSecurity(PrivateProjectCollaboratorsListSecurity security) {
-        this.security = security;
+    /**
+     * Project unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public Long projectId;
+    public PrivateProjectCollaboratorsListRequest withProjectId(Long projectId) {
+        this.projectId = projectId;
         return this;
     }
     

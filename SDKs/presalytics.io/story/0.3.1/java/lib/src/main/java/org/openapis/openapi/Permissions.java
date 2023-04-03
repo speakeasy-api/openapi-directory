@@ -41,7 +41,7 @@ public class Permissions {
      */
     public org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPermissiontypeGetResponse storyIdCollaboratorsUseridPermissiontypeGet(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPermissiontypeGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPermissiontypeGetPathParams.class, baseUrl, "/{id}/collaborators/authorize/{story_collaborator_userid}/{permissiontype}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPermissiontypeGetRequest.class, baseUrl, "/{id}/collaborators/authorize/{story_collaborator_userid}/{permissiontype}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

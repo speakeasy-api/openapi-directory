@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteBookmarkRequest {
-    
-    public DeleteBookmarkPathParams pathParams;
-    public DeleteBookmarkRequest withPathParams(DeleteBookmarkPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=post_id")
+    public String postId;
+    public DeleteBookmarkRequest withPostId(String postId) {
+        this.postId = postId;
         return this;
     }
     

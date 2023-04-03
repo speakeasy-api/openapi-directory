@@ -19,10 +19,8 @@ import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.FindPlacesFindPlacesGetSecurity;
 import org.openapis.openapi.models.operations.FindPlacesFindPlacesGetLanguageLanguageEnum;
-import org.openapis.openapi.models.operations.FindPlacesFindPlacesGetQueryParams;
 import org.openapis.openapi.models.operations.FindPlacesFindPlacesGetRequest;
 import org.openapis.openapi.models.operations.FindPlacesFindPlacesGetResponse;
-import org.openapis.openapi.models.shared.SchemeAPIKeyHeader;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,19 +29,14 @@ public class Application {
                 .build();
 
             FindPlacesFindPlacesGetRequest req = new FindPlacesFindPlacesGetRequest() {{
-                security = new FindPlacesFindPlacesGetSecurity() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                queryParams = new FindPlacesFindPlacesGetQueryParams() {{
-                    key = "corrupti";
-                    language = "fr";
-                    text = "distinctio";
-                }};
-            }};            
+                key = "corrupti";
+                language = "fr";
+                text = "distinctio";
+            }}            
 
-            FindPlacesFindPlacesGetResponse res = sdk.locationEndpoints.findPlacesFindPlacesGet(req);
+            FindPlacesFindPlacesGetResponse res = sdk.locationEndpoints.findPlacesFindPlacesGet(req, new FindPlacesFindPlacesGetSecurity() {{
+                apiKeyHeader = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.findPlacesModels.isPresent()) {
                 // handle response
@@ -55,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### locationEndpoints

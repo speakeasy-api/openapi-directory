@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveNetworkDevicesRequest {
-    
-    public RemoveNetworkDevicesPathParams pathParams;
-    public RemoveNetworkDevicesRequest withPathParams(RemoveNetworkDevicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public RemoveNetworkDevicesRequestBody requestBody;
+    public RemoveNetworkDevicesRequest withRequestBody(RemoveNetworkDevicesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public RemoveNetworkDevicesRequestBody request;
-    public RemoveNetworkDevicesRequest withRequest(RemoveNetworkDevicesRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public RemoveNetworkDevicesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

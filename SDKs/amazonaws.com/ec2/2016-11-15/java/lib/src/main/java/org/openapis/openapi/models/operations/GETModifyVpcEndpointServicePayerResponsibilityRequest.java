@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcEndpointServicePayerResponsibilityRequest {
-    
-    public GETModifyVpcEndpointServicePayerResponsibilityQueryParams queryParams;
-    public GETModifyVpcEndpointServicePayerResponsibilityRequest withQueryParams(GETModifyVpcEndpointServicePayerResponsibilityQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETModifyVpcEndpointServicePayerResponsibilityActionEnum action;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withAction(GETModifyVpcEndpointServicePayerResponsibilityActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is &lt;code&gt;DryRunOperation&lt;/code&gt;. Otherwise, it is &lt;code&gt;UnauthorizedOperation&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
+    public Boolean dryRun;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
     
-    public GETModifyVpcEndpointServicePayerResponsibilityHeaders headers;
-    public GETModifyVpcEndpointServicePayerResponsibilityRequest withHeaders(GETModifyVpcEndpointServicePayerResponsibilityHeaders headers) {
-        this.headers = headers;
+    /**
+     * The entity that is responsible for the endpoint costs. The default is the endpoint owner. If you set the payer responsibility to the service owner, you cannot set it back to the endpoint owner.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PayerResponsibility")
+    public GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum payerResponsibility;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withPayerResponsibility(GETModifyVpcEndpointServicePayerResponsibilityPayerResponsibilityEnum payerResponsibility) {
+        this.payerResponsibility = payerResponsibility;
+        return this;
+    }
+    
+    /**
+     * The ID of the service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ServiceId")
+    public String serviceId;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETModifyVpcEndpointServicePayerResponsibilityVersionEnum version;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withVersion(GETModifyVpcEndpointServicePayerResponsibilityVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETModifyVpcEndpointServicePayerResponsibilityRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

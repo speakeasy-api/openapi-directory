@@ -4,27 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserContactRequest {
-    
-    public GetUserContactPathParams pathParams;
-    public GetUserContactRequest withPathParams(GetUserContactPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The user's contact Id or email address. The contact can be either a company contact or an external contact.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=contactId")
+    public String contactId;
+    public GetUserContactRequest withContactId(String contactId) {
+        this.contactId = contactId;
         return this;
     }
     
-    
-    public GetUserContactQueryParams queryParams;
-    public GetUserContactRequest withQueryParams(GetUserContactQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetUserContactSecurity security;
-    public GetUserContactRequest withSecurity(GetUserContactSecurity security) {
-        this.security = security;
+    /**
+     * The presence status of the contact. 
+     * Include this query parameter with a value of `true` to get the presence status of the contact in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_presence_status")
+    public Boolean queryPresenceStatus;
+    public GetUserContactRequest withQueryPresenceStatus(Boolean queryPresenceStatus) {
+        this.queryPresenceStatus = queryPresenceStatus;
         return this;
     }
     

@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendPaymentNotificationRequest {
-    
-    public SendPaymentNotificationPathParams pathParams;
-    public SendPaymentNotificationRequest withPathParams(SendPaymentNotificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public SendPaymentNotificationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public SendPaymentNotificationRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public SendPaymentNotificationHeaders headers;
-    public SendPaymentNotificationRequest withHeaders(SendPaymentNotificationHeaders headers) {
-        this.headers = headers;
+    /**
+     * Order ID is a unique code that identifies an order.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
+    public String orderId;
+    public SendPaymentNotificationRequest withOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    
+    /**
+     * VTEX payment identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=paymentId")
+    public String paymentId;
+    public SendPaymentNotificationRequest withPaymentId(String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
     

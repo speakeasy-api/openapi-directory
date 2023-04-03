@@ -7,31 +7,170 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatamigrationProjectsLocationsConnectionProfilesCreateRequest {
-    
-    public DatamigrationProjectsLocationsConnectionProfilesCreatePathParams pathParams;
-    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withPathParams(DatamigrationProjectsLocationsConnectionProfilesCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams queryParams;
-    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withQueryParams(DatamigrationProjectsLocationsConnectionProfilesCreateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ConnectionProfileInput request;
-    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withRequest(org.openapis.openapi.models.shared.ConnectionProfileInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ConnectionProfileInput connectionProfileInput;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withConnectionProfileInput(org.openapis.openapi.models.shared.ConnectionProfileInput connectionProfileInput) {
+        this.connectionProfileInput = connectionProfileInput;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DatamigrationProjectsLocationsConnectionProfilesCreateSecurity security;
-    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withSecurity(DatamigrationProjectsLocationsConnectionProfilesCreateSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. The connection profile identifier.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectionProfileId")
+    public String connectionProfileId;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withConnectionProfileId(String connectionProfileId) {
+        this.connectionProfileId = connectionProfileId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent which owns this collection of connection profiles.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Optional. A unique ID used to identify the request. If the server receives two requests with the same ID, then the second request is ignored. It is recommended to always set this value to a UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). The maximum length is 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
+    public String requestId;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * Optional. Create the connection profile without validating it. The default is false. Only supported for Oracle connection profiles.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skipValidation")
+    public Boolean skipValidation;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withSkipValidation(Boolean skipValidation) {
+        this.skipValidation = skipValidation;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
+        return this;
+    }
+    
+    /**
+     * Optional. Only validate the connection profile, but don't create any resources. The default is false. Only supported for Oracle connection profiles.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validateOnly")
+    public Boolean validateOnly;
+    public DatamigrationProjectsLocationsConnectionProfilesCreateRequest withValidateOnly(Boolean validateOnly) {
+        this.validateOnly = validateOnly;
         return this;
     }
     

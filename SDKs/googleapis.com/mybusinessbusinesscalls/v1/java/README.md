@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams;
-import org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams;
 import org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest;
 import org.openapis.openapi.models.operations.MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -31,26 +29,22 @@ public class Application {
                 .build();
 
             MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest req = new MybusinessbusinesscallsLocationsBusinesscallsinsightsListRequest() {{
-                pathParams = new MybusinessbusinesscallsLocationsBusinesscallsinsightsListPathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new MybusinessbusinesscallsLocationsBusinesscallsinsightsListQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    filter = "corrupti";
-                    key = "illum";
-                    oauthToken = "vel";
-                    pageSize = 623564;
-                    pageToken = "deserunt";
-                    prettyPrint = false;
-                    quotaUser = "suscipit";
-                    uploadType = "iure";
-                    uploadProtocol = "magnam";
-                }};
-            }};            
+                dollarXgafv = "2";
+                accessToken = "provident";
+                alt = "proto";
+                callback = "quibusdam";
+                fields = "unde";
+                filter = "nulla";
+                key = "corrupti";
+                oauthToken = "illum";
+                pageSize = 423655;
+                pageToken = "error";
+                parent = "deserunt";
+                prettyPrint = false;
+                quotaUser = "suscipit";
+                uploadType = "iure";
+                uploadProtocol = "magnam";
+            }}            
 
             MybusinessbusinesscallsLocationsBusinesscallsinsightsListResponse res = sdk.locations.mybusinessbusinesscallsLocationsBusinesscallsinsightsList(req);
 
@@ -64,7 +58,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### locations

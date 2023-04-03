@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestRoomPoliciesRequest {
-    
-    public RequestRoomPoliciesPathParams pathParams;
-    public RequestRoomPoliciesRequest withPathParams(RequestRoomPoliciesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public RequestRoomPoliciesRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     
-    
-    public RequestRoomPoliciesHeaders headers;
-    public RequestRoomPoliciesRequest withHeaders(RequestRoomPoliciesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Room ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=room_id")
+    public Long roomId;
+    public RequestRoomPoliciesRequest withRoomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
     

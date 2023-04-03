@@ -4,27 +4,65 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest {
-    
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesPathParams pathParams;
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest withPathParams(GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The id of the pull request.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_request_id")
+    public Long pullRequestId;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest withPullRequestId(Long pullRequestId) {
+        this.pullRequestId = pullRequestId;
         return this;
     }
     
-    
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesQueryParams queryParams;
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest withQueryParams(GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Query string to narrow down the response as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest withQ(String q) {
+        this.q = q;
         return this;
     }
     
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesSecurity security;
-    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest withSecurity(GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesSecurity security) {
-        this.security = security;
+    /**
+     * Field by which the results should be sorted as per
+     * [filtering and sorting](/cloud/bitbucket/rest/intro/#filtering).
+     * Defaults to `created_on`.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetRepositoriesWorkspaceRepoSlugPullrequestsPullRequestIdStatusesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

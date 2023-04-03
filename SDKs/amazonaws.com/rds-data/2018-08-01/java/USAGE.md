@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchExecuteStatementHeaders;
 import org.openapis.openapi.models.operations.BatchExecuteStatementRequestBody;
 import org.openapis.openapi.models.operations.BatchExecuteStatementRequest;
 import org.openapis.openapi.models.operations.BatchExecuteStatementResponse;
@@ -18,28 +17,132 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchExecuteStatementRequest req = new BatchExecuteStatementRequest() {{
-                headers = new BatchExecuteStatementHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new BatchExecuteStatementRequestBody() {{
-                    database = "illum";
+                requestBody = new BatchExecuteStatementRequestBody() {{
+                    database = "corrupti";
                     parameterSets = new org.openapis.openapi.models.shared.SqlParameter[][]{{
                         add(new org.openapis.openapi.models.shared.SqlParameter[]{{
                             add(new SqlParameter() {{
-                                name = "deserunt";
+                                name = "quibusdam";
+                                typeHint = "DATE";
+                                value = new Field() {{
+                                    arrayValue = new ArrayValue() {{
+                                        arrayValues = new org.openapis.openapi.models.shared.ArrayValue[]{{
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                        }};
+                                        booleanValues = new Boolean[]{{
+                                            add(false),
+                                            add(false),
+                                            add(false),
+                                        }};
+                                        doubleValues = new Double[]{{
+                                            add(4236.55),
+                                            add(6235.64),
+                                            add(6458.94),
+                                            add(3843.82),
+                                        }};
+                                        longValues = new Long[]{{
+                                            add(297534),
+                                            add(891773),
+                                        }};
+                                        stringValues = new String[]{{
+                                            add("delectus"),
+                                        }};
+                                    }};
+                                    blobValue = "tempora";
+                                    booleanValue = false;
+                                    doubleValue = 3834.41;
+                                    isNull = false;
+                                    longValue = 477665;
+                                    stringValue = "minus";
+                                }};
+                            }}),
+                            add(new SqlParameter() {{
+                                name = "placeat";
+                                typeHint = "DATE";
+                                value = new Field() {{
+                                    arrayValue = new ArrayValue() {{
+                                        arrayValues = new org.openapis.openapi.models.shared.ArrayValue[]{{
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                        }};
+                                        booleanValues = new Boolean[]{{
+                                            add(false),
+                                            add(false),
+                                            add(false),
+                                        }};
+                                        doubleValues = new Double[]{{
+                                            add(9255.97),
+                                            add(8360.79),
+                                        }};
+                                        longValues = new Long[]{{
+                                            add(337396),
+                                        }};
+                                        stringValues = new String[]{{
+                                            add("deserunt"),
+                                        }};
+                                    }};
+                                    blobValue = "perferendis";
+                                    booleanValue = false;
+                                    doubleValue = 3682.41;
+                                    isNull = false;
+                                    longValue = 832620;
+                                    stringValue = "sapiente";
+                                }};
+                            }}),
+                            add(new SqlParameter() {{
+                                name = "quo";
+                                typeHint = "JSON";
+                                value = new Field() {{
+                                    arrayValue = new ArrayValue() {{
+                                        arrayValues = new org.openapis.openapi.models.shared.ArrayValue[]{{
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                        }};
+                                        booleanValues = new Boolean[]{{
+                                            add(false),
+                                            add(false),
+                                            add(false),
+                                            add(false),
+                                        }};
+                                        doubleValues = new Double[]{{
+                                            add(4736.08),
+                                            add(7991.59),
+                                            add(8009.11),
+                                            add(4614.79),
+                                        }};
+                                        longValues = new Long[]{{
+                                            add(780529),
+                                            add(678880),
+                                            add(118274),
+                                        }};
+                                        stringValues = new String[]{{
+                                            add("officia"),
+                                            add("occaecati"),
+                                            add("fugit"),
+                                        }};
+                                    }};
+                                    blobValue = "deleniti";
+                                    booleanValue = false;
+                                    doubleValue = 9446.69;
+                                    isNull = false;
+                                    longValue = 758616;
+                                    stringValue = "totam";
+                                }};
+                            }}),
+                        }}),
+                        add(new org.openapis.openapi.models.shared.SqlParameter[]{{
+                            add(new SqlParameter() {{
+                                name = "commodi";
                                 typeHint = "TIMESTAMP";
                                 value = new Field() {{
                                     arrayValue = new ArrayValue() {{
@@ -49,113 +152,107 @@ public class Application {
                                         }};
                                         booleanValues = new Boolean[]{{
                                             add(false),
-                                            add(false),
                                         }};
                                         doubleValues = new Double[]{{
-                                            add(567.13),
-                                            add(9636.63),
-                                            add(2726.56),
-                                            add(3834.41),
+                                            add(7369.18),
+                                            add(4561.5),
+                                            add(2165.5),
+                                            add(5684.34),
                                         }};
                                         longValues = new Long[]{{
-                                            add(791725),
-                                            add(812169),
+                                            add(18789),
                                         }};
                                         stringValues = new String[]{{
-                                            add("iusto"),
-                                            add("excepturi"),
-                                            add("nisi"),
+                                            add("natus"),
+                                            add("sed"),
                                         }};
                                     }};
-                                    blobValue = "recusandae";
+                                    blobValue = "iste";
                                     booleanValue = false;
-                                    doubleValue = 8360.79;
+                                    doubleValue = 2223.21;
                                     isNull = false;
-                                    longValue = 71036;
-                                    stringValue = "quis";
-                                }};
-                            }}),
-                            add(new SqlParameter() {{
-                                name = "veritatis";
-                                typeHint = "DATE";
-                                value = new Field() {{
-                                    arrayValue = new ArrayValue() {{
-                                        arrayValues = new org.openapis.openapi.models.shared.ArrayValue[]{{
-                                            add(new ArrayValue() {{}}),
-                                        }};
-                                        booleanValues = new Boolean[]{{
-                                            add(false),
-                                            add(false),
-                                        }};
-                                        doubleValues = new Double[]{{
-                                            add(9571.56),
-                                            add(7781.57),
-                                            add(1403.5),
-                                            add(8700.13),
-                                        }};
-                                        longValues = new Long[]{{
-                                            add(978619),
-                                            add(473608),
-                                            add(799159),
-                                            add(800911),
-                                        }};
-                                        stringValues = new String[]{{
-                                            add("totam"),
-                                            add("porro"),
-                                        }};
-                                    }};
-                                    blobValue = "dolorum";
-                                    booleanValue = false;
-                                    doubleValue = 1182.74;
-                                    isNull = false;
-                                    longValue = 720633;
-                                    stringValue = "officia";
-                                }};
-                            }}),
-                            add(new SqlParameter() {{
-                                name = "occaecati";
-                                typeHint = "JSON";
-                                value = new Field() {{
-                                    arrayValue = new ArrayValue() {{
-                                        arrayValues = new org.openapis.openapi.models.shared.ArrayValue[]{{
-                                            add(new ArrayValue() {{}}),
-                                            add(new ArrayValue() {{}}),
-                                            add(new ArrayValue() {{}}),
-                                        }};
-                                        booleanValues = new Boolean[]{{
-                                            add(false),
-                                            add(false),
-                                            add(false),
-                                            add(false),
-                                        }};
-                                        doubleValues = new Double[]{{
-                                            add(5218.48),
-                                            add(1059.07),
-                                            add(4146.62),
-                                            add(4736),
-                                        }};
-                                        longValues = new Long[]{{
-                                            add(186332),
-                                            add(774234),
-                                        }};
-                                        stringValues = new String[]{{
-                                            add("esse"),
-                                            add("ipsum"),
-                                            add("excepturi"),
-                                        }};
-                                    }};
-                                    blobValue = "aspernatur";
-                                    booleanValue = false;
-                                    doubleValue = 187.89;
-                                    isNull = false;
-                                    longValue = 324141;
-                                    stringValue = "natus";
+                                    longValue = 616934;
+                                    stringValue = "laboriosam";
                                 }};
                             }}),
                         }}),
                         add(new org.openapis.openapi.models.shared.SqlParameter[]{{
                             add(new SqlParameter() {{
-                                name = "iste";
+                                name = "saepe";
+                                typeHint = "TIME";
+                                value = new Field() {{
+                                    arrayValue = new ArrayValue() {{
+                                        arrayValues = new org.openapis.openapi.models.shared.ArrayValue[]{{
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                        }};
+                                        booleanValues = new Boolean[]{{
+                                            add(false),
+                                            add(false),
+                                        }};
+                                        doubleValues = new Double[]{{
+                                            add(4370.32),
+                                            add(9023.49),
+                                            add(6976.31),
+                                        }};
+                                        longValues = new Long[]{{
+                                            add(60225),
+                                        }};
+                                        stringValues = new String[]{{
+                                            add("est"),
+                                            add("mollitia"),
+                                            add("laborum"),
+                                            add("dolores"),
+                                        }};
+                                    }};
+                                    blobValue = "dolorem";
+                                    booleanValue = false;
+                                    doubleValue = 3581.52;
+                                    isNull = false;
+                                    longValue = 128926;
+                                    stringValue = "nobis";
+                                }};
+                            }}),
+                            add(new SqlParameter() {{
+                                name = "enim";
+                                typeHint = "DATE";
+                                value = new Field() {{
+                                    arrayValue = new ArrayValue() {{
+                                        arrayValues = new org.openapis.openapi.models.shared.ArrayValue[]{{
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                        }};
+                                        booleanValues = new Boolean[]{{
+                                            add(false),
+                                            add(false),
+                                        }};
+                                        doubleValues = new Double[]{{
+                                            add(384.25),
+                                            add(4386.01),
+                                            add(6342.74),
+                                        }};
+                                        longValues = new Long[]{{
+                                            add(958950),
+                                            add(102044),
+                                            add(652790),
+                                            add(208876),
+                                        }};
+                                        stringValues = new String[]{{
+                                            add("consequuntur"),
+                                            add("repellat"),
+                                            add("mollitia"),
+                                        }};
+                                    }};
+                                    blobValue = "occaecati";
+                                    booleanValue = false;
+                                    doubleValue = 2532.91;
+                                    isNull = false;
+                                    longValue = 414369;
+                                    stringValue = "quam";
+                                }};
+                            }}),
+                            add(new SqlParameter() {{
+                                name = "molestiae";
                                 typeHint = "UUID";
                                 value = new Field() {{
                                     arrayValue = new ArrayValue() {{
@@ -166,40 +263,81 @@ public class Application {
                                         }};
                                         booleanValues = new Boolean[]{{
                                             add(false),
+                                        }};
+                                        doubleValues = new Double[]{{
+                                            add(1103.75),
+                                            add(6747.52),
+                                        }};
+                                        longValues = new Long[]{{
+                                            add(317202),
+                                            add(138183),
+                                            add(778346),
+                                        }};
+                                        stringValues = new String[]{{
+                                            add("tenetur"),
+                                        }};
+                                    }};
+                                    blobValue = "ipsam";
+                                    booleanValue = false;
+                                    doubleValue = 6625.27;
+                                    isNull = false;
+                                    longValue = 820994;
+                                    stringValue = "aut";
+                                }};
+                            }}),
+                            add(new SqlParameter() {{
+                                name = "quasi";
+                                typeHint = "DATE";
+                                value = new Field() {{
+                                    arrayValue = new ArrayValue() {{
+                                        arrayValues = new org.openapis.openapi.models.shared.ArrayValue[]{{
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                            add(new ArrayValue() {{}}),
+                                        }};
+                                        booleanValues = new Boolean[]{{
+                                            add(false),
+                                            add(false),
                                             add(false),
                                         }};
                                         doubleValues = new Double[]{{
-                                            add(9025.99),
-                                            add(6818.2),
-                                            add(4499.5),
-                                            add(3595.08),
+                                            add(9719.45),
                                         }};
                                         longValues = new Long[]{{
-                                            add(437032),
-                                            add(902349),
-                                            add(697631),
+                                            add(878194),
+                                            add(468651),
+                                            add(509624),
+                                            add(976762),
                                         }};
                                         stringValues = new String[]{{
-                                            add("ipsa"),
+                                            add("omnis"),
                                         }};
                                     }};
-                                    blobValue = "reiciendis";
+                                    blobValue = "voluptate";
                                     booleanValue = false;
-                                    doubleValue = 6667.67;
+                                    doubleValue = 7392.64;
                                     isNull = false;
-                                    longValue = 653140;
-                                    stringValue = "laborum";
+                                    longValue = 19987;
+                                    stringValue = "doloremque";
                                 }};
                             }}),
                         }}),
                     }};
-                    resourceArn = "dolores";
-                    schema = "dolorem";
-                    secretArn = "corporis";
-                    sql = "explicabo";
-                    transactionId = "nobis";
+                    resourceArn = "reprehenderit";
+                    schema = "ut";
+                    secretArn = "maiores";
+                    sql = "dicta";
+                    transactionId = "corporis";
                 }};
-            }};            
+                xAmzAlgorithm = "dolore";
+                xAmzContentSha256 = "iusto";
+                xAmzCredential = "dicta";
+                xAmzDate = "harum";
+                xAmzSecurityToken = "enim";
+                xAmzSignature = "accusamus";
+                xAmzSignedHeaders = "commodi";
+            }}            
 
             BatchExecuteStatementResponse res = sdk.batchExecuteStatement(req);
 

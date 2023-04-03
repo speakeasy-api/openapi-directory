@@ -32,7 +32,7 @@ public class CodeReferences {
 		this._genVersion = genVersion;
 	}
 
-    public org.openapis.openapi.models.operations.PostV1CodeReferencesResponse postV1CodeReferences(org.openapis.openapi.models.operations.PostV1CodeReferencesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV1CodeReferencesResponse postV1CodeReferences(org.openapis.openapi.models.shared.CodeReferenceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/code-references");
         
@@ -64,7 +64,7 @@ public class CodeReferences {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.PostV1CodeReferencesDeleteReportsResponse postV1CodeReferencesDeleteReports(org.openapis.openapi.models.operations.PostV1CodeReferencesDeleteReportsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostV1CodeReferencesDeleteReportsResponse postV1CodeReferencesDeleteReports(org.openapis.openapi.models.shared.DeleteRepositoryReportsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/code-references/delete-reports");
         

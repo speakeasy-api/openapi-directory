@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRawTxRequest {
-    
-    public GetRawTxPathParams pathParams;
-    public GetRawTxRequest withPathParams(GetRawTxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Transaction ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=txid")
+    public String txid;
+    public GetRawTxRequest withTxid(String txid) {
+        this.txid = txid;
         return this;
     }
     

@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePhoneNumberRequest {
-    
-    public CreatePhoneNumberPathParams pathParams;
-    public CreatePhoneNumberRequest withPathParams(CreatePhoneNumberPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreatePhoneNumberCreatePhoneNumberRequest request;
-    public CreatePhoneNumberRequest withRequest(CreatePhoneNumberCreatePhoneNumberRequest request) {
-        this.request = request;
+    public CreatePhoneNumberCreatePhoneNumberRequest requestBody;
+    public CreatePhoneNumberRequest withRequestBody(CreatePhoneNumberCreatePhoneNumberRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public CreatePhoneNumberSecurity security;
-    public CreatePhoneNumberRequest withSecurity(CreatePhoneNumberSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreatePhoneNumberRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk to associate the phone number with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public CreatePhoneNumberRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

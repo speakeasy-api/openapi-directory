@@ -4,13 +4,137 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommandsRequest {
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$gte]")
+    public OffsetDateTime createdAtDollarGte;
+    public GetCommandsRequest withCreatedAtDollarGte(OffsetDateTime createdAtDollarGte) {
+        this.createdAtDollarGte = createdAtDollarGte;
+        return this;
+    }
     
-    public GetCommandsQueryParams queryParams;
-    public GetCommandsRequest withQueryParams(GetCommandsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAt[$lte]")
+    public OffsetDateTime createdAtDollarLte;
+    public GetCommandsRequest withCreatedAtDollarLte(OffsetDateTime createdAtDollarLte) {
+        this.createdAtDollarLte = createdAtDollarLte;
+        return this;
+    }
+    
+    /**
+     * Populate chargestation
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_chargestation")
+    public Boolean includeChargestation;
+    public GetCommandsRequest withIncludeChargestation(Boolean includeChargestation) {
+        this.includeChargestation = includeChargestation;
+        return this;
+    }
+    
+    /**
+     * Populate driver
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_driver")
+    public Boolean includeDriver;
+    public GetCommandsRequest withIncludeDriver(Boolean includeDriver) {
+        this.includeDriver = includeDriver;
+        return this;
+    }
+    
+    /**
+     * Populate organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_organization")
+    public Boolean includeOrganization;
+    public GetCommandsRequest withIncludeOrganization(Boolean includeOrganization) {
+        this.includeOrganization = includeOrganization;
+        return this;
+    }
+    
+    /**
+     * Populate transaction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_transaction")
+    public Boolean includeTransaction;
+    public GetCommandsRequest withIncludeTransaction(Boolean includeTransaction) {
+        this.includeTransaction = includeTransaction;
+        return this;
+    }
+    
+    /**
+     * Enable pagination
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_enabled")
+    public Boolean paginateEnabled;
+    public GetCommandsRequest withPaginateEnabled(Boolean paginateEnabled) {
+        this.paginateEnabled = paginateEnabled;
+        return this;
+    }
+    
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_limit")
+    public Long paginateLimit;
+    public GetCommandsRequest withPaginateLimit(Long paginateLimit) {
+        this.paginateLimit = paginateLimit;
+        return this;
+    }
+    
+    /**
+     * The queried page index
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paginate_page")
+    public String paginatePage;
+    public GetCommandsRequest withPaginatePage(String paginatePage) {
+        this.paginatePage = paginatePage;
+        return this;
+    }
+    
+    /**
+     * Sort data by this key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetCommandsRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * asc to sort ascending (default is desc - descending)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
+    public org.openapis.openapi.models.shared.SortOrder1Enum sortOrder;
+    public GetCommandsRequest withSortOrder(org.openapis.openapi.models.shared.SortOrder1Enum sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$gte]")
+    public OffsetDateTime updatedAtDollarGte;
+    public GetCommandsRequest withUpdatedAtDollarGte(OffsetDateTime updatedAtDollarGte) {
+        this.updatedAtDollarGte = updatedAtDollarGte;
+        return this;
+    }
+    
+    /**
+     * Date as ISO String
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedAt[$lte]")
+    public OffsetDateTime updatedAtDollarLte;
+    public GetCommandsRequest withUpdatedAtDollarLte(OffsetDateTime updatedAtDollarLte) {
+        this.updatedAtDollarLte = updatedAtDollarLte;
         return this;
     }
     

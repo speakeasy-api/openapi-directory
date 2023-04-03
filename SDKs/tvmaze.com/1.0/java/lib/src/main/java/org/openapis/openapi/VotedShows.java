@@ -39,7 +39,7 @@ public class VotedShows {
      */
     public org.openapis.openapi.models.operations.DeleteUserVotesShowsShowIdResponse deleteUserVotesShowsShowId(org.openapis.openapi.models.operations.DeleteUserVotesShowsShowIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserVotesShowsShowIdPathParams.class, baseUrl, "/user/votes/shows/{show_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUserVotesShowsShowIdRequest.class, baseUrl, "/user/votes/shows/{show_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -78,7 +78,7 @@ public class VotedShows {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserVotesShowsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserVotesShowsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -117,7 +117,7 @@ public class VotedShows {
      */
     public org.openapis.openapi.models.operations.GetUserVotesShowsShowIdResponse getUserVotesShowsShowId(org.openapis.openapi.models.operations.GetUserVotesShowsShowIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserVotesShowsShowIdPathParams.class, baseUrl, "/user/votes/shows/{show_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserVotesShowsShowIdRequest.class, baseUrl, "/user/votes/shows/{show_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,12 +159,12 @@ public class VotedShows {
      */
     public org.openapis.openapi.models.operations.PutUserVotesShowsShowIdResponse putUserVotesShowsShowId(org.openapis.openapi.models.operations.PutUserVotesShowsShowIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserVotesShowsShowIdPathParams.class, baseUrl, "/user/votes/shows/{show_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutUserVotesShowsShowIdRequest.class, baseUrl, "/user/votes/shows/{show_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "showVoteInput", "json");
         req.setBody(serializedRequestBody);
         
         

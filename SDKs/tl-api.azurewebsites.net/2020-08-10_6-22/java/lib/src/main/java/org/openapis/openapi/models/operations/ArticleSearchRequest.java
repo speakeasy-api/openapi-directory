@@ -4,13 +4,76 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleSearchRequest {
+    /**
+     * Active Status 1 : Active, 2: Inactive, 3: All, Default : 1
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=activeStatus")
+    public Integer activeStatus;
+    public ArticleSearchRequest withActiveStatus(Integer activeStatus) {
+        this.activeStatus = activeStatus;
+        return this;
+    }
     
-    public ArticleSearchQueryParams queryParams;
-    public ArticleSearchRequest withQueryParams(ArticleSearchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * -1 for all gyms 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gymId")
+    public Integer gymId;
+    public ArticleSearchRequest withGymId(Integer gymId) {
+        this.gymId = gymId;
+        return this;
+    }
+    
+    /**
+     * number of recode in result and default is 100. use negative numbers to order by desc
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public ArticleSearchRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * number of recodes to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public ArticleSearchRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * order by column.!-- invalid column will give internal server error
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public String orderBy;
+    public ArticleSearchRequest withOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * part of article name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchText")
+    public String searchText;
+    public ArticleSearchRequest withSearchText(String searchText) {
+        this.searchText = searchText;
+        return this;
+    }
+    
+    /**
+     * filter article type. default is 'all'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public String type;
+    public ArticleSearchRequest withType(String type) {
+        this.type = type;
         return this;
     }
     

@@ -4,13 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUpcomingScheduledCampaignsAndCanvasesRequest {
-    
-    public GetUpcomingScheduledCampaignsAndCanvasesQueryParams queryParams;
-    public GetUpcomingScheduledCampaignsAndCanvasesRequest withQueryParams(GetUpcomingScheduledCampaignsAndCanvasesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * (Required) String in ISO 8601 format
+     * 
+     * End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public GetUpcomingScheduledCampaignsAndCanvasesRequest withEndTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
     

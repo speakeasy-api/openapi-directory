@@ -39,7 +39,7 @@ public class Osdb {
      */
     public org.openapis.openapi.models.operations.ActionHelpResponse actionHelp(org.openapis.openapi.models.operations.ActionHelpRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionHelpPathParams.class, baseUrl, "/api/v1/actions/{serviceId}/{actionId}/help", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ActionHelpRequest.class, baseUrl, "/api/v1/actions/{serviceId}/{actionId}/help", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,7 +86,7 @@ public class Osdb {
      */
     public org.openapis.openapi.models.operations.DescribeActionResponse describeAction(org.openapis.openapi.models.operations.DescribeActionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DescribeActionPathParams.class, baseUrl, "/api/v1/actions/{serviceId}/{actionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DescribeActionRequest.class, baseUrl, "/api/v1/actions/{serviceId}/{actionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -133,7 +133,7 @@ public class Osdb {
      */
     public org.openapis.openapi.models.operations.DescribeServiceResponse describeService(org.openapis.openapi.models.operations.DescribeServiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DescribeServicePathParams.class, baseUrl, "/api/v1/services/{serviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DescribeServiceRequest.class, baseUrl, "/api/v1/services/{serviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -195,12 +195,12 @@ public class Osdb {
      */
     public org.openapis.openapi.models.operations.ExecuteActionResponse executeAction(org.openapis.openapi.models.operations.ExecuteActionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExecuteActionPathParams.class, baseUrl, "/api/v1/actions/{serviceId}/{actionId}/exec", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExecuteActionRequest.class, baseUrl, "/api/v1/actions/{serviceId}/{actionId}/exec", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "execBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -238,7 +238,7 @@ public class Osdb {
      */
     public org.openapis.openapi.models.operations.ListActionsResponse listActions(org.openapis.openapi.models.operations.ListActionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListActionsPathParams.class, baseUrl, "/api/v1/actions/{serviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListActionsRequest.class, baseUrl, "/api/v1/actions/{serviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -329,7 +329,7 @@ public class Osdb {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LoadServiceResponse loadService(org.openapis.openapi.models.operations.LoadServiceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.LoadServiceResponse loadService(org.openapis.openapi.models.operations.LoadServiceRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/services");
         
@@ -472,7 +472,7 @@ public class Osdb {
      */
     public org.openapis.openapi.models.operations.UnloadServiceResponse unloadService(org.openapis.openapi.models.operations.UnloadServiceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnloadServicePathParams.class, baseUrl, "/api/v1/services/{serviceId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnloadServiceRequest.class, baseUrl, "/api/v1/services/{serviceId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

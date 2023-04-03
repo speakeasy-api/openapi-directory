@@ -7,27 +7,47 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest {
-    
-    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesPathParams pathParams;
-    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest withPathParams(PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The new issue state change. The only required elements are `changes.[].new`. All other elements can be omitted from the body.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The issue id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_id")
+    public String issueId;
+    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest withIssueId(String issueId) {
+        this.issueId = issueId;
+        return this;
+    }
     
-    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesSecurity security;
-    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest withSecurity(PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the repository slug or the UUID of the repository,
+     * surrounded by curly-braces, for example: `{repository UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

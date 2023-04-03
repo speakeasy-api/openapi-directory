@@ -40,12 +40,12 @@ public class GroupPolicies {
      */
     public org.openapis.openapi.models.operations.CreateNetworkGroupPolicyResponse createNetworkGroupPolicy(org.openapis.openapi.models.operations.CreateNetworkGroupPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkGroupPolicyPathParams.class, baseUrl, "/networks/{networkId}/groupPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateNetworkGroupPolicyRequest.class, baseUrl, "/networks/{networkId}/groupPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -85,7 +85,7 @@ public class GroupPolicies {
      */
     public org.openapis.openapi.models.operations.DeleteNetworkGroupPolicyResponse deleteNetworkGroupPolicy(org.openapis.openapi.models.operations.DeleteNetworkGroupPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkGroupPolicyPathParams.class, baseUrl, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNetworkGroupPolicyRequest.class, baseUrl, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -119,7 +119,7 @@ public class GroupPolicies {
      */
     public org.openapis.openapi.models.operations.GetNetworkGroupPoliciesResponse getNetworkGroupPolicies(org.openapis.openapi.models.operations.GetNetworkGroupPoliciesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkGroupPoliciesPathParams.class, baseUrl, "/networks/{networkId}/groupPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkGroupPoliciesRequest.class, baseUrl, "/networks/{networkId}/groupPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -159,7 +159,7 @@ public class GroupPolicies {
      */
     public org.openapis.openapi.models.operations.GetNetworkGroupPolicyResponse getNetworkGroupPolicy(org.openapis.openapi.models.operations.GetNetworkGroupPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkGroupPolicyPathParams.class, baseUrl, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkGroupPolicyRequest.class, baseUrl, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -199,12 +199,12 @@ public class GroupPolicies {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkGroupPolicyResponse updateNetworkGroupPolicy(org.openapis.openapi.models.operations.UpdateNetworkGroupPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkGroupPolicyPathParams.class, baseUrl, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkGroupPolicyRequest.class, baseUrl, "/networks/{networkId}/groupPolicies/{groupPolicyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         

@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.UserCtrlGetUserByIDSecurity;
-import org.openapis.openapi.models.operations.UserCtrlGetUserByIDPathParams;
 import org.openapis.openapi.models.operations.UserCtrlGetUserByIDRequest;
 import org.openapis.openapi.models.operations.UserCtrlGetUserByIDResponse;
-import org.openapis.openapi.models.shared.SchemeBearerAuth;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,18 +28,13 @@ public class Application {
                 .build();
 
             UserCtrlGetUserByIDRequest req = new UserCtrlGetUserByIDRequest() {{
-                security = new UserCtrlGetUserByIDSecurity() {{
-                    bearerAuth = new SchemeBearerAuth() {{
-                        authorization = "Bearer YOUR_BEARER_TOKEN_HERE";
-                    }};
-                }};
-                pathParams = new UserCtrlGetUserByIDPathParams() {{
-                    accountId = "corrupti";
-                    userId = 5928.45;
-                }};
-            }};            
+                accountId = "corrupti";
+                userId = 5928.45;
+            }}            
 
-            UserCtrlGetUserByIDResponse res = sdk.userCtrlGetUserByID(req);
+            UserCtrlGetUserByIDResponse res = sdk.userCtrlGetUserByID(req, new UserCtrlGetUserByIDSecurity() {{
+                bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
+            }});
 
             if (res.userHalResponse.isPresent()) {
                 // handle response
@@ -53,7 +46,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

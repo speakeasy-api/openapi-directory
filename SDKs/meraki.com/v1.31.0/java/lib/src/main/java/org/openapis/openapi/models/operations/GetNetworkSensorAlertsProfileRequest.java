@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSensorAlertsProfileRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetNetworkSensorAlertsProfileRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetNetworkSensorAlertsProfilePathParams pathParams;
-    public GetNetworkSensorAlertsProfileRequest withPathParams(GetNetworkSensorAlertsProfilePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSensorAlertsProfileRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
         return this;
     }
     

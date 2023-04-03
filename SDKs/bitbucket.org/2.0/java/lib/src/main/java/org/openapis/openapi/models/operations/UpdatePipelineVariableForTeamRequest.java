@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePipelineVariableForTeamRequest {
-    
-    public UpdatePipelineVariableForTeamPathParams pathParams;
-    public UpdatePipelineVariableForTeamRequest withPathParams(UpdatePipelineVariableForTeamPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The updated variable.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdatePipelineVariableForTeamRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdatePipelineVariableForTeamRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public UpdatePipelineVariableForTeamRequest withUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    
+    /**
+     * The UUID of the variable.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
+    public String variableUuid;
+    public UpdatePipelineVariableForTeamRequest withVariableUuid(String variableUuid) {
+        this.variableUuid = variableUuid;
         return this;
     }
     

@@ -7,17 +7,31 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsAddOrUpdateRepoPermissionsLegacyRequest {
-    
-    public TeamsAddOrUpdateRepoPermissionsLegacyPathParams pathParams;
-    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withPathParams(TeamsAddOrUpdateRepoPermissionsLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequestBody requestBody;
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withRequestBody(TeamsAddOrUpdateRepoPermissionsLegacyRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public TeamsAddOrUpdateRepoPermissionsLegacyRequestBody request;
-    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withRequest(TeamsAddOrUpdateRepoPermissionsLegacyRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public TeamsAddOrUpdateRepoPermissionsLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

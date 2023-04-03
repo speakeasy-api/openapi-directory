@@ -4,20 +4,18 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWorkspacesWorkspaceRequest {
-    
-    public GetWorkspacesWorkspacePathParams pathParams;
-    public GetWorkspacesWorkspaceRequest withPathParams(GetWorkspacesWorkspacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetWorkspacesWorkspaceSecurity security;
-    public GetWorkspacesWorkspaceRequest withSecurity(GetWorkspacesWorkspaceSecurity security) {
-        this.security = security;
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID
+     * surrounded by curly-braces, for example: `{workspace UUID}`.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public GetWorkspacesWorkspaceRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

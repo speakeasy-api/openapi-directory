@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteClientValidatorRequest {
-    
-    public DeleteClientValidatorPathParams pathParams;
-    public DeleteClientValidatorRequest withPathParams(DeleteClientValidatorPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteClientValidatorSecurity security;
-    public DeleteClientValidatorRequest withSecurity(DeleteClientValidatorSecurity security) {
-        this.security = security;
+    /**
+     * The validation authorities id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteClientValidatorRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

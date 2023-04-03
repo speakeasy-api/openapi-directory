@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsListPlansStubbedRequest {
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public AppsListPlansStubbedRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public AppsListPlansStubbedQueryParams queryParams;
-    public AppsListPlansStubbedRequest withQueryParams(AppsListPlansStubbedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public AppsListPlansStubbedRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

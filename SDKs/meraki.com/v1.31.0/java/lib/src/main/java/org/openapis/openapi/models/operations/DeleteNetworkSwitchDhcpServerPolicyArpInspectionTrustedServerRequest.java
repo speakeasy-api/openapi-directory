@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
     
-    public DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams pathParams;
-    public DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withPathParams(DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=trustedServerId")
+    public String trustedServerId;
+    public DeleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServerRequest withTrustedServerId(String trustedServerId) {
+        this.trustedServerId = trustedServerId;
         return this;
     }
     

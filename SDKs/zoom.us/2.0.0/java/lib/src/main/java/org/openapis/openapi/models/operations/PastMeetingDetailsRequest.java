@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PastMeetingDetailsRequest {
-    
-    public PastMeetingDetailsPathParams pathParams;
-    public PastMeetingDetailsRequest withPathParams(PastMeetingDetailsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PastMeetingDetailsSecurity security;
-    public PastMeetingDetailsRequest withSecurity(PastMeetingDetailsSecurity security) {
-        this.security = security;
+    /**
+     * The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a '/'or contains '//' in it.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=meetingUUID")
+    public String meetingUUID;
+    public PastMeetingDetailsRequest withMeetingUUID(String meetingUUID) {
+        this.meetingUUID = meetingUUID;
         return this;
     }
     

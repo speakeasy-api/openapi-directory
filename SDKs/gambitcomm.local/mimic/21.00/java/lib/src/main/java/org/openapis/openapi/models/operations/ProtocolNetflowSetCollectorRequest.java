@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowSetCollectorRequest {
+    /**
+     * Agent to set the NETFLOW
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolNetflowSetCollectorRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
     
-    public ProtocolNetflowSetCollectorPathParams pathParams;
-    public ProtocolNetflowSetCollectorRequest withPathParams(ProtocolNetflowSetCollectorPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * file name to load config
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectorIP")
+    public String collectorIP;
+    public ProtocolNetflowSetCollectorRequest withCollectorIP(String collectorIP) {
+        this.collectorIP = collectorIP;
         return this;
     }
     

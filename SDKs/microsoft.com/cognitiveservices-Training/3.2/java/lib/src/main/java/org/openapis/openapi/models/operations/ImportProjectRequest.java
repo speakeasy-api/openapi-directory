@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportProjectRequest {
-    
-    public ImportProjectQueryParams queryParams;
-    public ImportProjectRequest withQueryParams(ImportProjectQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Token generated from the export project call.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public ImportProjectRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

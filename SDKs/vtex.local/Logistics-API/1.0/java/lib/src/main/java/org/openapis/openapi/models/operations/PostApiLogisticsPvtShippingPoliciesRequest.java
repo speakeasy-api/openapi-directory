@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiLogisticsPvtShippingPoliciesRequest {
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PostApiLogisticsPvtShippingPoliciesRequest withAccept(String accept) {
+        this.accept = accept;
+        return this;
+    }
     
-    public PostApiLogisticsPvtShippingPoliciesHeaders headers;
-    public PostApiLogisticsPvtShippingPoliciesRequest withHeaders(PostApiLogisticsPvtShippingPoliciesHeaders headers) {
-        this.headers = headers;
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PostApiLogisticsPvtShippingPoliciesRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostApiLogisticsPvtShippingPoliciesRequestBody request;
-    public PostApiLogisticsPvtShippingPoliciesRequest withRequest(PostApiLogisticsPvtShippingPoliciesRequestBody request) {
-        this.request = request;
+    public PostApiLogisticsPvtShippingPoliciesRequestBody requestBody;
+    public PostApiLogisticsPvtShippingPoliciesRequest withRequestBody(PostApiLogisticsPvtShippingPoliciesRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

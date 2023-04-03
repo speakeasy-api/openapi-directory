@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEndUserRequest {
-    
-    public UpdateEndUserPathParams pathParams;
-    public UpdateEndUserRequest withPathParams(UpdateEndUserPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateEndUserUpdateEndUserRequest request;
-    public UpdateEndUserRequest withRequest(UpdateEndUserUpdateEndUserRequest request) {
-        this.request = request;
+    public UpdateEndUserUpdateEndUserRequest requestBody;
+    public UpdateEndUserRequest withRequestBody(UpdateEndUserUpdateEndUserRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateEndUserSecurity security;
-    public UpdateEndUserRequest withSecurity(UpdateEndUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateEndUserRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The unique string created by Twilio to identify the End User resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateEndUserRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

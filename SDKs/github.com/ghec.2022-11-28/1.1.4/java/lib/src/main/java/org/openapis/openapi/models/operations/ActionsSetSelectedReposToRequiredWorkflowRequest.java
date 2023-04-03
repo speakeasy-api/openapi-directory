@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetSelectedReposToRequiredWorkflowRequest {
-    
-    public ActionsSetSelectedReposToRequiredWorkflowPathParams pathParams;
-    public ActionsSetSelectedReposToRequiredWorkflowRequest withPathParams(ActionsSetSelectedReposToRequiredWorkflowPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ActionsSetSelectedReposToRequiredWorkflowRequestBody requestBody;
+    public ActionsSetSelectedReposToRequiredWorkflowRequest withRequestBody(ActionsSetSelectedReposToRequiredWorkflowRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ActionsSetSelectedReposToRequiredWorkflowRequestBody request;
-    public ActionsSetSelectedReposToRequiredWorkflowRequest withRequest(ActionsSetSelectedReposToRequiredWorkflowRequestBody request) {
-        this.request = request;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ActionsSetSelectedReposToRequiredWorkflowRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the required workflow.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=required_workflow_id")
+    public Long requiredWorkflowId;
+    public ActionsSetSelectedReposToRequiredWorkflowRequest withRequiredWorkflowId(Long requiredWorkflowId) {
+        this.requiredWorkflowId = requiredWorkflowId;
         return this;
     }
     

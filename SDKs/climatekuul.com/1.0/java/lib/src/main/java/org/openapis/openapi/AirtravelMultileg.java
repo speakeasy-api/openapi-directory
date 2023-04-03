@@ -68,10 +68,21 @@ public class AirtravelMultileg {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AirtravelMultilegResponse airtravelMultileg(org.openapis.openapi.models.operations.AirtravelMultilegRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AirtravelMultilegResponse airtravelMultileg(org.openapis.openapi.models.shared.AirtravelMultilegRequest request) throws Exception {
+        return this.airtravelMultileg(request, null);
+    }
+
+    /**
+     * airtravelMultileg
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AirtravelMultilegResponse airtravelMultileg(org.openapis.openapi.models.shared.AirtravelMultilegRequest request, String serverURL) throws Exception {
         String baseUrl = AIRTRAVEL_MULTILEG_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/airtravelMultileg");
@@ -109,10 +120,21 @@ public class AirtravelMultileg {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmCarbonOffset3Response confirmCarbonOffset3(org.openapis.openapi.models.operations.ConfirmCarbonOffset3Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmCarbonOffset3Response confirmCarbonOffset3(org.openapis.openapi.models.operations.ConfirmCarbonOffset3RequestBody request) throws Exception {
+        return this.confirmCarbonOffset3(request, null);
+    }
+
+    /**
+     * confirmCarbonOffset
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmCarbonOffset3Response confirmCarbonOffset3(org.openapis.openapi.models.operations.ConfirmCarbonOffset3RequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_CARBON_OFFSET3_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/airtravelMultileg/confirmCarbonOffset");
@@ -147,10 +169,21 @@ public class AirtravelMultileg {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmPayment3Response confirmPayment3(org.openapis.openapi.models.operations.ConfirmPayment3Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmPayment3Response confirmPayment3(org.openapis.openapi.models.operations.ConfirmPayment3RequestBody request) throws Exception {
+        return this.confirmPayment3(request, null);
+    }
+
+    /**
+     * confirmPayment
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmPayment3Response confirmPayment3(org.openapis.openapi.models.operations.ConfirmPayment3RequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_PAYMENT3_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/airtravelMultileg/confirmPayment");
@@ -185,10 +218,21 @@ public class AirtravelMultileg {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3Response confirmPaymentOfTransaction3(org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3Response confirmPaymentOfTransaction3(org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3RequestBody request) throws Exception {
+        return this.confirmPaymentOfTransaction3(request, null);
+    }
+
+    /**
+     * confirmTransaction
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3Response confirmPaymentOfTransaction3(org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction3RequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRM_PAYMENT_OF_TRANSACTION3_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/airtravelMultileg/confirmTransaction");
@@ -223,10 +267,21 @@ public class AirtravelMultileg {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ConfirmsPlanting3Response confirmsPlanting3(org.openapis.openapi.models.operations.ConfirmsPlanting3Request request) throws Exception {
+    public org.openapis.openapi.models.operations.ConfirmsPlanting3Response confirmsPlanting3(org.openapis.openapi.models.operations.ConfirmsPlanting3RequestBody request) throws Exception {
+        return this.confirmsPlanting3(request, null);
+    }
+
+    /**
+     * confirmPlanting
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ConfirmsPlanting3Response confirmsPlanting3(org.openapis.openapi.models.operations.ConfirmsPlanting3RequestBody request, String serverURL) throws Exception {
         String baseUrl = CONFIRMS_PLANTING3_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/airtravelMultileg/confirmPlanting");

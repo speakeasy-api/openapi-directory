@@ -4,13 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEventsRequest {
+    /**
+     * Filter by event direction
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public ListEventsDirectionEnum direction;
+    public ListEventsRequest withDirection(ListEventsDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
     
-    public ListEventsQueryParams queryParams;
-    public ListEventsRequest withQueryParams(ListEventsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return events that occurred after this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
+    public Long fromDate;
+    public ListEventsRequest withFromDate(Long fromDate) {
+        this.fromDate = fromDate;
+        return this;
+    }
+    
+    /**
+     * Page number of events to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ListEventsRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Sort in either ascending or descending order'
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public ListEventsOrderEnum order;
+    public ListEventsRequest withOrder(ListEventsOrderEnum order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * Return this amount of events in the response
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Long size;
+    public ListEventsRequest withSize(Long size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Sort events by property
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public ListEventsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Filter events by state
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
+    public ListEventsStatesEnum states;
+    public ListEventsRequest withStates(ListEventsStatesEnum states) {
+        this.states = states;
+        return this;
+    }
+    
+    /**
+     * Return events that occurred before this point in time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
+    public Long toDate;
+    public ListEventsRequest withToDate(Long toDate) {
+        this.toDate = toDate;
+        return this;
+    }
+    
+    /**
+     * Record type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
+    public ListEventsTypesEnum types;
+    public ListEventsRequest withTypes(ListEventsTypesEnum types) {
+        this.types = types;
         return this;
     }
     

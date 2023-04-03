@@ -35,23 +35,24 @@ public class DomesticScheduledPayments {
     /**
      * Create Domestic Scheduled Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonResponse createDomesticScheduledPaymentConsentsJson(org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonResponse createDomesticScheduledPaymentConsentsJson(org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonRequest request, org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-scheduled-payment-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteDomesticScheduledConsent4", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -60,7 +61,7 @@ public class DomesticScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,23 +124,24 @@ public class DomesticScheduledPayments {
     /**
      * Create Domestic Scheduled Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawResponse createDomesticScheduledPaymentConsentsRaw(org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawResponse createDomesticScheduledPaymentConsentsRaw(org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawRequest request, org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentConsentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-scheduled-payment-consents");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -148,7 +150,7 @@ public class DomesticScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -211,23 +213,24 @@ public class DomesticScheduledPayments {
     /**
      * Create Domestic Scheduled Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonResponse createDomesticScheduledPaymentsJson(org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonResponse createDomesticScheduledPaymentsJson(org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonRequest request, org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsJsonSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-scheduled-payments");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "obWriteDomesticScheduled2", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -236,7 +239,7 @@ public class DomesticScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -299,23 +302,24 @@ public class DomesticScheduledPayments {
     /**
      * Create Domestic Scheduled Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawResponse createDomesticScheduledPaymentsRaw(org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawResponse createDomesticScheduledPaymentsRaw(org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawRequest request, org.openapis.openapi.models.operations.CreateDomesticScheduledPaymentsRawSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/domestic-scheduled-payments");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -324,7 +328,7 @@ public class DomesticScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -387,18 +391,19 @@ public class DomesticScheduledPayments {
     /**
      * Get Domestic Scheduled Payment Consents
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdResponse getDomesticScheduledPaymentConsentsConsentId(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdResponse getDomesticScheduledPaymentConsentsConsentId(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdRequest request, org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdPathParams.class, baseUrl, "/domestic-scheduled-payment-consents/{ConsentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentConsentsConsentIdRequest.class, baseUrl, "/domestic-scheduled-payment-consents/{ConsentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -407,7 +412,7 @@ public class DomesticScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -470,18 +475,19 @@ public class DomesticScheduledPayments {
     /**
      * Get Domestic Scheduled Payments
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdResponse getDomesticScheduledPaymentsDomesticScheduledPaymentId(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdResponse getDomesticScheduledPaymentsDomesticScheduledPaymentId(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdRequest request, org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPathParams.class, baseUrl, "/domestic-scheduled-payments/{DomesticScheduledPaymentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDomesticScheduledPaymentsDomesticScheduledPaymentIdRequest.class, baseUrl, "/domestic-scheduled-payments/{DomesticScheduledPaymentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -490,7 +496,7 @@ public class DomesticScheduledPayments {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

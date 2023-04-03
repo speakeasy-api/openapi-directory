@@ -39,12 +39,12 @@ public class BankAccounts {
      */
     public org.openapis.openapi.models.operations.CreateBankAccountResponse createBankAccount(org.openapis.openapi.models.operations.CreateBankAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateBankAccountPathParams.class, baseUrl, "/api/v1/applications/{application_id}/bank_accounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateBankAccountRequest.class, baseUrl, "/api/v1/applications/{application_id}/bank_accounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "bankAccountCreateRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -83,7 +83,7 @@ public class BankAccounts {
      */
     public org.openapis.openapi.models.operations.DeleteBankAccountResponse deleteBankAccount(org.openapis.openapi.models.operations.DeleteBankAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBankAccountPathParams.class, baseUrl, "/api/v1/applications/{application_id}/bank_accounts/{bank_account_id}/{version}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBankAccountRequest.class, baseUrl, "/api/v1/applications/{application_id}/bank_accounts/{bank_account_id}/{version}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -116,7 +116,7 @@ public class BankAccounts {
      */
     public org.openapis.openapi.models.operations.GetAllBankAccountsResponse getAllBankAccounts(org.openapis.openapi.models.operations.GetAllBankAccountsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllBankAccountsPathParams.class, baseUrl, "/api/v1/applications/{application_id}/bank_accounts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAllBankAccountsRequest.class, baseUrl, "/api/v1/applications/{application_id}/bank_accounts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -155,7 +155,7 @@ public class BankAccounts {
      */
     public org.openapis.openapi.models.operations.GetBankAccountResponse getBankAccount(org.openapis.openapi.models.operations.GetBankAccountRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBankAccountPathParams.class, baseUrl, "/api/v1/applications/{application_id}/bank_accounts/{bank_account_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBankAccountRequest.class, baseUrl, "/api/v1/applications/{application_id}/bank_accounts/{bank_account_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

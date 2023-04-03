@@ -4,27 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientFlagTypesPartialUpdateRequest {
-    
-    public PatientFlagTypesPartialUpdatePathParams pathParams;
-    public PatientFlagTypesPartialUpdateRequest withPathParams(PatientFlagTypesPartialUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
+    public Long doctor;
+    public PatientFlagTypesPartialUpdateRequest withDoctor(Long doctor) {
+        this.doctor = doctor;
         return this;
     }
     
-    
-    public PatientFlagTypesPartialUpdateQueryParams queryParams;
-    public PatientFlagTypesPartialUpdateRequest withQueryParams(PatientFlagTypesPartialUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public PatientFlagTypesPartialUpdateSecurity security;
-    public PatientFlagTypesPartialUpdateRequest withSecurity(PatientFlagTypesPartialUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatientFlagTypesPartialUpdateRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

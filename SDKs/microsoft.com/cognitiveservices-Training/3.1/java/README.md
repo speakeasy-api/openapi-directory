@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetDomainPathParams;
-import org.openapis.openapi.models.operations.GetDomainHeaders;
 import org.openapis.openapi.models.operations.GetDomainRequest;
 import org.openapis.openapi.models.operations.GetDomainResponse;
 
@@ -29,13 +27,9 @@ public class Application {
                 .build();
 
             GetDomainRequest req = new GetDomainRequest() {{
-                pathParams = new GetDomainPathParams() {{
-                    domainId = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
-                }};
-                headers = new GetDomainHeaders() {{
-                    trainingKey = "deserunt";
-                }};
-            }};            
+                trainingKey = "corrupti";
+                domainId = "9bd9d8d6-9a67-44e0-b467-cc8796ed151a";
+            }}            
 
             GetDomainResponse res = sdk.domainsApi.getDomain(req);
 
@@ -49,7 +43,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### domainsApi

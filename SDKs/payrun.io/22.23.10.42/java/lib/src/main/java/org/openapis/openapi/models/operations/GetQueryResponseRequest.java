@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetQueryResponseRequest {
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetQueryResponseRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
     
-    public GetQueryResponseHeaders headers;
-    public GetQueryResponseRequest withHeaders(GetQueryResponseHeaders headers) {
-        this.headers = headers;
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetQueryResponseRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
@@ -18,9 +31,9 @@ public class GetQueryResponseRequest {
      * The query object to be executed against the application data.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Query request;
-    public GetQueryResponseRequest withRequest(org.openapis.openapi.models.shared.Query request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Query query;
+    public GetQueryResponseRequest withQuery(org.openapis.openapi.models.shared.Query query) {
+        this.query = query;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogSaveCustomColumnRequest {
-    
-    public CatalogSaveCustomColumnPathParams pathParams;
-    public CatalogSaveCustomColumnRequest withPathParams(CatalogSaveCustomColumnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The custom column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
+    public String columnId;
+    public CatalogSaveCustomColumnRequest withColumnId(String columnId) {
+        this.columnId = columnId;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateCustomColumnRequest request;
-    public CatalogSaveCustomColumnRequest withRequest(org.openapis.openapi.models.shared.CreateCustomColumnRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateCustomColumnRequest createCustomColumnRequest;
+    public CatalogSaveCustomColumnRequest withCreateCustomColumnRequest(org.openapis.openapi.models.shared.CreateCustomColumnRequest createCustomColumnRequest) {
+        this.createCustomColumnRequest = createCustomColumnRequest;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public CatalogSaveCustomColumnRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

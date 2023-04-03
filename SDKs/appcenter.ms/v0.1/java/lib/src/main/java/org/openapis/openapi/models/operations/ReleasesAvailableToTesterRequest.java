@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesAvailableToTesterRequest {
-    
-    public ReleasesAvailableToTesterPathParams pathParams;
-    public ReleasesAvailableToTesterRequest withPathParams(ReleasesAvailableToTesterPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ReleasesAvailableToTesterRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
-    
-    public ReleasesAvailableToTesterQueryParams queryParams;
-    public ReleasesAvailableToTesterRequest withQueryParams(ReleasesAvailableToTesterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ReleasesAvailableToTesterRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     
-    
-    public ReleasesAvailableToTesterSecurity security;
-    public ReleasesAvailableToTesterRequest withSecurity(ReleasesAvailableToTesterSecurity security) {
-        this.security = security;
+    /**
+     * when *true*, filters out releases that were uploaded but were never distributed. Releases that under deleted distribution groups will not be filtered out.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_only")
+    public Boolean publishedOnly;
+    public ReleasesAvailableToTesterRequest withPublishedOnly(Boolean publishedOnly) {
+        this.publishedOnly = publishedOnly;
         return this;
     }
     

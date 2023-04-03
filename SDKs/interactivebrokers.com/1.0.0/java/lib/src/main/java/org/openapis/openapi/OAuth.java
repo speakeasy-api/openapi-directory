@@ -38,7 +38,7 @@ public class OAuth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostOauthAccessTokenResponse postOauthAccessToken(org.openapis.openapi.models.operations.PostOauthAccessTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostOauthAccessTokenResponse postOauthAccessToken(org.openapis.openapi.models.operations.PostOauthAccessTokenRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth/access_token");
         
@@ -87,7 +87,7 @@ public class OAuth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostOauthLiveSessionTokenResponse postOauthLiveSessionToken(org.openapis.openapi.models.operations.PostOauthLiveSessionTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostOauthLiveSessionTokenResponse postOauthLiveSessionToken(org.openapis.openapi.models.operations.PostOauthLiveSessionTokenRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth/live_session_token");
         
@@ -137,7 +137,7 @@ public class OAuth {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostOauthRequestTokenResponse postOauthRequestToken(org.openapis.openapi.models.operations.PostOauthRequestTokenRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostOauthRequestTokenResponse postOauthRequestToken(org.openapis.openapi.models.operations.PostOauthRequestTokenRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/oauth/request_token");
         

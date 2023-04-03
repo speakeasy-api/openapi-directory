@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectHomeUserFieldsListRequest {
-    
-    public GetProjectHomeUserFieldsListPathParams pathParams;
-    public GetProjectHomeUserFieldsListRequest withPathParams(GetProjectHomeUserFieldsListPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public GetProjectHomeUserFieldsListRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

@@ -4,27 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaskTemplatesUpdateRequest {
-    
-    public TaskTemplatesUpdatePathParams pathParams;
-    public TaskTemplatesUpdateRequest withPathParams(TaskTemplatesUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_group")
+    public Long assigneeGroup;
+    public TaskTemplatesUpdateRequest withAssigneeGroup(Long assigneeGroup) {
+        this.assigneeGroup = assigneeGroup;
         return this;
     }
     
-    
-    public TaskTemplatesUpdateQueryParams queryParams;
-    public TaskTemplatesUpdateRequest withQueryParams(TaskTemplatesUpdateQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assignee_user")
+    public Long assigneeUser;
+    public TaskTemplatesUpdateRequest withAssigneeUser(Long assigneeUser) {
+        this.assigneeUser = assigneeUser;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
+    public Long category;
+    public TaskTemplatesUpdateRequest withCategory(Long category) {
+        this.category = category;
+        return this;
+    }
     
-    public TaskTemplatesUpdateSecurity security;
-    public TaskTemplatesUpdateRequest withSecurity(TaskTemplatesUpdateSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public TaskTemplatesUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
+    public String since;
+    public TaskTemplatesUpdateRequest withSince(String since) {
+        this.since = since;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public Long status;
+    public TaskTemplatesUpdateRequest withStatus(Long status) {
+        this.status = status;
         return this;
     }
     

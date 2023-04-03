@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListMeetingTemplatesRequest {
-    
-    public ListMeetingTemplatesPathParams pathParams;
-    public ListMeetingTemplatesRequest withPathParams(ListMeetingTemplatesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique identifier of the user. Retrieve the value of this field by calling the [List users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/users) API.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public ListMeetingTemplatesRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

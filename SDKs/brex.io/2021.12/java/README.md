@@ -18,11 +18,9 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.CompanyAlternativeSearchSecurity;
-import org.openapis.openapi.models.operations.CompanyAlternativeSearchPathParams;
 import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequestBody;
 import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequest;
 import org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse;
-import org.openapis.openapi.models.shared.SchemeUserKey;
 
 public class Application {
     public static void main(String[] args) {
@@ -31,25 +29,20 @@ public class Application {
                 .build();
 
             CompanyAlternativeSearchRequest req = new CompanyAlternativeSearchRequest() {{
-                security = new CompanyAlternativeSearchSecurity() {{
-                    userKey = new SchemeUserKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                }};
-                pathParams = new CompanyAlternativeSearchPathParams() {{
-                    country = "corrupti";
-                }};
-                request = new CompanyAlternativeSearchRequestBody() {{
-                    address = "7868 Stamm Junctions";
-                    name = "error";
-                    number = "deserunt";
-                    phone = "1-528-292-3478 x545";
+                requestBody = new CompanyAlternativeSearchRequestBody() {{
+                    address = "5786 Little Streets";
+                    name = "vel";
+                    number = "error";
+                    phone = "1-542-909-2347 x8545";
                     url = "nisi";
                     vat = "recusandae";
                 }};
-            }};            
+                country = "temporibus";
+            }}            
 
-            CompanyAlternativeSearchResponse res = sdk.v1Company.companyAlternativeSearch(req);
+            CompanyAlternativeSearchResponse res = sdk.v1Company.companyAlternativeSearch(req, new CompanyAlternativeSearchSecurity() {{
+                userKey = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.companyAlternativeSearch200ApplicationJSONObjects.isPresent()) {
                 // handle response
@@ -61,7 +54,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### v1Company

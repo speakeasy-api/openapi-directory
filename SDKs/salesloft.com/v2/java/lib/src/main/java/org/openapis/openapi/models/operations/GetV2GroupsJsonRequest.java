@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2GroupsJsonRequest {
+    /**
+     * IDs of groups to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
+    public Long[] ids;
+    public GetV2GroupsJsonRequest withIds(Long[] ids) {
+        this.ids = ids;
+        return this;
+    }
     
-    public GetV2GroupsJsonQueryParams queryParams;
-    public GetV2GroupsJsonRequest withQueryParams(GetV2GroupsJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Key to sort on, must be one of: created_at, updated_at. Defaults to updated_at
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public String sortBy;
+    public GetV2GroupsJsonRequest withSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    
+    /**
+     * Direction to sort in, must be one of: ASC, DESC. Defaults to DESC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
+    public String sortDirection;
+    public GetV2GroupsJsonRequest withSortDirection(String sortDirection) {
+        this.sortDirection = sortDirection;
         return this;
     }
     

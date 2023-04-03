@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBlockedListRequest {
-    
-    public UpdateBlockedListPathParams pathParams;
-    public UpdateBlockedListRequest withPathParams(UpdateBlockedListPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateBlockedListApplicationJSON request;
-    public UpdateBlockedListRequest withRequest(UpdateBlockedListApplicationJSON request) {
-        this.request = request;
+    public UpdateBlockedListApplicationJSON requestBody;
+    public UpdateBlockedListRequest withRequestBody(UpdateBlockedListApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateBlockedListSecurity security;
-    public UpdateBlockedListRequest withSecurity(UpdateBlockedListSecurity security) {
-        this.security = security;
+    /**
+     * Unique Identifier of the blocked list.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=blockedListId")
+    public String blockedListId;
+    public UpdateBlockedListRequest withBlockedListId(String blockedListId) {
+        this.blockedListId = blockedListId;
         return this;
     }
     

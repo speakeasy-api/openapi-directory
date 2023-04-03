@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsTransferOwnershipJsonRequest {
-    
-    public AppsTransferOwnershipJsonPathParams pathParams;
-    public AppsTransferOwnershipJsonRequest withPathParams(AppsTransferOwnershipJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * allow empty body for custom http-client lib
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public AppsTransferOwnershipJsonRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public AppsTransferOwnershipJsonRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public AppsTransferOwnershipJsonRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public AppsTransferOwnershipJsonSecurity security;
-    public AppsTransferOwnershipJsonRequest withSecurity(AppsTransferOwnershipJsonSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner (user or organization) to which the app is being transferred
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination_owner_name")
+    public String destinationOwnerName;
+    public AppsTransferOwnershipJsonRequest withDestinationOwnerName(String destinationOwnerName) {
+        this.destinationOwnerName = destinationOwnerName;
+        return this;
+    }
+    
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public AppsTransferOwnershipJsonRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

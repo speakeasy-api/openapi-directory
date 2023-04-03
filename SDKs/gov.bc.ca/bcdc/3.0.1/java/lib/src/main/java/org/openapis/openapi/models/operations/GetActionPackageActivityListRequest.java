@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionPackageActivityListRequest {
+    /**
+     * The id or name of the package
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public GetActionPackageActivityListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetActionPackageActivityListQueryParams queryParams;
-    public GetActionPackageActivityListRequest withQueryParams(GetActionPackageActivityListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The maximum number of activities to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetActionPackageActivityListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Where to start getting activity items from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetActionPackageActivityListRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     

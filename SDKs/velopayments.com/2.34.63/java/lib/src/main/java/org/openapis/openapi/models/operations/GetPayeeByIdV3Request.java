@@ -4,20 +4,28 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPayeeByIdV3Request {
-    
-    public GetPayeeByIdV3PathParams pathParams;
-    public GetPayeeByIdV3Request withPathParams(GetPayeeByIdV3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The UUID of the payee.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payeeId")
+    public String payeeId;
+    public GetPayeeByIdV3Request withPayeeId(String payeeId) {
+        this.payeeId = payeeId;
         return this;
     }
     
-    
-    public GetPayeeByIdV3QueryParams queryParams;
-    public GetPayeeByIdV3Request withQueryParams(GetPayeeByIdV3QueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Optional. If omitted or set to false, any Personal Identifiable Information (PII) values are returned masked.
+     * If set to true, and you have permission, the PII values will be returned as their original unmasked values.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sensitive")
+    public Boolean sensitive;
+    public GetPayeeByIdV3Request withSensitive(Boolean sensitive) {
+        this.sensitive = sensitive;
         return this;
     }
     

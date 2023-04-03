@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfChannelHasTagRequest {
+    /**
+     * The ID of the channel.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
+    public Double channelId;
+    public CheckIfChannelHasTagRequest withChannelId(Double channelId) {
+        this.channelId = channelId;
+        return this;
+    }
     
-    public CheckIfChannelHasTagPathParams pathParams;
-    public CheckIfChannelHasTagRequest withPathParams(CheckIfChannelHasTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The word to use as the tag.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=word")
+    public String word;
+    public CheckIfChannelHasTagRequest withWord(String word) {
+        this.word = word;
         return this;
     }
     

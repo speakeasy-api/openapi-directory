@@ -4,27 +4,85 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConnectorDefinitionVersionRequest {
-    
-    public GetConnectorDefinitionVersionPathParams pathParams;
-    public GetConnectorDefinitionVersionRequest withPathParams(GetConnectorDefinitionVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the connector definition.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectorDefinitionId")
+    public String connectorDefinitionId;
+    public GetConnectorDefinitionVersionRequest withConnectorDefinitionId(String connectorDefinitionId) {
+        this.connectorDefinitionId = connectorDefinitionId;
         return this;
     }
     
-    
-    public GetConnectorDefinitionVersionQueryParams queryParams;
-    public GetConnectorDefinitionVersionRequest withQueryParams(GetConnectorDefinitionVersionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID of the connector definition version. This value maps to the ''Version'' property of the corresponding ''VersionInformation'' object, which is returned by ''ListConnectorDefinitionVersions'' requests. If the version is the last one that was associated with a connector definition, the value also maps to the ''LatestVersion'' property of the corresponding ''DefinitionInformation'' object.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConnectorDefinitionVersionId")
+    public String connectorDefinitionVersionId;
+    public GetConnectorDefinitionVersionRequest withConnectorDefinitionVersionId(String connectorDefinitionVersionId) {
+        this.connectorDefinitionVersionId = connectorDefinitionVersionId;
         return this;
     }
     
+    /**
+     * The token for the next set of results, or ''null'' if there are no additional results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
+    public String nextToken;
+    public GetConnectorDefinitionVersionRequest withNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
     
-    public GetConnectorDefinitionVersionHeaders headers;
-    public GetConnectorDefinitionVersionRequest withHeaders(GetConnectorDefinitionVersionHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetConnectorDefinitionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetConnectorDefinitionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetConnectorDefinitionVersionRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetConnectorDefinitionVersionRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetConnectorDefinitionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetConnectorDefinitionVersionRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetConnectorDefinitionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

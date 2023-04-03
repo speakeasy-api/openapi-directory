@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSiprecRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created this Siprec resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreateSiprecRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreateSiprecPathParams pathParams;
-    public CreateSiprecRequest withPathParams(CreateSiprecPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Call](https://www.twilio.com/docs/voice/api/call-resource) the Siprec resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public CreateSiprecRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateSiprecCreateSiprecRequest request;
-    public CreateSiprecRequest withRequest(CreateSiprecCreateSiprecRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateSiprecSecurity security;
-    public CreateSiprecRequest withSecurity(CreateSiprecSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateSiprecRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateSiprecCreateSiprecRequest requestBody;
+    public CreateSiprecRequest withRequestBody(CreateSiprecCreateSiprecRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

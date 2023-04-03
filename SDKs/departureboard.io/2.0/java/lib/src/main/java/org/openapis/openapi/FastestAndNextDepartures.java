@@ -35,13 +35,13 @@ public class FastestAndNextDepartures {
      */
     public org.openapis.openapi.models.operations.GetFastestDeparturesByCRSResponse getFastestDeparturesByCRS(org.openapis.openapi.models.operations.GetFastestDeparturesByCRSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFastestDeparturesByCRSPathParams.class, baseUrl, "/getFastestDeparturesByCRS/{CRS}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFastestDeparturesByCRSRequest.class, baseUrl, "/getFastestDeparturesByCRS/{CRS}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFastestDeparturesByCRSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFastestDeparturesByCRSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -73,13 +73,13 @@ public class FastestAndNextDepartures {
      */
     public org.openapis.openapi.models.operations.GetNextDeparturesByCRSResponse getNextDeparturesByCRS(org.openapis.openapi.models.operations.GetNextDeparturesByCRSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNextDeparturesByCRSPathParams.class, baseUrl, "/getNextDeparturesByCRS/{CRS}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNextDeparturesByCRSRequest.class, baseUrl, "/getNextDeparturesByCRS/{CRS}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNextDeparturesByCRSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNextDeparturesByCRSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

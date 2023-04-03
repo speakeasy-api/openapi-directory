@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueRefundRequest {
-    
-    public IssueRefundPathParams pathParams;
-    public IssueRefundRequest withPathParams(IssueRefundPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.IssueRefundRequest request;
-    public IssueRefundRequest withRequest(org.openapis.openapi.models.shared.IssueRefundRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.IssueRefundRequest issueRefundRequest;
+    public IssueRefundRequest withIssueRefundRequest(org.openapis.openapi.models.shared.IssueRefundRequest issueRefundRequest) {
+        this.issueRefundRequest = issueRefundRequest;
         return this;
     }
     
-    
-    public IssueRefundSecurity security;
-    public IssueRefundRequest withSecurity(IssueRefundSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the order. Order IDs are returned in the &lt;b&gt;getOrders&lt;/b&gt; method (and &lt;b&gt;GetOrders&lt;/b&gt; call of Trading API). The &lt;b&gt;issueRefund&lt;/b&gt; method supports the legacy API Order IDs and REST API order IDs.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
+    public String orderId;
+    public IssueRefundRequest withOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
     

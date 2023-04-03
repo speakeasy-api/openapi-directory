@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Create an OS Config guest policy.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateResponse osconfigProjectsGuestPoliciesCreate(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateResponse osconfigProjectsGuestPoliciesCreate(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateRequest request, org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreatePathParams.class, baseUrl, "/v1beta/{parent}/guestPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateRequest.class, baseUrl, "/v1beta/{parent}/guestPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "guestPolicyInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Get a page of OS Config guest policies.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListResponse osconfigProjectsGuestPoliciesList(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListResponse osconfigProjectsGuestPoliciesList(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListPathParams.class, baseUrl, "/v1beta/{parent}/guestPolicies", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListRequest.class, baseUrl, "/v1beta/{parent}/guestPolicies", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsGuestPoliciesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,27 +129,28 @@ public class Projects {
     /**
      * Create an OS Config patch deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreateResponse osconfigProjectsPatchDeploymentsCreate(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreateResponse osconfigProjectsPatchDeploymentsCreate(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreateRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreatePathParams.class, baseUrl, "/v1beta/{parent}/patchDeployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreateRequest.class, baseUrl, "/v1beta/{parent}/patchDeployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patchDeploymentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -174,25 +177,26 @@ public class Projects {
     /**
      * Delete an OS Config patch deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeleteResponse osconfigProjectsPatchDeploymentsDelete(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeleteResponse osconfigProjectsPatchDeploymentsDelete(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeleteRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeletePathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeleteRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,25 +223,26 @@ public class Projects {
     /**
      * Get a page of OS Config patch deployments.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListResponse osconfigProjectsPatchDeploymentsList(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListResponse osconfigProjectsPatchDeploymentsList(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListPathParams.class, baseUrl, "/v1beta/{parent}/patchDeployments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListRequest.class, baseUrl, "/v1beta/{parent}/patchDeployments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,27 +269,28 @@ public class Projects {
     /**
      * Update an OS Config patch deployment.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchResponse osconfigProjectsPatchDeploymentsPatch(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchResponse osconfigProjectsPatchDeploymentsPatch(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "patchDeploymentInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Change state of patch deployment to "PAUSED". Patch deployment in paused state doesn't generate patch jobs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPauseResponse osconfigProjectsPatchDeploymentsPause(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPauseRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPauseResponse osconfigProjectsPatchDeploymentsPause(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPauseRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPauseSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPausePathParams.class, baseUrl, "/v1beta/{name}:pause", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPauseRequest.class, baseUrl, "/v1beta/{name}:pause", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPauseQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsPauseRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Change state of patch deployment back to "ACTIVE". Patch deployment in active state continues to generate patch jobs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumeResponse osconfigProjectsPatchDeploymentsResume(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumeResponse osconfigProjectsPatchDeploymentsResume(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumeRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumePathParams.class, baseUrl, "/v1beta/{name}:resume", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumeRequest.class, baseUrl, "/v1beta/{name}:resume", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchDeploymentsResumeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -405,27 +413,28 @@ public class Projects {
     /**
      * Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelResponse osconfigProjectsPatchJobsCancel(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelResponse osconfigProjectsPatchJobsCancel(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelPathParams.class, baseUrl, "/v1beta/{name}:cancel", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelRequest.class, baseUrl, "/v1beta/{name}:cancel", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsCancelRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -452,27 +461,28 @@ public class Projects {
     /**
      * Patch VM instances by creating and running a patch job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecuteResponse osconfigProjectsPatchJobsExecute(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecuteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecuteResponse osconfigProjectsPatchJobsExecute(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecuteRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecuteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecutePathParams.class, baseUrl, "/v1beta/{parent}/patchJobs:execute", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecuteRequest.class, baseUrl, "/v1beta/{parent}/patchJobs:execute", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "executePatchJobRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecuteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsExecuteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -499,25 +509,26 @@ public class Projects {
     /**
      * Get the patch job. This can be used to track the progress of an ongoing patch job or review the details of completed jobs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetResponse osconfigProjectsPatchJobsGet(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetResponse osconfigProjectsPatchJobsGet(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetPathParams.class, baseUrl, "/v1beta/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetRequest.class, baseUrl, "/v1beta/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,25 +555,26 @@ public class Projects {
     /**
      * Get a list of instance details for a given patch job.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListResponse osconfigProjectsPatchJobsInstanceDetailsList(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListResponse osconfigProjectsPatchJobsInstanceDetailsList(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListPathParams.class, baseUrl, "/v1beta/{parent}/instanceDetails", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListRequest.class, baseUrl, "/v1beta/{parent}/instanceDetails", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsInstanceDetailsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -589,25 +601,26 @@ public class Projects {
     /**
      * Get a list of patch jobs.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListResponse osconfigProjectsPatchJobsList(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListResponse osconfigProjectsPatchJobsList(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListRequest request, org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListPathParams.class, baseUrl, "/v1beta/{parent}/patchJobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListRequest.class, baseUrl, "/v1beta/{parent}/patchJobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsPatchJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -634,27 +647,28 @@ public class Projects {
     /**
      * Lookup the effective guest policy that applies to a VM instance. This lookup merges all policies that are assigned to the instance ancestry.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse osconfigProjectsZonesInstancesLookupEffectiveGuestPolicy(org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyResponse osconfigProjectsZonesInstancesLookupEffectiveGuestPolicy(org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyRequest request, org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyPathParams.class, baseUrl, "/v1beta/{instance}:lookupEffectiveGuestPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyRequest.class, baseUrl, "/v1beta/{instance}:lookupEffectiveGuestPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "lookupEffectiveGuestPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.OsconfigProjectsZonesInstancesLookupEffectiveGuestPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

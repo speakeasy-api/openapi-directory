@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPadsUsingPOSTRequest {
-    
-    public ListPadsUsingPOSTQueryParams queryParams;
-    public ListPadsUsingPOSTRequest withQueryParams(ListPadsUsingPOSTQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupID")
+    public String groupID;
+    public ListPadsUsingPOSTRequest withGroupID(String groupID) {
+        this.groupID = groupID;
         return this;
     }
     

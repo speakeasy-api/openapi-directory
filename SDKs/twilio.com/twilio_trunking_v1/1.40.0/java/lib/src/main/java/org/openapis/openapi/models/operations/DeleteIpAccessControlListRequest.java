@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteIpAccessControlListRequest {
-    
-    public DeleteIpAccessControlListPathParams pathParams;
-    public DeleteIpAccessControlListRequest withPathParams(DeleteIpAccessControlListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the IpAccessControlList resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteIpAccessControlListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public DeleteIpAccessControlListSecurity security;
-    public DeleteIpAccessControlListRequest withSecurity(DeleteIpAccessControlListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteIpAccessControlListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk from which to delete the IP Access Control List.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public DeleteIpAccessControlListRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

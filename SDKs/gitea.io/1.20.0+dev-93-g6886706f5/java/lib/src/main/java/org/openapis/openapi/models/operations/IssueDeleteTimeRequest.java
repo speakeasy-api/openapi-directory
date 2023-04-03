@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssueDeleteTimeRequest {
+    /**
+     * id of time to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public IssueDeleteTimeRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public IssueDeleteTimePathParams pathParams;
-    public IssueDeleteTimeRequest withPathParams(IssueDeleteTimePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * index of the issue
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Long index;
+    public IssueDeleteTimeRequest withIndex(Long index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public IssueDeleteTimeRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public IssueDeleteTimeRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

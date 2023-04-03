@@ -7,10 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBookingRequest {
-    
-    public UpdateBookingPathParams pathParams;
-    public UpdateBookingRequest withPathParams(UpdateBookingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the booking you would like to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bookingId")
+    public String bookingId;
+    public UpdateBookingRequest withBookingId(String bookingId) {
+        this.bookingId = bookingId;
         return this;
     }
     
@@ -18,9 +21,9 @@ public class UpdateBookingRequest {
      * Specifies the room you want to book for your guest.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateBookingRequest request;
-    public UpdateBookingRequest withRequest(org.openapis.openapi.models.shared.UpdateBookingRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateBookingRequest updateBookingRequest;
+    public UpdateBookingRequest withUpdateBookingRequest(org.openapis.openapi.models.shared.UpdateBookingRequest updateBookingRequest) {
+        this.updateBookingRequest = updateBookingRequest;
         return this;
     }
     

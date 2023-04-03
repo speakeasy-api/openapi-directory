@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.BatchGetNamedQueryXAmzTargetEnum;
-import org.openapis.openapi.models.operations.BatchGetNamedQueryHeaders;
 import org.openapis.openapi.models.operations.BatchGetNamedQueryRequest;
 import org.openapis.openapi.models.operations.BatchGetNamedQueryResponse;
 import org.openapis.openapi.models.shared.BatchGetNamedQueryInput;
@@ -15,32 +14,27 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchGetNamedQueryRequest req = new BatchGetNamedQueryRequest() {{
-                headers = new BatchGetNamedQueryHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "AmazonAthena.BatchGetNamedQuery";
-                }};
-                request = new BatchGetNamedQueryInput() {{
+                batchGetNamedQueryInput = new BatchGetNamedQueryInput() {{
                     namedQueryIds = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
+                        add("provident"),
+                        add("distinctio"),
+                        add("quibusdam"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+                xAmzTarget = "AmazonAthena.BatchGetNamedQuery";
+            }}            
 
             BatchGetNamedQueryResponse res = sdk.batchGetNamedQuery(req);
 

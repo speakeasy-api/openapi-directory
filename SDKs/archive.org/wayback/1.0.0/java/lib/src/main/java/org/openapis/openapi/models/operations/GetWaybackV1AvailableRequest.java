@@ -4,13 +4,87 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWaybackV1AvailableRequest {
+    /**
+     * Specifies a JavaScript function func, for a JSON-P response. When provided, results are wrapped as `callback(data)`, and the returned MIME type is application/javascript. This causes the caller to automatically run the func with the JSON results as its argument.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public GetWaybackV1AvailableRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
     
-    public GetWaybackV1AvailableQueryParams queryParams;
-    public GetWaybackV1AvailableRequest withQueryParams(GetWaybackV1AvailableQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The direction specifies whether to match archived timestamps that are before the provided one, after, or the default either (closest in either direction). Must be before, after, or either. May be overidden by individual requests.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closest")
+    public org.openapis.openapi.models.shared.ClosestEnum closest;
+    public GetWaybackV1AvailableRequest withClosest(org.openapis.openapi.models.shared.ClosestEnum closest) {
+        this.closest = closest;
+        return this;
+    }
+    
+    /**
+     * HTTP status codes to filter by. Only results with these codes will be returned
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status_code")
+    public org.openapis.openapi.models.shared.StatusCodeEnum statusCode;
+    public GetWaybackV1AvailableRequest withStatusCode(org.openapis.openapi.models.shared.StatusCodeEnum statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    
+    /**
+     * The optional tag can have any value, and is returned with the results; it can be used to help collate input and output values.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public GetWaybackV1AvailableRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    /**
+     * Timeout is the maximum number of seconds to wait for the availability API to get its underlying results from the CDX server. The default value is 5.0.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
+    public Double timeout;
+    public GetWaybackV1AvailableRequest withTimeout(Double timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    
+    /**
+     * Timestamp requested in ISO 8601 format. The following formats are acceptable:
+     *  - YYYY
+     *  - YYYY-MM
+     *  - YYYY-MM-DD
+     *  - YYYY-MM-DDTHH:mm:SSz
+     *  - YYYY-MM-DD:HH:mm+00:00
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timestamp")
+    public String timestamp;
+    public GetWaybackV1AvailableRequest withTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+        return this;
+    }
+    
+    /**
+     * A single URL to query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public GetWaybackV1AvailableRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

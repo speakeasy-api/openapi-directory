@@ -4,34 +4,77 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchTaskQueueStatisticsRequest {
-    
-    public FetchTaskQueueStatisticsPathParams pathParams;
-    public FetchTaskQueueStatisticsRequest withPathParams(FetchTaskQueueStatisticsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Only calculate statistics from this date and time and earlier, specified in GMT as an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date-time.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndDate")
+    public OffsetDateTime endDate;
+    public FetchTaskQueueStatisticsRequest withEndDate(OffsetDateTime endDate) {
+        this.endDate = endDate;
         return this;
     }
     
-    
-    public FetchTaskQueueStatisticsQueryParams queryParams;
-    public FetchTaskQueueStatisticsRequest withQueryParams(FetchTaskQueueStatisticsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only calculate statistics since this many minutes in the past. The default is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Minutes")
+    public Long minutes;
+    public FetchTaskQueueStatisticsRequest withMinutes(Long minutes) {
+        this.minutes = minutes;
         return this;
     }
     
-    
-    public FetchTaskQueueStatisticsSecurity security;
-    public FetchTaskQueueStatisticsRequest withSecurity(FetchTaskQueueStatisticsSecurity security) {
-        this.security = security;
+    /**
+     * A comma separated list of values that describes the thresholds, in seconds, to calculate statistics on. For each threshold specified, the number of Tasks canceled and reservations accepted above and below the specified thresholds in seconds are computed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SplitByWaitTime")
+    public String splitByWaitTime;
+    public FetchTaskQueueStatisticsRequest withSplitByWaitTime(String splitByWaitTime) {
+        this.splitByWaitTime = splitByWaitTime;
         return this;
     }
     
+    /**
+     * Only calculate statistics from this date and time and later, specified in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StartDate")
+    public OffsetDateTime startDate;
+    public FetchTaskQueueStatisticsRequest withStartDate(OffsetDateTime startDate) {
+        this.startDate = startDate;
+        return this;
+    }
     
-    public String serverURL;
-    public FetchTaskQueueStatisticsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Only calculate real-time and cumulative statistics for the specified TaskChannel. Can be the TaskChannel's SID or its `unique_name`, such as `voice`, `sms`, or `default`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TaskChannel")
+    public String taskChannel;
+    public FetchTaskQueueStatisticsRequest withTaskChannel(String taskChannel) {
+        this.taskChannel = taskChannel;
+        return this;
+    }
+    
+    /**
+     * The SID of the TaskQueue for which to fetch statistics.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TaskQueueSid")
+    public String taskQueueSid;
+    public FetchTaskQueueStatisticsRequest withTaskQueueSid(String taskQueueSid) {
+        this.taskQueueSid = taskQueueSid;
+        return this;
+    }
+    
+    /**
+     * The SID of the Workspace with the TaskQueue to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkspaceSid")
+    public String workspaceSid;
+    public FetchTaskQueueStatisticsRequest withWorkspaceSid(String workspaceSid) {
+        this.workspaceSid = workspaceSid;
         return this;
     }
     

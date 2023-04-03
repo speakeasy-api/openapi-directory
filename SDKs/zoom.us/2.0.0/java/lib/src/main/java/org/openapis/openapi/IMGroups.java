@@ -49,7 +49,7 @@ public class IMGroups {
      */
     public org.openapis.openapi.models.operations.ImGroupResponse imGroup(org.openapis.openapi.models.operations.ImGroupRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupPathParams.class, baseUrl, "/im/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupRequest.class, baseUrl, "/im/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -97,7 +97,7 @@ public class IMGroups {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImGroupCreateResponse imGroupCreate(org.openapis.openapi.models.operations.ImGroupCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImGroupCreateResponse imGroupCreate(org.openapis.openapi.models.operations.ImGroupCreateApplicationJSON request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/im/groups");
         
@@ -156,7 +156,7 @@ public class IMGroups {
      */
     public org.openapis.openapi.models.operations.ImGroupDeleteResponse imGroupDelete(org.openapis.openapi.models.operations.ImGroupDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupDeletePathParams.class, baseUrl, "/im/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupDeleteRequest.class, baseUrl, "/im/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -188,25 +188,26 @@ public class IMGroups {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImGroupMembersResponse imGroupMembers(org.openapis.openapi.models.operations.ImGroupMembersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImGroupMembersResponse imGroupMembers(org.openapis.openapi.models.operations.ImGroupMembersRequest request, org.openapis.openapi.models.operations.ImGroupMembersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupMembersPathParams.class, baseUrl, "/im/groups/{groupId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupMembersRequest.class, baseUrl, "/im/groups/{groupId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ImGroupMembersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ImGroupMembersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -244,24 +245,25 @@ public class IMGroups {
      * 
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImGroupMembersCreateResponse imGroupMembersCreate(org.openapis.openapi.models.operations.ImGroupMembersCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImGroupMembersCreateResponse imGroupMembersCreate(org.openapis.openapi.models.operations.ImGroupMembersCreateRequest request, org.openapis.openapi.models.operations.ImGroupMembersCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupMembersCreatePathParams.class, baseUrl, "/im/groups/{groupId}/members", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupMembersCreateRequest.class, baseUrl, "/im/groups/{groupId}/members", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -299,19 +301,20 @@ public class IMGroups {
      *  
      *  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ImGroupMembersDeleteResponse imGroupMembersDelete(org.openapis.openapi.models.operations.ImGroupMembersDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ImGroupMembersDeleteResponse imGroupMembersDelete(org.openapis.openapi.models.operations.ImGroupMembersDeleteRequest request, org.openapis.openapi.models.operations.ImGroupMembersDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupMembersDeletePathParams.class, baseUrl, "/im/groups/{groupId}/members/{memberId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupMembersDeleteRequest.class, baseUrl, "/im/groups/{groupId}/members/{memberId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -341,12 +344,12 @@ public class IMGroups {
      */
     public org.openapis.openapi.models.operations.ImGroupUpdateResponse imGroupUpdate(org.openapis.openapi.models.operations.ImGroupUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupUpdatePathParams.class, baseUrl, "/im/groups/{groupId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ImGroupUpdateRequest.class, baseUrl, "/im/groups/{groupId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

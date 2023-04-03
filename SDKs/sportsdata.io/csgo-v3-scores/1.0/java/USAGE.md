@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AreasCountriesFormatEnum;
-import org.openapis.openapi.models.operations.AreasCountriesPathParams;
 import org.openapis.openapi.models.operations.AreasCountriesRequest;
 import org.openapis.openapi.models.operations.AreasCountriesResponse;
 
@@ -14,17 +13,13 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    apiKeyHeader = new SchemeAPIKeyHeader() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    apiKeyHeader = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AreasCountriesRequest req = new AreasCountriesRequest() {{
-                pathParams = new AreasCountriesPathParams() {{
-                    format = "json";
-                }};
-            }};            
+                format = "json";
+            }}            
 
             AreasCountriesResponse res = sdk.areasCountries(req);
 

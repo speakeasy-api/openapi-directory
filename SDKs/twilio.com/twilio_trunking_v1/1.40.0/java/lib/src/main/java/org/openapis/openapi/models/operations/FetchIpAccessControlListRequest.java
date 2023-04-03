@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchIpAccessControlListRequest {
-    
-    public FetchIpAccessControlListPathParams pathParams;
-    public FetchIpAccessControlListRequest withPathParams(FetchIpAccessControlListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the IpAccessControlList resource to fetch.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public FetchIpAccessControlListRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     
-    
-    public FetchIpAccessControlListSecurity security;
-    public FetchIpAccessControlListRequest withSecurity(FetchIpAccessControlListSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchIpAccessControlListRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Trunk from which to fetch the IP Access Control List.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=TrunkSid")
+    public String trunkSid;
+    public FetchIpAccessControlListRequest withTrunkSid(String trunkSid) {
+        this.trunkSid = trunkSid;
         return this;
     }
     

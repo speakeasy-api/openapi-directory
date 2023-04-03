@@ -44,10 +44,11 @@ public class General {
      * When sending multiple API requests with the same source and destination merchant accounts, send the requests sequentially and *not* in parallel. Some requests may not be processed if the requests are sent in parallel.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostBalanceTransferResponse postBalanceTransfer(org.openapis.openapi.models.operations.PostBalanceTransferRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostBalanceTransferResponse postBalanceTransfer(org.openapis.openapi.models.shared.BalanceTransferRequest request, org.openapis.openapi.models.operations.PostBalanceTransferSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/balanceTransfer");
         
@@ -58,7 +59,7 @@ public class General {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

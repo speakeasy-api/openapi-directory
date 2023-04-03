@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRepositoryPipelineCachesRequest {
-    
-    public DeleteRepositoryPipelineCachesPathParams pathParams;
-    public DeleteRepositoryPipelineCachesRequest withPathParams(DeleteRepositoryPipelineCachesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The cache name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public DeleteRepositoryPipelineCachesRequest withName(String name) {
+        this.name = name;
         return this;
     }
     
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public DeleteRepositoryPipelineCachesRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
     
-    public DeleteRepositoryPipelineCachesQueryParams queryParams;
-    public DeleteRepositoryPipelineCachesRequest withQueryParams(DeleteRepositoryPipelineCachesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public DeleteRepositoryPipelineCachesRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

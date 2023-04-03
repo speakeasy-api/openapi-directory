@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyAlternativeSearchSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeUserKey userKey;
-    public CompanyAlternativeSearchSecurity withUserKey(org.openapis.openapi.models.shared.SchemeUserKey userKey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=user_key")
+    public String userKey;
+    public CompanyAlternativeSearchSecurity withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }

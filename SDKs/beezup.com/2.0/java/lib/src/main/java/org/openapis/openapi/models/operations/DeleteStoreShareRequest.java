@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteStoreShareRequest {
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public DeleteStoreShareRequest withStoreId(String storeId) {
+        this.storeId = storeId;
+        return this;
+    }
     
-    public DeleteStoreSharePathParams pathParams;
-    public DeleteStoreShareRequest withPathParams(DeleteStoreSharePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The friend user id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public DeleteStoreShareRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,27 +4,113 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsImagesUploadRequest {
-    
-    public AndroidpublisherEditsImagesUploadPathParams pathParams;
-    public AndroidpublisherEditsImagesUploadRequest withPathParams(AndroidpublisherEditsImagesUploadPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Data format for the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AndroidpublisherEditsImagesUploadRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
         return this;
     }
     
-    
-    public AndroidpublisherEditsImagesUploadQueryParams queryParams;
-    public AndroidpublisherEditsImagesUploadRequest withQueryParams(AndroidpublisherEditsImagesUploadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Unique identifier for this edit.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
+    public String editId;
+    public AndroidpublisherEditsImagesUploadRequest withEditId(String editId) {
+        this.editId = editId;
         return this;
     }
     
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AndroidpublisherEditsImagesUploadRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
     
-    public AndroidpublisherEditsImagesUploadSecurity security;
-    public AndroidpublisherEditsImagesUploadRequest withSecurity(AndroidpublisherEditsImagesUploadSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=imageType")
+    public AndroidpublisherEditsImagesUploadImageTypeEnum imageType;
+    public AndroidpublisherEditsImagesUploadRequest withImageType(AndroidpublisherEditsImagesUploadImageTypeEnum imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AndroidpublisherEditsImagesUploadRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The language code (a BCP-47 language tag) of the localized listing whose images are to read or modified. For example, to select Austrian German, pass "de-AT".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
+    public String language;
+    public AndroidpublisherEditsImagesUploadRequest withLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AndroidpublisherEditsImagesUploadRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Unique identifier for the Android app that is being updated; for example, "com.spiffygame".
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
+    public String packageName;
+    public AndroidpublisherEditsImagesUploadRequest withPackageName(String packageName) {
+        this.packageName = packageName;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AndroidpublisherEditsImagesUploadRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * An opaque string that represents a user for quota purposes. Must not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AndroidpublisherEditsImagesUploadRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Deprecated. Please use quotaUser instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
+    public String userIp;
+    public AndroidpublisherEditsImagesUploadRequest withUserIp(String userIp) {
+        this.userIp = userIp;
         return this;
     }
     

@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostEstimateJsonRequest {
-    
-    public PostEstimateJsonPathParams pathParams;
-    public PostEstimateJsonRequest withPathParams(PostEstimateJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.EstimatePO estimatePO;
+    public PostEstimateJsonRequest withEstimatePO(org.openapis.openapi.models.shared.EstimatePO estimatePO) {
+        this.estimatePO = estimatePO;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.EstimatePO request;
-    public PostEstimateJsonRequest withRequest(org.openapis.openapi.models.shared.EstimatePO request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
+    public String projectId;
+    public PostEstimateJsonRequest withProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
+    public String workgroupId;
+    public PostEstimateJsonRequest withWorkgroupId(String workgroupId) {
+        this.workgroupId = workgroupId;
         return this;
     }
     

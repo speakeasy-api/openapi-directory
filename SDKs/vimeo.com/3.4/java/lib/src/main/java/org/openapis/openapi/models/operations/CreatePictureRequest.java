@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePictureRequest {
-    
-    public CreatePicturePathParams pathParams;
-    public CreatePictureRequest withPathParams(CreatePicturePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CreatePictureSecurity security;
-    public CreatePictureRequest withSecurity(CreatePictureSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CreatePictureRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

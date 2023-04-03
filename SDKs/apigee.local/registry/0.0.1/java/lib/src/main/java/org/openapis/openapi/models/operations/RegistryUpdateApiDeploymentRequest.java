@@ -7,24 +7,70 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryUpdateApiDeploymentRequest {
-    
-    public RegistryUpdateApiDeploymentPathParams pathParams;
-    public RegistryUpdateApiDeploymentRequest withPathParams(RegistryUpdateApiDeploymentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RegistryUpdateApiDeploymentQueryParams queryParams;
-    public RegistryUpdateApiDeploymentRequest withQueryParams(RegistryUpdateApiDeploymentQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiDeploymentInput request;
-    public RegistryUpdateApiDeploymentRequest withRequest(org.openapis.openapi.models.shared.ApiDeploymentInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput;
+    public RegistryUpdateApiDeploymentRequest withApiDeploymentInput(org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput) {
+        this.apiDeploymentInput = apiDeploymentInput;
+        return this;
+    }
+    
+    /**
+     * If set to true, and the deployment is not found, a new deployment will be created. In this situation, `update_mask` is ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
+    public Boolean allowMissing;
+    public RegistryUpdateApiDeploymentRequest withAllowMissing(Boolean allowMissing) {
+        this.allowMissing = allowMissing;
+        return this;
+    }
+    
+    /**
+     * The api id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
+    public String api;
+    public RegistryUpdateApiDeploymentRequest withApi(String api) {
+        this.api = api;
+        return this;
+    }
+    
+    /**
+     * The deployment id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
+    public String deployment;
+    public RegistryUpdateApiDeploymentRequest withDeployment(String deployment) {
+        this.deployment = deployment;
+        return this;
+    }
+    
+    /**
+     * The location id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
+    public String location;
+    public RegistryUpdateApiDeploymentRequest withLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
+    public String project;
+    public RegistryUpdateApiDeploymentRequest withProject(String project) {
+        this.project = project;
+        return this;
+    }
+    
+    /**
+     * The list of fields to be updated. If omitted, all fields are updated that are set in the request message (fields set to default values are ignored). If a "*" is specified, all fields are updated, including fields that are unspecified/default in the request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public RegistryUpdateApiDeploymentRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
         return this;
     }
     

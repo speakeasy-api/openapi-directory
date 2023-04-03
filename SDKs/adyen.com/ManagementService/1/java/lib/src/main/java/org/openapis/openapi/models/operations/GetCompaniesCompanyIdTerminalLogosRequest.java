@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalLogosRequest {
-    
-    public GetCompaniesCompanyIdTerminalLogosPathParams pathParams;
-    public GetCompaniesCompanyIdTerminalLogosRequest withPathParams(GetCompaniesCompanyIdTerminalLogosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public GetCompaniesCompanyIdTerminalLogosRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
         return this;
     }
     
-    
-    public GetCompaniesCompanyIdTerminalLogosQueryParams queryParams;
-    public GetCompaniesCompanyIdTerminalLogosRequest withQueryParams(GetCompaniesCompanyIdTerminalLogosQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public GetCompaniesCompanyIdTerminalLogosSecurity security;
-    public GetCompaniesCompanyIdTerminalLogosRequest withSecurity(GetCompaniesCompanyIdTerminalLogosSecurity security) {
-        this.security = security;
+    /**
+     * The terminal model. Possible values: E355, VX675WIFIBT, VX680, VX690, VX700, VX820, M400, MX925, P400Plus, UX300, UX410, V200cPlus, V240mPlus, V400cPlus, V400m, e280, e285, e285p, S1E, S1EL, S1F2, S1L, S1U, S7T.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
+    public String model;
+    public GetCompaniesCompanyIdTerminalLogosRequest withModel(String model) {
+        this.model = model;
         return this;
     }
     

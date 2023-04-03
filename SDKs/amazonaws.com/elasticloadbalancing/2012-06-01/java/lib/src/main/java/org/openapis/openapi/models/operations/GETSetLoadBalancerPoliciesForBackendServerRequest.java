@@ -4,20 +4,99 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetLoadBalancerPoliciesForBackendServerRequest {
-    
-    public GETSetLoadBalancerPoliciesForBackendServerQueryParams queryParams;
-    public GETSetLoadBalancerPoliciesForBackendServerRequest withQueryParams(GETSetLoadBalancerPoliciesForBackendServerQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetLoadBalancerPoliciesForBackendServerActionEnum action;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withAction(GETSetLoadBalancerPoliciesForBackendServerActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The port number associated with the EC2 instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstancePort")
+    public Long instancePort;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withInstancePort(Long instancePort) {
+        this.instancePort = instancePort;
+        return this;
+    }
     
-    public GETSetLoadBalancerPoliciesForBackendServerHeaders headers;
-    public GETSetLoadBalancerPoliciesForBackendServerRequest withHeaders(GETSetLoadBalancerPoliciesForBackendServerHeaders headers) {
-        this.headers = headers;
+    /**
+     * The name of the load balancer.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
+    public String loadBalancerName;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
+    
+    /**
+     * The names of the policies. If the list is empty, then all current polices are removed from the EC2 instance.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyNames")
+    public String[] policyNames;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withPolicyNames(String[] policyNames) {
+        this.policyNames = policyNames;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetLoadBalancerPoliciesForBackendServerVersionEnum version;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withVersion(GETSetLoadBalancerPoliciesForBackendServerVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetLoadBalancerPoliciesForBackendServerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

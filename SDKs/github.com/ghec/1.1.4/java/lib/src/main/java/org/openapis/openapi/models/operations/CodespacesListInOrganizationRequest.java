@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodespacesListInOrganizationRequest {
-    
-    public CodespacesListInOrganizationPathParams pathParams;
-    public CodespacesListInOrganizationRequest withPathParams(CodespacesListInOrganizationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public CodespacesListInOrganizationRequest withOrg(String org) {
+        this.org = org;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public CodespacesListInOrganizationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public CodespacesListInOrganizationQueryParams queryParams;
-    public CodespacesListInOrganizationRequest withQueryParams(CodespacesListInOrganizationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public CodespacesListInOrganizationRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

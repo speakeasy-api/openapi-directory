@@ -4,20 +4,92 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNetworkSmDevicesRequest {
-    
-    public GetNetworkSmDevicesPathParams pathParams;
-    public GetNetworkSmDevicesRequest withPathParams(GetNetworkSmDevicesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of devices to return, 1000 is the default as well as the max.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchSize")
+    public Long batchSize;
+    public GetNetworkSmDevicesRequest withBatchSize(Long batchSize) {
+        this.batchSize = batchSize;
         return this;
     }
     
+    /**
+     * If the network has more devices than the batch size, a batch token will be returned
+     *     as a part of the device list. To see the remainder of the devices, pass in the batchToken as a parameter in the next request.
+     *     Requests made with the batchToken do not require additional parameters as the batchToken includes the parameters passed in
+     *     with the original request. Additional parameters passed in with the batchToken will be ignored.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchToken")
+    public String batchToken;
+    public GetNetworkSmDevicesRequest withBatchToken(String batchToken) {
+        this.batchToken = batchToken;
+        return this;
+    }
     
-    public GetNetworkSmDevicesQueryParams queryParams;
-    public GetNetworkSmDevicesRequest withQueryParams(GetNetworkSmDevicesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Additional fields that will be displayed for each device. Multiple fields can be passed in as comma separated values.
+     *     The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,
+     *     systemType, availableDeviceCapacity, kioskAppName, biosVersion, lastConnected, missingAppsCount, userSuppliedAddress, location, lastUser,
+     *     ownerEmail, ownerUsername, publicIp, phoneNumber, diskInfoJson, deviceCapacity, isManaged, hadMdm, isSupervised, meid, imei, iccid,
+     *     simCarrierNetwork, cellularDataUsed, isHotspotEnabled, createdAt, batteryEstCharge, quarantined, avName, avRunning, asName, fwName,
+     *     isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,
+     *     hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, and androidSecurityPatchVersion.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public GetNetworkSmDevicesRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Filter devices by id(s). Multiple ids can be passed in as comma separated values.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
+    public String ids;
+    public GetNetworkSmDevicesRequest withIds(String ids) {
+        this.ids = ids;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public GetNetworkSmDevicesRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    /**
+     * Specify a scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags as comma separated values.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
+    public String scope;
+    public GetNetworkSmDevicesRequest withScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    
+    /**
+     * Filter devices by serial(s). Multiple serials can be passed in as comma separated values.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serials")
+    public String serials;
+    public GetNetworkSmDevicesRequest withSerials(String serials) {
+        this.serials = serials;
+        return this;
+    }
+    
+    /**
+     * Filter devices by wifi mac(s). Multiple wifi macs can be passed in as comma separated values.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wifiMacs")
+    public String wifiMacs;
+    public GetNetworkSmDevicesRequest withWifiMacs(String wifiMacs) {
+        this.wifiMacs = wifiMacs;
         return this;
     }
     

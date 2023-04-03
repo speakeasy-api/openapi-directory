@@ -4,13 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListScheduledPickupsRequest {
+    /**
+     * Carrier ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=carrier_id")
+    public String carrierId;
+    public ListScheduledPickupsRequest withCarrierId(String carrierId) {
+        this.carrierId = carrierId;
+        return this;
+    }
     
-    public ListScheduledPickupsQueryParams queryParams;
-    public ListScheduledPickupsRequest withQueryParams(ListScheduledPickupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Only return scheduled pickups that were created on or before a specific date/time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at_end")
+    public OffsetDateTime createdAtEnd;
+    public ListScheduledPickupsRequest withCreatedAtEnd(OffsetDateTime createdAtEnd) {
+        this.createdAtEnd = createdAtEnd;
+        return this;
+    }
+    
+    /**
+     * Only return scheduled pickups that were created on or after a specific date/time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_at_start")
+    public OffsetDateTime createdAtStart;
+    public ListScheduledPickupsRequest withCreatedAtStart(OffsetDateTime createdAtStart) {
+        this.createdAtStart = createdAtStart;
+        return this;
+    }
+    
+    /**
+     * Return a specific page of results. Defaults to the first page. If set to a number that's greater than the number of pages of results, an empty page is returned.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListScheduledPickupsRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results to return per response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Integer pageSize;
+    public ListScheduledPickupsRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Warehouse ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=warehouse_id")
+    public String warehouseId;
+    public ListScheduledPickupsRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

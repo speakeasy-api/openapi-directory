@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImageOcrImageWordsWithLocationSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeApikey apikey;
-    public ImageOcrImageWordsWithLocationSecurity withApikey(org.openapis.openapi.models.shared.SchemeApikey apikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Apikey")
+    public String apikey;
+    public ImageOcrImageWordsWithLocationSecurity withApikey(String apikey) {
         this.apikey = apikey;
         return this;
     }

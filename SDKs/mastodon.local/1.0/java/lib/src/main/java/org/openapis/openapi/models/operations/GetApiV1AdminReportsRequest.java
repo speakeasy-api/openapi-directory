@@ -4,20 +4,27 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AdminReportsRequest {
-    
-    public GetApiV1AdminReportsQueryParams queryParams;
-    public GetApiV1AdminReportsRequest withQueryParams(GetApiV1AdminReportsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public String accountId;
+    public GetApiV1AdminReportsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resolved")
+    public Boolean resolved;
+    public GetApiV1AdminReportsRequest withResolved(Boolean resolved) {
+        this.resolved = resolved;
+        return this;
+    }
     
-    public GetApiV1AdminReportsSecurity security;
-    public GetApiV1AdminReportsRequest withSecurity(GetApiV1AdminReportsSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target_account_id")
+    public String targetAccountId;
+    public GetApiV1AdminReportsRequest withTargetAccountId(String targetAccountId) {
+        this.targetAccountId = targetAccountId;
         return this;
     }
     

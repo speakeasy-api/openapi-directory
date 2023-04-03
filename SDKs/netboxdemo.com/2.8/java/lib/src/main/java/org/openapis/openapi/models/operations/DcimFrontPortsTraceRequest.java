@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DcimFrontPortsTraceRequest {
-    
-    public DcimFrontPortsTracePathParams pathParams;
-    public DcimFrontPortsTraceRequest withPathParams(DcimFrontPortsTracePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A unique integer value identifying this front port.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DcimFrontPortsTraceRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

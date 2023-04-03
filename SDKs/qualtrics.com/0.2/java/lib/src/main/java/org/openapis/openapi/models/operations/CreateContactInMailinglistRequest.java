@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateContactInMailinglistRequest {
-    
-    public CreateContactInMailinglistPathParams pathParams;
-    public CreateContactInMailinglistRequest withPathParams(CreateContactInMailinglistPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Contact data
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateContactInMailingList request;
-    public CreateContactInMailinglistRequest withRequest(org.openapis.openapi.models.shared.CreateContactInMailingList request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CreateContactInMailingList createContactInMailingList;
+    public CreateContactInMailinglistRequest withCreateContactInMailingList(org.openapis.openapi.models.shared.CreateContactInMailingList createContactInMailingList) {
+        this.createContactInMailingList = createContactInMailingList;
+        return this;
+    }
+    
+    /**
+     * ID of the qualtrics directory to create the contact to
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DirectoryId")
+    public String directoryId;
+    public CreateContactInMailinglistRequest withDirectoryId(String directoryId) {
+        this.directoryId = directoryId;
+        return this;
+    }
+    
+    /**
+     * ID of the mailing list
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=MailingListId")
+    public String mailingListId;
+    public CreateContactInMailinglistRequest withMailingListId(String mailingListId) {
+        this.mailingListId = mailingListId;
         return this;
     }
     

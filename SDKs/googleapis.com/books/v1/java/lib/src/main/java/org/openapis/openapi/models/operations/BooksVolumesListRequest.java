@@ -4,20 +4,256 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BooksVolumesListRequest {
-    
-    public BooksVolumesListQueryParams queryParams;
-    public BooksVolumesListRequest withQueryParams(BooksVolumesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public BooksVolumesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public BooksVolumesListRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public BooksVolumesListSecurity security;
-    public BooksVolumesListRequest withSecurity(BooksVolumesListSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public BooksVolumesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public BooksVolumesListRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Restrict to volumes by download availability.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download")
+    public BooksVolumesListDownloadEnum download;
+    public BooksVolumesListRequest withDownload(BooksVolumesListDownloadEnum download) {
+        this.download = download;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public BooksVolumesListRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * Filter search results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public BooksVolumesListFilterEnum filter;
+    public BooksVolumesListRequest withFilter(BooksVolumesListFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public BooksVolumesListRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Restrict results to books with this language code.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=langRestrict")
+    public String langRestrict;
+    public BooksVolumesListRequest withLangRestrict(String langRestrict) {
+        this.langRestrict = langRestrict;
+        return this;
+    }
+    
+    /**
+     * Restrict search to this user's library.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=libraryRestrict")
+    public BooksVolumesListLibraryRestrictEnum libraryRestrict;
+    public BooksVolumesListRequest withLibraryRestrict(BooksVolumesListLibraryRestrictEnum libraryRestrict) {
+        this.libraryRestrict = libraryRestrict;
+        return this;
+    }
+    
+    /**
+     * The maximum allowed maturity rating of returned recommendations. Books with a higher maturity rating are filtered out.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAllowedMaturityRating")
+    public BooksVolumesListMaxAllowedMaturityRatingEnum maxAllowedMaturityRating;
+    public BooksVolumesListRequest withMaxAllowedMaturityRating(BooksVolumesListMaxAllowedMaturityRatingEnum maxAllowedMaturityRating) {
+        this.maxAllowedMaturityRating = maxAllowedMaturityRating;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
+    public Long maxResults;
+    public BooksVolumesListRequest withMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public BooksVolumesListRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Sort search results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
+    public BooksVolumesListOrderByEnum orderBy;
+    public BooksVolumesListRequest withOrderBy(BooksVolumesListOrderByEnum orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    
+    /**
+     * Restrict and brand results for partner ID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner")
+    public String partner;
+    public BooksVolumesListRequest withPartner(String partner) {
+        this.partner = partner;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public BooksVolumesListRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Restrict to books or magazines.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printType")
+    public BooksVolumesListPrintTypeEnum printType;
+    public BooksVolumesListRequest withPrintType(BooksVolumesListPrintTypeEnum printType) {
+        this.printType = printType;
+        return this;
+    }
+    
+    /**
+     * Restrict information returned to a set of selected fields.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
+    public BooksVolumesListProjectionEnum projection;
+    public BooksVolumesListRequest withProjection(BooksVolumesListProjectionEnum projection) {
+        this.projection = projection;
+        return this;
+    }
+    
+    /**
+     * Full-text search query string.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public BooksVolumesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public BooksVolumesListRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Set to true to show books available for preorder. Defaults to false.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showPreorders")
+    public Boolean showPreorders;
+    public BooksVolumesListRequest withShowPreorders(Boolean showPreorders) {
+        this.showPreorders = showPreorders;
+        return this;
+    }
+    
+    /**
+     * String to identify the originator of this request.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
+    public String source;
+    public BooksVolumesListRequest withSource(String source) {
+        this.source = source;
+        return this;
+    }
+    
+    /**
+     * Index of the first result to return (starts at 0)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
+    public Long startIndex;
+    public BooksVolumesListRequest withStartIndex(Long startIndex) {
+        this.startIndex = startIndex;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public BooksVolumesListRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public BooksVolumesListRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MlProjectsLocationsStudiesTrialsSuggestRequest {
-    
-    public MlProjectsLocationsStudiesTrialsSuggestPathParams pathParams;
-    public MlProjectsLocationsStudiesTrialsSuggestRequest withPathParams(MlProjectsLocationsStudiesTrialsSuggestPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public MlProjectsLocationsStudiesTrialsSuggestQueryParams queryParams;
-    public MlProjectsLocationsStudiesTrialsSuggestRequest withQueryParams(MlProjectsLocationsStudiesTrialsSuggestQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GoogleCloudMlV1SuggestTrialsRequest request;
-    public MlProjectsLocationsStudiesTrialsSuggestRequest withRequest(org.openapis.openapi.models.shared.GoogleCloudMlV1SuggestTrialsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GoogleCloudMlV1SuggestTrialsRequest googleCloudMlV1SuggestTrialsRequest;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withGoogleCloudMlV1SuggestTrialsRequest(org.openapis.openapi.models.shared.GoogleCloudMlV1SuggestTrialsRequest googleCloudMlV1SuggestTrialsRequest) {
+        this.googleCloudMlV1SuggestTrialsRequest = googleCloudMlV1SuggestTrialsRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public MlProjectsLocationsStudiesTrialsSuggestSecurity security;
-    public MlProjectsLocationsStudiesTrialsSuggestRequest withSecurity(MlProjectsLocationsStudiesTrialsSuggestSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The name of the study that the trial belongs to.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public MlProjectsLocationsStudiesTrialsSuggestRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

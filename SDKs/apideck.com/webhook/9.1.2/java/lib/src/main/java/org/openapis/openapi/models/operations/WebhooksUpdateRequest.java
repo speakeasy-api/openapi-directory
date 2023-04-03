@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksUpdateRequest {
-    
-    public WebhooksUpdatePathParams pathParams;
-    public WebhooksUpdateRequest withPathParams(WebhooksUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public WebhooksUpdateHeaders headers;
-    public WebhooksUpdateRequest withHeaders(WebhooksUpdateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateWebhookRequest request;
-    public WebhooksUpdateRequest withRequest(org.openapis.openapi.models.shared.UpdateWebhookRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateWebhookRequest updateWebhookRequest;
+    public WebhooksUpdateRequest withUpdateWebhookRequest(org.openapis.openapi.models.shared.UpdateWebhookRequest updateWebhookRequest) {
+        this.updateWebhookRequest = updateWebhookRequest;
         return this;
     }
     
+    /**
+     * JWT Webhook token that represents the unifiedApi and applicationId associated to the event source.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public WebhooksUpdateRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public WebhooksUpdateSecurity security;
-    public WebhooksUpdateRequest withSecurity(WebhooksUpdateSecurity security) {
-        this.security = security;
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public WebhooksUpdateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
         return this;
     }
     

@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagGroupRequest {
-    
-    public GetTagGroupPathParams pathParams;
-    public GetTagGroupRequest withPathParams(GetTagGroupPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetTagGroupRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListLinkedExternalIdpGroupsToTeamForOrgRequest {
+    /**
+     * The organization name. The name is not case sensitive.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public TeamsListLinkedExternalIdpGroupsToTeamForOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
     
-    public TeamsListLinkedExternalIdpGroupsToTeamForOrgPathParams pathParams;
-    public TeamsListLinkedExternalIdpGroupsToTeamForOrgRequest withPathParams(TeamsListLinkedExternalIdpGroupsToTeamForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug of the team name.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public TeamsListLinkedExternalIdpGroupsToTeamForOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

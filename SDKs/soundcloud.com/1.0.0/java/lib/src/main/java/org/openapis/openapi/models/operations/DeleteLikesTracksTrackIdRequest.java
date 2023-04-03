@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteLikesTracksTrackIdRequest {
-    
-    public DeleteLikesTracksTrackIdPathParams pathParams;
-    public DeleteLikesTracksTrackIdRequest withPathParams(DeleteLikesTracksTrackIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteLikesTracksTrackIdSecurity security;
-    public DeleteLikesTracksTrackIdRequest withSecurity(DeleteLikesTracksTrackIdSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud Track id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
+    public Long trackId;
+    public DeleteLikesTracksTrackIdRequest withTrackId(Long trackId) {
+        this.trackId = trackId;
         return this;
     }
     

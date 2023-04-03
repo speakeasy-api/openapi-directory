@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountAccessConsentsConsentIdSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeClientCredentialsToken clientCredentialsToken;
-    public GetAccountAccessConsentsConsentIdSecurity withClientCredentialsToken(org.openapis.openapi.models.shared.SchemeClientCredentialsToken clientCredentialsToken) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String clientCredentialsToken;
+    public GetAccountAccessConsentsConsentIdSecurity withClientCredentialsToken(String clientCredentialsToken) {
         this.clientCredentialsToken = clientCredentialsToken;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeClientID clientId;
-    public GetAccountAccessConsentsConsentIdSecurity withClientId(org.openapis.openapi.models.shared.SchemeClientID clientId) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Client-Id")
+    public String clientId;
+    public GetAccountAccessConsentsConsentIdSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }

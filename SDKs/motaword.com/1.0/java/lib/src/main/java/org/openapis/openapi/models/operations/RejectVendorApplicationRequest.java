@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RejectVendorApplicationRequest {
-    
-    public RejectVendorApplicationPathParams pathParams;
-    public RejectVendorApplicationRequest withPathParams(RejectVendorApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RejectVendorApplicationSecurity security;
-    public RejectVendorApplicationRequest withSecurity(RejectVendorApplicationSecurity security) {
-        this.security = security;
+    /**
+     * User ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public Long userId;
+    public RejectVendorApplicationRequest withUserId(Long userId) {
+        this.userId = userId;
         return this;
     }
     

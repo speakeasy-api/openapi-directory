@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.AccountListNodeAgentSkusQueryParams;
-import org.openapis.openapi.models.operations.AccountListNodeAgentSkusHeaders;
 import org.openapis.openapi.models.operations.AccountListNodeAgentSkusRequest;
 import org.openapis.openapi.models.operations.AccountListNodeAgentSkusResponse;
 
@@ -29,18 +27,14 @@ public class Application {
                 .build();
 
             AccountListNodeAgentSkusRequest req = new AccountListNodeAgentSkusRequest() {{
-                queryParams = new AccountListNodeAgentSkusQueryParams() {{
-                    dollarFilter = "corrupti";
-                    apiVersion = "provident";
-                    maxresults = 715190;
-                    timeout = 844266;
-                }};
-                headers = new AccountListNodeAgentSkusHeaders() {{
-                    clientRequestId = "unde";
-                    ocpDate = "nulla";
-                    returnClientRequestId = false;
-                }};
-            }};            
+                dollarFilter = "corrupti";
+                apiVersion = "provident";
+                clientRequestId = "distinctio";
+                maxresults = 844266;
+                ocpDate = "unde";
+                returnClientRequestId = false;
+                timeout = 857946;
+            }}            
 
             AccountListNodeAgentSkusResponse res = sdk.accounts.accountListNodeAgentSkus(req);
 
@@ -54,7 +48,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### accounts

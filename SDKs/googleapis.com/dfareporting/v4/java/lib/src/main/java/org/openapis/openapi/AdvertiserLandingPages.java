@@ -34,25 +34,26 @@ public class AdvertiserLandingPages {
     /**
      * Gets one landing page by ID.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetResponse dfareportingAdvertiserLandingPagesGet(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetResponse dfareportingAdvertiserLandingPagesGet(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetPathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class AdvertiserLandingPages {
     /**
      * Inserts a new landing page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertResponse dfareportingAdvertiserLandingPagesInsert(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertResponse dfareportingAdvertiserLandingPagesInsert(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertPathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "landingPage", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesInsertRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class AdvertiserLandingPages {
     /**
      * Retrieves a list of landing pages.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListResponse dfareportingAdvertiserLandingPagesList(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListResponse dfareportingAdvertiserLandingPagesList(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListPathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,27 +174,28 @@ public class AdvertiserLandingPages {
     /**
      * Updates an existing advertiser landing page. This method supports patch semantics.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchResponse dfareportingAdvertiserLandingPagesPatch(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchResponse dfareportingAdvertiserLandingPagesPatch(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchPathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "landingPage", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -218,27 +222,28 @@ public class AdvertiserLandingPages {
     /**
      * Updates an existing landing page.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateResponse dfareportingAdvertiserLandingPagesUpdate(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateResponse dfareportingAdvertiserLandingPagesUpdate(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateRequest request, org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdatePathParams.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateRequest.class, baseUrl, "/userprofiles/{profileId}/advertiserLandingPages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "landingPage", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DfareportingAdvertiserLandingPagesUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

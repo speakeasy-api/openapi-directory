@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchCompaniesCompanyIdUsersUserIdRequest {
-    
-    public PatchCompaniesCompanyIdUsersUserIdPathParams pathParams;
-    public PatchCompaniesCompanyIdUsersUserIdRequest withPathParams(PatchCompaniesCompanyIdUsersUserIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.UpdateCompanyUserRequest request;
-    public PatchCompaniesCompanyIdUsersUserIdRequest withRequest(org.openapis.openapi.models.shared.UpdateCompanyUserRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.UpdateCompanyUserRequest updateCompanyUserRequest;
+    public PatchCompaniesCompanyIdUsersUserIdRequest withUpdateCompanyUserRequest(org.openapis.openapi.models.shared.UpdateCompanyUserRequest updateCompanyUserRequest) {
+        this.updateCompanyUserRequest = updateCompanyUserRequest;
         return this;
     }
     
+    /**
+     * The unique identifier of the company account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public PatchCompaniesCompanyIdUsersUserIdRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public PatchCompaniesCompanyIdUsersUserIdSecurity security;
-    public PatchCompaniesCompanyIdUsersUserIdRequest withSecurity(PatchCompaniesCompanyIdUsersUserIdSecurity security) {
-        this.security = security;
+    /**
+     * The unique identifier of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public PatchCompaniesCompanyIdUsersUserIdRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

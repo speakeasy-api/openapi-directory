@@ -33,23 +33,24 @@ public class ShippingQuote {
     /**
      * The &lt;b&gt;createShippingQuote&lt;/b&gt; method returns a &lt;i&gt;shipping quote &lt;/i&gt; that contains a list of live "rates."  &lt;br&gt;&lt;br&gt;Each rate represents an offer made by a shipping carrier for a specific service and each offer has a live quote for the base service cost. Rates have a time window in which they are "live," and rates expire when their purchase window ends. If offered by the carrier, rates can include shipping options (and their associated prices), and users can add any offered shipping option to the base service should they desire.  Also, depending on the services required, rates can also include pickup and delivery windows.  &lt;br&gt;&lt;br&gt;Each rate is for a single package and is based on the following information: &lt;ul&gt;&lt;li&gt;The shipping origin&lt;/li&gt; &lt;li&gt;The shipping destination&lt;/li&gt; &lt;li&gt;The package size (weight and dimensions)&lt;/li&gt;&lt;/ul&gt;  Rates are identified by a unique eBay-assigned &lt;b&gt;rateId&lt;/b&gt; and rates are based on price points, pickup and delivery time frames, and other user requirements. Because each rate offered must be compliant with the eBay shipping program, all rates reflect eBay-negotiated prices.  &lt;br&gt;&lt;br&gt;The various rates returned in a shipping quote offer the user a choice from which they can choose a shipping service that best fits their needs. Select the rate for your shipment and using the associated &lt;b&gt;rateId&lt;/b&gt;, call &lt;b&gt;createFromShippingQuote&lt;/b&gt; to create a shipment and generate a shipping label that you can use to ship the package.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateShippingQuoteResponse createShippingQuote(org.openapis.openapi.models.operations.CreateShippingQuoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateShippingQuoteResponse createShippingQuote(org.openapis.openapi.models.operations.CreateShippingQuoteRequest request, org.openapis.openapi.models.operations.CreateShippingQuoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/shipping_quote");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "shippingQuoteRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -58,7 +59,7 @@ public class ShippingQuote {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -87,19 +88,20 @@ public class ShippingQuote {
     /**
      * This method retrieves the complete details of the shipping quote associated with the specified &lt;b&gt;shippingQuoteId&lt;/b&gt; value.  &lt;br&gt;&lt;br&gt;A "shipping quote" pertains to a single specific package and contains a set of shipping "rates" that quote the cost to ship the package by different shipping carriers and services. The quotes are based on the package's origin, destination, and size.  &lt;br&gt;&lt;br&gt;Call &lt;b&gt;createShippingQuote&lt;/b&gt; to create a &lt;b&gt;shippingQuoteId&lt;/b&gt;.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetShippingQuoteResponse getShippingQuote(org.openapis.openapi.models.operations.GetShippingQuoteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetShippingQuoteResponse getShippingQuote(org.openapis.openapi.models.operations.GetShippingQuoteRequest request, org.openapis.openapi.models.operations.GetShippingQuoteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShippingQuotePathParams.class, baseUrl, "/shipping_quote/{shippingQuoteId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShippingQuoteRequest.class, baseUrl, "/shipping_quote/{shippingQuoteId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

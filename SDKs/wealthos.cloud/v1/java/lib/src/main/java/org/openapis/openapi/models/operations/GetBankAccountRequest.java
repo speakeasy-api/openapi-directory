@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBankAccountRequest {
-    
-    public GetBankAccountPathParams pathParams;
-    public GetBankAccountRequest withPathParams(GetBankAccountPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Bank Account Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bank_account_id")
+    public String bankAccountId;
+    public GetBankAccountRequest withBankAccountId(String bankAccountId) {
+        this.bankAccountId = bankAccountId;
         return this;
     }
     
-    
-    public GetBankAccountHeaders headers;
-    public GetBankAccountRequest withHeaders(GetBankAccountHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public GetBankAccountSecurity security;
-    public GetBankAccountRequest withSecurity(GetBankAccountSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetBankAccountRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

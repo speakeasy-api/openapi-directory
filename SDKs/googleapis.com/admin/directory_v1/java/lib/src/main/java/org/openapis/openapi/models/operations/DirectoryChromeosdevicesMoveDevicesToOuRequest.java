@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectoryChromeosdevicesMoveDevicesToOuRequest {
-    
-    public DirectoryChromeosdevicesMoveDevicesToOuPathParams pathParams;
-    public DirectoryChromeosdevicesMoveDevicesToOuRequest withPathParams(DirectoryChromeosdevicesMoveDevicesToOuPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DirectoryChromeosdevicesMoveDevicesToOuQueryParams queryParams;
-    public DirectoryChromeosdevicesMoveDevicesToOuRequest withQueryParams(DirectoryChromeosdevicesMoveDevicesToOuQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChromeOsMoveDevicesToOu request;
-    public DirectoryChromeosdevicesMoveDevicesToOuRequest withRequest(org.openapis.openapi.models.shared.ChromeOsMoveDevicesToOu request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ChromeOsMoveDevicesToOu chromeOsMoveDevicesToOu;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withChromeOsMoveDevicesToOu(org.openapis.openapi.models.shared.ChromeOsMoveDevicesToOu chromeOsMoveDevicesToOu) {
+        this.chromeOsMoveDevicesToOu = chromeOsMoveDevicesToOu;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public DirectoryChromeosdevicesMoveDevicesToOuSecurity security;
-    public DirectoryChromeosdevicesMoveDevicesToOuRequest withSecurity(DirectoryChromeosdevicesMoveDevicesToOuSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Immutable. ID of the Google Workspace account
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public String customerId;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withCustomerId(String customerId) {
+        this.customerId = customerId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Full path of the target organizational unit or its ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orgUnitPath")
+    public String orgUnitPath;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withOrgUnitPath(String orgUnitPath) {
+        this.orgUnitPath = orgUnitPath;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public DirectoryChromeosdevicesMoveDevicesToOuRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

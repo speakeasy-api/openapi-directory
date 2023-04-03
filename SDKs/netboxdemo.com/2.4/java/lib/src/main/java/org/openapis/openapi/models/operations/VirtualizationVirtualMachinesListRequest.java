@@ -4,13 +4,176 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VirtualizationVirtualMachinesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cluster")
+    public String cluster;
+    public VirtualizationVirtualMachinesListRequest withCluster(String cluster) {
+        this.cluster = cluster;
+        return this;
+    }
     
-    public VirtualizationVirtualMachinesListQueryParams queryParams;
-    public VirtualizationVirtualMachinesListRequest withQueryParams(VirtualizationVirtualMachinesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cluster_group")
+    public String clusterGroup;
+    public VirtualizationVirtualMachinesListRequest withClusterGroup(String clusterGroup) {
+        this.clusterGroup = clusterGroup;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cluster_group_id")
+    public String clusterGroupId;
+    public VirtualizationVirtualMachinesListRequest withClusterGroupId(String clusterGroupId) {
+        this.clusterGroupId = clusterGroupId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cluster_id")
+    public String clusterId;
+    public VirtualizationVirtualMachinesListRequest withClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cluster_type")
+    public String clusterType;
+    public VirtualizationVirtualMachinesListRequest withClusterType(String clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cluster_type_id")
+    public String clusterTypeId;
+    public VirtualizationVirtualMachinesListRequest withClusterTypeId(String clusterTypeId) {
+        this.clusterTypeId = clusterTypeId;
+        return this;
+    }
+    
+    /**
+     * Multiple values may be separated by commas.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__in")
+    public String idIn;
+    public VirtualizationVirtualMachinesListRequest withIdIn(String idIn) {
+        this.idIn = idIn;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public VirtualizationVirtualMachinesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public VirtualizationVirtualMachinesListRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public VirtualizationVirtualMachinesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform")
+    public String platform;
+    public VirtualizationVirtualMachinesListRequest withPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform_id")
+    public String platformId;
+    public VirtualizationVirtualMachinesListRequest withPlatformId(String platformId) {
+        this.platformId = platformId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public VirtualizationVirtualMachinesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
+    public String region;
+    public VirtualizationVirtualMachinesListRequest withRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region_id")
+    public Double regionId;
+    public VirtualizationVirtualMachinesListRequest withRegionId(Double regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
+    public String role;
+    public VirtualizationVirtualMachinesListRequest withRole(String role) {
+        this.role = role;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role_id")
+    public String roleId;
+    public VirtualizationVirtualMachinesListRequest withRoleId(String roleId) {
+        this.roleId = roleId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
+    public String site;
+    public VirtualizationVirtualMachinesListRequest withSite(String site) {
+        this.site = site;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site_id")
+    public String siteId;
+    public VirtualizationVirtualMachinesListRequest withSiteId(String siteId) {
+        this.siteId = siteId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public VirtualizationVirtualMachinesListRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
+    public String tag;
+    public VirtualizationVirtualMachinesListRequest withTag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant")
+    public String tenant;
+    public VirtualizationVirtualMachinesListRequest withTenant(String tenant) {
+        this.tenant = tenant;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenant_id")
+    public String tenantId;
+    public VirtualizationVirtualMachinesListRequest withTenantId(String tenantId) {
+        this.tenantId = tenantId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletePayable3Request {
+    /**
+     * payable's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=payableId")
+    public Long payableId;
+    public DeletePayable3Request withPayableId(Long payableId) {
+        this.payableId = payableId;
+        return this;
+    }
     
-    public DeletePayable3PathParams pathParams;
-    public DeletePayable3Request withPathParams(DeletePayable3PathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * quote's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
+    public String quoteId;
+    public DeletePayable3Request withQuoteId(String quoteId) {
+        this.quoteId = quoteId;
         return this;
     }
     

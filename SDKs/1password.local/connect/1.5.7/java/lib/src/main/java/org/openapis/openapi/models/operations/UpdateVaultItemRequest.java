@@ -7,24 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVaultItemRequest {
-    
-    public UpdateVaultItemPathParams pathParams;
-    public UpdateVaultItemRequest withPathParams(UpdateVaultItemPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.FullItemInput request;
-    public UpdateVaultItemRequest withRequest(org.openapis.openapi.models.shared.FullItemInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.FullItemInput fullItemInput;
+    public UpdateVaultItemRequest withFullItemInput(org.openapis.openapi.models.shared.FullItemInput fullItemInput) {
+        this.fullItemInput = fullItemInput;
         return this;
     }
     
+    /**
+     * The UUID of the Item to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
+    public String itemUuid;
+    public UpdateVaultItemRequest withItemUuid(String itemUuid) {
+        this.itemUuid = itemUuid;
+        return this;
+    }
     
-    public UpdateVaultItemSecurity security;
-    public UpdateVaultItemRequest withSecurity(UpdateVaultItemSecurity security) {
-        this.security = security;
+    /**
+     * The UUID of the Item's Vault
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
+    public String vaultUuid;
+    public UpdateVaultItemRequest withVaultUuid(String vaultUuid) {
+        this.vaultUuid = vaultUuid;
         return this;
     }
     

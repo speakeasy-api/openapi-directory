@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUserTagsTagIdShowsRequest {
-    
-    public GetUserTagsTagIdShowsPathParams pathParams;
-    public GetUserTagsTagIdShowsRequest withPathParams(GetUserTagsTagIdShowsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Embed full show info
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetUserTagsTagIdShowsEmbedEnum embed;
+    public GetUserTagsTagIdShowsRequest withEmbed(GetUserTagsTagIdShowsEmbedEnum embed) {
+        this.embed = embed;
         return this;
     }
     
-    
-    public GetUserTagsTagIdShowsQueryParams queryParams;
-    public GetUserTagsTagIdShowsRequest withQueryParams(GetUserTagsTagIdShowsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_id")
+    public Long tagId;
+    public GetUserTagsTagIdShowsRequest withTagId(Long tagId) {
+        this.tagId = tagId;
         return this;
     }
     

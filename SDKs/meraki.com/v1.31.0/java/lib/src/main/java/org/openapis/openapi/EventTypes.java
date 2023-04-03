@@ -38,7 +38,7 @@ public class EventTypes {
      */
     public org.openapis.openapi.models.operations.GetNetworkEventsEventTypesResponse getNetworkEventsEventTypes(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesPathParams.class, baseUrl, "/networks/{networkId}/events/eventTypes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkEventsEventTypesRequest.class, baseUrl, "/networks/{networkId}/events/eventTypes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

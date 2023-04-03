@@ -7,10 +7,10 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangePasswordViaMobileUsingPOSTRequest {
-    
-    public ChangePasswordViaMobileUsingPOSTHeaders headers;
-    public ChangePasswordViaMobileUsingPOSTRequest withHeaders(ChangePasswordViaMobileUsingPOSTHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
+    public String acceptLanguage;
+    public ChangePasswordViaMobileUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
         return this;
     }
     
@@ -18,16 +18,19 @@ public class ChangePasswordViaMobileUsingPOSTRequest {
      * hidOtpRequestPaylaod
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HidOtpRequestPaylaod request;
-    public ChangePasswordViaMobileUsingPOSTRequest withRequest(org.openapis.openapi.models.shared.HidOtpRequestPaylaod request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HidOtpRequestPaylaod hidOtpRequestPaylaod;
+    public ChangePasswordViaMobileUsingPOSTRequest withHidOtpRequestPaylaod(org.openapis.openapi.models.shared.HidOtpRequestPaylaod hidOtpRequestPaylaod) {
+        this.hidOtpRequestPaylaod = hidOtpRequestPaylaod;
         return this;
     }
     
-    
-    public ChangePasswordViaMobileUsingPOSTSecurity security;
-    public ChangePasswordViaMobileUsingPOSTRequest withSecurity(ChangePasswordViaMobileUsingPOSTSecurity security) {
-        this.security = security;
+    /**
+     * Auth Token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
+    public String xToken;
+    public ChangePasswordViaMobileUsingPOSTRequest withXToken(String xToken) {
+        this.xToken = xToken;
         return this;
     }
     

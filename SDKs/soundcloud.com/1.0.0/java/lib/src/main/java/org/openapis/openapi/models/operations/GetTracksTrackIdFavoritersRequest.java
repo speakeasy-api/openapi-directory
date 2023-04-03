@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTracksTrackIdFavoritersRequest {
-    
-    public GetTracksTrackIdFavoritersPathParams pathParams;
-    public GetTracksTrackIdFavoritersRequest withPathParams(GetTracksTrackIdFavoritersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Number of results to return in the collection.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetTracksTrackIdFavoritersRequest withLimit(Long limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetTracksTrackIdFavoritersQueryParams queryParams;
-    public GetTracksTrackIdFavoritersRequest withQueryParams(GetTracksTrackIdFavoritersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public GetTracksTrackIdFavoritersRequest withOffset(Long offset) {
+        this.offset = offset;
         return this;
     }
     
-    
-    public GetTracksTrackIdFavoritersSecurity security;
-    public GetTracksTrackIdFavoritersRequest withSecurity(GetTracksTrackIdFavoritersSecurity security) {
-        this.security = security;
+    /**
+     * SoundCloud Track id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track_id")
+    public Long trackId;
+    public GetTracksTrackIdFavoritersRequest withTrackId(Long trackId) {
+        this.trackId = trackId;
         return this;
     }
     

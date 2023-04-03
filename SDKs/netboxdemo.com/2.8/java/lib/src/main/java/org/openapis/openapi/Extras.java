@@ -61,7 +61,7 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasCustomFieldChoicesReadResponse extrasCustomFieldChoicesRead(org.openapis.openapi.models.operations.ExtrasCustomFieldChoicesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasCustomFieldChoicesReadPathParams.class, baseUrl, "/extras/_custom_field_choices/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasCustomFieldChoicesReadRequest.class, baseUrl, "/extras/_custom_field_choices/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -86,7 +86,7 @@ public class Extras {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ExtrasConfigContextsCreateResponse extrasConfigContextsCreate(org.openapis.openapi.models.operations.ExtrasConfigContextsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExtrasConfigContextsCreateResponse extrasConfigContextsCreate(org.openapis.openapi.models.shared.WritableConfigContextInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/extras/config-contexts/");
         
@@ -126,7 +126,7 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasConfigContextsDeleteResponse extrasConfigContextsDelete(org.openapis.openapi.models.operations.ExtrasConfigContextsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasConfigContextsDeletePathParams.class, baseUrl, "/extras/config-contexts/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasConfigContextsDeleteRequest.class, baseUrl, "/extras/config-contexts/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -165,7 +165,7 @@ public class Extras {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasConfigContextsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasConfigContextsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -198,12 +198,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasConfigContextsPartialUpdateResponse extrasConfigContextsPartialUpdate(org.openapis.openapi.models.operations.ExtrasConfigContextsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasConfigContextsPartialUpdatePathParams.class, baseUrl, "/extras/config-contexts/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasConfigContextsPartialUpdateRequest.class, baseUrl, "/extras/config-contexts/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConfigContextInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -242,7 +242,7 @@ public class Extras {
      */
     public org.openapis.openapi.models.operations.ExtrasConfigContextsReadResponse extrasConfigContextsRead(org.openapis.openapi.models.operations.ExtrasConfigContextsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasConfigContextsReadPathParams.class, baseUrl, "/extras/config-contexts/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasConfigContextsReadRequest.class, baseUrl, "/extras/config-contexts/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -275,12 +275,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasConfigContextsUpdateResponse extrasConfigContextsUpdate(org.openapis.openapi.models.operations.ExtrasConfigContextsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasConfigContextsUpdatePathParams.class, baseUrl, "/extras/config-contexts/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasConfigContextsUpdateRequest.class, baseUrl, "/extras/config-contexts/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableConfigContextInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -311,7 +311,7 @@ public class Extras {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ExtrasExportTemplatesCreateResponse extrasExportTemplatesCreate(org.openapis.openapi.models.operations.ExtrasExportTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExtrasExportTemplatesCreateResponse extrasExportTemplatesCreate(org.openapis.openapi.models.shared.WritableExportTemplateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/extras/export-templates/");
         
@@ -351,7 +351,7 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasExportTemplatesDeleteResponse extrasExportTemplatesDelete(org.openapis.openapi.models.operations.ExtrasExportTemplatesDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasExportTemplatesDeletePathParams.class, baseUrl, "/extras/export-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasExportTemplatesDeleteRequest.class, baseUrl, "/extras/export-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -390,7 +390,7 @@ public class Extras {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasExportTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasExportTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -423,12 +423,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasExportTemplatesPartialUpdateResponse extrasExportTemplatesPartialUpdate(org.openapis.openapi.models.operations.ExtrasExportTemplatesPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasExportTemplatesPartialUpdatePathParams.class, baseUrl, "/extras/export-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasExportTemplatesPartialUpdateRequest.class, baseUrl, "/extras/export-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableExportTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -467,7 +467,7 @@ public class Extras {
      */
     public org.openapis.openapi.models.operations.ExtrasExportTemplatesReadResponse extrasExportTemplatesRead(org.openapis.openapi.models.operations.ExtrasExportTemplatesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasExportTemplatesReadPathParams.class, baseUrl, "/extras/export-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasExportTemplatesReadRequest.class, baseUrl, "/extras/export-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -500,12 +500,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasExportTemplatesUpdateResponse extrasExportTemplatesUpdate(org.openapis.openapi.models.operations.ExtrasExportTemplatesUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasExportTemplatesUpdatePathParams.class, baseUrl, "/extras/export-templates/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasExportTemplatesUpdateRequest.class, baseUrl, "/extras/export-templates/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "writableExportTemplateInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -536,7 +536,7 @@ public class Extras {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ExtrasGraphsCreateResponse extrasGraphsCreate(org.openapis.openapi.models.operations.ExtrasGraphsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExtrasGraphsCreateResponse extrasGraphsCreate(org.openapis.openapi.models.shared.GraphInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/extras/graphs/");
         
@@ -576,7 +576,7 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasGraphsDeleteResponse extrasGraphsDelete(org.openapis.openapi.models.operations.ExtrasGraphsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasGraphsDeletePathParams.class, baseUrl, "/extras/graphs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasGraphsDeleteRequest.class, baseUrl, "/extras/graphs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -615,7 +615,7 @@ public class Extras {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasGraphsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasGraphsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -648,12 +648,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasGraphsPartialUpdateResponse extrasGraphsPartialUpdate(org.openapis.openapi.models.operations.ExtrasGraphsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasGraphsPartialUpdatePathParams.class, baseUrl, "/extras/graphs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasGraphsPartialUpdateRequest.class, baseUrl, "/extras/graphs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "graphInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -692,7 +692,7 @@ public class Extras {
      */
     public org.openapis.openapi.models.operations.ExtrasGraphsReadResponse extrasGraphsRead(org.openapis.openapi.models.operations.ExtrasGraphsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasGraphsReadPathParams.class, baseUrl, "/extras/graphs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasGraphsReadRequest.class, baseUrl, "/extras/graphs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -725,12 +725,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasGraphsUpdateResponse extrasGraphsUpdate(org.openapis.openapi.models.operations.ExtrasGraphsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasGraphsUpdatePathParams.class, baseUrl, "/extras/graphs/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasGraphsUpdateRequest.class, baseUrl, "/extras/graphs/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "graphInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -761,7 +761,7 @@ public class Extras {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ExtrasImageAttachmentsCreateResponse extrasImageAttachmentsCreate(org.openapis.openapi.models.operations.ExtrasImageAttachmentsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExtrasImageAttachmentsCreateResponse extrasImageAttachmentsCreate(org.openapis.openapi.models.shared.ImageAttachmentInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/extras/image-attachments/");
         
@@ -801,7 +801,7 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasImageAttachmentsDeleteResponse extrasImageAttachmentsDelete(org.openapis.openapi.models.operations.ExtrasImageAttachmentsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasImageAttachmentsDeletePathParams.class, baseUrl, "/extras/image-attachments/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasImageAttachmentsDeleteRequest.class, baseUrl, "/extras/image-attachments/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -840,7 +840,7 @@ public class Extras {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasImageAttachmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasImageAttachmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -873,12 +873,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasImageAttachmentsPartialUpdateResponse extrasImageAttachmentsPartialUpdate(org.openapis.openapi.models.operations.ExtrasImageAttachmentsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasImageAttachmentsPartialUpdatePathParams.class, baseUrl, "/extras/image-attachments/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasImageAttachmentsPartialUpdateRequest.class, baseUrl, "/extras/image-attachments/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageAttachmentInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -917,7 +917,7 @@ public class Extras {
      */
     public org.openapis.openapi.models.operations.ExtrasImageAttachmentsReadResponse extrasImageAttachmentsRead(org.openapis.openapi.models.operations.ExtrasImageAttachmentsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasImageAttachmentsReadPathParams.class, baseUrl, "/extras/image-attachments/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasImageAttachmentsReadRequest.class, baseUrl, "/extras/image-attachments/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -950,12 +950,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasImageAttachmentsUpdateResponse extrasImageAttachmentsUpdate(org.openapis.openapi.models.operations.ExtrasImageAttachmentsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasImageAttachmentsUpdatePathParams.class, baseUrl, "/extras/image-attachments/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasImageAttachmentsUpdateRequest.class, baseUrl, "/extras/image-attachments/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "imageAttachmentInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1000,7 +1000,7 @@ public class Extras {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasObjectChangesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasObjectChangesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1039,7 +1039,7 @@ public class Extras {
      */
     public org.openapis.openapi.models.operations.ExtrasObjectChangesReadResponse extrasObjectChangesRead(org.openapis.openapi.models.operations.ExtrasObjectChangesReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasObjectChangesReadPathParams.class, baseUrl, "/extras/object-changes/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasObjectChangesReadRequest.class, baseUrl, "/extras/object-changes/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1110,7 +1110,7 @@ public class Extras {
      */
     public org.openapis.openapi.models.operations.ExtrasReportsReadResponse extrasReportsRead(org.openapis.openapi.models.operations.ExtrasReportsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasReportsReadPathParams.class, baseUrl, "/extras/reports/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasReportsReadRequest.class, baseUrl, "/extras/reports/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1143,7 +1143,7 @@ public class Extras {
      */
     public org.openapis.openapi.models.operations.ExtrasReportsRunResponse extrasReportsRun(org.openapis.openapi.models.operations.ExtrasReportsRunRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasReportsRunPathParams.class, baseUrl, "/extras/reports/{id}/run/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasReportsRunRequest.class, baseUrl, "/extras/reports/{id}/run/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1197,7 +1197,7 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasScriptsReadResponse extrasScriptsRead(org.openapis.openapi.models.operations.ExtrasScriptsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasScriptsReadPathParams.class, baseUrl, "/extras/scripts/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasScriptsReadRequest.class, baseUrl, "/extras/scripts/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1222,7 +1222,7 @@ public class Extras {
         return res;
     }
 
-    public org.openapis.openapi.models.operations.ExtrasTagsCreateResponse extrasTagsCreate(org.openapis.openapi.models.operations.ExtrasTagsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ExtrasTagsCreateResponse extrasTagsCreate(org.openapis.openapi.models.shared.TagInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/extras/tags/");
         
@@ -1262,7 +1262,7 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasTagsDeleteResponse extrasTagsDelete(org.openapis.openapi.models.operations.ExtrasTagsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasTagsDeletePathParams.class, baseUrl, "/extras/tags/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasTagsDeleteRequest.class, baseUrl, "/extras/tags/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -1301,7 +1301,7 @@ public class Extras {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasTagsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ExtrasTagsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1334,12 +1334,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasTagsPartialUpdateResponse extrasTagsPartialUpdate(org.openapis.openapi.models.operations.ExtrasTagsPartialUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasTagsPartialUpdatePathParams.class, baseUrl, "/extras/tags/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasTagsPartialUpdateRequest.class, baseUrl, "/extras/tags/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1378,7 +1378,7 @@ public class Extras {
      */
     public org.openapis.openapi.models.operations.ExtrasTagsReadResponse extrasTagsRead(org.openapis.openapi.models.operations.ExtrasTagsReadRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasTagsReadPathParams.class, baseUrl, "/extras/tags/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasTagsReadRequest.class, baseUrl, "/extras/tags/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -1411,12 +1411,12 @@ public class Extras {
 
     public org.openapis.openapi.models.operations.ExtrasTagsUpdateResponse extrasTagsUpdate(org.openapis.openapi.models.operations.ExtrasTagsUpdateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasTagsUpdatePathParams.class, baseUrl, "/extras/tags/{id}/", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ExtrasTagsUpdateRequest.class, baseUrl, "/extras/tags/{id}/", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "tagInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

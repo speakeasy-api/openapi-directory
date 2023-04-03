@@ -4,27 +4,136 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListConferenceRequest {
-    
-    public ListConferenceQueryParams queryParams;
-    public ListConferenceRequest withQueryParams(ListConferenceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The SID of the conference.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConferenceSid")
+    public String conferenceSid;
+    public ListConferenceRequest withConferenceSid(String conferenceSid) {
+        this.conferenceSid = conferenceSid;
         return this;
     }
     
-    
-    public ListConferenceSecurity security;
-    public ListConferenceRequest withSecurity(ListConferenceSecurity security) {
-        this.security = security;
+    /**
+     * Conferences created after the provided timestamp specified in ISO 8601 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CreatedAfter")
+    public String createdAfter;
+    public ListConferenceRequest withCreatedAfter(String createdAfter) {
+        this.createdAfter = createdAfter;
         return this;
     }
     
+    /**
+     * Conferences created before the provided timestamp specified in ISO 8601 format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CreatedBefore")
+    public String createdBefore;
+    public ListConferenceRequest withCreatedBefore(String createdBefore) {
+        this.createdBefore = createdBefore;
+        return this;
+    }
     
-    public String serverURL;
-    public ListConferenceRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Potential configuration, behavior, or performance issues detected during the conference.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DetectedIssues")
+    public String detectedIssues;
+    public ListConferenceRequest withDetectedIssues(String detectedIssues) {
+        this.detectedIssues = detectedIssues;
+        return this;
+    }
+    
+    /**
+     * Conference end reason; e.g. last participant left, modified by API, etc.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EndReason")
+    public String endReason;
+    public ListConferenceRequest withEndReason(String endReason) {
+        this.endReason = endReason;
+        return this;
+    }
+    
+    /**
+     * Custom label for the conference resource, up to 64 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListConferenceRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
+        return this;
+    }
+    
+    /**
+     * Twilio region where the conference media was mixed.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MixerRegion")
+    public String mixerRegion;
+    public ListConferenceRequest withMixerRegion(String mixerRegion) {
+        this.mixerRegion = mixerRegion;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListConferenceRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListConferenceRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListConferenceRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Conference status.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public String status;
+    public ListConferenceRequest withStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Account SID for the subaccount whose resources you wish to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Subaccount")
+    public String subaccount;
+    public ListConferenceRequest withSubaccount(String subaccount) {
+        this.subaccount = subaccount;
+        return this;
+    }
+    
+    /**
+     * Tags applied by Twilio for common potential configuration, quality, or performance issues.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Tags")
+    public String tags;
+    public ListConferenceRequest withTags(String tags) {
+        this.tags = tags;
         return this;
     }
     

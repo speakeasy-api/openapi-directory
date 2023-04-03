@@ -4,20 +4,43 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationSummaryTopDevicesModelsByUsageRequest {
-    
-    public GetOrganizationSummaryTopDevicesModelsByUsagePathParams pathParams;
-    public GetOrganizationSummaryTopDevicesModelsByUsageRequest withPathParams(GetOrganizationSummaryTopDevicesModelsByUsagePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public GetOrganizationSummaryTopDevicesModelsByUsageRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     
+    /**
+     * The beginning of the timespan for the data.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t0")
+    public String t0;
+    public GetOrganizationSummaryTopDevicesModelsByUsageRequest withT0(String t0) {
+        this.t0 = t0;
+        return this;
+    }
     
-    public GetOrganizationSummaryTopDevicesModelsByUsageQueryParams queryParams;
-    public GetOrganizationSummaryTopDevicesModelsByUsageRequest withQueryParams(GetOrganizationSummaryTopDevicesModelsByUsageQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=t1")
+    public String t1;
+    public GetOrganizationSummaryTopDevicesModelsByUsageRequest withT1(String t1) {
+        this.t1 = t1;
+        return this;
+    }
+    
+    /**
+     * The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timespan")
+    public Float timespan;
+    public GetOrganizationSummaryTopDevicesModelsByUsageRequest withTimespan(Float timespan) {
+        this.timespan = timespan;
         return this;
     }
     

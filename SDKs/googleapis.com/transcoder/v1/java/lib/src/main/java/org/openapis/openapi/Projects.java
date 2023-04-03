@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates a job template in the specified region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateResponse transcoderProjectsLocationsJobTemplatesCreate(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateResponse transcoderProjectsLocationsJobTemplatesCreate(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateRequest request, org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreatePathParams.class, baseUrl, "/v1/{parent}/jobTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateRequest.class, baseUrl, "/v1/{parent}/jobTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jobTemplate", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes a job template.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeleteResponse transcoderProjectsLocationsJobTemplatesDelete(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeleteResponse transcoderProjectsLocationsJobTemplatesDelete(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeleteRequest request, org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Returns the job template data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetResponse transcoderProjectsLocationsJobTemplatesGet(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetResponse transcoderProjectsLocationsJobTemplatesGet(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetRequest request, org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,25 +175,26 @@ public class Projects {
     /**
      * Lists job templates in the specified region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListResponse transcoderProjectsLocationsJobTemplatesList(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListResponse transcoderProjectsLocationsJobTemplatesList(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListRequest request, org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListPathParams.class, baseUrl, "/v1/{parent}/jobTemplates", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListRequest.class, baseUrl, "/v1/{parent}/jobTemplates", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobTemplatesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -217,27 +221,28 @@ public class Projects {
     /**
      * Creates a job in the specified region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreateResponse transcoderProjectsLocationsJobsCreate(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreateResponse transcoderProjectsLocationsJobsCreate(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreateRequest request, org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreatePathParams.class, baseUrl, "/v1/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreateRequest.class, baseUrl, "/v1/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "jobInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -264,25 +269,26 @@ public class Projects {
     /**
      * Lists jobs in the specified region.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListResponse transcoderProjectsLocationsJobsList(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListResponse transcoderProjectsLocationsJobsList(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListRequest request, org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListPathParams.class, baseUrl, "/v1/{parent}/jobs", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListRequest.class, baseUrl, "/v1/{parent}/jobs", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TranscoderProjectsLocationsJobsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

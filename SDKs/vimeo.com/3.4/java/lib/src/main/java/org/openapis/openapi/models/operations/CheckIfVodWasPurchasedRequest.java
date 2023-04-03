@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckIfVodWasPurchasedRequest {
-    
-    public CheckIfVodWasPurchasedPathParams pathParams;
-    public CheckIfVodWasPurchasedRequest withPathParams(CheckIfVodWasPurchasedPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CheckIfVodWasPurchasedSecurity security;
-    public CheckIfVodWasPurchasedRequest withSecurity(CheckIfVodWasPurchasedSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public CheckIfVodWasPurchasedRequest withUserId(Double userId) {
+        this.userId = userId;
         return this;
     }
     

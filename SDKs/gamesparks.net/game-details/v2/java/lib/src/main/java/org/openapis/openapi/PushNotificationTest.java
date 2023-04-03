@@ -38,12 +38,12 @@ public class PushNotificationTest {
      */
     public org.openapis.openapi.models.operations.TestPushAmazonNotificationsUsingPOSTResponse testPushAmazonNotificationsUsingPOST(org.openapis.openapi.models.operations.TestPushAmazonNotificationsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPushAmazonNotificationsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/amazon", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPushAmazonNotificationsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/amazon", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushNotificationTestModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -82,12 +82,12 @@ public class PushNotificationTest {
      */
     public org.openapis.openapi.models.operations.TestPushAppleDevNotificationsUsingPOSTResponse testPushAppleDevNotificationsUsingPOST(org.openapis.openapi.models.operations.TestPushAppleDevNotificationsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPushAppleDevNotificationsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/apple/development", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPushAppleDevNotificationsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/apple/development", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushNotificationTestModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -126,12 +126,12 @@ public class PushNotificationTest {
      */
     public org.openapis.openapi.models.operations.TestPushAppleProdNotificationsUsingPOSTResponse testPushAppleProdNotificationsUsingPOST(org.openapis.openapi.models.operations.TestPushAppleProdNotificationsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPushAppleProdNotificationsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/apple/production", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPushAppleProdNotificationsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/apple/production", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushNotificationTestModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -170,12 +170,12 @@ public class PushNotificationTest {
      */
     public org.openapis.openapi.models.operations.TestPushGoogleNotificationsUsingPOSTResponse testPushGoogleNotificationsUsingPOST(org.openapis.openapi.models.operations.TestPushGoogleNotificationsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPushGoogleNotificationsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/google", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestPushGoogleNotificationsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/google", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushNotificationTestModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -214,12 +214,12 @@ public class PushNotificationTest {
      */
     public org.openapis.openapi.models.operations.TestViberIntegrationNotificationsUsingPOSTResponse testViberIntegrationNotificationsUsingPOST(org.openapis.openapi.models.operations.TestViberIntegrationNotificationsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestViberIntegrationNotificationsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/viber/integration", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestViberIntegrationNotificationsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/viber/integration", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushNotificationTestModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -258,12 +258,12 @@ public class PushNotificationTest {
      */
     public org.openapis.openapi.models.operations.TestViberProductionNotificationsUsingPOSTResponse testViberProductionNotificationsUsingPOST(org.openapis.openapi.models.operations.TestViberProductionNotificationsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestViberProductionNotificationsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/viber/production", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestViberProductionNotificationsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/viber/production", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushNotificationTestModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -302,12 +302,12 @@ public class PushNotificationTest {
      */
     public org.openapis.openapi.models.operations.TestWindows8NotificationsUsingPOSTResponse testWindows8NotificationsUsingPOST(org.openapis.openapi.models.operations.TestWindows8NotificationsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestWindows8NotificationsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/microsoft/windows8", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestWindows8NotificationsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/microsoft/windows8", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushNotificationTestModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -346,12 +346,12 @@ public class PushNotificationTest {
      */
     public org.openapis.openapi.models.operations.TestWindowsPhone8NotificationsUsingPOSTResponse testWindowsPhone8NotificationsUsingPOST(org.openapis.openapi.models.operations.TestWindowsPhone8NotificationsUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestWindowsPhone8NotificationsUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/microsoft/windowsPhone8", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TestWindowsPhone8NotificationsUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/admin/pushNotifications/test/microsoft/windowsPhone8", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "pushNotificationTestModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

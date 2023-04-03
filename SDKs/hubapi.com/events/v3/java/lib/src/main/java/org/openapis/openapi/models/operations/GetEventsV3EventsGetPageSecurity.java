@@ -7,23 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsV3EventsGetPageSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query")
-    public org.openapis.openapi.models.shared.SchemeHapikey hapikey;
-    public GetEventsV3EventsGetPageSecurity withHapikey(org.openapis.openapi.models.shared.SchemeHapikey hapikey) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=hapikey")
+    public String hapikey;
+    public GetEventsV3EventsGetPageSecurity withHapikey(String hapikey) {
         this.hapikey = hapikey;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=oauth2")
-    public org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy;
-    public GetEventsV3EventsGetPageSecurity withOauth2Legacy(org.openapis.openapi.models.shared.SchemeOauth2Legacy oauth2Legacy) {
+    @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
+    public String oauth2Legacy;
+    public GetEventsV3EventsGetPageSecurity withOauth2Legacy(String oauth2Legacy) {
         this.oauth2Legacy = oauth2Legacy;
         return this;
     }
     
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy;
-    public GetEventsV3EventsGetPageSecurity withPrivateAppsLegacy(org.openapis.openapi.models.shared.SchemePrivateAppsLegacy privateAppsLegacy) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=private-app-legacy")
+    public String privateAppsLegacy;
+    public GetEventsV3EventsGetPageSecurity withPrivateAppsLegacy(String privateAppsLegacy) {
         this.privateAppsLegacy = privateAppsLegacy;
         return this;
     }

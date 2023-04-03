@@ -4,27 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMerchantsMerchantIdShippingLocationsRequest {
-    
-    public GetMerchantsMerchantIdShippingLocationsPathParams pathParams;
-    public GetMerchantsMerchantIdShippingLocationsRequest withPathParams(GetMerchantsMerchantIdShippingLocationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number of locations to return.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public GetMerchantsMerchantIdShippingLocationsRequest withLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
     
-    
-    public GetMerchantsMerchantIdShippingLocationsQueryParams queryParams;
-    public GetMerchantsMerchantIdShippingLocationsRequest withQueryParams(GetMerchantsMerchantIdShippingLocationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The unique identifier of the merchant account.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
+    public String merchantId;
+    public GetMerchantsMerchantIdShippingLocationsRequest withMerchantId(String merchantId) {
+        this.merchantId = merchantId;
         return this;
     }
     
+    /**
+     * The name of the shipping location.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public GetMerchantsMerchantIdShippingLocationsRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
     
-    public GetMerchantsMerchantIdShippingLocationsSecurity security;
-    public GetMerchantsMerchantIdShippingLocationsRequest withSecurity(GetMerchantsMerchantIdShippingLocationsSecurity security) {
-        this.security = security;
+    /**
+     * The number of locations to skip.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public GetMerchantsMerchantIdShippingLocationsRequest withOffset(Integer offset) {
+        this.offset = offset;
         return this;
     }
     

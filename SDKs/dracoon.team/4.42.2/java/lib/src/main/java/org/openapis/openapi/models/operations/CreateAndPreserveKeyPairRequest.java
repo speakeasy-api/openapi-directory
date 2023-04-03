@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAndPreserveKeyPairRequest {
-    
-    public CreateAndPreserveKeyPairHeaders headers;
-    public CreateAndPreserveKeyPairRequest withHeaders(CreateAndPreserveKeyPairHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.CreateKeyPairRequest createKeyPairRequest;
+    public CreateAndPreserveKeyPairRequest withCreateKeyPairRequest(org.openapis.openapi.models.shared.CreateKeyPairRequest createKeyPairRequest) {
+        this.createKeyPairRequest = createKeyPairRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CreateKeyPairRequest request;
-    public CreateAndPreserveKeyPairRequest withRequest(org.openapis.openapi.models.shared.CreateKeyPairRequest request) {
-        this.request = request;
+    /**
+     * Authentication token
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Sds-Auth-Token")
+    public String xSdsAuthToken;
+    public CreateAndPreserveKeyPairRequest withXSdsAuthToken(String xSdsAuthToken) {
+        this.xSdsAuthToken = xSdsAuthToken;
         return this;
     }
     

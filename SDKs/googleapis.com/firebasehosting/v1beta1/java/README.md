@@ -20,15 +20,11 @@ import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption1;
 import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurityOption2;
 import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateSecurity;
-import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreatePathParams;
-import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateQueryParams;
 import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateRequest;
 import org.openapis.openapi.models.operations.FirebasehostingProjectsSitesCreateResponse;
-import org.openapis.openapi.models.shared.SiteInput;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.SiteInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
-import org.openapis.openapi.models.shared.SchemeOauth2;
-import org.openapis.openapi.models.shared.SchemeOauth2c;
 
 public class Application {
     public static void main(String[] args) {
@@ -37,43 +33,35 @@ public class Application {
                 .build();
 
             FirebasehostingProjectsSitesCreateRequest req = new FirebasehostingProjectsSitesCreateRequest() {{
-                security = new FirebasehostingProjectsSitesCreateSecurity() {{
-                    option1 = new FirebasehostingProjectsSitesCreateSecurityOption1() {{
-                        oauth2 = new SchemeOauth2() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                        oauth2c = new SchemeOauth2c() {{
-                            authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                        }};
-                    }};
-                }};
-                pathParams = new FirebasehostingProjectsSitesCreatePathParams() {{
-                    parent = "corrupti";
-                }};
-                queryParams = new FirebasehostingProjectsSitesCreateQueryParams() {{
-                    dollarXgafv = "2";
-                    accessToken = "distinctio";
-                    alt = "proto";
-                    callback = "unde";
-                    fields = "nulla";
-                    key = "corrupti";
-                    oauthToken = "illum";
-                    prettyPrint = false;
-                    quotaUser = "vel";
-                    siteId = "error";
-                    uploadType = "deserunt";
-                    uploadProtocol = "suscipit";
-                }};
-                request = new SiteInput() {{
-                    appId = "iure";
+                dollarXgafv = "2";
+                siteInput = new SiteInput() {{
+                    appId = "provident";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("debitis", "ipsa");
-                        put("delectus", "tempora");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
                 }};
-            }};            
+                accessToken = "error";
+                alt = "media";
+                callback = "suscipit";
+                fields = "iure";
+                key = "magnam";
+                oauthToken = "debitis";
+                parent = "ipsa";
+                prettyPrint = false;
+                quotaUser = "delectus";
+                siteId = "tempora";
+                uploadType = "suscipit";
+                uploadProtocol = "molestiae";
+            }}            
 
-            FirebasehostingProjectsSitesCreateResponse res = sdk.projects.firebasehostingProjectsSitesCreate(req);
+            FirebasehostingProjectsSitesCreateResponse res = sdk.projects.firebasehostingProjectsSitesCreate(req, new FirebasehostingProjectsSitesCreateSecurity() {{
+                option1 = new FirebasehostingProjectsSitesCreateSecurityOption1() {{
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                }};
+            }});
 
             if (res.site.isPresent()) {
                 // handle response
@@ -85,7 +73,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### projects

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreReleasesListRequest {
-    
-    public StoreReleasesListPathParams pathParams;
-    public StoreReleasesListRequest withPathParams(StoreReleasesListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public StoreReleasesListRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public StoreReleasesListRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public StoreReleasesListSecurity security;
-    public StoreReleasesListRequest withSecurity(StoreReleasesListSecurity security) {
-        this.security = security;
+    /**
+     * The name of the store
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
+    public String storeName;
+    public StoreReleasesListRequest withStoreName(String storeName) {
+        this.storeName = storeName;
         return this;
     }
     

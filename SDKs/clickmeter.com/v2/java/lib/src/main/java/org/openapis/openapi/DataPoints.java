@@ -37,7 +37,7 @@ public class DataPoints {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataPointsBatchDeleteResponse dataPointsBatchDelete(org.openapis.openapi.models.operations.DataPointsBatchDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataPointsBatchDeleteResponse dataPointsBatchDelete(org.openapis.openapi.models.shared.ApiCoreRequestsDeleteBatch request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/datapoints/batch");
         
@@ -89,7 +89,7 @@ public class DataPoints {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataPointsBatchPostResponse dataPointsBatchPost(org.openapis.openapi.models.operations.DataPointsBatchPostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataPointsBatchPostResponse dataPointsBatchPost(org.openapis.openapi.models.shared.ApiCoreRequestsDatapointsBatch request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/datapoints/batch");
         
@@ -141,7 +141,7 @@ public class DataPoints {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataPointsBatchPutResponse dataPointsBatchPut(org.openapis.openapi.models.operations.DataPointsBatchPutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataPointsBatchPutResponse dataPointsBatchPut(org.openapis.openapi.models.shared.ApiCoreRequestsDatapointsBatch request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/datapoints/batch");
         
@@ -201,7 +201,7 @@ public class DataPoints {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsCountQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsCountRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -258,7 +258,7 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsDeleteResponse dataPointsDelete(org.openapis.openapi.models.operations.DataPointsDeleteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsDeletePathParams.class, baseUrl, "/datapoints/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsDeleteRequest.class, baseUrl, "/datapoints/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -321,7 +321,7 @@ public class DataPoints {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -368,13 +368,13 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsGetHitsResponse dataPointsGetHits(org.openapis.openapi.models.operations.DataPointsGetHitsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsGetHitsPathParams.class, baseUrl, "/datapoints/{id}/hits", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsGetHitsRequest.class, baseUrl, "/datapoints/{id}/hits", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetHitsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetHitsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -427,7 +427,7 @@ public class DataPoints {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetStatisticsAggregatedSingleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetStatisticsAggregatedSingleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -480,7 +480,7 @@ public class DataPoints {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetStatisticsAllListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetStatisticsAllListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -527,13 +527,13 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsGetStatisticsListResponse dataPointsGetStatisticsList(org.openapis.openapi.models.operations.DataPointsGetStatisticsListRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsGetStatisticsListPathParams.class, baseUrl, "/datapoints/{id}/aggregated/list", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsGetStatisticsListRequest.class, baseUrl, "/datapoints/{id}/aggregated/list", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetStatisticsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetStatisticsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -580,13 +580,13 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleResponse dataPointsGetStatisticsSingle(org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsGetStatisticsSinglePathParams.class, baseUrl, "/datapoints/{id}/aggregated", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleRequest.class, baseUrl, "/datapoints/{id}/aggregated", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DataPointsGetStatisticsSingleRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -633,7 +633,7 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsPatchFavouriteResponse dataPointsPatchFavourite(org.openapis.openapi.models.operations.DataPointsPatchFavouriteRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPatchFavouritePathParams.class, baseUrl, "/datapoints/{id}/favourite", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPatchFavouriteRequest.class, baseUrl, "/datapoints/{id}/favourite", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -690,12 +690,12 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsPatchNotesFormResponse dataPointsPatchNotesForm(org.openapis.openapi.models.operations.DataPointsPatchNotesFormRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPatchNotesFormPathParams.class, baseUrl, "/datapoints/{id}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPatchNotesFormRequest.class, baseUrl, "/datapoints/{id}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsGenericTextPatch", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -752,12 +752,12 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsPatchNotesJsonResponse dataPointsPatchNotesJson(org.openapis.openapi.models.operations.DataPointsPatchNotesJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPatchNotesJsonPathParams.class, baseUrl, "/datapoints/{id}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPatchNotesJsonRequest.class, baseUrl, "/datapoints/{id}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreRequestsGenericTextPatch", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -814,12 +814,12 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsPatchNotesRawResponse dataPointsPatchNotesRaw(org.openapis.openapi.models.operations.DataPointsPatchNotesRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPatchNotesRawPathParams.class, baseUrl, "/datapoints/{id}/notes", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPatchNotesRawRequest.class, baseUrl, "/datapoints/{id}/notes", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -876,12 +876,12 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.DataPointsPostResponse dataPointsPost(org.openapis.openapi.models.operations.DataPointsPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPostPathParams.class, baseUrl, "/datapoints/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DataPointsPostRequest.class, baseUrl, "/datapoints/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiCoreDtoDatapointsDatapoint", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -936,7 +936,7 @@ public class DataPoints {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DataPointsPutResponse dataPointsPut(org.openapis.openapi.models.operations.DataPointsPutRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DataPointsPutResponse dataPointsPut(org.openapis.openapi.models.shared.ApiCoreDtoDatapointsDatapoint request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/datapoints");
         
@@ -1000,7 +1000,7 @@ public class DataPoints {
      */
     public org.openapis.openapi.models.operations.GetDatapointsIdResponse getDatapointsId(org.openapis.openapi.models.operations.GetDatapointsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDatapointsIdPathParams.class, baseUrl, "/datapoints/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDatapointsIdRequest.class, baseUrl, "/datapoints/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

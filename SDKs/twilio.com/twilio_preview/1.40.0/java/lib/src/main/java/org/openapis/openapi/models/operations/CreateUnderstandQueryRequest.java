@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUnderstandQueryRequest {
-    
-    public CreateUnderstandQueryPathParams pathParams;
-    public CreateUnderstandQueryRequest withPathParams(CreateUnderstandQueryPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique ID of the parent Assistant.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateUnderstandQueryRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateUnderstandQueryCreateUnderstandQueryRequest request;
-    public CreateUnderstandQueryRequest withRequest(CreateUnderstandQueryCreateUnderstandQueryRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateUnderstandQuerySecurity security;
-    public CreateUnderstandQueryRequest withSecurity(CreateUnderstandQuerySecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateUnderstandQueryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateUnderstandQueryCreateUnderstandQueryRequest requestBody;
+    public CreateUnderstandQueryRequest withRequestBody(CreateUnderstandQueryCreateUnderstandQueryRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

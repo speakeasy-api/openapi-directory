@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.BatchCreateTableRowsPathParams;
-import org.openapis.openapi.models.operations.BatchCreateTableRowsHeaders;
 import org.openapis.openapi.models.operations.BatchCreateTableRowsRequestBody;
 import org.openapis.openapi.models.operations.BatchCreateTableRowsRequest;
 import org.openapis.openapi.models.operations.BatchCreateTableRowsResponse;
@@ -30,85 +28,111 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             BatchCreateTableRowsRequest req = new BatchCreateTableRowsRequest() {{
-                pathParams = new BatchCreateTableRowsPathParams() {{
-                    tableId = "corrupti";
-                    workbookId = "provident";
-                }};
-                headers = new BatchCreateTableRowsHeaders() {{
-                    xAmzAlgorithm = "distinctio";
-                    xAmzContentSha256 = "quibusdam";
-                    xAmzCredential = "unde";
-                    xAmzDate = "nulla";
-                    xAmzSecurityToken = "corrupti";
-                    xAmzSignature = "illum";
-                    xAmzSignedHeaders = "vel";
-                }};
-                request = new BatchCreateTableRowsRequestBody() {{
-                    clientRequestToken = "error";
+                requestBody = new BatchCreateTableRowsRequestBody() {{
+                    clientRequestToken = "corrupti";
                     rowsToCreate = new org.openapis.openapi.models.shared.CreateRowData[]{{
                         add(new CreateRowData() {{
-                            batchItemId = "suscipit";
+                            batchItemId = "distinctio";
                             cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
-                                put("magnam", new CellInput() {{
-                                    fact = "debitis";
+                                put("unde", new CellInput() {{
+                                    fact = "nulla";
                                     facts = new String[]{{
-                                        add("delectus"),
-                                    }};
-                                }});
-                                put("tempora", new CellInput() {{
-                                    fact = "suscipit";
-                                    facts = new String[]{{
-                                        add("minus"),
-                                        add("placeat"),
-                                    }};
-                                }});
-                            }};
-                        }}),
-                        add(new CreateRowData() {{
-                            batchItemId = "voluptatum";
-                            cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
-                                put("excepturi", new CellInput() {{
-                                    fact = "nisi";
-                                    facts = new String[]{{
-                                        add("temporibus"),
-                                        add("ab"),
-                                        add("quis"),
-                                        add("veritatis"),
+                                        add("illum"),
+                                        add("vel"),
+                                        add("error"),
                                     }};
                                 }});
                                 put("deserunt", new CellInput() {{
-                                    fact = "perferendis";
+                                    fact = "suscipit";
                                     facts = new String[]{{
-                                        add("repellendus"),
-                                        add("sapiente"),
+                                        add("magnam"),
+                                        add("debitis"),
+                                    }};
+                                }});
+                                put("ipsa", new CellInput() {{
+                                    fact = "delectus";
+                                    facts = new String[]{{
+                                        add("suscipit"),
+                                        add("molestiae"),
+                                    }};
+                                }});
+                                put("minus", new CellInput() {{
+                                    fact = "placeat";
+                                    facts = new String[]{{
+                                        add("iusto"),
+                                        add("excepturi"),
+                                        add("nisi"),
                                     }};
                                 }});
                             }};
                         }}),
                         add(new CreateRowData() {{
-                            batchItemId = "quo";
+                            batchItemId = "recusandae";
                             cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
-                                put("at", new CellInput() {{
-                                    fact = "at";
+                                put("ab", new CellInput() {{
+                                    fact = "quis";
                                     facts = new String[]{{
+                                        add("deserunt"),
+                                    }};
+                                }});
+                                put("perferendis", new CellInput() {{
+                                    fact = "ipsam";
+                                    facts = new String[]{{
+                                        add("sapiente"),
+                                        add("quo"),
+                                        add("odit"),
+                                        add("at"),
+                                    }};
+                                }});
+                                put("at", new CellInput() {{
+                                    fact = "maiores";
+                                    facts = new String[]{{
+                                        add("quod"),
+                                        add("quod"),
+                                    }};
+                                }});
+                                put("esse", new CellInput() {{
+                                    fact = "totam";
+                                    facts = new String[]{{
+                                        add("dolorum"),
+                                        add("dicta"),
+                                        add("nam"),
+                                        add("officia"),
+                                    }};
+                                }});
+                            }};
+                        }}),
+                        add(new CreateRowData() {{
+                            batchItemId = "occaecati";
+                            cellsToCreate = new java.util.HashMap<String, org.openapis.openapi.models.shared.CellInput>() {{
+                                put("deleniti", new CellInput() {{
+                                    fact = "hic";
+                                    facts = new String[]{{
+                                        add("totam"),
+                                        add("beatae"),
+                                        add("commodi"),
                                         add("molestiae"),
-                                        add("quod"),
-                                        add("quod"),
-                                        add("esse"),
                                     }};
                                 }});
                             }};
                         }}),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "modi";
+                xAmzContentSha256 = "qui";
+                xAmzCredential = "impedit";
+                xAmzDate = "cum";
+                xAmzSecurityToken = "esse";
+                xAmzSignature = "ipsum";
+                xAmzSignedHeaders = "excepturi";
+                tableId = "aspernatur";
+                workbookId = "perferendis";
+            }}            
 
             BatchCreateTableRowsResponse res = sdk.batchCreateTableRows(req);
 
@@ -122,7 +146,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

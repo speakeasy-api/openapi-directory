@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateArticlePrivateLinkDeleteRequest {
-    
-    public PrivateArticlePrivateLinkDeletePathParams pathParams;
-    public PrivateArticlePrivateLinkDeleteRequest withPathParams(PrivateArticlePrivateLinkDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Article unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
+    public Long articleId;
+    public PrivateArticlePrivateLinkDeleteRequest withArticleId(Long articleId) {
+        this.articleId = articleId;
         return this;
     }
     
-    
-    public PrivateArticlePrivateLinkDeleteSecurity security;
-    public PrivateArticlePrivateLinkDeleteRequest withSecurity(PrivateArticlePrivateLinkDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Private link token
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
+    public String linkId;
+    public PrivateArticlePrivateLinkDeleteRequest withLinkId(String linkId) {
+        this.linkId = linkId;
         return this;
     }
     

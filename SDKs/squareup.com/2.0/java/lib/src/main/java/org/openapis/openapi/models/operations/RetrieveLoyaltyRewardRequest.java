@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveLoyaltyRewardRequest {
-    
-    public RetrieveLoyaltyRewardPathParams pathParams;
-    public RetrieveLoyaltyRewardRequest withPathParams(RetrieveLoyaltyRewardPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RetrieveLoyaltyRewardSecurity security;
-    public RetrieveLoyaltyRewardRequest withSecurity(RetrieveLoyaltyRewardSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the [loyalty reward](https://developer.squareup.com/reference/square_2021-08-18/objects/LoyaltyReward) to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reward_id")
+    public String rewardId;
+    public RetrieveLoyaltyRewardRequest withRewardId(String rewardId) {
+        this.rewardId = rewardId;
         return this;
     }
     

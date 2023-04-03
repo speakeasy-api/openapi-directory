@@ -4,20 +4,95 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFunctionsRequest {
-    
-    public ListFunctionsQueryParams queryParams;
-    public ListFunctionsRequest withQueryParams(ListFunctionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Set to &lt;code&gt;ALL&lt;/code&gt; to include entries for all published versions of each function.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FunctionVersion")
+    public ListFunctionsFunctionVersionEnum functionVersion;
+    public ListFunctionsRequest withFunctionVersion(ListFunctionsFunctionVersionEnum functionVersion) {
+        this.functionVersion = functionVersion;
         return this;
     }
     
+    /**
+     * Specify the pagination token that's returned by a previous request to retrieve the next page of results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public ListFunctionsRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
     
-    public ListFunctionsHeaders headers;
-    public ListFunctionsRequest withHeaders(ListFunctionsHeaders headers) {
-        this.headers = headers;
+    /**
+     * For Lambda@Edge functions, the Amazon Web Services Region of the master function. For example, &lt;code&gt;us-east-1&lt;/code&gt; filters the list of functions to include only Lambda@Edge functions replicated from a master function in US East (N. Virginia). If specified, you must set &lt;code&gt;FunctionVersion&lt;/code&gt; to &lt;code&gt;ALL&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MasterRegion")
+    public String masterRegion;
+    public ListFunctionsRequest withMasterRegion(String masterRegion) {
+        this.masterRegion = masterRegion;
+        return this;
+    }
+    
+    /**
+     * The maximum number of functions to return in the response. Note that &lt;code&gt;ListFunctions&lt;/code&gt; returns a maximum of 50 items in each response, even if you set the number higher.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
+    public Long maxItems;
+    public ListFunctionsRequest withMaxItems(Long maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public ListFunctionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public ListFunctionsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public ListFunctionsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public ListFunctionsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public ListFunctionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public ListFunctionsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public ListFunctionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

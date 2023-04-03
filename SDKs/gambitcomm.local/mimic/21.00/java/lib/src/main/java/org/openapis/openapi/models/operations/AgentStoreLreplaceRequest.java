@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AgentStoreLreplaceRequest {
-    
-    public AgentStoreLreplacePathParams pathParams;
-    public AgentStoreLreplaceRequest withPathParams(AgentStoreLreplacePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Value
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public String request;
-    public AgentStoreLreplaceRequest withRequest(String request) {
-        this.request = request;
+    public String requestBody;
+    public AgentStoreLreplaceRequest withRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Agent of the value space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public AgentStoreLreplaceRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
+        return this;
+    }
+    
+    /**
+     * Index
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=index")
+    public Integer index;
+    public AgentStoreLreplaceRequest withIndex(Integer index) {
+        this.index = index;
+        return this;
+    }
+    
+    /**
+     * Variable name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
+    public String var;
+    public AgentStoreLreplaceRequest withVar(String var) {
+        this.var = var;
         return this;
     }
     

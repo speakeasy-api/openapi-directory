@@ -42,7 +42,7 @@ public class FileCommentReactions {
      */
     public org.openapis.openapi.models.operations.DeleteFileCommentReactionsIdResponse deleteFileCommentReactionsId(org.openapis.openapi.models.operations.DeleteFileCommentReactionsIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFileCommentReactionsIdPathParams.class, baseUrl, "/file_comment_reactions/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteFileCommentReactionsIdRequest.class, baseUrl, "/file_comment_reactions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -73,7 +73,7 @@ public class FileCommentReactions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostFileCommentReactionsResponse postFileCommentReactions(org.openapis.openapi.models.operations.PostFileCommentReactionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PostFileCommentReactionsResponse postFileCommentReactions(org.openapis.openapi.models.operations.PostFileCommentReactionsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/file_comment_reactions");
         

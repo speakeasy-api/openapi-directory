@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest {
-    
-    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdPathParams pathParams;
-    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest withPathParams(PatchSpacesSpaceIdPersonsMemberIdFoldersIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Access to modify
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequestBody request;
-    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest withRequest(PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequestBody request) {
-        this.request = request;
+    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequestBody requestBody;
+    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest withRequestBody(PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * Id of the folder
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * memberId of the person
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=memberId")
+    public String memberId;
+    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest withMemberId(String memberId) {
+        this.memberId = memberId;
+        return this;
+    }
+    
+    /**
+     * Id of the space
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceId")
+    public String spaceId;
+    public PatchSpacesSpaceIdPersonsMemberIdFoldersIdRequest withSpaceId(String spaceId) {
+        this.spaceId = spaceId;
         return this;
     }
     

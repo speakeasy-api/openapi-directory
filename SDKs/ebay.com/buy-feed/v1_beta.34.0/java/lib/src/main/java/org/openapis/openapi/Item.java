@@ -35,10 +35,11 @@ public class Item {
     /**
      * &lt;p&gt;This method lets you download a TSV_GZIP (tab separated value gzip) &lt;b&gt; Item&lt;/b&gt; feed file. The feed file contains all the items from &lt;b&gt; all&lt;/b&gt; the child categories of the specified category.  The first line of the file is the header, which labels the columns and indicates the order of the values on each line.  Each header is described in the &lt;a href="/api-docs/buy/feed/resources/item/methods/getItemFeed#h3-response-fields"&gt;Response fields&lt;/a&gt; section.  &lt;/p&gt; &lt;p&gt; There are two types of item feed files generated: &lt;ul&gt; &lt;li&gt;A daily &lt;b&gt;Item&lt;/b&gt; feed file containing all the newly listed items for a specific category, date, and marketplace (&lt;b&gt;feed_scope&lt;/b&gt; = &lt;code&gt;NEWLY_LISTED&lt;/code&gt;)&lt;/li&gt;  &lt;li&gt;A weekly &lt;b&gt;Item Bootstrap&lt;/b&gt; feed file containing &lt;i&gt; all&lt;/i&gt; the items in a specific category and marketplace (&lt;b&gt;feed_scope&lt;/b&gt; = &lt;code&gt;ALL_ACTIVE&lt;/code&gt;)&lt;/li&gt;  &lt;/ul&gt;  &lt;/p&gt;   &lt;p&gt;&lt;span class="tablenote"&gt;&lt;b&gt;Note: &lt;/b&gt;  Filters are applied to the feed files. For details, see &lt;a href="/api-docs/buy/static/api-feed_beta.html#Feed2"&gt;Feed File Filters&lt;/a&gt;. When curating the items returned, be sure to code as if these filters are not applied as they can be changed or removed in the future.&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;&lt;b&gt;Downloading feed files &lt;/b&gt;&lt;/h3&gt;             &lt;p&gt;Item feed files are binary gzip files. If the file is larger than 100 MB, the download must be streamed in chunks. You specify the size of the chunks in bytes using the &lt;a href="#range-header"&gt;Range&lt;/a&gt; request header. The &lt;a href="#content-range"&gt;Content-range&lt;/a&gt; response header indicates where in the full resource this partial chunk of data belongs  and the total number of bytes in the file.       For more information about using these headers, see &lt;a href="/api-docs/buy/static/api-feed_beta.html#retrv-gzip"&gt;Retrieving a gzip feed file&lt;/a&gt;.    &lt;/p&gt;    &lt;p&gt;In addition to the API, there is an open source &lt;a href="https://github.com/eBay/FeedSDK" target="_blank"&gt;Feed SDK&lt;/a&gt; written in Java that downloads, combines files into a single file when needed, and unzips the entire feed file. It also lets you specify field filters to curate the items in the file.&lt;/p&gt;              &lt;p&gt;&lt;span class="tablenote"&gt;  &lt;b&gt; Note:&lt;/b&gt; A successful call will always return a TSV.GZIP file; however, unsuccessful calls generate errors that are returned in JSON format. For documentation purposes, the successful call response is shown below as JSON fields so that the value returned in each column can be explained. The order of the response fields shows the order of the columns in the feed file.&lt;/span&gt;  &lt;/p&gt;                &lt;h3&gt;&lt;b&gt;Restrictions &lt;/b&gt;&lt;/h3&gt;                &lt;p&gt;For a list of supported sites and other restrictions, see &lt;a href="/api-docs/buy/feed/overview.html#API"&gt;API Restrictions&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemFeedResponse getItemFeed(org.openapis.openapi.models.operations.GetItemFeedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemFeedResponse getItemFeed(org.openapis.openapi.models.operations.GetItemFeedRequest request, org.openapis.openapi.models.operations.GetItemFeedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item");
         
@@ -46,13 +47,13 @@ public class Item {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemFeedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetItemFeedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -61,7 +62,7 @@ public class Item {
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolSshIpaliasListRequest {
-    
-    public ProtocolSshIpaliasListPathParams pathParams;
-    public ProtocolSshIpaliasListRequest withPathParams(ProtocolSshIpaliasListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Agent to manipulate SSH IP alias
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
+    public Integer agentNum;
+    public ProtocolSshIpaliasListRequest withAgentNum(Integer agentNum) {
+        this.agentNum = agentNum;
         return this;
     }
     

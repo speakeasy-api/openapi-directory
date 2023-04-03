@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcamerapictureRequest {
-    
-    public GetcamerapictureQueryParams queryParams;
-    public GetcamerapictureRequest withQueryParams(GetcamerapictureQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * id of the image (can be retrieved as 'id' in 'face' in Gethomedata, or as 'id' in 'snapshot' in Getnextevents, Getlasteventof and Geteventsuntil)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=image_id")
+    public String imageId;
+    public GetcamerapictureRequest withImageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
     
-    
-    public GetcamerapictureSecurity security;
-    public GetcamerapictureRequest withSecurity(GetcamerapictureSecurity security) {
-        this.security = security;
+    /**
+     * Security key to access snapshots.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public GetcamerapictureRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

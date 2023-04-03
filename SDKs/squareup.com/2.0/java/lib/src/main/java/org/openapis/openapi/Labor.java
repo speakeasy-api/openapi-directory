@@ -48,10 +48,11 @@ public class Labor {
      * `BreakType` for a location, an `INVALID_REQUEST_ERROR` "Exceeded limit of 3 breaks per location."
      * is returned.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateBreakTypeResponse createBreakType(org.openapis.openapi.models.operations.CreateBreakTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateBreakTypeResponse createBreakType(org.openapis.openapi.models.shared.CreateBreakTypeRequest request, org.openapis.openapi.models.operations.CreateBreakTypeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/labor/break-types");
         
@@ -65,7 +66,7 @@ public class Labor {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -110,10 +111,11 @@ public class Labor {
      * is before the `Shift.start_at`, a break `end_at` is after
      * the `Shift.end_at`, or both.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateShiftResponse createShift(org.openapis.openapi.models.operations.CreateShiftRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateShiftResponse createShift(org.openapis.openapi.models.shared.CreateShiftRequest request, org.openapis.openapi.models.operations.CreateShiftSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/labor/shifts");
         
@@ -127,7 +129,7 @@ public class Labor {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -157,19 +159,20 @@ public class Labor {
      * 
      * A `BreakType` can be deleted even if it is referenced from a `Shift`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteBreakTypeResponse deleteBreakType(org.openapis.openapi.models.operations.DeleteBreakTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteBreakTypeResponse deleteBreakType(org.openapis.openapi.models.operations.DeleteBreakTypeRequest request, org.openapis.openapi.models.operations.DeleteBreakTypeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBreakTypePathParams.class, baseUrl, "/v2/labor/break-types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBreakTypeRequest.class, baseUrl, "/v2/labor/break-types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -197,19 +200,20 @@ public class Labor {
      * DeleteShift
      * Deletes a `Shift`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteShiftResponse deleteShift(org.openapis.openapi.models.operations.DeleteShiftRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteShiftResponse deleteShift(org.openapis.openapi.models.operations.DeleteShiftRequest request, org.openapis.openapi.models.operations.DeleteShiftSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteShiftPathParams.class, baseUrl, "/v2/labor/shifts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteShiftRequest.class, baseUrl, "/v2/labor/shifts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -237,19 +241,20 @@ public class Labor {
      * GetBreakType
      * Returns a single `BreakType` specified by `id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBreakTypeResponse getBreakType(org.openapis.openapi.models.operations.GetBreakTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBreakTypeResponse getBreakType(org.openapis.openapi.models.operations.GetBreakTypeRequest request, org.openapis.openapi.models.operations.GetBreakTypeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBreakTypePathParams.class, baseUrl, "/v2/labor/break-types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBreakTypeRequest.class, baseUrl, "/v2/labor/break-types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -277,19 +282,20 @@ public class Labor {
      * GetEmployeeWage
      * Returns a single `EmployeeWage` specified by `id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetEmployeeWageResponse getEmployeeWage(org.openapis.openapi.models.operations.GetEmployeeWageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetEmployeeWageResponse getEmployeeWage(org.openapis.openapi.models.operations.GetEmployeeWageRequest request, org.openapis.openapi.models.operations.GetEmployeeWageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployeeWagePathParams.class, baseUrl, "/v2/labor/employee-wages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetEmployeeWageRequest.class, baseUrl, "/v2/labor/employee-wages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -317,19 +323,20 @@ public class Labor {
      * GetShift
      * Returns a single `Shift` specified by `id`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetShiftResponse getShift(org.openapis.openapi.models.operations.GetShiftRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetShiftResponse getShift(org.openapis.openapi.models.operations.GetShiftRequest request, org.openapis.openapi.models.operations.GetShiftSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShiftPathParams.class, baseUrl, "/v2/labor/shifts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetShiftRequest.class, baseUrl, "/v2/labor/shifts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -357,19 +364,20 @@ public class Labor {
      * GetTeamMemberWage
      * Returns a single `TeamMemberWage` specified by `id `.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetTeamMemberWageResponse getTeamMemberWage(org.openapis.openapi.models.operations.GetTeamMemberWageRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetTeamMemberWageResponse getTeamMemberWage(org.openapis.openapi.models.operations.GetTeamMemberWageRequest request, org.openapis.openapi.models.operations.GetTeamMemberWageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamMemberWagePathParams.class, baseUrl, "/v2/labor/team-member-wages/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamMemberWageRequest.class, baseUrl, "/v2/labor/team-member-wages/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -397,10 +405,11 @@ public class Labor {
      * ListBreakTypes
      * Returns a paginated list of `BreakType` instances for a business.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListBreakTypesResponse listBreakTypes(org.openapis.openapi.models.operations.ListBreakTypesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListBreakTypesResponse listBreakTypes(org.openapis.openapi.models.operations.ListBreakTypesRequest request, org.openapis.openapi.models.operations.ListBreakTypesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/labor/break-types");
         
@@ -408,14 +417,14 @@ public class Labor {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBreakTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListBreakTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -443,10 +452,11 @@ public class Labor {
      * ListEmployeeWages
      * Returns a paginated list of `EmployeeWage` instances for a business.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListEmployeeWagesResponse listEmployeeWages(org.openapis.openapi.models.operations.ListEmployeeWagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListEmployeeWagesResponse listEmployeeWages(org.openapis.openapi.models.operations.ListEmployeeWagesRequest request, org.openapis.openapi.models.operations.ListEmployeeWagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/labor/employee-wages");
         
@@ -454,14 +464,14 @@ public class Labor {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEmployeeWagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListEmployeeWagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -489,10 +499,11 @@ public class Labor {
      * ListTeamMemberWages
      * Returns a paginated list of `TeamMemberWage` instances for a business.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListTeamMemberWagesResponse listTeamMemberWages(org.openapis.openapi.models.operations.ListTeamMemberWagesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListTeamMemberWagesResponse listTeamMemberWages(org.openapis.openapi.models.operations.ListTeamMemberWagesRequest request, org.openapis.openapi.models.operations.ListTeamMemberWagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/labor/team-member-wages");
         
@@ -500,14 +511,14 @@ public class Labor {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTeamMemberWagesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTeamMemberWagesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,10 +546,11 @@ public class Labor {
      * ListWorkweekConfigs
      * Returns a list of `WorkweekConfig` instances for a business.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListWorkweekConfigsResponse listWorkweekConfigs(org.openapis.openapi.models.operations.ListWorkweekConfigsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListWorkweekConfigsResponse listWorkweekConfigs(org.openapis.openapi.models.operations.ListWorkweekConfigsRequest request, org.openapis.openapi.models.operations.ListWorkweekConfigsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/labor/workweek-configs");
         
@@ -546,14 +558,14 @@ public class Labor {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWorkweekConfigsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListWorkweekConfigsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -594,10 +606,11 @@ public class Labor {
      * - `created_at`.
      * - `updated_at`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchShiftsResponse searchShifts(org.openapis.openapi.models.operations.SearchShiftsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchShiftsResponse searchShifts(org.openapis.openapi.models.shared.SearchShiftsRequest request, org.openapis.openapi.models.operations.SearchShiftsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v2/labor/shifts/search");
         
@@ -611,7 +624,7 @@ public class Labor {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -639,24 +652,25 @@ public class Labor {
      * UpdateBreakType
      * Updates an existing `BreakType`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateBreakTypeResponse updateBreakType(org.openapis.openapi.models.operations.UpdateBreakTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateBreakTypeResponse updateBreakType(org.openapis.openapi.models.operations.UpdateBreakTypeRequest request, org.openapis.openapi.models.operations.UpdateBreakTypeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBreakTypePathParams.class, baseUrl, "/v2/labor/break-types/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBreakTypeRequest.class, baseUrl, "/v2/labor/break-types/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateBreakTypeRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -690,24 +704,25 @@ public class Labor {
      * When closing a `Shift`, all `Break` instances in the `Shift` must be complete with `end_at`
      * set on each `Break`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateShiftResponse updateShift(org.openapis.openapi.models.operations.UpdateShiftRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateShiftResponse updateShift(org.openapis.openapi.models.operations.UpdateShiftRequest request, org.openapis.openapi.models.operations.UpdateShiftSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateShiftPathParams.class, baseUrl, "/v2/labor/shifts/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateShiftRequest.class, baseUrl, "/v2/labor/shifts/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateShiftRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -735,24 +750,25 @@ public class Labor {
      * UpdateWorkweekConfig
      * Updates a `WorkweekConfig`.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateWorkweekConfigResponse updateWorkweekConfig(org.openapis.openapi.models.operations.UpdateWorkweekConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateWorkweekConfigResponse updateWorkweekConfig(org.openapis.openapi.models.operations.UpdateWorkweekConfigRequest request, org.openapis.openapi.models.operations.UpdateWorkweekConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWorkweekConfigPathParams.class, baseUrl, "/v2/labor/workweek-configs/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateWorkweekConfigRequest.class, baseUrl, "/v2/labor/workweek-configs/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateWorkweekConfigRequest", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

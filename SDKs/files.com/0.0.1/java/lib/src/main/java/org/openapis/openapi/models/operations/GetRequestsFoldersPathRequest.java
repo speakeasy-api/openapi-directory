@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRequestsFoldersPathRequest {
-    
-    public GetRequestsFoldersPathPathParams pathParams;
-    public GetRequestsFoldersPathRequest withPathParams(GetRequestsFoldersPathPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public GetRequestsFoldersPathRequest withCursor(String cursor) {
+        this.cursor = cursor;
         return this;
     }
     
+    /**
+     * Only show requests of the current user?  (Defaults to true if current user is not a site admin.)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mine")
+    public Boolean mine;
+    public GetRequestsFoldersPathRequest withMine(Boolean mine) {
+        this.mine = mine;
+        return this;
+    }
     
-    public GetRequestsFoldersPathQueryParams queryParams;
-    public GetRequestsFoldersPathRequest withQueryParams(GetRequestsFoldersPathQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Path to show requests for.  If omitted, shows all paths. Send `/` to represent the root directory.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
+    public String path;
+    public GetRequestsFoldersPathRequest withPath(String path) {
+        this.path = path;
+        return this;
+    }
+    
+    /**
+     * Number of records to show per page.  (Max: 10,000, 1,000 or less is recommended).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Integer perPage;
+    public GetRequestsFoldersPathRequest withPerPage(Integer perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * If set, sort records by the specified field in either `asc` or `desc` direction (e.g. `sort_by[destination]=desc`). Valid fields are `destination`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
+    public java.util.Map<String, Object> sortBy;
+    public GetRequestsFoldersPathRequest withSortBy(java.util.Map<String, Object> sortBy) {
+        this.sortBy = sortBy;
         return this;
     }
     

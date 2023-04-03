@@ -4,20 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETIdentityMailFromDomainAttributesRequest {
-    
-    public GETGETIdentityMailFromDomainAttributesQueryParams queryParams;
-    public GETGETIdentityMailFromDomainAttributesRequest withQueryParams(GETGETIdentityMailFromDomainAttributesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETGETIdentityMailFromDomainAttributesActionEnum action;
+    public GETGETIdentityMailFromDomainAttributesRequest withAction(GETGETIdentityMailFromDomainAttributesActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A list of one or more identities.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identities")
+    public String[] identities;
+    public GETGETIdentityMailFromDomainAttributesRequest withIdentities(String[] identities) {
+        this.identities = identities;
+        return this;
+    }
     
-    public GETGETIdentityMailFromDomainAttributesHeaders headers;
-    public GETGETIdentityMailFromDomainAttributesRequest withHeaders(GETGETIdentityMailFromDomainAttributesHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETGETIdentityMailFromDomainAttributesVersionEnum version;
+    public GETGETIdentityMailFromDomainAttributesRequest withVersion(GETGETIdentityMailFromDomainAttributesVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETGETIdentityMailFromDomainAttributesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETGETIdentityMailFromDomainAttributesRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETGETIdentityMailFromDomainAttributesRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETGETIdentityMailFromDomainAttributesRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETGETIdentityMailFromDomainAttributesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETGETIdentityMailFromDomainAttributesRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETGETIdentityMailFromDomainAttributesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

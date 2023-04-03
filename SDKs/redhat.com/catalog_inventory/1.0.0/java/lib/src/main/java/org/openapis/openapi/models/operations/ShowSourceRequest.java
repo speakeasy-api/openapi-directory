@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShowSourceRequest {
-    
-    public ShowSourcePathParams pathParams;
-    public ShowSourceRequest withPathParams(ShowSourcePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * ID of the resource
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public ShowSourceRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

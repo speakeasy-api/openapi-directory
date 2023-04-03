@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteVcenterRequest {
-    
-    public DeleteVcenterPathParams pathParams;
-    public DeleteVcenterRequest withPathParams(DeleteVcenterPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteVcenterSecurity security;
-    public DeleteVcenterRequest withSecurity(DeleteVcenterSecurity security) {
-        this.security = security;
+    /**
+     * entity id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public DeleteVcenterRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

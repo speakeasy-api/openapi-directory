@@ -4,13 +4,66 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsGetRequest {
+    /**
+     * Comma separated list of datapoints id to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datapoints")
+    public String datapoints;
+    public TagsGetRequest withDatapoints(String datapoints) {
+        this.datapoints = datapoints;
+        return this;
+    }
     
-    public TagsGetQueryParams queryParams;
-    public TagsGetRequest withQueryParams(TagsGetQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comma separated list of groups id to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groups")
+    public String groups;
+    public TagsGetRequest withGroups(String groups) {
+        this.groups = groups;
+        return this;
+    }
+    
+    /**
+     * Maximum elements to retrieve. Default to 20 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Integer limit;
+    public TagsGetRequest withLimit(Integer limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Name of the tag
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public TagsGetRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Where to start when retrieving elements. Default is 0 if not specified.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Integer offset;
+    public TagsGetRequest withOffset(Integer offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    /**
+     * Type of entity related to the tag
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public TagsGetTypeEnum type;
+    public TagsGetRequest withType(TagsGetTypeEnum type) {
+        this.type = type;
         return this;
     }
     

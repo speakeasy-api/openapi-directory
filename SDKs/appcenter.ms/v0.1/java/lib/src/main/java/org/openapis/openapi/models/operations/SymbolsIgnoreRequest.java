@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SymbolsIgnoreRequest {
-    
-    public SymbolsIgnorePathParams pathParams;
-    public SymbolsIgnoreRequest withPathParams(SymbolsIgnorePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public SymbolsIgnoreRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public SymbolsIgnoreRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public SymbolsIgnoreSecurity security;
-    public SymbolsIgnoreRequest withSecurity(SymbolsIgnoreSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the symbol (uuid of the symbol)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=symbol_id")
+    public String symbolId;
+    public SymbolsIgnoreRequest withSymbolId(String symbolId) {
+        this.symbolId = symbolId;
         return this;
     }
     

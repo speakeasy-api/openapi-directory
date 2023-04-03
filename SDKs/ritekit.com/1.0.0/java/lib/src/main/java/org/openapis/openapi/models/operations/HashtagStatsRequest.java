@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class HashtagStatsRequest {
-    
-    public HashtagStatsQueryParams queryParams;
-    public HashtagStatsRequest withQueryParams(HashtagStatsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Hashtag(s) without # mark
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tags")
+    public Object[] tags;
+    public HashtagStatsRequest withTags(Object[] tags) {
+        this.tags = tags;
         return this;
     }
     

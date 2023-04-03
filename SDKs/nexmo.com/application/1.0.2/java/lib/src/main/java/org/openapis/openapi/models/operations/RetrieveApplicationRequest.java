@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveApplicationRequest {
-    
-    public RetrieveApplicationPathParams pathParams;
-    public RetrieveApplicationRequest withPathParams(RetrieveApplicationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * You can find your API key in your [account overview](https://dashboard.nexmo.com/account-overview)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public RetrieveApplicationRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * You can find your API secret in your [account overview](https://dashboard.nexmo.com/account-overview)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_secret")
+    public String apiSecret;
+    public RetrieveApplicationRequest withApiSecret(String apiSecret) {
+        this.apiSecret = apiSecret;
+        return this;
+    }
     
-    public RetrieveApplicationQueryParams queryParams;
-    public RetrieveApplicationRequest withQueryParams(RetrieveApplicationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The ID allocated to your application by Nexmo.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_id")
+    public String appId;
+    public RetrieveApplicationRequest withAppId(String appId) {
+        this.appId = appId;
         return this;
     }
     

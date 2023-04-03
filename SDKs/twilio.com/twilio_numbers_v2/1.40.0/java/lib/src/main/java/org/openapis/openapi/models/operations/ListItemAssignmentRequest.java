@@ -4,34 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListItemAssignmentRequest {
-    
-    public ListItemAssignmentPathParams pathParams;
-    public ListItemAssignmentRequest withPathParams(ListItemAssignmentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique string that we created to identify the Bundle resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BundleSid")
+    public String bundleSid;
+    public ListItemAssignmentRequest withBundleSid(String bundleSid) {
+        this.bundleSid = bundleSid;
         return this;
     }
     
-    
-    public ListItemAssignmentQueryParams queryParams;
-    public ListItemAssignmentRequest withQueryParams(ListItemAssignmentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListItemAssignmentRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListItemAssignmentSecurity security;
-    public ListItemAssignmentRequest withSecurity(ListItemAssignmentSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListItemAssignmentRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
-    
-    public String serverURL;
-    public ListItemAssignmentRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListItemAssignmentRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

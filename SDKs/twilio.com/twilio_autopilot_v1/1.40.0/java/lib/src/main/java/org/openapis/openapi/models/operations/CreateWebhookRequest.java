@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateWebhookRequest {
-    
-    public CreateWebhookPathParams pathParams;
-    public CreateWebhookRequest withPathParams(CreateWebhookPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Assistant](https://www.twilio.com/docs/autopilot/api/assistant) that is the parent of the new resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AssistantSid")
+    public String assistantSid;
+    public CreateWebhookRequest withAssistantSid(String assistantSid) {
+        this.assistantSid = assistantSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreateWebhookCreateWebhookRequest request;
-    public CreateWebhookRequest withRequest(CreateWebhookCreateWebhookRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreateWebhookSecurity security;
-    public CreateWebhookRequest withSecurity(CreateWebhookSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreateWebhookRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreateWebhookCreateWebhookRequest requestBody;
+    public CreateWebhookRequest withRequestBody(CreateWebhookCreateWebhookRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

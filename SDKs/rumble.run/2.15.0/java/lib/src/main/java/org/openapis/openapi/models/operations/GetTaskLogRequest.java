@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTaskLogRequest {
-    
-    public GetTaskLogPathParams pathParams;
-    public GetTaskLogRequest withPathParams(GetTaskLogPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetTaskLogSecurity security;
-    public GetTaskLogRequest withSecurity(GetTaskLogSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the task
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=task_id")
+    public String taskId;
+    public GetTaskLogRequest withTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
     

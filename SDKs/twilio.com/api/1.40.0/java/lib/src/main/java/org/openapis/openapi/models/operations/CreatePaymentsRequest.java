@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatePaymentsRequest {
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that will create the resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public CreatePaymentsRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
+        return this;
+    }
     
-    public CreatePaymentsPathParams pathParams;
-    public CreatePaymentsRequest withPathParams(CreatePaymentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the call that will create the resource. Call leg associated with this sid is expected to provide payment information thru DTMF.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public CreatePaymentsRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public CreatePaymentsCreatePaymentsRequest request;
-    public CreatePaymentsRequest withRequest(CreatePaymentsCreatePaymentsRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public CreatePaymentsSecurity security;
-    public CreatePaymentsRequest withSecurity(CreatePaymentsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CreatePaymentsRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public CreatePaymentsCreatePaymentsRequest requestBody;
+    public CreatePaymentsRequest withRequestBody(CreatePaymentsCreatePaymentsRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     

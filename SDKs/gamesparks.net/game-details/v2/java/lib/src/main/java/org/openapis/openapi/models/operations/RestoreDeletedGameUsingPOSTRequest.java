@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RestoreDeletedGameUsingPOSTRequest {
-    
-    public RestoreDeletedGameUsingPOSTPathParams pathParams;
-    public RestoreDeletedGameUsingPOSTRequest withPathParams(RestoreDeletedGameUsingPOSTPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * apiKey
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public RestoreDeletedGameUsingPOSTRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     

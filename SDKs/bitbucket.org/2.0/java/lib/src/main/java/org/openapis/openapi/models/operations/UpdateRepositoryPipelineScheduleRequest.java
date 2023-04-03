@@ -7,20 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRepositoryPipelineScheduleRequest {
-    
-    public UpdateRepositoryPipelineSchedulePathParams pathParams;
-    public UpdateRepositoryPipelineScheduleRequest withPathParams(UpdateRepositoryPipelineSchedulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * The schedule to update.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public java.util.Map<String, Object> request;
-    public UpdateRepositoryPipelineScheduleRequest withRequest(java.util.Map<String, Object> request) {
-        this.request = request;
+    public java.util.Map<String, Object> requestBody;
+    public UpdateRepositoryPipelineScheduleRequest withRequestBody(java.util.Map<String, Object> requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * The repository.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
+    public String repoSlug;
+    public UpdateRepositoryPipelineScheduleRequest withRepoSlug(String repoSlug) {
+        this.repoSlug = repoSlug;
+        return this;
+    }
+    
+    /**
+     * The uuid of the schedule.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=schedule_uuid")
+    public String scheduleUuid;
+    public UpdateRepositoryPipelineScheduleRequest withScheduleUuid(String scheduleUuid) {
+        this.scheduleUuid = scheduleUuid;
+        return this;
+    }
+    
+    /**
+     * This can either be the workspace ID (slug) or the workspace UUID surrounded by curly-braces, for example `{workspace UUID}`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
+    public String workspace;
+    public UpdateRepositoryPipelineScheduleRequest withWorkspace(String workspace) {
+        this.workspace = workspace;
         return this;
     }
     

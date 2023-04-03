@@ -43,13 +43,13 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetDeviceClientsResponse getDeviceClients(org.openapis.openapi.models.operations.GetDeviceClientsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceClientsPathParams.class, baseUrl, "/devices/{serial}/clients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeviceClientsRequest.class, baseUrl, "/devices/{serial}/clients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceClientsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeviceClientsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -89,7 +89,7 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientResponse getNetworkClient(org.openapis.openapi.models.operations.GetNetworkClientRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -129,13 +129,13 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientEventsResponse getNetworkClientEvents(org.openapis.openapi.models.operations.GetNetworkClientEventsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientEventsPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/events", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientEventsRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/events", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -177,13 +177,13 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryResponse getNetworkClientLatencyHistory(org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/latencyHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/latencyHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientLatencyHistoryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,7 +223,7 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientPolicyResponse getNetworkClientPolicy(org.openapis.openapi.models.operations.GetNetworkClientPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientPolicyPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientPolicyRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -263,7 +263,7 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientSplashAuthorizationStatusResponse getNetworkClientSplashAuthorizationStatus(org.openapis.openapi.models.operations.GetNetworkClientSplashAuthorizationStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientSplashAuthorizationStatusPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientSplashAuthorizationStatusRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -303,7 +303,7 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientUsageHistoryResponse getNetworkClientUsageHistory(org.openapis.openapi.models.operations.GetNetworkClientUsageHistoryRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientUsageHistoryPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/usageHistory", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientUsageHistoryRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/usageHistory", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -343,13 +343,13 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.GetNetworkClientsResponse getNetworkClients(org.openapis.openapi.models.operations.GetNetworkClientsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientsPathParams.class, baseUrl, "/networks/{networkId}/clients", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkClientsRequest.class, baseUrl, "/networks/{networkId}/clients", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetNetworkClientsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -391,12 +391,12 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.ProvisionNetworkClientsResponse provisionNetworkClients(org.openapis.openapi.models.operations.ProvisionNetworkClientsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProvisionNetworkClientsPathParams.class, baseUrl, "/networks/{networkId}/clients/provision", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ProvisionNetworkClientsRequest.class, baseUrl, "/networks/{networkId}/clients/provision", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -436,12 +436,12 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkClientPolicyResponse updateNetworkClientPolicy(org.openapis.openapi.models.operations.UpdateNetworkClientPolicyRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkClientPolicyPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/policy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkClientPolicyRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/policy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -481,12 +481,12 @@ public class Clients {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkClientSplashAuthorizationStatusResponse updateNetworkClientSplashAuthorizationStatus(org.openapis.openapi.models.operations.UpdateNetworkClientSplashAuthorizationStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkClientSplashAuthorizationStatusPathParams.class, baseUrl, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkClientSplashAuthorizationStatusRequest.class, baseUrl, "/networks/{networkId}/clients/{clientId}/splashAuthorizationStatus", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

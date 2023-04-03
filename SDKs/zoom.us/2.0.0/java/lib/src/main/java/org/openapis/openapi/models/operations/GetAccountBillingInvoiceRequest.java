@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountBillingInvoiceRequest {
+    /**
+     * The account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
+    public String accountId;
+    public GetAccountBillingInvoiceRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public GetAccountBillingInvoicePathParams pathParams;
-    public GetAccountBillingInvoiceRequest withPathParams(GetAccountBillingInvoicePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The invoice ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invoiceId")
+    public String invoiceId;
+    public GetAccountBillingInvoiceRequest withInvoiceId(String invoiceId) {
+        this.invoiceId = invoiceId;
         return this;
     }
     

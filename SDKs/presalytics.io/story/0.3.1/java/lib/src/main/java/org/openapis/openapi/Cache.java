@@ -39,7 +39,7 @@ public class Cache {
      */
     public org.openapis.openapi.models.operations.CacheNonceGetResponse cacheNonceGet(org.openapis.openapi.models.operations.CacheNonceGetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CacheNonceGetPathParams.class, baseUrl, "/cache/{nonce}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CacheNonceGetRequest.class, baseUrl, "/cache/{nonce}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -83,7 +83,7 @@ public class Cache {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CachePostResponse cachePost(org.openapis.openapi.models.operations.CachePostRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CachePostResponse cachePost(org.openapis.openapi.models.shared.CachePostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/cache");
         

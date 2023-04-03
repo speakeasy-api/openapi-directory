@@ -35,13 +35,13 @@ public class DeparturesAndArrivals {
      */
     public org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSResponse getArrivalsAndDeparturesByCRS(org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSPathParams.class, baseUrl, "/getArrivalsAndDeparturesByCRS/{CRS}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSRequest.class, baseUrl, "/getArrivalsAndDeparturesByCRS/{CRS}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -73,13 +73,13 @@ public class DeparturesAndArrivals {
      */
     public org.openapis.openapi.models.operations.GetArrivalsByCRSResponse getArrivalsByCRS(org.openapis.openapi.models.operations.GetArrivalsByCRSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArrivalsByCRSPathParams.class, baseUrl, "/getArrivalsByCRS/{CRS}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetArrivalsByCRSRequest.class, baseUrl, "/getArrivalsByCRS/{CRS}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetArrivalsByCRSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetArrivalsByCRSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -111,13 +111,13 @@ public class DeparturesAndArrivals {
      */
     public org.openapis.openapi.models.operations.GetDeparturesByCRSResponse getDeparturesByCRS(org.openapis.openapi.models.operations.GetDeparturesByCRSRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeparturesByCRSPathParams.class, baseUrl, "/getDeparturesByCRS/{CRS}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDeparturesByCRSRequest.class, baseUrl, "/getDeparturesByCRS/{CRS}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeparturesByCRSQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetDeparturesByCRSRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

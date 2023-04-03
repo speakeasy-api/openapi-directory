@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateMemberElectionRequest {
-    
-    public CreateMemberElectionPathParams pathParams;
-    public CreateMemberElectionRequest withPathParams(CreateMemberElectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.MemberElectionCreateRequest memberElectionCreateRequest;
+    public CreateMemberElectionRequest withMemberElectionCreateRequest(org.openapis.openapi.models.shared.MemberElectionCreateRequest memberElectionCreateRequest) {
+        this.memberElectionCreateRequest = memberElectionCreateRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MemberElectionCreateRequest request;
-    public CreateMemberElectionRequest withRequest(org.openapis.openapi.models.shared.MemberElectionCreateRequest request) {
-        this.request = request;
+    /**
+     * The unique identifier of the coverage plan in Noyo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=plan_id")
+    public String planId;
+    public CreateMemberElectionRequest withPlanId(String planId) {
+        this.planId = planId;
         return this;
     }
     

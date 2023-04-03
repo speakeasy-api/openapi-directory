@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidWishlistDeleteRequest {
-    
-    public KkidWishlistDeleteQueryParams queryParams;
-    public KkidWishlistDeleteRequest withQueryParams(KkidWishlistDeleteQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * ID of wishlist item to delete
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wishId")
+    public Long wishId;
+    public KkidWishlistDeleteRequest withWishId(Long wishId) {
+        this.wishId = wishId;
         return this;
     }
     

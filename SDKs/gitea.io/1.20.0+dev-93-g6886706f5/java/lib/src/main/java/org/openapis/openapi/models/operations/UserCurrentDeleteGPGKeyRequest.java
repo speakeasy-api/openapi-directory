@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserCurrentDeleteGPGKeyRequest {
-    
-    public UserCurrentDeleteGPGKeyPathParams pathParams;
-    public UserCurrentDeleteGPGKeyRequest withPathParams(UserCurrentDeleteGPGKeyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * id of key to delete
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public UserCurrentDeleteGPGKeyRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

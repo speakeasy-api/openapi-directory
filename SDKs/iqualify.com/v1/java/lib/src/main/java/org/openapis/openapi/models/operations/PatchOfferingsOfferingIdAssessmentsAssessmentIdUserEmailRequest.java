@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest {
-    
-    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailPathParams pathParams;
-    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withPathParams(PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody requestBody;
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withRequestBody(PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody request;
-    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withRequest(PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequestBody request) {
-        this.request = request;
+    /**
+     * assessment's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
+    public String assessmentId;
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withAssessmentId(String assessmentId) {
+        this.assessmentId = assessmentId;
+        return this;
+    }
+    
+    /**
+     * offering's id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
+    public String offeringId;
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withOfferingId(String offeringId) {
+        this.offeringId = offeringId;
+        return this;
+    }
+    
+    /**
+     * user's email
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
+    public String userEmail;
+    public PatchOfferingsOfferingIdAssessmentsAssessmentIdUserEmailRequest withUserEmail(String userEmail) {
+        this.userEmail = userEmail;
         return this;
     }
     

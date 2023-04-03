@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastAudienceRequest {
-    
-    public GetPodcastAudiencePathParams pathParams;
-    public GetPodcastAudienceRequest withPathParams(GetPodcastAudiencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Get API Key on listennotes.com/api
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
+    public String xListenAPIKey;
+    public GetPodcastAudienceRequest withXListenAPIKey(String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
-    
-    public GetPodcastAudienceHeaders headers;
-    public GetPodcastAudienceRequest withHeaders(GetPodcastAudienceHeaders headers) {
-        this.headers = headers;
+    /**
+     * Podcast id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetPodcastAudienceRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

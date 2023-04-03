@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainsUpdatesDeletedRequest {
+    /**
+     * API key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public GetDomainsUpdatesDeletedRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
     
-    public GetDomainsUpdatesDeletedQueryParams queryParams;
-    public GetDomainsUpdatesDeletedRequest withQueryParams(GetDomainsUpdatesDeletedQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Request date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public String date;
+    public GetDomainsUpdatesDeletedRequest withDate(String date) {
+        this.date = date;
+        return this;
+    }
+    
+    /**
+     * Results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public GetDomainsUpdatesDeletedRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Search page to request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public String page;
+    public GetDomainsUpdatesDeletedRequest withPage(String page) {
+        this.page = page;
         return this;
     }
     

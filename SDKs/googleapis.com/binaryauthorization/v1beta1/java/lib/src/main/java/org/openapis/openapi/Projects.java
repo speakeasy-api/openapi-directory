@@ -35,27 +35,28 @@ public class Projects {
     /**
      * Creates an attestor, and returns a copy of the new attestor. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the attestor already exists.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse binaryauthorizationProjectsAttestorsCreate(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse binaryauthorizationProjectsAttestorsCreate(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateRequest request, org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreatePathParams.class, baseUrl, "/v1beta1/{parent}/attestors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateRequest.class, baseUrl, "/v1beta1/{parent}/attestors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "attestorInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,25 +83,26 @@ public class Projects {
     /**
      * Deletes an attestor. Returns NOT_FOUND if the attestor does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteResponse binaryauthorizationProjectsAttestorsDelete(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteResponse binaryauthorizationProjectsAttestorsDelete(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteRequest request, org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeletePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -127,25 +129,26 @@ public class Projects {
     /**
      * Lists attestors. Returns INVALID_ARGUMENT if the project does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListResponse binaryauthorizationProjectsAttestorsList(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListResponse binaryauthorizationProjectsAttestorsList(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListRequest request, org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListPathParams.class, baseUrl, "/v1beta1/{parent}/attestors", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListRequest.class, baseUrl, "/v1beta1/{parent}/attestors", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -172,27 +175,28 @@ public class Projects {
     /**
      * Updates an attestor. Returns NOT_FOUND if the attestor does not exist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateResponse binaryauthorizationProjectsAttestorsUpdate(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateResponse binaryauthorizationProjectsAttestorsUpdate(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateRequest request, org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdatePathParams.class, baseUrl, "/v1beta1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateRequest.class, baseUrl, "/v1beta1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "attestorInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -219,27 +223,28 @@ public class Projects {
     /**
      * Returns whether the given Attestation for the given image URI was signed by the given Attestor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse binaryauthorizationProjectsAttestorsValidateAttestationOccurrence(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse binaryauthorizationProjectsAttestorsValidateAttestationOccurrence(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceRequest request, org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrencePathParams.class, baseUrl, "/v1beta1/{attestor}:validateAttestationOccurrence", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceRequest.class, baseUrl, "/v1beta1/{attestor}:validateAttestationOccurrence", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "validateAttestationOccurrenceRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -266,25 +271,26 @@ public class Projects {
     /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyResponse binaryauthorizationProjectsPolicyGetIamPolicy(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyResponse binaryauthorizationProjectsPolicyGetIamPolicy(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyRequest request, org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:getIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -311,27 +317,28 @@ public class Projects {
     /**
      * Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyResponse binaryauthorizationProjectsPolicySetIamPolicy(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyResponse binaryauthorizationProjectsPolicySetIamPolicy(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyRequest request, org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyPathParams.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyRequest.class, baseUrl, "/v1beta1/{resource}:setIamPolicy", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "setIamPolicyRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -358,27 +365,28 @@ public class Projects {
     /**
      * Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsResponse binaryauthorizationProjectsPolicyTestIamPermissions(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsResponse binaryauthorizationProjectsPolicyTestIamPermissions(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsRequest request, org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsPathParams.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsRequest.class, baseUrl, "/v1beta1/{resource}:testIamPermissions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "testIamPermissionsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

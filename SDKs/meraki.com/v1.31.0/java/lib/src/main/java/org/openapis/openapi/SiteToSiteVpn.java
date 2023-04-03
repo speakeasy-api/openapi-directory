@@ -39,7 +39,7 @@ public class SiteToSiteVpn {
      */
     public org.openapis.openapi.models.operations.GetNetworkApplianceVpnSiteToSiteVpnResponse getNetworkApplianceVpnSiteToSiteVpn(org.openapis.openapi.models.operations.GetNetworkApplianceVpnSiteToSiteVpnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVpnSiteToSiteVpnPathParams.class, baseUrl, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkApplianceVpnSiteToSiteVpnRequest.class, baseUrl, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -79,12 +79,12 @@ public class SiteToSiteVpn {
      */
     public org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnSiteToSiteVpnResponse updateNetworkApplianceVpnSiteToSiteVpn(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnSiteToSiteVpnRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnSiteToSiteVpnPathParams.class, baseUrl, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNetworkApplianceVpnSiteToSiteVpnRequest.class, baseUrl, "/networks/{networkId}/appliance/vpn/siteToSiteVpn", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

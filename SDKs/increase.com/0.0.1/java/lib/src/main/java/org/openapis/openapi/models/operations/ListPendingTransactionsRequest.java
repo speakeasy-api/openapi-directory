@@ -4,13 +4,48 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPendingTransactionsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    public String accountId;
+    public ListPendingTransactionsRequest withAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
     
-    public ListPendingTransactionsQueryParams queryParams;
-    public ListPendingTransactionsRequest withQueryParams(ListPendingTransactionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
+    public String cursor;
+    public ListPendingTransactionsRequest withCursor(String cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListPendingTransactionsRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=route_id")
+    public String routeId;
+    public ListPendingTransactionsRequest withRouteId(String routeId) {
+        this.routeId = routeId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source_id")
+    public String sourceId;
+    public ListPendingTransactionsRequest withSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status.in")
+    public ListPendingTransactionsStatusInEnum[] statusIn;
+    public ListPendingTransactionsRequest withStatusIn(ListPendingTransactionsStatusInEnum[] statusIn) {
+        this.statusIn = statusIn;
         return this;
     }
     

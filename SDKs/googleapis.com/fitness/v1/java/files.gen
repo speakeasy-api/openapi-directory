@@ -42,8 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesCreateSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesCreateSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesCreateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesCreatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesCreateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesCreateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDataPointChangesListSecurityOption1.java
@@ -69,8 +67,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDataPointChangesListSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDataPointChangesListSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDataPointChangesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDataPointChangesListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDataPointChangesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDataPointChangesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDataPointChangesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsDeleteSecurityOption1.java
@@ -85,8 +81,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsDeleteSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsDeleteSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsGetSecurityOption1.java
@@ -112,8 +106,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsGetSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsGetSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsPatchSecurityOption1.java
@@ -128,8 +120,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsPatchSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsPatchSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsPatchSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsPatchPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsPatchQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsPatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDatasetsPatchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDeleteSecurityOption1.java
@@ -144,8 +134,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDeleteSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDeleteSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesGetSecurityOption1.java
@@ -171,8 +159,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesGetSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesGetSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesGetSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesGetPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesGetQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesListSecurityOption1.java
@@ -198,8 +184,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesListSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesListSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesUpdateSecurityOption1.java
@@ -214,8 +198,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSources
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesUpdateSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesUpdateSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesUpdateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesUpdatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesUpdateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDataSourcesUpdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggregateSecurityOption1.java
@@ -241,15 +223,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggr
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggregateSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggregateSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggregateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggregatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggregateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggregateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersDatasetAggregateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsDeleteSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsDeleteSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsDeleteSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsDeletePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsDeleteQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsDeleteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsDeleteResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsListSecurityOption1.java
@@ -275,15 +253,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsLis
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsListSecurityOption8.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsListSecurityOption9.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsListSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsListPathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsUpdateSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsUpdateSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsUpdateSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsUpdatePathParams.java
-lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsUpdateQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FitnessUsersSessionsUpdateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataSourceDataQualityStandardEnum.java
@@ -297,8 +271,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/DataTypeField.java
 lib/src/main/java/org/openapis/openapi/models/shared/Application.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListDataPointChangesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataPoint.java
 lib/src/main/java/org/openapis/openapi/models/shared/Value.java

@@ -42,7 +42,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOSTResponse copySnapshotToExistingGameUsingPOST(org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/copy/to/{targetApiKey}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CopySnapshotToExistingGameUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/copy/to/{targetApiKey}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -90,12 +90,12 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.CreateQueryUsingPOSTResponse createQueryUsingPOST(org.openapis.openapi.models.operations.CreateQueryUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateQueryUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/queries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateQueryUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/queries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manageQuery", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -143,12 +143,12 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.CreateScreenUsingPOSTResponse createScreenUsingPOST(org.openapis.openapi.models.operations.CreateScreenUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateScreenUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/screens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateScreenUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/screens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manageScreen", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -196,12 +196,12 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.CreateSnapshotUsingPOSTResponse createSnapshotUsingPOST(org.openapis.openapi.models.operations.CreateSnapshotUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSnapshotUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSnapshotUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snapshotCreationModel", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -249,12 +249,12 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.CreateSnippetUsingPOSTResponse createSnippetUsingPOST(org.openapis.openapi.models.operations.CreateSnippetUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSnippetUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateSnippetUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manageSnippet", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -302,7 +302,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.DELETEQueryUsingDELETEResponse deleteQueryUsingDELETE(org.openapis.openapi.models.operations.DELETEQueryUsingDELETERequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETEQueryUsingDELETEPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETEQueryUsingDELETERequest.class, baseUrl, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -350,7 +350,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.DELETEScreenUsingDELETEResponse deleteScreenUsingDELETE(org.openapis.openapi.models.operations.DELETEScreenUsingDELETERequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETEScreenUsingDELETEPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETEScreenUsingDELETERequest.class, baseUrl, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -398,7 +398,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.DELETESnapshotUsingDELETEResponse deleteSnapshotUsingDELETE(org.openapis.openapi.models.operations.DELETESnapshotUsingDELETERequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETESnapshotUsingDELETEPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETESnapshotUsingDELETERequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -446,7 +446,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.DELETESnippetUsingDELETEResponse deleteSnippetUsingDELETE(org.openapis.openapi.models.operations.DELETESnippetUsingDELETERequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETESnippetUsingDELETEPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DELETESnippetUsingDELETERequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -494,7 +494,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.GETQueryUsingGETResponse getQueryUsingGET(org.openapis.openapi.models.operations.GETQueryUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQueryUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETQueryUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -542,7 +542,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.GETScreenUsingGETResponse getScreenUsingGET(org.openapis.openapi.models.operations.GETScreenUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETScreenUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETScreenUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -590,7 +590,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.GETSnippetUsingGETResponse getSnippetUsingGET(org.openapis.openapi.models.operations.GETSnippetUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSnippetUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GETSnippetUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -638,7 +638,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.ListExecutableScreensUsingGETResponse listExecutableScreensUsingGET(org.openapis.openapi.models.operations.ListExecutableScreensUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListExecutableScreensUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/screens/executable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListExecutableScreensUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/screens/executable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -686,7 +686,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.ListQueriesUsingGETResponse listQueriesUsingGET(org.openapis.openapi.models.operations.ListQueriesUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListQueriesUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/queries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListQueriesUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/queries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -734,7 +734,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.ListScreensUsingGETResponse listScreensUsingGET(org.openapis.openapi.models.operations.ListScreensUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListScreensUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/screens", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListScreensUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/screens", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -782,7 +782,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.ListSnapshotsUsingGETResponse listSnapshotsUsingGET(org.openapis.openapi.models.operations.ListSnapshotsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSnapshotsUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSnapshotsUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -830,7 +830,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.ListSnippetsUsingGETResponse listSnippetsUsingGET(org.openapis.openapi.models.operations.ListSnippetsUsingGETRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSnippetsUsingGETPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListSnippetsUsingGETRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -878,7 +878,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.PublishSnapshotUsingPOSTResponse publishSnapshotUsingPOST(org.openapis.openapi.models.operations.PublishSnapshotUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishSnapshotUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/publish", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PublishSnapshotUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/publish", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -926,7 +926,7 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.RevertSnapshotUsingPOSTResponse revertSnapshotUsingPOST(org.openapis.openapi.models.operations.RevertSnapshotUsingPOSTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RevertSnapshotUsingPOSTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/revert", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RevertSnapshotUsingPOSTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snapshots/{snapshotId}/revert", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -974,12 +974,12 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.UpdateQueryUsingPUTResponse updateQueryUsingPUT(org.openapis.openapi.models.operations.UpdateQueryUsingPUTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateQueryUsingPUTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateQueryUsingPUTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/queries/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manageQuery", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1027,12 +1027,12 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.UpdateScreenUsingPUTResponse updateScreenUsingPUT(org.openapis.openapi.models.operations.UpdateScreenUsingPUTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateScreenUsingPUTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateScreenUsingPUTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/screens/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manageScreen", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -1080,12 +1080,12 @@ public class Manage {
      */
     public org.openapis.openapi.models.operations.UpdateSnippetUsingPUTResponse updateSnippetUsingPUT(org.openapis.openapi.models.operations.UpdateSnippetUsingPUTRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSnippetUsingPUTPathParams.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateSnippetUsingPUTRequest.class, baseUrl, "/restv2/game/{apiKey}/manage/snippets/{shortCode}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "manageSnippet", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

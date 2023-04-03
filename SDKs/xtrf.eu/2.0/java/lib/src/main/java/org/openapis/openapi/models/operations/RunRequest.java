@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunRequest {
-    
-    public RunPathParams pathParams;
-    public RunRequest withPathParams(RunPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Generated client invoices documents.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.MacroRequestDTO request;
-    public RunRequest withRequest(org.openapis.openapi.models.shared.MacroRequestDTO request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.MacroRequestDTO macroRequestDTO;
+    public RunRequest withMacroRequestDTO(org.openapis.openapi.models.shared.MacroRequestDTO macroRequestDTO) {
+        this.macroRequestDTO = macroRequestDTO;
+        return this;
+    }
+    
+    /**
+     * macro internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=macroId")
+    public Long macroId;
+    public RunRequest withMacroId(Long macroId) {
+        this.macroId = macroId;
         return this;
     }
     

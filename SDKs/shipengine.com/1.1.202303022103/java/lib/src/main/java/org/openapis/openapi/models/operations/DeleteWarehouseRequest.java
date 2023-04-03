@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWarehouseRequest {
-    
-    public DeleteWarehousePathParams pathParams;
-    public DeleteWarehouseRequest withPathParams(DeleteWarehousePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Warehouse ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouse_id")
+    public String warehouseId;
+    public DeleteWarehouseRequest withWarehouseId(String warehouseId) {
+        this.warehouseId = warehouseId;
         return this;
     }
     

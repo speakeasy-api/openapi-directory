@@ -5,7 +5,6 @@ package hello.world;
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AddInstanceFleetXAmzTargetEnum;
-import org.openapis.openapi.models.operations.AddInstanceFleetHeaders;
 import org.openapis.openapi.models.operations.AddInstanceFleetRequest;
 import org.openapis.openapi.models.operations.AddInstanceFleetResponse;
 import org.openapis.openapi.models.shared.AddInstanceFleetInput;
@@ -34,32 +33,33 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AddInstanceFleetRequest req = new AddInstanceFleetRequest() {{
-                headers = new AddInstanceFleetHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                    xAmzTarget = "ElasticMapReduce.AddInstanceFleet";
-                }};
-                request = new AddInstanceFleetInput() {{
-                    clusterId = "illum";
+                addInstanceFleetInput = new AddInstanceFleetInput() {{
+                    clusterId = "corrupti";
                     instanceFleet = new InstanceFleetConfig() {{
                         instanceFleetType = "CORE";
                         instanceTypeConfigs = new org.openapis.openapi.models.shared.InstanceTypeConfig[]{{
                             add(new InstanceTypeConfig() {{
-                                bidPrice = "deserunt";
-                                bidPriceAsPercentageOfOnDemandPrice = 3843.82;
+                                bidPrice = "quibusdam";
+                                bidPriceAsPercentageOfOnDemandPrice = 6027.63;
                                 configurations = new org.openapis.openapi.models.shared.Configuration[]{{
+                                    add(new Configuration() {{
+                                        classification = "corrupti";
+                                        configurations = new org.openapis.openapi.models.shared.Configuration[]{{
+                                            add(new Configuration() {{}}),
+                                            add(new Configuration() {{}}),
+                                            add(new Configuration() {{}}),
+                                            add(new Configuration() {{}}),
+                                        }};
+                                        properties = new java.util.HashMap<String, String>() {{
+                                            put("error", "deserunt");
+                                            put("suscipit", "iure");
+                                        }};
+                                    }}),
                                     add(new Configuration() {{
                                         classification = "magnam";
                                         configurations = new org.openapis.openapi.models.shared.Configuration[]{{
@@ -85,134 +85,135 @@ public class Application {
                                             put("temporibus", "ab");
                                         }};
                                     }}),
+                                    add(new Configuration() {{
+                                        classification = "quis";
+                                        configurations = new org.openapis.openapi.models.shared.Configuration[]{{
+                                            add(new Configuration() {{}}),
+                                        }};
+                                        properties = new java.util.HashMap<String, String>() {{
+                                            put("perferendis", "ipsam");
+                                            put("repellendus", "sapiente");
+                                            put("quo", "odit");
+                                        }};
+                                    }}),
                                 }};
-                                customAmiId = "quis";
+                                customAmiId = "at";
                                 ebsConfiguration = new EbsConfiguration() {{
                                     ebsBlockDeviceConfigs = new org.openapis.openapi.models.shared.EbsBlockDeviceConfig[]{{
                                         add(new EbsBlockDeviceConfig() {{
                                             volumeSpecification = new VolumeSpecification() {{
-                                                iops = 648172;
-                                                sizeInGB = 20218;
-                                                throughput = 368241;
-                                                volumeType = "repellendus";
+                                                iops = 978619;
+                                                sizeInGB = 473608;
+                                                throughput = 799159;
+                                                volumeType = "quod";
                                             }};
-                                            volumesPerInstance = 957156;
+                                            volumesPerInstance = 461479;
+                                        }}),
+                                        add(new EbsBlockDeviceConfig() {{
+                                            volumeSpecification = new VolumeSpecification() {{
+                                                iops = 520478;
+                                                sizeInGB = 780529;
+                                                throughput = 678880;
+                                                volumeType = "dicta";
+                                            }};
+                                            volumesPerInstance = 720633;
+                                        }}),
+                                        add(new EbsBlockDeviceConfig() {{
+                                            volumeSpecification = new VolumeSpecification() {{
+                                                iops = 639921;
+                                                sizeInGB = 582020;
+                                                throughput = 143353;
+                                                volumeType = "deleniti";
+                                            }};
+                                            volumesPerInstance = 944669;
+                                        }}),
+                                        add(new EbsBlockDeviceConfig() {{
+                                            volumeSpecification = new VolumeSpecification() {{
+                                                iops = 758616;
+                                                sizeInGB = 521848;
+                                                throughput = 105907;
+                                                volumeType = "commodi";
+                                            }};
+                                            volumesPerInstance = 473600;
                                         }}),
                                     }};
                                     ebsOptimized = false;
                                 }};
-                                instanceType = "quo";
-                                weightedCapacity = 140350;
+                                instanceType = "modi";
+                                weightedCapacity = 186332;
                             }}),
                             add(new InstanceTypeConfig() {{
-                                bidPrice = "at";
-                                bidPriceAsPercentageOfOnDemandPrice = 8700.88;
+                                bidPrice = "impedit";
+                                bidPriceAsPercentageOfOnDemandPrice = 7369.18;
                                 configurations = new org.openapis.openapi.models.shared.Configuration[]{{
                                     add(new Configuration() {{
-                                        classification = "molestiae";
+                                        classification = "ipsum";
                                         configurations = new org.openapis.openapi.models.shared.Configuration[]{{
-                                            add(new Configuration() {{}}),
                                             add(new Configuration() {{}}),
                                             add(new Configuration() {{}}),
                                             add(new Configuration() {{}}),
                                         }};
                                         properties = new java.util.HashMap<String, String>() {{
-                                            put("esse", "totam");
-                                            put("porro", "dolorum");
-                                            put("dicta", "nam");
-                                            put("officia", "occaecati");
+                                            put("perferendis", "ad");
                                         }};
                                     }}),
                                     add(new Configuration() {{
-                                        classification = "fugit";
+                                        classification = "natus";
                                         configurations = new org.openapis.openapi.models.shared.Configuration[]{{
-                                            add(new Configuration() {{}}),
-                                            add(new Configuration() {{}}),
                                             add(new Configuration() {{}}),
                                         }};
                                         properties = new java.util.HashMap<String, String>() {{
-                                            put("optio", "totam");
-                                            put("beatae", "commodi");
-                                            put("molestiae", "modi");
-                                            put("qui", "impedit");
-                                        }};
-                                    }}),
-                                    add(new Configuration() {{
-                                        classification = "cum";
-                                        configurations = new org.openapis.openapi.models.shared.Configuration[]{{
-                                            add(new Configuration() {{}}),
-                                            add(new Configuration() {{}}),
-                                        }};
-                                        properties = new java.util.HashMap<String, String>() {{
-                                            put("excepturi", "aspernatur");
-                                        }};
-                                    }}),
-                                    add(new Configuration() {{
-                                        classification = "perferendis";
-                                        configurations = new org.openapis.openapi.models.shared.Configuration[]{{
-                                            add(new Configuration() {{}}),
-                                            add(new Configuration() {{}}),
-                                        }};
-                                        properties = new java.util.HashMap<String, String>() {{
-                                            put("sed", "iste");
                                             put("dolor", "natus");
                                             put("laboriosam", "hic");
+                                            put("saepe", "fuga");
                                         }};
                                     }}),
                                 }};
-                                customAmiId = "saepe";
+                                customAmiId = "in";
                                 ebsConfiguration = new EbsConfiguration() {{
                                     ebsBlockDeviceConfigs = new org.openapis.openapi.models.shared.EbsBlockDeviceConfig[]{{
                                         add(new EbsBlockDeviceConfig() {{
                                             volumeSpecification = new VolumeSpecification() {{
-                                                iops = 449950;
-                                                sizeInGB = 359508;
-                                                throughput = 613064;
-                                                volumeType = "iure";
+                                                iops = 613064;
+                                                sizeInGB = 437032;
+                                                throughput = 902349;
+                                                volumeType = "quidem";
                                             }};
-                                            volumesPerInstance = 902349;
+                                            volumesPerInstance = 99280;
                                         }}),
                                         add(new EbsBlockDeviceConfig() {{
                                             volumeSpecification = new VolumeSpecification() {{
-                                                iops = 697631;
-                                                sizeInGB = 99280;
-                                                throughput = 60225;
-                                                volumeType = "reiciendis";
+                                                iops = 60225;
+                                                sizeInGB = 969810;
+                                                throughput = 666767;
+                                                volumeType = "mollitia";
                                             }};
-                                            volumesPerInstance = 666767;
-                                        }}),
-                                        add(new EbsBlockDeviceConfig() {{
-                                            volumeSpecification = new VolumeSpecification() {{
-                                                iops = 653140;
-                                                sizeInGB = 670638;
-                                                throughput = 170909;
-                                                volumeType = "dolorem";
-                                            }};
-                                            volumesPerInstance = 358152;
+                                            volumesPerInstance = 670638;
                                         }}),
                                     }};
                                     ebsOptimized = false;
                                 }};
-                                instanceType = "explicabo";
-                                weightedCapacity = 750686;
+                                instanceType = "dolores";
+                                weightedCapacity = 210382;
                             }}),
                             add(new InstanceTypeConfig() {{
-                                bidPrice = "enim";
-                                bidPriceAsPercentageOfOnDemandPrice = 6078.31;
+                                bidPrice = "corporis";
+                                bidPriceAsPercentageOfOnDemandPrice = 1289.26;
                                 configurations = new org.openapis.openapi.models.shared.Configuration[]{{
                                     add(new Configuration() {{
-                                        classification = "minima";
+                                        classification = "enim";
                                         configurations = new org.openapis.openapi.models.shared.Configuration[]{{
                                             add(new Configuration() {{}}),
                                             add(new Configuration() {{}}),
                                             add(new Configuration() {{}}),
                                         }};
                                         properties = new java.util.HashMap<String, String>() {{
-                                            put("iure", "culpa");
+                                            put("minima", "excepturi");
+                                            put("accusantium", "iure");
                                         }};
                                     }}),
                                     add(new Configuration() {{
-                                        classification = "doloribus";
+                                        classification = "culpa";
                                         configurations = new org.openapis.openapi.models.shared.Configuration[]{{
                                             add(new Configuration() {{}}),
                                             add(new Configuration() {{}}),
@@ -220,27 +221,70 @@ public class Application {
                                             add(new Configuration() {{}}),
                                         }};
                                         properties = new java.util.HashMap<String, String>() {{
-                                            put("mollitia", "dolorem");
+                                            put("architecto", "mollitia");
+                                            put("dolorem", "culpa");
+                                            put("consequuntur", "repellat");
+                                            put("mollitia", "occaecati");
+                                        }};
+                                    }}),
+                                    add(new Configuration() {{
+                                        classification = "numquam";
+                                        configurations = new org.openapis.openapi.models.shared.Configuration[]{{
+                                            add(new Configuration() {{}}),
+                                            add(new Configuration() {{}}),
+                                        }};
+                                        properties = new java.util.HashMap<String, String>() {{
+                                            put("molestiae", "velit");
+                                            put("error", "quia");
+                                        }};
+                                    }}),
+                                    add(new Configuration() {{
+                                        classification = "quis";
+                                        configurations = new org.openapis.openapi.models.shared.Configuration[]{{
+                                            add(new Configuration() {{}}),
+                                        }};
+                                        properties = new java.util.HashMap<String, String>() {{
+                                            put("animi", "enim");
+                                            put("odit", "quo");
+                                            put("sequi", "tenetur");
                                         }};
                                     }}),
                                 }};
-                                customAmiId = "culpa";
+                                customAmiId = "ipsam";
                                 ebsConfiguration = new EbsConfiguration() {{
                                     ebsBlockDeviceConfigs = new org.openapis.openapi.models.shared.EbsBlockDeviceConfig[]{{
                                         add(new EbsBlockDeviceConfig() {{
                                             volumeSpecification = new VolumeSpecification() {{
-                                                iops = 995300;
-                                                sizeInGB = 653108;
-                                                throughput = 581850;
-                                                volumeType = "numquam";
+                                                iops = 820994;
+                                                sizeInGB = 13571;
+                                                throughput = 97101;
+                                                volumeType = "error";
                                             }};
-                                            volumesPerInstance = 414369;
+                                            volumesPerInstance = 837945;
+                                        }}),
+                                        add(new EbsBlockDeviceConfig() {{
+                                            volumeSpecification = new VolumeSpecification() {{
+                                                iops = 673660;
+                                                sizeInGB = 96098;
+                                                throughput = 971945;
+                                                volumeType = "voluptatibus";
+                                            }};
+                                            volumesPerInstance = 878194;
+                                        }}),
+                                        add(new EbsBlockDeviceConfig() {{
+                                            volumeSpecification = new VolumeSpecification() {{
+                                                iops = 468651;
+                                                sizeInGB = 509624;
+                                                throughput = 976762;
+                                                volumeType = "ipsa";
+                                            }};
+                                            volumesPerInstance = 604846;
                                         }}),
                                     }};
                                     ebsOptimized = false;
                                 }};
-                                instanceType = "quam";
-                                weightedCapacity = 474697;
+                                instanceType = "voluptate";
+                                weightedCapacity = 739264;
                             }}),
                         }};
                         launchSpecifications = new InstanceFleetProvisioningSpecifications() {{
@@ -248,31 +292,39 @@ public class Application {
                                 allocationStrategy = "lowest-price";
                                 capacityReservationOptions = new OnDemandCapacityReservationOptions() {{
                                     capacityReservationPreference = "open";
-                                    capacityReservationResourceGroupArn = "error";
+                                    capacityReservationResourceGroupArn = "doloremque";
                                     usageStrategy = "use-capacity-reservations-first";
                                 }};
                             }};
                             spotSpecification = new SpotProvisioningSpecification() {{
                                 allocationStrategy = "capacity-optimized";
-                                blockDurationMinutes = 158969;
+                                blockDurationMinutes = 441711;
                                 timeoutAction = "SWITCH_TO_ON_DEMAND";
-                                timeoutDurationMinutes = 110375;
+                                timeoutDurationMinutes = 979587;
                             }};
                         }};
-                        name = "laborum";
+                        name = "dicta";
                         resizeSpecifications = new InstanceFleetResizingSpecifications() {{
                             onDemandResizeSpecification = new OnDemandResizingSpecification() {{
-                                timeoutDurationMinutes = 656330;
+                                timeoutDurationMinutes = 359444;
                             }};
                             spotResizeSpecification = new SpotResizingSpecification() {{
-                                timeoutDurationMinutes = 317202;
+                                timeoutDurationMinutes = 296140;
                             }};
                         }};
-                        targetOnDemandCapacity = 138183;
-                        targetSpotCapacity = 778346;
+                        targetOnDemandCapacity = 480894;
+                        targetSpotCapacity = 118727;
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "harum";
+                xAmzContentSha256 = "enim";
+                xAmzCredential = "accusamus";
+                xAmzDate = "commodi";
+                xAmzSecurityToken = "repudiandae";
+                xAmzSignature = "quae";
+                xAmzSignedHeaders = "ipsum";
+                xAmzTarget = "ElasticMapReduce.AddInstanceFleet";
+            }}            
 
             AddInstanceFleetResponse res = sdk.addInstanceFleet(req);
 

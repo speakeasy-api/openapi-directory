@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileByVersionRequest {
-    
-    public GetProfileByVersionPathParams pathParams;
-    public GetProfileByVersionRequest withPathParams(GetProfileByVersionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public GetProfileByVersionRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public GetProfileByVersionRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public GetProfileByVersionHeaders headers;
-    public GetProfileByVersionRequest withHeaders(GetProfileByVersionHeaders headers) {
-        this.headers = headers;
+    /**
+     * ID of the client's profile as returned by the Create profile endpoint's response, in the `id` field. It can also be an `alternativeKey` according to your custom profile schema. In this case, this request should also send the `alternativeKey` parameter.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
+    public String profileId;
+    public GetProfileByVersionRequest withProfileId(String profileId) {
+        this.profileId = profileId;
+        return this;
+    }
+    
+    /**
+     * ID of the version of the client's profile as returned by endpoints that create or update profile information in the `version` field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileVersionId")
+    public String profileVersionId;
+    public GetProfileByVersionRequest withProfileVersionId(String profileVersionId) {
+        this.profileVersionId = profileVersionId;
         return this;
     }
     

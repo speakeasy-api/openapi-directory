@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsListUsersForOrgRequest {
-    
-    public DistributionGroupsListUsersForOrgPathParams pathParams;
-    public DistributionGroupsListUsersForOrgRequest withPathParams(DistributionGroupsListUsersForOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the distribution group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
+    public String distributionGroupName;
+    public DistributionGroupsListUsersForOrgRequest withDistributionGroupName(String distributionGroupName) {
+        this.distributionGroupName = distributionGroupName;
         return this;
     }
     
-    
-    public DistributionGroupsListUsersForOrgSecurity security;
-    public DistributionGroupsListUsersForOrgRequest withSecurity(DistributionGroupsListUsersForOrgSecurity security) {
-        this.security = security;
+    /**
+     * The organization's name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
+    public String orgName;
+    public DistributionGroupsListUsersForOrgRequest withOrgName(String orgName) {
+        this.orgName = orgName;
         return this;
     }
     

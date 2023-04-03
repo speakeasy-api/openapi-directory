@@ -4,13 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTimezoneAreaRequest {
-    
-    public GetTimezoneAreaPathParams pathParams;
-    public GetTimezoneAreaRequest withPathParams(GetTimezoneAreaPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=area")
+    public String area;
+    public GetTimezoneAreaRequest withArea(String area) {
+        this.area = area;
         return this;
     }
     

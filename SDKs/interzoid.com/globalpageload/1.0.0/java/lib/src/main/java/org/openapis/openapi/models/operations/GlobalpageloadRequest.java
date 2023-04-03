@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GlobalpageloadRequest {
+    /**
+     * Your Interzoid license API key. Register at www.interzoid.com/register
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public String license;
+    public GlobalpageloadRequest withLicense(String license) {
+        this.license = license;
+        return this;
+    }
     
-    public GlobalpageloadQueryParams queryParams;
-    public GlobalpageloadRequest withQueryParams(GlobalpageloadQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Geographic location to perform the measurement from (Paris, Hong Kong, Seoul, Mumbai, Sao Paolo, London, etc. see API home page for full list)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
+    public String origin;
+    public GlobalpageloadRequest withOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    
+    /**
+     * specific URL to perform load test time
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
+    public String url;
+    public GlobalpageloadRequest withUrl(String url) {
+        this.url = url;
         return this;
     }
     

@@ -36,10 +36,11 @@ public class ItemPriceMarkdown {
     /**
      * This method creates an &lt;b&gt;item price markdown promotion&lt;/b&gt; (know simply as a "markdown promotion") where a discount amount is applied directly to the items included the promotion. Discounts can be specified as either a monetary amount or a percentage off the standard sales price. eBay highlights promoted items by placing teasers for the items throughout the online sales flows.  &lt;p&gt;Unlike an &lt;a href="/api-docs/sell/marketing/resources/item_promotion/methods/createItemPromotion"&gt;item promotion&lt;/a&gt;, a markdown promotion does not require the buyer meet a "threshold" before the offer takes effect. With markdown promotions, all the buyer needs to do is purchase the item to receive the promotion benefit.&lt;/p&gt;  &lt;p class="tablenote"&gt;&lt;b&gt;Important:&lt;/b&gt; There are some restrictions for which listings are available for price markdown promotions. For details, see &lt;a href="/api-docs/sell/marketing/static/overview.html#PM-requirements"&gt;Promotions Manager requirements and restrictions&lt;/a&gt;. &lt;br&gt;&lt;br&gt;In addition, we recommend you list items at competitive prices before including them in your markdown promotions. For an extensive list of pricing recommendations, see the &lt;b&gt;Growth&lt;/b&gt; tab in Seller Hub.&lt;/p&gt; &lt;p&gt;There are two ways to add items to markdown promotions:&lt;/p&gt; &lt;ul&gt;&lt;li&gt;&lt;b&gt;Key-based promotions&lt;/b&gt; select items using either the listing IDs or inventory reference IDs of the items you want to promote. Note that if you use inventory reference IDs, you must specify both the &lt;b&gt;inventoryReferenceId&lt;/b&gt; and the associated &lt;b&gt;inventoryReferenceType&lt;/b&gt; of the item(s) you want to include the promotion.&lt;/li&gt;  &lt;li&gt;&lt;b&gt;Rule-based promotions&lt;/b&gt; select items using a list of eBay category IDs or seller Store category IDs. Rules can further constrain items in a promotion by minimum and maximum prices, brands, and item conditions.&lt;/li&gt;&lt;/ul&gt;  &lt;p&gt;New promotions must be created in either a &lt;code&gt;DRAFT&lt;/code&gt; or a &lt;code&gt;SCHEDULED&lt;/code&gt; state. Use the DRAFT state when you are initially creating a promotion and you want to be sure it's correctly configured before scheduling it to run. When you create a promotion, the promotion ID is returned in the &lt;b&gt;Location&lt;/b&gt; response header. Use this ID to reference the promotion in subsequent requests (such as to schedule a promotion that's in a DRAFT state).&lt;/p&gt;  &lt;p class="tablenote"&gt;&lt;b&gt;Tip:&lt;/b&gt; Refer to &lt;a href="/api-docs/sell/static/marketing/promotions-manager.html"&gt;Promotions Manager&lt;/a&gt; in the &lt;i&gt;Selling Integration Guide&lt;/i&gt; for details and examples showing how to create and manage seller promotions.&lt;/p&gt;  &lt;p&gt;Markdown promotions are available on all eBay marketplaces. For more information, see &lt;a href="/api-docs/sell/marketing/static/overview.html#PM-requirements"&gt;Promotions Manager requirements and restrictions&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateItemPriceMarkdownPromotionResponse createItemPriceMarkdownPromotion(org.openapis.openapi.models.operations.CreateItemPriceMarkdownPromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateItemPriceMarkdownPromotionResponse createItemPriceMarkdownPromotion(org.openapis.openapi.models.shared.ItemPriceMarkdown request, org.openapis.openapi.models.operations.CreateItemPriceMarkdownPromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/item_price_markdown");
         
@@ -50,7 +51,7 @@ public class ItemPriceMarkdown {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class ItemPriceMarkdown {
     /**
      * This method deletes the item price markdown promotion specified by the &lt;b&gt;promotion_id&lt;/b&gt; path parameter. Call &lt;a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions"&gt;getPromotions&lt;/a&gt; to retrieve the IDs of a seller's promotions.  &lt;br&gt;&lt;br&gt;You can delete any promotion with the exception of those that are currently active (RUNNING). To end a running promotion, call &lt;a href="/api-docs/sell/marketing/resources/item_price_markdown/methods/updateItemPriceMarkdownPromotion"&gt;updateItemPriceMarkdownPromotion&lt;/a&gt; and adjust the &lt;b&gt;endDate&lt;/b&gt; field as appropriate.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteItemPriceMarkdownPromotionResponse deleteItemPriceMarkdownPromotion(org.openapis.openapi.models.operations.DeleteItemPriceMarkdownPromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteItemPriceMarkdownPromotionResponse deleteItemPriceMarkdownPromotion(org.openapis.openapi.models.operations.DeleteItemPriceMarkdownPromotionRequest request, org.openapis.openapi.models.operations.DeleteItemPriceMarkdownPromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemPriceMarkdownPromotionPathParams.class, baseUrl, "/item_price_markdown/{promotion_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteItemPriceMarkdownPromotionRequest.class, baseUrl, "/item_price_markdown/{promotion_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -114,19 +116,20 @@ public class ItemPriceMarkdown {
     /**
      * This method returns the complete details of the item price markdown promotion that's indicated by the &lt;b&gt;promotion_id&lt;/b&gt; path parameter. &lt;br&gt;&lt;br&gt;Call &lt;a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions"&gt;getPromotions&lt;/a&gt; to retrieve the IDs of a seller's promotions.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetItemPriceMarkdownPromotionResponse getItemPriceMarkdownPromotion(org.openapis.openapi.models.operations.GetItemPriceMarkdownPromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetItemPriceMarkdownPromotionResponse getItemPriceMarkdownPromotion(org.openapis.openapi.models.operations.GetItemPriceMarkdownPromotionRequest request, org.openapis.openapi.models.operations.GetItemPriceMarkdownPromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemPriceMarkdownPromotionPathParams.class, baseUrl, "/item_price_markdown/{promotion_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetItemPriceMarkdownPromotionRequest.class, baseUrl, "/item_price_markdown/{promotion_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -155,21 +158,22 @@ public class ItemPriceMarkdown {
     /**
      * This method updates the specified item price markdown promotion with the new configuration that you supply in the payload of the request. Specify the promotion you want to update using the &lt;b&gt;promotion_id&lt;/b&gt; path parameter. Call &lt;a href="/api-docs/sell/marketing/resources/promotion/methods/getPromotions"&gt;getPromotions&lt;/a&gt; to retrieve the IDs of a seller's promotions.  &lt;br&gt;&lt;br&gt;When updating a promotion, supply all the fields that you used to configure the original promotion (and not just the fields you are updating). eBay replaces the specified promotion with the values you supply in the update request and if you don't pass a field that currently has a value, the update request fails.  &lt;br&gt;&lt;br&gt;The parameters you are allowed to update with this request depend on the status of the promotion you're updating:  &lt;ul&gt;&lt;li&gt;DRAFT or SCHEDULED promotions: You can update any of the parameters in these promotions that have not yet started to run, including the &lt;b&gt;discountRules&lt;/b&gt;.&lt;/li&gt; &lt;li&gt;RUNNING promotions: You can change the &lt;b&gt;endDate&lt;/b&gt; and the item's inventory but you cannot change the promotional discount or the promotion's start date.&lt;/li&gt; &lt;li&gt;ENDED promotions: Nothing can be changed.&lt;/li&gt;&lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateItemPriceMarkdownPromotionResponse updateItemPriceMarkdownPromotion(org.openapis.openapi.models.operations.UpdateItemPriceMarkdownPromotionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateItemPriceMarkdownPromotionResponse updateItemPriceMarkdownPromotion(org.openapis.openapi.models.operations.UpdateItemPriceMarkdownPromotionRequest request, org.openapis.openapi.models.operations.UpdateItemPriceMarkdownPromotionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateItemPriceMarkdownPromotionPathParams.class, baseUrl, "/item_price_markdown/{promotion_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateItemPriceMarkdownPromotionRequest.class, baseUrl, "/item_price_markdown/{promotion_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "itemPriceMarkdown", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

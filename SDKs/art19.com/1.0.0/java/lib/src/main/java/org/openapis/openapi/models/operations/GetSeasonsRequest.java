@@ -4,20 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSeasonsRequest {
-    
-    public GetSeasonsQueryParams queryParams;
-    public GetSeasonsRequest withQueryParams(GetSeasonsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The list of IDs to filter by. Repeat this parameter for each ID you want to include in the filter.
+     * The brackets *MUST* be percent-encoded, per the requirements in
+     * [RFC 3986 \u00a7 3.4](https://tools.ietf.org/html/rfc3986#section-3.4).
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids[]")
+    public String[] ids;
+    public GetSeasonsRequest withIds(String[] ids) {
+        this.ids = ids;
         return this;
     }
     
+    /**
+     * Select which page number to receive results for. Pages are numbered starting at 1.
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[number]")
+    public Long pageNumber;
+    public GetSeasonsRequest withPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
     
-    public GetSeasonsSecurity security;
-    public GetSeasonsRequest withSecurity(GetSeasonsSecurity security) {
-        this.security = security;
+    /**
+     * Indicate how many records to return per page. The maximum is 100.
+     * 
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
+    public Long pageSize;
+    public GetSeasonsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * Limit the result to seasons with a title containing this parameter in a case-insensitive way.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public GetSeasonsRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    /**
+     * Limit the result to seasons owned by this series.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=series_id")
+    public String seriesId;
+    public GetSeasonsRequest withSeriesId(String seriesId) {
+        this.seriesId = seriesId;
+        return this;
+    }
+    
+    /**
+     * Specify how to sort the result. Please refer to either the top section or the
+     * [JSON:API specification](https://jsonapi.org/format/#fetching-sorting) on how sorting works in general.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=sort")
+    public GetSeasonsSortEnum[] sort;
+    public GetSeasonsRequest withSort(GetSeasonsSortEnum[] sort) {
+        this.sort = sort;
         return this;
     }
     

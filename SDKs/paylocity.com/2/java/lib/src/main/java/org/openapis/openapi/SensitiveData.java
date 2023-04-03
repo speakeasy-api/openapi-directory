@@ -34,24 +34,25 @@ public class SensitiveData {
      * Add/update sensitive data
      * Sends new or updated employee sensitive data information directly to Web Pay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataResponse addOrUpdateSensitiveData(org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataResponse addOrUpdateSensitiveData(org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataRequest request, org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sensitiveData", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,19 +82,20 @@ public class SensitiveData {
      * Get sensitive data
      * Gets employee sensitive data information directly from Web Pay.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSensitiveDataResponse getSensitiveData(org.openapis.openapi.models.operations.GetSensitiveDataRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetSensitiveDataResponse getSensitiveData(org.openapis.openapi.models.operations.GetSensitiveDataRequest request, org.openapis.openapi.models.operations.GetSensitiveDataSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSensitiveDataPathParams.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSensitiveDataRequest.class, baseUrl, "/v2/companies/{companyId}/employees/{employeeId}/sensitivedata", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

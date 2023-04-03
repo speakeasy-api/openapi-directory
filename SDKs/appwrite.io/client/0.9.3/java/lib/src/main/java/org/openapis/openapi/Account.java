@@ -39,10 +39,11 @@ public class Account {
      * Create Account
      * Use this endpoint to allow a new user to register a new account in your project. After the user registration completes successfully, you can use the [/account/verfication](/docs/client/account#accountCreateVerification) route to start verifying the user email address. To allow the new user to login to their new account, you need to create a new [account session](/docs/client/account#accountCreateSession).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCreateResponse accountCreate(org.openapis.openapi.models.operations.AccountCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCreateResponse accountCreate(org.openapis.openapi.models.operations.AccountCreateRequestBody request, org.openapis.openapi.models.operations.AccountCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -53,7 +54,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,11 +81,10 @@ public class Account {
     /**
      * Create Anonymous Session
      * Use this endpoint to allow a new user to register an anonymous account in your project. This route will also create a new session for the user. To allow the new user to convert an anonymous account to a normal account, you need to update its [email and password](/docs/client/account#accountUpdateEmail) or create an [OAuth2 session](/docs/client/account#accountCreateOAuth2Session).
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCreateAnonymousSessionResponse accountCreateAnonymousSession(org.openapis.openapi.models.operations.AccountCreateAnonymousSessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCreateAnonymousSessionResponse accountCreateAnonymousSession() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/sessions/anonymous");
         
@@ -93,8 +93,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -120,11 +119,10 @@ public class Account {
     /**
      * Create Account JWT
      * Use this endpoint to create a JSON Web Token. You can use the resulting JWT to authenticate on behalf of the current user when working with the Appwrite server-side API and SDKs. The JWT secret is valid for 15 minutes from its creation and will be invalid if the user will logout in that time frame.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCreateJWTResponse accountCreateJWT(org.openapis.openapi.models.operations.AccountCreateJWTRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCreateJWTResponse accountCreateJWT() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/jwt");
         
@@ -133,8 +131,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -164,25 +161,26 @@ public class Account {
      * If there is already an active session, the new session will be attached to the logged-in account. If there are no active sessions, the server will attempt to look for a user with the same email address as the email received from the OAuth2 provider and attach the new session to the existing user. If no matching user is found - the server will create a new user..
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCreateOAuth2SessionResponse accountCreateOAuth2Session(org.openapis.openapi.models.operations.AccountCreateOAuth2SessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCreateOAuth2SessionResponse accountCreateOAuth2Session(org.openapis.openapi.models.operations.AccountCreateOAuth2SessionRequest request, org.openapis.openapi.models.operations.AccountCreateOAuth2SessionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountCreateOAuth2SessionPathParams.class, baseUrl, "/account/sessions/oauth2/{provider}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountCreateOAuth2SessionRequest.class, baseUrl, "/account/sessions/oauth2/{provider}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountCreateOAuth2SessionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AccountCreateOAuth2SessionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -204,10 +202,11 @@ public class Account {
      * Create Password Recovery
      * Sends the user an email with a temporary secret key for password reset. When the user clicks the confirmation link he is redirected back to your app password reset URL with the secret key and email address values attached to the URL query string. Use the query string params to submit a request to the [PUT /account/recovery](/docs/client/account#accountUpdateRecovery) endpoint to complete the process. The verification link sent to the user's email address is valid for 1 hour.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCreateRecoveryResponse accountCreateRecovery(org.openapis.openapi.models.operations.AccountCreateRecoveryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCreateRecoveryResponse accountCreateRecovery(org.openapis.openapi.models.operations.AccountCreateRecoveryRequestBody request, org.openapis.openapi.models.operations.AccountCreateRecoverySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/recovery");
         
@@ -218,7 +217,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -246,10 +245,11 @@ public class Account {
      * Create Account Session
      * Allow the user to login into their account by providing a valid email and password combination. This route will create a new session for the user.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCreateSessionResponse accountCreateSession(org.openapis.openapi.models.operations.AccountCreateSessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCreateSessionResponse accountCreateSession(org.openapis.openapi.models.operations.AccountCreateSessionRequestBody request, org.openapis.openapi.models.operations.AccountCreateSessionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/sessions");
         
@@ -260,7 +260,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -291,10 +291,11 @@ public class Account {
      * Please note that in order to avoid a [Redirect Attack](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md), the only valid redirect URLs are the ones from domains you have set when adding your platforms in the console interface.
      * 
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountCreateVerificationResponse accountCreateVerification(org.openapis.openapi.models.operations.AccountCreateVerificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountCreateVerificationResponse accountCreateVerification(org.openapis.openapi.models.operations.AccountCreateVerificationRequestBody request, org.openapis.openapi.models.operations.AccountCreateVerificationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/verification");
         
@@ -305,7 +306,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -332,11 +333,10 @@ public class Account {
     /**
      * Delete Account
      * Delete a currently logged in user account. Behind the scene, the user record is not deleted but permanently blocked from any access. This is done to avoid deleted accounts being overtaken by new users with the same email address. Any user-related resources like documents or storage files should be deleted separately.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountDeleteResponse accountDelete(org.openapis.openapi.models.operations.AccountDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountDeleteResponse accountDelete() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -345,8 +345,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -367,19 +366,20 @@ public class Account {
      * Delete Account Session
      * Use this endpoint to log out the currently logged in user from all their account sessions across all of their different devices. When using the option id argument, only the session unique ID provider will be deleted.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountDeleteSessionResponse accountDeleteSession(org.openapis.openapi.models.operations.AccountDeleteSessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountDeleteSessionResponse accountDeleteSession(org.openapis.openapi.models.operations.AccountDeleteSessionRequest request, org.openapis.openapi.models.operations.AccountDeleteSessionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDeleteSessionPathParams.class, baseUrl, "/account/sessions/{sessionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountDeleteSessionRequest.class, baseUrl, "/account/sessions/{sessionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -400,11 +400,10 @@ public class Account {
     /**
      * Delete All Account Sessions
      * Delete all sessions from the user account and remove any sessions cookies from the end client.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountDeleteSessionsResponse accountDeleteSessions(org.openapis.openapi.models.operations.AccountDeleteSessionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountDeleteSessionsResponse accountDeleteSessions() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/sessions");
         
@@ -413,8 +412,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -434,11 +432,10 @@ public class Account {
     /**
      * Get Account
      * Get currently logged in user data as JSON object.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetResponse accountGet(org.openapis.openapi.models.operations.AccountGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetResponse accountGet() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -447,8 +444,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -474,11 +470,10 @@ public class Account {
     /**
      * Get Account Logs
      * Get currently logged in user list of latest security activity logs. Each log returns user IP address, location and date and time of log.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetLogsResponse accountGetLogs(org.openapis.openapi.models.operations.AccountGetLogsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetLogsResponse accountGetLogs() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/logs");
         
@@ -487,8 +482,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -514,11 +508,10 @@ public class Account {
     /**
      * Get Account Preferences
      * Get currently logged in user preferences as a key-value object.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetPrefsResponse accountGetPrefs(org.openapis.openapi.models.operations.AccountGetPrefsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetPrefsResponse accountGetPrefs() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/prefs");
         
@@ -527,8 +520,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -555,19 +547,20 @@ public class Account {
      * Get Session By ID
      * Use this endpoint to get a logged in user's session using a Session ID. Inputting 'current' will return the current session being used.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetSessionResponse accountGetSession(org.openapis.openapi.models.operations.AccountGetSessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetSessionResponse accountGetSession(org.openapis.openapi.models.operations.AccountGetSessionRequest request, org.openapis.openapi.models.operations.AccountGetSessionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountGetSessionPathParams.class, baseUrl, "/account/sessions/{sessionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AccountGetSessionRequest.class, baseUrl, "/account/sessions/{sessionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -594,11 +587,10 @@ public class Account {
     /**
      * Get Account Sessions
      * Get currently logged in user list of active sessions across different devices.
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountGetSessionsResponse accountGetSessions(org.openapis.openapi.models.operations.AccountGetSessionsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountGetSessionsResponse accountGetSessions() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/sessions");
         
@@ -607,8 +599,7 @@ public class Account {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -636,10 +627,11 @@ public class Account {
      * Update currently logged in user account email address. After changing user address, user confirmation status is being reset and a new confirmation mail is sent. For security measures, user password is required to complete this request.
      * This endpoint can also be used to convert an anonymous account to a normal one, by passing an email address and a new password.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountUpdateEmailResponse accountUpdateEmail(org.openapis.openapi.models.operations.AccountUpdateEmailRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountUpdateEmailResponse accountUpdateEmail(org.openapis.openapi.models.operations.AccountUpdateEmailRequestBody request, org.openapis.openapi.models.operations.AccountUpdateEmailSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/email");
         
@@ -650,7 +642,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -678,10 +670,11 @@ public class Account {
      * Update Account Name
      * Update currently logged in user account name.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountUpdateNameResponse accountUpdateName(org.openapis.openapi.models.operations.AccountUpdateNameRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountUpdateNameResponse accountUpdateName(org.openapis.openapi.models.operations.AccountUpdateNameRequestBody request, org.openapis.openapi.models.operations.AccountUpdateNameSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/name");
         
@@ -692,7 +685,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -720,10 +713,11 @@ public class Account {
      * Update Account Password
      * Update currently logged in user password. For validation, user is required to pass in the new password, and the old password. For users created with OAuth and Team Invites, oldPassword is optional.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountUpdatePasswordResponse accountUpdatePassword(org.openapis.openapi.models.operations.AccountUpdatePasswordRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountUpdatePasswordResponse accountUpdatePassword(org.openapis.openapi.models.operations.AccountUpdatePasswordRequestBody request, org.openapis.openapi.models.operations.AccountUpdatePasswordSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/password");
         
@@ -734,7 +728,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -762,10 +756,11 @@ public class Account {
      * Update Account Preferences
      * Update currently logged in user account preferences. You can pass only the specific settings you wish to update.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountUpdatePrefsResponse accountUpdatePrefs(org.openapis.openapi.models.operations.AccountUpdatePrefsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountUpdatePrefsResponse accountUpdatePrefs(org.openapis.openapi.models.operations.AccountUpdatePrefsRequestBody request, org.openapis.openapi.models.operations.AccountUpdatePrefsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/prefs");
         
@@ -776,7 +771,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -806,10 +801,11 @@ public class Account {
      * 
      * Please note that in order to avoid a [Redirect Attack](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.md) the only valid redirect URLs are the ones from domains you have set when adding your platforms in the console interface.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountUpdateRecoveryResponse accountUpdateRecovery(org.openapis.openapi.models.operations.AccountUpdateRecoveryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountUpdateRecoveryResponse accountUpdateRecovery(org.openapis.openapi.models.operations.AccountUpdateRecoveryRequestBody request, org.openapis.openapi.models.operations.AccountUpdateRecoverySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/recovery");
         
@@ -820,7 +816,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -848,10 +844,11 @@ public class Account {
      * Complete Email Verification
      * Use this endpoint to complete the user email verification process. Use both the **userId** and **secret** parameters that were attached to your app URL to verify the user email ownership. If confirmed this route will return a 200 status code.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AccountUpdateVerificationResponse accountUpdateVerification(org.openapis.openapi.models.operations.AccountUpdateVerificationRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AccountUpdateVerificationResponse accountUpdateVerification(org.openapis.openapi.models.operations.AccountUpdateVerificationRequestBody request, org.openapis.openapi.models.operations.AccountUpdateVerificationSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/verification");
         
@@ -862,7 +859,7 @@ public class Account {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

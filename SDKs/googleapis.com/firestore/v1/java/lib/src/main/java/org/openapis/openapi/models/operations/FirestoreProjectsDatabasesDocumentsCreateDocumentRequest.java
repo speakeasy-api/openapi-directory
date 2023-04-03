@@ -7,31 +7,160 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FirestoreProjectsDatabasesDocumentsCreateDocumentRequest {
-    
-    public FirestoreProjectsDatabasesDocumentsCreateDocumentPathParams pathParams;
-    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withPathParams(FirestoreProjectsDatabasesDocumentsCreateDocumentPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FirestoreProjectsDatabasesDocumentsCreateDocumentQueryParams queryParams;
-    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withQueryParams(FirestoreProjectsDatabasesDocumentsCreateDocumentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Document request;
-    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withRequest(org.openapis.openapi.models.shared.Document request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Document document;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withDocument(org.openapis.openapi.models.shared.Document document) {
+        this.document = document;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public FirestoreProjectsDatabasesDocumentsCreateDocumentSecurity security;
-    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withSecurity(FirestoreProjectsDatabasesDocumentsCreateDocumentSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Required. The collection ID, relative to `parent`, to list. For example: `chatrooms`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectionId")
+    public String collectionId;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
+    
+    /**
+     * The client-assigned document ID to use for this document. Optional. If not specified, an ID will be assigned by the service.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=documentId")
+    public String documentId;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withDocumentId(String documentId) {
+        this.documentId = documentId;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * The list of field paths in the mask. See Document.fields for a field path syntax reference.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mask.fieldPaths")
+    public String[] maskFieldPaths;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withMaskFieldPaths(String[] maskFieldPaths) {
+        this.maskFieldPaths = maskFieldPaths;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Required. The parent resource. For example: `projects/{project_id}/databases/{database_id}/documents` or `projects/{project_id}/databases/{database_id}/documents/chatrooms/{chatroom_id}`
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
+    public String parent;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withParent(String parent) {
+        this.parent = parent;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public FirestoreProjectsDatabasesDocumentsCreateDocumentRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

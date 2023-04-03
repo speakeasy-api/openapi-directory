@@ -7,17 +7,13 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutIndividualsPartyIdAddressesAddressIdRequest {
-    
-    public PutIndividualsPartyIdAddressesAddressIdPathParams pathParams;
-    public PutIndividualsPartyIdAddressesAddressIdRequest withPathParams(PutIndividualsPartyIdAddressesAddressIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public PutIndividualsPartyIdAddressesAddressIdHeaders headers;
-    public PutIndividualsPartyIdAddressesAddressIdRequest withHeaders(PutIndividualsPartyIdAddressesAddressIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * The address identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
+    public String addressId;
+    public PutIndividualsPartyIdAddressesAddressIdRequest withAddressId(String addressId) {
+        this.addressId = addressId;
         return this;
     }
     
@@ -25,9 +21,29 @@ public class PutIndividualsPartyIdAddressesAddressIdRequest {
      * Address resource
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AddressInput request;
-    public PutIndividualsPartyIdAddressesAddressIdRequest withRequest(org.openapis.openapi.models.shared.AddressInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AddressInput addressInput;
+    public PutIndividualsPartyIdAddressesAddressIdRequest withAddressInput(org.openapis.openapi.models.shared.AddressInput addressInput) {
+        this.addressInput = addressInput;
+        return this;
+    }
+    
+    /**
+     * The API key.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
+    public String apiKey;
+    public PutIndividualsPartyIdAddressesAddressIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
+        return this;
+    }
+    
+    /**
+     * The party identifier.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
+    public String partyId;
+    public PutIndividualsPartyIdAddressesAddressIdRequest withPartyId(String partyId) {
+        this.partyId = partyId;
         return this;
     }
     

@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RejectRepoTransferRequest {
+    /**
+     * owner of the repo to transfer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public RejectRepoTransferRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public RejectRepoTransferPathParams pathParams;
-    public RejectRepoTransferRequest withPathParams(RejectRepoTransferPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo to transfer
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public RejectRepoTransferRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVehicleOdometerRequest {
-    
-    public GetVehicleOdometerPathParams pathParams;
-    public GetVehicleOdometerRequest withPathParams(GetVehicleOdometerPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The vehicle id that needs to be fetched
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetVehicleOdometerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

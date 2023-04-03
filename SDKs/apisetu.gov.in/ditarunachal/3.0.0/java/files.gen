@@ -34,7 +34,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/IlpmtSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/IlpmtRequestBodyCertificateParameters.java
 lib/src/main/java/org/openapis/openapi/models/operations/IlpmtRequestBodyFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/IlpmtRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/IlpmtRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ilpmt504ApplicationJSONErrorEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ilpmt504ApplicationJSONErrorDescriptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/Ilpmt504ApplicationJSON.java
@@ -68,6 +67,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsen
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaConsent.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchemaSignature.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConsentArtifactSchema.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKey.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeClientID.java
 USAGE.md

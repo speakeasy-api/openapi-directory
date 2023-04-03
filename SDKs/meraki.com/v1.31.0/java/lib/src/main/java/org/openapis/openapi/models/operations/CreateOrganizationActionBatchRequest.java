@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrganizationActionBatchRequest {
-    
-    public CreateOrganizationActionBatchPathParams pathParams;
-    public CreateOrganizationActionBatchRequest withPathParams(CreateOrganizationActionBatchPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateOrganizationActionBatchRequestBody requestBody;
+    public CreateOrganizationActionBatchRequest withRequestBody(CreateOrganizationActionBatchRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateOrganizationActionBatchRequestBody request;
-    public CreateOrganizationActionBatchRequest withRequest(CreateOrganizationActionBatchRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CreateOrganizationActionBatchRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

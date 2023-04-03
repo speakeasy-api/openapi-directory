@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateTokenHeaders;
 import org.openapis.openapi.models.operations.CreateTokenRequestBody;
 import org.openapis.openapi.models.operations.CreateTokenRequest;
 import org.openapis.openapi.models.operations.CreateTokenResponse;
@@ -27,38 +26,34 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             CreateTokenRequest req = new CreateTokenRequest() {{
-                headers = new CreateTokenHeaders() {{
-                    xAmzAlgorithm = "corrupti";
-                    xAmzContentSha256 = "provident";
-                    xAmzCredential = "distinctio";
-                    xAmzDate = "quibusdam";
-                    xAmzSecurityToken = "unde";
-                    xAmzSignature = "nulla";
-                    xAmzSignedHeaders = "corrupti";
-                }};
-                request = new CreateTokenRequestBody() {{
-                    clientId = "illum";
-                    clientSecret = "vel";
-                    code = "error";
-                    deviceCode = "deserunt";
-                    grantType = "suscipit";
-                    redirectUri = "iure";
-                    refreshToken = "magnam";
+                requestBody = new CreateTokenRequestBody() {{
+                    clientId = "corrupti";
+                    clientSecret = "provident";
+                    code = "distinctio";
+                    deviceCode = "quibusdam";
+                    grantType = "unde";
+                    redirectUri = "nulla";
+                    refreshToken = "corrupti";
                     scope = new String[]{{
-                        add("ipsa"),
-                        add("delectus"),
-                        add("tempora"),
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
                         add("suscipit"),
                     }};
                 }};
-            }};            
+                xAmzAlgorithm = "iure";
+                xAmzContentSha256 = "magnam";
+                xAmzCredential = "debitis";
+                xAmzDate = "ipsa";
+                xAmzSecurityToken = "delectus";
+                xAmzSignature = "tempora";
+                xAmzSignedHeaders = "suscipit";
+            }}            
 
             CreateTokenResponse res = sdk.createToken(req);
 
@@ -72,7 +67,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

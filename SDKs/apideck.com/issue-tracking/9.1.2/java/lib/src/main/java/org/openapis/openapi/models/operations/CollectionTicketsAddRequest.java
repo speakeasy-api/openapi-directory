@@ -7,38 +7,60 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CollectionTicketsAddRequest {
-    
-    public CollectionTicketsAddPathParams pathParams;
-    public CollectionTicketsAddRequest withPathParams(CollectionTicketsAddPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public CollectionTicketsAddQueryParams queryParams;
-    public CollectionTicketsAddRequest withQueryParams(CollectionTicketsAddQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public CollectionTicketsAddHeaders headers;
-    public CollectionTicketsAddRequest withHeaders(CollectionTicketsAddHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TicketInput request;
-    public CollectionTicketsAddRequest withRequest(org.openapis.openapi.models.shared.TicketInput request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TicketInput ticketInput;
+    public CollectionTicketsAddRequest withTicketInput(org.openapis.openapi.models.shared.TicketInput ticketInput) {
+        this.ticketInput = ticketInput;
         return this;
     }
     
+    /**
+     * The collection ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
+    public String collectionId;
+    public CollectionTicketsAddRequest withCollectionId(String collectionId) {
+        this.collectionId = collectionId;
+        return this;
+    }
     
-    public CollectionTicketsAddSecurity security;
-    public CollectionTicketsAddRequest withSecurity(CollectionTicketsAddSecurity security) {
-        this.security = security;
+    /**
+     * Include raw response. Mostly used for debugging purposes
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
+    public Boolean raw;
+    public CollectionTicketsAddRequest withRaw(Boolean raw) {
+        this.raw = raw;
+        return this;
+    }
+    
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public CollectionTicketsAddRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
+    
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public CollectionTicketsAddRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
+        return this;
+    }
+    
+    /**
+     * Provide the service id you want to call (e.g., pipedrive). Only needed when a consumer has activated multiple integrations for a Unified API.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-service-id")
+    public String xApideckServiceId;
+    public CollectionTicketsAddRequest withXApideckServiceId(String xApideckServiceId) {
+        this.xApideckServiceId = xApideckServiceId;
         return this;
     }
     

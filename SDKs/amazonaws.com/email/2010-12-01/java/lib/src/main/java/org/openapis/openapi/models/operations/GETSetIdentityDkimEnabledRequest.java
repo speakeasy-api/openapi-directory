@@ -4,20 +4,89 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIdentityDkimEnabledRequest {
-    
-    public GETSetIdentityDkimEnabledQueryParams queryParams;
-    public GETSetIdentityDkimEnabledRequest withQueryParams(GETSetIdentityDkimEnabledQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETSetIdentityDkimEnabledActionEnum action;
+    public GETSetIdentityDkimEnabledRequest withAction(GETSetIdentityDkimEnabledActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * Sets whether DKIM signing is enabled for an identity. Set to &lt;code&gt;true&lt;/code&gt; to enable DKIM signing for this identity; &lt;code&gt;false&lt;/code&gt; to disable it. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DkimEnabled")
+    public Boolean dkimEnabled;
+    public GETSetIdentityDkimEnabledRequest withDkimEnabled(Boolean dkimEnabled) {
+        this.dkimEnabled = dkimEnabled;
+        return this;
+    }
     
-    public GETSetIdentityDkimEnabledHeaders headers;
-    public GETSetIdentityDkimEnabledRequest withHeaders(GETSetIdentityDkimEnabledHeaders headers) {
-        this.headers = headers;
+    /**
+     * The identity for which DKIM signing should be enabled or disabled.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
+    public String identity;
+    public GETSetIdentityDkimEnabledRequest withIdentity(String identity) {
+        this.identity = identity;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETSetIdentityDkimEnabledVersionEnum version;
+    public GETSetIdentityDkimEnabledRequest withVersion(GETSetIdentityDkimEnabledVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETSetIdentityDkimEnabledRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETSetIdentityDkimEnabledRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETSetIdentityDkimEnabledRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETSetIdentityDkimEnabledRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETSetIdentityDkimEnabledRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETSetIdentityDkimEnabledRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETSetIdentityDkimEnabledRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

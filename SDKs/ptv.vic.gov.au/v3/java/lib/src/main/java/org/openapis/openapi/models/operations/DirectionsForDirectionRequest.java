@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectionsForDirectionRequest {
-    
-    public DirectionsForDirectionPathParams pathParams;
-    public DirectionsForDirectionRequest withPathParams(DirectionsForDirectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Your developer id
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
+    public String devid;
+    public DirectionsForDirectionRequest withDevid(String devid) {
+        this.devid = devid;
         return this;
     }
     
+    /**
+     * Identifier of direction of travel; values returned by Directions API - /v3/directions/route/{route_id}
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=direction_id")
+    public Integer directionId;
+    public DirectionsForDirectionRequest withDirectionId(Integer directionId) {
+        this.directionId = directionId;
+        return this;
+    }
     
-    public DirectionsForDirectionQueryParams queryParams;
-    public DirectionsForDirectionRequest withQueryParams(DirectionsForDirectionQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Authentication signature for request
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
+    public String signature;
+    public DirectionsForDirectionRequest withSignature(String signature) {
+        this.signature = signature;
+        return this;
+    }
+    
+    /**
+     * Please ignore
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
+    public String token;
+    public DirectionsForDirectionRequest withToken(String token) {
+        this.token = token;
         return this;
     }
     

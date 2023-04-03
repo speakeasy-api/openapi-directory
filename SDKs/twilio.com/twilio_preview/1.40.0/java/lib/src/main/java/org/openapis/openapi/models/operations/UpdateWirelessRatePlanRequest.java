@@ -7,31 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateWirelessRatePlanRequest {
-    
-    public UpdateWirelessRatePlanPathParams pathParams;
-    public UpdateWirelessRatePlanRequest withPathParams(UpdateWirelessRatePlanPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateWirelessRatePlanUpdateWirelessRatePlanRequest request;
-    public UpdateWirelessRatePlanRequest withRequest(UpdateWirelessRatePlanUpdateWirelessRatePlanRequest request) {
-        this.request = request;
+    public UpdateWirelessRatePlanUpdateWirelessRatePlanRequest requestBody;
+    public UpdateWirelessRatePlanRequest withRequestBody(UpdateWirelessRatePlanUpdateWirelessRatePlanRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateWirelessRatePlanSecurity security;
-    public UpdateWirelessRatePlanRequest withSecurity(UpdateWirelessRatePlanSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateWirelessRatePlanRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateWirelessRatePlanRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

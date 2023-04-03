@@ -31,12 +31,10 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostRequestSubjectErasureSecurity.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostRequestSubjectErasureRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostRequestSubjectErasureResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubjectErasureResponseResultEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubjectErasureResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceError.java
 lib/src/main/java/org/openapis/openapi/models/shared/SubjectErasureByPspReferenceRequest.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeAPIKeyAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 USAGE.md

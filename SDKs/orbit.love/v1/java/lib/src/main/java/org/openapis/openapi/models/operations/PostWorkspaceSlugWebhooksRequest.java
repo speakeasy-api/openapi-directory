@@ -7,24 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWorkspaceSlugWebhooksRequest {
-    
-    public PostWorkspaceSlugWebhooksPathParams pathParams;
-    public PostWorkspaceSlugWebhooksRequest withPathParams(PostWorkspaceSlugWebhooksPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.WebhookSubscription request;
-    public PostWorkspaceSlugWebhooksRequest withRequest(org.openapis.openapi.models.shared.WebhookSubscription request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.WebhookSubscription webhookSubscription;
+    public PostWorkspaceSlugWebhooksRequest withWebhookSubscription(org.openapis.openapi.models.shared.WebhookSubscription webhookSubscription) {
+        this.webhookSubscription = webhookSubscription;
         return this;
     }
     
-    
-    public PostWorkspaceSlugWebhooksSecurity security;
-    public PostWorkspaceSlugWebhooksRequest withSecurity(PostWorkspaceSlugWebhooksSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_slug")
+    public String workspaceSlug;
+    public PostWorkspaceSlugWebhooksRequest withWorkspaceSlug(String workspaceSlug) {
+        this.workspaceSlug = workspaceSlug;
         return this;
     }
     

@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SuppliersGetAccountTransRequest {
-    
-    public SuppliersGetAccountTransPathParams pathParams;
-    public SuppliersGetAccountTransRequest withPathParams(SuppliersGetAccountTransPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Id of Supplier to return account transaction.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
+    public Long itemId;
+    public SuppliersGetAccountTransRequest withItemId(Long itemId) {
+        this.itemId = itemId;
         return this;
     }
     

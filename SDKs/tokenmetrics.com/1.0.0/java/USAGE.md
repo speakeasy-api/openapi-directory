@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.CorrelationQueryParams;
 import org.openapis.openapi.models.operations.CorrelationRequest;
 import org.openapis.openapi.models.operations.CorrelationResponse;
 
@@ -15,11 +14,9 @@ public class Application {
                 .build();
 
             CorrelationRequest req = new CorrelationRequest() {{
-                queryParams = new CorrelationQueryParams() {{
-                    limit = "1000";
-                    tokens = "3375, 3306";
-                }};
-            }};            
+                limit = "1000";
+                tokens = "3375, 3306";
+            }}            
 
             CorrelationResponse res = sdk.correlation(req);
 

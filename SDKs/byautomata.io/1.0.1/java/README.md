@@ -17,7 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.GetContentproSearchQueryParams;
 import org.openapis.openapi.models.operations.GetContentproSearchRequest;
 import org.openapis.openapi.models.operations.GetContentproSearchResponse;
 
@@ -28,10 +27,8 @@ public class Application {
                 .build();
 
             GetContentproSearchRequest req = new GetContentproSearchRequest() {{
-                queryParams = new GetContentproSearchQueryParams() {{
-                    terms = "corrupti";
-                }};
-            }};            
+                terms = "corrupti";
+            }}            
 
             GetContentproSearchResponse res = sdk.contentproSearch.getContentproSearch(req);
 
@@ -45,7 +42,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### contentproSearch

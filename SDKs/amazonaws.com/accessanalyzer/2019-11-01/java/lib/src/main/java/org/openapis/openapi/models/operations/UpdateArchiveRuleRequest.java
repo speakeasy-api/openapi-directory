@@ -7,24 +7,79 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateArchiveRuleRequest {
-    
-    public UpdateArchiveRulePathParams pathParams;
-    public UpdateArchiveRuleRequest withPathParams(UpdateArchiveRulePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateArchiveRuleHeaders headers;
-    public UpdateArchiveRuleRequest withHeaders(UpdateArchiveRuleHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateArchiveRuleRequestBody request;
-    public UpdateArchiveRuleRequest withRequest(UpdateArchiveRuleRequestBody request) {
-        this.request = request;
+    public UpdateArchiveRuleRequestBody requestBody;
+    public UpdateArchiveRuleRequest withRequestBody(UpdateArchiveRuleRequestBody requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public UpdateArchiveRuleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public UpdateArchiveRuleRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public UpdateArchiveRuleRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public UpdateArchiveRuleRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public UpdateArchiveRuleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public UpdateArchiveRuleRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public UpdateArchiveRuleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The name of the analyzer to update the archive rules for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analyzerName")
+    public String analyzerName;
+    public UpdateArchiveRuleRequest withAnalyzerName(String analyzerName) {
+        this.analyzerName = analyzerName;
+        return this;
+    }
+    
+    /**
+     * The name of the rule to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ruleName")
+    public String ruleName;
+    public UpdateArchiveRuleRequest withRuleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
     

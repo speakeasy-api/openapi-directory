@@ -35,7 +35,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdResponse getDocumentIdAspectIdCivixIndexIdCivixDocumentId(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdPathParams.class, baseUrl, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdRequest.class, baseUrl, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -68,7 +68,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringResponse getDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchString(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringPathParams.class, baseUrl, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/search/{searchString}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest.class, baseUrl, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/search/{searchString}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -101,7 +101,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlResponse getDocumentIdAspectIdCivixIndexIdCivixDocumentIdXml(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlPathParams.class, baseUrl, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/xml", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlRequest.class, baseUrl, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/xml", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -134,7 +134,7 @@ public class Document {
      */
     public org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringResponse getDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchString(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringPathParams.class, baseUrl, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/xml/search/{searchString}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdXmlSearchSearchStringRequest.class, baseUrl, "/document/id/{aspectId}/{civixIndexId}/{civixDocumentId}/xml/search/{searchString}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmTestLDAPConnectionRequest {
-    
-    public PostRealmTestLDAPConnectionPathParams pathParams;
-    public PostRealmTestLDAPConnectionRequest withPathParams(PostRealmTestLDAPConnectionPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.TestLdapConnectionRepresentation testLdapConnectionRepresentation;
+    public PostRealmTestLDAPConnectionRequest withTestLdapConnectionRepresentation(org.openapis.openapi.models.shared.TestLdapConnectionRepresentation testLdapConnectionRepresentation) {
+        this.testLdapConnectionRepresentation = testLdapConnectionRepresentation;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TestLdapConnectionRepresentation request;
-    public PostRealmTestLDAPConnectionRequest withRequest(org.openapis.openapi.models.shared.TestLdapConnectionRepresentation request) {
-        this.request = request;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmTestLDAPConnectionRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

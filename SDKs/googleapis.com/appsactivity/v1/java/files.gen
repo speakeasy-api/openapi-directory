@@ -32,7 +32,6 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/AppsactivityActivitiesListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/AppsactivityActivitiesListGroupingStrategyEnum.java
-lib/src/main/java/org/openapis/openapi/models/operations/AppsactivityActivitiesListQueryParams.java
 lib/src/main/java/org/openapis/openapi/models/operations/AppsactivityActivitiesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AppsactivityActivitiesListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListActivitiesResponse.java
@@ -51,6 +50,4 @@ lib/src/main/java/org/openapis/openapi/models/shared/Permission.java
 lib/src/main/java/org/openapis/openapi/models/shared/Move.java
 lib/src/main/java/org/openapis/openapi/models/shared/Parent.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeOauth2c.java
 USAGE.md

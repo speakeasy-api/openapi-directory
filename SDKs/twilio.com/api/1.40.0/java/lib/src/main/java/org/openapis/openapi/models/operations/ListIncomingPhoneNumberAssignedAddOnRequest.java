@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListIncomingPhoneNumberAssignedAddOnRequest {
-    
-    public ListIncomingPhoneNumberAssignedAddOnPathParams pathParams;
-    public ListIncomingPhoneNumberAssignedAddOnRequest withPathParams(ListIncomingPhoneNumberAssignedAddOnPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListIncomingPhoneNumberAssignedAddOnRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListIncomingPhoneNumberAssignedAddOnQueryParams queryParams;
-    public ListIncomingPhoneNumberAssignedAddOnRequest withQueryParams(ListIncomingPhoneNumberAssignedAddOnQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListIncomingPhoneNumberAssignedAddOnRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListIncomingPhoneNumberAssignedAddOnSecurity security;
-    public ListIncomingPhoneNumberAssignedAddOnRequest withSecurity(ListIncomingPhoneNumberAssignedAddOnSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListIncomingPhoneNumberAssignedAddOnRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListIncomingPhoneNumberAssignedAddOnRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListIncomingPhoneNumberAssignedAddOnRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the Phone Number to which the Add-on is assigned.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ResourceSid")
+    public String resourceSid;
+    public ListIncomingPhoneNumberAssignedAddOnRequest withResourceSid(String resourceSid) {
+        this.resourceSid = resourceSid;
         return this;
     }
     

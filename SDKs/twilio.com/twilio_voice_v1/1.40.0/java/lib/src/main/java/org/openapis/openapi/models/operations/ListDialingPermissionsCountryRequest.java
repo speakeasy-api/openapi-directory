@@ -4,27 +4,96 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListDialingPermissionsCountryRequest {
-    
-    public ListDialingPermissionsCountryQueryParams queryParams;
-    public ListDialingPermissionsCountryRequest withQueryParams(ListDialingPermissionsCountryQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Filter to retrieve the country permissions by specifying the continent
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Continent")
+    public String continent;
+    public ListDialingPermissionsCountryRequest withContinent(String continent) {
+        this.continent = continent;
         return this;
     }
     
-    
-    public ListDialingPermissionsCountrySecurity security;
-    public ListDialingPermissionsCountryRequest withSecurity(ListDialingPermissionsCountrySecurity security) {
-        this.security = security;
+    /**
+     * Filter the results by specified [country codes](https://www.itu.int/itudoc/itu-t/ob-lists/icc/e164_763.html)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CountryCode")
+    public String countryCode;
+    public ListDialingPermissionsCountryRequest withCountryCode(String countryCode) {
+        this.countryCode = countryCode;
         return this;
     }
     
+    /**
+     * Filter to retrieve the country permissions with dialing to high-risk special service numbers enabled. Can be: `true` or `false`
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HighRiskSpecialNumbersEnabled")
+    public Boolean highRiskSpecialNumbersEnabled;
+    public ListDialingPermissionsCountryRequest withHighRiskSpecialNumbersEnabled(Boolean highRiskSpecialNumbersEnabled) {
+        this.highRiskSpecialNumbersEnabled = highRiskSpecialNumbersEnabled;
+        return this;
+    }
     
-    public String serverURL;
-    public ListDialingPermissionsCountryRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Filter to retrieve the country permissions with dialing to high-risk [toll fraud](https://www.twilio.com/learn/voice-and-video/toll-fraud) numbers enabled. Can be: `true` or `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HighRiskTollfraudNumbersEnabled")
+    public Boolean highRiskTollfraudNumbersEnabled;
+    public ListDialingPermissionsCountryRequest withHighRiskTollfraudNumbersEnabled(Boolean highRiskTollfraudNumbersEnabled) {
+        this.highRiskTollfraudNumbersEnabled = highRiskTollfraudNumbersEnabled;
+        return this;
+    }
+    
+    /**
+     * Filter to retrieve the country permissions by specifying the [ISO country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IsoCode")
+    public String isoCode;
+    public ListDialingPermissionsCountryRequest withIsoCode(String isoCode) {
+        this.isoCode = isoCode;
+        return this;
+    }
+    
+    /**
+     * Filter to retrieve the country permissions with dialing to low-risk numbers enabled. Can be: `true` or `false`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LowRiskNumbersEnabled")
+    public Boolean lowRiskNumbersEnabled;
+    public ListDialingPermissionsCountryRequest withLowRiskNumbersEnabled(Boolean lowRiskNumbersEnabled) {
+        this.lowRiskNumbersEnabled = lowRiskNumbersEnabled;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListDialingPermissionsCountryRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListDialingPermissionsCountryRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListDialingPermissionsCountryRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

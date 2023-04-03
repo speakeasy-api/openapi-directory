@@ -7,27 +7,43 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerPostAppointmentFormRequest {
-    
-    public DiaryControllerPostAppointmentFormPathParams pathParams;
-    public DiaryControllerPostAppointmentFormRequest withPathParams(DiaryControllerPostAppointmentFormPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DiaryControllerPostAppointmentFormQueryParams queryParams;
-    public DiaryControllerPostAppointmentFormRequest withQueryParams(DiaryControllerPostAppointmentFormQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * The appointment details model
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public org.openapis.openapi.models.shared.DiaryAppointmentDetails request;
-    public DiaryControllerPostAppointmentFormRequest withRequest(org.openapis.openapi.models.shared.DiaryAppointmentDetails request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails;
+    public DiaryControllerPostAppointmentFormRequest withDiaryAppointmentDetails(org.openapis.openapi.models.shared.DiaryAppointmentDetails diaryAppointmentDetails) {
+        this.diaryAppointmentDetails = diaryAppointmentDetails;
+        return this;
+    }
+    
+    /**
+     * Sales or Lettings property?
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lettings")
+    public Boolean lettings;
+    public DiaryControllerPostAppointmentFormRequest withLettings(Boolean lettings) {
+        this.lettings = lettings;
+        return this;
+    }
+    
+    /**
+     * The unique property identifier (Sales or Lettings)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=propertyIdentifier")
+    public String[] propertyIdentifier;
+    public DiaryControllerPostAppointmentFormRequest withPropertyIdentifier(String[] propertyIdentifier) {
+        this.propertyIdentifier = propertyIdentifier;
+        return this;
+    }
+    
+    /**
+     * The unique client short-name
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
+    public String shortName;
+    public DiaryControllerPostAppointmentFormRequest withShortName(String shortName) {
+        this.shortName = shortName;
         return this;
     }
     

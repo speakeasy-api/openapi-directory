@@ -17,8 +17,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateApiPathParams;
-import org.openapis.openapi.models.operations.AssociateApiHeaders;
 import org.openapis.openapi.models.operations.AssociateApiRequestBody;
 import org.openapis.openapi.models.operations.AssociateApiRequest;
 import org.openapis.openapi.models.operations.AssociateApiResponse;
@@ -28,29 +26,23 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    hmac = new SchemeHmac() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+                    hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
             AssociateApiRequest req = new AssociateApiRequest() {{
-                pathParams = new AssociateApiPathParams() {{
-                    domainName = "corrupti";
+                requestBody = new AssociateApiRequestBody() {{
+                    apiId = "corrupti";
                 }};
-                headers = new AssociateApiHeaders() {{
-                    xAmzAlgorithm = "provident";
-                    xAmzContentSha256 = "distinctio";
-                    xAmzCredential = "quibusdam";
-                    xAmzDate = "unde";
-                    xAmzSecurityToken = "nulla";
-                    xAmzSignature = "corrupti";
-                    xAmzSignedHeaders = "illum";
-                }};
-                request = new AssociateApiRequestBody() {{
-                    apiId = "vel";
-                }};
-            }};            
+                xAmzAlgorithm = "provident";
+                xAmzContentSha256 = "distinctio";
+                xAmzCredential = "quibusdam";
+                xAmzDate = "unde";
+                xAmzSecurityToken = "nulla";
+                xAmzSignature = "corrupti";
+                xAmzSignedHeaders = "illum";
+                domainName = "vel";
+            }}            
 
             AssociateApiResponse res = sdk.associateApi(req);
 
@@ -64,7 +56,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 ### SDK SDK
 

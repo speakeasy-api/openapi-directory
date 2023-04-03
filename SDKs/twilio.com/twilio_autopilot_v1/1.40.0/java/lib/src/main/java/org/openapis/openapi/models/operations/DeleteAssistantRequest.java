@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAssistantRequest {
-    
-    public DeleteAssistantPathParams pathParams;
-    public DeleteAssistantRequest withPathParams(DeleteAssistantPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public DeleteAssistantSecurity security;
-    public DeleteAssistantRequest withSecurity(DeleteAssistantSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteAssistantRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Assistant resource to delete.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public DeleteAssistantRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

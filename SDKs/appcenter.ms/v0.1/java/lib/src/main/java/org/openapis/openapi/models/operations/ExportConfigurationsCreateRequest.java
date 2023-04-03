@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportConfigurationsCreateRequest {
-    
-    public ExportConfigurationsCreatePathParams pathParams;
-    public ExportConfigurationsCreateRequest withPathParams(ExportConfigurationsCreatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Export configurations.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public ExportConfigurationsCreateRequestBody request;
-    public ExportConfigurationsCreateRequest withRequest(ExportConfigurationsCreateRequestBody request) {
-        this.request = request;
+    public ExportConfigurationsCreateRequestBody requestBody;
+    public ExportConfigurationsCreateRequest withRequestBody(ExportConfigurationsCreateRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public ExportConfigurationsCreateRequest withAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
     
-    public ExportConfigurationsCreateSecurity security;
-    public ExportConfigurationsCreateRequest withSecurity(ExportConfigurationsCreateSecurity security) {
-        this.security = security;
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public ExportConfigurationsCreateRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
         return this;
     }
     

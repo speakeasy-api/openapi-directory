@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubmissionsSubmissionIdRequest {
-    
-    public GetSubmissionsSubmissionIdPathParams pathParams;
-    public GetSubmissionsSubmissionIdRequest withPathParams(GetSubmissionsSubmissionIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * `id` for a specific submission
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=submission_id")
+    public String submissionId;
+    public GetSubmissionsSubmissionIdRequest withSubmissionId(String submissionId) {
+        this.submissionId = submissionId;
         return this;
     }
     

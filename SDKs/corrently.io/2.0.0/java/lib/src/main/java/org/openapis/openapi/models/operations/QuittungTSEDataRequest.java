@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuittungTSEDataRequest {
-    
-    public QuittungTSEDataQueryParams queryParams;
-    public QuittungTSEDataRequest withQueryParams(QuittungTSEDataQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Quittung Identifier  (serialnumber generated during receipt generation process)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
+    public String account;
+    public QuittungTSEDataRequest withAccount(String account) {
+        this.account = account;
         return this;
     }
     

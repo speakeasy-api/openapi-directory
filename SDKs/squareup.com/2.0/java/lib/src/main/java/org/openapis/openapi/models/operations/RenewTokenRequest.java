@@ -7,29 +7,25 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenewTokenRequest {
-    
-    public RenewTokenPathParams pathParams;
-    public RenewTokenRequest withPathParams(RenewTokenPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * An object containing the fields to POST for the request.
      * 
      * See the corresponding object definition for field details.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.RenewTokenRequest request;
-    public RenewTokenRequest withRequest(org.openapis.openapi.models.shared.RenewTokenRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.RenewTokenRequest renewTokenRequest;
+    public RenewTokenRequest withRenewTokenRequest(org.openapis.openapi.models.shared.RenewTokenRequest renewTokenRequest) {
+        this.renewTokenRequest = renewTokenRequest;
         return this;
     }
     
-    
-    public RenewTokenSecurity security;
-    public RenewTokenRequest withSecurity(RenewTokenSecurity security) {
-        this.security = security;
+    /**
+     * Your application ID, available from the [developer dashboard](https://developer.squareup.com/apps).
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=client_id")
+    public String clientId;
+    public RenewTokenRequest withClientId(String clientId) {
+        this.clientId = clientId;
         return this;
     }
     

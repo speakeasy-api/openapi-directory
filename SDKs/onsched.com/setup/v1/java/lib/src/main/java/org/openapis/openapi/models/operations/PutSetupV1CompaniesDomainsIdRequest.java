@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1CompaniesDomainsIdRequest {
-    
-    public PutSetupV1CompaniesDomainsIdPathParams pathParams;
-    public PutSetupV1CompaniesDomainsIdRequest withPathParams(PutSetupV1CompaniesDomainsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Company Domain Update Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.CompanyDomainUpdateModel request;
-    public PutSetupV1CompaniesDomainsIdRequest withRequest(org.openapis.openapi.models.shared.CompanyDomainUpdateModel request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.CompanyDomainUpdateModel companyDomainUpdateModel;
+    public PutSetupV1CompaniesDomainsIdRequest withCompanyDomainUpdateModel(org.openapis.openapi.models.shared.CompanyDomainUpdateModel companyDomainUpdateModel) {
+        this.companyDomainUpdateModel = companyDomainUpdateModel;
+        return this;
+    }
+    
+    /**
+     * id of companyDomain object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutSetupV1CompaniesDomainsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

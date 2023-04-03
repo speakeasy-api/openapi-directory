@@ -35,25 +35,26 @@ public class Projects {
     /**
      * Creates a new HMAC key for the specified service account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateResponse storageProjectsHmacKeysCreate(org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateResponse storageProjectsHmacKeysCreate(org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateRequest request, org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreatePathParams.class, baseUrl, "/projects/{projectId}/hmacKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateRequest.class, baseUrl, "/projects/{projectId}/hmacKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -80,25 +81,26 @@ public class Projects {
     /**
      * Deletes an HMAC key.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteResponse storageProjectsHmacKeysDelete(org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteResponse storageProjectsHmacKeysDelete(org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteRequest request, org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeletePathParams.class, baseUrl, "/projects/{projectId}/hmacKeys/{accessId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteRequest.class, baseUrl, "/projects/{projectId}/hmacKeys/{accessId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -119,25 +121,26 @@ public class Projects {
     /**
      * Retrieves an HMAC key's metadata
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetResponse storageProjectsHmacKeysGet(org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetResponse storageProjectsHmacKeysGet(org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetRequest request, org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetPathParams.class, baseUrl, "/projects/{projectId}/hmacKeys/{accessId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetRequest.class, baseUrl, "/projects/{projectId}/hmacKeys/{accessId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -164,25 +167,26 @@ public class Projects {
     /**
      * Retrieves a list of HMAC keys matching the criteria.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysListResponse storageProjectsHmacKeysList(org.openapis.openapi.models.operations.StorageProjectsHmacKeysListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysListResponse storageProjectsHmacKeysList(org.openapis.openapi.models.operations.StorageProjectsHmacKeysListRequest request, org.openapis.openapi.models.operations.StorageProjectsHmacKeysListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysListPathParams.class, baseUrl, "/projects/{projectId}/hmacKeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysListRequest.class, baseUrl, "/projects/{projectId}/hmacKeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -209,27 +213,28 @@ public class Projects {
     /**
      * Updates the state of an HMAC key. See the HMAC Key resource descriptor for valid states.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateResponse storageProjectsHmacKeysUpdate(org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateResponse storageProjectsHmacKeysUpdate(org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateRequest request, org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdatePathParams.class, baseUrl, "/projects/{projectId}/hmacKeys/{accessId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateRequest.class, baseUrl, "/projects/{projectId}/hmacKeys/{accessId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hmacKeyMetadata", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsHmacKeysUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -256,25 +261,26 @@ public class Projects {
     /**
      * Get the email address of this project's Google Cloud Storage service account.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetResponse storageProjectsServiceAccountGet(org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetResponse storageProjectsServiceAccountGet(org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetRequest request, org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetPathParams.class, baseUrl, "/projects/{projectId}/serviceAccount", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetRequest.class, baseUrl, "/projects/{projectId}/serviceAccount", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.StorageProjectsServiceAccountGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

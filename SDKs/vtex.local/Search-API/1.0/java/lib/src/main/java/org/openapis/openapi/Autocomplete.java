@@ -47,9 +47,23 @@ public class Autocomplete {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.AutoCompleteResponse autoComplete(org.openapis.openapi.models.operations.AutoCompleteRequest request) throws Exception {
+        return this.autoComplete(request, null);
+    }
+
+    /**
+     * Product Search Autocomplete
+     * Retrieves product's information related to the searched string.
+     * `{{searchString}} is the part of string the user is looking for.
+     * E.g.: `ref` | `refrig` | `refrigerator`
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AutoCompleteResponse autoComplete(org.openapis.openapi.models.operations.AutoCompleteRequest request, String serverURL) throws Exception {
         String baseUrl = AUTO_COMPLETE_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/buscaautocomplete");
@@ -58,13 +72,13 @@ public class Autocomplete {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AutoCompleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AutoCompleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

@@ -4,27 +4,75 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateNetworkSettingsRequest {
-    
-    public AssociateNetworkSettingsPathParams pathParams;
-    public AssociateNetworkSettingsRequest withPathParams(AssociateNetworkSettingsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public AssociateNetworkSettingsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
-    
-    public AssociateNetworkSettingsQueryParams queryParams;
-    public AssociateNetworkSettingsRequest withQueryParams(AssociateNetworkSettingsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public AssociateNetworkSettingsRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public AssociateNetworkSettingsRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
     
-    public AssociateNetworkSettingsHeaders headers;
-    public AssociateNetworkSettingsRequest withHeaders(AssociateNetworkSettingsHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public AssociateNetworkSettingsRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public AssociateNetworkSettingsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public AssociateNetworkSettingsRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public AssociateNetworkSettingsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The ARN of the network settings.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=networkSettingsArn")
+    public String networkSettingsArn;
+    public AssociateNetworkSettingsRequest withNetworkSettingsArn(String networkSettingsArn) {
+        this.networkSettingsArn = networkSettingsArn;
+        return this;
+    }
+    
+    /**
+     * The ARN of the web portal.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portalArn")
+    public String portalArn;
+    public AssociateNetworkSettingsRequest withPortalArn(String portalArn) {
+        this.portalArn = portalArn;
         return this;
     }
     

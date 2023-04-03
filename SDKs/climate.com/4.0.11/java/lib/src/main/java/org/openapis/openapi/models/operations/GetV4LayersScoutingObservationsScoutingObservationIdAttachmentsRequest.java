@@ -4,27 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest {
-    
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsPathParams pathParams;
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withPathParams(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Max number of results to return per batch.  Must be between 1 and 100 inclusive.  Defaults to 100.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Limit")
+    public Integer xLimit;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withXLimit(Integer xLimit) {
+        this.xLimit = xLimit;
         return this;
     }
     
-    
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsHeaders headers;
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withHeaders(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsHeaders headers) {
-        this.headers = headers;
+    /**
+     * Opaque string which allows for fetching the next batch of results.  Can be used to poll for changes.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Next-Token")
+    public String xNextToken;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withXNextToken(String xNextToken) {
+        this.xNextToken = xNextToken;
         return this;
     }
     
-    
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsSecurity security;
-    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withSecurity(GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsSecurity security) {
-        this.security = security;
+    /**
+     * Unique identifier of the Scouting Observation.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scoutingObservationId")
+    public String scoutingObservationId;
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsRequest withScoutingObservationId(String scoutingObservationId) {
+        this.scoutingObservationId = scoutingObservationId;
         return this;
     }
     

@@ -34,27 +34,28 @@ public class Services {
     /**
      * For service producers, provisions a new subnet in a peered service's shared VPC network in the requested region and with the requested size that's expressed as a CIDR range (number of leading bits of ipV4 network mask). The method checks against the assigned allocated ranges to find a non-conflicting IP address range. The method will reuse a subnet if subsequent calls contain the same subnet name, region, and prefix length. This method will make producer's tenant project to be a shared VPC service project as needed.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkResponse servicenetworkingServicesAddSubnetwork(org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkResponse servicenetworkingServicesAddSubnetwork(org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkPathParams.class, baseUrl, "/v1/{parent}:addSubnetwork", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkRequest.class, baseUrl, "/v1/{parent}:addSubnetwork", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addSubnetworkRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesAddSubnetworkRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -81,27 +82,28 @@ public class Services {
     /**
      * Creates a private connection that establishes a VPC Network Peering connection to a VPC network in the service producer's organization. The administrator of the service consumer's VPC network invokes this method. The administrator must assign one or more allocated IP ranges for provisioning subnetworks in the service producer's VPC network. This connection is used for all supported services in the service producer's organization, so it only needs to be invoked once.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateResponse servicenetworkingServicesConnectionsCreate(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateResponse servicenetworkingServicesConnectionsCreate(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreatePathParams.class, baseUrl, "/v1/{parent}/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateRequest.class, baseUrl, "/v1/{parent}/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "connectionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -128,27 +130,28 @@ public class Services {
     /**
      * Deletes a private service access connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionResponse servicenetworkingServicesConnectionsDeleteConnection(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionResponse servicenetworkingServicesConnectionsDeleteConnection(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deleteConnectionRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsDeleteConnectionRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -175,25 +178,26 @@ public class Services {
     /**
      * List the private connections that are configured in a service consumer's VPC network.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListResponse servicenetworkingServicesConnectionsList(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListResponse servicenetworkingServicesConnectionsList(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListPathParams.class, baseUrl, "/v1/{parent}/connections", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListRequest.class, baseUrl, "/v1/{parent}/connections", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -220,27 +224,28 @@ public class Services {
     /**
      * Updates the allocated ranges that are assigned to a connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchResponse servicenetworkingServicesConnectionsPatch(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchResponse servicenetworkingServicesConnectionsPatch(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "connectionInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesConnectionsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -267,27 +272,28 @@ public class Services {
     /**
      * Disables VPC service controls for a connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsResponse servicenetworkingServicesDisableVpcServiceControls(org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsResponse servicenetworkingServicesDisableVpcServiceControls(org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsPathParams.class, baseUrl, "/v1/{parent}:disableVpcServiceControls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsRequest.class, baseUrl, "/v1/{parent}:disableVpcServiceControls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "disableVpcServiceControlsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDisableVpcServiceControlsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -314,27 +320,28 @@ public class Services {
     /**
      * Service producers can use this method to add DNS record sets to private DNS zones in the shared producer host project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddResponse servicenetworkingServicesDnsRecordSetsAdd(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddResponse servicenetworkingServicesDnsRecordSetsAdd(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddPathParams.class, baseUrl, "/v1/{parent}/dnsRecordSets:add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddRequest.class, baseUrl, "/v1/{parent}/dnsRecordSets:add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addDnsRecordSetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -361,27 +368,28 @@ public class Services {
     /**
      * Service producers can use this method to remove DNS record sets from private DNS zones in the shared producer host project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveResponse servicenetworkingServicesDnsRecordSetsRemove(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveResponse servicenetworkingServicesDnsRecordSetsRemove(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemovePathParams.class, baseUrl, "/v1/{parent}/dnsRecordSets:remove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveRequest.class, baseUrl, "/v1/{parent}/dnsRecordSets:remove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeDnsRecordSetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsRemoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -408,27 +416,28 @@ public class Services {
     /**
      * Service producers can use this method to update DNS record sets from private DNS zones in the shared producer host project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateResponse servicenetworkingServicesDnsRecordSetsUpdate(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateResponse servicenetworkingServicesDnsRecordSetsUpdate(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdatePathParams.class, baseUrl, "/v1/{parent}/dnsRecordSets:update", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateRequest.class, baseUrl, "/v1/{parent}/dnsRecordSets:update", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateDnsRecordSetRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsRecordSetsUpdateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -455,27 +464,28 @@ public class Services {
     /**
      * Service producers can use this method to add private DNS zones in the shared producer host project and matching peering zones in the consumer project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddResponse servicenetworkingServicesDnsZonesAdd(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddResponse servicenetworkingServicesDnsZonesAdd(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddPathParams.class, baseUrl, "/v1/{parent}/dnsZones:add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddRequest.class, baseUrl, "/v1/{parent}/dnsZones:add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addDnsZoneRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -502,27 +512,28 @@ public class Services {
     /**
      * Service producers can use this method to remove private DNS zones in the shared producer host project and matching peering zones in the consumer project.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveResponse servicenetworkingServicesDnsZonesRemove(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveResponse servicenetworkingServicesDnsZonesRemove(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemovePathParams.class, baseUrl, "/v1/{parent}/dnsZones:remove", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveRequest.class, baseUrl, "/v1/{parent}/dnsZones:remove", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "removeDnsZoneRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesDnsZonesRemoveRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -549,27 +560,28 @@ public class Services {
     /**
      * Enables VPC service controls for a connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsResponse servicenetworkingServicesEnableVpcServiceControls(org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsResponse servicenetworkingServicesEnableVpcServiceControls(org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsPathParams.class, baseUrl, "/v1/{parent}:enableVpcServiceControls", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsRequest.class, baseUrl, "/v1/{parent}:enableVpcServiceControls", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "enableVpcServiceControlsRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesEnableVpcServiceControlsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -596,25 +608,26 @@ public class Services {
     /**
      * Service producers use this method to get the configuration of their connection including the import/export of custom routes and subnetwork routes with public IP.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetResponse servicenetworkingServicesProjectsGlobalNetworksGet(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetResponse servicenetworkingServicesProjectsGlobalNetworksGet(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetPathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -641,27 +654,28 @@ public class Services {
     /**
      * Creates a peered DNS domain which sends requests for records in given namespace originating in the service producer VPC network to the consumer VPC network to be resolved.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateResponse servicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreate(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateResponse servicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreate(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreatePathParams.class, baseUrl, "/v1/{parent}/peeredDnsDomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateRequest.class, baseUrl, "/v1/{parent}/peeredDnsDomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "peeredDnsDomain", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -688,25 +702,26 @@ public class Services {
     /**
      * Deletes a peered DNS domain.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteResponse servicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDelete(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteResponse servicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDelete(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeletePathParams.class, baseUrl, "/v1/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsDeleteRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -733,25 +748,26 @@ public class Services {
     /**
      * Lists peered DNS domains for a connection.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse servicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsList(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListResponse servicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsList(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListPathParams.class, baseUrl, "/v1/{parent}/peeredDnsDomains", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListRequest.class, baseUrl, "/v1/{parent}/peeredDnsDomains", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksPeeredDnsDomainsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -778,27 +794,28 @@ public class Services {
     /**
      * Service producers use this method to update the configuration of their connection including the import/export of custom routes and subnetwork routes with public IP.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigResponse servicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfig(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigResponse servicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfig(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigPathParams.class, baseUrl, "/v1/{parent}:updateConsumerConfig", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigRequest.class, baseUrl, "/v1/{parent}:updateConsumerConfig", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateConsumerConfigRequestInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesProjectsGlobalNetworksUpdateConsumerConfigRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -825,27 +842,28 @@ public class Services {
     /**
      * Service producers can use this method to add roles in the shared VPC host project. Each role is bound to the provided member. Each role must be selected from within an allowlisted set of roles. Each role is applied at only the granularity specified in the allowlist.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddResponse servicenetworkingServicesRolesAdd(org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddResponse servicenetworkingServicesRolesAdd(org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddPathParams.class, baseUrl, "/v1/{parent}/roles:add", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddRequest.class, baseUrl, "/v1/{parent}/roles:add", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "addRolesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesRolesAddRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -872,27 +890,28 @@ public class Services {
     /**
      * Service producers can use this method to find a currently unused range within consumer allocated ranges. This returned range is not reserved, and not guaranteed to remain unused. It will validate previously provided allocated ranges, find non-conflicting sub-range of requested size (expressed in number of leading bits of ipv4 network mask, as in CIDR range notation).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeResponse servicenetworkingServicesSearchRange(org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeResponse servicenetworkingServicesSearchRange(org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangePathParams.class, baseUrl, "/v1/{parent}:searchRange", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeRequest.class, baseUrl, "/v1/{parent}:searchRange", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "searchRangeRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesSearchRangeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -919,27 +938,28 @@ public class Services {
     /**
      * Service producers use this method to validate if the consumer provided network, project and requested range are valid. This allows them to use a fail-fast mechanism for consumer requests, and not have to wait for AddSubnetwork operation completion to determine if user request is invalid.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ServicenetworkingServicesValidateResponse servicenetworkingServicesValidate(org.openapis.openapi.models.operations.ServicenetworkingServicesValidateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ServicenetworkingServicesValidateResponse servicenetworkingServicesValidate(org.openapis.openapi.models.operations.ServicenetworkingServicesValidateRequest request, org.openapis.openapi.models.operations.ServicenetworkingServicesValidateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesValidatePathParams.class, baseUrl, "/v1/{parent}:validate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ServicenetworkingServicesValidateRequest.class, baseUrl, "/v1/{parent}:validate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "validateConsumerConfigRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesValidateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ServicenetworkingServicesValidateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

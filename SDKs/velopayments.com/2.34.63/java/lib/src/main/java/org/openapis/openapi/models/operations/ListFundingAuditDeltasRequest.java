@@ -4,13 +4,41 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListFundingAuditDeltasRequest {
+    /**
+     * Page number. Default is 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Integer page;
+    public ListFundingAuditDeltasRequest withPage(Integer page) {
+        this.page = page;
+        return this;
+    }
     
-    public ListFundingAuditDeltasQueryParams queryParams;
-    public ListFundingAuditDeltasRequest withQueryParams(ListFundingAuditDeltasQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of results to return in a page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Integer pageSize;
+    public ListFundingAuditDeltasRequest withPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payorId")
+    public String payorId;
+    public ListFundingAuditDeltasRequest withPayorId(String payorId) {
+        this.payorId = payorId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedSince")
+    public OffsetDateTime updatedSince;
+    public ListFundingAuditDeltasRequest withUpdatedSince(OffsetDateTime updatedSince) {
+        this.updatedSince = updatedSince;
         return this;
     }
     

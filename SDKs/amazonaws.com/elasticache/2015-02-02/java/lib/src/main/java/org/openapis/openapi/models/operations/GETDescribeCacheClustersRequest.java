@@ -4,20 +4,119 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeCacheClustersRequest {
-    
-    public GETDescribeCacheClustersQueryParams queryParams;
-    public GETDescribeCacheClustersRequest withQueryParams(GETDescribeCacheClustersQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETDescribeCacheClustersActionEnum action;
+    public GETDescribeCacheClustersRequest withAction(GETDescribeCacheClustersActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * The user-supplied cluster identifier. If this parameter is specified, only information about that specific cluster is returned. This parameter isn't case sensitive.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheClusterId")
+    public String cacheClusterId;
+    public GETDescribeCacheClustersRequest withCacheClusterId(String cacheClusterId) {
+        this.cacheClusterId = cacheClusterId;
+        return this;
+    }
     
-    public GETDescribeCacheClustersHeaders headers;
-    public GETDescribeCacheClustersRequest withHeaders(GETDescribeCacheClustersHeaders headers) {
-        this.headers = headers;
+    /**
+     * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by &lt;code&gt;MaxRecords&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
+    public String marker;
+    public GETDescribeCacheClustersRequest withMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    
+    /**
+     * &lt;p&gt;The maximum number of records to include in the response. If more records exist than the specified &lt;code&gt;MaxRecords&lt;/code&gt; value, a marker is included in the response so that the remaining results can be retrieved.&lt;/p&gt; &lt;p&gt;Default: 100&lt;/p&gt; &lt;p&gt;Constraints: minimum 20; maximum 100.&lt;/p&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
+    public Long maxRecords;
+    public GETDescribeCacheClustersRequest withMaxRecords(Long maxRecords) {
+        this.maxRecords = maxRecords;
+        return this;
+    }
+    
+    /**
+     * An optional flag that can be included in the &lt;code&gt;DescribeCacheCluster&lt;/code&gt; request to show only nodes (API/CLI: clusters) that are not members of a replication group. In practice, this mean Memcached and single node Redis clusters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowCacheClustersNotInReplicationGroups")
+    public Boolean showCacheClustersNotInReplicationGroups;
+    public GETDescribeCacheClustersRequest withShowCacheClustersNotInReplicationGroups(Boolean showCacheClustersNotInReplicationGroups) {
+        this.showCacheClustersNotInReplicationGroups = showCacheClustersNotInReplicationGroups;
+        return this;
+    }
+    
+    /**
+     * An optional flag that can be included in the &lt;code&gt;DescribeCacheCluster&lt;/code&gt; request to retrieve information about the individual cache nodes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ShowCacheNodeInfo")
+    public Boolean showCacheNodeInfo;
+    public GETDescribeCacheClustersRequest withShowCacheNodeInfo(Boolean showCacheNodeInfo) {
+        this.showCacheNodeInfo = showCacheNodeInfo;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETDescribeCacheClustersVersionEnum version;
+    public GETDescribeCacheClustersRequest withVersion(GETDescribeCacheClustersVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETDescribeCacheClustersRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETDescribeCacheClustersRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETDescribeCacheClustersRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETDescribeCacheClustersRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETDescribeCacheClustersRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETDescribeCacheClustersRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETDescribeCacheClustersRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

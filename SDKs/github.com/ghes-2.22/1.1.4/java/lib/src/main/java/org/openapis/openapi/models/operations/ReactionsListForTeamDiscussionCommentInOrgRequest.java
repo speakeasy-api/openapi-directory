@@ -4,20 +4,67 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionCommentInOrgRequest {
-    
-    public ReactionsListForTeamDiscussionCommentInOrgPathParams pathParams;
-    public ReactionsListForTeamDiscussionCommentInOrgRequest withPathParams(ReactionsListForTeamDiscussionCommentInOrgPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
+    public Long commentNumber;
+    public ReactionsListForTeamDiscussionCommentInOrgRequest withCommentNumber(Long commentNumber) {
+        this.commentNumber = commentNumber;
         return this;
     }
     
+    /**
+     * Returns a single [reaction type](https://docs.github.com/enterprise-server@2.22/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion comment.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForTeamDiscussionCommentInOrgContentEnum content;
+    public ReactionsListForTeamDiscussionCommentInOrgRequest withContent(ReactionsListForTeamDiscussionCommentInOrgContentEnum content) {
+        this.content = content;
+        return this;
+    }
     
-    public ReactionsListForTeamDiscussionCommentInOrgQueryParams queryParams;
-    public ReactionsListForTeamDiscussionCommentInOrgRequest withQueryParams(ReactionsListForTeamDiscussionCommentInOrgQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsListForTeamDiscussionCommentInOrgRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
+    public String org;
+    public ReactionsListForTeamDiscussionCommentInOrgRequest withOrg(String org) {
+        this.org = org;
+        return this;
+    }
+    
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForTeamDiscussionCommentInOrgRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForTeamDiscussionCommentInOrgRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * team_slug parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
+    public String teamSlug;
+    public ReactionsListForTeamDiscussionCommentInOrgRequest withTeamSlug(String teamSlug) {
+        this.teamSlug = teamSlug;
         return this;
     }
     

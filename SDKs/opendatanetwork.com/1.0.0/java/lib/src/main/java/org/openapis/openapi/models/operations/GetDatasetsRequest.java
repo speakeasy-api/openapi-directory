@@ -4,20 +4,70 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDatasetsRequest {
-    
-    public GetDatasetsQueryParams queryParams;
-    public GetDatasetsRequest withQueryParams(GetDatasetsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * e.g. cQovpGcdUT1CSzgYk0KPYdAI0
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-App-Token")
+    public String xAppToken;
+    public GetDatasetsRequest withXAppToken(String xAppToken) {
+        this.xAppToken = xAppToken;
         return this;
     }
     
+    /**
+     * The [Socrata App Token](https://dev.socrata.com/docs/app-tokens.html) to be
+     * used with your request. The `app_token` parameter is required if an app token is not passed via the `X-App-Token` HTTP header. Clients must [register for their own app tokens](https://dev.socrata.com/docs/app-tokens.html).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_token")
+    public String appToken;
+    public GetDatasetsRequest withAppToken(String appToken) {
+        this.appToken = appToken;
+        return this;
+    }
     
-    public GetDatasetsHeaders headers;
-    public GetDatasetsRequest withHeaders(GetDatasetsHeaders headers) {
-        this.headers = headers;
+    /**
+     * If included, the search terms of the dataset
+     * will be used in the query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dataset_id")
+    public String datasetId;
+    public GetDatasetsRequest withDatasetId(String datasetId) {
+        this.datasetId = datasetId;
+        return this;
+    }
+    
+    /**
+     * Entities to use in formulating the query.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=entity_id")
+    public String entityId;
+    public GetDatasetsRequest withEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    
+    /**
+     * Maximum number of results to return.
+     * Must be an integer from 0 to 50000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Double limit;
+    public GetDatasetsRequest withLimit(Double limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * Number of results to skip.
+     * Used for pagination.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Double offset;
+    public GetDatasetsRequest withOffset(Double offset) {
+        this.offset = offset;
         return this;
     }
     

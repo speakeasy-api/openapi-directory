@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransportationIncentivesLawsIdRequest {
-    
-    public TransportationIncentivesLawsIdPathParams pathParams;
-    public TransportationIncentivesLawsIdRequest withPathParams(TransportationIncentivesLawsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API Key
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
+    public String apiKey;
+    public TransportationIncentivesLawsIdRequest withApiKey(String apiKey) {
+        this.apiKey = apiKey;
         return this;
     }
     
+    /**
+     * The 'true' value returns a record no matter its status (current, expired, archived, or repealed). The default 'false' value returns only current laws and incentives.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expired")
+    public Boolean expired;
+    public TransportationIncentivesLawsIdRequest withExpired(Boolean expired) {
+        this.expired = expired;
+        return this;
+    }
     
-    public TransportationIncentivesLawsIdQueryParams queryParams;
-    public TransportationIncentivesLawsIdRequest withQueryParams(TransportationIncentivesLawsIdQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the law that you are searching
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public TransportationIncentivesLawsIdRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * Response format
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=output_format")
+    public TransportationIncentivesLawsIdOutputFormatEnum outputFormat;
+    public TransportationIncentivesLawsIdRequest withOutputFormat(TransportationIncentivesLawsIdOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * Include points of contacts in the return value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=poc")
+    public Boolean poc;
+    public TransportationIncentivesLawsIdRequest withPoc(Boolean poc) {
+        this.poc = poc;
         return this;
     }
     

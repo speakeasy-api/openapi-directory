@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateBankAccountRequest {
-    
-    public UpdateBankAccountPathParams pathParams;
-    public UpdateBankAccountRequest withPathParams(UpdateBankAccountPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public UpdateBankAccountHeaders headers;
-    public UpdateBankAccountRequest withHeaders(UpdateBankAccountHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateBankAccountUpdateRequestBodyForBankAccount request;
-    public UpdateBankAccountRequest withRequest(UpdateBankAccountUpdateRequestBodyForBankAccount request) {
-        this.request = request;
+    public UpdateBankAccountUpdateRequestBodyForBankAccount requestBody;
+    public UpdateBankAccountRequest withRequestBody(UpdateBankAccountUpdateRequestBodyForBankAccount requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Bank Account Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bank_account_id")
+    public String bankAccountId;
+    public UpdateBankAccountRequest withBankAccountId(String bankAccountId) {
+        this.bankAccountId = bankAccountId;
+        return this;
+    }
     
-    public UpdateBankAccountSecurity security;
-    public UpdateBankAccountRequest withSecurity(UpdateBankAccountSecurity security) {
-        this.security = security;
+    /**
+     * ApiSecretKey
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public UpdateBankAccountRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

@@ -40,12 +40,12 @@ public class MeetingSettings {
      */
     public org.openapis.openapi.models.operations.PutV2MeetingsSettingsIdJsonResponse putV2MeetingsSettingsIdJson(org.openapis.openapi.models.operations.PutV2MeetingsSettingsIdJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2MeetingsSettingsIdJsonPathParams.class, baseUrl, "/v2/meetings/settings/{id}.json", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutV2MeetingsSettingsIdJsonRequest.class, baseUrl, "/v2/meetings/settings/{id}.json", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "form");
         req.setBody(serializedRequestBody);
         
         

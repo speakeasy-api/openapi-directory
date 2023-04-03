@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchGroupsRequest {
+    /**
+     * Group name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[name]")
+    public String filterName;
+    public FetchGroupsRequest withFilterName(String filterName) {
+        this.filterName = filterName;
+        return this;
+    }
     
-    public FetchGroupsQueryParams queryParams;
-    public FetchGroupsRequest withQueryParams(FetchGroupsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Organization identifier
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[organization]")
+    public String filterOrganization;
+    public FetchGroupsRequest withFilterOrganization(String filterOrganization) {
+        this.filterOrganization = filterOrganization;
         return this;
     }
     

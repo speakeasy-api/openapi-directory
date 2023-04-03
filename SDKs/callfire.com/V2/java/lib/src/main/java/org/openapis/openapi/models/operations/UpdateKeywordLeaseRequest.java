@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateKeywordLeaseRequest {
-    
-    public UpdateKeywordLeasePathParams pathParams;
-    public UpdateKeywordLeaseRequest withPathParams(UpdateKeywordLeasePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * A keyword lease object
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.KeywordLease request;
-    public UpdateKeywordLeaseRequest withRequest(org.openapis.openapi.models.shared.KeywordLease request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.KeywordLease keywordLease;
+    public UpdateKeywordLeaseRequest withKeywordLease(org.openapis.openapi.models.shared.KeywordLease keywordLease) {
+        this.keywordLease = keywordLease;
         return this;
     }
     
-    
-    public UpdateKeywordLeaseSecurity security;
-    public UpdateKeywordLeaseRequest withSecurity(UpdateKeywordLeaseSecurity security) {
-        this.security = security;
+    /**
+     * To update a keyword lease
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keyword")
+    public String keyword;
+    public UpdateKeywordLeaseRequest withKeyword(String keyword) {
+        this.keyword = keyword;
         return this;
     }
     

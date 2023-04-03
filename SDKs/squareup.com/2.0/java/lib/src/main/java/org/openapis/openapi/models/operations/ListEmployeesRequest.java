@@ -4,20 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEmployeesRequest {
-    
-    public ListEmployeesQueryParams queryParams;
-    public ListEmployeesRequest withQueryParams(ListEmployeesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A pagination cursor to retrieve the next set of results for your
+     * original query to the endpoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
+    public String batchToken;
+    public ListEmployeesRequest withBatchToken(String batchToken) {
+        this.batchToken = batchToken;
         return this;
     }
     
+    /**
+     * If filtering results by their created_at field, the beginning of the requested reporting period, in ISO 8601 format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_created_at")
+    public String beginCreatedAt;
+    public ListEmployeesRequest withBeginCreatedAt(String beginCreatedAt) {
+        this.beginCreatedAt = beginCreatedAt;
+        return this;
+    }
     
-    public ListEmployeesSecurity security;
-    public ListEmployeesRequest withSecurity(ListEmployeesSecurity security) {
-        this.security = security;
+    /**
+     * If filtering results by their updated_at field, the beginning of the requested reporting period, in ISO 8601 format
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_updated_at")
+    public String beginUpdatedAt;
+    public ListEmployeesRequest withBeginUpdatedAt(String beginUpdatedAt) {
+        this.beginUpdatedAt = beginUpdatedAt;
+        return this;
+    }
+    
+    /**
+     * If filtering results by their created_at field, the end of the requested reporting period, in ISO 8601 format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_created_at")
+    public String endCreatedAt;
+    public ListEmployeesRequest withEndCreatedAt(String endCreatedAt) {
+        this.endCreatedAt = endCreatedAt;
+        return this;
+    }
+    
+    /**
+     * If filtering results by there updated_at field, the end of the requested reporting period, in ISO 8601 format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_updated_at")
+    public String endUpdatedAt;
+    public ListEmployeesRequest withEndUpdatedAt(String endUpdatedAt) {
+        this.endUpdatedAt = endUpdatedAt;
+        return this;
+    }
+    
+    /**
+     * If provided, the endpoint returns only employee entities with the specified external_id.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_id")
+    public String externalId;
+    public ListEmployeesRequest withExternalId(String externalId) {
+        this.externalId = externalId;
+        return this;
+    }
+    
+    /**
+     * The maximum integer number of employee entities to return in a single response. Default 100, maximum 200.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ListEmployeesRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    /**
+     * The order in which employees are listed in the response, based on their created_at field.      Default value: ASC
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
+    public String order;
+    public ListEmployeesRequest withOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    
+    /**
+     * If provided, the endpoint returns only employee entities with the specified status (ACTIVE or INACTIVE).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public String status;
+    public ListEmployeesRequest withStatus(String status) {
+        this.status = status;
         return this;
     }
     

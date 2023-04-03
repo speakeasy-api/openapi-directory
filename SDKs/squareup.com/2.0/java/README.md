@@ -18,10 +18,8 @@ package hello.world;
 import org.openapis.openapi.SDK;
 
 import org.openapis.openapi.models.operations.RegisterDomainSecurity;
-import org.openapis.openapi.models.operations.RegisterDomainRequest;
 import org.openapis.openapi.models.operations.RegisterDomainResponse;
 import org.openapis.openapi.models.shared.RegisterDomainRequest;
-import org.openapis.openapi.models.shared.SchemeOauth2;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,18 +27,13 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            RegisterDomainRequest req = new RegisterDomainRequest() {{
-                security = new RegisterDomainSecurity() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
-                }};
-                request = new RegisterDomainRequest() {{
-                    domainName = "corrupti";
-                }};
-            }};            
+            org.openapis.openapi.models.shared.RegisterDomainRequest req = new RegisterDomainRequest() {{
+                domainName = "corrupti";
+            }}            
 
-            RegisterDomainResponse res = sdk.applePay.registerDomain(req);
+            RegisterDomainResponse res = sdk.applePay.registerDomain(req, new RegisterDomainSecurity() {{
+                oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
+            }});
 
             if (res.registerDomainResponse.isPresent()) {
                 // handle response
@@ -52,7 +45,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### applePay

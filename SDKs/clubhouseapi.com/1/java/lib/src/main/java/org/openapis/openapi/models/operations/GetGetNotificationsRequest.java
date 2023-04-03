@@ -4,13 +4,20 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetNotificationsRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetGetNotificationsRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetGetNotificationsQueryParams queryParams;
-    public GetGetNotificationsRequest withQueryParams(GetGetNotificationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetGetNotificationsRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

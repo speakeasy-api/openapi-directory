@@ -7,31 +7,130 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest {
-    
-    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsPathParams pathParams;
-    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withPathParams(RuntimeconfigProjectsConfigsWaitersTestIamPermissionsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsQueryParams queryParams;
-    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withQueryParams(RuntimeconfigProjectsConfigsWaitersTestIamPermissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.TestIamPermissionsRequest request;
-    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withRequest(org.openapis.openapi.models.shared.TestIamPermissionsRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.TestIamPermissionsRequest testIamPermissionsRequest;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withTestIamPermissionsRequest(org.openapis.openapi.models.shared.TestIamPermissionsRequest testIamPermissionsRequest) {
+        this.testIamPermissionsRequest = testIamPermissionsRequest;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsSecurity security;
-    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withSecurity(RuntimeconfigProjectsConfigsWaitersTestIamPermissionsSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * REQUIRED: The resource for which the policy detail is being requested. See [Resource names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this field.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
+    public String resource;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public RuntimeconfigProjectsConfigsWaitersTestIamPermissionsRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

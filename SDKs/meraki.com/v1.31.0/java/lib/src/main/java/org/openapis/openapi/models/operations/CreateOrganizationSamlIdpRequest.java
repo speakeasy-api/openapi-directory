@@ -7,17 +7,17 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrganizationSamlIdpRequest {
-    
-    public CreateOrganizationSamlIdpPathParams pathParams;
-    public CreateOrganizationSamlIdpRequest withPathParams(CreateOrganizationSamlIdpPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public CreateOrganizationSamlIdpRequestBody requestBody;
+    public CreateOrganizationSamlIdpRequest withRequestBody(CreateOrganizationSamlIdpRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public CreateOrganizationSamlIdpRequestBody request;
-    public CreateOrganizationSamlIdpRequest withRequest(CreateOrganizationSamlIdpRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
+    public String organizationId;
+    public CreateOrganizationSamlIdpRequest withOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
     

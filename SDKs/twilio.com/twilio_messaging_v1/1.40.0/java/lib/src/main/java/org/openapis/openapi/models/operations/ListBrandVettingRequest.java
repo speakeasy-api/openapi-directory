@@ -4,34 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListBrandVettingRequest {
-    
-    public ListBrandVettingPathParams pathParams;
-    public ListBrandVettingRequest withPathParams(ListBrandVettingPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the Brand Registration resource of the vettings to read .
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=BrandSid")
+    public String brandSid;
+    public ListBrandVettingRequest withBrandSid(String brandSid) {
+        this.brandSid = brandSid;
         return this;
     }
     
-    
-    public ListBrandVettingQueryParams queryParams;
-    public ListBrandVettingRequest withQueryParams(ListBrandVettingQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListBrandVettingRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
-    
-    public ListBrandVettingSecurity security;
-    public ListBrandVettingRequest withSecurity(ListBrandVettingSecurity security) {
-        this.security = security;
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListBrandVettingRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListBrandVettingRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
     
-    public String serverURL;
-    public ListBrandVettingRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The third-party provider of the vettings to read
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VettingProvider")
+    public org.openapis.openapi.models.shared.BrandVettingEnumVettingProviderEnum vettingProvider;
+    public ListBrandVettingRequest withVettingProvider(org.openapis.openapi.models.shared.BrandVettingEnumVettingProviderEnum vettingProvider) {
+        this.vettingProvider = vettingProvider;
         return this;
     }
     

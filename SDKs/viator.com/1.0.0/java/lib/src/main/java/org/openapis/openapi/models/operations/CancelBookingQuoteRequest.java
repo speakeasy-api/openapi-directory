@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelBookingQuoteRequest {
-    
-    public CancelBookingQuotePathParams pathParams;
-    public CancelBookingQuoteRequest withPathParams(CancelBookingQuotePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public CancelBookingQuoteRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Unique numeric identifier of the booking for which to retrieve a cancellation quote
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=booking-reference")
+    public String bookingReference;
+    public CancelBookingQuoteRequest withBookingReference(String bookingReference) {
+        this.bookingReference = bookingReference;
         return this;
     }
     

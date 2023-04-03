@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InstitutionsNodeListRequest {
-    
-    public InstitutionsNodeListPathParams pathParams;
-    public InstitutionsNodeListRequest withPathParams(InstitutionsNodeListPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The unique identifier of the institution you wish to retrieve.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=institution_id")
+    public String institutionId;
+    public InstitutionsNodeListRequest withInstitutionId(String institutionId) {
+        this.institutionId = institutionId;
         return this;
     }
     

@@ -36,11 +36,10 @@ public class Apikeys {
     /**
      * Get all api keys
      * Get all api keys
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AllApiKeysResponse allApiKeys(org.openapis.openapi.models.operations.AllApiKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AllApiKeysResponse allApiKeys() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/apikeys");
         
@@ -49,8 +48,7 @@ public class Apikeys {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -79,19 +77,20 @@ public class Apikeys {
      * Get an api key
      * Get an api key for a specified service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiKeyResponse apiKey(org.openapis.openapi.models.operations.ApiKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiKeyResponse apiKey(org.openapis.openapi.models.operations.ApiKeyRequest request, org.openapis.openapi.models.operations.ApiKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyRequest.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -121,19 +120,20 @@ public class Apikeys {
      * Get an api key
      * Get an api key for a specified service group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiKeyFromGroupResponse apiKeyFromGroup(org.openapis.openapi.models.operations.ApiKeyFromGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiKeyFromGroupResponse apiKeyFromGroup(org.openapis.openapi.models.operations.ApiKeyFromGroupRequest request, org.openapis.openapi.models.operations.ApiKeyFromGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyFromGroupPathParams.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyFromGroupRequest.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -163,19 +163,20 @@ public class Apikeys {
      * Get the quota state of an api key
      * Get the quota state of an api key
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasResponse apiKeyFromGroupQuotas(org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasResponse apiKeyFromGroupQuotas(org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasRequest request, org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasPathParams.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}/quotas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyFromGroupQuotasRequest.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}/quotas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -205,19 +206,20 @@ public class Apikeys {
      * Get the group of an api key
      * Get the group of an api key
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiKeyGroupResponse apiKeyGroup(org.openapis.openapi.models.operations.ApiKeyGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiKeyGroupResponse apiKeyGroup(org.openapis.openapi.models.operations.ApiKeyGroupRequest request, org.openapis.openapi.models.operations.ApiKeyGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyGroupPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}/group", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyGroupRequest.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}/group", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -247,19 +249,20 @@ public class Apikeys {
      * Get the quota state of an api key
      * Get the quota state of an api key
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiKeyQuotasResponse apiKeyQuotas(org.openapis.openapi.models.operations.ApiKeyQuotasRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiKeyQuotasResponse apiKeyQuotas(org.openapis.openapi.models.operations.ApiKeyQuotasRequest request, org.openapis.openapi.models.operations.ApiKeyQuotasSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyQuotasPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}/quotas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeyQuotasRequest.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}/quotas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -289,19 +292,20 @@ public class Apikeys {
      * Get all api keys for the group of a service
      * Get all api keys for the group of a service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiKeysResponse apiKeys(org.openapis.openapi.models.operations.ApiKeysRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiKeysResponse apiKeys(org.openapis.openapi.models.operations.ApiKeysRequest request, org.openapis.openapi.models.operations.ApiKeysSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeysPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeysRequest.class, baseUrl, "/api/services/{serviceId}/apikeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -331,19 +335,20 @@ public class Apikeys {
      * Get all api keys for the group of a service
      * Get all api keys for the group of a service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ApiKeysFromGroupResponse apiKeysFromGroup(org.openapis.openapi.models.operations.ApiKeysFromGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ApiKeysFromGroupResponse apiKeysFromGroup(org.openapis.openapi.models.operations.ApiKeysFromGroupRequest request, org.openapis.openapi.models.operations.ApiKeysFromGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeysFromGroupPathParams.class, baseUrl, "/api/groups/{groupId}/apikeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ApiKeysFromGroupRequest.class, baseUrl, "/api/groups/{groupId}/apikeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -372,21 +377,22 @@ public class Apikeys {
     /**
      * Create a new api key for a service
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateApiKeyResponse createApiKey(org.openapis.openapi.models.operations.CreateApiKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateApiKeyResponse createApiKey(org.openapis.openapi.models.operations.CreateApiKeyRequest request, org.openapis.openapi.models.operations.CreateApiKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApiKeyPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApiKeyRequest.class, baseUrl, "/api/services/{serviceId}/apikeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiKey", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -416,21 +422,22 @@ public class Apikeys {
      * Create a new api key for a group
      * Create a new api key for a group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateApiKeyFromGroupResponse createApiKeyFromGroup(org.openapis.openapi.models.operations.CreateApiKeyFromGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateApiKeyFromGroupResponse createApiKeyFromGroup(org.openapis.openapi.models.operations.CreateApiKeyFromGroupRequest request, org.openapis.openapi.models.operations.CreateApiKeyFromGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApiKeyFromGroupPathParams.class, baseUrl, "/api/groups/{groupId}/apikeys", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CreateApiKeyFromGroupRequest.class, baseUrl, "/api/groups/{groupId}/apikeys", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiKey", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -460,19 +467,20 @@ public class Apikeys {
      * Delete an api key
      * Delete an api key for a specified service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiKeyResponse deleteApiKey(org.openapis.openapi.models.operations.DeleteApiKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiKeyResponse deleteApiKey(org.openapis.openapi.models.operations.DeleteApiKeyRequest request, org.openapis.openapi.models.operations.DeleteApiKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiKeyPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiKeyRequest.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -502,19 +510,20 @@ public class Apikeys {
      * Delete an api key
      * Delete an api key for a specified service group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiKeyFromGroupResponse deleteApiKeyFromGroup(org.openapis.openapi.models.operations.DeleteApiKeyFromGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteApiKeyFromGroupResponse deleteApiKeyFromGroup(org.openapis.openapi.models.operations.DeleteApiKeyFromGroupRequest request, org.openapis.openapi.models.operations.DeleteApiKeyFromGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiKeyFromGroupPathParams.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiKeyFromGroupRequest.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -544,21 +553,22 @@ public class Apikeys {
      * Update an api key with a diff
      * Update an api key for a specified service descriptor with a diff
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchApiKeyResponse patchApiKey(org.openapis.openapi.models.operations.PatchApiKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchApiKeyResponse patchApiKey(org.openapis.openapi.models.operations.PatchApiKeyRequest request, org.openapis.openapi.models.operations.PatchApiKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchApiKeyPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchApiKeyRequest.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -588,21 +598,22 @@ public class Apikeys {
      * Update an api key with a diff
      * Update an api key for a specified service descriptor with a diff
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PatchApiKeyFromGroupResponse patchApiKeyFromGroup(org.openapis.openapi.models.operations.PatchApiKeyFromGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PatchApiKeyFromGroupResponse patchApiKeyFromGroup(org.openapis.openapi.models.operations.PatchApiKeyFromGroupRequest request, org.openapis.openapi.models.operations.PatchApiKeyFromGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchApiKeyFromGroupPathParams.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PatchApiKeyFromGroupRequest.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -632,19 +643,20 @@ public class Apikeys {
      * Reset the quota state of an api key
      * Reset the quota state of an api key
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasResponse resetApiKeyFromGroupQuotas(org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasResponse resetApiKeyFromGroupQuotas(org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasRequest request, org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasPathParams.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}/quotas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetApiKeyFromGroupQuotasRequest.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}/quotas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -674,19 +686,20 @@ public class Apikeys {
      * Reset the quota state of an api key
      * Reset the quota state of an api key
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ResetApiKeyQuotasResponse resetApiKeyQuotas(org.openapis.openapi.models.operations.ResetApiKeyQuotasRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ResetApiKeyQuotasResponse resetApiKeyQuotas(org.openapis.openapi.models.operations.ResetApiKeyQuotasRequest request, org.openapis.openapi.models.operations.ResetApiKeyQuotasSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetApiKeyQuotasPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}/quotas", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ResetApiKeyQuotasRequest.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}/quotas", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -716,21 +729,22 @@ public class Apikeys {
      * Update an api key
      * Update an api key for a specified service descriptor
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateApiKeyResponse updateApiKey(org.openapis.openapi.models.operations.UpdateApiKeyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateApiKeyResponse updateApiKey(org.openapis.openapi.models.operations.UpdateApiKeyRequest request, org.openapis.openapi.models.operations.UpdateApiKeySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateApiKeyPathParams.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateApiKeyRequest.class, baseUrl, "/api/services/{serviceId}/apikeys/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiKey", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -760,21 +774,22 @@ public class Apikeys {
      * Update an api key
      * Update an api key for a specified service group
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateApiKeyFromGroupResponse updateApiKeyFromGroup(org.openapis.openapi.models.operations.UpdateApiKeyFromGroupRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateApiKeyFromGroupResponse updateApiKeyFromGroup(org.openapis.openapi.models.operations.UpdateApiKeyFromGroupRequest request, org.openapis.openapi.models.operations.UpdateApiKeyFromGroupSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateApiKeyFromGroupPathParams.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateApiKeyFromGroupRequest.class, baseUrl, "/api/groups/{groupId}/apikeys/{clientId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "apiKey", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

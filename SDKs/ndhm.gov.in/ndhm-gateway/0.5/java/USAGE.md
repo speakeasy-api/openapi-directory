@@ -4,7 +4,6 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonHeaders;
 import org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonRequest;
 import org.openapis.openapi.models.operations.PostV05CareContextsDiscoverJsonResponse;
 import org.openapis.openapi.models.shared.PatientDiscoveryRequestPatient;
@@ -20,20 +19,13 @@ public class Application {
                 .build();
 
             PostV05CareContextsDiscoverJsonRequest req = new PostV05CareContextsDiscoverJsonRequest() {{
-                headers = new PostV05CareContextsDiscoverJsonHeaders() {{
-                    authorization = "corrupti";
-                    xHipId = "provident";
-                }};
-                request = new PatientDiscoveryRequest() {{
+                authorization = "corrupti";
+                patientDiscoveryRequest = new PatientDiscoveryRequest() {{
                     patient = new PatientDiscoveryRequestPatient() {{
                         gender = "O";
                         id = "<patient-id>@<consent-manager-id>";
                         name = "chandler bing";
                         unverifiedIdentifiers = new org.openapis.openapi.models.shared.Identifier[]{{
-                            add(new Identifier() {{
-                                type = "NDHM_HEALTH_NUMBER";
-                                value = "+919800083232";
-                            }}),
                             add(new Identifier() {{
                                 type = "HEALTH_ID";
                                 value = "+919800083232";
@@ -49,7 +41,11 @@ public class Application {
                         }};
                         verifiedIdentifiers = new org.openapis.openapi.models.shared.Identifier[]{{
                             add(new Identifier() {{
-                                type = "NDHM_HEALTH_NUMBER";
+                                type = "HEALTH_ID";
+                                value = "+919800083232";
+                            }}),
+                            add(new Identifier() {{
+                                type = "MR";
                                 value = "+919800083232";
                             }}),
                             add(new Identifier() {{
@@ -60,10 +56,11 @@ public class Application {
                         yearOfBirth = 2000;
                     }};
                     requestId = "499a5a4a-7dda-4f20-9b67-e24589627061";
-                    timestamp = "2022-07-25T06:44:09.184Z";
-                    transactionId = "4e0f467c-c879-46ed-951a-05dfc2ddf7cc";
+                    timestamp = "2022-03-26T09:37:56.283Z";
+                    transactionId = "74e0f467-cc87-496e-9151-a05dfc2ddf7c";
                 }};
-            }};            
+                xHipId = "quod";
+            }}            
 
             PostV05CareContextsDiscoverJsonResponse res = sdk.cmFacing.postV05CareContextsDiscoverJson(req);
 

@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoleRequest {
-    
-    public UpdateRolePathParams pathParams;
-    public UpdateRoleRequest withPathParams(UpdateRolePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateRoleUpdateRoleRequest request;
-    public UpdateRoleRequest withRequest(UpdateRoleUpdateRoleRequest request) {
-        this.request = request;
+    public UpdateRoleUpdateRoleRequest requestBody;
+    public UpdateRoleRequest withRequestBody(UpdateRoleUpdateRoleRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateRoleSecurity security;
-    public UpdateRoleRequest withSecurity(UpdateRoleSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/api/chat/rest/services) to update the resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateRoleRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateRoleRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Twilio-provided string that uniquely identifies the Role resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateRoleRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

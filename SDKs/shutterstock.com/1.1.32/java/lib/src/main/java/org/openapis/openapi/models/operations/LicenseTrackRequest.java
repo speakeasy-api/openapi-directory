@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicenseTrackRequest {
-    
-    public LicenseTrackQueryParams queryParams;
-    public LicenseTrackRequest withQueryParams(LicenseTrackQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
     /**
      * Tracks to license
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LicenseAudioRequest request;
-    public LicenseTrackRequest withRequest(org.openapis.openapi.models.shared.LicenseAudioRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.LicenseAudioRequest licenseAudioRequest;
+    public LicenseTrackRequest withLicenseAudioRequest(org.openapis.openapi.models.shared.LicenseAudioRequest licenseAudioRequest) {
+        this.licenseAudioRequest = licenseAudioRequest;
         return this;
     }
     
+    /**
+     * License type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
+    public LicenseTrackLicenseEnum license;
+    public LicenseTrackRequest withLicense(LicenseTrackLicenseEnum license) {
+        this.license = license;
+        return this;
+    }
     
-    public LicenseTrackSecurity security;
-    public LicenseTrackRequest withSecurity(LicenseTrackSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the search that led to licensing this track
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
+    public String searchId;
+    public LicenseTrackRequest withSearchId(String searchId) {
+        this.searchId = searchId;
         return this;
     }
     

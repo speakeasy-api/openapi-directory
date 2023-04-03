@@ -7,20 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserTSPUpdateRequest {
-    
-    public UserTSPUpdatePathParams pathParams;
-    public UserTSPUpdateRequest withPathParams(UserTSPUpdatePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * TSP account.
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public UserTSPUpdateTSPAccount request;
-    public UserTSPUpdateRequest withRequest(UserTSPUpdateTSPAccount request) {
-        this.request = request;
+    public UserTSPUpdateTSPAccount requestBody;
+    public UserTSPUpdateRequest withRequestBody(UserTSPUpdateTSPAccount requestBody) {
+        this.requestBody = requestBody;
+        return this;
+    }
+    
+    /**
+     * TSP account ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tspId")
+    public UserTSPUpdateTSPIDEnum tspId;
+    public UserTSPUpdateRequest withTspId(UserTSPUpdateTSPIDEnum tspId) {
+        this.tspId = tspId;
+        return this;
+    }
+    
+    /**
+     * The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public UserTSPUpdateRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

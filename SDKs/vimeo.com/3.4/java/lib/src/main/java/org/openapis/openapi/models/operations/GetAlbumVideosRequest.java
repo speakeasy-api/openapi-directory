@@ -4,20 +4,126 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlbumVideosRequest {
-    
-    public GetAlbumVideosPathParams pathParams;
-    public GetAlbumVideosRequest withPathParams(GetAlbumVideosPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The ID of the album.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=album_id")
+    public Double albumId;
+    public GetAlbumVideosRequest withAlbumId(Double albumId) {
+        this.albumId = albumId;
         return this;
     }
     
+    /**
+     * The page containing the video URI.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=containing_uri")
+    public String containingUri;
+    public GetAlbumVideosRequest withContainingUri(String containingUri) {
+        this.containingUri = containingUri;
+        return this;
+    }
     
-    public GetAlbumVideosQueryParams queryParams;
-    public GetAlbumVideosRequest withQueryParams(GetAlbumVideosQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The sort direction of the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
+    public GetAlbumVideosDirectionEnum direction;
+    public GetAlbumVideosRequest withDirection(GetAlbumVideosDirectionEnum direction) {
+        this.direction = direction;
+        return this;
+    }
+    
+    /**
+     * The attribute by which to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
+    public GetAlbumVideosFilterEnum filter;
+    public GetAlbumVideosRequest withFilter(GetAlbumVideosFilterEnum filter) {
+        this.filter = filter;
+        return this;
+    }
+    
+    /**
+     * Whether to filter the results by embeddable videos (`true`) or non-embeddable videos (`false`). Required only if **filter** is `embeddable`.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_embeddable")
+    public Boolean filterEmbeddable;
+    public GetAlbumVideosRequest withFilterEmbeddable(Boolean filterEmbeddable) {
+        this.filterEmbeddable = filterEmbeddable;
+        return this;
+    }
+    
+    /**
+     * The page number of the results to show.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Double page;
+    public GetAlbumVideosRequest withPage(Double page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The password of the album.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
+    public String password;
+    public GetAlbumVideosRequest withPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    
+    /**
+     * The number of items to show on each page of results, up to a maximum of 100.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Double perPage;
+    public GetAlbumVideosRequest withPerPage(Double perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The search query to use to filter the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
+    public String query;
+    public GetAlbumVideosRequest withQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    
+    /**
+     * The way to sort the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public GetAlbumVideosSortEnum sort;
+    public GetAlbumVideosRequest withSort(GetAlbumVideosSortEnum sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * The ID of the user.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
+    public Double userId;
+    public GetAlbumVideosRequest withUserId(Double userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    /**
+     * Whether to include private videos in the search. Please note that a separate search service provides this functionality. The service performs a partial text search on the video's name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weak_search")
+    public Boolean weakSearch;
+    public GetAlbumVideosRequest withWeakSearch(Boolean weakSearch) {
+        this.weakSearch = weakSearch;
         return this;
     }
     

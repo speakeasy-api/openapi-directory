@@ -7,17 +7,34 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForPullRequestReviewCommentRequest {
-    
-    public ReactionsCreateForPullRequestReviewCommentPathParams pathParams;
-    public ReactionsCreateForPullRequestReviewCommentRequest withPathParams(ReactionsCreateForPullRequestReviewCommentPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public ReactionsCreateForPullRequestReviewCommentRequestBody requestBody;
+    public ReactionsCreateForPullRequestReviewCommentRequest withRequestBody(ReactionsCreateForPullRequestReviewCommentRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public ReactionsCreateForPullRequestReviewCommentRequestBody request;
-    public ReactionsCreateForPullRequestReviewCommentRequest withRequest(ReactionsCreateForPullRequestReviewCommentRequestBody request) {
-        this.request = request;
+    /**
+     * comment_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
+    public Long commentId;
+    public ReactionsCreateForPullRequestReviewCommentRequest withCommentId(Long commentId) {
+        this.commentId = commentId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public ReactionsCreateForPullRequestReviewCommentRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public ReactionsCreateForPullRequestReviewCommentRequest withRepo(String repo) {
+        this.repo = repo;
         return this;
     }
     

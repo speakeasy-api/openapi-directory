@@ -4,27 +4,79 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetChatMessagesRequest {
-    
-    public GetChatMessagesPathParams pathParams;
-    public GetChatMessagesRequest withPathParams(GetChatMessagesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The query date for which you would like to get the chat messages.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
+    public LocalDate date;
+    public GetChatMessagesRequest withDate(LocalDate date) {
+        this.date = date;
         return this;
     }
     
-    
-    public GetChatMessagesQueryParams queryParams;
-    public GetChatMessagesRequest withQueryParams(GetChatMessagesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * **Optional** &lt;br&gt;
+     * Set the value of this field to `true` to include edited and deleted messages in the response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_deleted_and_edited_message")
+    public String includeDeletedAndEditedMessage;
+    public GetChatMessagesRequest withIncludeDeletedAndEditedMessage(String includeDeletedAndEditedMessage) {
+        this.includeDeletedAndEditedMessage = includeDeletedAndEditedMessage;
         return this;
     }
     
+    /**
+     * The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_page_token")
+    public String nextPageToken;
+    public GetChatMessagesRequest withNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
     
-    public GetChatMessagesSecurity security;
-    public GetChatMessagesRequest withSecurity(GetChatMessagesSecurity security) {
-        this.security = security;
+    /**
+     * The number of records returned with a single API call. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
+    public Long pageSize;
+    public GetChatMessagesRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The channel Id of a channel inside which the current user had chat conversations. Messages that were sent and/or received between the user and the channel is displayed.
+     * 
+     * Note: You must provide either `contact` or `channel` as a query parameter to retrieve messages either from an individual or a chat channel. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to_channel")
+    public String toChannel;
+    public GetChatMessagesRequest withToChannel(String toChannel) {
+        this.toChannel = toChannel;
+        return this;
+    }
+    
+    /**
+     * The email address of a chat contact with whom the current user chatted. Messages that were sent and/or received between the user and the contact is displayed.
+     * 
+     * Note: You must provide either `contact` or `channel` as a query parameter to retrieve messages either from an individual or a chat channel. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to_contact")
+    public String toContact;
+    public GetChatMessagesRequest withToContact(String toContact) {
+        this.toContact = toContact;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public GetChatMessagesRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

@@ -4,20 +4,56 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForTeamDiscussionLegacyRequest {
-    
-    public ReactionsListForTeamDiscussionLegacyPathParams pathParams;
-    public ReactionsListForTeamDiscussionLegacyRequest withPathParams(ReactionsListForTeamDiscussionLegacyPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Returns a single [reaction type](https://docs.github.com/rest/reference/reactions#reaction-types). Omit this parameter to list all reactions to a team discussion.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
+    public ReactionsListForTeamDiscussionLegacyContentEnum content;
+    public ReactionsListForTeamDiscussionLegacyRequest withContent(ReactionsListForTeamDiscussionLegacyContentEnum content) {
+        this.content = content;
         return this;
     }
     
+    /**
+     * The number that identifies the discussion.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
+    public Long discussionNumber;
+    public ReactionsListForTeamDiscussionLegacyRequest withDiscussionNumber(Long discussionNumber) {
+        this.discussionNumber = discussionNumber;
+        return this;
+    }
     
-    public ReactionsListForTeamDiscussionLegacyQueryParams queryParams;
-    public ReactionsListForTeamDiscussionLegacyRequest withQueryParams(ReactionsListForTeamDiscussionLegacyQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public ReactionsListForTeamDiscussionLegacyRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * The number of results per page (max 100).
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public ReactionsListForTeamDiscussionLegacyRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
+        return this;
+    }
+    
+    /**
+     * The unique identifier of the team.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
+    public Long teamId;
+    public ReactionsListForTeamDiscussionLegacyRequest withTeamId(Long teamId) {
+        this.teamId = teamId;
         return this;
     }
     

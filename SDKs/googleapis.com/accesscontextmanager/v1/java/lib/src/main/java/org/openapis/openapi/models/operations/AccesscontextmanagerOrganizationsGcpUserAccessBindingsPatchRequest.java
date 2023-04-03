@@ -7,31 +7,140 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest {
-    
-    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchPathParams pathParams;
-    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withPathParams(AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchQueryParams queryParams;
-    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withQueryParams(AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * V1 error format.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
+    public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
+        this.dollarXgafv = dollarXgafv;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.GcpUserAccessBinding request;
-    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withRequest(org.openapis.openapi.models.shared.GcpUserAccessBinding request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.GcpUserAccessBinding gcpUserAccessBinding;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withGcpUserAccessBinding(org.openapis.openapi.models.shared.GcpUserAccessBinding gcpUserAccessBinding) {
+        this.gcpUserAccessBinding = gcpUserAccessBinding;
         return this;
     }
     
+    /**
+     * OAuth access token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
+    public String accessToken;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+        return this;
+    }
     
-    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchSecurity security;
-    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withSecurity(AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchSecurity security) {
-        this.security = security;
+    /**
+     * Data format for response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
+    public org.openapis.openapi.models.shared.AltEnum alt;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
+        this.alt = alt;
+        return this;
+    }
+    
+    /**
+     * JSONP
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
+    public String callback;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withCallback(String callback) {
+        this.callback = callback;
+        return this;
+    }
+    
+    /**
+     * Selector specifying which fields to include in a partial response.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
+    public String fields;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    
+    /**
+     * API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
+    public String key;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withKey(String key) {
+        this.key = key;
+        return this;
+    }
+    
+    /**
+     * Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has only URI unreserved characters (as defined by [RFC 3986 Section 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
+    public String name;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * OAuth 2.0 token for the current user.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
+    public String oauthToken;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withOauthToken(String oauthToken) {
+        this.oauthToken = oauthToken;
+        return this;
+    }
+    
+    /**
+     * Returns response with indentations and line breaks.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
+    public Boolean prettyPrint;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withPrettyPrint(Boolean prettyPrint) {
+        this.prettyPrint = prettyPrint;
+        return this;
+    }
+    
+    /**
+     * Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
+    public String quotaUser;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withQuotaUser(String quotaUser) {
+        this.quotaUser = quotaUser;
+        return this;
+    }
+    
+    /**
+     * Required. Only the fields specified in this mask are updated. Because name and group_key cannot be changed, update_mask is required and may only contain the following fields: `access_levels`, `dry_run_access_levels`. update_mask { paths: "access_levels" }
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
+    public String updateMask;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+    }
+    
+    /**
+     * Legacy upload protocol for media (e.g. "media", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
+    public String uploadType;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withUploadType(String uploadType) {
+        this.uploadType = uploadType;
+        return this;
+    }
+    
+    /**
+     * Upload protocol for media (e.g. "raw", "multipart").
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
+    public String uploadProtocol;
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsPatchRequest withUploadProtocol(String uploadProtocol) {
+        this.uploadProtocol = uploadProtocol;
         return this;
     }
     

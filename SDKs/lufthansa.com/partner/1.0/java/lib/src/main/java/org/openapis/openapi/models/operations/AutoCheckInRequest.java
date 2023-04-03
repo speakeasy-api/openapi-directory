@@ -4,34 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoCheckInRequest {
-    
-    public AutoCheckInPathParams pathParams;
-    public AutoCheckInRequest withPathParams(AutoCheckInPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * http header: application/json or application/xml (Acceptable values are: "application/json", "application/xml")
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public AutoCheckInRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AutoCheckInQueryParams queryParams;
-    public AutoCheckInRequest withQueryParams(AutoCheckInQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emailAddress")
+    public String emailAddress;
+    public AutoCheckInRequest withEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
         return this;
     }
     
-    
-    public AutoCheckInHeaders headers;
-    public AutoCheckInRequest withHeaders(AutoCheckInHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    
-    public AutoCheckInSecurity security;
-    public AutoCheckInRequest withSecurity(AutoCheckInSecurity security) {
-        this.security = security;
+    /**
+     * Ticket number
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ticketnumber")
+    public String ticketnumber;
+    public AutoCheckInRequest withTicketnumber(String ticketnumber) {
+        this.ticketnumber = ticketnumber;
         return this;
     }
     

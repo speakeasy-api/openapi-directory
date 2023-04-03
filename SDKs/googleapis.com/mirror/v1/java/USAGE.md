@@ -4,14 +4,12 @@ package hello.world;
 
 import org.openapis.openapi.SDK;
 
-import org.openapis.openapi.models.operations.MirrorAccountsInsertPathParams;
-import org.openapis.openapi.models.operations.MirrorAccountsInsertQueryParams;
 import org.openapis.openapi.models.operations.MirrorAccountsInsertRequest;
 import org.openapis.openapi.models.operations.MirrorAccountsInsertResponse;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.Account;
 import org.openapis.openapi.models.shared.UserData;
 import org.openapis.openapi.models.shared.AuthToken;
-import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -20,48 +18,50 @@ public class Application {
                 .build();
 
             MirrorAccountsInsertRequest req = new MirrorAccountsInsertRequest() {{
-                pathParams = new MirrorAccountsInsertPathParams() {{
-                    accountName = "corrupti";
-                    accountType = "provident";
-                    userToken = "distinctio";
-                }};
-                queryParams = new MirrorAccountsInsertQueryParams() {{
-                    alt = "json";
-                    fields = "quibusdam";
-                    key = "unde";
-                    oauthToken = "nulla";
-                    prettyPrint = false;
-                    quotaUser = "corrupti";
-                    userIp = "illum";
-                }};
-                request = new Account() {{
+                account = new Account() {{
                     authTokens = new org.openapis.openapi.models.shared.AuthToken[]{{
                         add(new AuthToken() {{
-                            authToken = "error";
-                            type = "deserunt";
+                            authToken = "provident";
+                            type = "distinctio";
                         }}),
                         add(new AuthToken() {{
-                            authToken = "suscipit";
-                            type = "iure";
+                            authToken = "quibusdam";
+                            type = "unde";
+                        }}),
+                        add(new AuthToken() {{
+                            authToken = "nulla";
+                            type = "corrupti";
                         }}),
                     }};
                     features = new String[]{{
-                        add("debitis"),
-                        add("ipsa"),
+                        add("vel"),
+                        add("error"),
+                        add("deserunt"),
+                        add("suscipit"),
                     }};
-                    password = "delectus";
+                    password = "iure";
                     userData = new org.openapis.openapi.models.shared.UserData[]{{
                         add(new UserData() {{
-                            key = "suscipit";
-                            value = "molestiae";
+                            key = "debitis";
+                            value = "ipsa";
                         }}),
                         add(new UserData() {{
-                            key = "minus";
-                            value = "placeat";
+                            key = "delectus";
+                            value = "tempora";
                         }}),
                     }};
                 }};
-            }};            
+                accountName = "suscipit";
+                accountType = "molestiae";
+                alt = "json";
+                fields = "minus";
+                key = "placeat";
+                oauthToken = "voluptatum";
+                prettyPrint = false;
+                quotaUser = "iusto";
+                userIp = "excepturi";
+                userToken = "nisi";
+            }}            
 
             MirrorAccountsInsertResponse res = sdk.accounts.mirrorAccountsInsert(req);
 

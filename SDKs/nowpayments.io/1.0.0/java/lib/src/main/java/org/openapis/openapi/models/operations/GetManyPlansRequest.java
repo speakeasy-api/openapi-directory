@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetManyPlansRequest {
-    
-    public GetManyPlansQueryParams queryParams;
-    public GetManyPlansRequest withQueryParams(GetManyPlansQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public String limit;
+    public GetManyPlansRequest withLimit(String limit) {
+        this.limit = limit;
         return this;
     }
     
+    /**
+     * Number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public String offset;
+    public GetManyPlansRequest withOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
     
-    public GetManyPlansHeaders headers;
-    public GetManyPlansRequest withHeaders(GetManyPlansHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
+    public String xApiKey;
+    public GetManyPlansRequest withXApiKey(String xApiKey) {
+        this.xApiKey = xApiKey;
         return this;
     }
     

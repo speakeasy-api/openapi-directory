@@ -47,7 +47,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesDeletePackageForAuthenticatedUserResponse packagesDeletePackageForAuthenticatedUser(org.openapis.openapi.models.operations.PackagesDeletePackageForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageForAuthenticatedUserPathParams.class, baseUrl, "/user/packages/{package_type}/{package_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageForAuthenticatedUserRequest.class, baseUrl, "/user/packages/{package_type}/{package_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -93,7 +93,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesDeletePackageForOrgResponse packagesDeletePackageForOrg(org.openapis.openapi.models.operations.PackagesDeletePackageForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageForOrgPathParams.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageForOrgRequest.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -139,7 +139,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesDeletePackageForUserResponse packagesDeletePackageForUser(org.openapis.openapi.models.operations.PackagesDeletePackageForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageForUserPathParams.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageForUserRequest.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -184,7 +184,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesDeletePackageVersionForAuthenticatedUserResponse packagesDeletePackageVersionForAuthenticatedUser(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForAuthenticatedUserPathParams.class, baseUrl, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForAuthenticatedUserRequest.class, baseUrl, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -230,7 +230,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesDeletePackageVersionForOrgResponse packagesDeletePackageVersionForOrg(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForOrgPathParams.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForOrgRequest.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -276,7 +276,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesDeletePackageVersionForUserResponse packagesDeletePackageVersionForUser(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForUserPathParams.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesDeletePackageVersionForUserRequest.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -320,13 +320,13 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserResponse packagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserPathParams.class, baseUrl, "/user/packages/{package_type}/{package_name}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRequest.class, baseUrl, "/user/packages/{package_type}/{package_name}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -376,13 +376,13 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByOrgResponse packagesGetAllPackageVersionsForPackageOwnedByOrg(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByOrgPathParams.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByOrgRequest.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -432,7 +432,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByUserResponse packagesGetAllPackageVersionsForPackageOwnedByUser(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByUserPathParams.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/versions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetAllPackageVersionsForPackageOwnedByUserRequest.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/versions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -482,7 +482,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetPackageForAuthenticatedUserResponse packagesGetPackageForAuthenticatedUser(org.openapis.openapi.models.operations.PackagesGetPackageForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageForAuthenticatedUserPathParams.class, baseUrl, "/user/packages/{package_type}/{package_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageForAuthenticatedUserRequest.class, baseUrl, "/user/packages/{package_type}/{package_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -524,7 +524,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetPackageForOrganizationResponse packagesGetPackageForOrganization(org.openapis.openapi.models.operations.PackagesGetPackageForOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageForOrganizationPathParams.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageForOrganizationRequest.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -566,7 +566,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetPackageForUserResponse packagesGetPackageForUser(org.openapis.openapi.models.operations.PackagesGetPackageForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageForUserPathParams.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageForUserRequest.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -608,7 +608,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetPackageVersionForAuthenticatedUserResponse packagesGetPackageVersionForAuthenticatedUser(org.openapis.openapi.models.operations.PackagesGetPackageVersionForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageVersionForAuthenticatedUserPathParams.class, baseUrl, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageVersionForAuthenticatedUserRequest.class, baseUrl, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -650,7 +650,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetPackageVersionForOrganizationResponse packagesGetPackageVersionForOrganization(org.openapis.openapi.models.operations.PackagesGetPackageVersionForOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageVersionForOrganizationPathParams.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageVersionForOrganizationRequest.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -692,7 +692,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesGetPackageVersionForUserResponse packagesGetPackageVersionForUser(org.openapis.openapi.models.operations.PackagesGetPackageVersionForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageVersionForUserPathParams.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesGetPackageVersionForUserRequest.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -740,7 +740,7 @@ public class Packages {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesListPackagesForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesListPackagesForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -782,13 +782,13 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesListPackagesForOrganizationResponse packagesListPackagesForOrganization(org.openapis.openapi.models.operations.PackagesListPackagesForOrganizationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesListPackagesForOrganizationPathParams.class, baseUrl, "/orgs/{org}/packages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesListPackagesForOrganizationRequest.class, baseUrl, "/orgs/{org}/packages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesListPackagesForOrganizationQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesListPackagesForOrganizationRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -838,13 +838,13 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesListPackagesForUserResponse packagesListPackagesForUser(org.openapis.openapi.models.operations.PackagesListPackagesForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesListPackagesForUserPathParams.class, baseUrl, "/users/{username}/packages", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesListPackagesForUserRequest.class, baseUrl, "/users/{username}/packages", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesListPackagesForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesListPackagesForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -898,13 +898,13 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesRestorePackageForAuthenticatedUserResponse packagesRestorePackageForAuthenticatedUser(org.openapis.openapi.models.operations.PackagesRestorePackageForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageForAuthenticatedUserPathParams.class, baseUrl, "/user/packages/{package_type}/{package_name}/restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageForAuthenticatedUserRequest.class, baseUrl, "/user/packages/{package_type}/{package_name}/restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesRestorePackageForAuthenticatedUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesRestorePackageForAuthenticatedUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -954,13 +954,13 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesRestorePackageForOrgResponse packagesRestorePackageForOrg(org.openapis.openapi.models.operations.PackagesRestorePackageForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageForOrgPathParams.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageForOrgRequest.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesRestorePackageForOrgQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesRestorePackageForOrgRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1010,13 +1010,13 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesRestorePackageForUserResponse packagesRestorePackageForUser(org.openapis.openapi.models.operations.PackagesRestorePackageForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageForUserPathParams.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageForUserRequest.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesRestorePackageForUserQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PackagesRestorePackageForUserRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -1064,7 +1064,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesRestorePackageVersionForAuthenticatedUserResponse packagesRestorePackageVersionForAuthenticatedUser(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForAuthenticatedUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForAuthenticatedUserPathParams.class, baseUrl, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForAuthenticatedUserRequest.class, baseUrl, "/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1114,7 +1114,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesRestorePackageVersionForOrgResponse packagesRestorePackageVersionForOrg(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForOrgRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForOrgPathParams.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForOrgRequest.class, baseUrl, "/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -1164,7 +1164,7 @@ public class Packages {
      */
     public org.openapis.openapi.models.operations.PackagesRestorePackageVersionForUserResponse packagesRestorePackageVersionForUser(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForUserPathParams.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PackagesRestorePackageVersionForUserRequest.class, baseUrl, "/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

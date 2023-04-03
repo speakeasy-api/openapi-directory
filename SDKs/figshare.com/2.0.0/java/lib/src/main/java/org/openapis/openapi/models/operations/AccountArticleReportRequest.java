@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountArticleReportRequest {
-    
-    public AccountArticleReportQueryParams queryParams;
-    public AccountArticleReportRequest withQueryParams(AccountArticleReportQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public AccountArticleReportSecurity security;
-    public AccountArticleReportRequest withSecurity(AccountArticleReportSecurity security) {
-        this.security = security;
+    /**
+     * A group ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    public Long groupId;
+    public AccountArticleReportRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
         return this;
     }
     

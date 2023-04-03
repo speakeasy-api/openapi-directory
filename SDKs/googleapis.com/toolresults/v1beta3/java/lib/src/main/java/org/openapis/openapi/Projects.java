@@ -34,25 +34,26 @@ public class Projects {
     /**
      * Gets the Tool Results settings for a project. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read from project
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsResponse toolresultsProjectsGetSettings(org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsResponse toolresultsProjectsGetSettings(org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/settings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/settings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsGetSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -79,27 +80,28 @@ public class Projects {
     /**
      * Creates a History. The returned History will have the id set. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing project does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreateResponse toolresultsProjectsHistoriesCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreateResponse toolresultsProjectsHistoriesCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreateRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreatePathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreateRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "history", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -126,25 +128,26 @@ public class Projects {
     /**
      * Retrieves a single screenshot cluster by its ID
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetResponse toolresultsProjectsHistoriesExecutionsClustersGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetResponse toolresultsProjectsHistoriesExecutionsClustersGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters/{clusterId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters/{clusterId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -171,25 +174,26 @@ public class Projects {
     /**
      * Lists Screenshot Clusters Returns the list of screenshot clusters corresponding to an execution. Screenshot clusters are created after the execution is finished. Clusters are created from a set of screenshots. Between any two screenshots, a matching score is calculated based off their metadata that determines how similar they are. Screenshots are placed in the cluster that has screens which have the highest matching scores.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListResponse toolresultsProjectsHistoriesExecutionsClustersList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListResponse toolresultsProjectsHistoriesExecutionsClustersList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/clusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsClustersListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -216,27 +220,28 @@ public class Projects {
     /**
      * Creates an Execution. The returned Execution will have the id set. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreateResponse toolresultsProjectsHistoriesExecutionsCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreateResponse toolresultsProjectsHistoriesExecutionsCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreateRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreatePathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreateRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "execution", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -263,25 +268,26 @@ public class Projects {
     /**
      * Gets an Environment. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Environment does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetResponse toolresultsProjectsHistoriesExecutionsEnvironmentsGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetResponse toolresultsProjectsHistoriesExecutionsEnvironmentsGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/environments/{environmentId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/environments/{environmentId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -308,25 +314,26 @@ public class Projects {
     /**
      * Lists Environments for a given Execution. The Environments are sorted by display name. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing Execution does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListResponse toolresultsProjectsHistoriesExecutionsEnvironmentsList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListResponse toolresultsProjectsHistoriesExecutionsEnvironmentsList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/environments", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/environments", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsEnvironmentsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -353,25 +360,26 @@ public class Projects {
     /**
      * Gets an Execution. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Execution does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetResponse toolresultsProjectsHistoriesExecutionsGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetResponse toolresultsProjectsHistoriesExecutionsGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -398,25 +406,26 @@ public class Projects {
     /**
      * Lists Executions for a given History. The executions are sorted by creation_time in descending order. The execution_id key will be used to order the executions with the same creation_time. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing History does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListResponse toolresultsProjectsHistoriesExecutionsList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListResponse toolresultsProjectsHistoriesExecutionsList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -443,27 +452,28 @@ public class Projects {
     /**
      * Updates an existing Execution with the supplied partial entity. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal - NOT_FOUND - if the containing History does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchResponse toolresultsProjectsHistoriesExecutionsPatch(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchResponse toolresultsProjectsHistoriesExecutionsPatch(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "execution", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -490,25 +500,26 @@ public class Projects {
     /**
      * Lists accessibility clusters for a given Step May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be invalid; e.g. if the locale format is incorrect - NOT_FOUND - if the containing Step does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersResponse toolresultsProjectsHistoriesExecutionsStepsAccessibilityClusters(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersResponse toolresultsProjectsHistoriesExecutionsStepsAccessibilityClusters(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersPathParams.class, baseUrl, "/toolresults/v1beta3/{name}:accessibilityClusters", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersRequest.class, baseUrl, "/toolresults/v1beta3/{name}:accessibilityClusters", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsAccessibilityClustersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -535,27 +546,28 @@ public class Projects {
     /**
      * Creates a Step. The returned Step will have the id set. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreateResponse toolresultsProjectsHistoriesExecutionsStepsCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreateResponse toolresultsProjectsHistoriesExecutionsStepsCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreateRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreatePathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreateRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "step", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -582,25 +594,26 @@ public class Projects {
     /**
      * Gets a Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the Step does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetResponse toolresultsProjectsHistoriesExecutionsStepsGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetResponse toolresultsProjectsHistoriesExecutionsStepsGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -627,25 +640,26 @@ public class Projects {
     /**
      * Retrieves a PerfMetricsSummary. May return any of the following error code(s): - NOT_FOUND - The specified PerfMetricsSummary does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryResponse toolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummary(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryResponse toolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummary(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummarySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsGetPerfMetricsSummaryRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -672,25 +686,26 @@ public class Projects {
     /**
      * Lists Steps for a given Execution. The steps are sorted by creation_time in descending order. The step_id key will be used to order the steps with the same creation_time. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if an argument in the request happens to be invalid; e.g. if an attempt is made to list the children of a nonexistent Step - NOT_FOUND - if the containing Execution does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListResponse toolresultsProjectsHistoriesExecutionsStepsList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListResponse toolresultsProjectsHistoriesExecutionsStepsList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -717,27 +732,28 @@ public class Projects {
     /**
      * Updates an existing Step with the supplied partial entity. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal (e.g try to upload a duplicate xml file), if the updated step is too large (more than 10Mib) - NOT_FOUND - if the containing Execution does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchResponse toolresultsProjectsHistoriesExecutionsStepsPatch(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchResponse toolresultsProjectsHistoriesExecutionsStepsPatch(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "step", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPatchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -764,27 +780,28 @@ public class Projects {
     /**
      * Creates a PerfMetricsSummary resource. Returns the existing one if it has already been created. May return any of the following error code(s): - NOT_FOUND - The containing Step does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateResponse toolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateResponse toolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreatePathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfMetricsSummary", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "perfMetricsSummary", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfMetricsSummaryCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -811,27 +828,28 @@ public class Projects {
     /**
      * Creates a PerfSampleSeries. May return any of the following error code(s): - ALREADY_EXISTS - PerfMetricSummary already exists for the given Step - NOT_FOUND - The containing Step does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreatePathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "perfSampleSeries", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -858,25 +876,26 @@ public class Projects {
     /**
      * Gets a PerfSampleSeries. May return any of the following error code(s): - NOT_FOUND - The specified PerfSampleSeries does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -903,25 +922,26 @@ public class Projects {
     /**
      * Lists PerfSampleSeries for a given Step. The request provides an optional filter which specifies one or more PerfMetricsType to include in the result; if none returns all. The resulting PerfSampleSeries are sorted by ids. May return any of the following canonical error codes: - NOT_FOUND - The containing Step does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -948,27 +968,28 @@ public class Projects {
     /**
      * Creates a batch of PerfSamples - a client can submit multiple batches of Perf Samples through repeated calls to this method in order to split up a large request payload - duplicates and existing timestamp entries will be ignored. - the batch operation may partially succeed - the set of elements successfully inserted is returned in the response (omits items which already existed in the database). May return any of the following canonical error codes: - NOT_FOUND - The containing PerfSampleSeries does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreate(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreatePathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples:batchCreate", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "batchCreatePerfSamplesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesBatchCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -995,25 +1016,26 @@ public class Projects {
     /**
      * Lists the Performance Samples of a given Sample Series - The list results are sorted by timestamps ascending - The default page size is 500 samples; and maximum size allowed 5000 - The response token indicates the last returned PerfSample timestamp - When the results size exceeds the page size, submit a subsequent request including the page token to return the rest of the samples up to the page limit May return any of the following canonical error codes: - OUT_OF_RANGE - The specified request page_token is out of valid range - NOT_FOUND - The containing PerfSampleSeries does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListResponse toolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/perfSampleSeries/{sampleSeriesId}/samples", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPerfSampleSeriesSamplesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1040,27 +1062,28 @@ public class Projects {
     /**
      * Publish xml files to an existing Step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write project - INVALID_ARGUMENT - if the request is malformed - FAILED_PRECONDITION - if the requested state transition is illegal, e.g try to upload a duplicate xml file or a file too large. - NOT_FOUND - if the containing Execution does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesResponse toolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFiles(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesResponse toolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFiles(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}:publishXunitXmlFiles", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "publishXunitXmlFilesRequest", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsPublishXunitXmlFilesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1087,25 +1110,26 @@ public class Projects {
     /**
      * Gets details of a Test Case for a Step. Experimental test cases API. Still in active development. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing Test Case does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetResponse toolresultsProjectsHistoriesExecutionsStepsTestCasesGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetResponse toolresultsProjectsHistoriesExecutionsStepsTestCasesGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases/{testCaseId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases/{testCaseId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1132,25 +1156,26 @@ public class Projects {
     /**
      * Lists Test Cases attached to a Step. Experimental test cases API. Still in active development. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to write to project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the containing Step does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListResponse toolresultsProjectsHistoriesExecutionsStepsTestCasesList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListResponse toolresultsProjectsHistoriesExecutionsStepsTestCasesList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/testCases", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsTestCasesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1177,25 +1202,26 @@ public class Projects {
     /**
      * Lists thumbnails of images attached to a step. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read from the project, or from any of the images - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the step does not exist, or if any of the images do not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse toolresultsProjectsHistoriesExecutionsStepsThumbnailsList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListResponse toolresultsProjectsHistoriesExecutionsStepsThumbnailsList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}/executions/{executionId}/steps/{stepId}/thumbnails", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesExecutionsStepsThumbnailsListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1222,25 +1248,26 @@ public class Projects {
     /**
      * Gets a History. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetResponse toolresultsProjectsHistoriesGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetResponse toolresultsProjectsHistoriesGet(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories/{historyId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1267,25 +1294,26 @@ public class Projects {
     /**
      * Lists Histories for a given Project. The histories are sorted by modification time in descending order. The history_id key will be used to order the history with the same modification time. May return any of the following canonical error codes: - PERMISSION_DENIED - if the user is not authorized to read project - INVALID_ARGUMENT - if the request is malformed - NOT_FOUND - if the History does not exist
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListResponse toolresultsProjectsHistoriesList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListResponse toolresultsProjectsHistoriesList(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}/histories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsHistoriesListRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1312,25 +1340,26 @@ public class Projects {
     /**
      * Creates resources for settings which have not yet been set. Currently, this creates a single resource: a Google Cloud Storage bucket, to be used as the default bucket for this project. The bucket is created in an FTL-own storage project. Except for in rare cases, calling this method in parallel from multiple clients will only create a single bucket. In order to avoid unnecessary storage charges, the bucket is configured to automatically delete objects older than 90 days. The bucket is created with the following permissions: - Owner access for owners of central storage project (FTL-owned) - Writer access for owners/editors of customer project - Reader access for viewers of customer project The default ACL on objects created in the bucket is: - Owner access for owners of central storage project - Reader access for owners/editors/viewers of customer project See Google Cloud Storage documentation for more details. If there is already a default bucket set and the project can access the bucket, this call does nothing. However, if the project doesn't have the permission to access the bucket or the bucket is deleted, a new bucket will be created. May return any canonical error codes, including the following: - PERMISSION_DENIED - if the user is not authorized to write to project - Any error code raised by Google Cloud Storage
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsResponse toolresultsProjectsInitializeSettings(org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsResponse toolresultsProjectsInitializeSettings(org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsRequest request, org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsPathParams.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}:initializeSettings", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsRequest.class, baseUrl, "/toolresults/v1beta3/projects/{projectId}:initializeSettings", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ToolresultsProjectsInitializeSettingsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

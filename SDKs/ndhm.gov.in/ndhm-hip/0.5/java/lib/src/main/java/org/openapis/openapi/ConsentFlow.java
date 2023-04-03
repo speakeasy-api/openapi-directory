@@ -55,9 +55,24 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyJsonResponse postV05ConsentsHipNotifyJson(org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyJsonRequest request) throws Exception {
+        return this.postV05ConsentsHipNotifyJson(request, null);
+    }
+
+    /**
+     * Consent notification
+     * Notification of consents to health information providers consent request granted, consent revoked, consent expired. Only the GRANTED and REVOKED status notifications will be sent to HIP.
+     *   1. If consent is granted, status=GRANTED, then consentDetail contains the consent artefact details and signature is available. 
+     *   2. If consent is revoked, then status=REVOKED, and consentId specifes which consent artefact is revoked. 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyJsonResponse postV05ConsentsHipNotifyJson(org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyJsonRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENTS_HIP_NOTIFY_JSON_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consents/hip/notify");
@@ -65,13 +80,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "hipConsentNotification", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {
@@ -121,9 +136,24 @@ public class ConsentFlow {
      * @throws Exception if the API call fails
      */
     public org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyRawResponse postV05ConsentsHipNotifyRaw(org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyRawRequest request) throws Exception {
+        return this.postV05ConsentsHipNotifyRaw(request, null);
+    }
+
+    /**
+     * Consent notification
+     * Notification of consents to health information providers consent request granted, consent revoked, consent expired. Only the GRANTED and REVOKED status notifications will be sent to HIP.
+     *   1. If consent is granted, status=GRANTED, then consentDetail contains the consent artefact details and signature is available. 
+     *   2. If consent is revoked, then status=REVOKED, and consentId specifes which consent artefact is revoked. 
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @param serverURL an optional server URL to use
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyRawResponse postV05ConsentsHipNotifyRaw(org.openapis.openapi.models.operations.PostV05ConsentsHipNotifyRawRequest request, String serverURL) throws Exception {
         String baseUrl = POST_V05_CONSENTS_HIP_NOTIFY_RAW_SERVERS[0];
-        if (request.serverURL != null && !request.serverURL.isBlank()) {
-            baseUrl = request.serverURL;
+        if (serverURL != null && !serverURL.isBlank()) {
+            baseUrl = serverURL;
         }
         
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v0.5/consents/hip/notify");
@@ -131,13 +161,13 @@ public class ConsentFlow {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
-        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request.headers);
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
         if (headers != null) {
             for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
                 for (String value : header.getValue()) {

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackCollectionListRequest {
-    
-    public GetTrackCollectionListQueryParams queryParams;
-    public GetTrackCollectionListRequest withQueryParams(GetTrackCollectionListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Which sharing information to include in the response, such as a URL to the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
+    public GetTrackCollectionListEmbedEnum[] embed;
+    public GetTrackCollectionListRequest withEmbed(GetTrackCollectionListEmbedEnum[] embed) {
+        this.embed = embed;
         return this;
     }
     
+    /**
+     * Page number
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GetTrackCollectionListRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public GetTrackCollectionListSecurity security;
-    public GetTrackCollectionListRequest withSecurity(GetTrackCollectionListSecurity security) {
-        this.security = security;
+    /**
+     * Number of results per page
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public GetTrackCollectionListRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

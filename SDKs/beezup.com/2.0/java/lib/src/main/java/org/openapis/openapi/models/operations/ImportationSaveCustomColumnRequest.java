@@ -7,17 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportationSaveCustomColumnRequest {
-    
-    public ImportationSaveCustomColumnPathParams pathParams;
-    public ImportationSaveCustomColumnRequest withPathParams(ImportationSaveCustomColumnPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.ChangeCustomColumnRequest changeCustomColumnRequest;
+    public ImportationSaveCustomColumnRequest withChangeCustomColumnRequest(org.openapis.openapi.models.shared.ChangeCustomColumnRequest changeCustomColumnRequest) {
+        this.changeCustomColumnRequest = changeCustomColumnRequest;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ChangeCustomColumnRequest request;
-    public ImportationSaveCustomColumnRequest withRequest(org.openapis.openapi.models.shared.ChangeCustomColumnRequest request) {
-        this.request = request;
+    /**
+     * The custom column identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
+    public String columnId;
+    public ImportationSaveCustomColumnRequest withColumnId(String columnId) {
+        this.columnId = columnId;
+        return this;
+    }
+    
+    /**
+     * The execution identifier of you catalog importation
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=executionId")
+    public String executionId;
+    public ImportationSaveCustomColumnRequest withExecutionId(String executionId) {
+        this.executionId = executionId;
+        return this;
+    }
+    
+    /**
+     * Your store identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
+    public String storeId;
+    public ImportationSaveCustomColumnRequest withStoreId(String storeId) {
+        this.storeId = storeId;
         return this;
     }
     

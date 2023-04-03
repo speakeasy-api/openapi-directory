@@ -4,13 +4,313 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtrasObjectChangesListRequest {
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
+    public String action;
+    public ExtrasObjectChangesListRequest withAction(String action) {
+        this.action = action;
+        return this;
+    }
     
-    public ExtrasObjectChangesListQueryParams queryParams;
-    public ExtrasObjectChangesListRequest withQueryParams(ExtrasObjectChangesListQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action__n")
+    public String actionN;
+    public ExtrasObjectChangesListRequest withActionN(String actionN) {
+        this.actionN = actionN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changed_object_id")
+    public String changedObjectId;
+    public ExtrasObjectChangesListRequest withChangedObjectId(String changedObjectId) {
+        this.changedObjectId = changedObjectId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changed_object_id__gt")
+    public String changedObjectIdGt;
+    public ExtrasObjectChangesListRequest withChangedObjectIdGt(String changedObjectIdGt) {
+        this.changedObjectIdGt = changedObjectIdGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changed_object_id__gte")
+    public String changedObjectIdGte;
+    public ExtrasObjectChangesListRequest withChangedObjectIdGte(String changedObjectIdGte) {
+        this.changedObjectIdGte = changedObjectIdGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changed_object_id__lt")
+    public String changedObjectIdLt;
+    public ExtrasObjectChangesListRequest withChangedObjectIdLt(String changedObjectIdLt) {
+        this.changedObjectIdLt = changedObjectIdLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changed_object_id__lte")
+    public String changedObjectIdLte;
+    public ExtrasObjectChangesListRequest withChangedObjectIdLte(String changedObjectIdLte) {
+        this.changedObjectIdLte = changedObjectIdLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changed_object_id__n")
+    public String changedObjectIdN;
+    public ExtrasObjectChangesListRequest withChangedObjectIdN(String changedObjectIdN) {
+        this.changedObjectIdN = changedObjectIdN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changed_object_type")
+    public String changedObjectType;
+    public ExtrasObjectChangesListRequest withChangedObjectType(String changedObjectType) {
+        this.changedObjectType = changedObjectType;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changed_object_type__n")
+    public String changedObjectTypeN;
+    public ExtrasObjectChangesListRequest withChangedObjectTypeN(String changedObjectTypeN) {
+        this.changedObjectTypeN = changedObjectTypeN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public ExtrasObjectChangesListRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gt")
+    public String idGt;
+    public ExtrasObjectChangesListRequest withIdGt(String idGt) {
+        this.idGt = idGt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__gte")
+    public String idGte;
+    public ExtrasObjectChangesListRequest withIdGte(String idGte) {
+        this.idGte = idGte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lt")
+    public String idLt;
+    public ExtrasObjectChangesListRequest withIdLt(String idLt) {
+        this.idLt = idLt;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__lte")
+    public String idLte;
+    public ExtrasObjectChangesListRequest withIdLte(String idLte) {
+        this.idLte = idLte;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id__n")
+    public String idN;
+    public ExtrasObjectChangesListRequest withIdN(String idN) {
+        this.idN = idN;
+        return this;
+    }
+    
+    /**
+     * Number of results to return per page.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
+    public Long limit;
+    public ExtrasObjectChangesListRequest withLimit(Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr")
+    public String objectRepr;
+    public ExtrasObjectChangesListRequest withObjectRepr(String objectRepr) {
+        this.objectRepr = objectRepr;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__ic")
+    public String objectReprIc;
+    public ExtrasObjectChangesListRequest withObjectReprIc(String objectReprIc) {
+        this.objectReprIc = objectReprIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__ie")
+    public String objectReprIe;
+    public ExtrasObjectChangesListRequest withObjectReprIe(String objectReprIe) {
+        this.objectReprIe = objectReprIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__iew")
+    public String objectReprIew;
+    public ExtrasObjectChangesListRequest withObjectReprIew(String objectReprIew) {
+        this.objectReprIew = objectReprIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__isw")
+    public String objectReprIsw;
+    public ExtrasObjectChangesListRequest withObjectReprIsw(String objectReprIsw) {
+        this.objectReprIsw = objectReprIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__n")
+    public String objectReprN;
+    public ExtrasObjectChangesListRequest withObjectReprN(String objectReprN) {
+        this.objectReprN = objectReprN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__nic")
+    public String objectReprNic;
+    public ExtrasObjectChangesListRequest withObjectReprNic(String objectReprNic) {
+        this.objectReprNic = objectReprNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__nie")
+    public String objectReprNie;
+    public ExtrasObjectChangesListRequest withObjectReprNie(String objectReprNie) {
+        this.objectReprNie = objectReprNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__niew")
+    public String objectReprNiew;
+    public ExtrasObjectChangesListRequest withObjectReprNiew(String objectReprNiew) {
+        this.objectReprNiew = objectReprNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_repr__nisw")
+    public String objectReprNisw;
+    public ExtrasObjectChangesListRequest withObjectReprNisw(String objectReprNisw) {
+        this.objectReprNisw = objectReprNisw;
+        return this;
+    }
+    
+    /**
+     * The initial index from which to return the results.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    public Long offset;
+    public ExtrasObjectChangesListRequest withOffset(Long offset) {
+        this.offset = offset;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
+    public String q;
+    public ExtrasObjectChangesListRequest withQ(String q) {
+        this.q = q;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=request_id")
+    public String requestId;
+    public ExtrasObjectChangesListRequest withRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=time")
+    public String time;
+    public ExtrasObjectChangesListRequest withTime(String time) {
+        this.time = time;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public ExtrasObjectChangesListRequest withUser(String user) {
+        this.user = user;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user__n")
+    public String userN;
+    public ExtrasObjectChangesListRequest withUserN(String userN) {
+        this.userN = userN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name")
+    public String userName;
+    public ExtrasObjectChangesListRequest withUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__ic")
+    public String userNameIc;
+    public ExtrasObjectChangesListRequest withUserNameIc(String userNameIc) {
+        this.userNameIc = userNameIc;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__ie")
+    public String userNameIe;
+    public ExtrasObjectChangesListRequest withUserNameIe(String userNameIe) {
+        this.userNameIe = userNameIe;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__iew")
+    public String userNameIew;
+    public ExtrasObjectChangesListRequest withUserNameIew(String userNameIew) {
+        this.userNameIew = userNameIew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__isw")
+    public String userNameIsw;
+    public ExtrasObjectChangesListRequest withUserNameIsw(String userNameIsw) {
+        this.userNameIsw = userNameIsw;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__n")
+    public String userNameN;
+    public ExtrasObjectChangesListRequest withUserNameN(String userNameN) {
+        this.userNameN = userNameN;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__nic")
+    public String userNameNic;
+    public ExtrasObjectChangesListRequest withUserNameNic(String userNameNic) {
+        this.userNameNic = userNameNic;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__nie")
+    public String userNameNie;
+    public ExtrasObjectChangesListRequest withUserNameNie(String userNameNie) {
+        this.userNameNie = userNameNie;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__niew")
+    public String userNameNiew;
+    public ExtrasObjectChangesListRequest withUserNameNiew(String userNameNiew) {
+        this.userNameNiew = userNameNiew;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_name__nisw")
+    public String userNameNisw;
+    public ExtrasObjectChangesListRequest withUserNameNisw(String userNameNisw) {
+        this.userNameNisw = userNameNisw;
         return this;
     }
     

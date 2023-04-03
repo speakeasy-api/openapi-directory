@@ -7,20 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsPatchNotesJsonRequest {
-    
-    public GroupsPatchNotesJsonPathParams pathParams;
-    public GroupsPatchNotesJsonRequest withPathParams(GroupsPatchNotesJsonPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * Patch requests
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch request;
-    public GroupsPatchNotesJsonRequest withRequest(org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch;
+    public GroupsPatchNotesJsonRequest withApiCoreRequestsGenericTextPatch(org.openapis.openapi.models.shared.ApiCoreRequestsGenericTextPatch apiCoreRequestsGenericTextPatch) {
+        this.apiCoreRequestsGenericTextPatch = apiCoreRequestsGenericTextPatch;
+        return this;
+    }
+    
+    /**
+     * Id of the group
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GroupsPatchNotesJsonRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

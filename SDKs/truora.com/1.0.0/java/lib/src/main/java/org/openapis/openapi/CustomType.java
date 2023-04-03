@@ -42,10 +42,11 @@ public class CustomType {
      * Delete Custom Type
      * Allows deleting a custom type. Person, vehicle, and company types cannot be deleted
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCustomTypeResponse deleteCustomType(org.openapis.openapi.models.operations.DeleteCustomTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCustomTypeResponse deleteCustomType(org.openapis.openapi.models.operations.DeleteCustomTypeRequest request, org.openapis.openapi.models.operations.DeleteCustomTypeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/config");
         
@@ -53,14 +54,14 @@ public class CustomType {
         req.setMethod("DELETE");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteCustomTypeQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.DeleteCustomTypeRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -82,10 +83,11 @@ public class CustomType {
      * Update Custom Type
      * Allows updating a custom type. Person, vehicle, and company types are not modifiable
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCustomTypeResponse updateCustomType(org.openapis.openapi.models.operations.UpdateCustomTypeRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCustomTypeResponse updateCustomType(org.openapis.openapi.models.shared.CreateConfigInput request, org.openapis.openapi.models.operations.UpdateCustomTypeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/config");
         
@@ -99,7 +101,7 @@ public class CustomType {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -124,7 +126,7 @@ public class CustomType {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateScoreConfigResponse createScoreConfig(org.openapis.openapi.models.operations.CreateScoreConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateScoreConfigResponse createScoreConfig(org.openapis.openapi.models.shared.CreateConfigInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/v1/config");
         
@@ -185,7 +187,7 @@ public class CustomType {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListScoreConfigsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListScoreConfigsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

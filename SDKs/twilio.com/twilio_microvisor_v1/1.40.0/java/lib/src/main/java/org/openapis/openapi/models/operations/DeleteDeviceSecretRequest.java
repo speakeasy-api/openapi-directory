@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDeviceSecretRequest {
-    
-    public DeleteDeviceSecretPathParams pathParams;
-    public DeleteDeviceSecretRequest withPathParams(DeleteDeviceSecretPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A 34-character string that uniquely identifies the Device.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DeviceSid")
+    public String deviceSid;
+    public DeleteDeviceSecretRequest withDeviceSid(String deviceSid) {
+        this.deviceSid = deviceSid;
         return this;
     }
     
-    
-    public DeleteDeviceSecretSecurity security;
-    public DeleteDeviceSecretRequest withSecurity(DeleteDeviceSecretSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public DeleteDeviceSecretRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The secret key; up to 100 characters.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Key")
+    public String key;
+    public DeleteDeviceSecretRequest withKey(String key) {
+        this.key = key;
         return this;
     }
     

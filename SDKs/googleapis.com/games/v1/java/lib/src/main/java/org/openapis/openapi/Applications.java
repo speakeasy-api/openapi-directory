@@ -33,25 +33,26 @@ public class Applications {
     /**
      * Retrieves the metadata of the application with the given ID. If the requested application is not available for the specified `platformType`, the returned response will not include any instance data.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesApplicationsGetResponse gamesApplicationsGet(org.openapis.openapi.models.operations.GamesApplicationsGetRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesApplicationsGetResponse gamesApplicationsGet(org.openapis.openapi.models.operations.GamesApplicationsGetRequest request, org.openapis.openapi.models.operations.GamesApplicationsGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesApplicationsGetPathParams.class, baseUrl, "/games/v1/applications/{applicationId}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesApplicationsGetRequest.class, baseUrl, "/games/v1/applications/{applicationId}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesApplicationsGetQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesApplicationsGetRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -78,10 +79,11 @@ public class Applications {
     /**
      * Returns a URL for the requested end point type.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesApplicationsGetEndPointResponse gamesApplicationsGetEndPoint(org.openapis.openapi.models.operations.GamesApplicationsGetEndPointRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesApplicationsGetEndPointResponse gamesApplicationsGetEndPoint(org.openapis.openapi.models.operations.GamesApplicationsGetEndPointRequest request, org.openapis.openapi.models.operations.GamesApplicationsGetEndPointSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1/applications/getEndPoint");
         
@@ -89,14 +91,14 @@ public class Applications {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesApplicationsGetEndPointQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesApplicationsGetEndPointRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -123,10 +125,11 @@ public class Applications {
     /**
      * Indicate that the currently authenticated user is playing your application.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesApplicationsPlayedResponse gamesApplicationsPlayed(org.openapis.openapi.models.operations.GamesApplicationsPlayedRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesApplicationsPlayedResponse gamesApplicationsPlayed(org.openapis.openapi.models.operations.GamesApplicationsPlayedRequest request, org.openapis.openapi.models.operations.GamesApplicationsPlayedSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/games/v1/applications/played");
         
@@ -134,14 +137,14 @@ public class Applications {
         req.setMethod("POST");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesApplicationsPlayedQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesApplicationsPlayedRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -162,25 +165,26 @@ public class Applications {
     /**
      * Verifies the auth token provided with this request is for the application with the specified ID, and returns the ID of the player it was granted for.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GamesApplicationsVerifyResponse gamesApplicationsVerify(org.openapis.openapi.models.operations.GamesApplicationsVerifyRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GamesApplicationsVerifyResponse gamesApplicationsVerify(org.openapis.openapi.models.operations.GamesApplicationsVerifyRequest request, org.openapis.openapi.models.operations.GamesApplicationsVerifySecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesApplicationsVerifyPathParams.class, baseUrl, "/games/v1/applications/{applicationId}/verify", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GamesApplicationsVerifyRequest.class, baseUrl, "/games/v1/applications/{applicationId}/verify", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesApplicationsVerifyQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GamesApplicationsVerifyRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

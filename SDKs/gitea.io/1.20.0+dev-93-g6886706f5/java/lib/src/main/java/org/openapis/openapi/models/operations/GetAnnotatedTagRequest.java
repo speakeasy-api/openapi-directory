@@ -4,13 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAnnotatedTagRequest {
+    /**
+     * owner of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
+    public String owner;
+    public GetAnnotatedTagRequest withOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
     
-    public GetAnnotatedTagPathParams pathParams;
-    public GetAnnotatedTagRequest withPathParams(GetAnnotatedTagPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * name of the repo
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
+    public String repo;
+    public GetAnnotatedTagRequest withRepo(String repo) {
+        this.repo = repo;
+        return this;
+    }
+    
+    /**
+     * sha of the tag. The Git tags API only supports annotated tag objects, not lightweight tags.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha")
+    public String sha;
+    public GetAnnotatedTagRequest withSha(String sha) {
+        this.sha = sha;
         return this;
     }
     

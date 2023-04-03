@@ -37,10 +37,11 @@ public class DataSources {
      * Create an arista switch data source
      * Add arista switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddAristaSwitchResponse addAristaSwitch(org.openapis.openapi.models.operations.AddAristaSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddAristaSwitchResponse addAristaSwitch(org.openapis.openapi.models.shared.SwitchDataSourceRequest request, org.openapis.openapi.models.operations.AddAristaSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/arista-switches");
         
@@ -51,7 +52,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -89,10 +90,11 @@ public class DataSources {
      * Create a brocade switch data source
      * Add brocade switch as a data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddBrocadeSwitchResponse addBrocadeSwitch(org.openapis.openapi.models.operations.AddBrocadeSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddBrocadeSwitchResponse addBrocadeSwitch(org.openapis.openapi.models.shared.SwitchDataSourceRequest request, org.openapis.openapi.models.operations.AddBrocadeSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/brocade-switches");
         
@@ -103,7 +105,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -141,10 +143,11 @@ public class DataSources {
      * Create a checkpoint firewall
      * Add checkpoint firewall as data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddCheckpointFirewallResponse addCheckpointFirewall(org.openapis.openapi.models.operations.AddCheckpointFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddCheckpointFirewallResponse addCheckpointFirewall(org.openapis.openapi.models.shared.SwitchDataSourceRequest request, org.openapis.openapi.models.operations.AddCheckpointFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/checkpoint-firewalls");
         
@@ -155,7 +158,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -194,10 +197,11 @@ public class DataSources {
      * Add cisco switch as data source. User must provide one of ip or fqdn field in the request body.
      * Appropriate proxy id is retrieved from infra/nodes URL to select the proxy node.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddCiscoSwitchResponse addCiscoSwitch(org.openapis.openapi.models.operations.AddCiscoSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddCiscoSwitchResponse addCiscoSwitch(org.openapis.openapi.models.shared.CiscoSwitchDataSourceRequest request, org.openapis.openapi.models.operations.AddCiscoSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/cisco-switches");
         
@@ -208,7 +212,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -246,10 +250,11 @@ public class DataSources {
      * Create a dell switch data source
      * Add a dell switch as data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddDellSwitchResponse addDellSwitch(org.openapis.openapi.models.operations.AddDellSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddDellSwitchResponse addDellSwitch(org.openapis.openapi.models.shared.DellSwitchDataSourceRequest request, org.openapis.openapi.models.operations.AddDellSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/dell-switches");
         
@@ -260,7 +265,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -298,10 +303,11 @@ public class DataSources {
      * Create a hp oneview manager data source
      * Add a hp oneview manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddHpovManagerResponse addHpovManager(org.openapis.openapi.models.operations.AddHpovManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddHpovManagerResponse addHpovManager(org.openapis.openapi.models.shared.SwitchDataSource request, org.openapis.openapi.models.operations.AddHpovManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/hpov-managers");
         
@@ -312,7 +318,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -350,10 +356,11 @@ public class DataSources {
      * Create a hpvc manager data source
      * Add hpvc manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddHpvcManagerResponse addHpvcManager(org.openapis.openapi.models.operations.AddHpvcManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddHpvcManagerResponse addHpvcManager(org.openapis.openapi.models.shared.SwitchDataSource request, org.openapis.openapi.models.operations.AddHpvcManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/hpvc-managers");
         
@@ -364,7 +371,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -402,10 +409,11 @@ public class DataSources {
      * Add a juniper switch as data source
      * Add switch Datasource
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddJuniperSwitchResponse addJuniperSwitch(org.openapis.openapi.models.operations.AddJuniperSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddJuniperSwitchResponse addJuniperSwitch(org.openapis.openapi.models.shared.SwitchDataSourceRequest request, org.openapis.openapi.models.operations.AddJuniperSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/juniper-switches");
         
@@ -416,7 +424,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -454,10 +462,11 @@ public class DataSources {
      * Create a nsx-v manager data source
      * Add a nsx-v manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddNsxvManagerDatasourceResponse addNsxvManagerDatasource(org.openapis.openapi.models.operations.AddNsxvManagerDatasourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddNsxvManagerDatasourceResponse addNsxvManagerDatasource(org.openapis.openapi.models.shared.NSXVManagerDataSourceRequest request, org.openapis.openapi.models.operations.AddNsxvManagerDatasourceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/nsxv-managers");
         
@@ -468,7 +477,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -506,10 +515,11 @@ public class DataSources {
      * Create panorama firewall data source
      * Add panorama firewall as data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddPanoramaFirewallResponse addPanoramaFirewall(org.openapis.openapi.models.operations.AddPanoramaFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddPanoramaFirewallResponse addPanoramaFirewall(org.openapis.openapi.models.shared.SwitchDataSourceRequest request, org.openapis.openapi.models.operations.AddPanoramaFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/panorama-firewalls");
         
@@ -520,7 +530,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -558,10 +568,11 @@ public class DataSources {
      * Create an ucs manager data source
      * Add an ucs manager as data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddUcsManagerResponse addUcsManager(org.openapis.openapi.models.operations.AddUcsManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddUcsManagerResponse addUcsManager(org.openapis.openapi.models.shared.SwitchDataSource request, org.openapis.openapi.models.operations.AddUcsManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/ucs-managers");
         
@@ -572,7 +583,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -611,10 +622,11 @@ public class DataSources {
      * Add a vcenter data source. User must provide one of ip or fqdn field in the request body.
      * Appropriate proxy id is retrieved from infra/nodes URL to select the proxy node.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.AddVcenterDatasourceResponse addVcenterDatasource(org.openapis.openapi.models.operations.AddVcenterDatasourceRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.AddVcenterDatasourceResponse addVcenterDatasource(org.openapis.openapi.models.shared.VCenterDataSourceRequest request, org.openapis.openapi.models.operations.AddVcenterDatasourceSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/vcenters");
         
@@ -628,7 +640,7 @@ public class DataSources {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -666,19 +678,20 @@ public class DataSources {
      * Delete an arista switch data source
      * Delete an arista switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteAristaSwitchResponse deleteAristaSwitch(org.openapis.openapi.models.operations.DeleteAristaSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteAristaSwitchResponse deleteAristaSwitch(org.openapis.openapi.models.operations.DeleteAristaSwitchRequest request, org.openapis.openapi.models.operations.DeleteAristaSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAristaSwitchPathParams.class, baseUrl, "/data-sources/arista-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteAristaSwitchRequest.class, baseUrl, "/data-sources/arista-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -700,19 +713,20 @@ public class DataSources {
      * Delete a brocade switch data source
      * Delete a brocade switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteBrocadeSwitchResponse deleteBrocadeSwitch(org.openapis.openapi.models.operations.DeleteBrocadeSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteBrocadeSwitchResponse deleteBrocadeSwitch(org.openapis.openapi.models.operations.DeleteBrocadeSwitchRequest request, org.openapis.openapi.models.operations.DeleteBrocadeSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBrocadeSwitchPathParams.class, baseUrl, "/data-sources/brocade-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteBrocadeSwitchRequest.class, baseUrl, "/data-sources/brocade-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -734,19 +748,20 @@ public class DataSources {
      * Delete a checkpoint firewall data source
      * Delete a checkpoint firewall data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCheckpointFirewallResponse deleteCheckpointFirewall(org.openapis.openapi.models.operations.DeleteCheckpointFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCheckpointFirewallResponse deleteCheckpointFirewall(org.openapis.openapi.models.operations.DeleteCheckpointFirewallRequest request, org.openapis.openapi.models.operations.DeleteCheckpointFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCheckpointFirewallPathParams.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCheckpointFirewallRequest.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -768,19 +783,20 @@ public class DataSources {
      * Delete a cisco switch data source
      * Delete a cisco switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteCiscoSwitchResponse deleteCiscoSwitch(org.openapis.openapi.models.operations.DeleteCiscoSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteCiscoSwitchResponse deleteCiscoSwitch(org.openapis.openapi.models.operations.DeleteCiscoSwitchRequest request, org.openapis.openapi.models.operations.DeleteCiscoSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCiscoSwitchPathParams.class, baseUrl, "/data-sources/cisco-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCiscoSwitchRequest.class, baseUrl, "/data-sources/cisco-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -802,19 +818,20 @@ public class DataSources {
      * Delete a dell switch data source
      * Delete a data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteDellSwitchResponse deleteDellSwitch(org.openapis.openapi.models.operations.DeleteDellSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteDellSwitchResponse deleteDellSwitch(org.openapis.openapi.models.operations.DeleteDellSwitchRequest request, org.openapis.openapi.models.operations.DeleteDellSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDellSwitchPathParams.class, baseUrl, "/data-sources/dell-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteDellSwitchRequest.class, baseUrl, "/data-sources/dell-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -836,19 +853,20 @@ public class DataSources {
      * Delete a hp oneview data source
      * Delete a hp oneview data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteHpovManagerResponse deleteHpovManager(org.openapis.openapi.models.operations.DeleteHpovManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteHpovManagerResponse deleteHpovManager(org.openapis.openapi.models.operations.DeleteHpovManagerRequest request, org.openapis.openapi.models.operations.DeleteHpovManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHpovManagerPathParams.class, baseUrl, "/data-sources/hpov-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHpovManagerRequest.class, baseUrl, "/data-sources/hpov-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -870,19 +888,20 @@ public class DataSources {
      * Delete a hpvc manager data source
      * Delete a hpvc manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteHpvcManagerResponse deleteHpvcManager(org.openapis.openapi.models.operations.DeleteHpvcManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteHpvcManagerResponse deleteHpvcManager(org.openapis.openapi.models.operations.DeleteHpvcManagerRequest request, org.openapis.openapi.models.operations.DeleteHpvcManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHpvcManagerPathParams.class, baseUrl, "/data-sources/hpvc-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteHpvcManagerRequest.class, baseUrl, "/data-sources/hpvc-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -904,19 +923,20 @@ public class DataSources {
      * Delete a juniper switch data source
      * Delete a juniper switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteJuniperSwitchResponse deleteJuniperSwitch(org.openapis.openapi.models.operations.DeleteJuniperSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteJuniperSwitchResponse deleteJuniperSwitch(org.openapis.openapi.models.operations.DeleteJuniperSwitchRequest request, org.openapis.openapi.models.operations.DeleteJuniperSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJuniperSwitchPathParams.class, baseUrl, "/data-sources/juniper-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteJuniperSwitchRequest.class, baseUrl, "/data-sources/juniper-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -938,19 +958,20 @@ public class DataSources {
      * Delete a nsx-v manager data source
      * Delete a nsx-v manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteNsxvManagerResponse deleteNsxvManager(org.openapis.openapi.models.operations.DeleteNsxvManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteNsxvManagerResponse deleteNsxvManager(org.openapis.openapi.models.operations.DeleteNsxvManagerRequest request, org.openapis.openapi.models.operations.DeleteNsxvManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNsxvManagerPathParams.class, baseUrl, "/data-sources/nsxv-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteNsxvManagerRequest.class, baseUrl, "/data-sources/nsxv-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -972,19 +993,20 @@ public class DataSources {
      * Delete a panorama firewall data source
      * Delete a panorama firewall data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeletePanoramaFirewallResponse deletePanoramaFirewall(org.openapis.openapi.models.operations.DeletePanoramaFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeletePanoramaFirewallResponse deletePanoramaFirewall(org.openapis.openapi.models.operations.DeletePanoramaFirewallRequest request, org.openapis.openapi.models.operations.DeletePanoramaFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePanoramaFirewallPathParams.class, baseUrl, "/data-sources/panorama-firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeletePanoramaFirewallRequest.class, baseUrl, "/data-sources/panorama-firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1006,19 +1028,20 @@ public class DataSources {
      * Delete an ucs manager data source
      * Delete an ucs manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteUcsManagerResponse deleteUcsManager(org.openapis.openapi.models.operations.DeleteUcsManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteUcsManagerResponse deleteUcsManager(org.openapis.openapi.models.operations.DeleteUcsManagerRequest request, org.openapis.openapi.models.operations.DeleteUcsManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUcsManagerPathParams.class, baseUrl, "/data-sources/ucs-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteUcsManagerRequest.class, baseUrl, "/data-sources/ucs-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1040,19 +1063,20 @@ public class DataSources {
      * Delete a vCenter data source
      * Delete a data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteVcenterResponse deleteVcenter(org.openapis.openapi.models.operations.DeleteVcenterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteVcenterResponse deleteVcenter(org.openapis.openapi.models.operations.DeleteVcenterRequest request, org.openapis.openapi.models.operations.DeleteVcenterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVcenterPathParams.class, baseUrl, "/data-sources/vcenters/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteVcenterRequest.class, baseUrl, "/data-sources/vcenters/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1074,19 +1098,20 @@ public class DataSources {
      * Disable an arista switch data source
      * Disable an arista switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableAristaSwitchResponse disableAristaSwitch(org.openapis.openapi.models.operations.DisableAristaSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableAristaSwitchResponse disableAristaSwitch(org.openapis.openapi.models.operations.DisableAristaSwitchRequest request, org.openapis.openapi.models.operations.DisableAristaSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableAristaSwitchPathParams.class, baseUrl, "/data-sources/arista-switches/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableAristaSwitchRequest.class, baseUrl, "/data-sources/arista-switches/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1107,19 +1132,20 @@ public class DataSources {
     /**
      * Disable a brocade switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableBrocadeSwitchResponse disableBrocadeSwitch(org.openapis.openapi.models.operations.DisableBrocadeSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableBrocadeSwitchResponse disableBrocadeSwitch(org.openapis.openapi.models.operations.DisableBrocadeSwitchRequest request, org.openapis.openapi.models.operations.DisableBrocadeSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableBrocadeSwitchPathParams.class, baseUrl, "/data-sources/brocade-switches/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableBrocadeSwitchRequest.class, baseUrl, "/data-sources/brocade-switches/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1141,19 +1167,20 @@ public class DataSources {
      * Disable a checkpoint firewall data source
      * Disable a checkpoint firewall data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableCheckpointFirewallResponse disableCheckpointFirewall(org.openapis.openapi.models.operations.DisableCheckpointFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableCheckpointFirewallResponse disableCheckpointFirewall(org.openapis.openapi.models.operations.DisableCheckpointFirewallRequest request, org.openapis.openapi.models.operations.DisableCheckpointFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableCheckpointFirewallPathParams.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableCheckpointFirewallRequest.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1175,19 +1202,20 @@ public class DataSources {
      * Disable a cisco switch data source
      * Disable a cisco switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableCiscoSwitchResponse disableCiscoSwitch(org.openapis.openapi.models.operations.DisableCiscoSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableCiscoSwitchResponse disableCiscoSwitch(org.openapis.openapi.models.operations.DisableCiscoSwitchRequest request, org.openapis.openapi.models.operations.DisableCiscoSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableCiscoSwitchPathParams.class, baseUrl, "/data-sources/cisco-switches/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableCiscoSwitchRequest.class, baseUrl, "/data-sources/cisco-switches/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1209,19 +1237,20 @@ public class DataSources {
      * Disable a dell switch data source
      * Disable a dell switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableDellSwitchResponse disableDellSwitch(org.openapis.openapi.models.operations.DisableDellSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableDellSwitchResponse disableDellSwitch(org.openapis.openapi.models.operations.DisableDellSwitchRequest request, org.openapis.openapi.models.operations.DisableDellSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableDellSwitchPathParams.class, baseUrl, "/data-sources/dell-switches/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableDellSwitchRequest.class, baseUrl, "/data-sources/dell-switches/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1243,19 +1272,20 @@ public class DataSources {
      * Disable a hp oneview data source
      * Disable a hp oneview data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableHpovManagerResponse disableHpovManager(org.openapis.openapi.models.operations.DisableHpovManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableHpovManagerResponse disableHpovManager(org.openapis.openapi.models.operations.DisableHpovManagerRequest request, org.openapis.openapi.models.operations.DisableHpovManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableHpovManagerPathParams.class, baseUrl, "/data-sources/hpov-managers/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableHpovManagerRequest.class, baseUrl, "/data-sources/hpov-managers/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1277,19 +1307,20 @@ public class DataSources {
      * Disable a hpvc manager data source
      * Disable a hpvc manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableHpvcManagerResponse disableHpvcManager(org.openapis.openapi.models.operations.DisableHpvcManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableHpvcManagerResponse disableHpvcManager(org.openapis.openapi.models.operations.DisableHpvcManagerRequest request, org.openapis.openapi.models.operations.DisableHpvcManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableHpvcManagerPathParams.class, baseUrl, "/data-sources/hpvc-managers/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableHpvcManagerRequest.class, baseUrl, "/data-sources/hpvc-managers/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1311,19 +1342,20 @@ public class DataSources {
      * Disable a juniper switch data source
      * Disable a juniper switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableJuniperSwitchResponse disableJuniperSwitch(org.openapis.openapi.models.operations.DisableJuniperSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableJuniperSwitchResponse disableJuniperSwitch(org.openapis.openapi.models.operations.DisableJuniperSwitchRequest request, org.openapis.openapi.models.operations.DisableJuniperSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableJuniperSwitchPathParams.class, baseUrl, "/data-sources/juniper-switches/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableJuniperSwitchRequest.class, baseUrl, "/data-sources/juniper-switches/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1345,19 +1377,20 @@ public class DataSources {
      * Disable a nsx-v manager data source
      * Disable a nsx-v manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableNsxvManagerResponse disableNsxvManager(org.openapis.openapi.models.operations.DisableNsxvManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableNsxvManagerResponse disableNsxvManager(org.openapis.openapi.models.operations.DisableNsxvManagerRequest request, org.openapis.openapi.models.operations.DisableNsxvManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableNsxvManagerPathParams.class, baseUrl, "/data-sources/nsxv-managers/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableNsxvManagerRequest.class, baseUrl, "/data-sources/nsxv-managers/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1379,19 +1412,20 @@ public class DataSources {
      * Disable a panorama firewall data source
      * Disable a panorama firewall data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisablePanoramaFirewallResponse disablePanoramaFirewall(org.openapis.openapi.models.operations.DisablePanoramaFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisablePanoramaFirewallResponse disablePanoramaFirewall(org.openapis.openapi.models.operations.DisablePanoramaFirewallRequest request, org.openapis.openapi.models.operations.DisablePanoramaFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisablePanoramaFirewallPathParams.class, baseUrl, "/data-sources/panorama-firewalls/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisablePanoramaFirewallRequest.class, baseUrl, "/data-sources/panorama-firewalls/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1413,19 +1447,20 @@ public class DataSources {
      * Disable an ucs manager data source
      * Disable an ucs manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableUcsManagerResponse disableUcsManager(org.openapis.openapi.models.operations.DisableUcsManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableUcsManagerResponse disableUcsManager(org.openapis.openapi.models.operations.DisableUcsManagerRequest request, org.openapis.openapi.models.operations.DisableUcsManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableUcsManagerPathParams.class, baseUrl, "/data-sources/ucs-managers/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableUcsManagerRequest.class, baseUrl, "/data-sources/ucs-managers/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1447,19 +1482,20 @@ public class DataSources {
      * Disable a vCenter data source
      * Disable a vCenter data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DisableVcenterResponse disableVcenter(org.openapis.openapi.models.operations.DisableVcenterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.DisableVcenterResponse disableVcenter(org.openapis.openapi.models.operations.DisableVcenterRequest request, org.openapis.openapi.models.operations.DisableVcenterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableVcenterPathParams.class, baseUrl, "/data-sources/vcenters/{id}/disable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DisableVcenterRequest.class, baseUrl, "/data-sources/vcenters/{id}/disable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1481,19 +1517,20 @@ public class DataSources {
      * Enable an arista switch data source
      * Enable an arista switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableAristaSwitchResponse enableAristaSwitch(org.openapis.openapi.models.operations.EnableAristaSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableAristaSwitchResponse enableAristaSwitch(org.openapis.openapi.models.operations.EnableAristaSwitchRequest request, org.openapis.openapi.models.operations.EnableAristaSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableAristaSwitchPathParams.class, baseUrl, "/data-sources/arista-switches/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableAristaSwitchRequest.class, baseUrl, "/data-sources/arista-switches/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1514,19 +1551,20 @@ public class DataSources {
     /**
      * Enable a brocade switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableBrocadeSwitchResponse enableBrocadeSwitch(org.openapis.openapi.models.operations.EnableBrocadeSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableBrocadeSwitchResponse enableBrocadeSwitch(org.openapis.openapi.models.operations.EnableBrocadeSwitchRequest request, org.openapis.openapi.models.operations.EnableBrocadeSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableBrocadeSwitchPathParams.class, baseUrl, "/data-sources/brocade-switches/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableBrocadeSwitchRequest.class, baseUrl, "/data-sources/brocade-switches/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1548,19 +1586,20 @@ public class DataSources {
      * Enable a checkpoint firewall data source
      * Enable a checkpoint firewall data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableCheckpointFirewallResponse enableCheckpointFirewall(org.openapis.openapi.models.operations.EnableCheckpointFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableCheckpointFirewallResponse enableCheckpointFirewall(org.openapis.openapi.models.operations.EnableCheckpointFirewallRequest request, org.openapis.openapi.models.operations.EnableCheckpointFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableCheckpointFirewallPathParams.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableCheckpointFirewallRequest.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1582,19 +1621,20 @@ public class DataSources {
      * Enable a cisco switch data source
      * Enable a cisco switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableCiscoSwitchResponse enableCiscoSwitch(org.openapis.openapi.models.operations.EnableCiscoSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableCiscoSwitchResponse enableCiscoSwitch(org.openapis.openapi.models.operations.EnableCiscoSwitchRequest request, org.openapis.openapi.models.operations.EnableCiscoSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableCiscoSwitchPathParams.class, baseUrl, "/data-sources/cisco-switches/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableCiscoSwitchRequest.class, baseUrl, "/data-sources/cisco-switches/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1616,19 +1656,20 @@ public class DataSources {
      * Enable a dell switch data source
      * Enable a dell switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableDellSwitchResponse enableDellSwitch(org.openapis.openapi.models.operations.EnableDellSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableDellSwitchResponse enableDellSwitch(org.openapis.openapi.models.operations.EnableDellSwitchRequest request, org.openapis.openapi.models.operations.EnableDellSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableDellSwitchPathParams.class, baseUrl, "/data-sources/dell-switches/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableDellSwitchRequest.class, baseUrl, "/data-sources/dell-switches/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1650,19 +1691,20 @@ public class DataSources {
      * Enable a hp oneview data source
      * Enable a hp oneview data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableHpovManagerResponse enableHpovManager(org.openapis.openapi.models.operations.EnableHpovManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableHpovManagerResponse enableHpovManager(org.openapis.openapi.models.operations.EnableHpovManagerRequest request, org.openapis.openapi.models.operations.EnableHpovManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableHpovManagerPathParams.class, baseUrl, "/data-sources/hpov-managers/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableHpovManagerRequest.class, baseUrl, "/data-sources/hpov-managers/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1684,19 +1726,20 @@ public class DataSources {
      * Enable a hpvc manager data source
      * Enable a hpvc manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableHpvcManagerResponse enableHpvcManager(org.openapis.openapi.models.operations.EnableHpvcManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableHpvcManagerResponse enableHpvcManager(org.openapis.openapi.models.operations.EnableHpvcManagerRequest request, org.openapis.openapi.models.operations.EnableHpvcManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableHpvcManagerPathParams.class, baseUrl, "/data-sources/hpvc-managers/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableHpvcManagerRequest.class, baseUrl, "/data-sources/hpvc-managers/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1718,19 +1761,20 @@ public class DataSources {
      * Enable a juniper switch data source
      * Enable a juniper switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableJuniperSwitchResponse enableJuniperSwitch(org.openapis.openapi.models.operations.EnableJuniperSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableJuniperSwitchResponse enableJuniperSwitch(org.openapis.openapi.models.operations.EnableJuniperSwitchRequest request, org.openapis.openapi.models.operations.EnableJuniperSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableJuniperSwitchPathParams.class, baseUrl, "/data-sources/juniper-switches/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableJuniperSwitchRequest.class, baseUrl, "/data-sources/juniper-switches/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1752,19 +1796,20 @@ public class DataSources {
      * Enable a nsx-v manager data source
      * Enable a nsx-v manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableNsxvManagerResponse enableNsxvManager(org.openapis.openapi.models.operations.EnableNsxvManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableNsxvManagerResponse enableNsxvManager(org.openapis.openapi.models.operations.EnableNsxvManagerRequest request, org.openapis.openapi.models.operations.EnableNsxvManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableNsxvManagerPathParams.class, baseUrl, "/data-sources/nsxv-managers/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableNsxvManagerRequest.class, baseUrl, "/data-sources/nsxv-managers/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1786,19 +1831,20 @@ public class DataSources {
      * Enable a panorama firewall data source
      * Enable a panorama firewall data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnablePanoramaFirewallResponse enablePanoramaFirewall(org.openapis.openapi.models.operations.EnablePanoramaFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnablePanoramaFirewallResponse enablePanoramaFirewall(org.openapis.openapi.models.operations.EnablePanoramaFirewallRequest request, org.openapis.openapi.models.operations.EnablePanoramaFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnablePanoramaFirewallPathParams.class, baseUrl, "/data-sources/panorama-firewalls/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnablePanoramaFirewallRequest.class, baseUrl, "/data-sources/panorama-firewalls/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1820,19 +1866,20 @@ public class DataSources {
      * Enable an ucs manager data source
      * Enable an ucs manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableUcsManagerResponse enableUcsManager(org.openapis.openapi.models.operations.EnableUcsManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableUcsManagerResponse enableUcsManager(org.openapis.openapi.models.operations.EnableUcsManagerRequest request, org.openapis.openapi.models.operations.EnableUcsManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableUcsManagerPathParams.class, baseUrl, "/data-sources/ucs-managers/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableUcsManagerRequest.class, baseUrl, "/data-sources/ucs-managers/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1854,19 +1901,20 @@ public class DataSources {
      * Enable a vCenter data source
      * Enable a vCenter data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.EnableVcenterResponse enableVcenter(org.openapis.openapi.models.operations.EnableVcenterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.EnableVcenterResponse enableVcenter(org.openapis.openapi.models.operations.EnableVcenterRequest request, org.openapis.openapi.models.operations.EnableVcenterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableVcenterPathParams.class, baseUrl, "/data-sources/vcenters/{id}/enable", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.EnableVcenterRequest.class, baseUrl, "/data-sources/vcenters/{id}/enable", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1888,19 +1936,20 @@ public class DataSources {
      * Show arista switch data source details
      * Show arista switch data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAristaSwitchResponse getAristaSwitch(org.openapis.openapi.models.operations.GetAristaSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAristaSwitchResponse getAristaSwitch(org.openapis.openapi.models.operations.GetAristaSwitchRequest request, org.openapis.openapi.models.operations.GetAristaSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAristaSwitchPathParams.class, baseUrl, "/data-sources/arista-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAristaSwitchRequest.class, baseUrl, "/data-sources/arista-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1930,19 +1979,20 @@ public class DataSources {
      * Show snmp config for arista switch data source
      * Show snmp config for arista switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigResponse getAristaSwitchSnmpConfig(org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigResponse getAristaSwitchSnmpConfig(org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/arista-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/arista-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -1972,19 +2022,20 @@ public class DataSources {
      * Show brocade switch data source details
      * Show brocade switch data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBrocadeSwitchResponse getBrocadeSwitch(org.openapis.openapi.models.operations.GetBrocadeSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBrocadeSwitchResponse getBrocadeSwitch(org.openapis.openapi.models.operations.GetBrocadeSwitchRequest request, org.openapis.openapi.models.operations.GetBrocadeSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBrocadeSwitchPathParams.class, baseUrl, "/data-sources/brocade-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBrocadeSwitchRequest.class, baseUrl, "/data-sources/brocade-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2014,19 +2065,20 @@ public class DataSources {
      * Show snmp config for brocade switch data source
      * Show snmp config for brocade switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigResponse getBrocadeSwitchSnmpConfig(org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigResponse getBrocadeSwitchSnmpConfig(org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/brocade-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/brocade-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2056,19 +2108,20 @@ public class DataSources {
      * Show checkpoint firewall data source details
      * Show checkpoint firewall data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCheckpointFirewallResponse getCheckpointFirewall(org.openapis.openapi.models.operations.GetCheckpointFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCheckpointFirewallResponse getCheckpointFirewall(org.openapis.openapi.models.operations.GetCheckpointFirewallRequest request, org.openapis.openapi.models.operations.GetCheckpointFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCheckpointFirewallPathParams.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCheckpointFirewallRequest.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2098,19 +2151,20 @@ public class DataSources {
      * Show cisco switch data source details
      * Show cisco switch data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCiscoSwitchResponse getCiscoSwitch(org.openapis.openapi.models.operations.GetCiscoSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCiscoSwitchResponse getCiscoSwitch(org.openapis.openapi.models.operations.GetCiscoSwitchRequest request, org.openapis.openapi.models.operations.GetCiscoSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCiscoSwitchPathParams.class, baseUrl, "/data-sources/cisco-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCiscoSwitchRequest.class, baseUrl, "/data-sources/cisco-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2140,19 +2194,20 @@ public class DataSources {
      * Show snmp config for cisco switch data source
      * Show snmp config for cisco switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigResponse getCiscoSwitchSnmpConfig(org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigResponse getCiscoSwitchSnmpConfig(org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/cisco-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/cisco-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2182,19 +2237,20 @@ public class DataSources {
      * Show dell switch data source details
      * Get a dell switch data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDellSwitchResponse getDellSwitch(org.openapis.openapi.models.operations.GetDellSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDellSwitchResponse getDellSwitch(org.openapis.openapi.models.operations.GetDellSwitchRequest request, org.openapis.openapi.models.operations.GetDellSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDellSwitchPathParams.class, baseUrl, "/data-sources/dell-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDellSwitchRequest.class, baseUrl, "/data-sources/dell-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2224,19 +2280,20 @@ public class DataSources {
      * Show snmp config for dell switch data source
      * Show snmp config for dell switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigResponse getDellSwitchSnmpConfig(org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigResponse getDellSwitchSnmpConfig(org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/dell-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/dell-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2266,19 +2323,20 @@ public class DataSources {
      * Show hp oneview data source details
      * Show hp oneview data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHpovManagerResponse getHpovManager(org.openapis.openapi.models.operations.GetHpovManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHpovManagerResponse getHpovManager(org.openapis.openapi.models.operations.GetHpovManagerRequest request, org.openapis.openapi.models.operations.GetHpovManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHpovManagerPathParams.class, baseUrl, "/data-sources/hpov-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHpovManagerRequest.class, baseUrl, "/data-sources/hpov-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2308,19 +2366,20 @@ public class DataSources {
      * Show hpvc data source details
      * Show hpvc data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetHpvcManagerResponse getHpvcManager(org.openapis.openapi.models.operations.GetHpvcManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetHpvcManagerResponse getHpvcManager(org.openapis.openapi.models.operations.GetHpvcManagerRequest request, org.openapis.openapi.models.operations.GetHpvcManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHpvcManagerPathParams.class, baseUrl, "/data-sources/hpvc-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetHpvcManagerRequest.class, baseUrl, "/data-sources/hpvc-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2350,19 +2409,20 @@ public class DataSources {
      * Show juniper switch data source details
      * Show juniper switch data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetJuniperSwitchResponse getJuniperSwitch(org.openapis.openapi.models.operations.GetJuniperSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetJuniperSwitchResponse getJuniperSwitch(org.openapis.openapi.models.operations.GetJuniperSwitchRequest request, org.openapis.openapi.models.operations.GetJuniperSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJuniperSwitchPathParams.class, baseUrl, "/data-sources/juniper-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJuniperSwitchRequest.class, baseUrl, "/data-sources/juniper-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2392,19 +2452,20 @@ public class DataSources {
      * Show snmp config for juniper switch data source
      * Show snmp config for juniper switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigResponse getJuniperSwitchSnmpConfig(org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigResponse getJuniperSwitchSnmpConfig(org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/juniper-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/juniper-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2434,19 +2495,20 @@ public class DataSources {
      * Show nsx controller-cluster details
      * Show nsx controller-cluster details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNsxvControllerClusterResponse getNsxvControllerCluster(org.openapis.openapi.models.operations.GetNsxvControllerClusterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNsxvControllerClusterResponse getNsxvControllerCluster(org.openapis.openapi.models.operations.GetNsxvControllerClusterRequest request, org.openapis.openapi.models.operations.GetNsxvControllerClusterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNsxvControllerClusterPathParams.class, baseUrl, "/data-sources/nsxv-managers/{id}/controller-cluster", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNsxvControllerClusterRequest.class, baseUrl, "/data-sources/nsxv-managers/{id}/controller-cluster", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2476,19 +2538,20 @@ public class DataSources {
      * Show nsx-v manager data source details
      * Show nsx-v manager data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetNsxvManagerResponse getNsxvManager(org.openapis.openapi.models.operations.GetNsxvManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetNsxvManagerResponse getNsxvManager(org.openapis.openapi.models.operations.GetNsxvManagerRequest request, org.openapis.openapi.models.operations.GetNsxvManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNsxvManagerPathParams.class, baseUrl, "/data-sources/nsxv-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNsxvManagerRequest.class, baseUrl, "/data-sources/nsxv-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2518,19 +2581,20 @@ public class DataSources {
      * Show panorama firewall data source details
      * Show panorama firewall data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetPanoramaFirewallResponse getPanoramaFirewall(org.openapis.openapi.models.operations.GetPanoramaFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetPanoramaFirewallResponse getPanoramaFirewall(org.openapis.openapi.models.operations.GetPanoramaFirewallRequest request, org.openapis.openapi.models.operations.GetPanoramaFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPanoramaFirewallPathParams.class, baseUrl, "/data-sources/panorama-firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPanoramaFirewallRequest.class, baseUrl, "/data-sources/panorama-firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2560,19 +2624,20 @@ public class DataSources {
      * Show ucs manager data source details
      * Show ucs manager data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUcsManagerResponse getUcsManager(org.openapis.openapi.models.operations.GetUcsManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUcsManagerResponse getUcsManager(org.openapis.openapi.models.operations.GetUcsManagerRequest request, org.openapis.openapi.models.operations.GetUcsManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUcsManagerPathParams.class, baseUrl, "/data-sources/ucs-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUcsManagerRequest.class, baseUrl, "/data-sources/ucs-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2602,19 +2667,20 @@ public class DataSources {
      * Show snmp config for ucs fabric interconnects
      * Show snmp config for ucs fabric interconnects
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUcsSnmpConfigResponse getUcsSnmpConfig(org.openapis.openapi.models.operations.GetUcsSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetUcsSnmpConfigResponse getUcsSnmpConfig(org.openapis.openapi.models.operations.GetUcsSnmpConfigRequest request, org.openapis.openapi.models.operations.GetUcsSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUcsSnmpConfigPathParams.class, baseUrl, "/data-sources/ucs-managers/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUcsSnmpConfigRequest.class, baseUrl, "/data-sources/ucs-managers/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2644,19 +2710,20 @@ public class DataSources {
      * Show vCenter data source details
      * Show vCenter data source details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVcenterResponse getVcenter(org.openapis.openapi.models.operations.GetVcenterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetVcenterResponse getVcenter(org.openapis.openapi.models.operations.GetVcenterRequest request, org.openapis.openapi.models.operations.GetVcenterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVcenterPathParams.class, baseUrl, "/data-sources/vcenters/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetVcenterRequest.class, baseUrl, "/data-sources/vcenters/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -2685,11 +2752,10 @@ public class DataSources {
     /**
      * List arista switch data sources
      * List arista switch data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAristaSwitchesResponse listAristaSwitches(org.openapis.openapi.models.operations.ListAristaSwitchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListAristaSwitchesResponse listAristaSwitches() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/arista-switches");
         
@@ -2698,8 +2764,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2727,11 +2792,10 @@ public class DataSources {
     /**
      * List brocade switch data sources
      * List brocade switch data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListBrocadeSwitchesResponse listBrocadeSwitches(org.openapis.openapi.models.operations.ListBrocadeSwitchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListBrocadeSwitchesResponse listBrocadeSwitches() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/brocade-switches");
         
@@ -2740,8 +2804,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2769,11 +2832,10 @@ public class DataSources {
     /**
      * List checkpoint firewall data sources
      * List checkpoint firewall data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCheckpointFirewallsResponse listCheckpointFirewalls(org.openapis.openapi.models.operations.ListCheckpointFirewallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCheckpointFirewallsResponse listCheckpointFirewalls() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/checkpoint-firewalls");
         
@@ -2782,8 +2844,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2811,11 +2872,10 @@ public class DataSources {
     /**
      * List cisco switch data sources
      * List cisco switch data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCiscoSwitchesResponse listCiscoSwitches(org.openapis.openapi.models.operations.ListCiscoSwitchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListCiscoSwitchesResponse listCiscoSwitches() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/cisco-switches");
         
@@ -2824,8 +2884,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2853,11 +2912,10 @@ public class DataSources {
     /**
      * List dell switch data sources
      * List dell switch data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDellSwitchesResponse listDellSwitches(org.openapis.openapi.models.operations.ListDellSwitchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListDellSwitchesResponse listDellSwitches() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/dell-switches");
         
@@ -2866,8 +2924,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2895,11 +2952,10 @@ public class DataSources {
     /**
      * List hp oneview manager data sources
      * List hp oneview manager data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListHpovManagersResponse listHpovManagers(org.openapis.openapi.models.operations.ListHpovManagersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListHpovManagersResponse listHpovManagers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/hpov-managers");
         
@@ -2908,8 +2964,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2937,11 +2992,10 @@ public class DataSources {
     /**
      * List hpvc manager data sources
      * List hpvc manager data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListHpvcManagersResponse listHpvcManagers(org.openapis.openapi.models.operations.ListHpvcManagersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListHpvcManagersResponse listHpvcManagers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/hpvc-managers");
         
@@ -2950,8 +3004,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -2979,11 +3032,10 @@ public class DataSources {
     /**
      * List juniper switch data sources
      * List juniper switch data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListJuniperSwitchesResponse listJuniperSwitches(org.openapis.openapi.models.operations.ListJuniperSwitchesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListJuniperSwitchesResponse listJuniperSwitches() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/juniper-switches");
         
@@ -2992,8 +3044,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -3021,11 +3072,10 @@ public class DataSources {
     /**
      * List nsx-v manager data sources
      * List nsx-v manager data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListNsxvManagersResponse listNsxvManagers(org.openapis.openapi.models.operations.ListNsxvManagersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListNsxvManagersResponse listNsxvManagers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/nsxv-managers");
         
@@ -3034,8 +3084,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -3063,11 +3112,10 @@ public class DataSources {
     /**
      * List panorama firewall data sources
      * List panorama firewall data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPanoramaFirewallsResponse listPanoramaFirewalls(org.openapis.openapi.models.operations.ListPanoramaFirewallsRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListPanoramaFirewallsResponse listPanoramaFirewalls() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/panorama-firewalls");
         
@@ -3076,8 +3124,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -3105,11 +3152,10 @@ public class DataSources {
     /**
      * List ucs manager data sources
      * List ucs manager data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListUcsManagersResponse listUcsManagers(org.openapis.openapi.models.operations.ListUcsManagersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListUcsManagersResponse listUcsManagers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/ucs-managers");
         
@@ -3118,8 +3164,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -3147,11 +3192,10 @@ public class DataSources {
     /**
      * List vCenter data sources
      * List vCenter data sources
-     * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListVcentersResponse listVcenters(org.openapis.openapi.models.operations.ListVcentersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.ListVcentersResponse listVcenters() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/vcenters");
         
@@ -3160,8 +3204,7 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
-        
+        HTTPClient client = this._defaultClient;
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
@@ -3190,21 +3233,22 @@ public class DataSources {
      * Update an arista switch data source
      * Update an switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAristaSwitchResponse updateAristaSwitch(org.openapis.openapi.models.operations.UpdateAristaSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAristaSwitchResponse updateAristaSwitch(org.openapis.openapi.models.operations.UpdateAristaSwitchRequest request, org.openapis.openapi.models.operations.UpdateAristaSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAristaSwitchPathParams.class, baseUrl, "/data-sources/arista-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAristaSwitchRequest.class, baseUrl, "/data-sources/arista-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "switchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3242,21 +3286,22 @@ public class DataSources {
      * Update snmp config for arista switch data source
      * Update snmp config for arista switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigResponse updateAristaSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigResponse updateAristaSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/arista-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/arista-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snmpConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3294,21 +3339,22 @@ public class DataSources {
      * Update a brocade switch data source
      * Update a brocade switch data source. Only credentials, nickname and notes can be updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateBrocadeSwitchResponse updateBrocadeSwitch(org.openapis.openapi.models.operations.UpdateBrocadeSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateBrocadeSwitchResponse updateBrocadeSwitch(org.openapis.openapi.models.operations.UpdateBrocadeSwitchRequest request, org.openapis.openapi.models.operations.UpdateBrocadeSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBrocadeSwitchPathParams.class, baseUrl, "/data-sources/brocade-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBrocadeSwitchRequest.class, baseUrl, "/data-sources/brocade-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "switchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3346,21 +3392,22 @@ public class DataSources {
      * Update snmp config for brocade switch data source
      * Update snmp config for brocade switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigResponse updateBrocadeSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigResponse updateBrocadeSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/brocade-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/brocade-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snmpConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3398,21 +3445,22 @@ public class DataSources {
      * Update a checkpoint firewall data source
      * Update a checkpoint firewall data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCheckpointFirewallResponse updateCheckpointFirewall(org.openapis.openapi.models.operations.UpdateCheckpointFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCheckpointFirewallResponse updateCheckpointFirewall(org.openapis.openapi.models.operations.UpdateCheckpointFirewallRequest request, org.openapis.openapi.models.operations.UpdateCheckpointFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCheckpointFirewallPathParams.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCheckpointFirewallRequest.class, baseUrl, "/data-sources/checkpoint-firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "switchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3450,21 +3498,22 @@ public class DataSources {
      * Update a cisco switch data source
      * Update a cisco switch data source. Only credentials, nickname and notes can be updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCiscoSwitchResponse updateCiscoSwitch(org.openapis.openapi.models.operations.UpdateCiscoSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCiscoSwitchResponse updateCiscoSwitch(org.openapis.openapi.models.operations.UpdateCiscoSwitchRequest request, org.openapis.openapi.models.operations.UpdateCiscoSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCiscoSwitchPathParams.class, baseUrl, "/data-sources/cisco-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCiscoSwitchRequest.class, baseUrl, "/data-sources/cisco-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "ciscoSwitchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3502,21 +3551,22 @@ public class DataSources {
      * Update snmp config for cisco switch data source
      * Update snmp config for cisco switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigResponse updateCiscoSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigResponse updateCiscoSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/cisco-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/cisco-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snmpConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3554,21 +3604,22 @@ public class DataSources {
      * Update a dell switch data source
      * Update a dell switch data source. Only credentials, nickname and notes can be updated
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDellSwitchResponse updateDellSwitch(org.openapis.openapi.models.operations.UpdateDellSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDellSwitchResponse updateDellSwitch(org.openapis.openapi.models.operations.UpdateDellSwitchRequest request, org.openapis.openapi.models.operations.UpdateDellSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDellSwitchPathParams.class, baseUrl, "/data-sources/dell-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDellSwitchRequest.class, baseUrl, "/data-sources/dell-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "dellSwitchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3606,21 +3657,22 @@ public class DataSources {
      * Update snmp config for dell switch data source
      * Update snmp config for dell switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigResponse updateDellSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigResponse updateDellSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/dell-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/dell-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snmpConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3658,21 +3710,22 @@ public class DataSources {
      * Update a hp oneview data source
      * Update a hp oneview data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateHpovManagerResponse updateHpovManager(org.openapis.openapi.models.operations.UpdateHpovManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateHpovManagerResponse updateHpovManager(org.openapis.openapi.models.operations.UpdateHpovManagerRequest request, org.openapis.openapi.models.operations.UpdateHpovManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateHpovManagerPathParams.class, baseUrl, "/data-sources/hpov-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateHpovManagerRequest.class, baseUrl, "/data-sources/hpov-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "switchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3710,21 +3763,22 @@ public class DataSources {
      * Update a hpvc manager data source
      * Update a hpvc manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateHpvcManagerResponse updateHpvcManager(org.openapis.openapi.models.operations.UpdateHpvcManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateHpvcManagerResponse updateHpvcManager(org.openapis.openapi.models.operations.UpdateHpvcManagerRequest request, org.openapis.openapi.models.operations.UpdateHpvcManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateHpvcManagerPathParams.class, baseUrl, "/data-sources/hpvc-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateHpvcManagerRequest.class, baseUrl, "/data-sources/hpvc-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "switchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3762,21 +3816,22 @@ public class DataSources {
      * Update a juniper switch data source
      * Update a juniper switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateJuniperSwitchResponse updateJuniperSwitch(org.openapis.openapi.models.operations.UpdateJuniperSwitchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateJuniperSwitchResponse updateJuniperSwitch(org.openapis.openapi.models.operations.UpdateJuniperSwitchRequest request, org.openapis.openapi.models.operations.UpdateJuniperSwitchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateJuniperSwitchPathParams.class, baseUrl, "/data-sources/juniper-switches/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateJuniperSwitchRequest.class, baseUrl, "/data-sources/juniper-switches/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "switchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3814,21 +3869,22 @@ public class DataSources {
      * Update snmp config for a juniper switch data source
      * Update snmp config for a juniper switch data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigResponse updateJuniperSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigResponse updateJuniperSwitchSnmpConfig(org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigRequest request, org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigPathParams.class, baseUrl, "/data-sources/juniper-switches/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigRequest.class, baseUrl, "/data-sources/juniper-switches/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snmpConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3866,21 +3922,22 @@ public class DataSources {
      * Update nsx controller-cluster details
      * Update nsx controller-cluster details
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateNsxvControllerClusterResponse updateNsxvControllerCluster(org.openapis.openapi.models.operations.UpdateNsxvControllerClusterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateNsxvControllerClusterResponse updateNsxvControllerCluster(org.openapis.openapi.models.operations.UpdateNsxvControllerClusterRequest request, org.openapis.openapi.models.operations.UpdateNsxvControllerClusterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNsxvControllerClusterPathParams.class, baseUrl, "/data-sources/nsxv-managers/{id}/controller-cluster", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNsxvControllerClusterRequest.class, baseUrl, "/data-sources/nsxv-managers/{id}/controller-cluster", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "nsxControllerDataCollection", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3918,21 +3975,22 @@ public class DataSources {
      * Update a nsx-v manager data source
      * Update a nsx-v manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateNsxvManagerResponse updateNsxvManager(org.openapis.openapi.models.operations.UpdateNsxvManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateNsxvManagerResponse updateNsxvManager(org.openapis.openapi.models.operations.UpdateNsxvManagerRequest request, org.openapis.openapi.models.operations.UpdateNsxvManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNsxvManagerPathParams.class, baseUrl, "/data-sources/nsxv-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateNsxvManagerRequest.class, baseUrl, "/data-sources/nsxv-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "nsxvManagerDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -3962,21 +4020,22 @@ public class DataSources {
      * Update a panorama firewall data source
      * Update a panorama firewall data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdatePanoramaFirewallResponse updatePanoramaFirewall(org.openapis.openapi.models.operations.UpdatePanoramaFirewallRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdatePanoramaFirewallResponse updatePanoramaFirewall(org.openapis.openapi.models.operations.UpdatePanoramaFirewallRequest request, org.openapis.openapi.models.operations.UpdatePanoramaFirewallSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePanoramaFirewallPathParams.class, baseUrl, "/data-sources/panorama-firewalls/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdatePanoramaFirewallRequest.class, baseUrl, "/data-sources/panorama-firewalls/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "switchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4014,21 +4073,22 @@ public class DataSources {
      * Update an ucs manager data source
      * Update an ucs manager data source
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUcsManagerResponse updateUcsManager(org.openapis.openapi.models.operations.UpdateUcsManagerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUcsManagerResponse updateUcsManager(org.openapis.openapi.models.operations.UpdateUcsManagerRequest request, org.openapis.openapi.models.operations.UpdateUcsManagerSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUcsManagerPathParams.class, baseUrl, "/data-sources/ucs-managers/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUcsManagerRequest.class, baseUrl, "/data-sources/ucs-managers/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "switchDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4066,21 +4126,22 @@ public class DataSources {
      * Update snmp config for ucs fabric interconnects
      * Update snmp config for ucs fabric interconnects
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateUcsSnmpConfigResponse updateUcsSnmpConfig(org.openapis.openapi.models.operations.UpdateUcsSnmpConfigRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateUcsSnmpConfigResponse updateUcsSnmpConfig(org.openapis.openapi.models.operations.UpdateUcsSnmpConfigRequest request, org.openapis.openapi.models.operations.UpdateUcsSnmpConfigSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUcsSnmpConfigPathParams.class, baseUrl, "/data-sources/ucs-managers/{id}/snmp-config", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateUcsSnmpConfigRequest.class, baseUrl, "/data-sources/ucs-managers/{id}/snmp-config", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "snmpConfig", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -4118,21 +4179,22 @@ public class DataSources {
      * Update a vCenter data source.
      * Update a vcenter data source. Only nickname, notes and credentials can be updated.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UpdateVcenterResponse updateVcenter(org.openapis.openapi.models.operations.UpdateVcenterRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateVcenterResponse updateVcenter(org.openapis.openapi.models.operations.UpdateVcenterRequest request, org.openapis.openapi.models.operations.UpdateVcenterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVcenterPathParams.class, baseUrl, "/data-sources/vcenters/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateVcenterRequest.class, baseUrl, "/data-sources/vcenters/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "vCenterDataSource", "json");
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

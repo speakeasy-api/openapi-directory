@@ -84,7 +84,7 @@ public class Gitignore {
      */
     public org.openapis.openapi.models.operations.GitignoreGetTemplateResponse gitignoreGetTemplate(org.openapis.openapi.models.operations.GitignoreGetTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitignoreGetTemplatePathParams.class, baseUrl, "/gitignore/templates/{name}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GitignoreGetTemplateRequest.class, baseUrl, "/gitignore/templates/{name}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

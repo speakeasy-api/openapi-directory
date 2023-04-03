@@ -7,9 +7,9 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RenewTokenSecurity {
-    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header")
-    public org.openapis.openapi.models.shared.SchemeOauth2ClientSecret oauth2ClientSecret;
-    public RenewTokenSecurity withOauth2ClientSecret(org.openapis.openapi.models.shared.SchemeOauth2ClientSecret oauth2ClientSecret) {
+    @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
+    public String oauth2ClientSecret;
+    public RenewTokenSecurity withOauth2ClientSecret(String oauth2ClientSecret) {
         this.oauth2ClientSecret = oauth2ClientSecret;
         return this;
     }

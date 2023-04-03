@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoryIdCollaboratorsUseridGetRequest {
+    /**
+     * the id from the story object
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public StoryIdCollaboratorsUseridGetRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public StoryIdCollaboratorsUseridGetPathParams pathParams;
-    public StoryIdCollaboratorsUseridGetRequest withPathParams(StoryIdCollaboratorsUseridGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The presalytics userid (NOT the Id of the story_collaborator object)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=story_collaborator_userid")
+    public String storyCollaboratorUserid;
+    public StoryIdCollaboratorsUseridGetRequest withStoryCollaboratorUserid(String storyCollaboratorUserid) {
+        this.storyCollaboratorUserid = storyCollaboratorUserid;
         return this;
     }
     

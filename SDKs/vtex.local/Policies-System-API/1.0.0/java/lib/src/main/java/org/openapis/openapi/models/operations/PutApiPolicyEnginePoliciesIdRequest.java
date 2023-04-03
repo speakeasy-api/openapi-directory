@@ -7,24 +7,40 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutApiPolicyEnginePoliciesIdRequest {
-    
-    public PutApiPolicyEnginePoliciesIdPathParams pathParams;
-    public PutApiPolicyEnginePoliciesIdRequest withPathParams(PutApiPolicyEnginePoliciesIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation _Accept_ Header. Indicates the types of responses the client can understand 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public PutApiPolicyEnginePoliciesIdRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public PutApiPolicyEnginePoliciesIdHeaders headers;
-    public PutApiPolicyEnginePoliciesIdRequest withHeaders(PutApiPolicyEnginePoliciesIdHeaders headers) {
-        this.headers = headers;
+    /**
+     * Describes the type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public PutApiPolicyEnginePoliciesIdRequest withContentType(String contentType) {
+        this.contentType = contentType;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.PolicySaveRequest request;
-    public PutApiPolicyEnginePoliciesIdRequest withRequest(org.openapis.openapi.models.shared.PolicySaveRequest request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.PolicySaveRequest policySaveRequest;
+    public PutApiPolicyEnginePoliciesIdRequest withPolicySaveRequest(org.openapis.openapi.models.shared.PolicySaveRequest policySaveRequest) {
+        this.policySaveRequest = policySaveRequest;
+        return this;
+    }
+    
+    /**
+     * Policy ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PutApiPolicyEnginePoliciesIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

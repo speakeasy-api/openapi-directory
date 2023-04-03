@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostVolumesIdActionsAttachRequest {
-    
-    public PostVolumesIdActionsAttachPathParams pathParams;
-    public PostVolumesIdActionsAttachRequest withPathParams(PostVolumesIdActionsAttachPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostVolumesIdActionsAttachAttachVolumeRequest requestBody;
+    public PostVolumesIdActionsAttachRequest withRequestBody(PostVolumesIdActionsAttachAttachVolumeRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public PostVolumesIdActionsAttachAttachVolumeRequest request;
-    public PostVolumesIdActionsAttachRequest withRequest(PostVolumesIdActionsAttachAttachVolumeRequest request) {
-        this.request = request;
+    /**
+     * ID of the Volume
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public PostVolumesIdActionsAttachRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

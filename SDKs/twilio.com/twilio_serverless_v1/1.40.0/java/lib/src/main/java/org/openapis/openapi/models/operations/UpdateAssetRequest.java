@@ -7,31 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAssetRequest {
-    
-    public UpdateAssetPathParams pathParams;
-    public UpdateAssetRequest withPathParams(UpdateAssetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateAssetUpdateAssetRequest request;
-    public UpdateAssetRequest withRequest(UpdateAssetUpdateAssetRequest request) {
-        this.request = request;
+    public UpdateAssetUpdateAssetRequest requestBody;
+    public UpdateAssetRequest withRequestBody(UpdateAssetUpdateAssetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateAssetSecurity security;
-    public UpdateAssetRequest withSecurity(UpdateAssetSecurity security) {
-        this.security = security;
+    /**
+     * The SID of the Service to update the Asset resource from.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public UpdateAssetRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     
-    
-    public String serverURL;
-    public UpdateAssetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID that identifies the Asset resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateAssetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

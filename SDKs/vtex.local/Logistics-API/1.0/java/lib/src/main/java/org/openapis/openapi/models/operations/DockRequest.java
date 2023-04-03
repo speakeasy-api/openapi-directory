@@ -4,20 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DockRequest {
-    
-    public DockPathParams pathParams;
-    public DockRequest withPathParams(DockPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * HTTP Client Negotiation Accept Header. Indicates the types of responses the client can understand
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
+    public String accept;
+    public DockRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
+    /**
+     * Type of the content being sent
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
+    public String contentType;
+    public DockRequest withContentType(String contentType) {
+        this.contentType = contentType;
+        return this;
+    }
     
-    public DockHeaders headers;
-    public DockRequest withHeaders(DockHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dockId")
+    public String dockId;
+    public DockRequest withDockId(String dockId) {
+        this.dockId = dockId;
         return this;
     }
     

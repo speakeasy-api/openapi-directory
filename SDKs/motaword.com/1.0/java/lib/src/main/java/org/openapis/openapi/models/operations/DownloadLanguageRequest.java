@@ -4,13 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadLanguageRequest {
+    /**
+     * Project ID
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public DownloadLanguageRequest withId(Long id) {
+        this.id = id;
+        return this;
+    }
     
-    public DownloadLanguagePathParams pathParams;
-    public DownloadLanguageRequest withPathParams(DownloadLanguagePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Language code. You can download the translation of only a specific language.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
+    public String language;
+    public DownloadLanguageRequest withLanguage(String language) {
+        this.language = language;
         return this;
     }
     

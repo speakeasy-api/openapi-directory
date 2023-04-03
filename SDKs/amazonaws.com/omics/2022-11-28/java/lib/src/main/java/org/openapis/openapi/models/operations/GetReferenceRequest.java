@@ -4,27 +4,105 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReferenceRequest {
-    
-    public GetReferencePathParams pathParams;
-    public GetReferenceRequest withPathParams(GetReferencePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The range to retrieve.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Range")
+    public String range;
+    public GetReferenceRequest withRange(String range) {
+        this.range = range;
         return this;
     }
     
-    
-    public GetReferenceQueryParams queryParams;
-    public GetReferenceRequest withQueryParams(GetReferenceQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GetReferenceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
     }
     
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GetReferenceRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
     
-    public GetReferenceHeaders headers;
-    public GetReferenceRequest withHeaders(GetReferenceHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GetReferenceRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GetReferenceRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GetReferenceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GetReferenceRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GetReferenceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
+        return this;
+    }
+    
+    /**
+     * The file to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=file")
+    public GetReferenceFileEnum file;
+    public GetReferenceRequest withFile(GetReferenceFileEnum file) {
+        this.file = file;
+        return this;
+    }
+    
+    /**
+     * The reference's ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetReferenceRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
+    
+    /**
+     * The part number to retrieve.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partNumber")
+    public Long partNumber;
+    public GetReferenceRequest withPartNumber(Long partNumber) {
+        this.partNumber = partNumber;
+        return this;
+    }
+    
+    /**
+     * The reference's store ID.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=referenceStoreId")
+    public String referenceStoreId;
+    public GetReferenceRequest withReferenceStoreId(String referenceStoreId) {
+        this.referenceStoreId = referenceStoreId;
         return this;
     }
     

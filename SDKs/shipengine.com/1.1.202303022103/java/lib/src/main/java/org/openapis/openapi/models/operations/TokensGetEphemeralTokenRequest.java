@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TokensGetEphemeralTokenRequest {
-    
-    public TokensGetEphemeralTokenQueryParams queryParams;
-    public TokensGetEphemeralTokenRequest withQueryParams(TokensGetEphemeralTokenQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Include a redirect url to the application formatted with the ephemeral token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect")
+    public org.openapis.openapi.models.shared.RedirectEnum redirect;
+    public TokensGetEphemeralTokenRequest withRedirect(org.openapis.openapi.models.shared.RedirectEnum redirect) {
+        this.redirect = redirect;
         return this;
     }
     

@@ -7,17 +7,30 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05SubscriptionRequestsHiuOnNotifyRequest {
-    
-    public PostV05SubscriptionRequestsHiuOnNotifyHeaders headers;
-    public PostV05SubscriptionRequestsHiuOnNotifyRequest withHeaders(PostV05SubscriptionRequestsHiuOnNotifyHeaders headers) {
-        this.headers = headers;
+    /**
+     * Access token which was issued after successful login with gateway auth server, which will be sent by gateway to authenticate itself with API bridge.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public PostV05SubscriptionRequestsHiuOnNotifyRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.HIUSubscriptionRequestNotificationAcknowledgement request;
-    public PostV05SubscriptionRequestsHiuOnNotifyRequest withRequest(org.openapis.openapi.models.shared.HIUSubscriptionRequestNotificationAcknowledgement request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.HIUSubscriptionRequestNotificationAcknowledgement hiuSubscriptionRequestNotificationAcknowledgement;
+    public PostV05SubscriptionRequestsHiuOnNotifyRequest withHIUSubscriptionRequestNotificationAcknowledgement(org.openapis.openapi.models.shared.HIUSubscriptionRequestNotificationAcknowledgement hiuSubscriptionRequestNotificationAcknowledgement) {
+        this.hiuSubscriptionRequestNotificationAcknowledgement = hiuSubscriptionRequestNotificationAcknowledgement;
+        return this;
+    }
+    
+    /**
+     * Suffix of the consent manager to which the request was intended.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
+    public String xCmId;
+    public PostV05SubscriptionRequestsHiuOnNotifyRequest withXCmId(String xCmId) {
+        this.xCmId = xCmId;
         return this;
     }
     

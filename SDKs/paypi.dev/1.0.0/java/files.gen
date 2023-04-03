@@ -30,17 +30,14 @@ lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostCheckCodeRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostCheckCodeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCheckCode403ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCheckCode401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCheckCode200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostCheckCodeResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSendCodeRequestBody.java
-lib/src/main/java/org/openapis/openapi/models/operations/PostSendCodeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSendCode401ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSendCode400ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSendCode200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostSendCodeResponse.java
-lib/src/main/java/org/openapis/openapi/models/shared/SchemeBearerAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 USAGE.md

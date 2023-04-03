@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetIndustriesRequest {
-    
-    public GetIndustriesPathParams pathParams;
-    public GetIndustriesRequest withPathParams(GetIndustriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * client's internal identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
+    public Long customerId;
+    public GetIndustriesRequest withCustomerId(Long customerId) {
+        this.customerId = customerId;
         return this;
     }
     

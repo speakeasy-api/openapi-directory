@@ -7,24 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSwaggerRequest {
-    
-    public UpdateSwaggerPathParams pathParams;
-    public UpdateSwaggerRequest withPathParams(UpdateSwaggerPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
-    public UpdateSwaggerRequestBody request;
-    public UpdateSwaggerRequest withRequest(UpdateSwaggerRequestBody request) {
-        this.request = request;
+    public UpdateSwaggerRequestBody requestBody;
+    public UpdateSwaggerRequest withRequestBody(UpdateSwaggerRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateSwaggerSecurity security;
-    public UpdateSwaggerRequest withSecurity(UpdateSwaggerSecurity security) {
-        this.security = security;
+    /**
+     * ID of the Swagger file
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public UpdateSwaggerRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

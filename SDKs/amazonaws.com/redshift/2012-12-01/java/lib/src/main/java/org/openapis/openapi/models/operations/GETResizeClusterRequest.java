@@ -4,20 +4,139 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETResizeClusterRequest {
-    
-    public GETResizeClusterQueryParams queryParams;
-    public GETResizeClusterRequest withQueryParams(GETResizeClusterQueryParams queryParams) {
-        this.queryParams = queryParams;
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
+    public GETResizeClusterActionEnum action;
+    public GETResizeClusterRequest withAction(GETResizeClusterActionEnum action) {
+        this.action = action;
         return this;
     }
     
+    /**
+     * A boolean value indicating whether the resize operation is using the classic resize process. If you don't provide this parameter or set the value to &lt;code&gt;false&lt;/code&gt;, the resize type is elastic. 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Classic")
+    public Boolean classic;
+    public GETResizeClusterRequest withClassic(Boolean classic) {
+        this.classic = classic;
+        return this;
+    }
     
-    public GETResizeClusterHeaders headers;
-    public GETResizeClusterRequest withHeaders(GETResizeClusterHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique identifier for the cluster to resize.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
+    public String clusterIdentifier;
+    public GETResizeClusterRequest withClusterIdentifier(String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        return this;
+    }
+    
+    /**
+     * The new cluster type for the specified cluster.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterType")
+    public String clusterType;
+    public GETResizeClusterRequest withClusterType(String clusterType) {
+        this.clusterType = clusterType;
+        return this;
+    }
+    
+    /**
+     * The new node type for the nodes you are adding. If not specified, the cluster's current node type is used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NodeType")
+    public String nodeType;
+    public GETResizeClusterRequest withNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    
+    /**
+     * The new number of nodes for the cluster. If not specified, the cluster's current number of nodes is used.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NumberOfNodes")
+    public Long numberOfNodes;
+    public GETResizeClusterRequest withNumberOfNodes(Long numberOfNodes) {
+        this.numberOfNodes = numberOfNodes;
+        return this;
+    }
+    
+    /**
+     * The identifier of the reserved node.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedNodeId")
+    public String reservedNodeId;
+    public GETResizeClusterRequest withReservedNodeId(String reservedNodeId) {
+        this.reservedNodeId = reservedNodeId;
+        return this;
+    }
+    
+    /**
+     * The identifier of the target reserved node offering.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetReservedNodeOfferingId")
+    public String targetReservedNodeOfferingId;
+    public GETResizeClusterRequest withTargetReservedNodeOfferingId(String targetReservedNodeOfferingId) {
+        this.targetReservedNodeOfferingId = targetReservedNodeOfferingId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
+    public GETResizeClusterVersionEnum version;
+    public GETResizeClusterRequest withVersion(GETResizeClusterVersionEnum version) {
+        this.version = version;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
+    public String xAmzAlgorithm;
+    public GETResizeClusterRequest withXAmzAlgorithm(String xAmzAlgorithm) {
+        this.xAmzAlgorithm = xAmzAlgorithm;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
+    public String xAmzContentSha256;
+    public GETResizeClusterRequest withXAmzContentSha256(String xAmzContentSha256) {
+        this.xAmzContentSha256 = xAmzContentSha256;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
+    public String xAmzCredential;
+    public GETResizeClusterRequest withXAmzCredential(String xAmzCredential) {
+        this.xAmzCredential = xAmzCredential;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
+    public String xAmzDate;
+    public GETResizeClusterRequest withXAmzDate(String xAmzDate) {
+        this.xAmzDate = xAmzDate;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
+    public String xAmzSecurityToken;
+    public GETResizeClusterRequest withXAmzSecurityToken(String xAmzSecurityToken) {
+        this.xAmzSecurityToken = xAmzSecurityToken;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
+    public String xAmzSignature;
+    public GETResizeClusterRequest withXAmzSignature(String xAmzSignature) {
+        this.xAmzSignature = xAmzSignature;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
+    public String xAmzSignedHeaders;
+    public GETResizeClusterRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
+        this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     

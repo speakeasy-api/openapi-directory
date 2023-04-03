@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CurrentSeasontypeRequest {
-    
-    public CurrentSeasontypePathParams pathParams;
-    public CurrentSeasontypeRequest withPathParams(CurrentSeasontypePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;xml&lt;/code&gt; or &lt;code&gt;json&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public CurrentSeasontypeFormatEnum format;
+    public CurrentSeasontypeRequest withFormat(CurrentSeasontypeFormatEnum format) {
+        this.format = format;
         return this;
     }
     

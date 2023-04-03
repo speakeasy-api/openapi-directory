@@ -4,20 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetUserInstallationRequest {
-    
-    public AppsGetUserInstallationPathParams pathParams;
-    public AppsGetUserInstallationRequest withPathParams(AppsGetUserInstallationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * This API is under preview and subject to change.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
+    public String accept;
+    public AppsGetUserInstallationRequest withAccept(String accept) {
+        this.accept = accept;
         return this;
     }
     
-    
-    public AppsGetUserInstallationHeaders headers;
-    public AppsGetUserInstallationRequest withHeaders(AppsGetUserInstallationHeaders headers) {
-        this.headers = headers;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
+    public String username;
+    public AppsGetUserInstallationRequest withUsername(String username) {
+        this.username = username;
         return this;
     }
     

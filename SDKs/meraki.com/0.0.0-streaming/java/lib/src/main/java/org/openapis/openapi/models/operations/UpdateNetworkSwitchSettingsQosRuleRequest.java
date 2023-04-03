@@ -7,17 +7,24 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateNetworkSwitchSettingsQosRuleRequest {
-    
-    public UpdateNetworkSwitchSettingsQosRulePathParams pathParams;
-    public UpdateNetworkSwitchSettingsQosRuleRequest withPathParams(UpdateNetworkSwitchSettingsQosRulePathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public UpdateNetworkSwitchSettingsQosRuleRequestBody requestBody;
+    public UpdateNetworkSwitchSettingsQosRuleRequest withRequestBody(UpdateNetworkSwitchSettingsQosRuleRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public UpdateNetworkSwitchSettingsQosRuleRequestBody request;
-    public UpdateNetworkSwitchSettingsQosRuleRequest withRequest(UpdateNetworkSwitchSettingsQosRuleRequestBody request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkId")
+    public String networkId;
+    public UpdateNetworkSwitchSettingsQosRuleRequest withNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=qosRuleId")
+    public String qosRuleId;
+    public UpdateNetworkSwitchSettingsQosRuleRequest withQosRuleId(String qosRuleId) {
+        this.qosRuleId = qosRuleId;
         return this;
     }
     

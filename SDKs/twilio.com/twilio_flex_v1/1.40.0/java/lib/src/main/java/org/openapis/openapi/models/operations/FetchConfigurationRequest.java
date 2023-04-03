@@ -4,27 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchConfigurationRequest {
-    
-    public FetchConfigurationQueryParams queryParams;
-    public FetchConfigurationRequest withQueryParams(FetchConfigurationQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public FetchConfigurationSecurity security;
-    public FetchConfigurationRequest withSecurity(FetchConfigurationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchConfigurationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The Pinned UI version of the Configuration resource to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UiVersion")
+    public String uiVersion;
+    public FetchConfigurationRequest withUiVersion(String uiVersion) {
+        this.uiVersion = uiVersion;
         return this;
     }
     

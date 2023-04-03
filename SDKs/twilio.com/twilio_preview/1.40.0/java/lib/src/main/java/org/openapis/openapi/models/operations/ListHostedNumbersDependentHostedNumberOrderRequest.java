@@ -4,34 +4,93 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListHostedNumbersDependentHostedNumberOrderRequest {
-    
-    public ListHostedNumbersDependentHostedNumberOrderPathParams pathParams;
-    public ListHostedNumbersDependentHostedNumberOrderRequest withPathParams(ListHostedNumbersDependentHostedNumberOrderPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A human readable description of this resource, up to 64 characters.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FriendlyName")
+    public String friendlyName;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withFriendlyName(String friendlyName) {
+        this.friendlyName = friendlyName;
         return this;
     }
     
-    
-    public ListHostedNumbersDependentHostedNumberOrderQueryParams queryParams;
-    public ListHostedNumbersDependentHostedNumberOrderRequest withQueryParams(ListHostedNumbersDependentHostedNumberOrderQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A 34 character string that uniquely identifies the IncomingPhoneNumber resource created by this HostedNumberOrder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IncomingPhoneNumberSid")
+    public String incomingPhoneNumberSid;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withIncomingPhoneNumberSid(String incomingPhoneNumberSid) {
+        this.incomingPhoneNumberSid = incomingPhoneNumberSid;
         return this;
     }
     
-    
-    public ListHostedNumbersDependentHostedNumberOrderSecurity security;
-    public ListHostedNumbersDependentHostedNumberOrderRequest withSecurity(ListHostedNumbersDependentHostedNumberOrderSecurity security) {
-        this.security = security;
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withPage(Long page) {
+        this.page = page;
         return this;
     }
     
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
     
-    public String serverURL;
-    public ListHostedNumbersDependentHostedNumberOrderRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * An E164 formatted phone number hosted by this HostedNumberOrder.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PhoneNumber")
+    public String phoneNumber;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+        return this;
+    }
+    
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=SigningDocumentSid")
+    public String signingDocumentSid;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withSigningDocumentSid(String signingDocumentSid) {
+        this.signingDocumentSid = signingDocumentSid;
+        return this;
+    }
+    
+    /**
+     * Status of an instance resource. It can hold one of the values: 1. opened 2. signing, 3. signed LOA, 4. canceled, 5. failed. See the section entitled [Status Values](https://www.twilio.com/docs/api/phone-numbers/hosted-number-authorization-documents#status-values) for more information on each of these statuses.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
+    public org.openapis.openapi.models.shared.DependentHostedNumberOrderEnumStatusEnum status;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withStatus(org.openapis.openapi.models.shared.DependentHostedNumberOrderEnumStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * Provides a unique and addressable name to be assigned to this HostedNumberOrder, assigned by the developer, to be optionally used in addition to SID.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UniqueName")
+    public String uniqueName;
+    public ListHostedNumbersDependentHostedNumberOrderRequest withUniqueName(String uniqueName) {
+        this.uniqueName = uniqueName;
         return this;
     }
     

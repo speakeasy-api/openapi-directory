@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1NotificationsIdRequest {
-    
-    public GetApiV1NotificationsIdPathParams pathParams;
-    public GetApiV1NotificationsIdRequest withPathParams(GetApiV1NotificationsIdPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public GetApiV1NotificationsIdSecurity security;
-    public GetApiV1NotificationsIdRequest withSecurity(GetApiV1NotificationsIdSecurity security) {
-        this.security = security;
+    /**
+     * ID of the notification in the database.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public GetApiV1NotificationsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

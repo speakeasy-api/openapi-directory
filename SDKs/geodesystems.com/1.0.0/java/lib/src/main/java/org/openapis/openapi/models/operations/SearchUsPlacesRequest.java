@@ -4,13 +4,237 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.OffsetDateTime;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchUsPlacesRequest {
+    /**
+     * Archive change date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
+    public OffsetDateTime changedateFrom;
+    public SearchUsPlacesRequest withChangedateFrom(OffsetDateTime changedateFrom) {
+        this.changedateFrom = changedateFrom;
+        return this;
+    }
     
-    public SearchUsPlacesQueryParams queryParams;
-    public SearchUsPlacesRequest withQueryParams(SearchUsPlacesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Archive change date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
+    public OffsetDateTime changedateTo;
+    public SearchUsPlacesRequest withChangedateTo(OffsetDateTime changedateTo) {
+        this.changedateTo = changedateTo;
+        return this;
+    }
+    
+    /**
+     * Archive create date from
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
+    public OffsetDateTime createdateFrom;
+    public SearchUsPlacesRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
+        this.createdateFrom = createdateFrom;
+        return this;
+    }
+    
+    /**
+     * Archive create date to
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
+    public OffsetDateTime createdateTo;
+    public SearchUsPlacesRequest withCreatedateTo(OffsetDateTime createdateTo) {
+        this.createdateTo = createdateTo;
+        return this;
+    }
+    
+    /**
+     * Search description
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
+    public String description;
+    public SearchUsPlacesRequest withDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    
+    /**
+     * File suffix
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
+    public String filesuffix;
+    public SearchUsPlacesRequest withFilesuffix(String filesuffix) {
+        this.filesuffix = filesuffix;
+        return this;
+    }
+    
+    /**
+     * From date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
+    public OffsetDateTime fromdate;
+    public SearchUsPlacesRequest withFromdate(OffsetDateTime fromdate) {
+        this.fromdate = fromdate;
+        return this;
+    }
+    
+    /**
+     * Parent entry
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
+    public String group;
+    public SearchUsPlacesRequest withGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    
+    /**
+     * Max number of results
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
+    public Long max;
+    public SearchUsPlacesRequest withMax(Long max) {
+        this.max = max;
+        return this;
+    }
+    
+    /**
+     * Northern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
+    public Float maxlatitude;
+    public SearchUsPlacesRequest withMaxlatitude(Float maxlatitude) {
+        this.maxlatitude = maxlatitude;
+        return this;
+    }
+    
+    /**
+     * Eastern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
+    public Float maxlongitude;
+    public SearchUsPlacesRequest withMaxlongitude(Float maxlongitude) {
+        this.maxlongitude = maxlongitude;
+        return this;
+    }
+    
+    /**
+     * Southern bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
+    public Float minlatitude;
+    public SearchUsPlacesRequest withMinlatitude(Float minlatitude) {
+        this.minlatitude = minlatitude;
+        return this;
+    }
+    
+    /**
+     * Western bounds of search
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
+    public Float minlongitude;
+    public SearchUsPlacesRequest withMinlongitude(Float minlongitude) {
+        this.minlongitude = minlongitude;
+        return this;
+    }
+    
+    /**
+     * Search name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public SearchUsPlacesRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * County Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_us_places.county_name")
+    public String searchDbUsPlacesCountyName;
+    public SearchUsPlacesRequest withSearchDbUsPlacesCountyName(String searchDbUsPlacesCountyName) {
+        this.searchDbUsPlacesCountyName = searchDbUsPlacesCountyName;
+        return this;
+    }
+    
+    /**
+     * Elev In Ft
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_us_places.elev_in_ft")
+    public Double searchDbUsPlacesElevInFt;
+    public SearchUsPlacesRequest withSearchDbUsPlacesElevInFt(Double searchDbUsPlacesElevInFt) {
+        this.searchDbUsPlacesElevInFt = searchDbUsPlacesElevInFt;
+        return this;
+    }
+    
+    /**
+     * Place Type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_us_places.feature_class")
+    public String searchDbUsPlacesFeatureClass;
+    public SearchUsPlacesRequest withSearchDbUsPlacesFeatureClass(String searchDbUsPlacesFeatureClass) {
+        this.searchDbUsPlacesFeatureClass = searchDbUsPlacesFeatureClass;
+        return this;
+    }
+    
+    /**
+     * Place Name
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_us_places.feature_name")
+    public String searchDbUsPlacesFeatureName;
+    public SearchUsPlacesRequest withSearchDbUsPlacesFeatureName(String searchDbUsPlacesFeatureName) {
+        this.searchDbUsPlacesFeatureName = searchDbUsPlacesFeatureName;
+        return this;
+    }
+    
+    /**
+     * Location
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_us_places.location")
+    public String searchDbUsPlacesLocation;
+    public SearchUsPlacesRequest withSearchDbUsPlacesLocation(String searchDbUsPlacesLocation) {
+        this.searchDbUsPlacesLocation = searchDbUsPlacesLocation;
+        return this;
+    }
+    
+    /**
+     * State
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_us_places.state_alpha")
+    public String searchDbUsPlacesStateAlpha;
+    public SearchUsPlacesRequest withSearchDbUsPlacesStateAlpha(String searchDbUsPlacesStateAlpha) {
+        this.searchDbUsPlacesStateAlpha = searchDbUsPlacesStateAlpha;
+        return this;
+    }
+    
+    /**
+     * Number to skip
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
+    public Long skip;
+    public SearchUsPlacesRequest withSkip(Long skip) {
+        this.skip = skip;
+        return this;
+    }
+    
+    /**
+     * Search text
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public SearchUsPlacesRequest withText(String text) {
+        this.text = text;
+        return this;
+    }
+    
+    /**
+     * To date
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
+    public OffsetDateTime todate;
+    public SearchUsPlacesRequest withTodate(OffsetDateTime todate) {
+        this.todate = todate;
         return this;
     }
     

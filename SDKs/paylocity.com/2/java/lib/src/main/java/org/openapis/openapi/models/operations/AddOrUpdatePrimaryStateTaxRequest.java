@@ -7,10 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdatePrimaryStateTaxRequest {
+    /**
+     * Company Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
+    public String companyId;
+    public AddOrUpdatePrimaryStateTaxRequest withCompanyId(String companyId) {
+        this.companyId = companyId;
+        return this;
+    }
     
-    public AddOrUpdatePrimaryStateTaxPathParams pathParams;
-    public AddOrUpdatePrimaryStateTaxRequest withPathParams(AddOrUpdatePrimaryStateTaxPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Employee Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
+    public String employeeId;
+    public AddOrUpdatePrimaryStateTaxRequest withEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
         return this;
     }
     
@@ -18,16 +31,9 @@ public class AddOrUpdatePrimaryStateTaxRequest {
      * Primary State Tax Model
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.StateTax request;
-    public AddOrUpdatePrimaryStateTaxRequest withRequest(org.openapis.openapi.models.shared.StateTax request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public AddOrUpdatePrimaryStateTaxSecurity security;
-    public AddOrUpdatePrimaryStateTaxRequest withSecurity(AddOrUpdatePrimaryStateTaxSecurity security) {
-        this.security = security;
+    public org.openapis.openapi.models.shared.StateTax stateTax;
+    public AddOrUpdatePrimaryStateTaxRequest withStateTax(org.openapis.openapi.models.shared.StateTax stateTax) {
+        this.stateTax = stateTax;
         return this;
     }
     

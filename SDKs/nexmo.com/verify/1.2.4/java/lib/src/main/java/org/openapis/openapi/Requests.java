@@ -50,12 +50,12 @@ public class Requests {
      */
     public org.openapis.openapi.models.operations.VerifyRequestResponse verifyRequest(org.openapis.openapi.models.operations.VerifyRequestRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyRequestPathParams.class, baseUrl, "/{format}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.VerifyRequestRequest.class, baseUrl, "/{format}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "form");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "verifyRequest", "form");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

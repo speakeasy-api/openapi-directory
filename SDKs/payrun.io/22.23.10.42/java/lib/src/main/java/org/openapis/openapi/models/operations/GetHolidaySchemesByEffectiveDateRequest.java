@@ -4,20 +4,47 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHolidaySchemesByEffectiveDateRequest {
-    
-    public GetHolidaySchemesByEffectiveDatePathParams pathParams;
-    public GetHolidaySchemesByEffectiveDateRequest withPathParams(GetHolidaySchemesByEffectiveDatePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The version of the api to target. Omit or set as &amp;apos;default&amp;apos; to target the current api version.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Api-Version")
+    public String apiVersion;
+    public GetHolidaySchemesByEffectiveDateRequest withApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
         return this;
     }
     
+    /**
+     * The OAuth 1 authorization header. &amp;apos;Auto&amp;apos; enables auto complete.
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
+    public String authorization;
+    public GetHolidaySchemesByEffectiveDateRequest withAuthorization(String authorization) {
+        this.authorization = authorization;
+        return this;
+    }
     
-    public GetHolidaySchemesByEffectiveDateHeaders headers;
-    public GetHolidaySchemesByEffectiveDateRequest withHeaders(GetHolidaySchemesByEffectiveDateHeaders headers) {
-        this.headers = headers;
+    /**
+     * The effective date to be applied. E.g 2016-04-06
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EffectiveDate")
+    public LocalDate effectiveDate;
+    public GetHolidaySchemesByEffectiveDateRequest withEffectiveDate(LocalDate effectiveDate) {
+        this.effectiveDate = effectiveDate;
+        return this;
+    }
+    
+    /**
+     * The employers' unique identifier. E.g ER001
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmployerId")
+    public String employerId;
+    public GetHolidaySchemesByEffectiveDateRequest withEmployerId(String employerId) {
+        this.employerId = employerId;
         return this;
     }
     

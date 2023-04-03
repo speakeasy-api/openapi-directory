@@ -7,27 +7,23 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAssetCommentsRequest {
-    
-    public UpdateAssetCommentsPathParams pathParams;
-    public UpdateAssetCommentsRequest withPathParams(UpdateAssetCommentsPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     /**
      * comments to apply to the asset
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.AssetComments request;
-    public UpdateAssetCommentsRequest withRequest(org.openapis.openapi.models.shared.AssetComments request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.AssetComments assetComments;
+    public UpdateAssetCommentsRequest withAssetComments(org.openapis.openapi.models.shared.AssetComments assetComments) {
+        this.assetComments = assetComments;
         return this;
     }
     
-    
-    public UpdateAssetCommentsSecurity security;
-    public UpdateAssetCommentsRequest withSecurity(UpdateAssetCommentsSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the asset to update
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
+    public String assetId;
+    public UpdateAssetCommentsRequest withAssetId(String assetId) {
+        this.assetId = assetId;
         return this;
     }
     

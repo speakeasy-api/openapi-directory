@@ -38,7 +38,7 @@ public class PicoEnableFixCableLock {
      */
     public org.openapis.openapi.models.operations.PicoEnableFixCableLockPostResponse picoEnableFixCableLockPost(org.openapis.openapi.models.operations.PicoEnableFixCableLockPostRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoEnableFixCableLockPostPathParams.class, baseUrl, "/api/pico/tryenablecablelock/{id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PicoEnableFixCableLockPostRequest.class, baseUrl, "/api/pico/tryenablecablelock/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");

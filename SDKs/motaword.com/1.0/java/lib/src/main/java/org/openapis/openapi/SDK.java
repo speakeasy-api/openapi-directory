@@ -401,7 +401,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.DeleteCacheResponse deleteCache(org.openapis.openapi.models.operations.DeleteCacheRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCachePathParams.class, baseUrl, "/cache/{key}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteCacheRequest.class, baseUrl, "/cache/{key}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

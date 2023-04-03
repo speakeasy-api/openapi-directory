@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestStopTestRunRequest {
-    
-    public TestStopTestRunPathParams pathParams;
-    public TestStopTestRunRequest withPathParams(TestStopTestRunPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The name of the application
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
+    public String appName;
+    public TestStopTestRunRequest withAppName(String appName) {
+        this.appName = appName;
         return this;
     }
     
+    /**
+     * The name of the owner
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
+    public String ownerName;
+    public TestStopTestRunRequest withOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+        return this;
+    }
     
-    public TestStopTestRunSecurity security;
-    public TestStopTestRunRequest withSecurity(TestStopTestRunSecurity security) {
-        this.security = security;
+    /**
+     * The ID of the test run to be stopped
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_run_id")
+    public String testRunId;
+    public TestStopTestRunRequest withTestRunId(String testRunId) {
+        this.testRunId = testRunId;
         return this;
     }
     

@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateInstitutionAccountGroupRoleDeleteRequest {
-    
-    public PrivateInstitutionAccountGroupRoleDeletePathParams pathParams;
-    public PrivateInstitutionAccountGroupRoleDeleteRequest withPathParams(PrivateInstitutionAccountGroupRoleDeletePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Account identifier for which to remove the role
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
+    public Long accountId;
+    public PrivateInstitutionAccountGroupRoleDeleteRequest withAccountId(Long accountId) {
+        this.accountId = accountId;
         return this;
     }
     
+    /**
+     * Group identifier for which to remove the role
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=group_id")
+    public Long groupId;
+    public PrivateInstitutionAccountGroupRoleDeleteRequest withGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
     
-    public PrivateInstitutionAccountGroupRoleDeleteSecurity security;
-    public PrivateInstitutionAccountGroupRoleDeleteRequest withSecurity(PrivateInstitutionAccountGroupRoleDeleteSecurity security) {
-        this.security = security;
+    /**
+     * Role identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role_id")
+    public Long roleId;
+    public PrivateInstitutionAccountGroupRoleDeleteRequest withRoleId(Long roleId) {
+        this.roleId = roleId;
         return this;
     }
     

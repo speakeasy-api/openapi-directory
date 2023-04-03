@@ -4,20 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaIdContentRequest {
-    
-    public GetResourcesMediaIdContentPathParams pathParams;
-    public GetResourcesMediaIdContentRequest withPathParams(GetResourcesMediaIdContentPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The method that called this method
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=false,name=calledByBuild")
+    public Boolean calledByBuild;
+    public GetResourcesMediaIdContentRequest withCalledByBuild(Boolean calledByBuild) {
+        this.calledByBuild = calledByBuild;
         return this;
     }
     
-    
-    public GetResourcesMediaIdContentQueryParams queryParams;
-    public GetResourcesMediaIdContentRequest withQueryParams(GetResourcesMediaIdContentQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The id of the media to show content for.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Long id;
+    public GetResourcesMediaIdContentRequest withId(Long id) {
+        this.id = id;
         return this;
     }
     

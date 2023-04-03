@@ -40,10 +40,11 @@ public class Search {
      * Please refer to API Guide on details of how to construct filter expression. A successful search request will return a
      * list of entity ids that matches the search criteria.
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.SearchEntitiesResponse searchEntities(org.openapis.openapi.models.operations.SearchEntitiesRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.SearchEntitiesResponse searchEntities(org.openapis.openapi.models.shared.SearchRequest request, org.openapis.openapi.models.operations.SearchEntitiesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/search");
         
@@ -54,7 +55,7 @@ public class Search {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

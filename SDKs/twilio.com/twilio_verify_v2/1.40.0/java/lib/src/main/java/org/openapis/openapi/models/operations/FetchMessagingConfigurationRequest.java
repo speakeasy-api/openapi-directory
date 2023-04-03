@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchMessagingConfigurationRequest {
-    
-    public FetchMessagingConfigurationPathParams pathParams;
-    public FetchMessagingConfigurationRequest withPathParams(FetchMessagingConfigurationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The [ISO-3166-1](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country code of the country this configuration will be applied to. If this is a global configuration, Country will take the value `all`.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Country")
+    public String country;
+    public FetchMessagingConfigurationRequest withCountry(String country) {
+        this.country = country;
         return this;
     }
     
-    
-    public FetchMessagingConfigurationSecurity security;
-    public FetchMessagingConfigurationRequest withSecurity(FetchMessagingConfigurationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public FetchMessagingConfigurationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the [Service](https://www.twilio.com/docs/verify/api/service) that the resource is associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ServiceSid")
+    public String serviceSid;
+    public FetchMessagingConfigurationRequest withServiceSid(String serviceSid) {
+        this.serviceSid = serviceSid;
         return this;
     }
     

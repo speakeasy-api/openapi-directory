@@ -38,7 +38,7 @@ public class Health {
      */
     public org.openapis.openapi.models.operations.GetNetworkHealthAlertsResponse getNetworkHealthAlerts(org.openapis.openapi.models.operations.GetNetworkHealthAlertsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkHealthAlertsPathParams.class, baseUrl, "/networks/{networkId}/health/alerts", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkHealthAlertsRequest.class, baseUrl, "/networks/{networkId}/health/alerts", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

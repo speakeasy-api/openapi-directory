@@ -39,7 +39,7 @@ public class UsersFollows {
      */
     public org.openapis.openapi.models.operations.CheckIfUserIsFollowingResponse checkIfUserIsFollowing(org.openapis.openapi.models.operations.CheckIfUserIsFollowingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserIsFollowingPathParams.class, baseUrl, "/users/{user_id}/following/{follow_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserIsFollowingRequest.class, baseUrl, "/users/{user_id}/following/{follow_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -80,7 +80,7 @@ public class UsersFollows {
      */
     public org.openapis.openapi.models.operations.CheckIfUserIsFollowingAlt1Response checkIfUserIsFollowingAlt1(org.openapis.openapi.models.operations.CheckIfUserIsFollowingAlt1Request request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserIsFollowingAlt1PathParams.class, baseUrl, "/me/following/{follow_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.CheckIfUserIsFollowingAlt1Request.class, baseUrl, "/me/following/{follow_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -116,19 +116,20 @@ public class UsersFollows {
     /**
      * Follow a specific user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FollowUserResponse followUser(org.openapis.openapi.models.operations.FollowUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FollowUserResponse followUser(org.openapis.openapi.models.operations.FollowUserRequest request, org.openapis.openapi.models.operations.FollowUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FollowUserPathParams.class, baseUrl, "/users/{user_id}/following/{follow_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FollowUserRequest.class, baseUrl, "/users/{user_id}/following/{follow_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -157,19 +158,20 @@ public class UsersFollows {
     /**
      * Follow a specific user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FollowUserAlt1Response followUserAlt1(org.openapis.openapi.models.operations.FollowUserAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.FollowUserAlt1Response followUserAlt1(org.openapis.openapi.models.operations.FollowUserAlt1Request request, org.openapis.openapi.models.operations.FollowUserAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FollowUserAlt1PathParams.class, baseUrl, "/me/following/{follow_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FollowUserAlt1Request.class, baseUrl, "/me/following/{follow_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -198,24 +200,25 @@ public class UsersFollows {
     /**
      * Follow a list of users
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FollowUsersResponse followUsers(org.openapis.openapi.models.operations.FollowUsersRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.FollowUsersResponse followUsers(org.openapis.openapi.models.operations.FollowUsersRequest request, org.openapis.openapi.models.operations.FollowUsersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FollowUsersPathParams.class, baseUrl, "/users/{user_id}/following", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.FollowUsersRequest.class, baseUrl, "/users/{user_id}/following", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -244,10 +247,11 @@ public class UsersFollows {
     /**
      * Follow a list of users
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FollowUsersAlt1Response followUsersAlt1(org.openapis.openapi.models.operations.FollowUsersAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.FollowUsersAlt1Response followUsersAlt1(org.openapis.openapi.models.operations.FollowUsersAlt1RequestBody request, org.openapis.openapi.models.operations.FollowUsersAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/following");
         
@@ -261,7 +265,7 @@ public class UsersFollows {
         req.setBody(serializedRequestBody);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -295,13 +299,13 @@ public class UsersFollows {
      */
     public org.openapis.openapi.models.operations.GetFollowersResponse getFollowers(org.openapis.openapi.models.operations.GetFollowersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFollowersPathParams.class, baseUrl, "/users/{user_id}/followers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetFollowersRequest.class, baseUrl, "/users/{user_id}/followers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFollowersQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFollowersRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -346,7 +350,7 @@ public class UsersFollows {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFollowersAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetFollowersAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -385,13 +389,13 @@ public class UsersFollows {
      */
     public org.openapis.openapi.models.operations.GetUserFollowingResponse getUserFollowing(org.openapis.openapi.models.operations.GetUserFollowingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserFollowingPathParams.class, baseUrl, "/users/{user_id}/following", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetUserFollowingRequest.class, baseUrl, "/users/{user_id}/following", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowingQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowingRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -436,7 +440,7 @@ public class UsersFollows {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowingAlt1QueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetUserFollowingAlt1Request.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -470,19 +474,20 @@ public class UsersFollows {
     /**
      * Unfollow a user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnfollowUserResponse unfollowUser(org.openapis.openapi.models.operations.UnfollowUserRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.UnfollowUserResponse unfollowUser(org.openapis.openapi.models.operations.UnfollowUserRequest request, org.openapis.openapi.models.operations.UnfollowUserSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnfollowUserPathParams.class, baseUrl, "/users/{user_id}/following/{follow_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnfollowUserRequest.class, baseUrl, "/users/{user_id}/following/{follow_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -503,19 +508,20 @@ public class UsersFollows {
     /**
      * Unfollow a user
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.UnfollowUserAlt1Response unfollowUserAlt1(org.openapis.openapi.models.operations.UnfollowUserAlt1Request request) throws Exception {
+    public org.openapis.openapi.models.operations.UnfollowUserAlt1Response unfollowUserAlt1(org.openapis.openapi.models.operations.UnfollowUserAlt1Request request, org.openapis.openapi.models.operations.UnfollowUserAlt1Security security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnfollowUserAlt1PathParams.class, baseUrl, "/me/following/{follow_user_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UnfollowUserAlt1Request.class, baseUrl, "/me/following/{follow_user_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
         req.setURL(url);
         
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

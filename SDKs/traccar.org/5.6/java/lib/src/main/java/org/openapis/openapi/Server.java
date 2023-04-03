@@ -77,7 +77,7 @@ public class Server {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutServerResponse putServer(org.openapis.openapi.models.operations.PutServerRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.PutServerResponse putServer(org.openapis.openapi.models.shared.Server request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/server");
         

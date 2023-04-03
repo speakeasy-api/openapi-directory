@@ -4,27 +4,33 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUntaggedImageCountRequest {
-    
-    public GetUntaggedImageCountPathParams pathParams;
-    public GetUntaggedImageCountRequest withPathParams(GetUntaggedImageCountPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
+    public String trainingKey;
+    public GetUntaggedImageCountRequest withTrainingKey(String trainingKey) {
+        this.trainingKey = trainingKey;
         return this;
     }
     
-    
-    public GetUntaggedImageCountQueryParams queryParams;
-    public GetUntaggedImageCountRequest withQueryParams(GetUntaggedImageCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The iteration id. Defaults to workspace.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
+    public String iterationId;
+    public GetUntaggedImageCountRequest withIterationId(String iterationId) {
+        this.iterationId = iterationId;
         return this;
     }
     
-    
-    public GetUntaggedImageCountHeaders headers;
-    public GetUntaggedImageCountRequest withHeaders(GetUntaggedImageCountHeaders headers) {
-        this.headers = headers;
+    /**
+     * The project id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
+    public String projectId;
+    public GetUntaggedImageCountRequest withProjectId(String projectId) {
+        this.projectId = projectId;
         return this;
     }
     

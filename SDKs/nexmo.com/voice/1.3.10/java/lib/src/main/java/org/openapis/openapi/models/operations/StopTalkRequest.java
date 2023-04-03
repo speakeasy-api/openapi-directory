@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopTalkRequest {
-    
-    public StopTalkPathParams pathParams;
-    public StopTalkRequest withPathParams(StopTalkPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public StopTalkSecurity security;
-    public StopTalkRequest withSecurity(StopTalkSecurity security) {
-        this.security = security;
+    /**
+     * UUID of the Call Leg
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public StopTalkRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

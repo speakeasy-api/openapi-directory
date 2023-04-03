@@ -7,27 +7,33 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SessionsCreateRequest {
-    
-    public SessionsCreateHeaders headers;
-    public SessionsCreateRequest withHeaders(SessionsCreateHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
     /**
      * Additional redirect uri and/or consumer metadata
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.Session request;
-    public SessionsCreateRequest withRequest(org.openapis.openapi.models.shared.Session request) {
-        this.request = request;
+    public org.openapis.openapi.models.shared.Session session;
+    public SessionsCreateRequest withSession(org.openapis.openapi.models.shared.Session session) {
+        this.session = session;
         return this;
     }
     
+    /**
+     * The ID of your Unify application
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-app-id")
+    public String xApideckAppId;
+    public SessionsCreateRequest withXApideckAppId(String xApideckAppId) {
+        this.xApideckAppId = xApideckAppId;
+        return this;
+    }
     
-    public SessionsCreateSecurity security;
-    public SessionsCreateRequest withSecurity(SessionsCreateSecurity security) {
-        this.security = security;
+    /**
+     * ID of the consumer which you want to get or push data from
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=x-apideck-consumer-id")
+    public String xApideckConsumerId;
+    public SessionsCreateRequest withXApideckConsumerId(String xApideckConsumerId) {
+        this.xApideckConsumerId = xApideckConsumerId;
         return this;
     }
     

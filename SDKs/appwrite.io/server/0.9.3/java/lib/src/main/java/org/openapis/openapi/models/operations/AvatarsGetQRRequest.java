@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AvatarsGetQRRequest {
-    
-    public AvatarsGetQRQueryParams queryParams;
-    public AvatarsGetQRRequest withQueryParams(AvatarsGetQRQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Return resulting image with 'Content-Disposition: attachment ' headers for the browser to start downloading it. Pass 0 for no header, or 1 for otherwise. Default value is set to 0.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download")
+    public Boolean download;
+    public AvatarsGetQRRequest withDownload(Boolean download) {
+        this.download = download;
         return this;
     }
     
+    /**
+     * Margin from edge. Pass an integer between 0 to 10. Defaults to 1.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=margin")
+    public Integer margin;
+    public AvatarsGetQRRequest withMargin(Integer margin) {
+        this.margin = margin;
+        return this;
+    }
     
-    public AvatarsGetQRSecurity security;
-    public AvatarsGetQRRequest withSecurity(AvatarsGetQRSecurity security) {
-        this.security = security;
+    /**
+     * QR code size. Pass an integer between 0 to 1000. Defaults to 400.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
+    public Integer size;
+    public AvatarsGetQRRequest withSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    
+    /**
+     * Plain text to be converted to QR code image.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
+    public String text;
+    public AvatarsGetQRRequest withText(String text) {
+        this.text = text;
         return this;
     }
     

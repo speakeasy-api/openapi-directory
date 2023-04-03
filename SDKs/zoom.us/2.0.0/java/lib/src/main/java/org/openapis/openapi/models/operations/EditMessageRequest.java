@@ -7,24 +7,27 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditMessageRequest {
-    
-    public EditMessagePathParams pathParams;
-    public EditMessageRequest withPathParams(EditMessagePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/json")
-    public EditMessageApplicationJSON request;
-    public EditMessageRequest withRequest(EditMessageApplicationJSON request) {
-        this.request = request;
+    public EditMessageApplicationJSON requestBody;
+    public EditMessageRequest withRequestBody(EditMessageApplicationJSON requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
+    /**
+     * Message ID: Unique Identifier of the message.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=messageId")
+    public String messageId;
+    public EditMessageRequest withMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
     
-    public EditMessageSecurity security;
-    public EditMessageRequest withSecurity(EditMessageSecurity security) {
-        this.security = security;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
+    public String userId;
+    public EditMessageRequest withUserId(String userId) {
+        this.userId = userId;
         return this;
     }
     

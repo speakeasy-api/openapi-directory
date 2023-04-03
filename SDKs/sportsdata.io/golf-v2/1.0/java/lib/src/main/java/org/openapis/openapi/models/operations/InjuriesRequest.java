@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InjuriesRequest {
-    
-    public InjuriesPathParams pathParams;
-    public InjuriesRequest withPathParams(InjuriesPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Desired response format. Valid entries are &lt;code&gt;XML&lt;/code&gt; or &lt;code&gt;JSON&lt;/code&gt;.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
+    public InjuriesFormatEnum format;
+    public InjuriesRequest withFormat(InjuriesFormatEnum format) {
+        this.format = format;
         return this;
     }
     

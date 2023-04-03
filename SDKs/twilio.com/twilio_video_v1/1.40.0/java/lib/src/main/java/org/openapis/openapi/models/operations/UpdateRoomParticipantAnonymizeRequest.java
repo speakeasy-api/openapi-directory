@@ -4,27 +4,26 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateRoomParticipantAnonymizeRequest {
-    
-    public UpdateRoomParticipantAnonymizePathParams pathParams;
-    public UpdateRoomParticipantAnonymizeRequest withPathParams(UpdateRoomParticipantAnonymizePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the room with the participant to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=RoomSid")
+    public String roomSid;
+    public UpdateRoomParticipantAnonymizeRequest withRoomSid(String roomSid) {
+        this.roomSid = roomSid;
         return this;
     }
     
-    
-    public UpdateRoomParticipantAnonymizeSecurity security;
-    public UpdateRoomParticipantAnonymizeRequest withSecurity(UpdateRoomParticipantAnonymizeSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateRoomParticipantAnonymizeRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * The SID of the RoomParticipant resource to update.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateRoomParticipantAnonymizeRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

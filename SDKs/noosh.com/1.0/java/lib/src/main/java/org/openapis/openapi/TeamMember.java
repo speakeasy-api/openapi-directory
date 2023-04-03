@@ -39,7 +39,7 @@ public class TeamMember {
      */
     public org.openapis.openapi.models.operations.DeleteTeamMemberOfProjectResponse deleteTeamMemberOfProject(org.openapis.openapi.models.operations.DeleteTeamMemberOfProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTeamMemberOfProjectPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers/{teammember_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteTeamMemberOfProjectRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers/{teammember_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -158,7 +158,7 @@ public class TeamMember {
      */
     public org.openapis.openapi.models.operations.GetTeamMemberListOfClientProjectResponse getTeamMemberListOfClientProject(org.openapis.openapi.models.operations.GetTeamMemberListOfClientProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamMemberListOfClientProjectPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teamMembersOfClientProject", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamMemberListOfClientProjectRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teamMembersOfClientProject", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -277,7 +277,7 @@ public class TeamMember {
      */
     public org.openapis.openapi.models.operations.GetTeamMemberListOfProjectResponse getTeamMemberListOfProject(org.openapis.openapi.models.operations.GetTeamMemberListOfProjectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamMemberListOfProjectPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetTeamMemberListOfProjectRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -396,12 +396,12 @@ public class TeamMember {
      */
     public org.openapis.openapi.models.operations.PostTeamMemberOfProjectJsonResponse postTeamMemberOfProjectJson(org.openapis.openapi.models.operations.PostTeamMemberOfProjectJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTeamMemberOfProjectJsonPathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTeamMemberOfProjectJsonRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "teamMemberPO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -517,12 +517,12 @@ public class TeamMember {
      */
     public org.openapis.openapi.models.operations.PostTeamMemberOfProjectRawResponse postTeamMemberOfProjectRaw(org.openapis.openapi.models.operations.PostTeamMemberOfProjectRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTeamMemberOfProjectRawPathParams.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostTeamMemberOfProjectRawRequest.class, baseUrl, "/1.1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -638,12 +638,12 @@ public class TeamMember {
      */
     public org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonResponse postV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJson(org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersJsonRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contactUserVO", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -759,12 +759,12 @@ public class TeamMember {
      */
     public org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawResponse postV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRaw(org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawPathParams.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PostV1WorkgroupsWorkgroupIdProjectsProjectIdTeammembersRawRequest.class, baseUrl, "/v1/workgroups/{workgroup_id}/projects/{project_id}/teammembers", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         

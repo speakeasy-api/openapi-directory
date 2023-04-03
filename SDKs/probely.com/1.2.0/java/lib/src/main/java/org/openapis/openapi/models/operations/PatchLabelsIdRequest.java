@@ -7,17 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchLabelsIdRequest {
-    
-    public PatchLabelsIdPathParams pathParams;
-    public PatchLabelsIdRequest withPathParams(PatchLabelsIdPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public org.openapis.openapi.models.shared.LabelInput labelInput;
+    public PatchLabelsIdRequest withLabelInput(org.openapis.openapi.models.shared.LabelInput labelInput) {
+        this.labelInput = labelInput;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")
-    public org.openapis.openapi.models.shared.LabelInput request;
-    public PatchLabelsIdRequest withRequest(org.openapis.openapi.models.shared.LabelInput request) {
-        this.request = request;
+    /**
+     * Object Id
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PatchLabelsIdRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

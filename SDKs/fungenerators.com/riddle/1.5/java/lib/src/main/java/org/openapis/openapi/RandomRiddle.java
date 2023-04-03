@@ -34,10 +34,11 @@ public class RandomRiddle {
     /**
      * Get a random riddle for a given category(optional)
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRiddleRandomResponse getRiddleRandom(org.openapis.openapi.models.operations.GetRiddleRandomRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRiddleRandomResponse getRiddleRandom(org.openapis.openapi.models.operations.GetRiddleRandomRequest request, org.openapis.openapi.models.operations.GetRiddleRandomSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/riddle/random");
         
@@ -45,14 +46,14 @@ public class RandomRiddle {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRiddleRandomQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRiddleRandomRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -73,10 +74,11 @@ public class RandomRiddle {
     /**
      * Search for random riddle which has the text in the query, for a given category(optional).
      * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetRiddleSearchResponse getRiddleSearch(org.openapis.openapi.models.operations.GetRiddleSearchRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.GetRiddleSearchResponse getRiddleSearch(org.openapis.openapi.models.operations.GetRiddleSearchRequest request, org.openapis.openapi.models.operations.GetRiddleSearchSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/riddle/search");
         
@@ -84,14 +86,14 @@ public class RandomRiddle {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRiddleSearchQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetRiddleSearchRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
             }
         }
         
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

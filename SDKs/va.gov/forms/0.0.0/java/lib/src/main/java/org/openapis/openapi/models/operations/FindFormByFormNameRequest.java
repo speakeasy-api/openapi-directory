@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindFormByFormNameRequest {
-    
-    public FindFormByFormNamePathParams pathParams;
-    public FindFormByFormNameRequest withPathParams(FindFormByFormNamePathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
-    
-    public FindFormByFormNameSecurity security;
-    public FindFormByFormNameRequest withSecurity(FindFormByFormNameSecurity security) {
-        this.security = security;
+    /**
+     * The VA form_name of the form being requested. The exact form name must be passed, including proper placement of prefixes and/or hyphens.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=form_name")
+    public String formName;
+    public FindFormByFormNameRequest withFormName(String formName) {
+        this.formName = formName;
         return this;
     }
     

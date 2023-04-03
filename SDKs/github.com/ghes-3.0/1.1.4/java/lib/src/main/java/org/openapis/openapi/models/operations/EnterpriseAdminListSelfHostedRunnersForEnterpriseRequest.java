@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest {
-    
-    public EnterpriseAdminListSelfHostedRunnersForEnterprisePathParams pathParams;
-    public EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest withPathParams(EnterpriseAdminListSelfHostedRunnersForEnterprisePathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The slug version of the enterprise name. You can also substitute this value with the enterprise id.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
+    public String enterprise;
+    public EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest withEnterprise(String enterprise) {
+        this.enterprise = enterprise;
         return this;
     }
     
+    /**
+     * Page number of the results to fetch.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
     
-    public EnterpriseAdminListSelfHostedRunnersForEnterpriseQueryParams queryParams;
-    public EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest withQueryParams(EnterpriseAdminListSelfHostedRunnersForEnterpriseQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Results per page (max 100)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
+    public Long perPage;
+    public EnterpriseAdminListSelfHostedRunnersForEnterpriseRequest withPerPage(Long perPage) {
+        this.perPage = perPage;
         return this;
     }
     

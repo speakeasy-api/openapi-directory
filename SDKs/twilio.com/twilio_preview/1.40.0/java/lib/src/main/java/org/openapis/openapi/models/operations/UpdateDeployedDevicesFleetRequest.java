@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeployedDevicesFleetRequest {
-    
-    public UpdateDeployedDevicesFleetPathParams pathParams;
-    public UpdateDeployedDevicesFleetRequest withPathParams(UpdateDeployedDevicesFleetPathParams pathParams) {
-        this.pathParams = pathParams;
-        return this;
-    }
-    
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDeployedDevicesFleetUpdateDeployedDevicesFleetRequest request;
-    public UpdateDeployedDevicesFleetRequest withRequest(UpdateDeployedDevicesFleetUpdateDeployedDevicesFleetRequest request) {
-        this.request = request;
+    public UpdateDeployedDevicesFleetUpdateDeployedDevicesFleetRequest requestBody;
+    public UpdateDeployedDevicesFleetRequest withRequestBody(UpdateDeployedDevicesFleetUpdateDeployedDevicesFleetRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    
-    public UpdateDeployedDevicesFleetSecurity security;
-    public UpdateDeployedDevicesFleetRequest withSecurity(UpdateDeployedDevicesFleetSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDeployedDevicesFleetRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Provides a 34 character string that uniquely identifies the requested Fleet resource.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
+    public String sid;
+    public UpdateDeployedDevicesFleetRequest withSid(String sid) {
+        this.sid = sid;
         return this;
     }
     

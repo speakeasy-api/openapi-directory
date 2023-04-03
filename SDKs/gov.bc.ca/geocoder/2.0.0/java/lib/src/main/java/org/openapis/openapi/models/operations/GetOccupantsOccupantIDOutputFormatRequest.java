@@ -4,20 +4,68 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOccupantsOccupantIDOutputFormatRequest {
-    
-    public GetOccupantsOccupantIDOutputFormatPathParams pathParams;
-    public GetOccupantsOccupantIDOutputFormatRequest withPathParams(GetOccupantsOccupantIDOutputFormatPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * If true, include only basic match and address details in results. Not supported for shp, csv, and gml formats.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=brief")
+    public Boolean brief;
+    public GetOccupantsOccupantIDOutputFormatRequest withBrief(Boolean brief) {
+        this.brief = brief;
         return this;
     }
     
+    /**
+     * Describes the nature of the address location. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#locationDescriptor target="_blank"&gt;locationDescriptor&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationDescriptor")
+    public GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum locationDescriptor;
+    public GetOccupantsOccupantIDOutputFormatRequest withLocationDescriptor(GetOccupantsOccupantIDOutputFormatLocationDescriptorEnum locationDescriptor) {
+        this.locationDescriptor = locationDescriptor;
+        return this;
+    }
     
-    public GetOccupantsOccupantIDOutputFormatQueryParams queryParams;
-    public GetOccupantsOccupantIDOutputFormatRequest withQueryParams(GetOccupantsOccupantIDOutputFormatQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Occupant identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=occupantID")
+    public String occupantID;
+    public GetOccupantsOccupantIDOutputFormatRequest withOccupantID(String occupantID) {
+        this.occupantID = occupantID;
+        return this;
+    }
+    
+    /**
+     * Results format. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputFormat target="_blank"&gt;outputFormat&lt;/a&gt;. 
+     * 
+     * Note: GeoJSON and KML formats only support EPSG:4326 (outputSRS=4326)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
+    public GetOccupantsOccupantIDOutputFormatOutputFormatEnum outputFormat;
+    public GetOccupantsOccupantIDOutputFormatRequest withOutputFormat(GetOccupantsOccupantIDOutputFormatOutputFormatEnum outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    
+    /**
+     * The EPSG code of the spatial reference system (SRS) to use for output geometries. See &lt;a href=https://github.com/bcgov/ols-geocoder/blob/gh-pages/glossary.md#outputSRS target="_blank"&gt;outputSRS&lt;/a&gt;
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
+    public GetOccupantsOccupantIDOutputFormatOutputSrsEnum outputSRS;
+    public GetOccupantsOccupantIDOutputFormatRequest withOutputSRS(GetOccupantsOccupantIDOutputFormatOutputSrsEnum outputSRS) {
+        this.outputSRS = outputSRS;
+        return this;
+    }
+    
+    /**
+     * The distance to move the accessPoint away from the curb and towards the inside of the parcel (in metres). Ignored if locationDescriptor not set to accessPoint.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=setBack")
+    public Long setBack;
+    public GetOccupantsOccupantIDOutputFormatRequest withSetBack(Long setBack) {
+        this.setBack = setBack;
         return this;
     }
     

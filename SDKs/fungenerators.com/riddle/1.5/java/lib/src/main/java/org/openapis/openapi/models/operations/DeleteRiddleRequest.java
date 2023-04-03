@@ -4,20 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRiddleRequest {
-    
-    public DeleteRiddleQueryParams queryParams;
-    public DeleteRiddleRequest withQueryParams(DeleteRiddleQueryParams queryParams) {
-        this.queryParams = queryParams;
-        return this;
-    }
-    
-    
-    public DeleteRiddleSecurity security;
-    public DeleteRiddleRequest withSecurity(DeleteRiddleSecurity security) {
-        this.security = security;
+    /**
+     * Riddle ID
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
+    public String id;
+    public DeleteRiddleRequest withId(String id) {
+        this.id = id;
         return this;
     }
     

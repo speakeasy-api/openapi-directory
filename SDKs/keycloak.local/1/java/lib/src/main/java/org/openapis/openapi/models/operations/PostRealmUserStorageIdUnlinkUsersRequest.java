@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRealmUserStorageIdUnlinkUsersRequest {
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public String id;
+    public PostRealmUserStorageIdUnlinkUsersRequest withId(String id) {
+        this.id = id;
+        return this;
+    }
     
-    public PostRealmUserStorageIdUnlinkUsersPathParams pathParams;
-    public PostRealmUserStorageIdUnlinkUsersRequest withPathParams(PostRealmUserStorageIdUnlinkUsersPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * realm name (not id!)
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=realm")
+    public String realm;
+    public PostRealmUserStorageIdUnlinkUsersRequest withRealm(String realm) {
+        this.realm = realm;
         return this;
     }
     

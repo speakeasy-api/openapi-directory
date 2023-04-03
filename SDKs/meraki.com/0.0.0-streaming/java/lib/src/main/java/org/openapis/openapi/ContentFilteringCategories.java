@@ -39,7 +39,7 @@ public class ContentFilteringCategories {
      */
     public org.openapis.openapi.models.operations.GetNetworkContentFilteringCategoriesResponse getNetworkContentFilteringCategories(org.openapis.openapi.models.operations.GetNetworkContentFilteringCategoriesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkContentFilteringCategoriesPathParams.class, baseUrl, "/networks/{networkId}/contentFiltering/categories", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetNetworkContentFilteringCategoriesRequest.class, baseUrl, "/networks/{networkId}/contentFiltering/categories", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

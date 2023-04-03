@@ -4,13 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CacheNonceGetRequest {
-    
-    public CacheNonceGetPathParams pathParams;
-    public CacheNonceGetRequest withPathParams(CacheNonceGetPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * A one-time use token for retieving items in the users cache
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=nonce")
+    public String nonce;
+    public CacheNonceGetRequest withNonce(String nonce) {
+        this.nonce = nonce;
         return this;
     }
     

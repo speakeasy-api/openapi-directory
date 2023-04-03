@@ -4,20 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCatchAllRequest {
-    
-    public DeleteCatchAllPathParams pathParams;
-    public DeleteCatchAllRequest withPathParams(DeleteCatchAllPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
+    public String domainNamePathParameter;
+    public DeleteCatchAllRequest withDomainNamePathParameter(String domainNamePathParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
         return this;
     }
     
+    /**
+     * Mail zone domain name.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
+    public String domainNameQueryParameter;
+    public DeleteCatchAllRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        return this;
+    }
     
-    public DeleteCatchAllQueryParams queryParams;
-    public DeleteCatchAllRequest withQueryParams(DeleteCatchAllQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Automatically added
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=emailAddress")
+    public String emailAddressPathParameter;
+    public DeleteCatchAllRequest withEmailAddressPathParameter(String emailAddressPathParameter) {
+        this.emailAddressPathParameter = emailAddressPathParameter;
+        return this;
+    }
+    
+    /**
+     * E-mail address to which all e-mails are sent to inexistent mailboxes or aliases.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email_address")
+    public String emailAddressQueryParameter;
+    public DeleteCatchAllRequest withEmailAddressQueryParameter(String emailAddressQueryParameter) {
+        this.emailAddressQueryParameter = emailAddressQueryParameter;
         return this;
     }
     

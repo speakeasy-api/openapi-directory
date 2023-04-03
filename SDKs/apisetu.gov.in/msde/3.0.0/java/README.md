@@ -21,7 +21,6 @@ import org.openapis.openapi.models.operations.IticrSecurity;
 import org.openapis.openapi.models.operations.IticrRequestBodyCertificateParameters;
 import org.openapis.openapi.models.operations.IticrRequestBodyFormatEnum;
 import org.openapis.openapi.models.operations.IticrRequestBody;
-import org.openapis.openapi.models.operations.IticrRequest;
 import org.openapis.openapi.models.operations.IticrResponse;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentData;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentDataConsumer;
@@ -34,8 +33,6 @@ import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsentUser;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaConsent;
 import org.openapis.openapi.models.shared.ConsentArtifactSchemaSignature;
 import org.openapis.openapi.models.shared.ConsentArtifactSchema;
-import org.openapis.openapi.models.shared.SchemeAPIKey;
-import org.openapis.openapi.models.shared.SchemeClientID;
 
 public class Application {
     public static void main(String[] args) {
@@ -43,65 +40,58 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            IticrRequest req = new IticrRequest() {{
-                security = new IticrSecurity() {{
-                    apiKey = new SchemeAPIKey() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
-                    clientId = new SchemeClientID() {{
-                        apiKey = "YOUR_API_KEY_HERE";
-                    }};
+            IticrRequestBody req = new IticrRequestBody() {{
+                certificateParameters = new IticrRequestBodyCertificateParameters() {{
+                    fullName = "Sunil Kumar";
+                    certno = "18XXXXXXX";
                 }};
-                request = new IticrRequestBody() {{
-                    certificateParameters = new IticrRequestBodyCertificateParameters() {{
-                        fullName = "Sunil Kumar";
-                        certno = "18XXXXXXX";
-                    }};
-                    consentArtifact = new ConsentArtifactSchema() {{
-                        consent = new ConsentArtifactSchemaConsent() {{
-                            consentId = "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba";
-                            data = new ConsentArtifactSchemaConsentData() {{
-                                id = "corrupti";
+                consentArtifact = new ConsentArtifactSchema() {{
+                    consent = new ConsentArtifactSchemaConsent() {{
+                        consentId = "ea9c43aa-7f5a-4bf3-a0be-e1caa24737ba";
+                        data = new ConsentArtifactSchemaConsentData() {{
+                            id = "corrupti";
+                        }};
+                        dataConsumer = new ConsentArtifactSchemaConsentDataConsumer() {{
+                            id = "provident";
+                        }};
+                        dataProvider = new ConsentArtifactSchemaConsentDataProvider() {{
+                            id = "distinctio";
+                        }};
+                        permission = new ConsentArtifactSchemaConsentPermission() {{
+                            access = "quibusdam";
+                            dateRange = new ConsentArtifactSchemaConsentPermissionDateRange() {{
+                                from = "2021-04-14T16:47:33.722Z";
+                                to = "2021-04-22T12:08:58.275Z";
                             }};
-                            dataConsumer = new ConsentArtifactSchemaConsentDataConsumer() {{
-                                id = "provident";
-                            }};
-                            dataProvider = new ConsentArtifactSchemaConsentDataProvider() {{
-                                id = "distinctio";
-                            }};
-                            permission = new ConsentArtifactSchemaConsentPermission() {{
-                                access = "quibusdam";
-                                dateRange = new ConsentArtifactSchemaConsentPermissionDateRange() {{
-                                    from = "2021-04-14T16:47:33.722Z";
-                                    to = "2021-04-22T12:08:58.275Z";
-                                }};
-                                frequency = new ConsentArtifactSchemaConsentPermissionFrequency() {{
-                                    repeats = 4236.55;
-                                    unit = "error";
-                                    value = 6458.94;
-                                }};
-                            }};
-                            purpose = new ConsentArtifactSchemaConsentPurpose() {{
-                                description = "suscipit";
-                            }};
-                            timestamp = "2022-09-14T09:35:47.986Z";
-                            user = new ConsentArtifactSchemaConsentUser() {{
-                                email = "Anahi38@hotmail.com";
-                                idNumber = "molestiae";
-                                idType = "minus";
-                                mobile = "645-598-0306 x03897";
+                            frequency = new ConsentArtifactSchemaConsentPermissionFrequency() {{
+                                repeats = 4236.55;
+                                unit = "error";
+                                value = 6458.94;
                             }};
                         }};
-                        signature = new ConsentArtifactSchemaSignature() {{
-                            signature = "odit";
+                        purpose = new ConsentArtifactSchemaConsentPurpose() {{
+                            description = "suscipit";
+                        }};
+                        timestamp = "2022-09-14T09:35:47.986Z";
+                        user = new ConsentArtifactSchemaConsentUser() {{
+                            email = "Anahi38@hotmail.com";
+                            idNumber = "molestiae";
+                            idType = "minus";
+                            mobile = "645-598-0306 x03897";
                         }};
                     }};
-                    format = "pdf";
-                    txnId = "f7f1469c-29b0-4325-9dfc-c567200a70f7";
+                    signature = new ConsentArtifactSchemaSignature() {{
+                        signature = "odit";
+                    }};
                 }};
-            }};            
+                format = "pdf";
+                txnId = "f7f1469c-29b0-4325-9dfc-c567200a70f7";
+            }}            
 
-            IticrResponse res = sdk.apIs.iticr(req);
+            IticrResponse res = sdk.apIs.iticr(req, new IticrSecurity() {{
+                apiKey = "YOUR_API_KEY_HERE";
+                clientId = "YOUR_API_KEY_HERE";
+            }});
 
             if (res.statusCode == 200) {
                 // handle response
@@ -113,7 +103,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### apIs

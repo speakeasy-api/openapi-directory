@@ -4,13 +4,23 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsAddRepoToInstallationForAuthenticatedUserRequest {
+    /**
+     * installation_id parameter
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
+    public Long installationId;
+    public AppsAddRepoToInstallationForAuthenticatedUserRequest withInstallationId(Long installationId) {
+        this.installationId = installationId;
+        return this;
+    }
     
-    public AppsAddRepoToInstallationForAuthenticatedUserPathParams pathParams;
-    public AppsAddRepoToInstallationForAuthenticatedUserRequest withPathParams(AppsAddRepoToInstallationForAuthenticatedUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repository_id")
+    public Long repositoryId;
+    public AppsAddRepoToInstallationForAuthenticatedUserRequest withRepositoryId(Long repositoryId) {
+        this.repositoryId = repositoryId;
         return this;
     }
     

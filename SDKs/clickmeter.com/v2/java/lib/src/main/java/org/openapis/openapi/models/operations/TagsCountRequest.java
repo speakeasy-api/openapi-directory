@@ -4,13 +4,46 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TagsCountRequest {
+    /**
+     * Comma separated list of datapoints id to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datapoints")
+    public String datapoints;
+    public TagsCountRequest withDatapoints(String datapoints) {
+        this.datapoints = datapoints;
+        return this;
+    }
     
-    public TagsCountQueryParams queryParams;
-    public TagsCountRequest withQueryParams(TagsCountQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Comma separated list of groups id to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groups")
+    public String groups;
+    public TagsCountRequest withGroups(String groups) {
+        this.groups = groups;
+        return this;
+    }
+    
+    /**
+     * Name of the tag
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
+    public String name;
+    public TagsCountRequest withName(String name) {
+        this.name = name;
+        return this;
+    }
+    
+    /**
+     * Type of entity related to the tag
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    public TagsCountTypeEnum type;
+    public TagsCountRequest withType(TagsCountTypeEnum type) {
+        this.type = type;
         return this;
     }
     

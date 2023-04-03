@@ -4,27 +4,74 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETTaxationItemsOfCreditMemoItemRequest {
-    
-    public GETTaxationItemsOfCreditMemoItemPathParams pathParams;
-    public GETTaxationItemsOfCreditMemoItemRequest withPathParams(GETTaxationItemsOfCreditMemoItemPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * An entity ID. If you have [Zuora Multi-entity](https://knowledgecenter.zuora.com/BB_Introducing_Z_Business/Multi-entity) enabled and the OAuth token is valid for more than one entity, you must use this header to specify which entity to perform the operation in. If the OAuth token is only valid for a single entity, or you do not have Zuora Multi-entity enabled, you do not need to set this header.
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Entity-Ids")
+    public String zuoraEntityIds;
+    public GETTaxationItemsOfCreditMemoItemRequest withZuoraEntityIds(String zuoraEntityIds) {
+        this.zuoraEntityIds = zuoraEntityIds;
         return this;
     }
     
-    
-    public GETTaxationItemsOfCreditMemoItemQueryParams queryParams;
-    public GETTaxationItemsOfCreditMemoItemRequest withQueryParams(GETTaxationItemsOfCreditMemoItemQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A custom identifier for tracing the API call. If you set a value for this header, Zuora returns the same value in the response headers. This header enables you to associate your system process identifiers with Zuora API calls, to assist with troubleshooting in the event of an issue.
+     * 
+     * The value of this field must use the US-ASCII character set and must not include any of the following characters: colon (`:`), semicolon (`;`), double quote (`"`), and quote (`'`).
+     * 
+     */
+    @SpeakeasyMetadata("header:style=simple,explode=false,name=Zuora-Track-Id")
+    public String zuoraTrackId;
+    public GETTaxationItemsOfCreditMemoItemRequest withZuoraTrackId(String zuoraTrackId) {
+        this.zuoraTrackId = zuoraTrackId;
         return this;
     }
     
+    /**
+     * The unique ID of a credit memo item. You can get the credit memo item ID from the response of [List credit memo items](https://www.zuora.com/developer/api-reference/#operation/GET_CreditMemoItems).
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cmitemid")
+    public String cmitemid;
+    public GETTaxationItemsOfCreditMemoItemRequest withCmitemid(String cmitemid) {
+        this.cmitemid = cmitemid;
+        return this;
+    }
     
-    public GETTaxationItemsOfCreditMemoItemHeaders headers;
-    public GETTaxationItemsOfCreditMemoItemRequest withHeaders(GETTaxationItemsOfCreditMemoItemHeaders headers) {
-        this.headers = headers;
+    /**
+     * The unique ID of a credit memo. For example, 8a8082e65b27f6c3015ba45ff82c7172.
+     * 
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=creditMemoId")
+    public String creditMemoId;
+    public GETTaxationItemsOfCreditMemoItemRequest withCreditMemoId(String creditMemoId) {
+        this.creditMemoId = creditMemoId;
+        return this;
+    }
+    
+    /**
+     * Page number.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
+    public Long page;
+    public GETTaxationItemsOfCreditMemoItemRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * Number of rows returned per page.
+     * 
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
+    public Long pageSize;
+    public GETTaxationItemsOfCreditMemoItemRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
     

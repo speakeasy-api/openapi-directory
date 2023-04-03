@@ -39,7 +39,7 @@ public class Sessions {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CreateCreditSessionResponse createCreditSession(org.openapis.openapi.models.operations.CreateCreditSessionRequest request) throws Exception {
+    public org.openapis.openapi.models.operations.CreateCreditSessionResponse createCreditSession(org.openapis.openapi.models.shared.SessionCreateInput request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/payments/v1/sessions");
         
@@ -88,7 +88,7 @@ public class Sessions {
      */
     public org.openapis.openapi.models.operations.ReadCreditSessionResponse readCreditSession(org.openapis.openapi.models.operations.ReadCreditSessionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReadCreditSessionPathParams.class, baseUrl, "/payments/v1/sessions/{session_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ReadCreditSessionRequest.class, baseUrl, "/payments/v1/sessions/{session_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -130,12 +130,12 @@ public class Sessions {
      */
     public org.openapis.openapi.models.operations.UpdateCreditSessionResponse updateCreditSession(org.openapis.openapi.models.operations.UpdateCreditSessionRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCreditSessionPathParams.class, baseUrl, "/payments/v1/sessions/{session_id}", request.pathParams, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateCreditSessionRequest.class, baseUrl, "/payments/v1/sessions/{session_id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "sessionInput", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }

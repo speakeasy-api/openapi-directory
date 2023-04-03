@@ -4,20 +4,36 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomFieldsIdJsonRequest {
-    
-    public GetCustomFieldsIdJsonPathParams pathParams;
-    public GetCustomFieldsIdJsonRequest withPathParams(GetCustomFieldsIdJsonPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * API OAuth token.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
+    public String authtoken;
+    public GetCustomFieldsIdJsonRequest withAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
         return this;
     }
     
+    /**
+     * Id of the CustomField
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
+    public Integer id;
+    public GetCustomFieldsIdJsonRequest withId(Integer id) {
+        this.id = id;
+        return this;
+    }
     
-    public GetCustomFieldsIdJsonQueryParams queryParams;
-    public GetCustomFieldsIdJsonRequest withQueryParams(GetCustomFieldsIdJsonQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * API OAuth login.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
+    public String login;
+    public GetCustomFieldsIdJsonRequest withLogin(String login) {
+        this.login = login;
         return this;
     }
     

@@ -4,34 +4,97 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import java.time.LocalDate;
+import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListCallNotificationRequest {
-    
-    public ListCallNotificationPathParams pathParams;
-    public ListCallNotificationRequest withPathParams(ListCallNotificationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The SID of the [Account](https://www.twilio.com/docs/iam/api/account) that created the Call Notification resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountSid")
+    public String accountSid;
+    public ListCallNotificationRequest withAccountSid(String accountSid) {
+        this.accountSid = accountSid;
         return this;
     }
     
-    
-    public ListCallNotificationQueryParams queryParams;
-    public ListCallNotificationRequest withQueryParams(ListCallNotificationQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The [Call](https://www.twilio.com/docs/voice/api/call-resource) SID of the Call Notification resources to read.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=CallSid")
+    public String callSid;
+    public ListCallNotificationRequest withCallSid(String callSid) {
+        this.callSid = callSid;
         return this;
     }
     
-    
-    public ListCallNotificationSecurity security;
-    public ListCallNotificationRequest withSecurity(ListCallNotificationSecurity security) {
-        this.security = security;
+    /**
+     * Only read notifications of the specified log level. Can be:  `0` to read only ERROR notifications or `1` to read only WARNING notifications. By default, all notifications are read.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Log")
+    public Long log;
+    public ListCallNotificationRequest withLog(Long log) {
+        this.log = log;
         return this;
     }
     
+    /**
+     * Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `&lt;=YYYY-MM-DD` for messages logged at or before midnight on a date, or `&gt;=YYYY-MM-DD` for messages logged at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageDate")
+    public LocalDate messageDate;
+    public ListCallNotificationRequest withMessageDate(LocalDate messageDate) {
+        this.messageDate = messageDate;
+        return this;
+    }
     
-    public String serverURL;
-    public ListCallNotificationRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    /**
+     * Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `&lt;=YYYY-MM-DD` for messages logged at or before midnight on a date, or `&gt;=YYYY-MM-DD` for messages logged at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageDate<")
+    public LocalDate messageDateLessThan;
+    public ListCallNotificationRequest withMessageDateLessThan(LocalDate messageDateLessThan) {
+        this.messageDateLessThan = messageDateLessThan;
+        return this;
+    }
+    
+    /**
+     * Only show notifications for the specified date, formatted as `YYYY-MM-DD`. You can also specify an inequality, such as `&lt;=YYYY-MM-DD` for messages logged at or before midnight on a date, or `&gt;=YYYY-MM-DD` for messages logged at or after midnight on a date.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageDate>")
+    public LocalDate messageDateGreaterThan;
+    public ListCallNotificationRequest withMessageDateGreaterThan(LocalDate messageDateGreaterThan) {
+        this.messageDateGreaterThan = messageDateGreaterThan;
+        return this;
+    }
+    
+    /**
+     * The page index. This value is simply for client state.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Page")
+    public Long page;
+    public ListCallNotificationRequest withPage(Long page) {
+        this.page = page;
+        return this;
+    }
+    
+    /**
+     * How many resources to return in each list page. The default is 50, and the maximum is 1000.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageSize")
+    public Long pageSize;
+    public ListCallNotificationRequest withPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    
+    /**
+     * The page token. This is provided by the API.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
+    public String pageToken;
+    public ListCallNotificationRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
         return this;
     }
     

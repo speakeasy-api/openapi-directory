@@ -7,31 +7,20 @@ package org.openapis.openapi.models.operations;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDomainConfigRequest {
-    
-    public UpdateDomainConfigPathParams pathParams;
-    public UpdateDomainConfigRequest withPathParams(UpdateDomainConfigPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Unique string used to identify the domain that this config should be associated with.
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DomainSid")
+    public String domainSid;
+    public UpdateDomainConfigRequest withDomainSid(String domainSid) {
+        this.domainSid = domainSid;
         return this;
     }
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
-    public UpdateDomainConfigUpdateDomainConfigRequest request;
-    public UpdateDomainConfigRequest withRequest(UpdateDomainConfigUpdateDomainConfigRequest request) {
-        this.request = request;
-        return this;
-    }
-    
-    
-    public UpdateDomainConfigSecurity security;
-    public UpdateDomainConfigRequest withSecurity(UpdateDomainConfigSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
-    
-    public String serverURL;
-    public UpdateDomainConfigRequest withServerURL(String serverURL) {
-        this.serverURL = serverURL;
+    public UpdateDomainConfigUpdateDomainConfigRequest requestBody;
+    public UpdateDomainConfigRequest withRequestBody(UpdateDomainConfigUpdateDomainConfigRequest requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
